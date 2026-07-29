@@ -21,11 +21,11 @@ if ! grep -qE '^(SCNET|MOONSHOT|ANTHROPIC|OPENAI)_API_KEY=.+' .env; then
 fi
 
 echo "Installing dependencies..."
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo "Running a real daily digest (uses your API key — costs a few cents)..."
-python main.py daily
+python3 main.py daily
 
 echo
 echo "Done. Open dashboard/index.html in a browser and check reports/daily/ for today's file."
-echo "If it looks good, push to GitHub and add MOONSHOT_API_KEY as a repo secret."
+echo "If it looks good, push to GitHub and add SCNET_API_KEY as a repo secret."

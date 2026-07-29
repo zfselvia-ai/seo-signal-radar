@@ -244,7 +244,7 @@ llm:
   # Force one explicitly with: scnet(glm) | moonshot(kimi) | anthropic | openai
   provider: "auto"
   # SCNet (超算互联网) — Kimi K2.6 via OpenAI-compatible API
-  scnet_model: "kimi2.6"
+  scnet_model: "Kimi-K2.6"
   scnet_base_url: "https://api.scnet.cn/api/llm/v1"
   moonshot_model: "kimi-k2.5"
   moonshot_base_url: "https://api.moonshot.ai/v1"
