@@ -147,9 +147,36 @@
     main{padding:18px;}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  /* ---- password gate ---- */
+  #gate{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;
+    align-items:center;justify-content:center;font-family:var(--ui);}
+  #gate .box{text-align:center;max-width:320px;padding:32px;}
+  #gate .glogo{font-family:var(--mono);font-weight:600;font-size:16px;margin-bottom:24px;
+    letter-spacing:-.02em;}
+  #gate .glogo .dot{color:var(--accent);}
+  #gate input{font-family:var(--ui);font-size:14px;border:1px solid var(--line-strong);
+    border-radius:6px;padding:10px 14px;width:100%;margin-bottom:12px;outline:none;}
+  #gate input:focus{border-color:var(--accent);}
+  #gate button{font-family:var(--ui);font-size:14px;font-weight:500;background:var(--ink);
+    color:#fff;border:none;border-radius:6px;padding:10px 14px;width:100%;cursor:pointer;}
+  #gate button:hover{opacity:.9;}
+  #gate .gerr{color:var(--p0);font-size:12px;margin-top:10px;height:16px;}
+  #gate .ghint{color:var(--ink-3);font-size:11px;margin-top:20px;font-family:var(--mono);}
 </style>
 </head>
 <body>
+
+<div id="gate">
+  <div class="box">
+    <div class="glogo">SEO Signal Radar<span class="dot">.</span></div>
+    <input id="gpass" type="password" placeholder="Enter password" autofocus>
+    <button id="gbtn">Unlock</button>
+    <div class="gerr" id="gerr"></div>
+    <div class="ghint">Private dashboard · access restricted</div>
+  </div>
+</div>
+
 <header>
   <div class="brandline">
     <span class="logo">SEO Signal Radar<span class="dot">.</span></span>
@@ -365,6 +392,29 @@ function drawLibResults(){
 }
 
 renderToday();renderMap();renderLibrary();
+
+/* ---------------- password gate ---------------- */
+const PASS_HASH="f226a9d29cdb97d342436fe240a05ca06bb3cb037025874347b5ae06f1bf963b";
+const gate=document.getElementById("gate");
+function unlock(){
+  const val=document.getElementById("gpass").value;
+  crypto.subtle.digest("SHA-256",new TextEncoder().encode(val)).then(buf=>{
+    const hex=[...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+    if(hex===PASS_HASH){
+      sessionStorage.setItem("radar_ok","1");
+      gate.style.display="none";
+    }else{
+      document.getElementById("gerr").textContent="Wrong password";
+      document.getElementById("gpass").value="";
+    }
+  });
+}
+if(sessionStorage.getItem("radar_ok")==="1"){
+  gate.style.display="none";
+}else{
+  document.getElementById("gbtn").onclick=unlock;
+  document.getElementById("gpass").addEventListener("keydown",e=>{if(e.key==="Enter")unlock();});
+}
 </script>
 </body>
 </html>
