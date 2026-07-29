@@ -7,16 +7,20 @@
 <style>
   :root{
     color-scheme: light;
-    --bg:#ffffff; --panel:#fbfbfc; --line:#ececf0; --line-strong:#dcdce3;
-    --ink:#16161a; --ink-2:#5b5b66; --ink-3:#8a8a96;
-    --accent:#3b5bdb;                 /* signal blue — functional, not decorative */
-    --p0:#c0392b; --p0-bg:#fdecec;
-    --p1:#b45309; --p1-bg:#fdf0e0;
-    --p2:#8a6d1f; --p2-bg:#fbf6df;
-    --p3:#4b5563; --p3-bg:#f2f3f5;
-    --heat-extreme:#c0392b; --heat-high:#e07b39; --heat-elevated:#d4a72c;
-    --heat-normal:#3f9d5a; --heat-unknown:#b8b8c0;
-    --radius:8px;
+    --bg:#f5f6f8; --surface:#ffffff; --surface-strong:#f1f2f5;
+    --line:#e3e4e8; --line-strong:#d2d4db;
+    --ink:#0d0d10; --ink-2:#3e3f45; --ink-3:#7a7b85;
+    --accent:#3451b2;
+    --p0:#b22222; --p0-bg:#fef2f2; --p0-accent:#dc2626;
+    --p1:#c45f0a; --p1-bg:#fff7ed; --p1-accent:#ea580c;
+    --p2:#7c6a16; --p2-bg:#fffbeb; --p2-accent:#ca8a04;
+    --p3:#4b5563; --p3-bg:#f8fafc; --p3-accent:#64748b;
+    --heat-extreme:#b22222; --heat-high:#d97706; --heat-elevated:#ca8a04;
+    --heat-normal:#16a34a; --heat-unknown:#9ca3af;
+    --action-bg:#eff6ff; --action-accent:#2563eb;
+    --radius:10px;
+    --shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+    --shadow-raised:0 4px 12px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04);
     --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     --ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif;
   }
@@ -27,142 +31,187 @@
   a:hover{text-decoration:underline;}
 
   /* ---- header ---- */
-  header{border-bottom:1px solid var(--line);padding:20px 28px 0;position:sticky;
-    top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);z-index:10;}
-  .brandline{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
-  .logo{font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:-.02em;}
+  header{background:var(--surface);border-bottom:1px solid var(--line);
+    padding:0;position:sticky;top:0;z-index:10;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);}
+  .brandbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    padding:16px 28px 0;background:var(--surface);}
+  .logo{font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:-.02em;
+    display:flex;align-items:center;gap:8px;}
   .logo .dot{color:var(--accent);}
   .thesis{color:var(--ink-2);font-size:13px;}
   .thesis .zh{color:var(--ink-3);margin-left:8px;}
-  nav{display:flex;gap:2px;margin-top:16px;}
-  nav button{font-family:var(--ui);font-size:13px;font-weight:500;color:var(--ink-2);
-    background:none;border:none;border-bottom:2px solid transparent;padding:8px 14px;
-    cursor:pointer;}
-  nav button:hover{color:var(--ink);}
-  nav button.active{color:var(--ink);border-bottom-color:var(--accent);}
+  nav{display:flex;gap:0;margin:0;padding:0 28px;background:var(--surface);}
+  nav button{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--ink-3);
+    background:none;border:none;border-bottom:2px solid transparent;
+    padding:14px 18px 12px;cursor:pointer;transition:color .12s;}
+  nav button:hover{color:var(--ink-2);}
+  nav button.active{color:var(--accent);border-bottom-color:var(--accent);}
 
-  main{max-width:940px;margin:0 auto;padding:28px;}
+  main{max-width:960px;margin:0 auto;padding:28px;}
   .view{display:none;}
   .view.active{display:block;}
 
-  /* ---- morning brief bar ---- */
-  .brief{display:flex;flex-wrap:wrap;gap:10px;align-items:center;
-    padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
-    background:var(--panel);margin-bottom:20px;}
-  .brief .stat{display:flex;flex-direction:column;gap:1px;padding-right:16px;
-    border-right:1px solid var(--line);}
+  /* ---- morning brief ---- */
+  .brief{display:flex;flex-wrap:wrap;gap:0;align-items:center;
+    padding:0;border-radius:var(--radius);background:var(--surface);
+    margin-bottom:24px;box-shadow:var(--shadow);overflow:hidden;}
+  .brief .stat{display:flex;flex-direction:column;gap:2px;padding:16px 22px;
+    border-right:1px solid var(--line);min-width:120px;}
   .brief .stat:last-child{border-right:none;}
-  .brief .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);
-    text-transform:uppercase;letter-spacing:.04em;}
-  .brief .v{font-family:var(--mono);font-size:16px;font-weight:600;}
+  .brief .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.06em;}
+  .brief .v{font-family:var(--mono);font-size:20px;font-weight:700;}
+  .brief .v .dot-heat{width:10px;height:10px;border-radius:50%;display:inline-block;
+    margin-right:6px;vertical-align:middle;}
 
-  .headline{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.35;
-    margin:6px 0 22px;}
-  .date-label{font-family:var(--mono);font-size:12px;color:var(--ink-3);}
+  .date-label{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:6px;}
+  .headline{font-size:22px;font-weight:700;letter-spacing:-.015em;line-height:1.35;
+    margin:0 0 20px;color:var(--ink);}
 
-  /* ---- section blocks ---- */
-  h2.section{font-size:13px;font-weight:600;text-transform:uppercase;
-    letter-spacing:.05em;color:var(--ink-2);margin:26px 0 10px;
+  /* ---- cards ---- */
+  .card{border-radius:var(--radius);padding:18px 20px;margin-bottom:12px;
+    background:var(--surface);box-shadow:var(--shadow);border:none;
+    position:relative;overflow:hidden;transition:box-shadow .15s,transform .1s;}
+  .card:hover{box-shadow:var(--shadow-raised);transform:translateY(-1px);}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;}
+
+  .card.P0::before{background:var(--p0-accent);}
+  .card.P0{background:var(--p0-bg);}
+  .card.P1::before{background:var(--p1-accent);}
+  .card.P1{background:var(--p1-bg);}
+  .card.P2::before{background:var(--p2-accent);}
+  .card.P2{background:var(--p2-bg);}
+  .card.P3::before{background:var(--p3-accent);}
+  .card.P3{background:var(--p3-bg);}
+
+  .card .what{font-weight:700;font-size:15px;line-height:1.45;margin-bottom:10px;
+    padding-right:140px;position:relative;}
+  .card .row{display:flex;gap:8px;font-size:13px;color:var(--ink-2);margin:4px 0;}
+  .card .row .lab{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+    min-width:96px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px;}
+  .card .srcs{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;}
+  .card .srcs a{font-family:var(--mono);font-size:12px;}
+
+  .badges{display:inline-flex;gap:5px;margin-left:auto;position:absolute;
+    right:0;top:0;}
+  .tag{font-family:var(--mono);font-size:11px;font-weight:700;padding:2px 8px;
+    border-radius:5px;letter-spacing:.02em;}
+  .tag.P0{color:var(--p0);background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);}
+  .tag.P1{color:var(--p1);background:rgba(234,88,12,.1);border:1px solid rgba(234,88,12,.2);}
+  .tag.P2{color:var(--p2);background:rgba(202,138,4,.1);border:1px solid rgba(202,138,4,.2);}
+  .tag.P3{color:var(--p3);background:rgba(100,116,139,.1);border:1px solid rgba(100,116,139,.2);}
+  .tag.conf{color:var(--ink-2);background:var(--surface-strong);border:1px solid var(--line-strong);}
+
+  /* ---- sections ---- */
+  h2.section{font-size:11px;font-weight:700;text-transform:uppercase;
+    letter-spacing:.08em;color:var(--ink-3);margin:32px 0 14px;
     display:flex;align-items:center;gap:8px;}
   h2.section .count{font-family:var(--mono);color:var(--ink-3);font-weight:500;}
 
-  .card{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
-    margin-bottom:10px;background:var(--bg);}
-  .card .what{font-weight:600;font-size:15px;line-height:1.4;margin-bottom:8px;}
-  .card .row{display:flex;gap:8px;font-size:13px;color:var(--ink-2);margin:3px 0;}
-  .card .row .lab{font-family:var(--mono);font-size:11px;color:var(--ink-3);
-    min-width:96px;text-transform:uppercase;letter-spacing:.03em;padding-top:1px;}
-  .card .srcs{margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;}
-  .card .srcs a{font-family:var(--mono);font-size:12px;}
-
-  .badges{display:inline-flex;gap:6px;margin-left:8px;vertical-align:middle;}
-  .tag{font-family:var(--mono);font-size:11px;font-weight:600;padding:1px 7px;
-    border-radius:5px;letter-spacing:.02em;}
-  .tag.P0{color:var(--p0);background:var(--p0-bg);}
-  .tag.P1{color:var(--p1);background:var(--p1-bg);}
-  .tag.P2{color:var(--p2);background:var(--p2-bg);}
-  .tag.P3{color:var(--p3);background:var(--p3-bg);}
-  .tag.conf{color:var(--ink-2);background:var(--panel);border:1px solid var(--line-strong);}
-
-  .actions li{margin:6px 0;}
-  ul.plain{list-style:none;padding:0;margin:0;}
+  /* ---- action items highlight ---- */
+  .actions-card{background:var(--action-bg);border-left:4px solid var(--action-accent);
+    border-radius:var(--radius);padding:20px;margin:0 0 20px;
+    box-shadow:var(--shadow);}
+  .actions-card h2{margin:0 0 14px;font-size:15px;font-weight:700;color:var(--action-accent);}
+  .actions-card ul{margin:0;padding-left:18px;}
+  .actions-card li{margin:8px 0;font-size:14px;color:var(--ink-2);}
+  .actions-card li .tag{margin-right:6px;}
 
   /* ---- SERP weather ---- */
-  .serp{border:1px solid var(--line);border-radius:var(--radius);padding:16px;
-    background:var(--panel);margin-bottom:20px;}
-  .serp .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:14px;}
-  .serp .cell .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);
-    text-transform:uppercase;letter-spacing:.04em;}
-  .serp .cell .v{font-size:15px;font-weight:600;display:flex;align-items:center;gap:7px;}
-  .dot-heat{width:9px;height:9px;border-radius:50%;display:inline-block;}
-  .interp{margin-top:12px;font-size:13px;color:var(--ink-2);font-style:italic;
-    border-top:1px solid var(--line);padding-top:10px;}
+  .serp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;margin-bottom:24px;}
+  .serp-cell{border-radius:var(--radius);padding:18px 20px;background:var(--surface);
+    box-shadow:var(--shadow);border-top:3px solid var(--heat-unknown);}
+  .serp-cell.Extreme{border-top-color:var(--heat-extreme);}
+  .serp-cell.High{border-top-color:var(--heat-high);}
+  .serp-cell.Elevated{border-top-color:var(--heat-elevated);}
+  .serp-cell.Normal{border-top-color:var(--heat-normal);}
+  .serp-cell .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+  .serp-cell .v{font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .serp-cell .v .dot-heat{width:10px;height:10px;border-radius:50%;display:inline-block;}
+  .serp-note{background:var(--surface);border-radius:var(--radius);padding:16px 20px;
+    font-size:13px;color:var(--ink-2);font-style:italic;margin-top:-8px;margin-bottom:24px;
+    border-left:3px solid var(--line-strong);}
 
-  /* ---- algorithm map (signature) ---- */
-  .map-controls{display:flex;gap:6px;margin-bottom:18px;}
+  /* ---- algorithm map ---- */
+  .map-controls{display:flex;gap:6px;margin-bottom:20px;}
   .map-controls button{font-family:var(--mono);font-size:12px;border:1px solid var(--line-strong);
-    background:var(--bg);color:var(--ink-2);padding:4px 12px;border-radius:6px;cursor:pointer;}
+    background:var(--surface);color:var(--ink-2);padding:5px 14px;border-radius:6px;cursor:pointer;
+    transition:all .12s;}
+  .map-controls button:hover{border-color:var(--ink-3);}
   .map-controls button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
   .track{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--line);
-    min-height:64px;}
+    min-height:68px;background:var(--surface);}
   .track:last-child{border-bottom:1px solid var(--line);}
-  .track .name{padding:14px 12px;border-right:1px solid var(--line);}
-  .track .name .t{font-weight:600;font-size:13px;}
+  .track .name{padding:16px 14px;border-right:1px solid var(--line);background:var(--surface-strong);}
+  .track .name .t{font-weight:700;font-size:13px;}
   .track .name .d{font-family:var(--mono);font-size:10px;color:var(--ink-3);
     text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
-  .lane{position:relative;padding:10px 0;}
-  .lane .ev{position:absolute;top:12px;transform:translateX(-50%);cursor:default;}
-  .lane .ev .pip{width:12px;height:12px;border-radius:50%;border:2px solid #fff;
-    box-shadow:0 0 0 1px var(--line-strong);}
+  .lane{position:relative;padding:12px 0;}
+  .lane .ev{position:absolute;top:14px;transform:translateX(-50%);cursor:default;}
+  .lane .ev .pip{width:14px;height:14px;border-radius:50%;border:2.5px solid #fff;
+    box-shadow:0 0 0 1.5px var(--line-strong),0 2px 5px rgba(0,0,0,.1);}
   .lane .ev .tip{position:absolute;left:50%;transform:translateX(-50%);
-    bottom:20px;background:var(--ink);color:#fff;font-size:12px;line-height:1.4;
-    padding:8px 10px;border-radius:6px;width:220px;display:none;z-index:5;}
+    bottom:24px;background:var(--ink);color:#fff;font-size:12px;line-height:1.5;
+    padding:10px 12px;border-radius:8px;width:240px;display:none;z-index:5;
+    box-shadow:0 8px 24px rgba(0,0,0,.2);}
   .lane .ev:hover .tip{display:block;}
-  .lane .ev .tip .td{font-family:var(--mono);font-size:10px;color:#c9c9d4;margin-top:4px;}
+  .lane .ev .tip .td{font-family:var(--mono);font-size:10px;color:#c9c9d4;margin-top:6px;}
   .axis{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--line);}
-  .axis .ticks{display:flex;justify-content:space-between;padding:6px 8px;
+  .axis .ticks{display:flex;justify-content:space-between;padding:8px 10px;
     font-family:var(--mono);font-size:10px;color:var(--ink-3);}
-  .map-empty,.lib-empty{color:var(--ink-3);font-size:13px;padding:24px 0;text-align:center;}
+  .map-empty,.lib-empty{color:var(--ink-3);font-size:13px;padding:32px 0;text-align:center;}
   .legend{display:flex;gap:16px;margin:16px 0 4px;font-size:12px;color:var(--ink-2);}
   .legend span{display:inline-flex;align-items:center;gap:6px;}
 
   /* ---- library ---- */
-  .lib-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .lib-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
   .lib-filters input,.lib-filters select{font-family:var(--ui);font-size:13px;
-    border:1px solid var(--line-strong);border-radius:6px;padding:6px 10px;background:var(--bg);}
+    border:1px solid var(--line-strong);border-radius:6px;padding:7px 11px;background:var(--surface);
+    box-shadow:var(--shadow);}
+  .lib-filters input:focus,.lib-filters select:focus{outline:none;border-color:var(--accent);}
   .lib-filters input{flex:1;min-width:200px;}
-  .lib-row{display:grid;grid-template-columns:92px 1fr;gap:14px;border-bottom:1px solid var(--line);
-    padding:12px 4px;}
-  .lib-row .ld{font-family:var(--mono);font-size:12px;color:var(--ink-3);}
-  .lib-row .lw{font-weight:500;}
+  .lib-row{display:grid;grid-template-columns:96px 1fr;gap:16px;border-bottom:1px solid var(--line);
+    padding:14px 6px;background:var(--surface);margin-bottom:6px;border-radius:var(--radius);
+    box-shadow:var(--shadow);}
+  .lib-row .ld{font-family:var(--mono);font-size:12px;color:var(--ink-3);padding-left:14px;}
+  .lib-row .lw{font-weight:600;}
   .lib-row .lmeta{font-size:12px;color:var(--ink-3);margin-top:4px;
     display:flex;flex-wrap:wrap;gap:8px;}
-  .lib-count{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:10px;}
+  .lib-count{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:12px;}
 
-  footer{max-width:940px;margin:0 auto;padding:20px 28px 40px;color:var(--ink-3);
+  footer{max-width:960px;margin:0 auto;padding:20px 28px 40px;color:var(--ink-3);
     font-size:12px;font-family:var(--mono);border-top:1px solid var(--line);}
   @media(max-width:640px){
     .track,.axis{grid-template-columns:84px 1fr;}
     main{padding:18px;}
+    .brief .stat{padding:12px 14px;min-width:auto;}
+    .brief .v{font-size:16px;}
+    .card .what{padding-right:0;}
+    .badges{position:static;margin-top:8px;display:block;}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
 
   /* ---- password gate ---- */
-  #gate{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;
+  #gate{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;
     align-items:center;justify-content:center;font-family:var(--ui);}
-  #gate .box{text-align:center;max-width:320px;padding:32px;}
-  #gate .glogo{font-family:var(--mono);font-weight:600;font-size:16px;margin-bottom:24px;
+  #gate .box{text-align:center;max-width:340px;padding:36px;background:var(--surface);
+    border-radius:var(--radius);box-shadow:var(--shadow-raised);}
+  #gate .glogo{font-family:var(--mono);font-weight:700;font-size:18px;margin-bottom:28px;
     letter-spacing:-.02em;}
   #gate .glogo .dot{color:var(--accent);}
-  #gate input{font-family:var(--ui);font-size:14px;border:1px solid var(--line-strong);
-    border-radius:6px;padding:10px 14px;width:100%;margin-bottom:12px;outline:none;}
+  #gate input{font-family:var(--ui);font-size:14px;border:1.5px solid var(--line-strong);
+    border-radius:8px;padding:12px 16px;width:100%;margin-bottom:14px;outline:none;
+    background:var(--surface);box-shadow:inset 0 1px 2px rgba(0,0,0,.04);}
   #gate input:focus{border-color:var(--accent);}
-  #gate button{font-family:var(--ui);font-size:14px;font-weight:500;background:var(--ink);
-    color:#fff;border:none;border-radius:6px;padding:10px 14px;width:100%;cursor:pointer;}
-  #gate button:hover{opacity:.9;}
-  #gate .gerr{color:var(--p0);font-size:12px;margin-top:10px;height:16px;}
-  #gate .ghint{color:var(--ink-3);font-size:11px;margin-top:20px;font-family:var(--mono);}
+  #gate button{font-family:var(--ui);font-size:14px;font-weight:700;background:var(--ink);
+    color:#fff;border:none;border-radius:8px;padding:12px 16px;width:100%;cursor:pointer;
+    transition:opacity .12s;}
+  #gate button:hover{opacity:.88;}
+  #gate .gerr{color:var(--p0);font-size:13px;margin-top:10px;height:18px;font-weight:600;}
+  #gate .ghint{color:var(--ink-3);font-size:11px;margin-top:24px;font-family:var(--mono);}
 </style>
 </head>
 <body>
@@ -178,7 +227,7 @@
 </div>
 
 <header>
-  <div class="brandline">
+  <div class="brandbar">
     <span class="logo">SEO Signal Radar<span class="dot">.</span></span>
     <span class="thesis" id="thesis"></span>
   </div>
@@ -197,13 +246,13 @@
 
 <footer id="footer"></footer>
 
-<script id="radar-data" type="application/json">{"generated_at": "2026-07-29T09:46:47.617188+00:00", "thesis": "What changed in Search, why it matters, and what to do next.", "thesis_zh": "搜索发生了什么，为什么重要，今天该做什么。", "title": "Daily SEO/GEO Signal Radar", "map_ranges": ["7D", "30D", "90D", "1Y"], "verticals": ["ecommerce", "publisher", "SaaS", "UGC", "local", "international", "all"], "sections": ["Confirmed Search Updates", "SERP & Algorithm Signals", "Technical SEO Experiments", "AI Search / GEO", "Tools, Papers & Open Source", "Unconfirmed Watchlist", "Today's Action Items"], "today": {"date": "2026-07-29", "generated_at": "2026-07-29T09:46:47.603117+00:00", "headline": "No new SEO signals in this window.", "sections": {}, "signals": [], "serp": {}, "confirmed_updates": [{"id": "YUX1peHev5a4fkxLDiUQ", "title": "June 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-06-24T16:00:00+00:00", "end": "2026-06-26T17:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 26, 2026.", "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ", "triggers_brief": true}, {"id": "wdAXJk6LRRihEjpzEeWE", "title": "May 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-05-21T15:40:00+00:00", "end": "2026-06-02T12:40:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 2, 2026.", "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE", "triggers_brief": true}, {"id": "7eTbAa2jWdToLkraZj5y", "title": "March 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-03-27T09:00:00+00:00", "end": "2026-04-08T13:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of April 8, 2026.", "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y", "triggers_brief": true}, {"id": "VbnSXAH4SmEcxPtx4YSD", "title": "March 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-03-24T19:00:00+00:00", "end": "2026-03-25T14:30:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of March 25, 2026.", "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD", "triggers_brief": true}, {"id": "mYbNTqV1ytDc2fA8hUz4", "title": "February 2026 Discover update", "kind": "Discover Update", "families": ["ranking"], "start": "2026-02-05T17:00:00+00:00", "end": "2026-02-27T10:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of February 27, 2026.", "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4", "triggers_brief": true}, {"id": "DsirqJ1gpPRgVQeccPRv", "title": "December 2025 core update", "kind": "Core Update", "families": ["ranking"], "start": "2025-12-11T17:25:00+00:00", "end": "2025-12-29T19:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of December 29, 2025.", "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv", "triggers_brief": true}, {"id": "a7Aainy6E9rZsmfq82xt", "title": "August 2025 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2025-08-26T16:00:00+00:00", "end": "2025-09-22T07:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of September 22, 2025.", "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt", "triggers_brief": true}]}, "library": [{"date": "2026-07-27", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update live", "why_it_matters": "broad ranking shifts likely", "evidence": "Google Search Status API", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-27", "section": "SERP & Algorithm Signals", "what_happened": "Heavy flux reported across ecommerce SERPs", "why_it_matters": "early anomaly ahead of confirmation", "evidence": "multiple trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor", "confidence": "Observed", "impact": "P1", "sources": []}, {"date": "2026-07-28", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update confirmed live", "why_it_matters": "broad ranking volatility expected", "evidence": "Google Search Status API incident", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-28", "section": "Unconfirmed Watchlist", "what_happened": "Overnight SERP flux across ecommerce", "why_it_matters": "early anomaly, not yet confirmed", "evidence": "community trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor, do not react", "confidence": "Observed", "impact": "P1", "sources": []}], "map_events": [{"date": "2026-07-27", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-27", "track": "external", "label": "Global High (92)", "band": "High", "detail": "Vertical Extreme · Broad update likely, specific verticals hit hardest"}, {"date": "2026-07-27", "track": "community", "label": "Heavy flux reported across ecommerce SERPs", "band": "Elevated", "detail": "Observed"}, {"date": "2026-07-28", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "June 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "May 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "February 2026 Discover update", "band": "High", "detail": "Discover Update"}, {"date": "2026-07-29", "track": "official", "label": "December 2025 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "August 2025 spam update", "band": "High", "detail": "Spam Update"}], "days_archived": 3}</script>
+<script id="radar-data" type="application/json">{"generated_at": "2026-07-29T10:03:13.866790+00:00", "thesis": "What changed in Search, why it matters, and what to do next.", "thesis_zh": "搜索发生了什么，为什么重要，今天该做什么。", "title": "Daily SEO/GEO Signal Radar", "map_ranges": ["7D", "30D", "90D", "1Y"], "verticals": ["ecommerce", "publisher", "SaaS", "UGC", "local", "international", "all"], "sections": ["Confirmed Search Updates", "SERP & Algorithm Signals", "Technical SEO Experiments", "AI Search / GEO", "Tools, Papers & Open Source", "Unconfirmed Watchlist", "Today's Action Items"], "today": {"date": "2026-07-29", "generated_at": "2026-07-29T10:03:13.846421+00:00", "headline": "No new SEO signals in this window.", "sections": {}, "signals": [], "serp": {}, "confirmed_updates": [{"id": "YUX1peHev5a4fkxLDiUQ", "title": "June 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-06-24T16:00:00+00:00", "end": "2026-06-26T17:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 26, 2026.", "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ", "triggers_brief": true}, {"id": "wdAXJk6LRRihEjpzEeWE", "title": "May 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-05-21T15:40:00+00:00", "end": "2026-06-02T12:40:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 2, 2026.", "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE", "triggers_brief": true}, {"id": "7eTbAa2jWdToLkraZj5y", "title": "March 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-03-27T09:00:00+00:00", "end": "2026-04-08T13:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of April 8, 2026.", "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y", "triggers_brief": true}, {"id": "VbnSXAH4SmEcxPtx4YSD", "title": "March 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-03-24T19:00:00+00:00", "end": "2026-03-25T14:30:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of March 25, 2026.", "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD", "triggers_brief": true}, {"id": "mYbNTqV1ytDc2fA8hUz4", "title": "February 2026 Discover update", "kind": "Discover Update", "families": ["ranking"], "start": "2026-02-05T17:00:00+00:00", "end": "2026-02-27T10:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of February 27, 2026.", "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4", "triggers_brief": true}, {"id": "DsirqJ1gpPRgVQeccPRv", "title": "December 2025 core update", "kind": "Core Update", "families": ["ranking"], "start": "2025-12-11T17:25:00+00:00", "end": "2025-12-29T19:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of December 29, 2025.", "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv", "triggers_brief": true}, {"id": "a7Aainy6E9rZsmfq82xt", "title": "August 2025 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2025-08-26T16:00:00+00:00", "end": "2025-09-22T07:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of September 22, 2025.", "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt", "triggers_brief": true}]}, "library": [{"date": "2026-07-27", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update live", "why_it_matters": "broad ranking shifts likely", "evidence": "Google Search Status API", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-27", "section": "SERP & Algorithm Signals", "what_happened": "Heavy flux reported across ecommerce SERPs", "why_it_matters": "early anomaly ahead of confirmation", "evidence": "multiple trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor", "confidence": "Observed", "impact": "P1", "sources": []}, {"date": "2026-07-28", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update confirmed live", "why_it_matters": "broad ranking volatility expected", "evidence": "Google Search Status API incident", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-28", "section": "Unconfirmed Watchlist", "what_happened": "Overnight SERP flux across ecommerce", "why_it_matters": "early anomaly, not yet confirmed", "evidence": "community trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor, do not react", "confidence": "Observed", "impact": "P1", "sources": []}], "map_events": [{"date": "2026-07-27", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-27", "track": "external", "label": "Global High (92)", "band": "High", "detail": "Vertical Extreme · Broad update likely, specific verticals hit hardest"}, {"date": "2026-07-27", "track": "community", "label": "Heavy flux reported across ecommerce SERPs", "band": "Elevated", "detail": "Observed"}, {"date": "2026-07-28", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "June 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "May 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "February 2026 Discover update", "band": "High", "detail": "Discover Update"}, {"date": "2026-07-29", "track": "official", "label": "December 2025 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "August 2025 spam update", "band": "High", "detail": "Spam Update"}], "days_archived": 3}</script>
 <script>
 const DATA = JSON.parse(document.getElementById("radar-data").textContent);
 const HEATVAR = {Extreme:"--heat-extreme",High:"--heat-high",Elevated:"--heat-elevated",
   Normal:"--heat-normal",Unknown:"--heat-unknown"};
 const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>(
-  {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  {"&":"&amp;","<":"&lt;",">":"&gt;","'":"&quot;","'":"&#39;"}[c]));
 const heatColor = b => `var(${HEATVAR[b]||"--heat-unknown"})`;
 
 document.getElementById("thesis").innerHTML =
@@ -253,15 +302,19 @@ function renderToday(){
   if(rec.headline) h+=`<div class="headline">${esc(rec.headline)}</div>`;
   h+=serpWeather(rec.serp);
 
+  /* Action Items first */
+  const actions=rec.sections?.["Today's Action Items"];
+  if(actions&&actions.length){
+    h+=`<div class="actions-card"><h2>Today's Action Items</h2><ul>`+
+      actions.map(s=>`<li>${tag(s.impact)} ${esc(s.what_to_do)}</li>`).join("")+
+      `</ul></div>`;
+  }
+
   (DATA.sections||[]).forEach(sec=>{
+    if(sec==="Today's Action Items") return;
     const arr=(rec.sections||{})[sec];
     if(!arr||!arr.length)return;
     h+=`<h2 class="section">${esc(sec)} <span class="count">${arr.length}</span></h2>`;
-    if(sec==="Today's Action Items"){
-      h+=`<ul class="plain actions">`+arr.map(s=>
-        `<li>${tag(s.impact)} ${esc(s.what_to_do)}</li>`).join("")+`</ul>`;
-      return;
-    }
     arr.forEach(s=>{h+=signalCard(s);});
   });
   if(rec.dropped_count) h+=`<p class="date-label" style="margin-top:20px">Filtered out ${rec.dropped_count} lower-value candidates.</p>`;
@@ -269,9 +322,10 @@ function renderToday(){
 }
 
 function signalCard(s){
+  const imp=s.impact||"";
   const row=(lab,key)=> s[key]?`<div class="row"><span class="lab">${lab}</span><span>${esc(s[key])}</span></div>`:"";
   const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join("");
-  return `<div class="card">
+  return `<div class="card ${esc(imp)}">
     <div class="what">${esc(s.what_happened)}<span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
@@ -281,15 +335,17 @@ function signalCard(s){
 
 function serpWeather(serp){
   if(!serp||!serp.global_band) return "";
-  const cell=(k,band,v)=>`<div class="cell"><div class="k">${k}</div>
+  const cell=(k,band,v)=>`<div class="serp-cell ${esc(band||'')}"><div class="k">${k}</div>
     <div class="v">${band?`<span class="dot-heat" style="background:${heatColor(band)}"></span>`:""}${esc(v)}</div></div>`;
   const av=serp.anomalous_verticals&&serp.anomalous_verticals.length?serp.anomalous_verticals.join(", "):"none";
-  return `<div class="serp"><div class="grid">
+  let h=`<div class="serp-grid">
     ${cell("Global Heat",serp.global_band,`${serp.global_band} (${serp.global_heat??"?"})`)}
     ${cell("Vertical Heat",serp.vertical_band,`${serp.vertical_band??"?"} (${serp.vertical_heat??"?"})`)}
-    ${cell("Source agreement","",serp.source_agreement??"n/a")}
-    ${cell("Affected verticals","",av)}
-    </div>${serp.quadrant?`<div class="interp">${esc(serp.quadrant)}. ${esc(serp.interpretation||"")}</div>`:""}</div>`;
+    ${cell("Source Agreement","",serp.source_agreement??"n/a")}
+    ${cell("Affected Verticals","",av)}
+    </div>`;
+  if(serp.quadrant) h+=`<div class="serp-note">${esc(serp.quadrant)}. ${esc(serp.interpretation||"")}</div>`;
+  return h;
 }
 
 /* ---------------- Algorithm Map ---------------- */
