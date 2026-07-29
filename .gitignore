@@ -5,7 +5,6 @@ cookies.json
 # state (regenerated each run)
 data/seen.json
 data/serp_history.csv
-data/archive/*.json
 
 # python
 __pycache__/

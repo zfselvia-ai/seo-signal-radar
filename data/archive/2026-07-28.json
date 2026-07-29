@@ -1,0 +1,87 @@
+{
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T08:53:32.478469+00:00",
+  "headline": "Google confirms August 2026 core update is rolling out.",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "August 2026 core update confirmed live",
+        "why_it_matters": "broad ranking volatility expected",
+        "evidence": "Google Search Status API incident",
+        "who_it_affects": "all",
+        "what_to_do": "monitor GSC, freeze big changes",
+        "confidence": "Confirmed",
+        "impact": "P0",
+        "section": "Confirmed Search Updates",
+        "score": 97,
+        "sources": [
+          {
+            "name": "Google Status",
+            "url": "https://status.search.google.com"
+          }
+        ]
+      }
+    ],
+    "Unconfirmed Watchlist": [
+      {
+        "what_happened": "Overnight SERP flux across ecommerce",
+        "why_it_matters": "early anomaly, not yet confirmed",
+        "evidence": "community trackers",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "monitor, do not react",
+        "confidence": "Observed",
+        "impact": "P1",
+        "section": "Unconfirmed Watchlist",
+        "score": 71,
+        "sources": []
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Freeze template/content changes until update settles",
+        "impact": "P0"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "August 2026 core update confirmed live",
+      "why_it_matters": "broad ranking volatility expected",
+      "evidence": "Google Search Status API incident",
+      "who_it_affects": "all",
+      "what_to_do": "monitor GSC, freeze big changes",
+      "confidence": "Confirmed",
+      "impact": "P0",
+      "section": "Confirmed Search Updates",
+      "score": 97,
+      "sources": [
+        {
+          "name": "Google Status",
+          "url": "https://status.search.google.com"
+        }
+      ]
+    },
+    {
+      "what_happened": "Overnight SERP flux across ecommerce",
+      "why_it_matters": "early anomaly, not yet confirmed",
+      "evidence": "community trackers",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "monitor, do not react",
+      "confidence": "Observed",
+      "impact": "P1",
+      "section": "Unconfirmed Watchlist",
+      "score": 71,
+      "sources": []
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "kind": "Core Update",
+      "title": "August 2026 core update",
+      "ongoing": true,
+      "id": "inc1",
+      "began": "2026-07-28T08:53:32.474520+00:00"
+    }
+  ]
+}
