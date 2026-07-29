@@ -1,0 +1,249 @@
+"""LLM step for the DAILY digest.
+
+Turns raw Items into scored Signals, each with the 5-field schema, sorted into
+the 7 fixed sections. The scoring formula and curation rubric come from config
+so tuning happens in YAML, not code.
+
+Provider-agnostic (anthropic | openai). Output is strict JSON.
+"""
+from __future__ import annotations
+
+import json
+import os
+from typing import List
+
+from .models import Item
+
+LANG_RULES = {
+    "bilingual": ("Write 'what_happened' and 'evidence' in English (source language). "
+                  "Write 'why_it_matters', 'who_it_affects' and 'what_to_do' in "
+                  "Simplified Chinese, keeping English SEO jargon (AEO, GEO, agentic "
+                  "traffic, AI Overviews, CTR, E-E-A-T, query fan-out) as-is."),
+    "en": "Write all fields in English.",
+    "zh": ("Write all fields in Simplified Chinese, keeping English SEO jargon "
+           "(AEO, GEO, agentic traffic, AI Overviews) as-is."),
+}
+
+SYSTEM = """You are the editor of a daily SEO/GEO SIGNAL RADAR for advanced, \
+professional SEOs. This is NOT a news feed. Your job: detect what genuinely \
+requires an expert to change behaviour today, and cut everything else.
+
+Mental model: X discovers anomalies -> official data confirms -> cases/data \
+decide whether it's worth acting. Reward evidence; punish hype.
+
+This is a UNIVERSAL product — never assume the reader owns a specific site. \
+'who_it_affects' must name audience verticals from: {verticals}.
+
+CANDIDATES come from four X lists (official_signals, algo_serp, technical_data, \
+geo_ai), keyword searches, RSS blogs, and the Google Search Status API.
+
+STEP 1 - SCORE each candidate 0-100:
+{weights}
+Then SUBTRACT penalties: marketing/promo -{promo}, duplicate/rehash -{dup}.
+
+STEP 2 - KEEP only the best {min_signals}-{max_signals}. If fewer are truly \
+valuable, keep fewer. NEVER pad. Curation rubric:
+KEEP:
+{keep}
+DROP:
+{drop}
+
+STEP 3 - For each kept signal fill the schema. Assign:
+- confidence tier ({tiers}). Anything from Google Search Status API = "Confirmed".
+- impact/priority: P0 (check now) | P1 (act this week) | P2 (worth testing) | \
+P3 (awareness only). Separate OBSERVATION from ACTION: unconfirmed flux is rarely P0.
+Keep every field to <= {max_chars} characters — headline density, not paragraphs.
+
+STEP 4 - Sort each signal into exactly one section:
+{sections}
+Rules: Google-confirmed updates -> "Confirmed Search Updates". Unconfirmed \
+flux/rumor -> "Unconfirmed Watchlist" (advise monitor, not edit). Cross-cutting \
+to-dos summarised in "Today's Action Items" tagged P0/P1/P2.
+
+OUTPUT LANGUAGE: {lang}
+
+Return ONLY valid JSON (no markdown fences), schema:
+{{
+  "headline": "one line: the single most important development today (<={max_chars} chars)",
+  "signals": [
+    {{
+      "what_happened": "<={max_chars} chars, headline-style",
+      "why_it_matters": "why an expert should care",
+      "evidence": "official doc | dataset | case | observation — be specific",
+      "who_it_affects": "one or more of: {verticals}",
+      "what_to_do": "check X | test Y | monitor Z | no action",
+      "confidence": "Confirmed | Data-backed | Observed | Speculative",
+      "impact": "P0 | P1 | P2 | P3",
+      "section": "<one of the sections>",
+      "score": <int 0-100>,
+      "sources": [{{"name": "author or feed", "url": "..."}}]
+    }}
+  ],
+  "action_items": [{{"text": "...", "impact": "P0|P1|P2"}}],
+  "dropped_count": <int>
+}}"""
+
+
+def _weights_block(scoring: dict) -> str:
+    w = scoring["weights"]
+    labels = {
+        "source_authority": "source authority",
+        "data_and_evidence": "data & evidence",
+        "novelty": "novelty",
+        "potential_impact": "potential impact",
+        "actionability": "actionability",
+    }
+    return "\n".join(f"- {w[k]}% {labels.get(k, k)}" for k in w)
+
+
+def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
+    daily = cfg["daily"]
+    scoring = cfg["scoring"]
+    system = SYSTEM.format(
+        weights=_weights_block(scoring),
+        promo=scoring["penalty"]["marketing_promo"],
+        dup=scoring["penalty"]["duplicate"],
+        min_signals=daily["min_signals"],
+        max_signals=daily["max_signals"],
+        keep="\n".join(f"- {x}" for x in cfg["curation"]["keep"]),
+        drop="\n".join(f"- {x}" for x in cfg["curation"]["drop"]),
+        tiers=" | ".join(scoring["confidence_tiers"]),
+        sections="\n".join(f"- {s}" for s in daily["sections"]),
+        lang=LANG_RULES.get(cfg["brand"]["language"], LANG_RULES["bilingual"]),
+        max_chars=daily["max_field_chars"],
+        verticals=" / ".join(daily["verticals"]),
+    )
+    payload = [{
+        "group": it.group,
+        "source": it.source,
+        "author": it.author,
+        "source_name": it.source_name,
+        "text": it.text,
+        "url": it.url,
+        "likes": it.metrics.get("likes", 0),
+    } for it in items]
+    user = "CANDIDATES:\n" + json.dumps(payload, ensure_ascii=False)
+    return system, user
+
+
+def _strip_fences(text: str) -> str:
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[-1]
+        if text.rstrip().endswith("```"):
+            text = text.rstrip()[:-3]
+        if text.lstrip().startswith("json"):
+            text = text.lstrip()[4:]
+    return text.strip()
+
+
+def _call_anthropic(cfg, system, user) -> str:
+    from anthropic import Anthropic
+    client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    resp = client.messages.create(
+        model=cfg["llm"]["anthropic_model"],
+        max_tokens=cfg["llm"]["max_output_tokens"],
+        temperature=cfg["llm"]["temperature"],
+        system=system,
+        messages=[{"role": "user", "content": user}],
+    )
+    return resp.content[0].text
+
+
+def _call_openai(cfg, system, user) -> str:
+    from openai import OpenAI
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    resp = client.chat.completions.create(
+        model=cfg["llm"]["openai_model"],
+        max_tokens=cfg["llm"]["max_output_tokens"],
+        temperature=cfg["llm"]["temperature"],
+        messages=[{"role": "system", "content": system},
+                  {"role": "user", "content": user}],
+    )
+    return resp.choices[0].message.content
+
+
+def _call_moonshot(cfg, system, user) -> str:
+    """Moonshot / Kimi — OpenAI-compatible API, different base_url + key."""
+    from openai import OpenAI
+    client = OpenAI(
+        api_key=os.getenv("MOONSHOT_API_KEY"),
+        base_url=cfg["llm"].get("moonshot_base_url", "https://api.moonshot.ai/v1"),
+    )
+    resp = client.chat.completions.create(
+        model=cfg["llm"]["moonshot_model"],
+        max_tokens=cfg["llm"]["max_output_tokens"],
+        temperature=cfg["llm"]["temperature"],
+        messages=[{"role": "system", "content": system},
+                  {"role": "user", "content": user}],
+    )
+    return resp.choices[0].message.content
+
+
+def _call_scnet(cfg, system, user) -> str:
+    """SCNet (超算互联网) — GLM-5.2 via OpenAI-compatible API."""
+    from openai import OpenAI
+    client = OpenAI(
+        api_key=os.getenv("SCNET_API_KEY"),
+        base_url=cfg["llm"].get("scnet_base_url", "https://api.scnet.cn/api/llm/v1"),
+    )
+    resp = client.chat.completions.create(
+        model=cfg["llm"]["scnet_model"],
+        max_tokens=cfg["llm"]["max_output_tokens"],
+        temperature=cfg["llm"]["temperature"],
+        messages=[{"role": "system", "content": system},
+                  {"role": "user", "content": user}],
+    )
+    return resp.choices[0].message.content
+
+
+def _detect_provider() -> str:
+    """Pick the provider from whichever API key is actually set."""
+    for env_key, provider in (("SCNET_API_KEY", "scnet"),
+                              ("MOONSHOT_API_KEY", "moonshot"),
+                              ("ANTHROPIC_API_KEY", "anthropic"),
+                              ("OPENAI_API_KEY", "openai")):
+        if os.getenv(env_key, "").strip():
+            return provider
+    raise RuntimeError(
+        "No LLM API key found. Set one of SCNET_API_KEY, MOONSHOT_API_KEY, "
+        "ANTHROPIC_API_KEY or OPENAI_API_KEY in your .env (or as a GitHub secret)."
+    )
+
+
+def call_llm(cfg: dict, system: str, user: str) -> str:
+    provider = cfg["llm"].get("provider", "auto")
+    if provider == "auto":
+        provider = _detect_provider()
+    if provider in ("scnet", "glm"):
+        return _call_scnet(cfg, system, user)
+    if provider in ("moonshot", "kimi"):
+        return _call_moonshot(cfg, system, user)
+    if provider == "openai":
+        return _call_openai(cfg, system, user)
+    return _call_anthropic(cfg, system, user)
+
+
+def summarize_daily(cfg: dict, items: List[Item]) -> dict:
+    """Return a structured daily digest dict (grouped into sections)."""
+    if not items:
+        return {"headline": "No new SEO signals in this window.",
+                "signals": [], "sections": {}, "action_items": [],
+                "dropped_count": 0}
+    system, user = build_prompt(cfg, items)
+    raw = _strip_fences(call_llm(cfg, system, user))
+    data = json.loads(raw)
+
+    # Group signals into sections, preserving config order.
+    grouped = {s: [] for s in cfg["daily"]["sections"]}
+    for sig in data.get("signals", []):
+        sec = sig.get("section")
+        grouped.setdefault(sec, []).append(sig)
+    if data.get("action_items"):
+        grouped["Today's Action Items"] = [
+            {"what_to_do": a.get("text", ""), "impact": a.get("impact", "P2")}
+            if isinstance(a, dict) else {"what_to_do": a, "impact": "P2"}
+            for a in data["action_items"]
+        ]
+    data["sections"] = {k: v for k, v in grouped.items() if v}
+    return data

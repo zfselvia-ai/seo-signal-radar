@@ -1,0 +1,52 @@
+name: Weekly + Monthly Reports
+
+on:
+  schedule:
+    - cron: "30 1 * * 2"      # Tue 09:30 Asia/Shanghai — Search Intelligence Weekly
+    - cron: "30 1 4-6 * *"    # 4th-ish working day 09:30 SGT — monthly (code verifies)
+  workflow_dispatch:
+    inputs:
+      report:
+        description: "which report to run"
+        type: choice
+        options: [weekly, monthly]
+        default: weekly
+
+jobs:
+  reports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Restore state + archive
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/archive
+            data/serp_history.csv
+          key: radar-state-${{ github.run_id }}
+          restore-keys: radar-state-
+      - name: Run report
+        env:
+          SCNET_API_KEY: ${{ secrets.SCNET_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          MANUAL="${{ github.event.inputs.report }}"
+          if [ -n "$MANUAL" ]; then
+            python main.py "$MANUAL"
+          elif [ "$(date -u +%u)" = "2" ]; then
+            python main.py weekly
+          else
+            python main.py monthly   # no-op unless it's the 4th working day
+          fi
+      - name: Commit
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reports/ || true
+          git commit -m "report: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push || echo "push skipped"

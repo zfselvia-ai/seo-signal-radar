@@ -1,0 +1,294 @@
+# ==========================================================================
+# SEO Signal Radar — configuration
+#
+# This is not a news aggregator. It's a signal radar:
+#   X discovers anomalies -> official data confirms -> cases/data decide action.
+#
+# Everything is driven from this file. Edit here, not code.
+# ==========================================================================
+
+brand:
+  daily_title: "Daily SEO/GEO Signal Radar"
+  weekly_title: "Search Intelligence Weekly"
+  monthly_title: "State of Search Monthly"
+  special_title: "Search Intelligence Special Brief"
+  language: "bilingual"        # bilingual | en | zh
+  timezone: "Asia/Shanghai"
+
+# --------------------------------------------------------------------------
+# DAILY digest — "today, do I touch the site or not?"
+# Keep it tight: 5-8 signals. Fast to read (< 5 min).
+# --------------------------------------------------------------------------
+daily:
+  max_signals: 8
+  min_signals: 5
+  lookback_hours: 24
+  # Fixed sections, in display order. The LLM sorts signals into these.
+  sections:
+    - "Confirmed Search Updates"
+    - "SERP & Algorithm Signals"
+    - "Technical SEO Experiments"
+    - "AI Search / GEO"
+    - "Tools, Papers & Open Source"
+    - "Unconfirmed Watchlist"
+    - "Today's Action Items"
+  # Per-signal schema each item must fill.
+  signal_fields:
+    - "what_happened"     # 发生了什么 (<=120 chars, headline-style)
+    - "why_it_matters"    # 为什么重要
+    - "evidence"          # 证据：official doc / dataset / case / observation
+    - "who_it_affects"    # 影响谁：ecommerce / publisher / SaaS / UGC / local / intl / all
+    - "what_to_do"        # 值得做什么：check / test / monitor / no action
+    - "confidence"        # Confirmed | Data-backed | Observed | Speculative
+    - "impact"            # P0 | P1 | P2 | P3
+  # Cap per-field length so the UI never becomes a wall of text.
+  max_field_chars: 120
+  # Generic audience verticals (this is a universal product — NOT tied to any
+  # one site's own GSC data). "who_it_affects" must use these labels.
+  verticals: ["ecommerce", "publisher", "SaaS", "UGC", "local", "international", "all"]
+
+
+# --------------------------------------------------------------------------
+# SCORING — how each candidate signal is ranked before curation.
+# Weights sum to 100. A promo/duplicate penalty is subtracted after.
+# --------------------------------------------------------------------------
+scoring:
+  weights:
+    source_authority: 30      # 来源权威性
+    data_and_evidence: 25     # 数据与证据
+    novelty: 20               # 新颖度
+    potential_impact: 15      # 潜在影响
+    actionability: 10         # 可执行性
+  penalty:
+    marketing_promo: 20       # subtract for course/lead-magnet/self-promo
+    duplicate: 15             # subtract for rehash of already-covered items
+  # Confidence tiers, highest-trust first. Used in output labels.
+  confidence_tiers: ["Confirmed", "Data-backed", "Observed", "Speculative"]
+  # Impact / priority levels. P0 loudest.
+  impact_levels:
+    P0: "立即检查 / check now"
+    P1: "本周行动 / act this week"
+    P2: "值得测试 / worth testing"
+    P3: "仅了解 / awareness only"
+
+# --------------------------------------------------------------------------
+# CURATION RUBRIC — the main quality dial. Passed verbatim to the LLM.
+# --------------------------------------------------------------------------
+curation:
+  keep:
+    - "Data-driven findings (CTR studies, ranking correlation, traffic data, sample sizes)"
+    - "Novel experiments with results (esp. AI search / AEO / GEO tests with methodology)"
+    - "Officially confirmed algorithm / ranking / SERP-feature changes"
+    - "Google / Bing / OpenAI / Perplexity / Cloudflare product or policy changes affecting search"
+    - "Technical SEO depth: crawling, rendering, indexing, structured data, log analysis, edge SEO"
+    - "Primary-source statements from platform reps (@searchliaison, @googlesearchc, @BingWMC)"
+    - "Query fan-out, entity/knowledge-graph, agentic-traffic research with evidence"
+  drop:
+    - "'SEO is dead' takes, hot takes with no data"
+    - "Course / cohort / lead-magnet promotion, pure self-promo"
+    - "Rehashed SEO basics aimed at beginners"
+    - "Single-site ranking screenshots presented as trends"
+    - "GEO experiments that dress correlation as causation, or lack sample sizes"
+    - "AI-citation 'wins' with no methodology"
+
+# --------------------------------------------------------------------------
+# X / TWITTER — four separate Lists, not one info hot-pot.
+# Fetched via twikit using cached cookies.
+# --------------------------------------------------------------------------
+x:
+  enabled: true
+  tweets_per_handle: 15
+  lists:
+    official_signals:
+      label: "Official & First-Party Signals"
+      handles: [searchliaison, googlesearchc, BingWMC, Cloudflare]
+    algo_serp:
+      label: "Google Algorithm & SERP Flux"
+      handles: [rustybrick, glenngabe, Marie_Haynes, lilyraynyc, brodieseo]
+    technical_data:
+      label: "Technical SEO, Data & Experiments"
+      handles: [patrickstox, thetafferboy, VeryWellVersed, jroakes, screamingfrog, sitebulb]
+    geo_ai:
+      label: "GEO, AI Search & Zero-Click"
+      handles: [aleyda, Kevin_Indig, randfish, jasonmbarnard, lilyraynyc, VeryWellVersed, brodieseo]
+  keyword_search:
+    enabled: true
+    per_query: 15
+    min_likes: 20
+    queries:
+      - "AI Overviews SEO"
+      - "AEO answer engine optimization"
+      - "GEO generative engine optimization"
+      - "agentic traffic crawler"
+      - "zero click search study"
+      - "query fan-out"
+
+# --------------------------------------------------------------------------
+# RSS — reliable, no auth.
+# --------------------------------------------------------------------------
+rss:
+  enabled: true
+  max_items_per_feed: 10
+  feeds:
+    - {name: "Ahrefs Blog", url: "https://ahrefs.com/blog/feed/"}
+    - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.rss"}
+    - {name: "Search Engine Land", url: "https://searchengineland.com/feed"}
+    - {name: "Search Engine Journal", url: "https://www.searchenginejournal.com/feed/"}
+    - {name: "Google Search Central Blog", url: "https://developers.google.com/search/blog/feed.xml"}
+
+# --------------------------------------------------------------------------
+# GOOGLE SEARCH STATUS — official confirmation layer (drives Special Briefs)
+# Uses affected_products[].id (service_key is deprecated per official schema).
+# --------------------------------------------------------------------------
+google_status:
+  enabled: true
+  incidents_url: "https://status.search.google.com/incidents.json"
+  feed_url: "https://status.search.google.com/en/feed.atom"
+  # Known product ids. Ranking is the primary one for SEO.
+  products:
+    ranking: "rGHU1u87FJnkP6W2GwMi"   # Ranking updates (Core/Spam/Reviews often land here)
+  # A new/updated incident on these products triggers a Special Brief.
+  special_brief_on: ["ranking"]
+
+# --------------------------------------------------------------------------
+# SERP VOLATILITY & CONSENSUS LAYER
+# Does NOT average raw values. Stores raw for provenance, decides on the
+# 180-day percentile. Two axes: Global Heat (whole market) vs Vertical Heat
+# (per-industry — this is a UNIVERSAL product, not tied to any one site).
+# Default sources are manual/watchlist until you wire APIs.
+# --------------------------------------------------------------------------
+serp_layer:
+  enabled: true
+  # Percentile buckets -> label.
+  bands:
+    - {max: 59, label: "Normal"}
+    - {max: 79, label: "Elevated"}
+    - {max: 94, label: "High"}
+    - {max: 100, label: "Extreme"}
+  # Rolling window used to compute percentile of today's raw value.
+  percentile_window_days: 180
+  # Event generation thresholds (see serp_layer.py).
+  event_rules:
+    global_sustained_days: 2       # Global Heat >= 90 for N days -> event
+    global_sustained_min: 90
+    global_spike_min: 97           # or Global Heat >= 97 for 1 day
+    vertical_min: 95               # or a vertical's Heat >= 95 ...
+    vertical_fraction: 0.25        # ... with >=25% of tracked verticals anomalous
+    event_end_below: 70            # ends after N days Global Heat < this
+    event_end_days: 3
+  # Source adapters. "manual" = you record values; others need API keys/wiring.
+  sources:
+    sistrix:  {role: "global",       adapter: "manual"}  # macro sensor
+    algoroo:  {role: "confirmation", adapter: "manual"}  # independent cross-check
+    awr:      {role: "vertical",     adapter: "manual"}  # per-industry (has API/MCP)
+  # Industry verticals tracked for Vertical Heat (universal, not own-site).
+  verticals: ["ecommerce", "publisher", "SaaS", "local", "international"]
+
+# --------------------------------------------------------------------------
+# REPORTS — daily feeds weekly feeds monthly. Each has a distinct job.
+#   daily:   what happened (24-72h)     -> signals & alerts
+#   weekly:  what truly mattered (1-4w) -> judgments & experiments  [reduce noise]
+#   monthly: structural trends (1-6mo)  -> strategy & allocation    [reduce misjudgment]
+# --------------------------------------------------------------------------
+reports:
+  weekly:
+    # Tuesday 09:30 local (cover previous Mon-Sun). Not Monday: EU weekend
+    # research + GSC data still preliminary.
+    cadence_cron: "30 9 * * 2"
+    period: "prev_mon_sun"
+    read_minutes: 10
+    max_signals: 10
+    max_themes: 3
+    sections:
+      - "This Week's 3 Core Judgments"     # conclusion first, w/ for/against evidence + confidence
+      - "Algorithm & SERP Map (14-30d)"    # Confirmed/Correlated/Possibly Related/No Evidence
+      - "Google & Search Platforms"
+      - "AI Search / GEO"                  # report new signals only, no over-trending
+      - "Technical SEO Lab"                # 1-3 testable experiments w/ hypothesis+cost+metric
+      - "Noise Cancelled"                  # this week's non-actionable hype (product memory hook)
+      - "Next Week's Action Items"         # <=3: P0 check / P1 test / P2 watch
+  monthly:
+    # 4th working day of the month, ~09:30 local. Cron approximates; code
+    # verifies it is actually the 4th working day before running.
+    cadence_cron: "30 9 4-6 * *"
+    period: "prev_calendar_month"
+    read_minutes: 25
+    max_narratives: 5
+    min_narratives: 3
+    sections:
+      - "Executive Summary"                # 3 changes / 2 risks / 2 opportunities / 1 stop
+      - "Monthly Search Scoreboard"
+      - "Structural Trends (3-5 narratives)"
+      - "Algorithm Impact Review (90d view)"
+      - "AI Search / GEO Index"            # stable metrics, 3-month direction — not single prompts
+      - "Winners & Losers"                 # shared characteristics, not just up/down
+      - "Experiment Results"               # Scale/Continue/Modify/Stop/Inconclusive
+      - "Next Month's Resource Allocation" # Double Down / Test / Stop
+  special_brief:
+    # Event-driven, not scheduled. Two nodes for algorithm updates:
+    #   Update Started      -> Update Alert (monitoring only, no diagnosis)
+    #   Completed + 7 days  -> Post-update Analysis
+    post_update_delay_days: 7
+    triggers:
+      - "Google confirms Core / Spam / Reviews / Discover update"
+      - "Large-scale Search/crawl/index incident"
+      - "Major AI Overview / AI Mode / search product change"
+      - "Important Chrome / robots / structured-data rule change"
+      - "SERP volatility crosses anomaly threshold (see serp_layer)"
+
+# --------------------------------------------------------------------------
+# LLM (provider-agnostic). Keys in .env.
+# --------------------------------------------------------------------------
+llm:
+  # "auto" = use whichever API key you set in .env / GitHub secrets.
+  # Force one explicitly with: scnet(glm) | moonshot(kimi) | anthropic | openai
+  provider: "auto"
+  # SCNet (超算互联网) — GLM-5.2 via OpenAI-compatible API
+  scnet_model: "GLM-5.2"
+  scnet_base_url: "https://api.scnet.cn/api/llm/v1"
+  moonshot_model: "kimi-k2.5"
+  moonshot_base_url: "https://api.moonshot.ai/v1"
+  anthropic_model: "claude-opus-4-8"
+  openai_model: "gpt-4o"
+  max_output_tokens: 6000
+  temperature: 0.3
+
+# --------------------------------------------------------------------------
+# OUTPUT & ARCHIVE
+# --------------------------------------------------------------------------
+output:
+  dir: "reports"
+  formats: ["md", "html"]
+  # Structured daily archive that weekly/monthly + dashboard read from.
+  archive_dir: "data/archive"
+
+# --------------------------------------------------------------------------
+# DASHBOARD — the "single source of truth" web product. One self-contained
+# HTML file that reads the daily archive. Three views: Today / Algorithm Map /
+# Source Library. Linear-style light UI.
+# --------------------------------------------------------------------------
+dashboard:
+  enabled: true
+  output_file: "dashboard/index.html"
+  # How many days of archive to embed (Library + Map history).
+  history_days: 365
+  # One-line thesis shown in the header.
+  thesis: "What changed in Search, why it matters, and what to do next."
+  thesis_zh: "搜索发生了什么，为什么重要，今天该做什么。"
+  map_ranges: ["7D", "30D", "90D", "1Y"]
+
+# --------------------------------------------------------------------------
+# NOTIFY — compressed push. The web dashboard is the full product; the
+# notification is only a cover: 3 signals + official status + <=2 actions +
+# a link back. Webhook is generic; pick your channel's format.
+# --------------------------------------------------------------------------
+notify:
+  enabled: true
+  top_signals: 3
+  max_actions: 2
+  # Where "view full digest" points (your Pages URL or file path).
+  dashboard_url: "https://your-username.github.io/seo-signal-radar/"
+  # channel format: "slack" | "discord" | "telegram" | "feishu" | "plain"
+  channel: "plain"
+  # Webhook URL read from env NOTIFY_WEBHOOK_URL (keep secrets out of config).
+

@@ -1,0 +1,54 @@
+name: Daily Signal Radar
+
+on:
+  schedule:
+    - cron: "0 23 * * *"     # 07:00 Asia/Shanghai
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Restore X cookies
+        env: {COOKIES_JSON: "${{ secrets.X_COOKIES_JSON }}"}
+        run: '[ -n "$COOKIES_JSON" ] && echo "$COOKIES_JSON" > cookies.json || echo "no cookies"'
+      - name: Cache state + archive
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/seen.json
+            data/archive
+            data/serp_history.csv
+          key: radar-state-${{ github.run_id }}
+          restore-keys: radar-state-
+      - name: Run daily
+        env:
+          SCNET_API_KEY: ${{ secrets.SCNET_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          X_USERNAME: ${{ secrets.X_USERNAME }}
+          X_EMAIL: ${{ secrets.X_EMAIL }}
+          X_PASSWORD: ${{ secrets.X_PASSWORD }}
+          NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+        run: python main.py daily      # also rebuilds dashboard/ + sends push
+      - name: Commit
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reports/ data/ dashboard/ || true
+          git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push || echo "push skipped"
+      - name: Publish dashboard to Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dashboard
+          keep_files: false

@@ -1,0 +1,17 @@
+# secrets & session
+.env
+cookies.json
+
+# state (regenerated each run)
+data/seen.json
+data/serp_history.csv
+data/archive/*.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# os
+.DS_Store

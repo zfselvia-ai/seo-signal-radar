@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Signal Radar</title>
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#ffffff; --panel:#fbfbfc; --line:#ececf0; --line-strong:#dcdce3;
+    --ink:#16161a; --ink-2:#5b5b66; --ink-3:#8a8a96;
+    --accent:#3b5bdb;                 /* signal blue — functional, not decorative */
+    --p0:#c0392b; --p0-bg:#fdecec;
+    --p1:#b45309; --p1-bg:#fdf0e0;
+    --p2:#8a6d1f; --p2-bg:#fbf6df;
+    --p3:#4b5563; --p3-bg:#f2f3f5;
+    --heat-extreme:#c0392b; --heat-high:#e07b39; --heat-elevated:#d4a72c;
+    --heat-normal:#3f9d5a; --heat-unknown:#b8b8c0;
+    --radius:8px;
+    --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);
+    font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* ---- header ---- */
+  header{border-bottom:1px solid var(--line);padding:20px 28px 0;position:sticky;
+    top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);z-index:10;}
+  .brandline{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+  .logo{font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:-.02em;}
+  .logo .dot{color:var(--accent);}
+  .thesis{color:var(--ink-2);font-size:13px;}
+  .thesis .zh{color:var(--ink-3);margin-left:8px;}
+  nav{display:flex;gap:2px;margin-top:16px;}
+  nav button{font-family:var(--ui);font-size:13px;font-weight:500;color:var(--ink-2);
+    background:none;border:none;border-bottom:2px solid transparent;padding:8px 14px;
+    cursor:pointer;}
+  nav button:hover{color:var(--ink);}
+  nav button.active{color:var(--ink);border-bottom-color:var(--accent);}
+
+  main{max-width:940px;margin:0 auto;padding:28px;}
+  .view{display:none;}
+  .view.active{display:block;}
+
+  /* ---- morning brief bar ---- */
+  .brief{display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--panel);margin-bottom:20px;}
+  .brief .stat{display:flex;flex-direction:column;gap:1px;padding-right:16px;
+    border-right:1px solid var(--line);}
+  .brief .stat:last-child{border-right:none;}
+  .brief .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.04em;}
+  .brief .v{font-family:var(--mono);font-size:16px;font-weight:600;}
+
+  .headline{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.35;
+    margin:6px 0 22px;}
+  .date-label{font-family:var(--mono);font-size:12px;color:var(--ink-3);}
+
+  /* ---- section blocks ---- */
+  h2.section{font-size:13px;font-weight:600;text-transform:uppercase;
+    letter-spacing:.05em;color:var(--ink-2);margin:26px 0 10px;
+    display:flex;align-items:center;gap:8px;}
+  h2.section .count{font-family:var(--mono);color:var(--ink-3);font-weight:500;}
+
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+    margin-bottom:10px;background:var(--bg);}
+  .card .what{font-weight:600;font-size:15px;line-height:1.4;margin-bottom:8px;}
+  .card .row{display:flex;gap:8px;font-size:13px;color:var(--ink-2);margin:3px 0;}
+  .card .row .lab{font-family:var(--mono);font-size:11px;color:var(--ink-3);
+    min-width:96px;text-transform:uppercase;letter-spacing:.03em;padding-top:1px;}
+  .card .srcs{margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;}
+  .card .srcs a{font-family:var(--mono);font-size:12px;}
+
+  .badges{display:inline-flex;gap:6px;margin-left:8px;vertical-align:middle;}
+  .tag{font-family:var(--mono);font-size:11px;font-weight:600;padding:1px 7px;
+    border-radius:5px;letter-spacing:.02em;}
+  .tag.P0{color:var(--p0);background:var(--p0-bg);}
+  .tag.P1{color:var(--p1);background:var(--p1-bg);}
+  .tag.P2{color:var(--p2);background:var(--p2-bg);}
+  .tag.P3{color:var(--p3);background:var(--p3-bg);}
+  .tag.conf{color:var(--ink-2);background:var(--panel);border:1px solid var(--line-strong);}
+
+  .actions li{margin:6px 0;}
+  ul.plain{list-style:none;padding:0;margin:0;}
+
+  /* ---- SERP weather ---- */
+  .serp{border:1px solid var(--line);border-radius:var(--radius);padding:16px;
+    background:var(--panel);margin-bottom:20px;}
+  .serp .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:14px;}
+  .serp .cell .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.04em;}
+  .serp .cell .v{font-size:15px;font-weight:600;display:flex;align-items:center;gap:7px;}
+  .dot-heat{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .interp{margin-top:12px;font-size:13px;color:var(--ink-2);font-style:italic;
+    border-top:1px solid var(--line);padding-top:10px;}
+
+  /* ---- algorithm map (signature) ---- */
+  .map-controls{display:flex;gap:6px;margin-bottom:18px;}
+  .map-controls button{font-family:var(--mono);font-size:12px;border:1px solid var(--line-strong);
+    background:var(--bg);color:var(--ink-2);padding:4px 12px;border-radius:6px;cursor:pointer;}
+  .map-controls button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .track{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--line);
+    min-height:64px;}
+  .track:last-child{border-bottom:1px solid var(--line);}
+  .track .name{padding:14px 12px;border-right:1px solid var(--line);}
+  .track .name .t{font-weight:600;font-size:13px;}
+  .track .name .d{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
+  .lane{position:relative;padding:10px 0;}
+  .lane .ev{position:absolute;top:12px;transform:translateX(-50%);cursor:default;}
+  .lane .ev .pip{width:12px;height:12px;border-radius:50%;border:2px solid #fff;
+    box-shadow:0 0 0 1px var(--line-strong);}
+  .lane .ev .tip{position:absolute;left:50%;transform:translateX(-50%);
+    bottom:20px;background:var(--ink);color:#fff;font-size:12px;line-height:1.4;
+    padding:8px 10px;border-radius:6px;width:220px;display:none;z-index:5;}
+  .lane .ev:hover .tip{display:block;}
+  .lane .ev .tip .td{font-family:var(--mono);font-size:10px;color:#c9c9d4;margin-top:4px;}
+  .axis{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--line);}
+  .axis .ticks{display:flex;justify-content:space-between;padding:6px 8px;
+    font-family:var(--mono);font-size:10px;color:var(--ink-3);}
+  .map-empty,.lib-empty{color:var(--ink-3);font-size:13px;padding:24px 0;text-align:center;}
+  .legend{display:flex;gap:16px;margin:16px 0 4px;font-size:12px;color:var(--ink-2);}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+
+  /* ---- library ---- */
+  .lib-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .lib-filters input,.lib-filters select{font-family:var(--ui);font-size:13px;
+    border:1px solid var(--line-strong);border-radius:6px;padding:6px 10px;background:var(--bg);}
+  .lib-filters input{flex:1;min-width:200px;}
+  .lib-row{display:grid;grid-template-columns:92px 1fr;gap:14px;border-bottom:1px solid var(--line);
+    padding:12px 4px;}
+  .lib-row .ld{font-family:var(--mono);font-size:12px;color:var(--ink-3);}
+  .lib-row .lw{font-weight:500;}
+  .lib-row .lmeta{font-size:12px;color:var(--ink-3);margin-top:4px;
+    display:flex;flex-wrap:wrap;gap:8px;}
+  .lib-count{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:10px;}
+
+  footer{max-width:940px;margin:0 auto;padding:20px 28px 40px;color:var(--ink-3);
+    font-size:12px;font-family:var(--mono);border-top:1px solid var(--line);}
+  @media(max-width:640px){
+    .track,.axis{grid-template-columns:84px 1fr;}
+    main{padding:18px;}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brandline">
+    <span class="logo">SEO Signal Radar<span class="dot">.</span></span>
+    <span class="thesis" id="thesis"></span>
+  </div>
+  <nav>
+    <button data-view="today" class="active">Today</button>
+    <button data-view="map">Algorithm Map</button>
+    <button data-view="library">Source Library</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-today" class="view active"></section>
+  <section id="view-map" class="view"></section>
+  <section id="view-library" class="view"></section>
+</main>
+
+<footer id="footer"></footer>
+
+<script id="radar-data" type="application/json">__DATA__</script>
+<script>
+const DATA = JSON.parse(document.getElementById("radar-data").textContent);
+const HEATVAR = {Extreme:"--heat-extreme",High:"--heat-high",Elevated:"--heat-elevated",
+  Normal:"--heat-normal",Unknown:"--heat-unknown"};
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>(
+  {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const heatColor = b => `var(${HEATVAR[b]||"--heat-unknown"})`;
+
+document.getElementById("thesis").innerHTML =
+  esc(DATA.thesis) + (DATA.thesis_zh?`<span class="zh">${esc(DATA.thesis_zh)}</span>`:"");
+document.getElementById("footer").textContent =
+  `${DATA.days_archived} days archived · ${DATA.library.length} signals · generated ${DATA.generated_at.slice(0,16).replace("T"," ")} UTC`;
+
+/* ---------------- nav ---------------- */
+document.querySelectorAll("nav button").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    document.getElementById("view-"+b.dataset.view).classList.add("active");
+  };
+});
+
+/* ---------------- Today ---------------- */
+function tag(imp){return imp?`<span class="tag ${esc(imp)}">${esc(imp)}</span>`:"";}
+function confTag(c){return c?`<span class="tag conf">${esc(c)}</span>`:"";}
+
+function morningBrief(rec){
+  const sigs=[];
+  Object.entries(rec.sections||{}).forEach(([sec,arr])=>{
+    if(sec!=="Today's Action Items") arr.forEach(s=>{if(s.what_happened)sigs.push(s);});
+  });
+  const impacts=sigs.map(s=>s.impact||"");
+  const top=["P0","P1","P2","P3"].find(p=>impacts.includes(p))||"—";
+  const confirmed=(rec.sections?.["Confirmed Search Updates"]||[]).length>0;
+  const band=(rec.serp||{}).global_band||"Unknown";
+  return {n:sigs.length,top,confirmed,band};
+}
+
+function renderToday(){
+  const rec=DATA.today||{};
+  const el=document.getElementById("view-today");
+  if(!rec.date){el.innerHTML=`<p class="lib-empty">No daily report yet. Run <code>python main.py daily</code> first.</p>`;return;}
+  const b=morningBrief(rec);
+  let h=`<div class="date-label">${esc(rec.date)}</div>`;
+  h+=`<div class="brief">
+      <div class="stat"><span class="k">Signals</span><span class="v">${b.n}</span></div>
+      <div class="stat"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>
+      <div class="stat"><span class="k">Confirmed update</span><span class="v">${b.confirmed?"Yes":"No"}</span></div>
+      <div class="stat"><span class="k">SERP heat</span><span class="v">
+        <span class="dot-heat" style="background:${heatColor(b.band)}"></span>${esc(b.band)}</span></div>
+    </div>`;
+  if(rec.headline) h+=`<div class="headline">${esc(rec.headline)}</div>`;
+  h+=serpWeather(rec.serp);
+
+  (DATA.sections||[]).forEach(sec=>{
+    const arr=(rec.sections||{})[sec];
+    if(!arr||!arr.length)return;
+    h+=`<h2 class="section">${esc(sec)} <span class="count">${arr.length}</span></h2>`;
+    if(sec==="Today's Action Items"){
+      h+=`<ul class="plain actions">`+arr.map(s=>
+        `<li>${tag(s.impact)} ${esc(s.what_to_do)}</li>`).join("")+`</ul>`;
+      return;
+    }
+    arr.forEach(s=>{h+=signalCard(s);});
+  });
+  if(rec.dropped_count) h+=`<p class="date-label" style="margin-top:20px">Filtered out ${rec.dropped_count} lower-value candidates.</p>`;
+  el.innerHTML=h;
+}
+
+function signalCard(s){
+  const row=(lab,key)=> s[key]?`<div class="row"><span class="lab">${lab}</span><span>${esc(s[key])}</span></div>`:"";
+  const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join("");
+  return `<div class="card">
+    <div class="what">${esc(s.what_happened)}<span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
+    ${row("Why","why_it_matters")}${row("Evidence","evidence")}
+    ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
+    ${srcs?`<div class="srcs">${srcs}</div>`:""}
+  </div>`;
+}
+
+function serpWeather(serp){
+  if(!serp||!serp.global_band) return "";
+  const cell=(k,band,v)=>`<div class="cell"><div class="k">${k}</div>
+    <div class="v">${band?`<span class="dot-heat" style="background:${heatColor(band)}"></span>`:""}${esc(v)}</div></div>`;
+  const av=serp.anomalous_verticals&&serp.anomalous_verticals.length?serp.anomalous_verticals.join(", "):"none";
+  return `<div class="serp"><div class="grid">
+    ${cell("Global Heat",serp.global_band,`${serp.global_band} (${serp.global_heat??"?"})`)}
+    ${cell("Vertical Heat",serp.vertical_band,`${serp.vertical_band??"?"} (${serp.vertical_heat??"?"})`)}
+    ${cell("Source agreement","",serp.source_agreement??"n/a")}
+    ${cell("Affected verticals","",av)}
+    </div>${serp.quadrant?`<div class="interp">${esc(serp.quadrant)}. ${esc(serp.interpretation||"")}</div>`:""}</div>`;
+}
+
+/* ---------------- Algorithm Map ---------------- */
+const TRACKS=[
+  {key:"official",t:"Official",d:"Google confirms"},
+  {key:"external",t:"External flux",d:"SERP volatility"},
+  {key:"community",t:"Community",d:"expert signals"},
+];
+let mapRange=(DATA.map_ranges&&DATA.map_ranges[1])||"30D";
+
+function rangeDays(r){return {"7D":7,"30D":30,"90D":90,"1Y":365}[r]||30;}
+
+function renderMap(){
+  const el=document.getElementById("view-map");
+  const days=rangeDays(mapRange);
+  const now=new Date();
+  const start=new Date(now.getTime()-days*864e5);
+  const ev=(DATA.map_events||[]).filter(e=>{
+    const d=new Date(e.date+"T00:00:00Z"); return d>=start && d<=now;
+  });
+  let h=`<div class="map-controls">`+
+    (DATA.map_ranges||[]).map(r=>`<button data-r="${r}" class="${r===mapRange?"active":""}">${r}</button>`).join("")+`</div>`;
+  h+=`<div class="legend">
+    <span><span class="dot-heat" style="background:var(--heat-extreme)"></span>Extreme</span>
+    <span><span class="dot-heat" style="background:var(--heat-high)"></span>High</span>
+    <span><span class="dot-heat" style="background:var(--heat-elevated)"></span>Elevated</span>
+    <span><span class="dot-heat" style="background:var(--heat-normal)"></span>Normal</span></div>`;
+
+  if(!ev.length){
+    h+=`<div class="map-empty">No timeline events in the last ${esc(mapRange)}. Confirmed updates, SERP flux and community signals appear here as the archive fills in.</div>`;
+  }else{
+    const span=Math.max(1,(now-start));
+    const pos=d=>((new Date(d+"T00:00:00Z")-start)/span)*100;
+    TRACKS.forEach(tr=>{
+      const mine=ev.filter(e=>e.track===tr.key);
+      h+=`<div class="track"><div class="name"><div class="t">${tr.t}</div><div class="d">${tr.d}</div></div><div class="lane">`;
+      mine.forEach(e=>{
+        const left=Math.min(99,Math.max(1,pos(e.date)));
+        h+=`<div class="ev" style="left:${left}%">
+          <div class="pip" style="background:${heatColor(e.band)}"></div>
+          <div class="tip">${esc(e.label)}<div class="td">${esc(e.date)} · ${esc(e.detail||e.band)}</div></div>
+        </div>`;
+      });
+      h+=`</div></div>`;
+    });
+    h+=`<div class="axis"><div></div><div class="ticks">
+      <span>${start.toISOString().slice(0,10)}</span><span>${now.toISOString().slice(0,10)}</span></div></div>`;
+  }
+  el.innerHTML=h;
+  el.querySelectorAll(".map-controls button").forEach(b=>{
+    b.onclick=()=>{mapRange=b.dataset.r;renderMap();};
+  });
+}
+
+/* ---------------- Source Library ---------------- */
+let libState={q:"",section:"",confidence:"",impact:"",vertical:""};
+function renderLibrary(){
+  const el=document.getElementById("view-library");
+  const secs=[...new Set(DATA.library.map(s=>s.section))];
+  const confs=["Confirmed","Data-backed","Observed","Speculative"];
+  const imps=["P0","P1","P2","P3"];
+  const opt=(v,cur)=>`<option value="${esc(v)}"${v===cur?" selected":""}>${esc(v||"")}</option>`;
+  let h=`<div class="lib-filters">
+    <input id="lq" placeholder="Search signals…" value="${esc(libState.q)}">
+    <select id="lsec"><option value="">All sections</option>${secs.map(s=>opt(s,libState.section)).join("")}</select>
+    <select id="lconf"><option value="">Any confidence</option>${confs.map(c=>opt(c,libState.confidence)).join("")}</select>
+    <select id="limp"><option value="">Any priority</option>${imps.map(i=>opt(i,libState.impact)).join("")}</select>
+    <select id="lvert"><option value="">Any vertical</option>${(DATA.verticals||[]).map(v=>opt(v,libState.vertical)).join("")}</select>
+  </div><div id="lib-results"></div>`;
+  el.innerHTML=h;
+  const bind=(id,key)=>{const n=document.getElementById(id);
+    n.oninput=n.onchange=()=>{libState[key]=n.value;drawLibResults();};};
+  bind("lq","q");bind("lsec","section");bind("lconf","confidence");bind("limp","impact");bind("lvert","vertical");
+  drawLibResults();
+}
+function drawLibResults(){
+  const q=libState.q.toLowerCase();
+  let rows=DATA.library.filter(s=>{
+    if(libState.section&&s.section!==libState.section)return false;
+    if(libState.confidence&&s.confidence!==libState.confidence)return false;
+    if(libState.impact&&s.impact!==libState.impact)return false;
+    if(libState.vertical&&!(s.who_it_affects||"").toLowerCase().includes(libState.vertical.toLowerCase()))return false;
+    if(q){
+      const hay=(s.what_happened+" "+s.why_it_matters+" "+s.evidence+" "+s.what_to_do).toLowerCase();
+      if(!hay.includes(q))return false;
+    }
+    return true;
+  }).sort((a,b)=>b.date.localeCompare(a.date));
+  let h=`<div class="lib-count">${rows.length} signal${rows.length===1?"":"s"}</div>`;
+  if(!rows.length){h+=`<div class="lib-empty">No matching signals.</div>`;}
+  rows.slice(0,400).forEach(s=>{
+    const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join(" ");
+    h+=`<div class="lib-row">
+      <div class="ld">${esc(s.date)}</div>
+      <div><div class="lw">${esc(s.what_happened)} <span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
+        <div class="lmeta"><span>${esc(s.section)}</span>${s.who_it_affects?`<span>· ${esc(s.who_it_affects)}</span>`:""}${srcs?`<span>· ${srcs}</span>`:""}</div>
+      </div></div>`;
+  });
+  document.getElementById("lib-results").innerHTML=h;
+}
+
+renderToday();renderMap();renderLibrary();
+</script>
+</body>
+</html>
