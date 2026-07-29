@@ -22,59 +22,60 @@ h2{font-size:19px;margin-top:30px;padding-bottom:6px;border-bottom:1px solid #ee
 .footer{color:#999;font-size:12px;margin-top:32px;}
 </style></head><body>
 <h1>Daily SEO/GEO Signal Radar</h1><div class='date'>2026-07-29</div>
-<div class='brief'><span class='chip'>6 signals</span><span class='chip'>top P0</span><span class='chip'>no confirmed update</span><span class='chip'>SERP Unknown</span></div>
-<div class='headline'>Google AI opt-out removes Top Stories eligibility; publishers face traffic trade-off</div>
+<div class='brief'><span class='chip'>6 signals</span><span class='chip'>top P1</span><span class='chip'>no confirmed update</span><span class='chip'>SERP Unknown</span></div>
+<div class='headline'>Google AI Overviews now embed Top Stories carousel; AI opt-out risks publisher visibility</div>
 <h2>SERP &amp; Algorithm Signals</h2>
 <div class='item'>
-<div class='what'>Data: higher AI-detector scores correlate with lower rankings and fewer indexed pages, yet heavily flagged pages still appear in top 10<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
-<div class='meta'><b>为何重要 Why:</b> AI内容检测与排名存在相关性但非因果：纯AI内容可能受质量评估影响，但AI检测分数本身不是排名因素，内容质量评估仍是核心。</div>
-<div class='meta'><b>证据 Evidence:</b> Correlation data: higher AI scores tied to lower positions and fewer indexed pages; counterexamples in top 10</div>
-<div class='meta'><b>影响 Affects:</b> publisher / ecommerce / SaaS</div>
-<div class='meta'><b>行动 Action:</b> 聚焦E-E-A-T和内容质量，而非AI检测分数；监控AI辅助内容的实际表现</div>
-<div class='src'><a href='https://www.searchenginejournal.com/heavily-ai-flagged-pages-still-rank-across-googles-top-10/583983/'>Search Engine Journal ↗</a></div>
+<div class='what'>Amazon exited US Google Shopping July 2025 and has not returned per auction data<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> ecommerce 竞争格局剧变：Amazon 缺席释放 Shopping ad inventory 与 organic PLA 空间，retailer 可争夺低价流量</div>
+<div class='meta'><b>证据 Evidence:</b> Year of auction data shows Amazon&#x27;s sustained absence from US Google Shopping auctions</div>
+<div class='meta'><b>影响 Affects:</b> ecommerce</div>
+<div class='meta'><b>行动 Action:</b> 监控 PLA 竞争强度与 CPC 变化，测试 Shopping campaign 预算 reallocation，评估 organic product snippet 机会</div>
+<div class='src'><a href='https://www.searchenginejournal.com/amazon-left-us-google-shopping-a-year-ago-never-came-back/583307/'>Search Engine Journal ↗</a></div>
+</div>
+<div class='item'>
+<div class='what'>Google&#x27;s DMCA scraping case vs SerpApi collapsed; SearchGuard protects ads not copyright<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
+<div class='meta'><b>为何重要 Why:</b> anti-bot 与 anti-scraping 法律基础被削弱：site owner 更难阻止 AI crawler，需重新设计 robots.txt 与 TOS 策略</div>
+<div class='meta'><b>证据 Evidence:</b> Case dismissed; court ruled SearchGuard mechanism defends ad revenue, not content ownership</div>
+<div class='meta'><b>影响 Affects:</b> all</div>
+<div class='meta'><b>行动 Action:</b> 审查 robots.txt 与 ToS 的 enforceability，考虑 rate-limiting 与 technical blocking 替代法律手段</div>
+<div class='src'><a href='https://www.searchenginejournal.com/google-lost-its-scraping-case-now-you-have-to-pick-a-side-on-the-open-web/583066/'>Search Engine Journal ↗</a></div>
 </div>
 <h2>Technical SEO Experiments</h2>
 <div class='item'>
-<div class='what'>Google&#x27;s Gary Illyes uncertain whether repeatedly pushing unavailable_after dates forward causes indexing problems<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
-<div class='meta'><b>证据 Evidence:</b> Gary Illyes primary-source statement: &#x27;would need to check&#x27; if forward-shifting dates cause problems</div>
-<div class='meta'><b>影响 Affects:</b> publisher / ecommerce</div>
-<div class='meta'><b>行动 Action:</b> 审计现有unavailable_after实现，避免频繁修改日期；监控受影响页面索引状态</div>
-<div class='src'><a href='https://www.searchenginejournal.com/googles-illyes-unsure-on-shifting-unavailable_after-dates/584064/'>Search Engine Journal ↗</a></div>
-</div>
-<div class='item'>
-<div class='what'>Google confirms random CMS-injected URLs in HTML have minimal SEO impact if not linked or indexed<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
-<div class='meta'><b>为何重要 Why:</b> 减少技术SEO中的低价值修复优先级：CMS自动注入的未链接URL不会直接损害排名，可将资源转向更高影响的索引和抓取优化。</div>
-<div class='meta'><b>证据 Evidence:</b> John Mueller primary-source statement on CMS-injected URL impact</div>
+<div class='what'>Google rendering test reveals WRS pauses time with virtual clock after 5-second mark<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 技术 SEO 需理解 WRS 的 timeout 行为：setTimeout/setInterval 在 5 秒后冻结，影响 lazy-loaded content 与 hydration 策略</div>
+<div class='meta'><b>证据 Evidence:</b> Martin Splitt confirmed virtual clock behavior; test shows timers freeze at ~5s, not crash</div>
 <div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> 确认注入URL未被链接/索引即可，无需紧急修复；优先处理实际索引问题</div>
-<div class='src'><a href='https://www.searchenginejournal.com/google-on-seo-impact-of-urls-injected-into-html-by-cms-platforms/584037/'>Search Engine Journal ↗</a></div>
+<div class='meta'><b>行动 Action:</b> 审计关键 content 是否在 5s 内完成渲染，避免依赖 setTimeout 加载核心元素，改用 server-side 或 pre-rendering</div>
+<div class='src'><a href='https://www.searchenginejournal.com/google-seo-test-shows-what-happens-in-5-second-rendering-window/583878/'>Search Engine Journal ↗</a></div>
 </div>
 <h2>AI Search / GEO</h2>
 <div class='item'>
-<div class='what'>Google places Top Stories carousels inside AI Overviews; opting out of AI training in Search Console may remove Top Stories placement<span class='badge' style='color:#991b1b;background:#fee2e2'>P0</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
-<div class='meta'><b>为何重要 Why:</b> 出版商面临关键权衡：选择退出AI训练可保护内容不被用于AI Overviews，但会失去Top Stories这一重要流量入口，直接影响新闻类publisher的有机流量。</div>
-<div class='meta'><b>证据 Evidence:</b> Search Engine Journal报道，Google确认AI opt-out设置与Top Stories资格挂钩</div>
+<div class='what'>Google embeds Top Stories carousel inside AI Overviews; AI opt-out in Search Console may remove this placement<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
+<div class='meta'><b>为何重要 Why:</b> publisher 若选择 AI opt-out，可能同时失去 Top Stories 曝光，需重新评估 traffic 策略与 brand visibility 的 trade-off</div>
+<div class='meta'><b>证据 Evidence:</b> SEJ reports Google confirmed Top Stories integration into AI Overviews; opt-out setting controls inclusion</div>
 <div class='meta'><b>影响 Affects:</b> publisher</div>
-<div class='meta'><b>行动 Action:</b> 评估AI opt-out对Top Stories流量的影响，测试保留与退出的流量差异</div>
+<div class='meta'><b>行动 Action:</b> 检查 Search Console 的 AI opt-out 设置，评估 Top Stories 流量占比，测试 opt-in/opt-out 的 CTR 差异</div>
 <div class='src'><a href='https://www.searchenginejournal.com/ai-opt-out-may-cost-publishers-a-top-stories-spot/584016/'>Search Engine Journal ↗</a></div>
 </div>
 <div class='item'>
-<div class='what'>Study: AI recognizes 96% of brands but mentions almost none in responses, creating visibility gap<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
-<div class='meta'><b>为何重要 Why:</b> 品牌GEO优化存在严重盲区：AI系统能识别品牌但极少主动提及，意味着传统品牌搜索优化无法转化为AI引用(GEO/AEO)收益，需建立新的品牌mention策略。</div>
-<div class='meta'><b>证据 Evidence:</b> Victorious study with quantified data: 96% recognition vs. near-zero mention rate</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> 测试结构化品牌mention在AI响应中的出现率；优化知识图谱实体关联</div>
+<div class='what'>Study: AI recognizes 96% of brands but mentions almost none in responses<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> brand visibility in AI search 面临断崖：被识别不等于被引用，publisher 与 brand 需从 recognition 转向 mention optimization</div>
+<div class='meta'><b>证据 Evidence:</b> Victorious study of 100+ brands across ChatGPT, Gemini, Perplexity; high recognition, near-zero citation rates</div>
+<div class='meta'><b>影响 Affects:</b> publisher / ecommerce / SaaS</div>
+<div class='meta'><b>行动 Action:</b> 测试 brand mention 在 AEO/GEO 中的出现率，优化 authoritative sources 中的 brand 引用密度与 context</div>
 <div class='src'><a href='https://www.searchenginejournal.com/ai-brand-mention-study-victorious-spa/582765/'>Search Engine Journal ↗</a></div>
 </div>
-<h2>Tools, Papers &amp; Open Source</h2>
+<h2>Unconfirmed Watchlist</h2>
 <div class='item'>
-<div class='what'>Google lost DMCA scraping case against SerpApi; SearchGuard ruling prioritizes ad revenue over copyright protection<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
-<div class='meta'><b>为何重要 Why:</b> 反爬虫法律框架弱化：网站更难通过DMCA阻止AI爬虫抓取，需重新评估robots.txt、terms of service和技术反制措施的组合策略。</div>
-<div class='meta'><b>证据 Evidence:</b> Court ruling: SearchGuard protects ad revenue not copyright; weakens anti-bot defense precedent</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> 审查robots.txt和TOS条款；考虑速率限制、认证墙等技术手段替代法律手段</div>
-<div class='src'><a href='https://www.searchenginejournal.com/google-lost-its-scraping-case-now-you-have-to-pick-a-side-on-the-open-web/583066/'>Search Engine Journal ↗</a></div>
+<div class='what'>Heavily AI-flagged pages still rank in Google&#x27;s top 10 despite correlation with lower positions<span class='badge' style='color:#374151;background:#f3f4f6'>P3</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> AI content detection score 与 ranking 非简单因果：低质量 content 更可能同时触发 AI flag 与低排名，需回归 E-E-A-T 本质</div>
+<div class='meta'><b>证据 Evidence:</b> Data shows higher AI detector scores correlate with lower positions and fewer indexed pages, yet flagged pages persist in top 10</div>
+<div class='meta'><b>影响 Affects:</b> publisher / ecommerce / SaaS</div>
+<div class='meta'><b>行动 Action:</b> 避免以 AI detection score 作为 content quality 的 KPI，聚焦 user value 与 E-E-A-T signals</div>
+<div class='src'><a href='https://www.searchenginejournal.com/heavily-ai-flagged-pages-still-rank-across-googles-top-10/583983/'>Search Engine Journal ↗</a></div>
 </div>
 <h2>Today&#x27;s Action Items</h2>
-<ul><li><span class='badge' style='color:#991b1b;background:#fee2e2'>P0</span> P0: 检查Search Console中的AI opt-out设置，评估Top Stories资格影响</li><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> P1: 审计unavailable_after标签实现，避免频繁修改日期</li><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> P1: 更新反爬虫策略，补充robots.txt和技术防护替代法律手段</li><li><span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span> P2: 测试品牌mention在AI响应中的出现率，优化知识图谱实体</li></ul>
+<ul><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> 检查 Search Console AI opt-out 设置，评估 Top Stories 流量影响</li><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> 审计关键页面 5s 内渲染完成度，修复 setTimeout 依赖</li><li><span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span> 测试 brand mention rate 在主要 AI search 中的表现</li></ul>
 </body></html>
