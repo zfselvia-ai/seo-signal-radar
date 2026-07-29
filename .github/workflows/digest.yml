@@ -19,12 +19,11 @@ jobs:
       - name: Restore X cookies
         env: {COOKIES_JSON: "${{ secrets.X_COOKIES_JSON }}"}
         run: '[ -n "$COOKIES_JSON" ] && echo "$COOKIES_JSON" > cookies.json || echo "no cookies"'
-      - name: Cache state + archive
+      - name: Cache state
         uses: actions/cache@v4
         with:
           path: |
             data/seen.json
-            data/archive
             data/serp_history.csv
           key: radar-state-${{ github.run_id }}
           restore-keys: radar-state-
