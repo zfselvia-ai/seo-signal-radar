@@ -1,163 +1,197 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T02:12:23.210922+00:00",
-  "headline": "Google GSC Platform Properties Go Live Globally; Major AI Citation Studies Reveal Optimization Blind Spots",
+  "generated_at": "2026-07-30T02:46:13.875505+00:00",
+  "headline": "Google Updates Open Knowledge Format & GSC Social Reporting; 89% of ChatGPT Search Demand Has No Owner",
   "sections": {
     "Confirmed Search Updates": [
       {
-        "what_happened": "Google Search Console Platform properties are now globally live with new social and video data documentation.",
-        "why_it_matters": "允许SEO在统一视图中分析跨网域、子域名和协议的数据，简化了大型网站和多平台内容的技术监控与数据汇总。",
-        "evidence": "Google official release and updated help documentation for GSC Platform properties.",
+        "what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.",
+        "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。",
+        "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.",
         "who_it_affects": "all",
-        "what_to_do": "登录 GSC 配置 Platform properties，并参考新文档设置社交与视频数据分析。",
+        "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。",
         "confidence": "Confirmed",
         "impact": "P1",
         "section": "Confirmed Search Updates",
-        "score": 95,
+        "score": 90,
         "sources": [
           {
-            "name": "Search Engine Land",
-            "url": "https://searchengineland.com/google-search-console-platform-properties-are-now-globally-live-483921"
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.",
+        "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。",
+        "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.",
+        "who_it_affects": "publisher / SaaS / ecommerce / UGC",
+        "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 87,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"
           }
         ]
       }
     ],
     "Technical SEO Experiments": [
       {
-        "what_happened": "A 14-step workflow using Claude Code scales diagnosis and updates for decaying SEO content.",
-        "why_it_matters": "展示了如何利用 Agentic 工具（Claude Code）自动化诊断内容衰退并执行更新，提升技术 SEO 效率。",
-        "evidence": "Step-by-step technical workflow and methodology published on Search Engine Land.",
-        "who_it_affects": "publisher / SaaS / all",
-        "what_to_do": "测试 Claude Code 并在沙盒环境中跑通 14 步内容更新工作流。",
-        "confidence": "Observed",
+        "what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.",
+        "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。",
+        "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.",
+        "who_it_affects": "all",
+        "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。",
+        "confidence": "Confirmed",
         "impact": "P2",
         "section": "Technical SEO Experiments",
-        "score": 78,
+        "score": 80,
         "sources": [
           {
-            "name": "Search Engine Land",
-            "url": "https://searchengineland.com/scale-seo-content-updates-claude-code-483862"
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"
           }
         ]
       }
     ],
     "AI Search / GEO": [
       {
-        "what_happened": "A year-long study of 15.7M AI Mode citations reveals specific passage patterns Google highlights and reuses.",
-        "why_it_matters": "揭示了 Google AI Mode 引用内容的具体特征，为优化 AEO 和 AI Overviews 提供了大规模数据支持。",
-        "evidence": "Pillarbase year-long study analyzing 15.7 million citations across 148 industries.",
-        "who_it_affects": "publisher / ecommerce / SaaS / all",
-        "what_to_do": "分析高频被引用的文本结构，优化核心页面段落以匹配 AI 提取特征。",
+        "what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.",
+        "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。",
+        "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.",
+        "who_it_affects": "ecommerce / publisher / SaaS / international",
+        "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。",
         "confidence": "Data-backed",
         "impact": "P2",
         "section": "AI Search / GEO",
-        "score": 90,
+        "score": 85,
         "sources": [
           {
-            "name": "Search Engine Land",
-            "url": "https://searchengineland.com/what-15-7-million-ai-mode-citations-reveal-about-getting-quoted-by-google-483393"
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"
           }
         ]
       },
       {
-        "what_happened": "Study reveals ~40% of AI citations are \"ghost citations\" where content is cited but the brand name is omitted.",
-        "why_it_matters": "揭示了 AI 搜索中品牌曝光的盲区，即使内容被引用，用户也可能无法直接感知品牌，影响 GEO 效果评估。",
-        "evidence": "Industry analysis showing 40% of AI search citations leave the source brand unnamed.",
-        "who_it_affects": "publisher / SaaS / ecommerce / all",
-        "what_to_do": "在页面核心观点和结论中更紧密地结合品牌词，减少无品牌引用的概率。",
+        "what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.",
+        "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。",
+        "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.",
+        "who_it_affects": "ecommerce / publisher / SaaS / local",
+        "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。",
         "confidence": "Data-backed",
         "impact": "P2",
         "section": "AI Search / GEO",
-        "score": 82,
+        "score": 88,
         "sources": [
           {
-            "name": "Search Engine Land",
-            "url": "https://searchengineland.com/ghost-citation-problem-ai-483794"
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"
           }
         ]
       }
     ],
     "Today's Action Items": [
       {
-        "what_to_do": "在 GSC 中配置全新的 Platform properties 以统一分析跨域和多平台视频/社交数据",
+        "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。",
         "impact": "P1"
       },
       {
-        "what_to_do": "针对 AI 搜索中 40% 的'幽灵引用'，调整页面内容结构，使品牌词与核心观点紧密绑定",
+        "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。",
         "impact": "P2"
       },
       {
-        "what_to_do": "测试 Claude Code 自动化工作流，探索规模化修复内容衰退的技术方案",
+        "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。",
         "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Google Search Console Platform properties are now globally live with new social and video data documentation.",
-      "why_it_matters": "允许SEO在统一视图中分析跨网域、子域名和协议的数据，简化了大型网站和多平台内容的技术监控与数据汇总。",
-      "evidence": "Google official release and updated help documentation for GSC Platform properties.",
+      "what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.",
+      "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。",
+      "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.",
+      "who_it_affects": "ecommerce / publisher / SaaS / international",
+      "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 85,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.",
+      "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。",
+      "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.",
       "who_it_affects": "all",
-      "what_to_do": "登录 GSC 配置 Platform properties，并参考新文档设置社交与视频数据分析。",
+      "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。",
       "confidence": "Confirmed",
       "impact": "P1",
       "section": "Confirmed Search Updates",
-      "score": 95,
-      "sources": [
-        {
-          "name": "Search Engine Land",
-          "url": "https://searchengineland.com/google-search-console-platform-properties-are-now-globally-live-483921"
-        }
-      ]
-    },
-    {
-      "what_happened": "A year-long study of 15.7M AI Mode citations reveals specific passage patterns Google highlights and reuses.",
-      "why_it_matters": "揭示了 Google AI Mode 引用内容的具体特征，为优化 AEO 和 AI Overviews 提供了大规模数据支持。",
-      "evidence": "Pillarbase year-long study analyzing 15.7 million citations across 148 industries.",
-      "who_it_affects": "publisher / ecommerce / SaaS / all",
-      "what_to_do": "分析高频被引用的文本结构，优化核心页面段落以匹配 AI 提取特征。",
-      "confidence": "Data-backed",
-      "impact": "P2",
-      "section": "AI Search / GEO",
       "score": 90,
       "sources": [
         {
-          "name": "Search Engine Land",
-          "url": "https://searchengineland.com/what-15-7-million-ai-mode-citations-reveal-about-getting-quoted-by-google-483393"
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"
         }
       ]
     },
     {
-      "what_happened": "Study reveals ~40% of AI citations are \"ghost citations\" where content is cited but the brand name is omitted.",
-      "why_it_matters": "揭示了 AI 搜索中品牌曝光的盲区，即使内容被引用，用户也可能无法直接感知品牌，影响 GEO 效果评估。",
-      "evidence": "Industry analysis showing 40% of AI search citations leave the source brand unnamed.",
-      "who_it_affects": "publisher / SaaS / ecommerce / all",
-      "what_to_do": "在页面核心观点和结论中更紧密地结合品牌词，减少无品牌引用的概率。",
+      "what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.",
+      "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。",
+      "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.",
+      "who_it_affects": "ecommerce / publisher / SaaS / local",
+      "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。",
       "confidence": "Data-backed",
       "impact": "P2",
       "section": "AI Search / GEO",
-      "score": 82,
+      "score": 88,
       "sources": [
         {
-          "name": "Search Engine Land",
-          "url": "https://searchengineland.com/ghost-citation-problem-ai-483794"
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"
         }
       ]
     },
     {
-      "what_happened": "A 14-step workflow using Claude Code scales diagnosis and updates for decaying SEO content.",
-      "why_it_matters": "展示了如何利用 Agentic 工具（Claude Code）自动化诊断内容衰退并执行更新，提升技术 SEO 效率。",
-      "evidence": "Step-by-step technical workflow and methodology published on Search Engine Land.",
-      "who_it_affects": "publisher / SaaS / all",
-      "what_to_do": "测试 Claude Code 并在沙盒环境中跑通 14 步内容更新工作流。",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "Technical SEO Experiments",
-      "score": 78,
+      "what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.",
+      "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。",
+      "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.",
+      "who_it_affects": "publisher / SaaS / ecommerce / UGC",
+      "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 87,
       "sources": [
         {
-          "name": "Search Engine Land",
-          "url": "https://searchengineland.com/scale-seo-content-updates-claude-code-483862"
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.",
+      "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。",
+      "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.",
+      "who_it_affects": "all",
+      "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 80,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"
         }
       ]
     }
