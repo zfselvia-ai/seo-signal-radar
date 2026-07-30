@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Cookie 生成工具 · SEO Signal Radar</title>
+<style>
+  :root{
+    --bg:#0f1419; --surface:#1a1f2e; --surface-2:#232a3d; --line:#2d3548;
+    --ink:#e7e9ee; --ink-2:#a8aec0; --ink-3:#6b7180;
+    --accent:#3451b2; --accent-2:#4f7cff; --ok:#16a34a; --warn:#d97706; --err:#dc2626;
+    --radius:10px; --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);
+    font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;padding:32px 20px 64px;}
+  .wrap{max-width:720px;margin:0 auto;}
+  h1{font-size:22px;font-weight:700;margin:0 0 4px;letter-spacing:-.01em;}
+  .sub{color:var(--ink-2);font-size:13px;margin:0 0 28px;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;margin-bottom:18px;}
+  .card h2{font-size:14px;font-weight:600;margin:0 0 14px;color:var(--ink);
+    display:flex;align-items:center;gap:8px;}
+  .step{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;
+    border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;font-family:var(--mono);}
+  label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:var(--ink);}
+  .hint{font-size:12px;color:var(--ink-3);margin:0 0 8px;}
+  .hint code{background:var(--surface-2);padding:1px 6px;border-radius:4px;font-family:var(--mono);color:var(--accent-2);font-size:11px;}
+  input[type=text],input[type=password]{width:100%;background:var(--surface-2);border:1px solid var(--line);
+    color:var(--ink);font-family:var(--mono);font-size:13px;padding:11px 13px;border-radius:8px;outline:none;
+    transition:border-color .15s;}
+  input:focus{border-color:var(--accent-2);}
+  .field{margin-bottom:18px;}
+  .field:last-child{margin-bottom:0;}
+  .row{display:flex;gap:10px;align-items:center;}
+  .toggle{font-size:12px;color:var(--ink-3);cursor:pointer;user-select:none;display:inline-flex;align-items:center;gap:5px;}
+  .toggle input{width:auto;}
+  button{font-family:var(--ui);font-size:14px;font-weight:600;border:none;border-radius:8px;
+    padding:11px 20px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:8px;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{background:var(--accent-2);}
+  .btn-primary:disabled{background:var(--surface-2);color:var(--ink-3);cursor:not-allowed;}
+  .btn-ghost{background:var(--surface-2);color:var(--ink);border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--accent-2);color:var(--accent-2);}
+  .btn-ok{background:var(--ok);color:#fff;}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+  .result{display:none;margin-top:20px;}
+  .result.show{display:block;}
+  .result-box{background:#0a0e16;border:1px solid var(--line);border-radius:8px;padding:14px 16px;
+    font-family:var(--mono);font-size:12px;color:#9ca3af;white-space:pre-wrap;word-break:break-all;
+    max-height:280px;overflow:auto;line-height:1.5;}
+  .alert{padding:11px 14px;border-radius:8px;font-size:13px;margin-top:14px;display:none;}
+  .alert.show{display:block;}
+  .alert.err{background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.3);color:#fca5a5;}
+  .alert.ok{background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.3);color:#86efac;}
+  ol{margin:0;padding-left:20px;color:var(--ink-2);font-size:13px;line-height:1.8;}
+  ol li{margin-bottom:4px;}
+  ol code{background:var(--surface-2);padding:1px 6px;border-radius:4px;font-family:var(--mono);color:var(--accent-2);font-size:12px;}
+  .footer{color:var(--ink-3);font-size:12px;margin-top:28px;text-align:center;line-height:1.7;}
+  .badge{display:inline-block;background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2);
+    font-size:11px;padding:2px 8px;border-radius:4px;font-family:var(--mono);margin-left:6px;}
+  kbd{background:var(--surface-2);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;
+    padding:1px 6px;font-family:var(--mono);font-size:11px;color:var(--ink-2);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>X Cookie 生成工具</h1>
+  <p class="sub">填入从浏览器获取的 <code style="font-family:var(--mono);color:var(--accent-2)">auth_token</code> 和 <code style="font-family:var(--mono);color:var(--accent-2)">ct0</code>，一键生成 <code style="font-family:var(--mono);color:var(--accent-2)">cookies.json</code>。纯本地运行，token 不会上传任何服务器。</p>
+
+  <div class="card">
+    <h2><span class="step">1</span>填写 Cookie 值</h2>
+    <div class="field">
+      <label for="auth_token">auth_token <span class="badge">HttpOnly · 必填</span></label>
+      <p class="hint">浏览器登录 x.com → 按 <kbd>F12</kbd> → Application → Cookies → <code>https://x.com</code> → 找到 <code>auth_token</code>，复制它的 Value（约 40 位十六进制字符串）</p>
+      <input type="password" id="auth_token" placeholder="例如：a1b2c3d4e5f6..." autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="ct0">ct0 <span class="badge">CSRF · 必填</span></label>
+      <p class="hint">同一个 Cookies 列表里找到 <code>ct0</code>，复制它的 Value（较长的字符串）</p>
+      <input type="password" id="ct0" placeholder="例如：abcdef0123456789..." autocomplete="off">
+    </div>
+    <div class="row">
+      <label class="toggle"><input type="checkbox" id="show"> 显示明文</label>
+    </div>
+    <div class="actions">
+      <button class="btn-primary" id="gen" disabled>生成 cookies.json</button>
+      <button class="btn-ghost" id="clear">清空</button>
+    </div>
+    <div class="alert" id="alert"></div>
+  </div>
+
+  <div class="card result" id="resultCard">
+    <h2><span class="step">2</span>生成结果</h2>
+    <div class="result-box" id="result"></div>
+    <div class="actions">
+      <button class="btn-ghost" id="copy">复制 JSON（粘到 GitHub Secret）</button>
+      <button class="btn-ghost" id="download">下载 cookies.json</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="step">3</span>配置到 GitHub Actions</h2>
+    <ol>
+      <li>复制上方生成的整段 JSON</li>
+      <li>打开仓库 <code>zfselvia-ai/seo-signal-radar</code> → Settings → Secrets and variables → Actions</li>
+      <li>New repository secret，Name 填 <code>X_COOKIES_JSON</code>，Secret 粘贴 JSON</li>
+      <li>保存后，下次定时任务（每天 07:00 北京时间）会自动用此 cookie 抓取 Twitter</li>
+    </ol>
+    <p class="hint" style="margin-top:12px;">本地测试：把下载的 <code>cookies.json</code> 放到项目根目录，运行 <code>python main.py daily</code>，确认控制台无 <code>[x] fetch aborted</code> 报错。</p>
+  </div>
+
+  <div class="footer">
+    cookie 会过期（几天到几周），失效后重新生成并更新 GitHub Secret 即可。<br>
+    建议使用 X 小号，避免主账号被风控。
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const auth = $('auth_token'), ct0 = $('ct0'), gen = $('gen');
+const alertEl = $('alert'), resultCard = $('resultCard'), resultEl = $('result');
+
+function check(){
+  gen.disabled = !(auth.value.trim() && ct0.value.trim());
+}
+auth.addEventListener('input', check);
+ct0.addEventListener('input', check);
+
+$('show').addEventListener('change', e=>{
+  const t = e.target.checked ? 'text' : 'password';
+  auth.type = t; ct0.type = t;
+});
+
+function showAlert(msg, type){
+  alertEl.textContent = msg;
+  alertEl.className = 'alert show ' + type;
+  if(type==='ok') setTimeout(()=>alertEl.className='alert', 2500);
+}
+
+function buildJson(a, c){
+  // twikit's set_cookies expects a {name: value} dict (not a browser-export
+  // array). This format works for both local runs and the GitHub secret.
+  return JSON.stringify({"auth_token":a,"ct0":c,"twid":""}, null, 2);
+}
+
+gen.addEventListener('click', ()=>{
+  const a = auth.value.trim();
+  const c = ct0.value.trim();
+  if(!/^[a-f0-9]{30,}$/i.test(a)){
+    showAlert('auth_token 格式似乎不对：通常是 40 位十六进制字符（仅 0-9 和 a-f）', 'err');
+    return;
+  }
+  if(c.length < 20){
+    showAlert('ct0 长度似乎太短：通常是一个较长的字符串', 'err');
+    return;
+  }
+  const json = buildJson(a, c);
+  resultEl.textContent = json;
+  resultCard.classList.add('show');
+  showAlert('已生成 cookies.json ✓', 'ok');
+  resultCard.scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+$('copy').addEventListener('click', async ()=>{
+  try{
+    await navigator.clipboard.writeText(resultEl.textContent);
+    const btn = $('copy');
+    const orig = btn.textContent;
+    btn.textContent = '已复制 ✓';
+    btn.className = 'btn-ok';
+    setTimeout(()=>{btn.textContent=orig; btn.className='btn-ghost';}, 1500);
+  }catch(e){
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = resultEl.textContent;
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showAlert('已复制到剪贴板', 'ok');
+  }
+});
+
+$('download').addEventListener('click', ()=>{
+  const blob = new Blob([resultEl.textContent], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'cookies.json';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showAlert('cookies.json 已下载，放到项目根目录即可', 'ok');
+});
+
+$('clear').addEventListener('click', ()=>{
+  auth.value=''; ct0.value=''; check();
+  resultCard.classList.remove('show');
+  alertEl.className = 'alert';
+  auth.focus();
+});
+</script>
+</body>
+</html>

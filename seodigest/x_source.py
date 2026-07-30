@@ -11,6 +11,7 @@ Google account differently from a keyword-search hit.
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 from datetime import datetime, timezone
 from typing import List
@@ -20,12 +21,35 @@ from .models import Item
 COOKIES_PATH = "cookies.json"
 
 
+def _tweet_list(resp):
+    """twikit 1.x returns a list of tweets; 2.x returns a Result object
+    with a .results list. Normalize to an iterable of tweets."""
+    if resp is None:
+        return []
+    if isinstance(resp, list):
+        return resp
+    # twikit 2.x Result-like object
+    return getattr(resp, "results", None) or getattr(resp, "tweets", None) or []
+
+
+def _normalize_cookies(raw):
+    """Accept both twikit dict ({name:value}) and browser-export list
+    ([{name,value,...}]) formats. twikit's set_cookies only accepts a dict."""
+    if isinstance(raw, dict):
+        return raw
+    if isinstance(raw, list):
+        return {c["name"]: c["value"] for c in raw if c.get("name") and c.get("value")}
+    raise ValueError(f"Unrecognized cookies.json format: {type(raw).__name__}")
+
+
 async def _get_client():
     from twikit import Client
 
     client = Client("en-US")
     if os.path.exists(COOKIES_PATH):
-        client.load_cookies(COOKIES_PATH)
+        with open(COOKIES_PATH, encoding="utf-8") as f:
+            cookies = _normalize_cookies(json.load(f))
+        client.set_cookies(cookies)
         return client
     username = os.getenv("X_USERNAME")
     email = os.getenv("X_EMAIL")
@@ -72,7 +96,7 @@ async def _fetch_lists(client, cfg, since) -> List[Item]:
         for handle in spec.get("handles", []):
             try:
                 user = await client.get_user_by_screen_name(handle)
-                tweets = await user.get_tweets("Tweets", count=per)
+                tweets = _tweet_list(await user.get_tweets("Tweets", count=per))
                 for t in tweets:
                     if getattr(t, "text", "").startswith("RT @"):
                         continue
@@ -93,7 +117,7 @@ async def _fetch_keywords(client, cfg, since) -> List[Item]:
     min_likes = ks.get("min_likes", 20)
     for q in ks.get("queries", []):
         try:
-            tweets = await client.search_tweet(q, product="Latest", count=per)
+            tweets = _tweet_list(await client.search_tweet(q, product="Latest", count=per))
             for t in tweets:
                 if getattr(t, "text", "").startswith("RT @"):
                     continue
