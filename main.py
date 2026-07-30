@@ -137,6 +137,10 @@ def run_daily(cfg, dry_run=False):
         if cfg.get("dashboard", {}).get("enabled"):
             dpath = dashboard.write_dashboard(cfg)
             print(f"[*] rebuilt dashboard: {dpath}")
+        # Still send notification from the latest archived digest so the
+        # daily push is reliable even on quiet days.
+        if cfg.get("notify", {}).get("enabled"):
+            _send_notify_from_latest_archive(cfg)
         return
 
     digest = summarize.summarize_daily(cfg, fresh)
@@ -236,8 +240,8 @@ def run_dashboard(cfg):
     print(f"[*] wrote dashboard: {path}")
 
 
-def run_notify(cfg):
-    """Rebuild the compressed push from the most recent archived day and send."""
+def _send_notify_from_latest_archive(cfg):
+    """Send notification using the most recent archived digest."""
     end = datetime.now(timezone.utc)
     records = store.load_archive_range(cfg, end - timedelta(days=7), end)
     if not records:
@@ -246,13 +250,18 @@ def run_notify(cfg):
     latest = sorted(records, key=lambda r: r.get("date", ""))[-1]
     digest = {"headline": latest.get("headline", ""),
               "sections": latest.get("sections", {})}
-    res = notify.send(cfg, digest, latest.get("date", _date_str(cfg)),
-                      latest.get("serp"))
+    date_str = latest.get("date", _date_str(cfg))
+    res = notify.send(cfg, digest, date_str, latest.get("serp"))
     if res.get("sent"):
         print(f"[*] notification sent via {res.get('channel')}")
     else:
-        print(f"[*] not sent ({res.get('reason') or res.get('error')}). Preview:\n")
+        print(f"[*] notification not sent ({res.get('reason') or res.get('error')}). Preview:\n")
         print(res.get("preview", ""))
+
+
+def run_notify(cfg):
+    """Rebuild the compressed push from the most recent archived day and send."""
+    _send_notify_from_latest_archive(cfg)
 
 
 # ------------------------------ serp-add ----------------------------------
