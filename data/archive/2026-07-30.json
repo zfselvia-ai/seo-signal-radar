@@ -1,97 +1,135 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T04:08:19.110496+00:00",
-  "headline": "Google launches GSC Platform Properties for social tracking; ChatGPT demonstrates agentic web discovery",
+  "generated_at": "2026-07-30T04:47:21.089027+00:00",
+  "headline": "Google rolls out Search Console platform properties globally; Claude indexing leak exposes robots.txt trap",
   "sections": {
     "Confirmed Search Updates": [
       {
-        "what_happened": "Google launches Platform Properties in GSC to track Instagram, TikTok, X, and YouTube in Search and Discover.",
-        "why_it_matters": "允许SEO专家在GSC中直接监测品牌社交媒体资产在Google Search、Discover和News中的曝光和CTR。在AI Overviews和丰富SERP占位导致官网流量下滑的背景下，这为衡量“去中心化搜索”和多渠道品牌曝光提供了官方数据支持。",
-        "evidence": "Official Google Search Central Blog announcement and global rollout in Search Console.",
+        "what_happened": "Google globally rolled out Search Console platform properties to track social and video posts on Search and Discover.",
+        "why_it_matters": "允许品牌直接在 GSC 中监测其社交媒体（Instagram, TikTok, X, YouTube）在 Google 搜索生态中的曝光与点击，打破了以往第三方平台数据的黑盒状态。",
+        "evidence": "Official Google Search Central Blog announcement and global feature rollout.",
         "who_it_affects": "all",
-        "what_to_do": "在Google Search Console中配置并验证品牌的社交媒体平台属性（Platform Properties），开始监测社交内容在Google渠道的流量表现。",
+        "what_to_do": "登录 GSC，为官方社交媒体账号配置平台属性（Platform Properties），并结合新发布的社交与视频效果指南优化内容分发。",
         "confidence": "Confirmed",
         "impact": "P1",
         "section": "Confirmed Search Updates",
-        "score": 92,
+        "score": 95,
         "sources": [
           {
             "name": "Google Search Central Blog",
             "url": "https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide"
-          },
-          {
-            "name": "Aleyda Solis",
-            "url": "https://x.com/aleyda/status/2082548747213426842"
           }
         ]
       }
     ],
     "AI Search / GEO": [
       {
-        "what_happened": "ChatGPT autonomously queries and returns bookable inventory from travel site using structured data and GET endpoints.",
-        "why_it_matters": "证明了AI Agent（如ChatGPT）能够自主识别网页上的结构化数据，并通过公开的GET API端点直接获取实时数据进行交互。这意味着网站无需复杂的MCP或插件，只需通过标准的Structured Data和开放的GET接口即可实现“Agent-ready”。",
-        "evidence": "Practitioner observation and reproducible ChatGPT query on Alpina.travel without custom plugins.",
-        "who_it_affects": "ecommerce / SaaS / local / international",
-        "what_to_do": "检查并优化网站的Schema结构化数据，确保关键交互（如查询、搜索）使用可被公开爬取的GET请求端点，以便AI Agent能够直接调用。",
-        "confidence": "Observed",
-        "impact": "P2",
+        "what_happened": "NYT featured a study showing 75%+ of users never leave AI Mode (AI Overviews); Google disputed the methodology.",
+        "why_it_matters": "证实了业界对 AI Overviews 导致“零点击”（Zero-click）恶化的担忧。尽管 Google 官方以“样本量小”为由反驳，但这表明 AI 搜索对流量的蚕食已成事实。",
+        "evidence": "NY Times coverage of Kevin Indig's research and official Google spokesperson pushback.",
+        "who_it_affects": "all",
+        "what_to_do": "监控核心关键词在 AI Overviews 中的展现形式，优化内容结构以争取 AI 引用源（Citations），并做好流量向零点击转变的预案。",
+        "confidence": "Data-backed",
+        "impact": "P3",
         "section": "AI Search / GEO",
-        "score": 68,
+        "score": 75,
         "sources": [
           {
-            "name": "Andy Davies",
-            "url": "https://x.com/cyberandy/status/2082430686531612996"
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2080281423341064212"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Google indexed private Claude AI shared chats because Anthropic blocked the directory in robots.txt while using noindex.",
+        "why_it_matters": "这是一个经典的 Technical SEO 灾难：使用 robots.txt 阻止抓取会直接导致 Google 无法解析页面上的 noindex 标签，若有外链仍会被索引。",
+        "evidence": "Glenn Gabe's analysis of the Claude shared chats leak and subsequent GSC Removals tool usage.",
+        "who_it_affects": "all",
+        "what_to_do": "立即审计 GSC 中的“已索引但被 robots.txt 屏蔽”警告，确保敏感页面未因抓取受阻而漏掉 noindex 解析。",
+        "confidence": "Data-backed",
+        "impact": "P1",
+        "section": "Playbook: Worth Testing",
+        "score": 85,
+        "how_to_test": "检查 GSC 排除报告，找出被 robots.txt 屏蔽但仍被索引的敏感 URL；解除 robots.txt 限制，允许 Google 抓取并识别 noindex 标签后再行屏蔽。",
+        "success_metric": "GSC 中“已索引但被 robots.txt 屏蔽”的 URL 数量降至零，且目标敏感 URL 从 SERPs 中彻底消失。",
+        "effort": "低开发成本，但需谨慎操作以防敏感数据在重新允许抓取期间短暂暴露。",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2082069384105971807"
           }
         ]
       }
     ],
     "Today's Action Items": [
       {
-        "what_to_do": "在Google Search Console中验证并配置品牌的社交媒体平台属性（Platform Properties），追踪社媒内容在Google Search/Discover的流量。",
+        "what_to_do": "在 Google Search Console 中为品牌的 YouTube、TikTok、Instagram 和 X 账号配置“平台属性”以开始追踪搜索曝光。",
         "impact": "P1"
       },
       {
-        "what_to_do": "评估核心业务接口（如库存查询、预订），确保提供清晰的Schema结构化数据和公开的GET请求端点，以适配AI Agent的自主检索与交互。",
-        "impact": "P2"
+        "what_to_do": "审计 GSC 中的“已索引但被 robots.txt 屏蔽”错误，防止敏感或私有页面因无法解析 noindex 标签而泄露到 SERPs 中。",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "针对高价值的信息类查询，监控 AI Overviews 的引用率（Citation Rates），以应对“75% 零点击”的 AI 搜索趋势。",
+        "impact": "P3"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Google launches Platform Properties in GSC to track Instagram, TikTok, X, and YouTube in Search and Discover.",
-      "why_it_matters": "允许SEO专家在GSC中直接监测品牌社交媒体资产在Google Search、Discover和News中的曝光和CTR。在AI Overviews和丰富SERP占位导致官网流量下滑的背景下，这为衡量“去中心化搜索”和多渠道品牌曝光提供了官方数据支持。",
-      "evidence": "Official Google Search Central Blog announcement and global rollout in Search Console.",
+      "what_happened": "Google globally rolled out Search Console platform properties to track social and video posts on Search and Discover.",
+      "why_it_matters": "允许品牌直接在 GSC 中监测其社交媒体（Instagram, TikTok, X, YouTube）在 Google 搜索生态中的曝光与点击，打破了以往第三方平台数据的黑盒状态。",
+      "evidence": "Official Google Search Central Blog announcement and global feature rollout.",
       "who_it_affects": "all",
-      "what_to_do": "在Google Search Console中配置并验证品牌的社交媒体平台属性（Platform Properties），开始监测社交内容在Google渠道的流量表现。",
+      "what_to_do": "登录 GSC，为官方社交媒体账号配置平台属性（Platform Properties），并结合新发布的社交与视频效果指南优化内容分发。",
       "confidence": "Confirmed",
       "impact": "P1",
       "section": "Confirmed Search Updates",
-      "score": 92,
+      "score": 95,
       "sources": [
         {
           "name": "Google Search Central Blog",
           "url": "https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide"
-        },
-        {
-          "name": "Aleyda Solis",
-          "url": "https://x.com/aleyda/status/2082548747213426842"
         }
       ]
     },
     {
-      "what_happened": "ChatGPT autonomously queries and returns bookable inventory from travel site using structured data and GET endpoints.",
-      "why_it_matters": "证明了AI Agent（如ChatGPT）能够自主识别网页上的结构化数据，并通过公开的GET API端点直接获取实时数据进行交互。这意味着网站无需复杂的MCP或插件，只需通过标准的Structured Data和开放的GET接口即可实现“Agent-ready”。",
-      "evidence": "Practitioner observation and reproducible ChatGPT query on Alpina.travel without custom plugins.",
-      "who_it_affects": "ecommerce / SaaS / local / international",
-      "what_to_do": "检查并优化网站的Schema结构化数据，确保关键交互（如查询、搜索）使用可被公开爬取的GET请求端点，以便AI Agent能够直接调用。",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "AI Search / GEO",
-      "score": 68,
+      "what_happened": "Google indexed private Claude AI shared chats because Anthropic blocked the directory in robots.txt while using noindex.",
+      "why_it_matters": "这是一个经典的 Technical SEO 灾难：使用 robots.txt 阻止抓取会直接导致 Google 无法解析页面上的 noindex 标签，若有外链仍会被索引。",
+      "evidence": "Glenn Gabe's analysis of the Claude shared chats leak and subsequent GSC Removals tool usage.",
+      "who_it_affects": "all",
+      "what_to_do": "立即审计 GSC 中的“已索引但被 robots.txt 屏蔽”警告，确保敏感页面未因抓取受阻而漏掉 noindex 解析。",
+      "confidence": "Data-backed",
+      "impact": "P1",
+      "section": "Playbook: Worth Testing",
+      "score": 85,
+      "how_to_test": "检查 GSC 排除报告，找出被 robots.txt 屏蔽但仍被索引的敏感 URL；解除 robots.txt 限制，允许 Google 抓取并识别 noindex 标签后再行屏蔽。",
+      "success_metric": "GSC 中“已索引但被 robots.txt 屏蔽”的 URL 数量降至零，且目标敏感 URL 从 SERPs 中彻底消失。",
+      "effort": "低开发成本，但需谨慎操作以防敏感数据在重新允许抓取期间短暂暴露。",
       "sources": [
         {
-          "name": "Andy Davies",
-          "url": "https://x.com/cyberandy/status/2082430686531612996"
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2082069384105971807"
+        }
+      ]
+    },
+    {
+      "what_happened": "NYT featured a study showing 75%+ of users never leave AI Mode (AI Overviews); Google disputed the methodology.",
+      "why_it_matters": "证实了业界对 AI Overviews 导致“零点击”（Zero-click）恶化的担忧。尽管 Google 官方以“样本量小”为由反驳，但这表明 AI 搜索对流量的蚕食已成事实。",
+      "evidence": "NY Times coverage of Kevin Indig's research and official Google spokesperson pushback.",
+      "who_it_affects": "all",
+      "what_to_do": "监控核心关键词在 AI Overviews 中的展现形式，优化内容结构以争取 AI 引用源（Citations），并做好流量向零点击转变的预案。",
+      "confidence": "Data-backed",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 75,
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2080281423341064212"
         }
       ]
     }

@@ -22,27 +22,38 @@ h2{font-size:19px;margin-top:30px;padding-bottom:6px;border-bottom:1px solid #ee
 .footer{color:#999;font-size:12px;margin-top:32px;}
 </style></head><body>
 <h1>Daily SEO/GEO Signal Radar</h1><div class='date'>2026-07-30</div>
-<div class='brief'><span class='chip'>2 signals</span><span class='chip'>top P1</span><span class='chip'>✅ confirmed update</span><span class='chip'>SERP Unknown</span></div>
-<div class='headline'>Google launches GSC Platform Properties for social tracking; ChatGPT demonstrates agentic web discovery</div>
+<div class='brief'><span class='chip'>3 signals</span><span class='chip'>top P1</span><span class='chip'>✅ confirmed update</span><span class='chip'>SERP Unknown</span></div>
+<div class='headline'>Google rolls out Search Console platform properties globally; Claude indexing leak exposes robots.txt trap</div>
 <h2>Confirmed Search Updates</h2>
 <div class='item'>
-<div class='what'>Google launches Platform Properties in GSC to track Instagram, TikTok, X, and YouTube in Search and Discover.<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
-<div class='meta'><b>为何重要 Why:</b> 允许SEO专家在GSC中直接监测品牌社交媒体资产在Google Search、Discover和News中的曝光和CTR。在AI Overviews和丰富SERP占位导致官网流量下滑的背景下，这为衡量“去中心化搜索”和多渠道品牌曝光提供了官方数据支持。</div>
-<div class='meta'><b>证据 Evidence:</b> Official Google Search Central Blog announcement and global rollout in Search Console.</div>
+<div class='what'>Google globally rolled out Search Console platform properties to track social and video posts on Search and Discover.<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#166534;background:#dcfce7'>Confirmed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 允许品牌直接在 GSC 中监测其社交媒体（Instagram, TikTok, X, YouTube）在 Google 搜索生态中的曝光与点击，打破了以往第三方平台数据的黑盒状态。</div>
+<div class='meta'><b>证据 Evidence:</b> Official Google Search Central Blog announcement and global feature rollout.</div>
 <div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> 在Google Search Console中配置并验证品牌的社交媒体平台属性（Platform Properties），开始监测社交内容在Google渠道的流量表现。</div>
+<div class='meta'><b>行动 Action:</b> 登录 GSC，为官方社交媒体账号配置平台属性（Platform Properties），并结合新发布的社交与视频效果指南优化内容分发。</div>
 <div class='src'><a href='https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide'>Google Search Central Blog ↗</a></div>
-<div class='src'><a href='https://x.com/aleyda/status/2082548747213426842'>Aleyda Solis ↗</a></div>
 </div>
 <h2>AI Search / GEO</h2>
 <div class='item'>
-<div class='what'>ChatGPT autonomously queries and returns bookable inventory from travel site using structured data and GET endpoints.<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> 证明了AI Agent（如ChatGPT）能够自主识别网页上的结构化数据，并通过公开的GET API端点直接获取实时数据进行交互。这意味着网站无需复杂的MCP或插件，只需通过标准的Structured Data和开放的GET接口即可实现“Agent-ready”。</div>
-<div class='meta'><b>证据 Evidence:</b> Practitioner observation and reproducible ChatGPT query on Alpina.travel without custom plugins.</div>
-<div class='meta'><b>影响 Affects:</b> ecommerce / SaaS / local / international</div>
-<div class='meta'><b>行动 Action:</b> 检查并优化网站的Schema结构化数据，确保关键交互（如查询、搜索）使用可被公开爬取的GET请求端点，以便AI Agent能够直接调用。</div>
-<div class='src'><a href='https://x.com/cyberandy/status/2082430686531612996'>Andy Davies ↗</a></div>
+<div class='what'>NYT featured a study showing 75%+ of users never leave AI Mode (AI Overviews); Google disputed the methodology.<span class='badge' style='color:#374151;background:#f3f4f6'>P3</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 证实了业界对 AI Overviews 导致“零点击”（Zero-click）恶化的担忧。尽管 Google 官方以“样本量小”为由反驳，但这表明 AI 搜索对流量的蚕食已成事实。</div>
+<div class='meta'><b>证据 Evidence:</b> NY Times coverage of Kevin Indig&#x27;s research and official Google spokesperson pushback.</div>
+<div class='meta'><b>影响 Affects:</b> all</div>
+<div class='meta'><b>行动 Action:</b> 监控核心关键词在 AI Overviews 中的展现形式，优化内容结构以争取 AI 引用源（Citations），并做好流量向零点击转变的预案。</div>
+<div class='src'><a href='https://x.com/Kevin_Indig/status/2080281423341064212'>Kevin_Indig ↗</a></div>
+</div>
+<h2>Playbook: Worth Testing</h2>
+<div class='item'>
+<div class='what'>Google indexed private Claude AI shared chats because Anthropic blocked the directory in robots.txt while using noindex.<span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 这是一个经典的 Technical SEO 灾难：使用 robots.txt 阻止抓取会直接导致 Google 无法解析页面上的 noindex 标签，若有外链仍会被索引。</div>
+<div class='meta'><b>证据 Evidence:</b> Glenn Gabe&#x27;s analysis of the Claude shared chats leak and subsequent GSC Removals tool usage.</div>
+<div class='meta'><b>影响 Affects:</b> all</div>
+<div class='meta'><b>行动 Action:</b> 立即审计 GSC 中的“已索引但被 robots.txt 屏蔽”警告，确保敏感页面未因抓取受阻而漏掉 noindex 解析。</div>
+<div class='meta'><b>如何测试 Test:</b> 检查 GSC 排除报告，找出被 robots.txt 屏蔽但仍被索引的敏感 URL；解除 robots.txt 限制，允许 Google 抓取并识别 noindex 标签后再行屏蔽。</div>
+<div class='meta'><b>衡量 Measure:</b> GSC 中“已索引但被 robots.txt 屏蔽”的 URL 数量降至零，且目标敏感 URL 从 SERPs 中彻底消失。</div>
+<div class='meta'><b>成本与风险 Effort:</b> 低开发成本，但需谨慎操作以防敏感数据在重新允许抓取期间短暂暴露。</div>
+<div class='src'><a href='https://x.com/glenngabe/status/2082069384105971807'>glenngabe ↗</a></div>
 </div>
 <h2>Today&#x27;s Action Items</h2>
-<ul><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> 在Google Search Console中验证并配置品牌的社交媒体平台属性（Platform Properties），追踪社媒内容在Google Search/Discover的流量。</li><li><span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span> 评估核心业务接口（如库存查询、预订），确保提供清晰的Schema结构化数据和公开的GET请求端点，以适配AI Agent的自主检索与交互。</li></ul>
+<ul><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> 在 Google Search Console 中为品牌的 YouTube、TikTok、Instagram 和 X 账号配置“平台属性”以开始追踪搜索曝光。</li><li><span class='badge' style='color:#9a3412;background:#ffedd5'>P1</span> 审计 GSC 中的“已索引但被 robots.txt 屏蔽”错误，防止敏感或私有页面因无法解析 noindex 标签而泄露到 SERPs 中。</li><li><span class='badge' style='color:#374151;background:#f3f4f6'>P3</span> 针对高价值的信息类查询，监控 AI Overviews 的引用率（Citation Rates），以应对“75% 零点击”的 AI 搜索趋势。</li></ul>
 </body></html>
