@@ -63,6 +63,11 @@ def _flatten_signals(records: list) -> list:
                 for k in ("how_to_test", "success_metric", "effort"):
                     if s.get(k):
                         row[k] = s[k]
+                # Carry the verification flag through: a claim we could not
+                # source must stay marked in the Library too, not just on the
+                # day it ran.
+                if s.get("unverified"):
+                    row["unverified"] = True
                 out.append(row)
     return out
 
@@ -115,6 +120,22 @@ def _conf_to_band(conf: str) -> str:
             "Observed": "Elevated", "Speculative": "Normal"}.get(conf, "Normal")
 
 
+def _serp_connected(records: list) -> bool:
+    """Has ANY day ever carried a real SERP reading?
+
+    Needed because an empty External-flux track and a genuinely calm market
+    render identically — an empty lane reads as "nothing happened", which is a
+    confident claim we have no data to support. The SERP sources are all
+    `adapter: manual` by default, so until someone runs `serp-add` (or an API is
+    wired) the honest label is "not connected", not "Normal".
+    """
+    for rec in records:
+        band = (rec.get("serp") or {}).get("global_band")
+        if band and band != "Unknown":
+            return True
+    return False
+
+
 def build_data(cfg: dict) -> dict:
     records = _all_records(cfg)
     latest = records[-1] if records else {}
@@ -134,6 +155,10 @@ def build_data(cfg: dict) -> dict:
         "library": _flatten_signals(records),
         "map_events": _map_tracks(records),
         "days_archived": len(records),
+        # Health / honesty metadata.
+        "run_meta": latest.get("run_meta", {}),
+        "serp_connected": _serp_connected(records),
+        "source_warn_ratio": cfg["dashboard"].get("source_warn_ratio", 0.7),
     }
 
 

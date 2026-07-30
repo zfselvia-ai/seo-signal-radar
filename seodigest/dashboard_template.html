@@ -74,6 +74,28 @@
     margin-right:6px;vertical-align:middle;}
 
   .date-label{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:8px;}
+
+  /* ---- source health strip ----
+     Quiet by default; only speaks up when coverage is degraded, because "27/29
+     sources" is reassurance, not news. Amber/red means today's digest is
+     thinner than reality. */
+  .health{display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+    font-family:var(--mono);font-size:11px;color:var(--ink-3);
+    margin:-18px 0 24px;padding:8px 12px;background:var(--surface);
+    border:1px solid var(--line);border-radius:8px;}
+  .health.warn{background:var(--p1-bg);border-color:rgba(234,88,12,.28);color:var(--p1);}
+  .health.down{background:var(--p0-bg);border-color:rgba(220,38,38,.3);color:var(--p0);
+    font-weight:700;}
+  .health .hitem{display:inline-flex;align-items:center;gap:6px;}
+  .health .hdot{width:7px;height:7px;border-radius:50%;background:var(--heat-normal);}
+  .health.warn .hdot{background:var(--heat-high);}
+  .health.down .hdot{background:var(--heat-extreme);}
+  .health .hnote{color:inherit;opacity:.85;}
+
+  /* Track with no data at all: say so, don't imply calm. */
+  .track.nodata .lane{background-image:none;background:var(--surface-strong);}
+  .track.nodata .lane .nd{position:absolute;top:50%;left:16px;transform:translateY(-50%);
+    font-family:var(--mono);font-size:11px;color:var(--ink-3);}
   .headline{font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.3;
     margin:0 0 24px;color:var(--ink);max-width:44em;}
 
@@ -134,6 +156,9 @@
   .tag.P2{color:var(--p2);background:rgba(202,138,4,.09);border:1px solid rgba(202,138,4,.22);}
   .tag.P3{color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line);}
   .tag.conf{color:var(--ink-3);background:transparent;border:1px solid var(--line-strong);font-weight:600;}
+  /* Set when every citation the model produced failed URL verification. The
+     claim may still be real, but the reader must know we could not link it. */
+  .tag.unver{color:var(--p0);background:var(--p0-bg);border:1px solid rgba(220,38,38,.28);}
 
   /* ---- sections ---- */
   h2.section{font-size:10.5px;font-weight:700;text-transform:uppercase;
@@ -405,6 +430,10 @@ function mergeRecords(recs) {
 /* ---------------- Today ---------------- */
 function tag(imp){return imp?`<span class="tag ${esc(imp)}">${esc(imp)}</span>`:"";}
 function confTag(c){return c?`<span class="tag conf">${esc(c)}</span>`:"";}
+/* Shown when the pipeline could not verify a single source URL for a signal.
+   Silence here would be worse than the warning: an unlinked card looks exactly
+   like one we simply didn't bother to cite. */
+function unverTag(s){return s.unverified?`<span class="tag unver" title="No source URL could be verified against the candidate pool">unverified</span>`:"";}
 
 function morningBrief(rec){
   const sigs=[];
@@ -419,6 +448,31 @@ function morningBrief(rec){
   return {n:sigs.length,top,confirmed,band,testable};
 }
 
+/* Source health strip. Silent-failure guard: a dead Nitter and a quiet news
+   day produce the same short digest, so coverage has to be visible. */
+function healthStrip(rec){
+  const rm=rec.run_meta||{};
+  const src=rm.sources||{};
+  if(!src.x&&!src.rss) return "";
+  const parts=[];let worst=0;  // 0 ok, 1 degraded, 2 down
+  [["X",src.x],["RSS",src.rss]].forEach(([label,h])=>{
+    if(!h||!h.total) return;
+    const ratio=h.ok/h.total;
+    if(h.ok===0) worst=2; else if(ratio<(DATA.source_warn_ratio??0.7)) worst=Math.max(worst,1);
+    parts.push(`<span class="hitem">${label} ${h.ok}/${h.total}</span>`);
+  });
+  if(!parts.length) return "";
+  const cls=worst===2?"down":(worst===1?"warn":"");
+  let note="";
+  if(worst===2) note="One source layer is completely unavailable — today's digest is NOT representative.";
+  else if(worst===1) note="Reduced source coverage — today may be thinner than reality.";
+  const failed=[...(src.x?.failed_names||[]),...(src.rss?.failed_names||[])];
+  if(worst&&failed.length) note+=` Unreachable: ${failed.slice(0,6).join(", ")}`;
+  return `<div class="health ${cls}"><span class="hdot"></span>
+    <span class="hitem">Sources</span>${parts.join("")}
+    ${note?`<span class="hnote">${esc(note)}</span>`:""}</div>`;
+}
+
 function renderToday(){
   const rangeRecs = getRangeRecords(selectedRange);
   const rec = selectedRange === 1 ? (ARCHIVE[selectedDate] || DATA.today || {}) : mergeRecords(rangeRecs);
@@ -429,14 +483,20 @@ function renderToday(){
   const isLatest = rec.date === (DATA.today?.date || "");
   let h=`<div class="date-label">${esc(rec.date)}${isMultiDay?"":(isLatest?"":" (historical)")}</div>`;
   const urgent=(b.top==="P0");
+  // SERP sources are manual adapters by default. Printing "Unknown" invited the
+  // reading "calm"; when nothing is wired we say so instead.
+  const serpLive=DATA.serp_connected&&b.band&&b.band!=="Unknown";
+  const serpCell=serpLive
+    ? `<span class="dot-heat" style="background:${heatColor(b.band)}"></span>${esc(b.band)}`
+    : `<span style="color:var(--ink-3);font-size:12px;">未接入 / not connected</span>`;
   h+=`<div class="brief">
       <div class="stat lead${urgent?" urgent":""}"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>
       <div class="stat"><span class="k">Signals</span><span class="v">${b.n}</span></div>
       <div class="stat"><span class="k">To act / test</span><span class="v">${b.testable}</span></div>
       <div class="stat"><span class="k">Confirmed update</span><span class="v">${b.confirmed?"Yes":"No"}</span></div>
-      <div class="stat"><span class="k">SERP heat</span><span class="v">
-        <span class="dot-heat" style="background:${heatColor(b.band)}"></span>${esc(b.band)}</span></div>
+      <div class="stat"><span class="k">SERP heat</span><span class="v">${serpCell}</span></div>
     </div>`;
+  h+=healthStrip(selectedRange===1?(ARCHIVE[selectedDate]||DATA.today||{}):(rangeRecs.length?ARCHIVE[rangeRecs[rangeRecs.length-1]]||{}:{}));
   if(rec.headline) h+=`<div class="headline">${esc(rec.headline)}</div>`;
   h+=serpWeather(rec.serp);
 
@@ -472,7 +532,7 @@ function signalCard(s, multiDay){
   const dateTag = (multiDay && s._date) ? `<span class="tag" style="color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line);font-family:var(--mono);">${esc(s._date)}</span>` : "";
   return `<div class="card ${esc(imp)}">
     <div class="what"><span class="wtext">${esc(s.what_happened)}</span>
-      <span class="badges">${dateTag}${tag(s.impact)}${confTag(s.confidence)}</span></div>
+      <span class="badges">${dateTag}${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
     ${testbox}
@@ -531,14 +591,26 @@ function renderMap(){
     <span><span class="dot-heat" style="background:var(--heat-elevated)"></span>Elevated</span>
     <span><span class="dot-heat" style="background:var(--heat-normal)"></span>Normal</span></div>`;
 
+  // Always draw the three lanes, even with no events: the lanes themselves
+  // carry information (which layers exist, and which have no source wired).
+  // Hiding them behind a single "no events" message was how the permanently
+  // empty External-flux track stayed invisible.
   if(!ev.length){
     h+=`<div class="map-empty">No timeline events in the last ${esc(mapRange)}. Confirmed updates, SERP flux and community signals appear here as the archive fills in.</div>`;
-  }else{
+  }
+  {
     const span=Math.max(1,(now-start));
     const pos=d=>((new Date(d+"T00:00:00Z")-start)/span)*100;
     TRACKS.forEach(tr=>{
       const mine=ev.filter(e=>e.track===tr.key);
-      h+=`<div class="track"><div class="name"><div class="t">${tr.t}</div><div class="d">${tr.d}</div></div><div class="lane">`;
+      // An empty lane silently asserts "nothing happened". For External flux
+      // that's wrong: the SERP adapters are manual, so no pips usually means
+      // no data source at all. Label it rather than implying calm.
+      const noData=(tr.key==="external"&&!DATA.serp_connected);
+      h+=`<div class="track${noData?" nodata":""}"><div class="name"><div class="t">${tr.t}</div><div class="d">${tr.d}</div></div><div class="lane">`;
+      if(noData){
+        h+=`<div class="nd">未接入 / no volatility source connected — add readings with <code>main.py serp-add</code></div>`;
+      }
       mine.forEach(e=>{
         const left=Math.min(99,Math.max(1,pos(e.date)));
         h+=`<div class="ev" style="left:${left}%">
@@ -597,7 +669,7 @@ function drawLibResults(){
     const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join(" ");
     h+=`<div class="lib-row">
       <div class="ld">${esc(s.date)}</div>
-      <div><div class="lw">${esc(s.what_happened)} <span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
+      <div><div class="lw">${esc(s.what_happened)} <span class="badges">${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}</span></div>
         <div class="lmeta"><span>${esc(s.section)}</span>${s.who_it_affects?`<span>· ${esc(s.who_it_affects)}</span>`:""}${srcs?`<span>· ${srcs}</span>`:""}</div>
       </div></div>`;
   });

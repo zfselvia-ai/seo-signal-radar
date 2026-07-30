@@ -95,6 +95,36 @@ def archive_daily(cfg: dict, date_str: str, digest: dict,
     return path
 
 
+def archive_run_meta(cfg: dict, date_str: str, run_meta: dict) -> str:
+    """Attach/refresh run health on today's record, creating a stub if needed.
+
+    Deliberately separate from archive_daily because the runs that most need a
+    health record are the ones that produce NO digest: if every source is
+    unreachable, run_daily returns early and nothing would ever be written —
+    the one day you'd most want to know something was wrong.
+    """
+    adir = cfg["output"]["archive_dir"]
+    os.makedirs(adir, exist_ok=True)
+    path = os.path.join(adir, f"{date_str}.json")
+    record = {}
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                record = json.load(f)
+        except Exception:
+            record = {}
+    record.setdefault("date", date_str)
+    record.setdefault("headline", "")
+    record.setdefault("sections", {})
+    record.setdefault("signals", [])
+    record.setdefault("serp", {})
+    record.setdefault("confirmed_updates", [])
+    record["run_meta"] = run_meta
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(record, f, ensure_ascii=False, indent=2)
+    return path
+
+
 def load_archive_range(cfg: dict, start: datetime, end: datetime) -> List[dict]:
     """Load daily archive records whose date falls in [start, end] (inclusive)."""
     adir = cfg["output"]["archive_dir"]

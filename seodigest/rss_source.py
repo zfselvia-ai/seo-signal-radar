@@ -7,6 +7,10 @@ from typing import List
 
 from .models import Item
 
+# Populated by fetch() so the caller can record feed availability in the
+# archive alongside the X numbers. See x_source.LAST_HEALTH.
+LAST_HEALTH: dict = {}
+
 
 def _entry_datetime(entry):
     for key in ("published_parsed", "updated_parsed"):
@@ -24,11 +28,14 @@ def _within_window(dt, since):
 
 def fetch(cfg: dict, since: datetime) -> List[Item]:
     if not cfg.get("rss", {}).get("enabled"):
+        LAST_HEALTH.update({"enabled": False, "ok": 0, "failed": 0, "total": 0,
+                            "failed_names": []})
         return []
     import feedparser
     from datetime import timedelta
 
     items: List[Item] = []
+    ok_feeds, failed_feeds = [], []
     max_per = cfg["rss"].get("max_items_per_feed", 10)
     weights = (cfg.get("scoring") or {}).get("source_weights", {})
 
@@ -50,6 +57,14 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         cutoff = evergreen_since if category in evergreen_cats else since
         try:
             parsed = feedparser.parse(url)
+            # feedparser doesn't raise on HTTP/DNS failure — it returns an
+            # empty feed. Without this check a permanently dead feed URL (a
+            # renamed blog, a moved path) stays invisible forever.
+            if not parsed.entries and not (parsed.feed or {}).get("title"):
+                failed_feeds.append(name)
+                print(f"  [rss] feed '{name}' returned nothing — check the URL")
+                continue
+            ok_feeds.append(name)
             for entry in parsed.entries[:max_per]:
                 dt = _entry_datetime(entry)
                 if not _within_window(dt, cutoff):
@@ -79,5 +94,14 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                     )
                 )
         except Exception as e:
+            failed_feeds.append(name)
             print(f"  [rss] feed '{name}' failed: {e}")
+
+    LAST_HEALTH.update({
+        "enabled": True,
+        "ok": len(ok_feeds),
+        "failed": len(failed_feeds),
+        "total": len(ok_feeds) + len(failed_feeds),
+        "failed_names": failed_feeds,
+    })
     return items

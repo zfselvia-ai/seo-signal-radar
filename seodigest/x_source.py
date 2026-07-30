@@ -29,6 +29,11 @@ NITTER_INSTANCES = [
     "nitter.privacyredirect.com",
 ]
 
+# Populated by fetch() so the caller can record source availability in the
+# archive. A module-level dict rather than a return value because fetch()'s
+# signature is shared with the other sources and callers only want Items.
+LAST_HEALTH: dict = {}
+
 
 def _entry_datetime(entry):
     for key in ("published_parsed", "updated_parsed"):
@@ -90,8 +95,14 @@ def _parse_handle_rss(parsed, handle, group, meta=None) -> List[Item]:
     return items
 
 
-def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None) -> List[Item]:
-    """Fetch one handle's timeline, trying each Nitter instance in turn."""
+def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None):
+    """Fetch one handle's timeline, trying each Nitter instance in turn.
+
+    Returns a list of Items on success (possibly EMPTY — the account may simply
+    not have posted), or None when every instance refused. That distinction is
+    the whole point: "no tweets" and "cannot reach X at all" produce identical
+    digests otherwise, and a totally dead Nitter would look like a quiet day.
+    """
     import httpx
     headers = {"User-Agent": "Mozilla/5.0 (compatible; SEO-Signal-Radar/1.0)"}
     for host in instances:
@@ -110,7 +121,7 @@ def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None) -
         except Exception:
             continue
     print(f"  [x] @{handle} ({group}) failed: no Nitter instance returned a feed")
-    return []
+    return None
 
 
 def _resolve_accounts(xcfg: dict) -> dict:
@@ -136,6 +147,8 @@ def _resolve_accounts(xcfg: dict) -> dict:
 
 def fetch(cfg: dict, since: datetime) -> List[Item]:
     if not cfg.get("x", {}).get("enabled"):
+        LAST_HEALTH.update({"enabled": False, "ok": 0, "failed": 0, "total": 0,
+                            "failed_names": []})
         return []
     import feedparser
     from datetime import timedelta
@@ -146,6 +159,7 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
     weights = (cfg.get("scoring") or {}).get("source_weights", {})
     accounts = _resolve_accounts(xcfg)
     items: List[Item] = []
+    ok_handles, failed_handles = [], []
 
     # Longer window for rarely-posting, high-trust accounts (Google staff,
     # controlled-experiment people). @JohnMu explaining an indexing boundary is
@@ -163,12 +177,24 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         group = (meta.get("tags") or ["general"])[0]
         cutoff = evergreen_since if meta.get("source_type") in evergreen_types else since
         tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
-        for t in tweets[:per]:
+        # Reachability, not productivity: an account that simply didn't post
+        # today returned a valid feed. `_fetch_handle` returns None only when
+        # every Nitter instance refused.
+        (failed_handles if tweets is None else ok_handles).append(handle)
+        for t in (tweets or [])[:per]:
             # Plain retweets carry no added analysis — config x.filters.drop.
             if t.text.startswith("RT @"):
                 continue
             if _within(t.published, cutoff):
                 items.append(t)
+
+    LAST_HEALTH.update({
+        "enabled": True,
+        "ok": len(ok_handles),
+        "failed": len(failed_handles),
+        "total": len(ok_handles) + len(failed_handles),
+        "failed_names": failed_handles,
+    })
 
     # Keyword search is not supported via Nitter RSS (no search endpoint that's
     # reliable across instances). Keyword hits are dropped silently — the

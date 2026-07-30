@@ -15,7 +15,28 @@ import json
 from datetime import datetime, timedelta, timezone
 
 from . import store
-from .summarize import call_llm, _strip_fences, LANG_RULES
+from .summarize import call_llm, _extract_json, LANG_RULES
+
+
+def _parse_report(raw: str, meta: dict, label: str) -> dict:
+    """Parse an LLM report response without letting a bad day crash the run.
+
+    Uses _extract_json (not _strip_fences) because reasoning models emit
+    chain-of-thought before the JSON — the weekly and monthly generators used
+    the weaker helper and would raise on any such response. And since these run
+    unattended on a cron, an exception means no report at all and a red CI run;
+    an "empty" record at least renders and says why.
+    """
+    data = _extract_json(raw or "")
+    try:
+        parsed = json.loads(data)
+        if not isinstance(parsed, dict):
+            raise ValueError("expected a JSON object")
+        return {**meta, **parsed}
+    except Exception as e:
+        print(f"[!] {label} LLM output was not usable JSON: {e}")
+        return {**meta, "empty": True,
+                "error": f"LLM output could not be parsed as JSON ({e})"}
 
 
 # ------------------------------ periods -----------------------------------
@@ -111,8 +132,7 @@ def generate_weekly(cfg: dict, now: datetime | None = None) -> dict:
     system = WEEKLY_SYSTEM.format(
         lang=LANG_RULES.get(cfg["brand"]["language"], LANG_RULES["bilingual"]))
     user = "THIS WEEK'S DAILY ARCHIVE:\n" + _digest_archive(records)
-    data = json.loads(_strip_fences(call_llm(cfg, system, user)))
-    return {**meta, **data}
+    return _parse_report(call_llm(cfg, system, user), meta, "weekly")
 
 
 # ------------------------------ monthly -----------------------------------
@@ -165,8 +185,7 @@ def generate_monthly(cfg: dict, now: datetime | None = None) -> dict:
     system = MONTHLY_SYSTEM.format(
         lang=LANG_RULES.get(cfg["brand"]["language"], LANG_RULES["bilingual"]))
     user = "THIS MONTH'S DAILY ARCHIVE:\n" + _digest_archive(records)
-    data = json.loads(_strip_fences(call_llm(cfg, system, user)))
-    return {**meta, **data}
+    return _parse_report(call_llm(cfg, system, user), meta, "monthly")
 
 
 # --------------------------- special brief --------------------------------
@@ -196,5 +215,5 @@ def generate_special_brief(cfg: dict, event: dict) -> dict:
     system = SPECIAL_SYSTEM.format(
         lang=LANG_RULES.get(cfg["brand"]["language"], LANG_RULES["bilingual"]))
     user = "TRIGGERING EVENT:\n" + json.dumps(event, ensure_ascii=False)
-    data = json.loads(_strip_fences(call_llm(cfg, system, user)))
+    data = _parse_report(call_llm(cfg, system, user), {}, "special brief")
     return {**data, "_event": event}

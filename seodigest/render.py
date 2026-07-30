@@ -94,7 +94,8 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
             conf = s.get("confidence", "")
             imp = s.get("impact", "")
             tags = " ".join(t for t in (f"`{imp}`" if imp else "",
-                                        f"`{conf}`" if conf else "") if t)
+                                        f"`{conf}`" if conf else "",
+                                        "`unverified`" if s.get("unverified") else "") if t)
             md.append(f"- **{s.get('what_happened','')}**  {tags}")
             if s.get("why_it_matters"):
                 md.append(f"  - 为何重要 / Why: {s['why_it_matters']}")
@@ -160,7 +161,11 @@ def _daily_html(digest, cfg, date_str, serp, title, brief=None):
                 ibadge = (f"<span class='badge' style='color:{ifg};background:{ibg}'>"
                           f"{_esc(imp)}</span>")
             parts.append("<div class='item'>")
-            parts.append(f"<div class='what'>{_esc(s.get('what_happened',''))}{ibadge}{badge}</div>")
+            # No source URL survived verification — say so rather than let an
+            # uncited claim read like a cited one.
+            ubadge = ("<span class='badge' style='color:#b22222;background:#fef2f2'>"
+                      "unverified</span>") if s.get("unverified") else ""
+            parts.append(f"<div class='what'>{_esc(s.get('what_happened',''))}{ibadge}{badge}{ubadge}</div>")
             for lab, key in (("为何重要 Why", "why_it_matters"),
                              ("证据 Evidence", "evidence"),
                              ("影响 Affects", "who_it_affects"),

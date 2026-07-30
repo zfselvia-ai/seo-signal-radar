@@ -52,17 +52,54 @@ def compute_since(cfg):
     return lookback
 
 
+def _run_meta(cfg, x_items, rss_items, gs_items, fresh, provider_hint=None):
+    """Per-run health record, archived alongside the digest.
+
+    Why bother: every failure mode in this pipeline is SILENT. If Nitter dies
+    entirely, or a feed URL quietly 404s after a blog migration, the run still
+    succeeds and produces a short digest — which is indistinguishable from a
+    genuinely quiet news day. You'd trust a thin digest for weeks. Recording
+    reachability per run makes the difference visible on the dashboard.
+    """
+    xh = dict(x_source.LAST_HEALTH or {})
+    rh = dict(rss_source.LAST_HEALTH or {})
+    return {
+        "ran_at": datetime.now(timezone.utc).isoformat(),
+        "sources": {
+            "x": {"ok": xh.get("ok", 0), "total": xh.get("total", 0),
+                  "failed_names": xh.get("failed_names", [])[:10],
+                  "items": len(x_items)},
+            "rss": {"ok": rh.get("ok", 0), "total": rh.get("total", 0),
+                    "failed_names": rh.get("failed_names", [])[:10],
+                    "items": len(rss_items)},
+            "google_status": {"items": len(gs_items)},
+        },
+        "candidates_fetched": len(x_items) + len(rss_items) + len(gs_items),
+        "candidates_fresh": len(fresh),
+        "llm_provider": provider_hint or "",
+    }
+
+
 # ------------------------------ daily -------------------------------------
 def run_daily(cfg, dry_run=False):
     since = compute_since(cfg)
     print(f"[*] window since {since.isoformat()}")
 
     x_items = x_source.fetch(cfg, since)
-    print(f"    X: {len(x_items)}")
+    xh = x_source.LAST_HEALTH or {}
+    print(f"    X: {len(x_items)} items from {xh.get('ok', 0)}/{xh.get('total', 0)} accounts")
     rss_items = rss_source.fetch(cfg, since)
-    print(f"    RSS: {len(rss_items)}")
+    rh = rss_source.LAST_HEALTH or {}
+    print(f"    RSS: {len(rss_items)} items from {rh.get('ok', 0)}/{rh.get('total', 0)} feeds")
     gs_items, confirmed = google_status.fetch(cfg, since)
     print(f"    Google Status: {len(gs_items)} items, {len(confirmed)} confirmed updates")
+
+    # Loud warning when a whole source layer is down — a thin digest caused by
+    # a dead Nitter must never be mistaken for a quiet day.
+    for label, h in (("X/Nitter", xh), ("RSS", rh)):
+        if h.get("enabled") and h.get("total") and h.get("ok", 0) == 0:
+            print(f"[!!] {label} is COMPLETELY unavailable — today's digest is "
+                  f"not representative. Check the source config.")
 
     all_items = gs_items + x_items + rss_items
     fresh = store.filter_unseen(all_items)
@@ -83,8 +120,12 @@ def run_daily(cfg, dry_run=False):
         print("[dry-run] stop before LLM.")
         return
 
+    date_str = _date_str(cfg)
+    run_meta = _run_meta(cfg, x_items, rss_items, gs_items, fresh)
+
     if not fresh and not confirmed:
         print("[*] nothing new.")
+        store.archive_run_meta(cfg, date_str, run_meta)
         if cfg.get("dashboard", {}).get("enabled"):
             dpath = dashboard.write_dashboard(cfg)
             print(f"[*] rebuilt dashboard: {dpath}")
@@ -92,6 +133,7 @@ def run_daily(cfg, dry_run=False):
 
     if not fresh:
         print("[*] no fresh items to summarize; rebuilding dashboard only.")
+        store.archive_run_meta(cfg, date_str, run_meta)
         if cfg.get("dashboard", {}).get("enabled"):
             dpath = dashboard.write_dashboard(cfg)
             print(f"[*] rebuilt dashboard: {dpath}")
@@ -102,10 +144,10 @@ def run_daily(cfg, dry_run=False):
     kept = sum(len(v) for v in digest.get("sections", {}).values())
     print(f"[*] kept {kept} signals")
 
-    date_str = _date_str(cfg)
     md, html = render.render_daily(digest, cfg, date_str, serp_snapshot)
     paths = render.write_report(cfg, "daily", date_str, md, html)
     store.archive_daily(cfg, date_str, digest, serp_snapshot)
+    store.archive_run_meta(cfg, date_str, run_meta)
     store.commit_seen(fresh)
     for fmt, p in paths.items():
         print(f"[*] wrote daily {fmt}: {p}")

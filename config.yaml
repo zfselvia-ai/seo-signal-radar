@@ -39,6 +39,20 @@ daily:
     - data_research
     - official_documentation
     - official_person
+  # CROSS-DAY STORY DEDUP. Item-level dedup (data/seen.json) keys on item id,
+  # so one story discussed by five accounts over three days produces brand-new
+  # items every day and quietly occupies a signal slot all week. The reader
+  # experiences that as "this digest keeps telling me the same thing".
+  # Two layers, deliberately: the model is TOLD what already ran (so it can
+  # spend the slot on something else), and repeats are also filtered after the
+  # fact (because the model will sometimes ignore the instruction).
+  # An ESCALATION always survives: rumour -> officially confirmed is the single
+  # most valuable thing this product delivers, not a repeat.
+  dedupe_lookback_days: 4
+  # Token-overlap (Jaccard) threshold for "same story". Works across EN/ZH
+  # because CJK is compared per-character. Raise it if distinct stories get
+  # merged; lower it if the same story keeps reappearing.
+  dedupe_similarity: 0.65
   # Fixed sections, in display order. The LLM sorts signals into these.
   # Sections may be EMPTY — research and official explanations are slower-moving
   # than news, and padding them would defeat the point. Empty sections are
@@ -441,6 +455,11 @@ dashboard:
   # push this past ~1000 days the page gets heavy on mobile — at that point
   # split the Library into a separate lazy-loaded JSON rather than raising this.
   history_days: 365
+  # Source-coverage warning threshold. Below this fraction of reachable sources
+  # the dashboard shows an amber strip; at zero reachable it turns red. Without
+  # this, a dead Nitter produces a short digest that looks exactly like a quiet
+  # news day — and you'd trust it for weeks.
+  source_warn_ratio: 0.7
   # One-line thesis shown in the header.
   thesis: "What changed in Search, why it matters, and what to do next."
   thesis_zh: "搜索发生了什么，为什么重要，今天该做什么。"

@@ -102,6 +102,8 @@ weak items.
 
 {playbook_block}
 
+{recent_block}
+
 OUTPUT LANGUAGE: {lang}
 
 Return ONLY valid JSON (no markdown fences), schema:
@@ -141,6 +143,34 @@ Playbook items are normally P2 ("worth testing"); use P1 only when there is a re
 deadline or an active risk. Do NOT invent mechanisms, numbers or test procedures \
 that the source does not support — an honest "test this on 20 URLs and compare \
 impressions" beats a fabricated case study."""
+
+
+RECENT_BLOCK = """ALREADY PUBLISHED — do NOT report these again. The reader saw \
+them in the last {days} days:
+{stories}
+Rules: if a candidate is the same STORY as one of the above, skip it and spend \
+the slot on something the reader has not seen. The ONE exception is an \
+ESCALATION — if a story we ran as a rumour is now officially confirmed, or new \
+data settles it, that IS news: report it and say explicitly what changed \
+("previously observed, now confirmed by X"). Do not repeat a story merely \
+because more people are discussing it."""
+
+
+def _recent_block(cfg: dict) -> str:
+    days = cfg.get("daily", {}).get("dedupe_lookback_days", 0)
+    if not days:
+        return ""
+    try:
+        prior = recent_stories(cfg, days)
+    except Exception:
+        return ""
+    if not prior:
+        return ""
+    lines = "\n".join(
+        f"- [{p['date']} · {p['confidence'] or 'n/a'}] {p['what_happened']}"
+        for p in prior[-40:]
+    )
+    return RECENT_BLOCK.format(days=days, stories=lines)
 
 
 def _playbook_block(daily: dict) -> str:
@@ -191,6 +221,7 @@ def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
         trust_ladder=_trust_ladder_block(scoring),
         experiment_reqs=", ".join(scoring.get("experiment_requirements", [])),
         playbook_block=_playbook_block(daily),
+        recent_block=_recent_block(cfg),
     )
     payload = [{
         "group": it.group,
@@ -227,7 +258,7 @@ def _extract_json(text: str) -> str:
     """Extract the JSON object from an LLM response.
 
     Reasoning models (e.g. Kimi K2.6) may emit chain-of-thought before the
-    final JSON. This finds the last valid JSON object in the text.
+    final JSON. This finds the largest valid JSON object in the text.
     """
     if not text:
         return ""
@@ -247,23 +278,36 @@ def _extract_json(text: str) -> str:
             return m.group(1)
         except json.JSONDecodeError:
             pass
-    # Find the last JSON object: search for {"headline" and balance braces
-    for start in range(len(text) - 1, -1, -1):
-        if text[start] == "{" and text[start:start + 12].lstrip().startswith("{"):
-            # Try parsing from this position
-            depth = 0
-            for end in range(start, len(text)):
-                if text[end] == "{":
-                    depth += 1
-                elif text[end] == "}":
-                    depth -= 1
-                    if depth == 0:
-                        candidate = text[start:end + 1]
+    # Balance braces from each "{" and keep the LARGEST object that parses.
+    #
+    # Scanning backwards and returning the first hit looks cheaper but is wrong:
+    # the last balanced object in a chain-of-thought response is usually a small
+    # nested fragment (the final `{"name":..., "url":...}` of the real payload,
+    # or an example brace the model wrote while thinking). That parses fine, so
+    # the function returned a *valid but tiny* object and the caller silently
+    # got a digest with no signals. Length is the right tie-breaker — the real
+    # payload is always the outermost, hence longest, valid object.
+    best = ""
+    for start, ch in enumerate(text):
+        if ch != "{":
+            continue
+        depth = 0
+        for end in range(start, len(text)):
+            if text[end] == "{":
+                depth += 1
+            elif text[end] == "}":
+                depth -= 1
+                if depth == 0:
+                    candidate = text[start:end + 1]
+                    if len(candidate) > len(best):
                         try:
                             json.loads(candidate)
-                            return candidate
+                            best = candidate
                         except json.JSONDecodeError:
-                            break
+                            pass
+                    break
+    if best:
+        return best
     # Last resort: return original
     return text
 
@@ -415,6 +459,169 @@ def _select_candidates(cfg: dict, items: List[Item]) -> List[Item]:
     return selected
 
 
+def _norm_url(u: str) -> str:
+    """Normalise a URL for comparison.
+
+    Models often echo a URL back with a trailing slash, an added utm_*, or a
+    different scheme. Those are the same source, so we compare on
+    host+path only, lowercased.
+    """
+    if not u:
+        return ""
+    from urllib.parse import urlsplit
+    try:
+        p = urlsplit(u.strip())
+    except Exception:
+        return u.strip().lower()
+    host = (p.netloc or "").lower().removeprefix("www.")
+    path = (p.path or "").rstrip("/").lower()
+    return f"{host}{path}"
+
+
+def verify_sources(data: dict, candidates: List[Item]) -> dict:
+    """Drop or flag any source URL the model did not actually receive.
+
+    THIS IS A CORRECTNESS GUARD, NOT A STYLE CHECK. The product's entire value
+    proposition is "we show you the evidence". An LLM asked for a JSON field
+    called "url" will happily produce a plausible-looking one — a fabricated
+    SearchPilot link is indistinguishable from a real one at a glance, and the
+    reader would make decisions on it. So: the candidate pool is the ONLY
+    source of truth for URLs. Anything else is removed.
+
+    A signal that loses every source is kept but marked `unverified: true` and
+    capped at "Speculative" confidence — better a visible caveat than a silent
+    deletion, since the underlying observation may still be real.
+    """
+    allowed = {}
+    for it in candidates:
+        key = _norm_url(it.url)
+        if key:
+            allowed[key] = it
+    fabricated, stripped = [], 0
+    for sig in data.get("signals", []):
+        kept = []
+        for src in sig.get("sources", []) or []:
+            key = _norm_url(src.get("url", ""))
+            if key and key in allowed:
+                # Trust the candidate's own name over the model's paraphrase.
+                src["name"] = src.get("name") or allowed[key].source_name
+                kept.append(src)
+            else:
+                fabricated.append(src.get("url", "") or "(empty)")
+                stripped += 1
+        sig["sources"] = kept
+        if not kept:
+            sig["unverified"] = True
+            # Never let an unsourced claim keep a high-trust label.
+            if sig.get("confidence") in ("Confirmed", "Data-backed"):
+                sig["confidence"] = "Speculative"
+    if fabricated:
+        print(f"[!] source check: removed {stripped} URL(s) not present in the "
+              f"candidate pool (possible fabrication): {fabricated[:5]}")
+    return data
+
+
+_CONF_RANK = {"Speculative": 0, "Observed": 1, "Data-backed": 2, "Confirmed": 3}
+
+
+def _stem(w: str) -> str:
+    """Crude suffix stripping so "confirms" and "confirmed" collapse together.
+
+    Not linguistics — just enough that a reworded headline about the same story
+    still overlaps. Without it, "Google confirms August core update" vs "August
+    core update confirmed by Google" scored 0.57 and slipped past dedup, which
+    is exactly the repeat a reader would complain about.
+    """
+    if len(w) < 4:
+        return w
+    for suf in ("ing", "ed", "es", "s"):
+        if w.endswith(suf) and len(w) - len(suf) >= 3:
+            w = w[: -len(suf)]
+            break
+    return w[:-1] if w.endswith("e") and len(w) > 3 else w
+
+
+def _tokens(text: str) -> set:
+    """Bag of comparison tokens that works for mixed EN/ZH headlines.
+
+    Latin words are stemmed and tokenised on word boundaries; CJK has no spaces,
+    so each Han character becomes its own token. Crude, but it makes "Google 确认
+    核心更新" and "核心更新已确认 by Google" overlap heavily, which is the point.
+    """
+    import re
+    low = text.lower()
+    words = {_stem(w) for w in re.findall(r"[a-z0-9]{3,}", low)}
+    han = {c for c in low if "一" <= c <= "鿿"}
+    return words | han
+
+
+def _similar(a: str, b: str) -> float:
+    ta, tb = _tokens(a), _tokens(b)
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+def recent_stories(cfg: dict, days: int) -> List[dict]:
+    """what_happened + confidence for every signal in the last N archived days."""
+    from datetime import datetime, timedelta, timezone
+    from . import store
+    end = datetime.now(timezone.utc)
+    out = []
+    for rec in store.load_archive_range(cfg, end - timedelta(days=days), end):
+        for sig in rec.get("signals", []):
+            wh = sig.get("what_happened")
+            if wh:
+                out.append({"date": rec.get("date", ""), "what_happened": wh,
+                            "confidence": sig.get("confidence", "")})
+    return out
+
+
+def dedupe_against_recent(cfg: dict, data: dict) -> dict:
+    """Drop signals that already ran in the last few days.
+
+    Why this is needed: dedup elsewhere is per-ITEM (`store.filter_unseen` keys
+    on item id), so a story that five accounts discuss over three days produces
+    brand-new items every day and quietly occupies a signal slot all week. The
+    reader experiences that as "this digest keeps telling me the same thing".
+
+    The exception that matters: an ESCALATION is news. If we ran a rumour as
+    "Observed" on Monday and Google confirms it on Wednesday, the Wednesday
+    signal must survive — that confirmation is the single most valuable thing
+    the product can deliver. So a repeat is only dropped when its confidence
+    is no higher than the version we already published.
+    """
+    daily = cfg.get("daily", {})
+    days = daily.get("dedupe_lookback_days", 0)
+    if not days:
+        return data
+    threshold = daily.get("dedupe_similarity", 0.65)
+    prior = recent_stories(cfg, days)
+    if not prior:
+        return data
+    kept, dropped = [], []
+    for sig in data.get("signals", []):
+        wh = sig.get("what_happened", "")
+        now_rank = _CONF_RANK.get(sig.get("confidence", ""), 0)
+        repeat = None
+        for p in prior:
+            if _similar(wh, p["what_happened"]) >= threshold:
+                if now_rank > _CONF_RANK.get(p["confidence"], 0):
+                    continue  # escalation — keep it, and say so
+                repeat = p
+                break
+        if repeat:
+            dropped.append((wh, repeat["date"]))
+        else:
+            kept.append(sig)
+    if dropped:
+        data["signals"] = kept
+        data["dropped_count"] = data.get("dropped_count", 0) + len(dropped)
+        for wh, d in dropped:
+            print(f"[*] cross-day dedup: dropped '{wh[:60]}' (ran {d})")
+    return data
+
+
 def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     """Return a structured daily digest dict (grouped into sections)."""
     if not items:
@@ -435,6 +642,16 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         print(f"[!] LLM JSON parse failed: {e}; falling back to raw items.")
         return _fallback_digest(items)
 
+    # Verify every citation against what the model was actually shown, BEFORE
+    # the signals are grouped, archived and rendered.
+    data = verify_sources(data, candidates)
+    llm_kept = len(data.get("signals") or [])
+    data = dedupe_against_recent(cfg, data)
+    # Did cross-day dedup, rather than the LLM, empty the digest? The two cases
+    # need opposite handling and conflating them broke dedup entirely (see the
+    # fallback branch below).
+    emptied_by_dedup = llm_kept > 0 and not data.get("signals")
+
     # Group signals into sections, preserving config order.
     grouped = {s: [] for s in cfg["daily"]["sections"]}
     for sig in data.get("signals", []):
@@ -451,10 +668,24 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     # If the LLM dropped everything (e.g. all candidates were promo/noise),
     # fall back to raw items so the day isn't blank. The curation rubric is
     # advisory, not a hard gate — an expert still wants to see the raw feed.
-    if not data.get("signals"):
+    #
+    # But NOT when cross-day dedup is what emptied it. The fallback rebuilds
+    # signals straight from the raw items, which resurrects the very stories
+    # dedup just removed — and strips them of confidence and impact on the way
+    # through. A genuinely quiet day (everything already reported) must be
+    # allowed to render as quiet; that is the honest output and it's also the
+    # signal the reader needs: nothing new happened.
+    if not data.get("signals") and not emptied_by_dedup:
         print(f"[!] LLM kept 0 signals (dropped {data.get('dropped_count', '?')}); "
               f"falling back to raw items.")
         return _fallback_digest(items)
+    if emptied_by_dedup:
+        print("[*] every signal today was already reported in the last "
+              "few days — publishing a quiet day rather than repeating them.")
+        data["headline"] = data.get("headline") or (
+            "No new developments — everything on the radar today was already "
+            "covered this week.")
+        data["quiet_day"] = True
     return data
 
 
