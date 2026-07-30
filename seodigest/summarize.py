@@ -291,7 +291,7 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
                 "dropped_count": 0}
     # Cap candidates sent to the LLM to keep prompt lean and avoid
     # reasoning-model token exhaustion.
-    max_candidates = cfg["daily"].get("max_signals", 8) * 3
+    max_candidates = cfg["daily"].get("max_signals", 8)
     candidates = items[:max_candidates]
     system, user = build_prompt(cfg, candidates)
     raw = _extract_json(call_llm(cfg, system, user))
