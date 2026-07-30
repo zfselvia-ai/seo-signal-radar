@@ -283,16 +283,44 @@ def call_llm(cfg: dict, system: str, user: str) -> str:
     return _call_anthropic(cfg, system, user)
 
 
+def _select_candidates(cfg: dict, items: List[Item]) -> List[Item]:
+    """Pick a diverse, high-value subset of candidates for the LLM.
+
+    Naively taking items[:N] biases toward whichever source ran first
+    (often one noisy handle flooding the window). Instead we round-robin
+    across groups so every list is represented, then top up from the rest.
+    """
+    max_candidates = cfg["daily"].get("max_signals", 8)
+    # Bucket by group, preserving config group order.
+    buckets: dict[str, List[Item]] = {}
+    for it in items:
+        buckets.setdefault(it.group, []).append(it)
+    # Round-robin: take one from each non-empty bucket in turn.
+    selected: List[Item] = []
+    idx = {g: 0 for g in buckets}
+    while len(selected) < max_candidates:
+        progressed = False
+        for g in buckets:
+            if idx[g] < len(buckets[g]):
+                selected.append(buckets[g][idx[g]])
+                idx[g] += 1
+                progressed = True
+                if len(selected) >= max_candidates:
+                    break
+        if not progressed:
+            break
+    return selected
+
+
 def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     """Return a structured daily digest dict (grouped into sections)."""
     if not items:
         return {"headline": "No new SEO signals in this window.",
                 "signals": [], "sections": {}, "action_items": [],
                 "dropped_count": 0}
-    # Cap candidates sent to the LLM to keep prompt lean and avoid
-    # reasoning-model token exhaustion.
-    max_candidates = cfg["daily"].get("max_signals", 8)
-    candidates = items[:max_candidates]
+    # Pick a diverse subset so one noisy handle can't crowd out every other
+    # source — the LLM curation rubric needs cross-source signal to work.
+    candidates = _select_candidates(cfg, items)
     system, user = build_prompt(cfg, candidates)
     raw = _extract_json(call_llm(cfg, system, user))
     if not raw:
@@ -316,28 +344,54 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
             for a in data["action_items"]
         ]
     data["sections"] = {k: v for k, v in grouped.items() if v}
+
+    # If the LLM dropped everything (e.g. all candidates were promo/noise),
+    # fall back to raw items so the day isn't blank. The curation rubric is
+    # advisory, not a hard gate — an expert still wants to see the raw feed.
+    if not data.get("signals"):
+        print(f"[!] LLM kept 0 signals (dropped {data.get('dropped_count', '?')}); "
+              f"falling back to raw items.")
+        return _fallback_digest(items)
     return data
+
+
+_GROUP_TO_SECTION = {
+    "official_signals": "Confirmed Search Updates",
+    "algo_serp": "SERP & Algorithm Signals",
+    "technical_data": "Technical SEO Experiments",
+    "geo_ai": "AI Search / GEO",
+    "rss": "Tools, Papers & Open Source",
+    "keyword": "Unconfirmed Watchlist",
+    "google_status": "Confirmed Search Updates",
+}
 
 
 def _fallback_digest(items: List[Item]) -> dict:
     """When the LLM fails, produce a basic digest from raw item text."""
+    # Use the same diverse selection so a single noisy source can't dominate.
+    pick = _select_candidates({"daily": {"max_signals": 8}}, items)
     signals = []
-    for it in items[:8]:
+    for it in pick:
+        section = _GROUP_TO_SECTION.get(it.group, "SERP & Algorithm Signals")
         signals.append({
             "what_happened": it.text[:120],
-            "why_it_matters": "Auto-extracted from source (LLM unavailable).",
+            "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
             "evidence": it.source_name,
             "who_it_affects": "all",
             "what_to_do": "monitor",
             "confidence": "Observed",
             "impact": "P2",
-            "section": "SERP & Algorithm Signals",
+            "section": section,
             "sources": [{"name": it.source_name, "url": it.url}],
         })
+    # Group by the section we just assigned.
+    grouped: dict[str, list] = {}
+    for s in signals:
+        grouped.setdefault(s["section"], []).append(s)
     return {
         "headline": f"{len(signals)} signals from sources (LLM summary unavailable).",
         "signals": signals,
-        "sections": {"SERP & Algorithm Signals": signals} if signals else {},
+        "sections": grouped,
         "action_items": [],
-        "dropped_count": 0,
+        "dropped_count": max(0, len(items) - len(signals)),
     }
