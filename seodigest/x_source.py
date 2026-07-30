@@ -23,11 +23,10 @@ from .models import Item
 
 # Public Nitter instances, tried in order. The first that returns valid RSS
 # for a handle wins. Instances come and go — update this list when needed.
+# Keep this short: each dead instance adds up to 8s per handle of stall time.
 NITTER_INSTANCES = [
     "nitter.net",
     "nitter.privacyredirect.com",
-    "nitter.poast.org",
-    "nitter.1d4.us",
 ]
 
 
@@ -88,15 +87,18 @@ def _parse_handle_rss(parsed, handle, group) -> List[Item]:
 
 def _fetch_handle(feedparser, handle, group, per, instances, since) -> List[Item]:
     """Fetch one handle's timeline, trying each Nitter instance in turn."""
+    import httpx
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; SEO-Signal-Radar/1.0)"}
     for host in instances:
         url = f"https://{host}/{handle}/rss"
         try:
-            parsed = feedparser.parse(url)
-            # Nitter returns a valid feed even when the user has 0 tweets;
-            # detect real failure by an empty channel or an error status.
-            status = getattr(parsed, "status", None) or getattr(parsed.get("feed", {}), "status", None)
-            if status and int(status) >= 400:
+            # Hard 8s timeout per instance so one slow/dead instance can't
+            # stall the whole fetch for minutes.
+            r = httpx.get(url, headers=headers, timeout=8, follow_redirects=True)
+            if r.status_code >= 400:
                 continue
+            parsed = feedparser.parse(r.text)
+            # Detect real failure: empty feed with no channel title.
             if not parsed.entries and not parsed.feed.get("title"):
                 continue
             return _parse_handle_rss(parsed, handle, group)

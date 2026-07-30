@@ -103,8 +103,6 @@ x:
   nitter_instances:
     - nitter.net
     - nitter.privacyredirect.com
-    - nitter.poast.org
-    - nitter.1d4.us
   lists:
     official_signals:
       label: "Official & First-Party Signals"
