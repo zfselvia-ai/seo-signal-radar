@@ -66,19 +66,30 @@ def commit_seen(items: List[Item]) -> None:
 # --------------------------- structured archive ---------------------------
 def archive_daily(cfg: dict, date_str: str, digest: dict,
                   serp_snapshot: dict | None = None) -> str:
-    """Save one structured daily record. Returns its path."""
+    """Save one structured daily record. Returns its path.
+
+    Never overwrites an existing record with empty data — protects against
+    same-day re-runs where dedup has consumed all fresh items.
+    """
     adir = cfg["output"]["archive_dir"]
     os.makedirs(adir, exist_ok=True)
+    sections = digest.get("sections", {})
+    signals = digest.get("signals", [])
+    has_content = bool(signals) or any(
+        isinstance(v, list) and v for v in sections.values())
+    path = os.path.join(adir, f"{date_str}.json")
+    if os.path.exists(path) and not has_content:
+        print(f"[*] skip overwrite {date_str}: new digest empty, keep existing")
+        return path
     record = {
         "date": date_str,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "headline": digest.get("headline", ""),
-        "sections": digest.get("sections", {}),
-        "signals": digest.get("signals", []),
+        "sections": sections,
+        "signals": signals,
         "serp": serp_snapshot or {},
         "confirmed_updates": digest.get("confirmed_updates", []),
     }
-    path = os.path.join(adir, f"{date_str}.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
     return path

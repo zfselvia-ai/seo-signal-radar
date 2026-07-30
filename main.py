@@ -45,10 +45,11 @@ def _date_str(cfg):
 
 
 def compute_since(cfg):
+    lookback = datetime.now(timezone.utc) - timedelta(hours=cfg["daily"]["lookback_hours"])
     last = store.last_run()
-    if last:
+    if last and last < lookback:
         return last
-    return datetime.now(timezone.utc) - timedelta(hours=cfg["daily"]["lookback_hours"])
+    return lookback
 
 
 # ------------------------------ daily -------------------------------------
@@ -84,6 +85,16 @@ def run_daily(cfg, dry_run=False):
 
     if not fresh and not confirmed:
         print("[*] nothing new.")
+        if cfg.get("dashboard", {}).get("enabled"):
+            dpath = dashboard.write_dashboard(cfg)
+            print(f"[*] rebuilt dashboard: {dpath}")
+        return
+
+    if not fresh:
+        print("[*] no fresh items to summarize; rebuilding dashboard only.")
+        if cfg.get("dashboard", {}).get("enabled"):
+            dpath = dashboard.write_dashboard(cfg)
+            print(f"[*] rebuilt dashboard: {dpath}")
         return
 
     digest = summarize.summarize_daily(cfg, fresh)
