@@ -25,8 +25,8 @@ jobs:
           path: |
             data/seen.json
             data/serp_history.csv
-          key: radar-state-${{ github.run_id }}
-          restore-keys: radar-state-
+          key: radar-state-v2-${{ github.run_id }}
+          restore-keys: radar-state-v2-
       - name: Run daily
         env:
           SCNET_API_KEY: ${{ secrets.SCNET_API_KEY }}
