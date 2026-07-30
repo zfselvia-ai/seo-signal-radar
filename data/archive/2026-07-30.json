@@ -163,15 +163,16 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-07-30T07:53:56.893968+00:00",
+    "ran_at": "2026-07-30T08:04:06.776956+00:00",
     "sources": {
       "x": {
-        "ok": 28,
+        "ok": 27,
         "total": 29,
         "failed_names": [
-          "JohnMu"
+          "JohnMu",
+          "sitebulb"
         ],
-        "items": 74
+        "items": 69
       },
       "rss": {
         "ok": 7,
@@ -188,7 +189,7 @@
         "items": 0
       }
     },
-    "candidates_fetched": 89,
+    "candidates_fetched": 84,
     "candidates_fresh": 0,
     "llm_provider": ""
   }
