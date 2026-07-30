@@ -517,7 +517,11 @@ function unlock(){
     }
   });
 }
-if(sessionStorage.getItem("radar_ok")==="1"){
+// Local bypass: auto-unlock when opened from file:// or localhost
+if(sessionStorage.getItem("radar_ok")==="1" ||
+   location.protocol==="file:" ||
+   location.hostname==="localhost" ||
+   location.hostname==="127.0.0.1"){
   gate.style.display="none";
 }else{
   document.getElementById("gbtn").onclick=unlock;

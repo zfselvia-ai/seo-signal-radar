@@ -1,6 +1,7 @@
 # secrets & session
 .env
 cookies.json
+PASSWORD.local
 
 # state (regenerated each run)
 data/seen.json
