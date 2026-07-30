@@ -118,6 +118,9 @@ def _conf_to_band(conf: str) -> str:
 def build_data(cfg: dict) -> dict:
     records = _all_records(cfg)
     latest = records[-1] if records else {}
+    # Send all archived records (not just latest) so the frontend date picker
+    # can render any past day without a round-trip.
+    archive_by_date = {r.get("date", ""): r for r in records}
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "thesis": cfg["dashboard"].get("thesis", ""),
@@ -127,6 +130,7 @@ def build_data(cfg: dict) -> dict:
         "verticals": cfg["daily"].get("verticals", []),
         "sections": cfg["daily"].get("sections", []),
         "today": latest,
+        "archive": archive_by_date,
         "library": _flatten_signals(records),
         "map_events": _map_tracks(records),
         "days_archived": len(records),

@@ -280,6 +280,9 @@
     <button data-view="today" class="active">Today</button>
     <button data-view="map">Algorithm Map</button>
     <button data-view="library">Source Library</button>
+    <select id="date-picker" style="margin-left:auto;font-family:var(--mono);font-size:12px;
+      border:1.5px solid var(--line-strong);border-radius:8px;padding:6px 10px;
+      background:var(--surface);color:var(--ink);cursor:pointer;outline:none;"></select>
   </nav>
 </header>
 
@@ -315,6 +318,20 @@ document.querySelectorAll("nav button").forEach(b=>{
   };
 });
 
+/* ---------------- date picker ---------------- */
+const ARCHIVE = DATA.archive || {};
+const DATES = Object.keys(ARCHIVE).sort().reverse();
+const picker = document.getElementById("date-picker");
+let selectedDate = DATA.today?.date || (DATES[0] || "");
+DATES.forEach(d => {
+  const opt = document.createElement("option");
+  opt.value = d;
+  opt.textContent = d;
+  if (d === selectedDate) opt.selected = true;
+  picker.appendChild(opt);
+});
+picker.onchange = () => { selectedDate = picker.value; renderToday(); };
+
 /* ---------------- Today ---------------- */
 function tag(imp){return imp?`<span class="tag ${esc(imp)}">${esc(imp)}</span>`:"";}
 function confTag(c){return c?`<span class="tag conf">${esc(c)}</span>`:"";}
@@ -328,18 +345,17 @@ function morningBrief(rec){
   const top=["P0","P1","P2","P3"].find(p=>impacts.includes(p))||"—";
   const confirmed=(rec.sections?.["Confirmed Search Updates"]||[]).length>0;
   const band=(rec.serp||{}).global_band||"Unknown";
-  // Surface the actionable tier explicitly: on days when nothing is confirmed,
-  // "3 to test" is the reason to keep reading.
   const testable=impacts.filter(i=>i==="P0"||i==="P1"||i==="P2").length;
   return {n:sigs.length,top,confirmed,band,testable};
 }
 
 function renderToday(){
-  const rec=DATA.today||{};
+  const rec = ARCHIVE[selectedDate] || DATA.today || {};
   const el=document.getElementById("view-today");
   if(!rec.date){el.innerHTML=`<p class="lib-empty">No daily report yet. Run <code>python main.py daily</code> first.</p>`;return;}
   const b=morningBrief(rec);
-  let h=`<div class="date-label">${esc(rec.date)}</div>`;
+  const isLatest = rec.date === (DATA.today?.date || "");
+  let h=`<div class="date-label">${esc(rec.date)}${isLatest?"":" (historical)"}</div>`;
   const urgent=(b.top==="P0");
   h+=`<div class="brief">
       <div class="stat lead${urgent?" urgent":""}"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>

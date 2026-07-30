@@ -20,8 +20,8 @@ brand:
 # Keep it tight: 5-8 signals. Fast to read (< 5 min).
 # --------------------------------------------------------------------------
 daily:
-  max_signals: 8
-  min_signals: 5
+  max_signals: 10
+  min_signals: 6
   lookback_hours: 24
   # How many raw candidates the LLM is allowed to SEE before curating.
   # This is NOT max_signals. Curation can only be as good as the pool it

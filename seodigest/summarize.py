@@ -15,7 +15,8 @@ from typing import List
 from .models import Item
 
 LANG_RULES = {
-    "bilingual": ("Write 'what_happened' and 'evidence' in English (source language). "
+    "bilingual": ("Write 'what_happened' as: English headline | 中文一句话说明. "
+                  "Write 'evidence' in English (source language). "
                   "Write 'why_it_matters', 'who_it_affects' and 'what_to_do' in "
                   "Simplified Chinese, keeping English SEO jargon (AEO, GEO, agentic "
                   "traffic, AI Overviews, CTR, E-E-A-T, query fan-out) as-is."),
@@ -69,8 +70,11 @@ Missing any one of those -> downgrade to practitioner_observation.
 - Multiple independent trusted accounts reporting the SAME phenomenon is itself \
 evidence — merge them into one signal and raise confidence.
 
-STEP 2 - KEEP only the best {min_signals}-{max_signals}. If fewer are truly \
-valuable, keep fewer. NEVER pad. Curation rubric:
+STEP 2 - KEEP only the best {min_signals}-{max_signals}. You MUST keep at \
+least {min_signals} signals unless fewer than {min_signals} candidates exist. \
+Do NOT over-filter: if you have {min_signals} or more candidates, keeping only \
+2-3 is a failure. When in doubt between dropping and keeping, KEEP — the reader \
+is an expert who can judge for themselves. Curation rubric:
 KEEP:
 {keep}
 DROP:
