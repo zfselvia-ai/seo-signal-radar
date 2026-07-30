@@ -108,12 +108,10 @@ cp .env.example .env      # add LLM key; add X creds for first login
 Pick the LLM provider in `config.yaml` (`llm.provider`) and set the matching key.
 Default is **Kimi K2.5** (`moonshot`) — set `MOONSHOT_API_KEY`; `anthropic` and
 `openai` are drop-in alternatives.
-First X run uses `X_USERNAME/X_EMAIL/X_PASSWORD` then caches `cookies.json`.
 
-> ⚠️ **twikit drives a real X account** via private endpoints. Use a secondary
-> account, keep `tweets_per_handle` modest, and run a few times a day at most.
-> To eliminate the risk entirely, swap `x_source.py` for a paid API — the `Item`
-> interface stays the same.
+**X needs no credentials at all.** `x_source.py` reads public Nitter RSS, so
+there is no account to log in, no cookie to refresh, and no password anywhere in
+CI. The only secret the pipeline requires is one LLM API key.
 
 ## Run
 
@@ -140,9 +138,51 @@ archive is embedded as JSON. Three views:
 `dashboard/index.html` is a **build artifact and is not committed** (it's gitignored).
 It embeds the whole archive inline, so it's rewritten in full on every run —
 committing it stored a fresh multi-MB blob daily and made `.git` grow *quadratically*
-(~136 MB after a year, ~1.2 GB after three). CI publishes it straight to the
-`gh-pages` branch with `force_orphan` instead. Regenerate it any time with
-`python main.py dashboard`.
+(~136 MB after a year, ~1.2 GB after three). CI publishes it straight to
+Cloudflare Pages instead. Regenerate it any time with `python main.py dashboard`.
+
+### Private dashboard (Cloudflare Pages + Access)
+
+The dashboard is published to **Cloudflare Pages** behind **Cloudflare Access**,
+which authenticates at the edge before any HTML is served.
+
+This replaced an in-page password prompt, which was security theatre: a static
+site has no server to check a password, so the check ran in JavaScript and the
+page had to ship its own hash. Anyone could read it with View Source, and it was
+bypassed outright on `file:`/`localhost`. Making the repo private wouldn't have
+helped either — GitHub Pages serves a public URL regardless.
+
+One-time setup, about ten minutes:
+
+1. **Make the repo private.** GitHub → Settings → General → Danger Zone →
+   Change visibility → Private. Then Settings → Pages → Source → **None**, to
+   stop the old public URL from serving anything.
+2. **Create the Pages project.** In the Cloudflare dashboard: Workers & Pages →
+   Create → Pages → *Upload assets* (not the Git integration — CI does the
+   deploying). Name it exactly **`seo-signal-radar`** so it matches
+   `--project-name` in `digest.yml`. Upload any placeholder file to finish
+   creation; the first CI run overwrites it.
+3. **Create an API token.** My Profile → API Tokens → Create Token → *Custom
+   token*. Permissions: **Account → Cloudflare Pages → Edit**. Nothing else —
+   this token only needs to deploy.
+4. **Add two GitHub secrets** (repo → Settings → Secrets and variables →
+   Actions): `CLOUDFLARE_API_TOKEN` (from step 3) and `CLOUDFLARE_ACCOUNT_ID`
+   (right sidebar of any Cloudflare dashboard page). Until both exist the
+   publish step skips with a warning instead of failing the run.
+5. **Turn on Access.** Zero Trust → Access → Applications → Add an application →
+   Self-hosted. Domain: your `seo-signal-radar.pages.dev`. Add a policy:
+   Action **Allow**, Include → **Emails** → list the handful of addresses that
+   should get in. Choose the **One-time PIN** login method so nobody needs a
+   Cloudflare account — they enter their email, receive a code, and are in.
+   Session duration of a week or a month keeps phones from re-authenticating
+   constantly.
+
+Free on Cloudflare's free plan up to 50 Access users. Works on mobile: a normal
+browser login, no VPN or client certificate.
+
+> The old hash sits in git history at commits `924f402` and `fc77e0c`. It never
+> protected anything, so there's nothing to rotate — but don't reuse that
+> password elsewhere.
 
 **Storage, measured:** the archive is ~12 KB/day — about **4.5 MB/year**, 22 MB after
 five years. That is comfortably inside GitHub's limits, so no external database or
@@ -163,7 +203,7 @@ If no URL is set, `python main.py notify` just prints the preview.
 
 ## Automation
 
-- `.github/workflows/digest.yml` — daily at 07:00 Asia/Shanghai; runs the digest, rebuilds the dashboard, sends the push, commits, and publishes `dashboard/` to GitHub Pages.
+- `.github/workflows/digest.yml` — daily at 07:00 Asia/Shanghai; runs the digest, rebuilds the dashboard, sends the push, commits the archive, and publishes `dashboard/` to Cloudflare Pages.
 - `.github/workflows/reports.yml` — weekly (Tue) + monthly (code verifies the 4th working day).
 
 Repo secrets: ONE LLM key (`MOONSHOT_API_KEY`, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`
@@ -197,7 +237,8 @@ dashboard/index.html     # the deployed product
 
 ## Notes & limits
 
-- **X is the fragile part** (twikit → private endpoints). If challenged, delete `cookies.json` and re-login.
+- **X is the fragile part** — Nitter instances go down often. `x_source.py` rotates through several and, crucially, distinguishes "no tweets" from "every instance refused": the source health strip on the dashboard turns amber or red when coverage drops, because a dead fetcher and a quiet news day otherwise produce an identical short digest.
+- **Sources are verified, not trusted.** Every URL the LLM cites is checked against the candidate pool it was actually shown. Anything invented is stripped, the signal is marked `unverified`, and its confidence is capped at Speculative.
 - **Percentiles need history.** Until ~10+ days of SERP readings accrue, the layer records data and reports "insufficient history" rather than guessing.
 - **GEO open-source tools** (e.g. `geo-aeo-tracker`, `awesome-generative-engine-optimization`) are treated as *candidate sources* for the "Tools, Papers & Open Source" section, not integrated runtimes — self-hosting them still needs paid API keys (Bright Data / OpenRouter / Gemini).
 - LLM cost is roughly one call per daily run plus one per weekly/monthly — cents.
