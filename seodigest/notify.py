@@ -173,7 +173,20 @@ def send(cfg: dict, digest: dict, date_str: str,
             data=body, headers={"Content-Type": "application/json"})
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
-                return {"sent": True, "channel": channel, "status": resp.status,
+                raw = resp.read().decode("utf-8")
+                # PushPlus returns JSON like {"code":200,"msg":"...","data":"..."}
+                # code 200 means accepted; anything else is a rejection.
+                try:
+                    api_resp = json.loads(raw)
+                except Exception:
+                    api_resp = {"raw": raw}
+                code = api_resp.get("code", resp.status)
+                msg = api_resp.get("msg", "")
+                if code == 200:
+                    return {"sent": True, "channel": channel, "status": resp.status,
+                            "preview": preview}
+                return {"sent": False, "channel": channel, "status": resp.status,
+                        "pushplus_code": code, "pushplus_msg": msg,
                         "preview": preview}
         except Exception as e:
             return {"sent": False, "channel": channel, "error": str(e),

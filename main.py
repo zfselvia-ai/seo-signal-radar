@@ -167,7 +167,8 @@ def run_daily(cfg, dry_run=False):
         if res.get("sent"):
             print(f"[*] notification sent via {res.get('channel')}")
         else:
-            print(f"[*] notification not sent ({res.get('reason') or res.get('error')})")
+            reason = res.get('reason') or res.get('error') or res.get('pushplus_msg') or 'unknown'
+            print(f"[*] notification not sent ({reason})")
 
     # Special briefs triggered by confirmed ranking updates.
     pending = google_status.pending_special_briefs(
@@ -255,7 +256,8 @@ def _send_notify_from_latest_archive(cfg):
     if res.get("sent"):
         print(f"[*] notification sent via {res.get('channel')}")
     else:
-        print(f"[*] notification not sent ({res.get('reason') or res.get('error')}). Preview:\n")
+        reason = res.get('reason') or res.get('error') or res.get('pushplus_msg') or 'unknown'
+        print(f"[*] notification not sent ({reason}). Preview:\n")
         print(res.get("preview", ""))
 
 
