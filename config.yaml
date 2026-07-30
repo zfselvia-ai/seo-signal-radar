@@ -250,7 +250,7 @@ llm:
   moonshot_base_url: "https://api.moonshot.ai/v1"
   anthropic_model: "claude-opus-4-8"
   openai_model: "gpt-4o"
-  max_output_tokens: 6000
+  max_output_tokens: 16000
   temperature: 0.3
 
 # --------------------------------------------------------------------------

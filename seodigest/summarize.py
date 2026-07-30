@@ -127,6 +127,8 @@ def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
 
 
 def _strip_fences(text: str) -> str:
+    if not text:
+        return ""
     text = text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[-1]
@@ -135,6 +137,51 @@ def _strip_fences(text: str) -> str:
         if text.lstrip().startswith("json"):
             text = text.lstrip()[4:]
     return text.strip()
+
+
+def _extract_json(text: str) -> str:
+    """Extract the JSON object from an LLM response.
+
+    Reasoning models (e.g. Kimi K2.6) may emit chain-of-thought before the
+    final JSON. This finds the last valid JSON object in the text.
+    """
+    if not text:
+        return ""
+    text = text.strip()
+    # Fast path: already valid JSON
+    try:
+        json.loads(text)
+        return text
+    except json.JSONDecodeError:
+        pass
+    # Try ```json fenced block
+    import re
+    m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if m:
+        try:
+            json.loads(m.group(1))
+            return m.group(1)
+        except json.JSONDecodeError:
+            pass
+    # Find the last JSON object: search for {"headline" and balance braces
+    for start in range(len(text) - 1, -1, -1):
+        if text[start] == "{" and text[start:start + 12].lstrip().startswith("{"):
+            # Try parsing from this position
+            depth = 0
+            for end in range(start, len(text)):
+                if text[end] == "{":
+                    depth += 1
+                elif text[end] == "}":
+                    depth -= 1
+                    if depth == 0:
+                        candidate = text[start:end + 1]
+                        try:
+                            json.loads(candidate)
+                            return candidate
+                        except json.JSONDecodeError:
+                            break
+    # Last resort: return original
+    return text
 
 
 def _call_anthropic(cfg, system, user) -> str:
@@ -181,20 +228,32 @@ def _call_moonshot(cfg, system, user) -> str:
 
 
 def _call_scnet(cfg, system, user) -> str:
-    """SCNet (超算互联网) — GLM-5.2 via OpenAI-compatible API."""
+    """SCNet (超算互联网) — Kimi K2.6 via OpenAI-compatible API."""
     from openai import OpenAI
     client = OpenAI(
         api_key=os.getenv("SCNET_API_KEY"),
         base_url=cfg["llm"].get("scnet_base_url", "https://api.scnet.cn/api/llm/v1"),
+        timeout=180,
+        max_retries=2,
     )
-    resp = client.chat.completions.create(
-        model=cfg["llm"]["scnet_model"],
-        max_tokens=cfg["llm"]["max_output_tokens"],
-        temperature=cfg["llm"]["temperature"],
-        messages=[{"role": "system", "content": system},
-                  {"role": "user", "content": user}],
-    )
-    return resp.choices[0].message.content
+    for attempt in range(3):
+        try:
+            resp = client.chat.completions.create(
+                model=cfg["llm"]["scnet_model"],
+                max_tokens=cfg["llm"]["max_output_tokens"],
+                temperature=cfg["llm"]["temperature"],
+                messages=[{"role": "system", "content": system},
+                          {"role": "user", "content": user}],
+            )
+            content = resp.choices[0].message.content
+            if content:
+                return content
+            print(f"[scnet] attempt {attempt+1}: empty content, finish={resp.choices[0].finish_reason}")
+        except Exception as e:
+            print(f"[scnet] attempt {attempt+1} error: {e}")
+            if attempt == 2:
+                raise
+    return ""
 
 
 def _detect_provider() -> str:
@@ -230,9 +289,20 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         return {"headline": "No new SEO signals in this window.",
                 "signals": [], "sections": {}, "action_items": [],
                 "dropped_count": 0}
-    system, user = build_prompt(cfg, items)
-    raw = _strip_fences(call_llm(cfg, system, user))
-    data = json.loads(raw)
+    # Cap candidates sent to the LLM to keep prompt lean and avoid
+    # reasoning-model token exhaustion.
+    max_candidates = cfg["daily"].get("max_signals", 8) * 3
+    candidates = items[:max_candidates]
+    system, user = build_prompt(cfg, candidates)
+    raw = _extract_json(call_llm(cfg, system, user))
+    if not raw:
+        print("[!] LLM returned empty response; falling back to raw items.")
+        return _fallback_digest(items)
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError as e:
+        print(f"[!] LLM JSON parse failed: {e}; falling back to raw items.")
+        return _fallback_digest(items)
 
     # Group signals into sections, preserving config order.
     grouped = {s: [] for s in cfg["daily"]["sections"]}
@@ -247,3 +317,27 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         ]
     data["sections"] = {k: v for k, v in grouped.items() if v}
     return data
+
+
+def _fallback_digest(items: List[Item]) -> dict:
+    """When the LLM fails, produce a basic digest from raw item text."""
+    signals = []
+    for it in items[:8]:
+        signals.append({
+            "what_happened": it.text[:120],
+            "why_it_matters": "Auto-extracted from source (LLM unavailable).",
+            "evidence": it.source_name,
+            "who_it_affects": "all",
+            "what_to_do": "monitor",
+            "confidence": "Observed",
+            "impact": "P2",
+            "section": "SERP & Algorithm Signals",
+            "sources": [{"name": it.source_name, "url": it.url}],
+        })
+    return {
+        "headline": f"{len(signals)} signals from sources (LLM summary unavailable).",
+        "signals": signals,
+        "sections": {"SERP & Algorithm Signals": signals} if signals else {},
+        "action_items": [],
+        "dropped_count": 0,
+    }
