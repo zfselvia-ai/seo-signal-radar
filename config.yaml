@@ -243,8 +243,8 @@ llm:
   # "auto" = use whichever API key you set in .env / GitHub secrets.
   # Force one explicitly with: scnet(glm) | moonshot(kimi) | anthropic | openai
   provider: "auto"
-  # SCNet (超算互联网) — Kimi K2.6 via OpenAI-compatible API
-  scnet_model: "Kimi-K2.6"
+  # SCNet (超算互联网) — SCNet-Max (fast, non-reasoning) via OpenAI-compatible API
+  scnet_model: "SCNet-Max"
   scnet_base_url: "https://api.scnet.cn/api/llm/v1"
   moonshot_model: "kimi-k2.5"
   moonshot_base_url: "https://api.moonshot.ai/v1"

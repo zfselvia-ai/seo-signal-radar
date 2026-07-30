@@ -1,0 +1,273 @@
+{
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T02:12:23.210922+00:00",
+  "headline": "Google GSC Platform Properties Go Live Globally; Major AI Citation Studies Reveal Optimization Blind Spots",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "Google Search Console Platform properties are now globally live with new social and video data documentation.",
+        "why_it_matters": "允许SEO在统一视图中分析跨网域、子域名和协议的数据，简化了大型网站和多平台内容的技术监控与数据汇总。",
+        "evidence": "Google official release and updated help documentation for GSC Platform properties.",
+        "who_it_affects": "all",
+        "what_to_do": "登录 GSC 配置 Platform properties，并参考新文档设置社交与视频数据分析。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 95,
+        "sources": [
+          {
+            "name": "Search Engine Land",
+            "url": "https://searchengineland.com/google-search-console-platform-properties-are-now-globally-live-483921"
+          }
+        ]
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "A 14-step workflow using Claude Code scales diagnosis and updates for decaying SEO content.",
+        "why_it_matters": "展示了如何利用 Agentic 工具（Claude Code）自动化诊断内容衰退并执行更新，提升技术 SEO 效率。",
+        "evidence": "Step-by-step technical workflow and methodology published on Search Engine Land.",
+        "who_it_affects": "publisher / SaaS / all",
+        "what_to_do": "测试 Claude Code 并在沙盒环境中跑通 14 步内容更新工作流。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Technical SEO Experiments",
+        "score": 78,
+        "sources": [
+          {
+            "name": "Search Engine Land",
+            "url": "https://searchengineland.com/scale-seo-content-updates-claude-code-483862"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "A year-long study of 15.7M AI Mode citations reveals specific passage patterns Google highlights and reuses.",
+        "why_it_matters": "揭示了 Google AI Mode 引用内容的具体特征，为优化 AEO 和 AI Overviews 提供了大规模数据支持。",
+        "evidence": "Pillarbase year-long study analyzing 15.7 million citations across 148 industries.",
+        "who_it_affects": "publisher / ecommerce / SaaS / all",
+        "what_to_do": "分析高频被引用的文本结构，优化核心页面段落以匹配 AI 提取特征。",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 90,
+        "sources": [
+          {
+            "name": "Search Engine Land",
+            "url": "https://searchengineland.com/what-15-7-million-ai-mode-citations-reveal-about-getting-quoted-by-google-483393"
+          }
+        ]
+      },
+      {
+        "what_happened": "Study reveals ~40% of AI citations are \"ghost citations\" where content is cited but the brand name is omitted.",
+        "why_it_matters": "揭示了 AI 搜索中品牌曝光的盲区，即使内容被引用，用户也可能无法直接感知品牌，影响 GEO 效果评估。",
+        "evidence": "Industry analysis showing 40% of AI search citations leave the source brand unnamed.",
+        "who_it_affects": "publisher / SaaS / ecommerce / all",
+        "what_to_do": "在页面核心观点和结论中更紧密地结合品牌词，减少无品牌引用的概率。",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 82,
+        "sources": [
+          {
+            "name": "Search Engine Land",
+            "url": "https://searchengineland.com/ghost-citation-problem-ai-483794"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "在 GSC 中配置全新的 Platform properties 以统一分析跨域和多平台视频/社交数据",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "针对 AI 搜索中 40% 的'幽灵引用'，调整页面内容结构，使品牌词与核心观点紧密绑定",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "测试 Claude Code 自动化工作流，探索规模化修复内容衰退的技术方案",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Google Search Console Platform properties are now globally live with new social and video data documentation.",
+      "why_it_matters": "允许SEO在统一视图中分析跨网域、子域名和协议的数据，简化了大型网站和多平台内容的技术监控与数据汇总。",
+      "evidence": "Google official release and updated help documentation for GSC Platform properties.",
+      "who_it_affects": "all",
+      "what_to_do": "登录 GSC 配置 Platform properties，并参考新文档设置社交与视频数据分析。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 95,
+      "sources": [
+        {
+          "name": "Search Engine Land",
+          "url": "https://searchengineland.com/google-search-console-platform-properties-are-now-globally-live-483921"
+        }
+      ]
+    },
+    {
+      "what_happened": "A year-long study of 15.7M AI Mode citations reveals specific passage patterns Google highlights and reuses.",
+      "why_it_matters": "揭示了 Google AI Mode 引用内容的具体特征，为优化 AEO 和 AI Overviews 提供了大规模数据支持。",
+      "evidence": "Pillarbase year-long study analyzing 15.7 million citations across 148 industries.",
+      "who_it_affects": "publisher / ecommerce / SaaS / all",
+      "what_to_do": "分析高频被引用的文本结构，优化核心页面段落以匹配 AI 提取特征。",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 90,
+      "sources": [
+        {
+          "name": "Search Engine Land",
+          "url": "https://searchengineland.com/what-15-7-million-ai-mode-citations-reveal-about-getting-quoted-by-google-483393"
+        }
+      ]
+    },
+    {
+      "what_happened": "Study reveals ~40% of AI citations are \"ghost citations\" where content is cited but the brand name is omitted.",
+      "why_it_matters": "揭示了 AI 搜索中品牌曝光的盲区，即使内容被引用，用户也可能无法直接感知品牌，影响 GEO 效果评估。",
+      "evidence": "Industry analysis showing 40% of AI search citations leave the source brand unnamed.",
+      "who_it_affects": "publisher / SaaS / ecommerce / all",
+      "what_to_do": "在页面核心观点和结论中更紧密地结合品牌词，减少无品牌引用的概率。",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 82,
+      "sources": [
+        {
+          "name": "Search Engine Land",
+          "url": "https://searchengineland.com/ghost-citation-problem-ai-483794"
+        }
+      ]
+    },
+    {
+      "what_happened": "A 14-step workflow using Claude Code scales diagnosis and updates for decaying SEO content.",
+      "why_it_matters": "展示了如何利用 Agentic 工具（Claude Code）自动化诊断内容衰退并执行更新，提升技术 SEO 效率。",
+      "evidence": "Step-by-step technical workflow and methodology published on Search Engine Land.",
+      "who_it_affects": "publisher / SaaS / all",
+      "what_to_do": "测试 Claude Code 并在沙盒环境中跑通 14 步内容更新工作流。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 78,
+      "sources": [
+        {
+          "name": "Search Engine Land",
+          "url": "https://searchengineland.com/scale-seo-content-updates-claude-code-483862"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ]
+}
