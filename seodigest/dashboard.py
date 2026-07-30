@@ -60,7 +60,11 @@ def _flatten_signals(records: list) -> list:
                 }
                 # Playbook fields: only carried when present, so the archive
                 # stays lean but a past tactic remains searchable months later.
-                for k in ("how_to_test", "success_metric", "effort"):
+                # evidence_detail rides along for the same reason — the Library
+                # is where an old signal gets re-examined, so that's exactly
+                # where the expanded reasoning needs to be available.
+                for k in ("how_to_test", "success_metric", "effort",
+                          "evidence_detail"):
                     if s.get(k):
                         row[k] = s[k]
                 # Carry the verification flag through: a claim we could not

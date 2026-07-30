@@ -105,6 +105,11 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
                 md.append(f"  - 影响 / Affects: {s['who_it_affects']}")
             if s.get("what_to_do"):
                 md.append(f"  - 行动 / Action: {s['what_to_do']}")
+            # Expanded evidence. Markdown has no collapse, so it sits inline —
+            # acceptable because the .md is the archival copy, read deliberately
+            # rather than scanned like the dashboard.
+            if s.get("evidence_detail"):
+                md.append(f"  - 详情 / Detail: {s['evidence_detail']}")
             # Playbook items carry a test recipe; only present when relevant.
             if s.get("how_to_test"):
                 md.append(f"  - 如何测试 / Test: {s['how_to_test']}")
@@ -114,6 +119,14 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
                 md.append(f"  - 成本与风险 / Effort: {s['effort']}")
             for src in s.get("sources", []):
                 md.append(f"  - [{src.get('name','source')}]({src.get('url','')})")
+                # Verbatim source text, blockquoted so it can never be mistaken
+                # for our own summary.
+                if src.get("excerpt"):
+                    who = " · ".join(x for x in (src.get("author"),
+                                                 (src.get("published") or "")[:10]) if x)
+                    if who:
+                        md.append(f"    > _{who}_")
+                    md.append(f"    > {src['excerpt']}")
         md.append("")
     if digest.get("dropped_count"):
         md += [f"*Filtered out {digest['dropped_count']} lower-value candidates.*", ""]
@@ -176,12 +189,43 @@ def _daily_html(digest, cfg, date_str, serp, title, brief=None):
                              ("成本与风险 Effort", "effort")):
                 if s.get(key):
                     parts.append(f"<div class='meta'><b>{lab}:</b> {_esc(s[key])}</div>")
+            parts.append(_evidence_details(s))
             for src in s.get("sources", []):
                 parts.append(f"<div class='src'><a href='{_esc(src.get('url',''))}'>"
                              f"{_esc(src.get('name','source'))} ↗</a></div>")
             parts.append("</div>")
     parts.append(_HTML_FOOT)
     return "\n".join(parts)
+
+
+def _evidence_details(s: dict) -> str:
+    """Collapsible evidence block for the standalone HTML report.
+
+    Same contract as the dashboard panel: the model's expanded write-up, then
+    the verbatim source text. The quote is the load-bearing part — it is copied
+    from the fetched item and so cannot have been invented, which is what lets
+    a reader check the summary above it instead of trusting it.
+    """
+    detail = s.get("evidence_detail", "")
+    quoted = [x for x in s.get("sources", []) if x.get("excerpt")]
+    if not detail and not quoted:
+        return ""
+    inner = []
+    if detail:
+        inner.append(f"<div class='edetail'>{_esc(detail)}</div>")
+    for x in quoted:
+        who = " · ".join(v for v in (x.get("author"),
+                                     (x.get("published") or "")[:10],
+                                     (x.get("source_type") or "").replace("_", " "))
+                         if v)
+        inner.append(
+            f"<blockquote class='quote'>"
+            f"<div class='qhead'>{_esc(who)}</div>"
+            f"<div class='qtext'>{_esc(x['excerpt'])}</div></blockquote>")
+    n = len(quoted)
+    label = f"Evidence · {n} source{'' if n == 1 else 's'}" if n else "Evidence detail"
+    return (f"<details class='eviexp'><summary>{label}</summary>"
+            f"<div class='evibody'>{''.join(inner)}</div></details>")
 
 
 def _serp_card_html(serp):
@@ -328,6 +372,16 @@ h2{{font-size:19px;margin-top:30px;padding-bottom:6px;border-bottom:1px solid #e
 .serp-tbl td{{padding:4px 6px;border-bottom:1px solid #f0f0f0;}}
 .serp-tbl td:first-child{{color:#666;width:180px;}}
 .interp{{margin-top:10px;font-size:14px;color:#333;font-style:italic;}}
+.eviexp{{margin:8px 0 4px;}}
+.eviexp>summary{{font-size:12px;color:#666;cursor:pointer;display:inline-block;
+ padding:2px 8px;border:1px solid #e5e7eb;border-radius:5px;}}
+.eviexp>summary:hover{{color:#111;border-color:#d1d5db;}}
+.evibody{{margin-top:8px;padding:12px 14px;background:#fafafa;border-radius:8px;
+ border-left:2px solid #e5e7eb;}}
+.edetail{{font-size:13.5px;color:#333;margin-bottom:10px;}}
+.quote{{margin:8px 0 0;padding-left:11px;border-left:2px solid #d1d5db;}}
+.qhead{{font-size:11px;color:#888;margin-bottom:3px;}}
+.qtext{{font-size:13px;color:#333;white-space:pre-wrap;}}
 .footer{{color:#999;font-size:12px;margin-top:32px;}}
 </style></head><body>"""
 _HTML_FOOT = "</body></html>"

@@ -138,6 +138,40 @@
     display:flex;flex-wrap:wrap;gap:12px;}
   .card .srcs a{font-family:var(--mono);font-size:11.5px;}
 
+  /* ---- evidence expansion ----
+     A <details> element, not a JS toggle: keyboard-accessible, works without
+     script, and browsers handle the open/close state for free. Closed by
+     default so scanning the day is unaffected — the whole point of the digest
+     is density, and detail is opt-in. */
+  .card .eviexp{margin-top:9px;}
+  .lib-row .eviexp{margin-top:7px;}
+  .eviexp>summary{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);
+    cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:5px;
+    padding:3px 8px;border:1px solid var(--line);border-radius:5px;
+    text-transform:uppercase;letter-spacing:.05em;transition:all .12s;
+    user-select:none;}
+  .eviexp>summary::-webkit-details-marker{display:none;}
+  .eviexp>summary:hover{border-color:var(--line-strong);color:var(--ink-2);}
+  .eviexp>summary::before{content:"▸";font-size:9px;transition:transform .12s;}
+  .eviexp[open]>summary::before{transform:rotate(90deg);}
+  .eviexp[open]>summary{color:var(--ink-2);background:var(--surface-strong);}
+  .evibody{margin-top:10px;padding:12px 14px;background:var(--surface-strong);
+    border-radius:8px;border-left:2px solid var(--line-strong);}
+  .evibody .edetail{font-size:13px;color:var(--ink-2);line-height:1.6;
+    margin-bottom:12px;}
+  /* Verbatim source text. Quoted and monospaced so it reads unmistakably as
+     "their words", never as our summary. */
+  .quote{margin:9px 0 0;padding-left:11px;border-left:2px solid var(--line-strong);}
+  .quote .qhead{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+    display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:4px;}
+  .quote .qtier{background:var(--surface);border:1px solid var(--line);
+    border-radius:4px;padding:0 5px;}
+  .quote .qci{color:var(--p1);background:var(--p1-bg);
+    border:1px solid rgba(234,88,12,.25);border-radius:4px;padding:0 5px;}
+  .quote .qtext{font-size:12.5px;color:var(--ink-2);line-height:1.6;
+    white-space:pre-wrap;overflow-wrap:anywhere;}
+  .quote .qlink{font-family:var(--mono);font-size:11px;}
+
   /* compact row for low-priority signals */
   .mini{display:flex;gap:12px;align-items:baseline;padding:10px 14px;
     background:var(--surface);border:1px solid var(--line);border-radius:8px;
@@ -306,8 +340,14 @@
 const DATA = JSON.parse(document.getElementById("radar-data").textContent);
 const HEATVAR = {Extreme:"--heat-extreme",High:"--heat-high",Elevated:"--heat-elevated",
   Normal:"--heat-normal",Unknown:"--heat-unknown"};
-const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>(
-  {"&":"&amp;","<":"&lt;",">":"&gt;","'":"&quot;","'":"&#39;"}[c]));
+/* Escape untrusted text. Everything here comes from fetched third-party pages
+   and tweets, and some of it lands inside href="…" attributes, so the double
+   quote has to be covered — an unescaped one in a source URL would close the
+   attribute and let the rest of the string become markup. (It was previously
+   missing: the map had two ' keys and no ", which silently turned every
+   double quote in a quoted excerpt into the string "undefined".) */
+const ESCMAP = {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>ESCMAP[c]);
 const heatColor = b => `var(${HEATVAR[b]||"--heat-unknown"})`;
 
 document.getElementById("thesis").innerHTML =
@@ -493,6 +533,33 @@ function renderToday(){
   el.innerHTML=h;
 }
 
+/* Evidence expansion: the LLM's longer write-up, then the verbatim source
+   text. Excerpt-first in spirit — the quote is the part that cannot have been
+   fabricated, since it's copied from the fetched item, so it's what settles
+   any doubt about the summary above it. */
+function evidencePanel(s){
+  const detail=s.evidence_detail?`<div class="edetail">${esc(s.evidence_detail)}</div>`:"";
+  const quotes=(s.sources||[]).filter(x=>x.excerpt).map(x=>{
+    const bits=[];
+    if(x.author) bits.push(esc(x.author));
+    if(x.published) bits.push(esc(String(x.published).slice(0,10)));
+    if(x.source_type) bits.push(`<span class="qtier">${esc(String(x.source_type).replace(/_/g," "))}</span>`);
+    // A vendor benchmarking their own product is context the reader needs to
+    // weigh the number, so it travels with the quote rather than being buried.
+    if(x.commercial_interest) bits.push(`<span class="qci">commercial interest</span>`);
+    return `<div class="quote">
+      <div class="qhead">${bits.join("")}</div>
+      <div class="qtext">${esc(x.excerpt)}</div>
+      ${x.url?`<a class="qlink" href="${esc(x.url)}" target="_blank" rel="noopener">View original ↗</a>`:""}
+    </div>`;
+  }).join("");
+  if(!detail&&!quotes) return "";
+  const n=(s.sources||[]).filter(x=>x.excerpt).length;
+  const label=n?`Evidence · ${n} source${n===1?"":"s"}`:"Evidence detail";
+  return `<details class="eviexp"><summary>${label}</summary>
+    <div class="evibody">${detail}${quotes}</div></details>`;
+}
+
 function signalCard(s, multiDay){
   const imp=s.impact||"";
   const row=(lab,key)=> s[key]?`<div class="row"><span class="lab">${lab}</span><span>${esc(s[key])}</span></div>`:"";
@@ -506,6 +573,7 @@ function signalCard(s, multiDay){
       <span class="badges">${dateTag}${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
+    ${evidencePanel(s)}
     ${testbox}
     ${srcs?`<div class="srcs">${srcs}</div>`:""}
   </div>`;
@@ -629,7 +697,12 @@ function drawLibResults(){
     if(libState.impact&&s.impact!==libState.impact)return false;
     if(libState.vertical&&!(s.who_it_affects||"").toLowerCase().includes(libState.vertical.toLowerCase()))return false;
     if(q){
-      const hay=(s.what_happened+" "+s.why_it_matters+" "+s.evidence+" "+s.what_to_do).toLowerCase();
+      // Search the expanded detail and the verbatim excerpts too. This is what
+      // makes the Library a real archive: months later you remember a phrase
+      // from a study, not the headline we wrote about it.
+      const hay=(s.what_happened+" "+s.why_it_matters+" "+s.evidence+" "+s.what_to_do
+        +" "+(s.evidence_detail||"")
+        +" "+(s.sources||[]).map(x=>(x.excerpt||"")+" "+(x.author||"")).join(" ")).toLowerCase();
       if(!hay.includes(q))return false;
     }
     return true;
@@ -642,6 +715,7 @@ function drawLibResults(){
       <div class="ld">${esc(s.date)}</div>
       <div><div class="lw">${esc(s.what_happened)} <span class="badges">${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}</span></div>
         <div class="lmeta"><span>${esc(s.section)}</span>${s.who_it_affects?`<span>· ${esc(s.who_it_affects)}</span>`:""}${srcs?`<span>· ${srcs}</span>`:""}</div>
+        ${evidencePanel(s)}
       </div></div>`;
   });
   document.getElementById("lib-results").innerHTML=h;

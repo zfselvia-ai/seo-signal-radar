@@ -87,6 +87,9 @@ P3 (awareness only). Separate OBSERVATION from ACTION: unconfirmed flux is rarel
 P2 is NOT a dumping ground for weak items — it is the "run an experiment" tier and \
 carries real work. Anything you cannot justify as testable or actionable is P3.
 Keep every field to <= {max_chars} characters — headline density, not paragraphs.
+The ONE exception is `evidence_detail`, which is deliberately longer: it is hidden \
+behind a click, so it costs the scanner nothing and rewards the reader who wants \
+to check your work. Aim for 2-4 sentences there.
 
 STEP 4 - Sort each signal into exactly one section:
 {sections}
@@ -114,6 +117,12 @@ Return ONLY valid JSON (no markdown fences), schema:
       "what_happened": "<={max_chars} chars, headline-style",
       "why_it_matters": "why an expert should care",
       "evidence": "official doc | dataset | case | observation — be specific",
+      "evidence_detail": "2-4 sentences expanding the evidence for a reader who \
+clicked to see more: methodology, sample size or scope, the actual numbers, and \
+the main caveat or limitation. STRICTLY grounded in the candidate text — if the \
+source does not state a sample size or a number, say what it does state and note \
+what is missing. NEVER invent figures, p-values or study designs. Omit this field \
+entirely when the candidate is a one-line announcement with nothing to expand.",
       "who_it_affects": "one or more of: {verticals}",
       "what_to_do": "check X | test Y | monitor Z | no action",
       "confidence": "Confirmed | Data-backed | Observed | Speculative",
@@ -478,6 +487,41 @@ def _norm_url(u: str) -> str:
     return f"{host}{path}"
 
 
+EXCERPT_CHARS = 700
+
+
+def _source_detail(it: Item) -> dict:
+    """The verbatim, non-fabricable half of the evidence expansion.
+
+    Everything here is copied from the fetched item, never generated: the
+    author's own words, who wrote them, when, and which rung of the trust
+    ladder they sit on. The reader can therefore judge the claim rather than
+    take the model's word for it.
+
+    Capped at EXCERPT_CHARS because a long RSS body would otherwise dominate
+    the archive (and the embedded dashboard payload) for little gain — the
+    "view original" link is right there for the full text. Cut on a word
+    boundary so the quote doesn't end mid-token.
+    """
+    text = " ".join((it.text or "").split())
+    if len(text) > EXCERPT_CHARS:
+        cut = text[:EXCERPT_CHARS]
+        sp = cut.rfind(" ")
+        text = (cut[:sp] if sp > EXCERPT_CHARS * 0.6 else cut).rstrip() + "…"
+    d = {"excerpt": text}
+    if it.author:
+        d["author"] = it.author
+    if it.published:
+        d["published"] = it.published.isoformat()
+    if it.source_type:
+        d["source_type"] = it.source_type
+    # Surfacing this matters: "sells a tool in this space" is context the
+    # reader needs when weighing a vendor's own benchmark.
+    if it.commercial_interest:
+        d["commercial_interest"] = True
+    return d
+
+
 def verify_sources(data: dict, candidates: List[Item]) -> dict:
     """Drop or flag any source URL the model did not actually receive.
 
@@ -491,6 +535,12 @@ def verify_sources(data: dict, candidates: List[Item]) -> dict:
     A signal that loses every source is kept but marked `unverified: true` and
     capped at "Speculative" confidence — better a visible caveat than a silent
     deletion, since the underlying observation may still be real.
+
+    Verified sources also gain an `excerpt` (plus author/published/source_type)
+    taken from the matched candidate. This is the ONLY quotable detail in the
+    system that cannot be fabricated: it is the original author's words, copied
+    from the item we fetched. It costs no extra tokens and it is what the
+    "expand for detail" panel shows first.
     """
     allowed = {}
     for it in candidates:
@@ -503,8 +553,10 @@ def verify_sources(data: dict, candidates: List[Item]) -> dict:
         for src in sig.get("sources", []) or []:
             key = _norm_url(src.get("url", ""))
             if key and key in allowed:
+                it = allowed[key]
                 # Trust the candidate's own name over the model's paraphrase.
-                src["name"] = src.get("name") or allowed[key].source_name
+                src["name"] = src.get("name") or it.source_name
+                src.update(_source_detail(it))
                 kept.append(src)
             else:
                 fabricated.append(src.get("url", "") or "(empty)")
