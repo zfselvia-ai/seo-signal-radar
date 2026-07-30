@@ -29,8 +29,11 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
 
     items: List[Item] = []
     max_per = cfg["rss"].get("max_items_per_feed", 10)
+    weights = (cfg.get("scoring") or {}).get("source_weights", {})
     for feed in cfg["rss"].get("feeds", []):
         name, url = feed["name"], feed["url"]
+        category = feed.get("category", "trade_news")
+        weight = float(feed.get("weight", weights.get(category, 0.55)))
         try:
             parsed = feedparser.parse(url)
             for entry in parsed.entries[:max_per]:
@@ -50,11 +53,15 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                         id=str(guid),
                         source="rss",
                         source_name=name,
-                        group="rss",
+                        group=category,
                         author=name,
                         text=f"{title}. {summary[:500]}",
                         url=link,
                         published=dt,
+                        source_type=category,
+                        tags=[category],
+                        commercial_interest=bool(feed.get("commercial_interest", False)),
+                        weight=weight,
                     )
                 )
         except Exception as e:

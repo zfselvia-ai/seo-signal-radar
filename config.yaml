@@ -24,11 +24,16 @@ daily:
   min_signals: 5
   lookback_hours: 24
   # Fixed sections, in display order. The LLM sorts signals into these.
+  # Sections may be EMPTY — research and official explanations are slower-moving
+  # than news, and padding them would defeat the point. Empty sections are
+  # simply not rendered.
   sections:
     - "Confirmed Search Updates"
+    - "Official Explanations"          # Google staff explaining mechanics
     - "SERP & Algorithm Signals"
     - "Technical SEO Experiments"
     - "AI Search / GEO"
+    - "Research & Retrieval"           # IR / entity / knowledge-graph / papers
     - "Tools, Papers & Open Source"
     - "Unconfirmed Watchlist"
     - "Today's Action Items"
@@ -71,6 +76,29 @@ scoring:
     P2: "值得测试 / worth testing"
     P3: "仅了解 / awareness only"
 
+  # TRUST LADDER. Every source carries a source_type; this is what it's worth.
+  # The gap that matters: an official person explaining mechanics (0.90) beats
+  # a vendor with a product to sell (0.45), even when the vendor is louder.
+  source_weights:
+    official_api: 1.00              # Google Search Status, platform accounts
+    official_documentation: 1.00    # Search Central docs + changelog
+    official_person: 0.90           # @JohnMu, @methode
+    reproducible_experiment: 0.90   # SearchPilot, documented A/B tests
+    data_research: 0.85             # studies with samples and method
+    expert_analysis: 0.70           # independent practitioner analysis
+    expert_vendor: 0.65             # expert who also sells a tool/consultancy
+    practitioner_observation: 0.60  # credible first-hand report
+    trade_news: 0.55                # SEL / SEJ / SER reporting
+    vendor_opinion: 0.45            # opinion from someone selling a tool
+    unverified_claim: 0.20          # rumour, screenshot, no method
+
+  # An "experiment" only earns its 0.90 if it actually shows its work.
+  # Missing any of these -> treat as practitioner_observation instead.
+  experiment_requirements:
+    - methodology
+    - sample_or_scope
+    - measured_outcome
+
 # --------------------------------------------------------------------------
 # CURATION RUBRIC — the main quality dial. Passed verbatim to the LLM.
 # --------------------------------------------------------------------------
@@ -103,23 +131,83 @@ x:
   nitter_instances:
     - nitter.net
     - nitter.privacyredirect.com
-  lists:
-    official_signals:
-      label: "Official & First-Party Signals"
-      handles: [searchliaison, googlesearchc, BingWMC, Cloudflare]
-    algo_serp:
-      label: "Google Algorithm & SERP Flux"
-      handles: [rustybrick, glenngabe, Marie_Haynes, lilyraynyc, brodieseo]
-    technical_data:
-      label: "Technical SEO, Data & Experiments"
-      handles: [patrickstox, thetafferboy, VeryWellVersed, jroakes, screamingfrog, sitebulb]
-    geo_ai:
-      label: "GEO, AI Search & Zero-Click"
-      handles: [aleyda, Kevin_Indig, randfish, jasonmbarnard, lilyraynyc, VeryWellVersed, brodieseo]
+
+  # ONE ACCOUNT, MANY TAGS.
+  # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
+  # brodieseo appeared in two groups each and got fetched + stored twice. Now
+  # every account is listed exactly once and carries tags; the classifier
+  # decides which section a post lands in.
+  #
+  #   source_type      -> maps into scoring.source_weights (the trust ladder)
+  #   commercial_interest: true -> has a tool/consultancy to sell. Opinion stays
+  #                        "Observed"; only data/code/papers lift it higher.
+  accounts:
+    # ---- Official platform accounts ------------------------------------
+    searchliaison:  {source_type: official_api,   tags: [official, algorithm, ranking]}
+    googlesearchc:  {source_type: official_api,   tags: [official, documentation, technical_seo]}
+    BingWMC:        {source_type: official_api,   tags: [official, bing, ai_search]}
+    Cloudflare:     {source_type: official_api,   tags: [official, infrastructure, ai_crawler]}
+
+    # ---- Official people: Google staff explaining mechanics -------------
+    # Not daily news, but when they explain a boundary it outranks any pundit.
+    JohnMu:         {source_type: official_person, tags: [official_explainer, indexing, crawling, content_quality]}
+    methode:        {source_type: official_person, tags: [official_explainer, crawling, indexing, serving, search_architecture]}
+
+    # ---- Algorithm & SERP observation ----------------------------------
+    rustybrick:     {source_type: trade_news,      tags: [algorithm, serp_features, news]}
+    glenngabe:      {source_type: data_research,   tags: [algorithm, volatility, content_quality]}
+    Marie_Haynes:   {source_type: expert_analysis, tags: [algorithm, content_quality, e_e_a_t]}
+    lilyraynyc:     {source_type: expert_analysis, tags: [algorithm, content_quality, ai_search, publishers]}
+    brodieseo:      {source_type: expert_analysis, tags: [serp_features, ecommerce, ai_search]}
+
+    # ---- Technical SEO & reproducible experiments -----------------------
+    patrickstox:    {source_type: expert_analysis, tags: [technical_seo, indexing]}
+    thetafferboy:   {source_type: expert_analysis, tags: [technical_seo, performance]}
+    VeryWellVersed: {source_type: expert_analysis, tags: [technical_seo, information_retrieval, ai_search, experiments]}
+    jroakes:        {source_type: expert_analysis, tags: [technical_seo, python, information_retrieval]}
+    Jammer_Volts:   {source_type: expert_analysis, tags: [technical_seo, crawling, rendering, indexing, javascript, ai_crawler]}
+    jonoalderson:   {source_type: expert_analysis, tags: [technical_seo, web_standards, performance, structured_data]}
+    willcritchlow:  {source_type: reproducible_experiment, tags: [experiments, ab_testing, causal_inference]}
+    screamingfrog:  {source_type: expert_vendor,   tags: [technical_seo, tools, crawling], commercial_interest: true}
+    sitebulb:       {source_type: expert_vendor,   tags: [technical_seo, tools, auditing], commercial_interest: true}
+
+    # ---- Retrieval, entities, knowledge graph, AI search ----------------
+    dawnieando:     {source_type: expert_analysis, tags: [information_retrieval, entity, technical_seo, ai_search]}
+    Olaf_Kopp:      {source_type: expert_analysis, tags: [semantic_seo, entity, e_e_a_t, patents, ai_search]}
+    cyberandy:      {source_type: expert_vendor,   tags: [knowledge_graph, structured_data, linked_data, ai_agent], commercial_interest: true}
+    Dixon_Jones:    {source_type: expert_vendor,   tags: [entity, knowledge_graph, internal_linking, ai_visibility], commercial_interest: true}
+    aleyda:         {source_type: expert_analysis, tags: [ai_search, geo, international]}
+    Kevin_Indig:    {source_type: data_research,   tags: [ai_search, geo, data_research, growth]}
+    randfish:       {source_type: expert_analysis, tags: [ai_search, zero_click, industry]}
+    jasonmbarnard:  {source_type: expert_vendor,   tags: [entity, knowledge_graph, brand_serp], commercial_interest: true}
+
+    # ---- Publisher / News / Discover ------------------------------------
+    NewsSEO_:       {source_type: expert_analysis, tags: [publishers, google_news, discover]}
+
+  # Deliberately NOT fetched. Kept here so nobody re-adds them by accident.
+  excluded_or_manual_review:
+    badams:    "Old handle — X account no longer belongs to Barry Adams. Track Polemic Digital / NewsSEO instead."
+    facan:     "Fabrice Canel retired from Microsoft 2026-07-01 — no longer a current Bing source. Use @BingWMC."
+    g33konaut: "Martin Splitt — current X status unverified. Track via Search Central + Search Off the Record instead."
+
   # Keyword search is disabled — Nitter RSS has no reliable search endpoint.
-  # The four curated handle lists above are the primary signal source.
+  # The curated accounts above are the primary signal source.
   keyword_search:
     enabled: false
+
+  # What survives the fetch, before the LLM ever sees it.
+  filters:
+    keep:
+      - "Original posts"
+      - "Quote-tweets that add independent analysis"
+      - "Posts containing an external link, chart, dataset, code or case study"
+      - "The same phenomenon independently reported by multiple trusted accounts"
+    drop:
+      - "Plain retweets with no added comment"
+      - "Replies that carry no new information"
+      - "Course, conference and tool promotion"
+      - "'SEO is dead' / 'GEO fully replaces SEO' opinion fireworks"
+      - "Traffic screenshots with no date range or methodology"
 
 # --------------------------------------------------------------------------
 # RSS — reliable, no auth.
@@ -127,12 +215,45 @@ x:
 rss:
   enabled: true
   max_items_per_feed: 10
+  # category feeds the source_weights ladder below; weight is a local nudge.
   feeds:
-    - {name: "Ahrefs Blog", url: "https://ahrefs.com/blog/feed/"}
-    - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.rss"}
-    - {name: "Search Engine Land", url: "https://searchengineland.com/feed"}
-    - {name: "Search Engine Journal", url: "https://www.searchenginejournal.com/feed/"}
-    - {name: "Google Search Central Blog", url: "https://developers.google.com/search/blog/feed.xml"}
+    # ---- Official fact sources -----------------------------------------
+    - {name: "Google Search Central Blog", url: "https://developers.google.com/search/blog/feed.xml",
+       category: official_documentation, weight: 1.0}
+    # Finer-grained than the blog: robots, structured data, Search Console and
+    # feature-rule changes often appear ONLY in the docs-changelog feed.
+    - {name: "Google Search Docs Updates", url: "https://developers.google.com/static/search/blog/release-notes.xml",
+       category: official_documentation, weight: 1.0, always_include_if_material: true}
+    - {name: "Bing Webmaster Blog", url: "https://blogs.bing.com/webmaster/feed",
+       category: official_documentation, weight: 0.95}
+
+    # ---- Controlled experiments (the scarcest, most valuable input) ------
+    # Keep negative and inconclusive tests — they are often worth more than wins.
+    - {name: "SearchPilot Resources", url: "https://www.searchpilot.com/resources/rss.xml",
+       category: reproducible_experiment, weight: 0.95}
+
+    # ---- Data research --------------------------------------------------
+    - {name: "Ahrefs Blog", url: "https://ahrefs.com/blog/feed/",
+       category: data_research, weight: 0.85}
+    - {name: "SISTRIX Blog", url: "https://www.sistrix.com/blog/feed/",
+       category: data_research, weight: 0.8}
+
+    # ---- Technical / tooling --------------------------------------------
+    - {name: "Screaming Frog Blog", url: "https://www.screamingfrog.co.uk/blog/feed/",
+       category: expert_vendor, weight: 0.7, commercial_interest: true}
+
+    # ---- AI search architecture (deep, but opinionated — demand citations) --
+    - {name: "iPullRank Blog", url: "https://ipullrank.com/feed",
+       category: expert_analysis, weight: 0.75, requires_citation: true}
+
+    # ---- Trade news: fast event radar, low weight ------------------------
+    - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.rss",
+       category: trade_news, weight: 0.6}
+    - {name: "Search Engine Land", url: "https://searchengineland.com/feed",
+       category: trade_news, weight: 0.6}
+    # Discovery tier only — rarely the reason a signal makes the digest.
+    - {name: "Search Engine Journal", url: "https://www.searchenginejournal.com/feed/",
+       category: trade_news, weight: 0.45}
 
 # --------------------------------------------------------------------------
 # GOOGLE SEARCH STATUS — official confirmation layer (drives Special Briefs)

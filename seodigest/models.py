@@ -22,6 +22,11 @@ class Item:
     url: str
     published: Optional[datetime] = None
     metrics: dict = field(default_factory=dict)
+    # --- trust metadata (drives scoring.source_weights) ---
+    source_type: str = "practitioner_observation"  # key in scoring.source_weights
+    tags: List[str] = field(default_factory=list)  # topic tags, not sections
+    commercial_interest: bool = False              # sells a tool/consultancy
+    weight: float = 0.0                            # resolved trust weight 0-1
 
     def to_dict(self) -> dict:
         d = asdict(self)

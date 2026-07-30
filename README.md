@@ -4,7 +4,7 @@ Not a news aggregator — a **signal radar** for advanced SEOs:
 
 > **X discovers anomalies → official data confirms → cases & data decide whether it's worth acting.**
 
-It pulls from four curated X Lists, key SEO blogs (RSS), and the **official Google
+It pulls from 29 curated X accounts, 11 SEO/official feeds (RSS), and the **official Google
 Search Status API**, then an LLM scores every candidate, keeps only the 5–8 that
 matter, and files them into fixed sections with a **priority (P0–P3)**, a
 **confidence tier**, and a concrete "what to do." Daily signals are archived as
@@ -18,7 +18,7 @@ any one site's own data.
 
 ```
 Google Status API ─┐
-4 X Lists ─────────┼─► fetch ─► dedup ─► score+curate (LLM) ─► 7 sections ─► daily MD/HTML
+29 X accounts ─────┼─► fetch ─► dedup ─► score+curate (LLM) ─► 9 sections ─► daily MD/HTML
 RSS feeds ─────────┘                                    │
 SERP volatility ───► percentile + 4-quadrant ───────────┘
                                                          ▼
@@ -138,9 +138,9 @@ If no URL is set, `python main.py notify` just prints the preview.
 - `.github/workflows/digest.yml` — daily at 07:00 Asia/Shanghai; runs the digest, rebuilds the dashboard, sends the push, commits, and publishes `dashboard/` to GitHub Pages.
 - `.github/workflows/reports.yml` — weekly (Tue) + monthly (code verifies the 4th working day).
 
-Repo secrets: `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, `X_COOKIES_JSON` (paste your
-local `cookies.json`), `X_USERNAME`/`X_EMAIL`/`X_PASSWORD` as login fallback, and
-optional `NOTIFY_WEBHOOK_URL` for the push. State (`data/`) is cached between runs
+Repo secrets: ONE LLM key (`MOONSHOT_API_KEY`, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`
+— the provider is auto-detected) and optional `NOTIFY_WEBHOOK_URL` for the push.
+X needs **no credentials at all**: it reads public Nitter RSS. State (`data/`) is cached between runs
 so items never repeat and the archive survives for weekly/monthly rollups.
 
 ## Layout
@@ -150,7 +150,7 @@ config.yaml              # everything: lists, scoring, sections, SERP rules, cad
 main.py                  # orchestrator (daily/weekly/monthly/brief/dashboard/notify/serp-add)
 seodigest/
   models.py              # Item + Signal
-  x_source.py            # twikit — four X Lists + keyword search
+  x_source.py            # Nitter RSS — 29 tagged accounts, each fetched once
   rss_source.py          # feedparser
   google_status.py       # official confirmation layer + brief triggers
   serp_layer.py          # percentile math, four-quadrant, event detection (Global + Vertical Heat)

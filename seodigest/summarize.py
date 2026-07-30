@@ -41,6 +41,21 @@ STEP 1 - SCORE each candidate 0-100:
 {weights}
 Then SUBTRACT penalties: marketing/promo -{promo}, duplicate/rehash -{dup}.
 
+SOURCE TRUST LADDER — every candidate carries `source_type` and `trust_weight`. \
+Multiply your source-authority judgement by that weight:
+{trust_ladder}
+Hard rules that follow from it:
+- An `official_person` (Google staff explaining mechanics) OUTRANKS any pundit \
+commentary about the same topic. They post rarely; when they explain a boundary, \
+that IS the signal.
+- `commercial_interest: true` means the author sells a tool or consultancy. Their \
+OPINION caps at "Observed". Only original data, code, or a paper lifts them to \
+"Data-backed". Never let a vendor's framing become the headline.
+- A candidate only counts as `reproducible_experiment` if it shows: {experiment_reqs}. \
+Missing any one of those -> downgrade to practitioner_observation.
+- Multiple independent trusted accounts reporting the SAME phenomenon is itself \
+evidence — merge them into one signal and raise confidence.
+
 STEP 2 - KEEP only the best {min_signals}-{max_signals}. If fewer are truly \
 valuable, keep fewer. NEVER pad. Curation rubric:
 KEEP:
@@ -56,9 +71,15 @@ Keep every field to <= {max_chars} characters — headline density, not paragrap
 
 STEP 4 - Sort each signal into exactly one section:
 {sections}
-Rules: Google-confirmed updates -> "Confirmed Search Updates". Unconfirmed \
-flux/rumor -> "Unconfirmed Watchlist" (advise monitor, not edit). Cross-cutting \
-to-dos summarised in "Today's Action Items" tagged P0/P1/P2.
+Rules: Google-confirmed updates -> "Confirmed Search Updates". Explanations of \
+search mechanics by Google staff (source_type official_person) -> "Official \
+Explanations". Information-retrieval / entity / knowledge-graph / patent / paper \
+analysis -> "Research & Retrieval". Unconfirmed flux/rumor -> "Unconfirmed \
+Watchlist" (advise monitor, not edit). Cross-cutting to-dos summarised in \
+"Today's Action Items" tagged P0/P1/P2.
+Sections may be EMPTY. "Official Explanations" and "Research & Retrieval" are \
+slower-moving than news — leave them out entirely rather than padding them with \
+weak items.
 
 OUTPUT LANGUAGE: {lang}
 
@@ -82,6 +103,11 @@ Return ONLY valid JSON (no markdown fences), schema:
   "action_items": [{{"text": "...", "impact": "P0|P1|P2"}}],
   "dropped_count": <int>
 }}"""
+
+
+def _trust_ladder_block(scoring: dict) -> str:
+    sw = scoring.get("source_weights", {})
+    return "\n".join(f"- {k} = {v}" for k, v in sw.items())
 
 
 def _weights_block(scoring: dict) -> str:
@@ -112,12 +138,19 @@ def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
         lang=LANG_RULES.get(cfg["brand"]["language"], LANG_RULES["bilingual"]),
         max_chars=daily["max_field_chars"],
         verticals=" / ".join(daily["verticals"]),
+        trust_ladder=_trust_ladder_block(scoring),
+        experiment_reqs=", ".join(scoring.get("experiment_requirements", [])),
     )
     payload = [{
         "group": it.group,
         "source": it.source,
         "author": it.author,
         "source_name": it.source_name,
+        # Trust metadata — the model must weigh these, not just the text.
+        "source_type": it.source_type,
+        "trust_weight": it.weight,
+        "tags": it.tags,
+        "commercial_interest": it.commercial_interest,
         "text": it.text,
         "url": it.url,
         "likes": it.metrics.get("likes", 0),

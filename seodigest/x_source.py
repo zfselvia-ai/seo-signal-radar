@@ -54,8 +54,9 @@ def _strip_html(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _parse_handle_rss(parsed, handle, group) -> List[Item]:
+def _parse_handle_rss(parsed, handle, group, meta=None) -> List[Item]:
     """Turn a parsed Nitter RSS feed into Items."""
+    meta = meta or {}
     items: List[Item] = []
     for entry in parsed.entries:
         # Nitter's <link> is https://<host>/<handle>/status/<id>#m — the most
@@ -81,11 +82,15 @@ def _parse_handle_rss(parsed, handle, group) -> List[Item]:
             url=url,
             published=_entry_datetime(entry),
             metrics={"likes": 0, "retweets": 0, "replies": 0},
+            source_type=meta.get("source_type", "practitioner_observation"),
+            tags=list(meta.get("tags", [])),
+            commercial_interest=bool(meta.get("commercial_interest", False)),
+            weight=float(meta.get("weight", 0.0)),
         ))
     return items
 
 
-def _fetch_handle(feedparser, handle, group, per, instances, since) -> List[Item]:
+def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None) -> List[Item]:
     """Fetch one handle's timeline, trying each Nitter instance in turn."""
     import httpx
     headers = {"User-Agent": "Mozilla/5.0 (compatible; SEO-Signal-Radar/1.0)"}
@@ -101,11 +106,32 @@ def _fetch_handle(feedparser, handle, group, per, instances, since) -> List[Item
             # Detect real failure: empty feed with no channel title.
             if not parsed.entries and not parsed.feed.get("title"):
                 continue
-            return _parse_handle_rss(parsed, handle, group)
+            return _parse_handle_rss(parsed, handle, group, meta)
         except Exception:
             continue
     print(f"  [x] @{handle} ({group}) failed: no Nitter instance returned a feed")
     return []
+
+
+def _resolve_accounts(xcfg: dict) -> dict:
+    """Return {handle: meta}. Each handle appears EXACTLY ONCE.
+
+    Supports the current `accounts:` map (one account, many tags) and falls
+    back to the legacy `lists:` structure, where a handle could appear in
+    several groups and therefore got fetched and stored more than once. When
+    falling back, duplicates are merged: tags union, highest trust wins.
+    """
+    accounts = xcfg.get("accounts")
+    if accounts:
+        return {h: dict(meta or {}) for h, meta in accounts.items()}
+
+    merged: dict = {}
+    for list_key, spec in (xcfg.get("lists") or {}).items():
+        for handle in spec.get("handles", []):
+            entry = merged.setdefault(handle, {"tags": [], "source_type": "expert_analysis"})
+            if list_key not in entry["tags"]:
+                entry["tags"].append(list_key)
+    return merged
 
 
 def fetch(cfg: dict, since: datetime) -> List[Item]:
@@ -113,20 +139,27 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         return []
     import feedparser
 
-    per = cfg["x"].get("tweets_per_handle", 15)
-    instances = cfg["x"].get("nitter_instances") or NITTER_INSTANCES
+    xcfg = cfg["x"]
+    per = xcfg.get("tweets_per_handle", 15)
+    instances = xcfg.get("nitter_instances") or NITTER_INSTANCES
+    weights = (cfg.get("scoring") or {}).get("source_weights", {})
+    accounts = _resolve_accounts(xcfg)
     items: List[Item] = []
 
-    for list_key, spec in cfg["x"].get("lists", {}).items():
-        for handle in spec.get("handles", []):
-            tweets = _fetch_handle(feedparser, handle, list_key, per, instances, since)
-            for t in tweets[:per]:
-                if t.text.startswith("RT @"):
-                    continue
-                if _within(t.published, since):
-                    items.append(t)
+    for handle, meta in accounts.items():
+        meta = dict(meta)
+        meta.setdefault("weight", weights.get(meta.get("source_type"), 0.6))
+        # `group` keeps the primary tag so downstream grouping still works.
+        group = (meta.get("tags") or ["general"])[0]
+        tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
+        for t in tweets[:per]:
+            # Plain retweets carry no added analysis — config x.filters.drop.
+            if t.text.startswith("RT @"):
+                continue
+            if _within(t.published, since):
+                items.append(t)
 
     # Keyword search is not supported via Nitter RSS (no search endpoint that's
-    # reliable across instances). Keyword hits are dropped silently — the four
-    # curated lists are the primary signal source anyway.
+    # reliable across instances). Keyword hits are dropped silently — the
+    # curated accounts are the primary signal source anyway.
     return items

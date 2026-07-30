@@ -52,88 +52,115 @@
   .view{display:none;}
   .view.active{display:block;}
 
-  /* ---- morning brief ---- */
-  .brief{display:flex;flex-wrap:wrap;gap:0;align-items:center;
+  /* ---- morning brief ----
+     One dominant stat (top priority) + quiet supporting stats. */
+  .brief{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;
     padding:0;border-radius:var(--radius);background:var(--surface);
-    margin-bottom:24px;box-shadow:var(--shadow);overflow:hidden;}
-  .brief .stat{display:flex;flex-direction:column;gap:2px;padding:16px 22px;
-    border-right:1px solid var(--line);min-width:120px;}
+    margin-bottom:28px;box-shadow:var(--shadow);overflow:hidden;
+    border:1px solid var(--line);}
+  .brief .stat{display:flex;flex-direction:column;gap:3px;padding:14px 20px;
+    border-right:1px solid var(--line);min-width:108px;justify-content:center;}
   .brief .stat:last-child{border-right:none;}
-  .brief .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);
-    text-transform:uppercase;letter-spacing:.06em;}
-  .brief .v{font-family:var(--mono);font-size:20px;font-weight:700;}
-  .brief .v .dot-heat{width:10px;height:10px;border-radius:50%;display:inline-block;
+  .brief .k{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.07em;}
+  .brief .v{font-family:var(--mono);font-size:17px;font-weight:600;color:var(--ink-2);}
+  /* the lead stat carries the day's urgency — the one place color shouts */
+  .brief .stat.lead{background:var(--surface-strong);min-width:132px;}
+  .brief .stat.lead .v{font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-.02em;}
+  .brief .stat.lead.urgent{background:var(--p0-bg);}
+  .brief .stat.lead.urgent .v{color:var(--p0-accent);}
+  .brief .stat.lead.urgent .k{color:var(--p0);}
+  .brief .v .dot-heat{width:9px;height:9px;border-radius:50%;display:inline-block;
     margin-right:6px;vertical-align:middle;}
 
-  .date-label{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:6px;}
-  .headline{font-size:22px;font-weight:700;letter-spacing:-.015em;line-height:1.35;
-    margin:0 0 20px;color:var(--ink);}
+  .date-label{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:8px;}
+  .headline{font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.3;
+    margin:0 0 24px;color:var(--ink);max-width:44em;}
 
-  /* ---- cards ---- */
-  .card{border-radius:var(--radius);padding:18px 20px;margin-bottom:12px;
-    background:var(--surface);box-shadow:var(--shadow);border:none;
-    position:relative;overflow:hidden;transition:box-shadow .15s,transform .1s;}
+  /* ---- cards ----
+     Hierarchy by weight, not by wall-to-wall colour:
+       P0 = tinted + strong bar   (stop and read)
+       P1 = white + accent bar    (act this week)
+       P2/P3 = compact single row (awareness)  */
+  .card{border-radius:var(--radius);padding:16px 20px;margin-bottom:10px;
+    background:var(--surface);box-shadow:var(--shadow);
+    border:1px solid var(--line);position:relative;overflow:hidden;
+    transition:box-shadow .15s,transform .1s;}
   .card:hover{box-shadow:var(--shadow-raised);transform:translateY(-1px);}
-  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--line-strong);}
 
-  .card.P0::before{background:var(--p0-accent);}
-  .card.P0{background:var(--p0-bg);}
+  .card.P0{background:var(--p0-bg);border-color:rgba(220,38,38,.22);}
+  .card.P0::before{background:var(--p0-accent);width:4px;}
   .card.P1::before{background:var(--p1-accent);}
-  .card.P1{background:var(--p1-bg);}
-  .card.P2::before{background:var(--p2-accent);}
-  .card.P2{background:var(--p2-bg);}
-  .card.P3::before{background:var(--p3-accent);}
-  .card.P3{background:var(--p3-bg);}
+  .card.P2::before{background:var(--line-strong);}
+  .card.P3::before{background:var(--line-strong);}
 
-  .card .what{font-weight:700;font-size:15px;line-height:1.45;margin-bottom:10px;
-    padding-right:140px;position:relative;}
-  .card .row{display:flex;gap:8px;font-size:13px;color:var(--ink-2);margin:4px 0;}
-  .card .row .lab{font-family:var(--mono);font-size:10px;color:var(--ink-3);
-    min-width:96px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px;}
-  .card .srcs{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;}
-  .card .srcs a{font-family:var(--mono);font-size:12px;}
+  .card .what{font-weight:650;font-size:15.5px;line-height:1.45;margin-bottom:10px;
+    display:flex;gap:10px;align-items:flex-start;justify-content:space-between;}
+  .card .what .wtext{flex:1;min-width:0;}
+  .card .row{display:flex;gap:10px;font-size:13px;color:var(--ink-2);margin:5px 0;}
+  .card .row .lab{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);
+    min-width:74px;text-transform:uppercase;letter-spacing:.05em;padding-top:3px;
+    flex-shrink:0;}
+  .card .srcs{margin-top:11px;padding-top:10px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:12px;}
+  .card .srcs a{font-family:var(--mono);font-size:11.5px;}
 
-  .badges{display:inline-flex;gap:5px;margin-left:auto;position:absolute;
-    right:0;top:0;}
-  .tag{font-family:var(--mono);font-size:11px;font-weight:700;padding:2px 8px;
-    border-radius:5px;letter-spacing:.02em;}
-  .tag.P0{color:var(--p0);background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);}
-  .tag.P1{color:var(--p1);background:rgba(234,88,12,.1);border:1px solid rgba(234,88,12,.2);}
-  .tag.P2{color:var(--p2);background:rgba(202,138,4,.1);border:1px solid rgba(202,138,4,.2);}
-  .tag.P3{color:var(--p3);background:rgba(100,116,139,.1);border:1px solid rgba(100,116,139,.2);}
-  .tag.conf{color:var(--ink-2);background:var(--surface-strong);border:1px solid var(--line-strong);}
+  /* compact row for low-priority signals */
+  .mini{display:flex;gap:12px;align-items:baseline;padding:10px 14px;
+    background:var(--surface);border:1px solid var(--line);border-radius:8px;
+    margin-bottom:6px;font-size:13.5px;transition:border-color .12s;}
+  .mini:hover{border-color:var(--line-strong);}
+  .mini .mtext{flex:1;min-width:0;color:var(--ink-2);}
+  .mini .mtext b{font-weight:600;color:var(--ink);}
+  .mini .msrc{font-family:var(--mono);font-size:11px;flex-shrink:0;}
+
+  .badges{display:inline-flex;gap:5px;flex-shrink:0;}
+  .tag{font-family:var(--mono);font-size:10.5px;font-weight:700;padding:2px 7px;
+    border-radius:4px;letter-spacing:.02em;white-space:nowrap;}
+  /* only P0 is loud; the rest are legible but quiet */
+  .tag.P0{color:#fff;background:var(--p0-accent);border:1px solid var(--p0-accent);}
+  .tag.P1{color:var(--p1);background:rgba(234,88,12,.09);border:1px solid rgba(234,88,12,.22);}
+  .tag.P2{color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line-strong);}
+  .tag.P3{color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line);}
+  .tag.conf{color:var(--ink-3);background:transparent;border:1px solid var(--line-strong);font-weight:600;}
 
   /* ---- sections ---- */
-  h2.section{font-size:11px;font-weight:700;text-transform:uppercase;
-    letter-spacing:.08em;color:var(--ink-3);margin:32px 0 14px;
-    display:flex;align-items:center;gap:8px;}
-  h2.section .count{font-family:var(--mono);color:var(--ink-3);font-weight:500;}
+  h2.section{font-size:10.5px;font-weight:700;text-transform:uppercase;
+    letter-spacing:.09em;color:var(--ink-3);margin:34px 0 12px;
+    display:flex;align-items:center;gap:9px;}
+  h2.section::after{content:"";flex:1;height:1px;background:var(--line);}
+  h2.section .count{font-family:var(--mono);color:var(--ink-3);font-weight:500;
+    font-size:10.5px;}
 
-  /* ---- action items highlight ---- */
-  .actions-card{background:var(--action-bg);border-left:4px solid var(--action-accent);
-    border-radius:var(--radius);padding:20px;margin:0 0 20px;
-    box-shadow:var(--shadow);}
-  .actions-card h2{margin:0 0 14px;font-size:15px;font-weight:700;color:var(--action-accent);}
-  .actions-card ul{margin:0;padding-left:18px;}
-  .actions-card li{margin:8px 0;font-size:14px;color:var(--ink-2);}
-  .actions-card li .tag{margin-right:6px;}
+  /* ---- action items — the one deliberately blue block ---- */
+  .actions-card{background:var(--action-bg);border:1px solid rgba(37,99,235,.18);
+    border-left:3px solid var(--action-accent);
+    border-radius:var(--radius);padding:18px 20px;margin:0 0 24px;}
+  .actions-card h2{margin:0 0 12px;font-size:10.5px;font-weight:700;
+    color:var(--action-accent);text-transform:uppercase;letter-spacing:.09em;}
+  .actions-card ul{margin:0;padding-left:0;list-style:none;}
+  .actions-card li{margin:7px 0;font-size:13.5px;color:var(--ink-2);
+    display:flex;gap:9px;align-items:baseline;}
+  .actions-card li .tag{flex-shrink:0;}
 
   /* ---- SERP weather ---- */
-  .serp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:12px;margin-bottom:24px;}
-  .serp-cell{border-radius:var(--radius);padding:18px 20px;background:var(--surface);
-    box-shadow:var(--shadow);border-top:3px solid var(--heat-unknown);}
+  .serp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:10px;margin-bottom:12px;}
+  .serp-cell{border-radius:8px;padding:14px 16px;background:var(--surface);
+    border:1px solid var(--line);border-top:2px solid var(--heat-unknown);}
   .serp-cell.Extreme{border-top-color:var(--heat-extreme);}
   .serp-cell.High{border-top-color:var(--heat-high);}
   .serp-cell.Elevated{border-top-color:var(--heat-elevated);}
   .serp-cell.Normal{border-top-color:var(--heat-normal);}
-  .serp-cell .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);
-    text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
-  .serp-cell .v{font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;}
-  .serp-cell .v .dot-heat{width:10px;height:10px;border-radius:50%;display:inline-block;}
-  .serp-note{background:var(--surface);border-radius:var(--radius);padding:16px 20px;
-    font-size:13px;color:var(--ink-2);font-style:italic;margin-top:-8px;margin-bottom:24px;
-    border-left:3px solid var(--line-strong);}
+  .serp-cell .k{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
+  .serp-cell .v{font-size:15px;font-weight:600;display:flex;align-items:center;gap:7px;}
+  .serp-cell .v .dot-heat{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .serp-note{background:var(--surface-strong);border-radius:8px;padding:13px 16px;
+    font-size:12.5px;color:var(--ink-2);margin:0 0 26px;
+    border-left:2px solid var(--line-strong);}
 
   /* ---- algorithm map ---- */
   .map-controls{display:flex;gap:6px;margin-bottom:20px;}
@@ -142,24 +169,28 @@
     transition:all .12s;}
   .map-controls button:hover{border-color:var(--ink-3);}
   .map-controls button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
-  .track{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--line);
-    min-height:68px;background:var(--surface);}
+  .track{display:grid;grid-template-columns:142px 1fr;border-top:1px solid var(--line);
+    min-height:84px;background:var(--surface);}
   .track:last-child{border-bottom:1px solid var(--line);}
-  .track .name{padding:16px 14px;border-right:1px solid var(--line);background:var(--surface-strong);}
-  .track .name .t{font-weight:700;font-size:13px;}
-  .track .name .d{font-family:var(--mono);font-size:10px;color:var(--ink-3);
-    text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
-  .lane{position:relative;padding:12px 0;}
-  .lane .ev{position:absolute;top:14px;transform:translateX(-50%);cursor:default;}
-  .lane .ev .pip{width:14px;height:14px;border-radius:50%;border:2.5px solid #fff;
-    box-shadow:0 0 0 1.5px var(--line-strong),0 2px 5px rgba(0,0,0,.1);}
+  .track .name{padding:18px 16px;border-right:1px solid var(--line);background:var(--surface-strong);}
+  .track .name .t{font-weight:650;font-size:13px;}
+  .track .name .d{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.05em;margin-top:3px;}
+  .lane{position:relative;padding:16px 0;
+    background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px 25%);
+    background-position:0 0;background-size:100% 100%;}
+  .lane .ev{position:absolute;top:22px;transform:translateX(-50%);cursor:default;}
+  .lane .ev .pip{width:13px;height:13px;border-radius:50%;border:2.5px solid #fff;
+    box-shadow:0 0 0 1.5px var(--line-strong),0 2px 5px rgba(0,0,0,.1);
+    transition:transform .12s;}
+  .lane .ev:hover .pip{transform:scale(1.25);}
   .lane .ev .tip{position:absolute;left:50%;transform:translateX(-50%);
-    bottom:24px;background:var(--ink);color:#fff;font-size:12px;line-height:1.5;
+    bottom:26px;background:var(--ink);color:#fff;font-size:12px;line-height:1.5;
     padding:10px 12px;border-radius:8px;width:240px;display:none;z-index:5;
     box-shadow:0 8px 24px rgba(0,0,0,.2);}
   .lane .ev:hover .tip{display:block;}
   .lane .ev .tip .td{font-family:var(--mono);font-size:10px;color:#c9c9d4;margin-top:6px;}
-  .axis{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--line);}
+  .axis{display:grid;grid-template-columns:142px 1fr;border-top:1px solid var(--line);}
   .axis .ticks{display:flex;justify-content:space-between;padding:8px 10px;
     font-family:var(--mono);font-size:10px;color:var(--ink-3);}
   .map-empty,.lib-empty{color:var(--ink-3);font-size:13px;padding:32px 0;text-align:center;}
@@ -169,28 +200,33 @@
   /* ---- library ---- */
   .lib-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
   .lib-filters input,.lib-filters select{font-family:var(--ui);font-size:13px;
-    border:1px solid var(--line-strong);border-radius:6px;padding:7px 11px;background:var(--surface);
-    box-shadow:var(--shadow);}
+    border:1px solid var(--line-strong);border-radius:6px;padding:7px 11px;background:var(--surface);}
   .lib-filters input:focus,.lib-filters select:focus{outline:none;border-color:var(--accent);}
   .lib-filters input{flex:1;min-width:200px;}
-  .lib-row{display:grid;grid-template-columns:96px 1fr;gap:16px;border-bottom:1px solid var(--line);
-    padding:14px 6px;background:var(--surface);margin-bottom:6px;border-radius:var(--radius);
-    box-shadow:var(--shadow);}
-  .lib-row .ld{font-family:var(--mono);font-size:12px;color:var(--ink-3);padding-left:14px;}
-  .lib-row .lw{font-weight:600;}
-  .lib-row .lmeta{font-size:12px;color:var(--ink-3);margin-top:4px;
-    display:flex;flex-wrap:wrap;gap:8px;}
-  .lib-count{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:12px;}
+  .lib-row{display:grid;grid-template-columns:84px 1fr;gap:14px;
+    padding:12px 14px;background:var(--surface);margin-bottom:4px;border-radius:8px;
+    border:1px solid var(--line);transition:border-color .12s;}
+  .lib-row:hover{border-color:var(--line-strong);}
+  .lib-row .ld{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);}
+  .lib-row .lw{font-weight:600;font-size:13.5px;}
+  .lib-row .lmeta{font-size:11.5px;color:var(--ink-3);margin-top:5px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+  .lib-count{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-bottom:12px;}
 
   footer{max-width:960px;margin:0 auto;padding:20px 28px 40px;color:var(--ink-3);
-    font-size:12px;font-family:var(--mono);border-top:1px solid var(--line);}
+    font-size:11.5px;font-family:var(--mono);border-top:1px solid var(--line);}
   @media(max-width:640px){
     .track,.axis{grid-template-columns:84px 1fr;}
     main{padding:18px;}
-    .brief .stat{padding:12px 14px;min-width:auto;}
-    .brief .v{font-size:16px;}
-    .card .what{padding-right:0;}
-    .badges{position:static;margin-top:8px;display:block;}
+    .brief{flex-wrap:wrap;}
+    .brief .stat{padding:11px 14px;min-width:auto;flex:1 0 44%;}
+    .brief .stat.lead{flex-basis:100%;}
+    .brief .v{font-size:15px;}
+    .headline{font-size:21px;}
+    .card .what{flex-direction:column;gap:8px;}
+    .mini{flex-wrap:wrap;gap:8px;}
+    .card .row{flex-direction:column;gap:1px;}
+    .card .row .lab{min-width:auto;}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
 
@@ -246,7 +282,7 @@
 
 <footer id="footer"></footer>
 
-<script id="radar-data" type="application/json">{"generated_at": "2026-07-30T03:07:54.389567+00:00", "thesis": "What changed in Search, why it matters, and what to do next.", "thesis_zh": "搜索发生了什么，为什么重要，今天该做什么。", "title": "Daily SEO/GEO Signal Radar", "map_ranges": ["7D", "30D", "90D", "1Y"], "verticals": ["ecommerce", "publisher", "SaaS", "UGC", "local", "international", "all"], "sections": ["Confirmed Search Updates", "SERP & Algorithm Signals", "Technical SEO Experiments", "AI Search / GEO", "Tools, Papers & Open Source", "Unconfirmed Watchlist", "Today's Action Items"], "today": {"date": "2026-07-30", "generated_at": "2026-07-30T02:46:13.875505+00:00", "headline": "Google Updates Open Knowledge Format & GSC Social Reporting; 89% of ChatGPT Search Demand Has No Owner", "sections": {"Confirmed Search Updates": [{"what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.", "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。", "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.", "who_it_affects": "all", "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 90, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"}]}, {"what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.", "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。", "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.", "who_it_affects": "publisher / SaaS / ecommerce / UGC", "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 87, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"}]}], "Technical SEO Experiments": [{"what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.", "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。", "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.", "who_it_affects": "all", "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "confidence": "Confirmed", "impact": "P2", "section": "Technical SEO Experiments", "score": 80, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"}]}], "AI Search / GEO": [{"what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.", "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。", "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.", "who_it_affects": "ecommerce / publisher / SaaS / international", "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 85, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"}]}, {"what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.", "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。", "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.", "who_it_affects": "ecommerce / publisher / SaaS / local", "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 88, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"}]}], "Today's Action Items": [{"what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "impact": "P1"}, {"what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "impact": "P2"}, {"what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "impact": "P2"}]}, "signals": [{"what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.", "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。", "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.", "who_it_affects": "ecommerce / publisher / SaaS / international", "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 85, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"}]}, {"what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.", "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。", "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.", "who_it_affects": "all", "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 90, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"}]}, {"what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.", "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。", "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.", "who_it_affects": "ecommerce / publisher / SaaS / local", "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 88, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"}]}, {"what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.", "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。", "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.", "who_it_affects": "publisher / SaaS / ecommerce / UGC", "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 87, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"}]}, {"what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.", "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。", "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.", "who_it_affects": "all", "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "confidence": "Confirmed", "impact": "P2", "section": "Technical SEO Experiments", "score": 80, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"}]}], "serp": {}, "confirmed_updates": [{"id": "YUX1peHev5a4fkxLDiUQ", "title": "June 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-06-24T16:00:00+00:00", "end": "2026-06-26T17:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 26, 2026.", "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ", "triggers_brief": true}, {"id": "wdAXJk6LRRihEjpzEeWE", "title": "May 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-05-21T15:40:00+00:00", "end": "2026-06-02T12:40:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 2, 2026.", "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE", "triggers_brief": true}, {"id": "7eTbAa2jWdToLkraZj5y", "title": "March 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-03-27T09:00:00+00:00", "end": "2026-04-08T13:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of April 8, 2026.", "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y", "triggers_brief": true}, {"id": "VbnSXAH4SmEcxPtx4YSD", "title": "March 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-03-24T19:00:00+00:00", "end": "2026-03-25T14:30:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of March 25, 2026.", "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD", "triggers_brief": true}, {"id": "mYbNTqV1ytDc2fA8hUz4", "title": "February 2026 Discover update", "kind": "Discover Update", "families": ["ranking"], "start": "2026-02-05T17:00:00+00:00", "end": "2026-02-27T10:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of February 27, 2026.", "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4", "triggers_brief": true}, {"id": "DsirqJ1gpPRgVQeccPRv", "title": "December 2025 core update", "kind": "Core Update", "families": ["ranking"], "start": "2025-12-11T17:25:00+00:00", "end": "2025-12-29T19:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of December 29, 2025.", "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv", "triggers_brief": true}, {"id": "a7Aainy6E9rZsmfq82xt", "title": "August 2025 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2025-08-26T16:00:00+00:00", "end": "2025-09-22T07:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of September 22, 2025.", "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt", "triggers_brief": true}]}, "library": [{"date": "2026-07-27", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update live", "why_it_matters": "broad ranking shifts likely", "evidence": "Google Search Status API", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-27", "section": "SERP & Algorithm Signals", "what_happened": "Heavy flux reported across ecommerce SERPs", "why_it_matters": "early anomaly ahead of confirmation", "evidence": "multiple trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor", "confidence": "Observed", "impact": "P1", "sources": []}, {"date": "2026-07-28", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update confirmed live", "why_it_matters": "broad ranking volatility expected", "evidence": "Google Search Status API incident", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-28", "section": "Unconfirmed Watchlist", "what_happened": "Overnight SERP flux across ecommerce", "why_it_matters": "early anomaly, not yet confirmed", "evidence": "community trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor, do not react", "confidence": "Observed", "impact": "P1", "sources": []}, {"date": "2026-07-29", "section": "SERP & Algorithm Signals", "what_happened": "Data: higher AI-detector scores correlate with lower rankings and fewer indexed pages, yet heavily flagged pages still appear in top 10", "why_it_matters": "AI内容检测与排名存在相关性但非因果：纯AI内容可能受质量评估影响，但AI检测分数本身不是排名因素，内容质量评估仍是核心。", "evidence": "Correlation data: higher AI scores tied to lower positions and fewer indexed pages; counterexamples in top 10", "who_it_affects": "publisher / ecommerce / SaaS", "what_to_do": "聚焦E-E-A-T和内容质量，而非AI检测分数；监控AI辅助内容的实际表现", "confidence": "Data-backed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/heavily-ai-flagged-pages-still-rank-across-googles-top-10/583983/"}]}, {"date": "2026-07-29", "section": "Technical SEO Experiments", "what_happened": "Google's Gary Illyes uncertain whether repeatedly pushing unavailable_after dates forward causes indexing problems", "why_it_matters": "", "evidence": "Gary Illyes primary-source statement: 'would need to check' if forward-shifting dates cause problems", "who_it_affects": "publisher / ecommerce", "what_to_do": "审计现有unavailable_after实现，避免频繁修改日期；监控受影响页面索引状态", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-illyes-unsure-on-shifting-unavailable_after-dates/584064/"}]}, {"date": "2026-07-29", "section": "Technical SEO Experiments", "what_happened": "Google confirms random CMS-injected URLs in HTML have minimal SEO impact if not linked or indexed", "why_it_matters": "减少技术SEO中的低价值修复优先级：CMS自动注入的未链接URL不会直接损害排名，可将资源转向更高影响的索引和抓取优化。", "evidence": "John Mueller primary-source statement on CMS-injected URL impact", "who_it_affects": "all", "what_to_do": "确认注入URL未被链接/索引即可，无需紧急修复；优先处理实际索引问题", "confidence": "Confirmed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-on-seo-impact-of-urls-injected-into-html-by-cms-platforms/584037/"}]}, {"date": "2026-07-29", "section": "AI Search / GEO", "what_happened": "Google places Top Stories carousels inside AI Overviews; opting out of AI training in Search Console may remove Top Stories placement", "why_it_matters": "出版商面临关键权衡：选择退出AI训练可保护内容不被用于AI Overviews，但会失去Top Stories这一重要流量入口，直接影响新闻类publisher的有机流量。", "evidence": "Search Engine Journal报道，Google确认AI opt-out设置与Top Stories资格挂钩", "who_it_affects": "publisher", "what_to_do": "评估AI opt-out对Top Stories流量的影响，测试保留与退出的流量差异", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/ai-opt-out-may-cost-publishers-a-top-stories-spot/584016/"}]}, {"date": "2026-07-29", "section": "AI Search / GEO", "what_happened": "Study: AI recognizes 96% of brands but mentions almost none in responses, creating visibility gap", "why_it_matters": "品牌GEO优化存在严重盲区：AI系统能识别品牌但极少主动提及，意味着传统品牌搜索优化无法转化为AI引用(GEO/AEO)收益，需建立新的品牌mention策略。", "evidence": "Victorious study with quantified data: 96% recognition vs. near-zero mention rate", "who_it_affects": "all", "what_to_do": "测试结构化品牌mention在AI响应中的出现率；优化知识图谱实体关联", "confidence": "Data-backed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/ai-brand-mention-study-victorious-spa/582765/"}]}, {"date": "2026-07-29", "section": "Tools, Papers & Open Source", "what_happened": "Google lost DMCA scraping case against SerpApi; SearchGuard ruling prioritizes ad revenue over copyright protection", "why_it_matters": "反爬虫法律框架弱化：网站更难通过DMCA阻止AI爬虫抓取，需重新评估robots.txt、terms of service和技术反制措施的组合策略。", "evidence": "Court ruling: SearchGuard protects ad revenue not copyright; weakens anti-bot defense precedent", "who_it_affects": "all", "what_to_do": "审查robots.txt和TOS条款；考虑速率限制、认证墙等技术手段替代法律手段", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-lost-its-scraping-case-now-you-have-to-pick-a-side-on-the-open-web/583066/"}]}, {"date": "2026-07-30", "section": "Confirmed Search Updates", "what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.", "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。", "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.", "who_it_affects": "all", "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"}]}, {"date": "2026-07-30", "section": "Confirmed Search Updates", "what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.", "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。", "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.", "who_it_affects": "publisher / SaaS / ecommerce / UGC", "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"}]}, {"date": "2026-07-30", "section": "Technical SEO Experiments", "what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.", "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。", "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.", "who_it_affects": "all", "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "confidence": "Confirmed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"}]}, {"date": "2026-07-30", "section": "AI Search / GEO", "what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.", "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。", "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.", "who_it_affects": "ecommerce / publisher / SaaS / international", "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "confidence": "Data-backed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"}]}, {"date": "2026-07-30", "section": "AI Search / GEO", "what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.", "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。", "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.", "who_it_affects": "ecommerce / publisher / SaaS / local", "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。", "confidence": "Data-backed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"}]}], "map_events": [{"date": "2026-07-27", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-27", "track": "external", "label": "Global High (92)", "band": "High", "detail": "Vertical Extreme · Broad update likely, specific verticals hit hardest"}, {"date": "2026-07-27", "track": "community", "label": "Heavy flux reported across ecommerce SERPs", "band": "Elevated", "detail": "Observed"}, {"date": "2026-07-28", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "June 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "May 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "February 2026 Discover update", "band": "High", "detail": "Discover Update"}, {"date": "2026-07-29", "track": "official", "label": "December 2025 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "August 2025 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "community", "label": "Data: higher AI-detector scores correlate with lower rankings and fewer indexed pages, yet heavily flagged pages still appear in top 10", "band": "High", "detail": "Data-backed"}, {"date": "2026-07-30", "track": "official", "label": "June 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-30", "track": "official", "label": "May 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-30", "track": "official", "label": "March 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-30", "track": "official", "label": "March 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-30", "track": "official", "label": "February 2026 Discover update", "band": "High", "detail": "Discover Update"}, {"date": "2026-07-30", "track": "official", "label": "December 2025 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-30", "track": "official", "label": "August 2025 spam update", "band": "High", "detail": "Spam Update"}], "days_archived": 4}</script>
+<script id="radar-data" type="application/json">{"generated_at": "2026-07-30T03:59:39.900699+00:00", "thesis": "What changed in Search, why it matters, and what to do next.", "thesis_zh": "搜索发生了什么，为什么重要，今天该做什么。", "title": "Daily SEO/GEO Signal Radar", "map_ranges": ["7D", "30D", "90D", "1Y"], "verticals": ["ecommerce", "publisher", "SaaS", "UGC", "local", "international", "all"], "sections": ["Confirmed Search Updates", "Official Explanations", "SERP & Algorithm Signals", "Technical SEO Experiments", "AI Search / GEO", "Research & Retrieval", "Tools, Papers & Open Source", "Unconfirmed Watchlist", "Today's Action Items"], "today": {"date": "2026-07-30", "generated_at": "2026-07-30T02:46:13.875505+00:00", "headline": "Google Updates Open Knowledge Format & GSC Social Reporting; 89% of ChatGPT Search Demand Has No Owner", "sections": {"Confirmed Search Updates": [{"what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.", "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。", "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.", "who_it_affects": "all", "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 90, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"}]}, {"what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.", "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。", "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.", "who_it_affects": "publisher / SaaS / ecommerce / UGC", "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 87, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"}]}], "Technical SEO Experiments": [{"what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.", "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。", "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.", "who_it_affects": "all", "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "confidence": "Confirmed", "impact": "P2", "section": "Technical SEO Experiments", "score": 80, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"}]}], "AI Search / GEO": [{"what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.", "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。", "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.", "who_it_affects": "ecommerce / publisher / SaaS / international", "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 85, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"}]}, {"what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.", "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。", "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.", "who_it_affects": "ecommerce / publisher / SaaS / local", "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 88, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"}]}], "Today's Action Items": [{"what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "impact": "P1"}, {"what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "impact": "P2"}, {"what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "impact": "P2"}]}, "signals": [{"what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.", "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。", "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.", "who_it_affects": "ecommerce / publisher / SaaS / international", "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 85, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"}]}, {"what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.", "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。", "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.", "who_it_affects": "all", "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 90, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"}]}, {"what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.", "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。", "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.", "who_it_affects": "ecommerce / publisher / SaaS / local", "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。", "confidence": "Data-backed", "impact": "P2", "section": "AI Search / GEO", "score": 88, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"}]}, {"what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.", "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。", "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.", "who_it_affects": "publisher / SaaS / ecommerce / UGC", "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "confidence": "Confirmed", "impact": "P1", "section": "Confirmed Search Updates", "score": 87, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"}]}, {"what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.", "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。", "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.", "who_it_affects": "all", "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "confidence": "Confirmed", "impact": "P2", "section": "Technical SEO Experiments", "score": 80, "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"}]}], "serp": {}, "confirmed_updates": [{"id": "YUX1peHev5a4fkxLDiUQ", "title": "June 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-06-24T16:00:00+00:00", "end": "2026-06-26T17:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 26, 2026.", "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ", "triggers_brief": true}, {"id": "wdAXJk6LRRihEjpzEeWE", "title": "May 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-05-21T15:40:00+00:00", "end": "2026-06-02T12:40:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of June 2, 2026.", "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE", "triggers_brief": true}, {"id": "7eTbAa2jWdToLkraZj5y", "title": "March 2026 core update", "kind": "Core Update", "families": ["ranking"], "start": "2026-03-27T09:00:00+00:00", "end": "2026-04-08T13:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of April 8, 2026.", "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y", "triggers_brief": true}, {"id": "VbnSXAH4SmEcxPtx4YSD", "title": "March 2026 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2026-03-24T19:00:00+00:00", "end": "2026-03-25T14:30:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of March 25, 2026.", "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD", "triggers_brief": true}, {"id": "mYbNTqV1ytDc2fA8hUz4", "title": "February 2026 Discover update", "kind": "Discover Update", "families": ["ranking"], "start": "2026-02-05T17:00:00+00:00", "end": "2026-02-27T10:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of February 27, 2026.", "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4", "triggers_brief": true}, {"id": "DsirqJ1gpPRgVQeccPRv", "title": "December 2025 core update", "kind": "Core Update", "families": ["ranking"], "start": "2025-12-11T17:25:00+00:00", "end": "2025-12-29T19:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of December 29, 2025.", "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv", "triggers_brief": true}, {"id": "a7Aainy6E9rZsmfq82xt", "title": "August 2025 spam update", "kind": "Spam Update", "families": ["ranking"], "start": "2025-08-26T16:00:00+00:00", "end": "2025-09-22T07:00:00+00:00", "impact": "SERVICE_INFORMATION", "ongoing": false, "latest_update": "The rollout was complete as of September 22, 2025.", "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt", "triggers_brief": true}]}, "library": [{"date": "2026-07-27", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update live", "why_it_matters": "broad ranking shifts likely", "evidence": "Google Search Status API", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-27", "section": "SERP & Algorithm Signals", "what_happened": "Heavy flux reported across ecommerce SERPs", "why_it_matters": "early anomaly ahead of confirmation", "evidence": "multiple trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor", "confidence": "Observed", "impact": "P1", "sources": []}, {"date": "2026-07-28", "section": "Confirmed Search Updates", "what_happened": "August 2026 core update confirmed live", "why_it_matters": "broad ranking volatility expected", "evidence": "Google Search Status API incident", "who_it_affects": "all", "what_to_do": "monitor GSC, freeze big changes", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Google Status", "url": "https://status.search.google.com"}]}, {"date": "2026-07-28", "section": "Unconfirmed Watchlist", "what_happened": "Overnight SERP flux across ecommerce", "why_it_matters": "early anomaly, not yet confirmed", "evidence": "community trackers", "who_it_affects": "ecommerce", "what_to_do": "monitor, do not react", "confidence": "Observed", "impact": "P1", "sources": []}, {"date": "2026-07-29", "section": "SERP & Algorithm Signals", "what_happened": "Data: higher AI-detector scores correlate with lower rankings and fewer indexed pages, yet heavily flagged pages still appear in top 10", "why_it_matters": "AI内容检测与排名存在相关性但非因果：纯AI内容可能受质量评估影响，但AI检测分数本身不是排名因素，内容质量评估仍是核心。", "evidence": "Correlation data: higher AI scores tied to lower positions and fewer indexed pages; counterexamples in top 10", "who_it_affects": "publisher / ecommerce / SaaS", "what_to_do": "聚焦E-E-A-T和内容质量，而非AI检测分数；监控AI辅助内容的实际表现", "confidence": "Data-backed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/heavily-ai-flagged-pages-still-rank-across-googles-top-10/583983/"}]}, {"date": "2026-07-29", "section": "Technical SEO Experiments", "what_happened": "Google's Gary Illyes uncertain whether repeatedly pushing unavailable_after dates forward causes indexing problems", "why_it_matters": "", "evidence": "Gary Illyes primary-source statement: 'would need to check' if forward-shifting dates cause problems", "who_it_affects": "publisher / ecommerce", "what_to_do": "审计现有unavailable_after实现，避免频繁修改日期；监控受影响页面索引状态", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-illyes-unsure-on-shifting-unavailable_after-dates/584064/"}]}, {"date": "2026-07-29", "section": "Technical SEO Experiments", "what_happened": "Google confirms random CMS-injected URLs in HTML have minimal SEO impact if not linked or indexed", "why_it_matters": "减少技术SEO中的低价值修复优先级：CMS自动注入的未链接URL不会直接损害排名，可将资源转向更高影响的索引和抓取优化。", "evidence": "John Mueller primary-source statement on CMS-injected URL impact", "who_it_affects": "all", "what_to_do": "确认注入URL未被链接/索引即可，无需紧急修复；优先处理实际索引问题", "confidence": "Confirmed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-on-seo-impact-of-urls-injected-into-html-by-cms-platforms/584037/"}]}, {"date": "2026-07-29", "section": "AI Search / GEO", "what_happened": "Google places Top Stories carousels inside AI Overviews; opting out of AI training in Search Console may remove Top Stories placement", "why_it_matters": "出版商面临关键权衡：选择退出AI训练可保护内容不被用于AI Overviews，但会失去Top Stories这一重要流量入口，直接影响新闻类publisher的有机流量。", "evidence": "Search Engine Journal报道，Google确认AI opt-out设置与Top Stories资格挂钩", "who_it_affects": "publisher", "what_to_do": "评估AI opt-out对Top Stories流量的影响，测试保留与退出的流量差异", "confidence": "Confirmed", "impact": "P0", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/ai-opt-out-may-cost-publishers-a-top-stories-spot/584016/"}]}, {"date": "2026-07-29", "section": "AI Search / GEO", "what_happened": "Study: AI recognizes 96% of brands but mentions almost none in responses, creating visibility gap", "why_it_matters": "品牌GEO优化存在严重盲区：AI系统能识别品牌但极少主动提及，意味着传统品牌搜索优化无法转化为AI引用(GEO/AEO)收益，需建立新的品牌mention策略。", "evidence": "Victorious study with quantified data: 96% recognition vs. near-zero mention rate", "who_it_affects": "all", "what_to_do": "测试结构化品牌mention在AI响应中的出现率；优化知识图谱实体关联", "confidence": "Data-backed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/ai-brand-mention-study-victorious-spa/582765/"}]}, {"date": "2026-07-29", "section": "Tools, Papers & Open Source", "what_happened": "Google lost DMCA scraping case against SerpApi; SearchGuard ruling prioritizes ad revenue over copyright protection", "why_it_matters": "反爬虫法律框架弱化：网站更难通过DMCA阻止AI爬虫抓取，需重新评估robots.txt、terms of service和技术反制措施的组合策略。", "evidence": "Court ruling: SearchGuard protects ad revenue not copyright; weakens anti-bot defense precedent", "who_it_affects": "all", "what_to_do": "审查robots.txt和TOS条款；考虑速率限制、认证墙等技术手段替代法律手段", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-lost-its-scraping-case-now-you-have-to-pick-a-side-on-the-open-web/583066/"}]}, {"date": "2026-07-30", "section": "Confirmed Search Updates", "what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.", "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。", "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.", "who_it_affects": "all", "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"}]}, {"date": "2026-07-30", "section": "Confirmed Search Updates", "what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.", "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。", "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.", "who_it_affects": "publisher / SaaS / ecommerce / UGC", "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。", "confidence": "Confirmed", "impact": "P1", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"}]}, {"date": "2026-07-30", "section": "Technical SEO Experiments", "what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.", "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。", "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.", "who_it_affects": "all", "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。", "confidence": "Confirmed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"}]}, {"date": "2026-07-30", "section": "AI Search / GEO", "what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.", "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。", "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.", "who_it_affects": "ecommerce / publisher / SaaS / international", "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。", "confidence": "Data-backed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"}]}, {"date": "2026-07-30", "section": "AI Search / GEO", "what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.", "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。", "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.", "who_it_affects": "ecommerce / publisher / SaaS / local", "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。", "confidence": "Data-backed", "impact": "P2", "sources": [{"name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"}]}], "map_events": [{"date": "2026-07-27", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-27", "track": "external", "label": "Global High (92)", "band": "High", "detail": "Vertical Extreme · Broad update likely, specific verticals hit hardest"}, {"date": "2026-07-27", "track": "community", "label": "Heavy flux reported across ecommerce SERPs", "band": "Elevated", "detail": "Observed"}, {"date": "2026-07-28", "track": "official", "label": "August 2026 core update", "band": "Extreme", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "June 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "May 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "March 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "official", "label": "February 2026 Discover update", "band": "High", "detail": "Discover Update"}, {"date": "2026-07-29", "track": "official", "label": "December 2025 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-29", "track": "official", "label": "August 2025 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-29", "track": "community", "label": "Data: higher AI-detector scores correlate with lower rankings and fewer indexed pages, yet heavily flagged pages still appear in top 10", "band": "High", "detail": "Data-backed"}, {"date": "2026-07-30", "track": "official", "label": "June 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-30", "track": "official", "label": "May 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-30", "track": "official", "label": "March 2026 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-30", "track": "official", "label": "March 2026 spam update", "band": "High", "detail": "Spam Update"}, {"date": "2026-07-30", "track": "official", "label": "February 2026 Discover update", "band": "High", "detail": "Discover Update"}, {"date": "2026-07-30", "track": "official", "label": "December 2025 core update", "band": "High", "detail": "Core Update"}, {"date": "2026-07-30", "track": "official", "label": "August 2025 spam update", "band": "High", "detail": "Spam Update"}], "days_archived": 4}</script>
 <script>
 const DATA = JSON.parse(document.getElementById("radar-data").textContent);
 const HEATVAR = {Extreme:"--heat-extreme",High:"--heat-high",Elevated:"--heat-elevated",
@@ -292,9 +328,10 @@ function renderToday(){
   if(!rec.date){el.innerHTML=`<p class="lib-empty">No daily report yet. Run <code>python main.py daily</code> first.</p>`;return;}
   const b=morningBrief(rec);
   let h=`<div class="date-label">${esc(rec.date)}</div>`;
+  const urgent=(b.top==="P0");
   h+=`<div class="brief">
+      <div class="stat lead${urgent?" urgent":""}"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>
       <div class="stat"><span class="k">Signals</span><span class="v">${b.n}</span></div>
-      <div class="stat"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>
       <div class="stat"><span class="k">Confirmed update</span><span class="v">${b.confirmed?"Yes":"No"}</span></div>
       <div class="stat"><span class="k">SERP heat</span><span class="v">
         <span class="dot-heat" style="background:${heatColor(b.band)}"></span>${esc(b.band)}</span></div>
@@ -306,7 +343,7 @@ function renderToday(){
   const actions=rec.sections?.["Today's Action Items"];
   if(actions&&actions.length){
     h+=`<div class="actions-card"><h2>Today's Action Items</h2><ul>`+
-      actions.map(s=>`<li>${tag(s.impact)} ${esc(s.what_to_do)}</li>`).join("")+
+      actions.map(s=>`<li>${tag(s.impact)}<span>${esc(s.what_to_do)}</span></li>`).join("")+
       `</ul></div>`;
   }
 
@@ -315,7 +352,12 @@ function renderToday(){
     const arr=(rec.sections||{})[sec];
     if(!arr||!arr.length)return;
     h+=`<h2 class="section">${esc(sec)} <span class="count">${arr.length}</span></h2>`;
-    arr.forEach(s=>{h+=signalCard(s);});
+    // Weight the page: P0/P1 get full cards, P2/P3 collapse to compact rows so
+    // the eye lands on what actually needs action.
+    arr.forEach(s=>{
+      const imp=(s.impact||"").toUpperCase();
+      h+=(imp==="P2"||imp==="P3") ? miniRow(s) : signalCard(s);
+    });
   });
   if(rec.dropped_count) h+=`<p class="date-label" style="margin-top:20px">Filtered out ${rec.dropped_count} lower-value candidates.</p>`;
   el.innerHTML=h;
@@ -326,11 +368,21 @@ function signalCard(s){
   const row=(lab,key)=> s[key]?`<div class="row"><span class="lab">${lab}</span><span>${esc(s[key])}</span></div>`:"";
   const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join("");
   return `<div class="card ${esc(imp)}">
-    <div class="what">${esc(s.what_happened)}<span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
+    <div class="what"><span class="wtext">${esc(s.what_happened)}</span>
+      <span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
     ${srcs?`<div class="srcs">${srcs}</div>`:""}
   </div>`;
+}
+
+/* Low-priority signals: one scannable line, not a full card. */
+function miniRow(s){
+  const src=(s.sources||[])[0];
+  const link=src?`<a class="msrc" href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name||"source")} ↗</a>`:"";
+  const why=s.why_it_matters?` — ${esc(s.why_it_matters)}`:"";
+  return `<div class="mini">${tag(s.impact)}
+    <span class="mtext"><b>${esc(s.what_happened)}</b>${why}</span>${link}</div>`;
 }
 
 function serpWeather(serp){
