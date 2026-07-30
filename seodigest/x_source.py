@@ -16,52 +16,11 @@ import os
 from datetime import datetime, timezone
 from typing import List
 
-# --- twikit 2.3.3 monkey patch ------------------------------------------------
-# twikit 2.3.3 breaks because X changed its frontend bundle format; the
-# ON_DEMAND_FILE_REGEX no longer matches, causing "Couldn't get KEY_BYTE
-# indices" / "'ClientTransaction' object has no attribute 'key'" on every call.
-# Patch from https://github.com/d60/twikit/issues/408 (audioeng89's snippet).
-# Remove this block once twikit ships an official fix (> 2.3.3).
-try:
-    import re as _re
-    _tx = __import__("twikit.x_client_transaction.transaction",
-                     fromlist=["ClientTransaction"])
-    _tx.ON_DEMAND_FILE_REGEX = _re.compile(
-        r""",(\d+):["']ondemand\.s["']""",
-        flags=(_re.VERBOSE | _re.MULTILINE))
-    _tx.ON_DEMAND_HASH_PATTERN = r',{}:"([0-9a-f]+)"'
-
-    async def _patched_get_indices(self, home_page_response, session, headers):
-        key_byte_indices = []
-        response = self.validate_response(home_page_response) or self.home_page_response
-        m = _tx.ON_DEMAND_FILE_REGEX.search(str(response))
-        if not m:
-            raise Exception("Couldn't get KEY_BYTE indices (ondemand.s not found)")
-        on_demand_file_index = m.group(1)
-        regex = _re.compile(_tx.ON_DEMAND_HASH_PATTERN.format(on_demand_file_index))
-        hm = regex.search(str(response))
-        if not hm:
-            raise Exception("Couldn't get KEY_BYTE indices (hash not found)")
-        filename = hm.group(1)
-        on_demand_file_url = (
-            f"https://abs.twimg.com/responsive-web/client-web/"
-            f"ondemand.s.{filename}a.js")
-        on_demand_file_response = await session.request(
-            method="GET", url=on_demand_file_url, headers=headers)
-        for item in _tx.INDICES_REGEX.finditer(str(on_demand_file_response.text)):
-            key_byte_indices.append(item.group(2))
-        if not key_byte_indices:
-            raise Exception("Couldn't get KEY_BYTE indices")
-        key_byte_indices = list(map(int, key_byte_indices))
-        return key_byte_indices[0], key_byte_indices[1:]
-
-    _tx.ClientTransaction.get_indices = _patched_get_indices
-except Exception as _patch_err:  # pragma: no cover
-    # If the patch can't be applied (e.g. twikit fixed it upstream or layout
-    # changed again), don't crash the whole module — the X fetch will just fail
-    # at runtime with its own error.
-    print(f"[x] twikit patch skipped: {_patch_err}")
-# --- end monkey patch ---------------------------------------------------------
+# NOTE: twikit 2.3.3 upstream has a bug where X's changed webpack chunk
+# format breaks every request with "Couldn't get KEY_BYTE indices" /
+# "'ClientTransaction' object has no attribute 'key'". We install a patched
+# fork (see requirements.txt) that fixes the ondemand.s parsing + missing
+# user fields. When upstream twikit merges PR #432, switch back to `twikit`.
 
 from .models import Item
 
