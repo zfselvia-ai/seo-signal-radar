@@ -1,70 +1,45 @@
-"""Fetch tweets from four curated X Lists + keyword searches via twikit.
+"""Fetch tweets via Nitter RSS (no twikit, no cookies, no login).
 
-twikit logs in with your X account and caches cookies.json so later runs skip
-re-auth (lower challenge/ban risk). First run needs X_USERNAME/X_EMAIL/
-X_PASSWORD; afterwards only cookies.json is used.
+Why Nitter RSS instead of twikit:
+  twikit 2.3.3 is broken — X removed the ondemand.s webpack chunk that twikit's
+  client-transaction signing depends on, so every request fails with
+  "Couldn't get KEY_BYTE indices". This is an ongoing cat-and-mouse game.
+  Nitter exposes the same tweets as standard RSS, which is stable and needs no
+  auth. We try multiple public Nitter instances with fallback so one going down
+  doesn't kill the fetch.
 
-The four lists (official / algo-serp / technical-data / geo-ai) are kept as
-separate `group`s so downstream weighting and sectioning can treat an official
-Google account differently from a keyword-search hit.
+Each X list (official / algo-serp / technical-data / geo-ai) is kept as a
+separate `group` so downstream weighting can treat an official Google account
+differently from a keyword hit.
 """
 from __future__ import annotations
 
-import asyncio
-import json
-import os
+import re
 from datetime import datetime, timezone
+from time import mktime
 from typing import List
-
-# NOTE: twikit 2.3.3 upstream has a bug where X's changed webpack chunk
-# format breaks every request with "Couldn't get KEY_BYTE indices" /
-# "'ClientTransaction' object has no attribute 'key'". We install a patched
-# fork (see requirements.txt) that fixes the ondemand.s parsing + missing
-# user fields. When upstream twikit merges PR #432, switch back to `twikit`.
 
 from .models import Item
 
-COOKIES_PATH = "cookies.json"
+# Public Nitter instances, tried in order. The first that returns valid RSS
+# for a handle wins. Instances come and go — update this list when needed.
+NITTER_INSTANCES = [
+    "nitter.net",
+    "nitter.privacyredirect.com",
+    "nitter.poast.org",
+    "nitter.1d4.us",
+]
 
 
-def _tweet_list(resp):
-    """twikit 1.x returns a list of tweets; 2.x returns a Result object
-    with a .results list. Normalize to an iterable of tweets."""
-    if resp is None:
-        return []
-    if isinstance(resp, list):
-        return resp
-    # twikit 2.x Result-like object
-    return getattr(resp, "results", None) or getattr(resp, "tweets", None) or []
-
-
-def _normalize_cookies(raw):
-    """Accept both twikit dict ({name:value}) and browser-export list
-    ([{name,value,...}]) formats. twikit's set_cookies only accepts a dict."""
-    if isinstance(raw, dict):
-        return raw
-    if isinstance(raw, list):
-        return {c["name"]: c["value"] for c in raw if c.get("name") and c.get("value")}
-    raise ValueError(f"Unrecognized cookies.json format: {type(raw).__name__}")
-
-
-async def _get_client():
-    from twikit import Client
-
-    client = Client("en-US")
-    if os.path.exists(COOKIES_PATH):
-        with open(COOKIES_PATH, encoding="utf-8") as f:
-            cookies = _normalize_cookies(json.load(f))
-        client.set_cookies(cookies)
-        return client
-    username = os.getenv("X_USERNAME")
-    email = os.getenv("X_EMAIL")
-    password = os.getenv("X_PASSWORD")
-    if not (username and password):
-        raise RuntimeError("No cookies.json and X_USERNAME/X_PASSWORD not set.")
-    await client.login(auth_info_1=username, auth_info_2=email, password=password)
-    client.save_cookies(COOKIES_PATH)
-    return client
+def _entry_datetime(entry):
+    for key in ("published_parsed", "updated_parsed"):
+        val = getattr(entry, key, None) or entry.get(key)
+        if val:
+            try:
+                return datetime.fromtimestamp(mktime(val), tz=timezone.utc)
+            except Exception:
+                continue
+    return None
 
 
 def _within(dt, since):
@@ -75,80 +50,81 @@ def _within(dt, since):
     return dt >= since
 
 
-def _to_item(tweet, group, source_name) -> Item:
-    published = getattr(tweet, "created_at_datetime", None)
-    sn = tweet.user.screen_name
-    return Item(
-        id=str(tweet.id),
-        source="x",
-        source_name=source_name,
-        group=group,
-        author=f"@{sn}",
-        text=tweet.text or "",
-        url=f"https://x.com/{sn}/status/{tweet.id}",
-        published=published,
-        metrics={
-            "likes": getattr(tweet, "favorite_count", 0) or 0,
-            "retweets": getattr(tweet, "retweet_count", 0) or 0,
-            "replies": getattr(tweet, "reply_count", 0) or 0,
-        },
-    )
+def _strip_html(text: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
 
 
-async def _fetch_lists(client, cfg, since) -> List[Item]:
+def _parse_handle_rss(parsed, handle, group) -> List[Item]:
+    """Turn a parsed Nitter RSS feed into Items."""
     items: List[Item] = []
-    per = cfg["x"].get("tweets_per_handle", 15)
-    for list_key, spec in cfg["x"].get("lists", {}).items():
-        for handle in spec.get("handles", []):
-            try:
-                user = await client.get_user_by_screen_name(handle)
-                tweets = _tweet_list(await user.get_tweets("Tweets", count=per))
-                for t in tweets:
-                    if getattr(t, "text", "").startswith("RT @"):
-                        continue
-                    if _within(getattr(t, "created_at_datetime", None), since):
-                        items.append(_to_item(t, list_key, handle))
-                await asyncio.sleep(2)
-            except Exception as e:
-                print(f"  [x] @{handle} ({list_key}) failed: {e}")
+    for entry in parsed.entries:
+        # Nitter's <link> is https://<host>/<handle>/status/<id>#m — the most
+        # reliable place to find the tweet id. <guid>/<id> may be bare digits.
+        link = getattr(entry, "link", "") or ""
+        m = re.search(r"/status/(\d+)", link)
+        if not m:
+            continue
+        tweet_id = m.group(1)
+        title = getattr(entry, "title", "") or ""
+        desc = _strip_html(getattr(entry, "summary", "") or "")
+        text = title if not desc else f"{title}. {desc[:500]}"
+        # Rewrite nitter link back to x.com so the dashboard links to the
+        # canonical tweet.
+        url = f"https://x.com/{handle}/status/{tweet_id}"
+        items.append(Item(
+            id=tweet_id,
+            source="x",
+            source_name=handle,
+            group=group,
+            author=f"@{handle}",
+            text=text,
+            url=url,
+            published=_entry_datetime(entry),
+            metrics={"likes": 0, "retweets": 0, "replies": 0},
+        ))
     return items
 
 
-async def _fetch_keywords(client, cfg, since) -> List[Item]:
-    items: List[Item] = []
-    ks = cfg["x"].get("keyword_search", {})
-    if not ks.get("enabled"):
-        return items
-    per = ks.get("per_query", 15)
-    min_likes = ks.get("min_likes", 20)
-    for q in ks.get("queries", []):
+def _fetch_handle(feedparser, handle, group, per, instances, since) -> List[Item]:
+    """Fetch one handle's timeline, trying each Nitter instance in turn."""
+    for host in instances:
+        url = f"https://{host}/{handle}/rss"
         try:
-            tweets = _tweet_list(await client.search_tweet(q, product="Latest", count=per))
-            for t in tweets:
-                if getattr(t, "text", "").startswith("RT @"):
-                    continue
-                if (getattr(t, "favorite_count", 0) or 0) < min_likes:
-                    continue
-                if _within(getattr(t, "created_at_datetime", None), since):
-                    items.append(_to_item(t, "keyword", f"keyword:{q}"))
-            await asyncio.sleep(2)
-        except Exception as e:
-            print(f"  [x] search '{q}' failed: {e}")
-    return items
-
-
-async def _fetch_all(cfg, since) -> List[Item]:
-    client = await _get_client()
-    a = await _fetch_lists(client, cfg, since)
-    b = await _fetch_keywords(client, cfg, since)
-    return a + b
+            parsed = feedparser.parse(url)
+            # Nitter returns a valid feed even when the user has 0 tweets;
+            # detect real failure by an empty channel or an error status.
+            status = getattr(parsed, "status", None) or getattr(parsed.get("feed", {}), "status", None)
+            if status and int(status) >= 400:
+                continue
+            if not parsed.entries and not parsed.feed.get("title"):
+                continue
+            return _parse_handle_rss(parsed, handle, group)
+        except Exception:
+            continue
+    print(f"  [x] @{handle} ({group}) failed: no Nitter instance returned a feed")
+    return []
 
 
 def fetch(cfg: dict, since: datetime) -> List[Item]:
     if not cfg.get("x", {}).get("enabled"):
         return []
-    try:
-        return asyncio.run(_fetch_all(cfg, since))
-    except Exception as e:
-        print(f"[x] fetch aborted: {e}")
-        return []
+    import feedparser
+
+    per = cfg["x"].get("tweets_per_handle", 15)
+    instances = cfg["x"].get("nitter_instances") or NITTER_INSTANCES
+    items: List[Item] = []
+
+    for list_key, spec in cfg["x"].get("lists", {}).items():
+        for handle in spec.get("handles", []):
+            tweets = _fetch_handle(feedparser, handle, list_key, per, instances, since)
+            for t in tweets[:per]:
+                if t.text.startswith("RT @"):
+                    continue
+                if _within(t.published, since):
+                    items.append(t)
+
+    # Keyword search is not supported via Nitter RSS (no search endpoint that's
+    # reliable across instances). Keyword hits are dropped silently — the four
+    # curated lists are the primary signal source anyway.
+    return items

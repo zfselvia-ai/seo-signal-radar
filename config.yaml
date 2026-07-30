@@ -93,11 +93,18 @@ curation:
 
 # --------------------------------------------------------------------------
 # X / TWITTER — four separate Lists, not one info hot-pot.
-# Fetched via twikit using cached cookies.
+# Fetched via Nitter RSS (no twikit, no cookies). Public Nitter instances are
+# tried in order; the first that returns a valid feed for a handle wins.
+# Update the instance list when one goes stale.
 # --------------------------------------------------------------------------
 x:
   enabled: true
   tweets_per_handle: 15
+  nitter_instances:
+    - nitter.net
+    - nitter.privacyredirect.com
+    - nitter.poast.org
+    - nitter.1d4.us
   lists:
     official_signals:
       label: "Official & First-Party Signals"
@@ -111,17 +118,10 @@ x:
     geo_ai:
       label: "GEO, AI Search & Zero-Click"
       handles: [aleyda, Kevin_Indig, randfish, jasonmbarnard, lilyraynyc, VeryWellVersed, brodieseo]
+  # Keyword search is disabled — Nitter RSS has no reliable search endpoint.
+  # The four curated handle lists above are the primary signal source.
   keyword_search:
-    enabled: true
-    per_query: 15
-    min_likes: 20
-    queries:
-      - "AI Overviews SEO"
-      - "AEO answer engine optimization"
-      - "GEO generative engine optimization"
-      - "agentic traffic crawler"
-      - "zero click search study"
-      - "query fan-out"
+    enabled: false
 
 # --------------------------------------------------------------------------
 # RSS — reliable, no auth.

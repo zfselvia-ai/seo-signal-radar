@@ -1,9 +1,6 @@
-# Patched twikit fork: fixes "Couldn't get KEY_BYTE indices" /
-# "'ClientTransaction' object has no attribute 'key'" caused by X's changed
-# webpack chunk format (upstream twikit 2.3.3 is broken as of Jul 2026).
-# See https://github.com/d60/twikit/pull/432 — switch back to `twikit>=2.0.0`
-# once the fix is merged upstream.
-twikit @ git+https://github.com/leslienwu/twikit-patched.git@fix/ondemand-key-byte-indices-2026
+# twikit removed: X broke client-transaction signing (ondemand.s chunk gone),
+# so every twikit request fails. X tweets are now fetched via Nitter RSS in
+# seodigest/x_source.py — no auth, no cookies, more stable.
 feedparser>=6.0.11
 PyYAML>=6.0.2
 python-dotenv>=1.0.1
