@@ -280,9 +280,20 @@
     <button data-view="today" class="active">Today</button>
     <button data-view="map">Algorithm Map</button>
     <button data-view="library">Source Library</button>
-    <select id="date-picker" style="margin-left:auto;font-family:var(--mono);font-size:12px;
-      border:1.5px solid var(--line-strong);border-radius:8px;padding:6px 10px;
-      background:var(--surface);color:var(--ink);cursor:pointer;outline:none;"></select>
+    <div class="range-group" style="margin-left:auto;display:flex;align-items:center;gap:6px;">
+      <button class="range-btn active" data-range="1" style="font-family:var(--mono);font-size:11px;
+        border:1.5px solid var(--line-strong);border-radius:8px;padding:5px 10px;cursor:pointer;
+        background:var(--surface);color:var(--ink);outline:none;transition:all .15s;">1D</button>
+      <button class="range-btn" data-range="3" style="font-family:var(--mono);font-size:11px;
+        border:1.5px solid var(--line-strong);border-radius:8px;padding:5px 10px;cursor:pointer;
+        background:var(--surface);color:var(--ink);outline:none;transition:all .15s;">3D</button>
+      <button class="range-btn" data-range="7" style="font-family:var(--mono);font-size:11px;
+        border:1.5px solid var(--line-strong);border-radius:8px;padding:5px 10px;cursor:pointer;
+        background:var(--surface);color:var(--ink);outline:none;transition:all .15s;">7D</button>
+      <select id="date-picker" style="font-family:var(--mono);font-size:12px;
+        border:1.5px solid var(--line-strong);border-radius:8px;padding:6px 10px;
+        background:var(--surface);color:var(--ink);cursor:pointer;outline:none;"></select>
+    </div>
   </nav>
 </header>
 
@@ -318,11 +329,12 @@ document.querySelectorAll("nav button").forEach(b=>{
   };
 });
 
-/* ---------------- date picker ---------------- */
+/* ---------------- date picker + range buttons ---------------- */
 const ARCHIVE = DATA.archive || {};
 const DATES = Object.keys(ARCHIVE).sort().reverse();
 const picker = document.getElementById("date-picker");
 let selectedDate = DATA.today?.date || (DATES[0] || "");
+let selectedRange = 1; // 1, 3, or 7 days
 DATES.forEach(d => {
   const opt = document.createElement("option");
   opt.value = d;
@@ -331,6 +343,64 @@ DATES.forEach(d => {
   picker.appendChild(opt);
 });
 picker.onchange = () => { selectedDate = picker.value; renderToday(); };
+
+// Range buttons
+const rangeBtns = document.querySelectorAll(".range-btn");
+rangeBtns.forEach(btn => {
+  btn.onclick = () => {
+    rangeBtns.forEach(b => {
+      b.classList.remove("active");
+      b.style.background = "var(--surface)";
+      b.style.borderColor = "var(--line-strong)";
+      b.style.color = "var(--ink)";
+    });
+    btn.classList.add("active");
+    btn.style.background = "var(--ink)";
+    btn.style.borderColor = "var(--ink)";
+    btn.style.color = "#fff";
+    selectedRange = parseInt(btn.dataset.range);
+    renderToday();
+  };
+});
+// Style the active button on load
+(function(){
+  const active = document.querySelector(".range-btn.active");
+  if(active){active.style.background="var(--ink)";active.style.borderColor="var(--ink)";active.style.color="#fff";}
+})();
+
+/* Get the N most recent days ending at selectedDate */
+function getRangeRecords(days) {
+  const idx = DATES.indexOf(selectedDate);
+  if (idx < 0) return [];
+  return DATES.slice(idx, idx + days).reverse(); // chronological
+}
+
+/* Merge multiple days' records into one virtual record for display */
+function mergeRecords(recs) {
+  if (recs.length === 1) return recs[0];
+  const merged = {date: `${recs[0].date} ~ ${recs[recs.length-1].date}`, sections: {}, headline: ""};
+  let totalDropped = 0;
+  recs.forEach(r => {
+    totalDropped += r.dropped_count || 0;
+    Object.entries(r.sections || {}).forEach(([sec, arr]) => {
+      if (!merged.sections[sec]) merged.sections[sec] = [];
+      // Tag each signal with its source date for multi-day view
+      arr.forEach(s => {
+        if (sec === "Today's Action Items") {
+          merged.sections[sec].push(s);
+        } else {
+          merged.sections[sec].push({...s, _date: r.date});
+        }
+      });
+    });
+  });
+  merged.dropped_count = totalDropped;
+  // Use the latest day's headline
+  merged.headline = recs[recs.length-1]?.headline || "";
+  merged.serp = recs[recs.length-1]?.serp;
+  merged.confirmed_updates = recs.flatMap(r => r.confirmed_updates || []);
+  return merged;
+}
 
 /* ---------------- Today ---------------- */
 function tag(imp){return imp?`<span class="tag ${esc(imp)}">${esc(imp)}</span>`:"";}
@@ -350,12 +420,14 @@ function morningBrief(rec){
 }
 
 function renderToday(){
-  const rec = ARCHIVE[selectedDate] || DATA.today || {};
+  const rangeRecs = getRangeRecords(selectedRange);
+  const rec = selectedRange === 1 ? (ARCHIVE[selectedDate] || DATA.today || {}) : mergeRecords(rangeRecs);
   const el=document.getElementById("view-today");
   if(!rec.date){el.innerHTML=`<p class="lib-empty">No daily report yet. Run <code>python main.py daily</code> first.</p>`;return;}
   const b=morningBrief(rec);
+  const isMultiDay = selectedRange > 1;
   const isLatest = rec.date === (DATA.today?.date || "");
-  let h=`<div class="date-label">${esc(rec.date)}${isLatest?"":" (historical)"}</div>`;
+  let h=`<div class="date-label">${esc(rec.date)}${isMultiDay?"":(isLatest?"":" (historical)")}</div>`;
   const urgent=(b.top==="P0");
   h+=`<div class="brief">
       <div class="stat lead${urgent?" urgent":""}"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>
@@ -371,7 +443,7 @@ function renderToday(){
   /* Action Items first */
   const actions=rec.sections?.["Today's Action Items"];
   if(actions&&actions.length){
-    h+=`<div class="actions-card"><h2>Today's Action Items</h2><ul>`+
+    h+=`<div class="actions-card"><h2>${isMultiDay?"Action Items":"Today's Action Items"}</h2><ul>`+
       actions.map(s=>`<li>${tag(s.impact)}<span>${esc(s.what_to_do)}</span></li>`).join("")+
       `</ul></div>`;
   }
@@ -381,30 +453,26 @@ function renderToday(){
     const arr=(rec.sections||{})[sec];
     if(!arr||!arr.length)return;
     h+=`<h2 class="section">${esc(sec)} <span class="count">${arr.length}</span></h2>`;
-    // Weight the page: P0/P1/P2 get full cards, P3 collapses to a compact row.
-    // P2 means "worth testing" — that's real work with a test recipe attached,
-    // so it earns a card. Only P3 ("awareness only") is safe to compress.
     arr.forEach(s=>{
       const imp=(s.impact||"").toUpperCase();
-      h+=(imp==="P3") ? miniRow(s) : signalCard(s);
+      h+=(imp==="P3") ? miniRow(s, isMultiDay) : signalCard(s, isMultiDay);
     });
   });
   if(rec.dropped_count) h+=`<p class="date-label" style="margin-top:20px">Filtered out ${rec.dropped_count} lower-value candidates.</p>`;
   el.innerHTML=h;
 }
 
-function signalCard(s){
+function signalCard(s, multiDay){
   const imp=s.impact||"";
   const row=(lab,key)=> s[key]?`<div class="row"><span class="lab">${lab}</span><span>${esc(s[key])}</span></div>`:"";
   const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join("");
-  // Playbook items carry a test recipe. Group those fields so the reader can
-  // see at a glance that this one is something to go DO, not just read.
   const recipe=[row("Test","how_to_test"),row("Measure","success_metric"),
                 row("Effort","effort")].join("");
   const testbox=recipe.trim()?`<div class="testbox">${recipe}</div>`:"";
+  const dateTag = (multiDay && s._date) ? `<span class="tag" style="color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line);font-family:var(--mono);">${esc(s._date)}</span>` : "";
   return `<div class="card ${esc(imp)}">
     <div class="what"><span class="wtext">${esc(s.what_happened)}</span>
-      <span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
+      <span class="badges">${dateTag}${tag(s.impact)}${confTag(s.confidence)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
     ${testbox}
@@ -413,11 +481,12 @@ function signalCard(s){
 }
 
 /* Low-priority signals: one scannable line, not a full card. */
-function miniRow(s){
+function miniRow(s, multiDay){
   const src=(s.sources||[])[0];
   const link=src?`<a class="msrc" href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name||"source")} ↗</a>`:"";
   const why=s.why_it_matters?` — ${esc(s.why_it_matters)}`:"";
-  return `<div class="mini">${tag(s.impact)}
+  const dateTag = (multiDay && s._date) ? `<span style="font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-right:6px;">${esc(s._date)}</span>` : "";
+  return `<div class="mini">${tag(s.impact)}${dateTag}
     <span class="mtext"><b>${esc(s.what_happened)}</b>${why}</span>${link}</div>`;
 }
 
