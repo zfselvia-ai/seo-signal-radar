@@ -2,7 +2,7 @@ name: Daily Signal Radar
 
 on:
   schedule:
-    - cron: "0 23 * * *"     # 07:00 Asia/Shanghai
+    - cron: "0 1 * * *"     # 09:00 Asia/Shanghai
   workflow_dispatch: {}
 
 permissions:

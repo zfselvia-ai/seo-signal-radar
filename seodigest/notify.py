@@ -97,6 +97,33 @@ def format_plain(sm: dict) -> str:
     return "\n".join(_lines(sm))
 
 
+def _markdown(sm: dict) -> str:
+    """Markdown-formatted summary for PushPlus / WeChat."""
+    b = sm["brief"]
+    lines = [
+        f"**📡 {sm['title']} · {sm['date']}**",
+        "",
+        f"> {b['signals']} 条信号 · 最高优先级 **{b['top_impact']}** · "
+        f"{'✅ 有确认更新' if b['confirmed'] else '无确认更新'} · SERP {b['serp_band']}",
+    ]
+    if sm.get("headline"):
+        lines += ["", f"**{sm['headline']}**"]
+    if sm["top_signals"]:
+        lines += ["", "**今日信号**"]
+        for s in sm["top_signals"]:
+            tag = f"[{s['impact']}] " if s["impact"] else ""
+            conf = f" ({s['confidence']})" if s["confidence"] else ""
+            lines.append(f"- {tag}{s['what_happened']}{conf}")
+    if sm["actions"]:
+        lines += ["", "**行动项**"]
+        for a in sm["actions"]:
+            tag = f"[{a['impact']}] " if a["impact"] else ""
+            lines.append(f"- {tag}{a['text']}")
+    if sm.get("dashboard_url"):
+        lines += ["", f"[查看完整看板]({sm['dashboard_url']})"]
+    return "\n".join(lines)
+
+
 def format_payload(channel: str, sm: dict) -> dict:
     """Return the JSON body appropriate for the channel's incoming webhook."""
     text = format_plain(sm)
@@ -109,6 +136,13 @@ def format_payload(channel: str, sm: dict) -> dict:
         return {"text": text, "parse_mode": "None"}
     if channel == "feishu":
         return {"msg_type": "text", "content": {"text": text}}
+    if channel == "pushplus":
+        return {
+            "token": os.getenv("PUSHPLUS_TOKEN", ""),
+            "title": f"{sm['title']} · {sm['date']}",
+            "content": _markdown(sm),
+            "template": "markdown",
+        }
     return {"text": text}
 
 
@@ -125,6 +159,27 @@ def send(cfg: dict, digest: dict, date_str: str,
     sm = build_summary(cfg, digest, date_str, serp)
     channel = cfg["notify"].get("channel", "plain")
     preview = format_plain(sm)
+
+    # PushPlus uses its own API endpoint and token (not a generic webhook URL).
+    if channel == "pushplus":
+        token = os.getenv("PUSHPLUS_TOKEN", "").strip()
+        if not token:
+            return {"sent": False, "reason": "PUSHPLUS_TOKEN not set",
+                    "channel": channel, "preview": preview}
+        payload = format_payload(channel, sm)
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        req = urllib.request.Request(
+            "http://www.pushplus.plus/send",
+            data=body, headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return {"sent": True, "channel": channel, "status": resp.status,
+                        "preview": preview}
+        except Exception as e:
+            return {"sent": False, "channel": channel, "error": str(e),
+                    "preview": preview}
+
+    # Generic webhook (slack, discord, telegram, feishu, etc.)
     url = os.getenv("NOTIFY_WEBHOOK_URL")
     if not url:
         return {"sent": False, "reason": "NOTIFY_WEBHOOK_URL not set",
