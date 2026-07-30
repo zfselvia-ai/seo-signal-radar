@@ -1,197 +1,97 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T02:46:13.875505+00:00",
-  "headline": "Google Updates Open Knowledge Format & GSC Social Reporting; 89% of ChatGPT Search Demand Has No Owner",
+  "generated_at": "2026-07-30T04:08:19.110496+00:00",
+  "headline": "Google launches GSC Platform Properties for social tracking; ChatGPT demonstrates agentic web discovery",
   "sections": {
     "Confirmed Search Updates": [
       {
-        "what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.",
-        "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。",
-        "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.",
+        "what_happened": "Google launches Platform Properties in GSC to track Instagram, TikTok, X, and YouTube in Search and Discover.",
+        "why_it_matters": "允许SEO专家在GSC中直接监测品牌社交媒体资产在Google Search、Discover和News中的曝光和CTR。在AI Overviews和丰富SERP占位导致官网流量下滑的背景下，这为衡量“去中心化搜索”和多渠道品牌曝光提供了官方数据支持。",
+        "evidence": "Official Google Search Central Blog announcement and global rollout in Search Console.",
         "who_it_affects": "all",
-        "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。",
+        "what_to_do": "在Google Search Console中配置并验证品牌的社交媒体平台属性（Platform Properties），开始监测社交内容在Google渠道的流量表现。",
         "confidence": "Confirmed",
         "impact": "P1",
         "section": "Confirmed Search Updates",
-        "score": 90,
+        "score": 92,
         "sources": [
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.",
-        "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。",
-        "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.",
-        "who_it_affects": "publisher / SaaS / ecommerce / UGC",
-        "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。",
-        "confidence": "Confirmed",
-        "impact": "P1",
-        "section": "Confirmed Search Updates",
-        "score": 87,
-        "sources": [
+            "name": "Google Search Central Blog",
+            "url": "https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide"
+          },
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"
-          }
-        ]
-      }
-    ],
-    "Technical SEO Experiments": [
-      {
-        "what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.",
-        "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。",
-        "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.",
-        "who_it_affects": "all",
-        "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。",
-        "confidence": "Confirmed",
-        "impact": "P2",
-        "section": "Technical SEO Experiments",
-        "score": 80,
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"
+            "name": "Aleyda Solis",
+            "url": "https://x.com/aleyda/status/2082548747213426842"
           }
         ]
       }
     ],
     "AI Search / GEO": [
       {
-        "what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.",
-        "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。",
-        "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.",
-        "who_it_affects": "ecommerce / publisher / SaaS / international",
-        "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。",
-        "confidence": "Data-backed",
+        "what_happened": "ChatGPT autonomously queries and returns bookable inventory from travel site using structured data and GET endpoints.",
+        "why_it_matters": "证明了AI Agent（如ChatGPT）能够自主识别网页上的结构化数据，并通过公开的GET API端点直接获取实时数据进行交互。这意味着网站无需复杂的MCP或插件，只需通过标准的Structured Data和开放的GET接口即可实现“Agent-ready”。",
+        "evidence": "Practitioner observation and reproducible ChatGPT query on Alpina.travel without custom plugins.",
+        "who_it_affects": "ecommerce / SaaS / local / international",
+        "what_to_do": "检查并优化网站的Schema结构化数据，确保关键交互（如查询、搜索）使用可被公开爬取的GET请求端点，以便AI Agent能够直接调用。",
+        "confidence": "Observed",
         "impact": "P2",
         "section": "AI Search / GEO",
-        "score": 85,
+        "score": 68,
         "sources": [
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.",
-        "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。",
-        "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.",
-        "who_it_affects": "ecommerce / publisher / SaaS / local",
-        "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。",
-        "confidence": "Data-backed",
-        "impact": "P2",
-        "section": "AI Search / GEO",
-        "score": 88,
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"
+            "name": "Andy Davies",
+            "url": "https://x.com/cyberandy/status/2082430686531612996"
           }
         ]
       }
     ],
     "Today's Action Items": [
       {
-        "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。",
+        "what_to_do": "在Google Search Console中验证并配置品牌的社交媒体平台属性（Platform Properties），追踪社媒内容在Google Search/Discover的流量。",
         "impact": "P1"
       },
       {
-        "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。",
+        "what_to_do": "评估核心业务接口（如库存查询、预订），确保提供清晰的Schema结构化数据和公开的GET请求端点，以适配AI Agent的自主检索与交互。",
         "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Kevin Indig's study of 1,094 categories shows 89% of AI search demand has no clear brand owner in ChatGPT.",
-      "why_it_matters": "揭示了在 ChatGPT/GEO 领域，品牌提及和引用的预测性极低，目前仍是高度碎片化且未被垄断的蓝海。",
-      "evidence": "Data across 1,094 categories showing only 15.2% of categories have a dominant brand owner in ChatGPT.",
-      "who_it_affects": "ecommerce / publisher / SaaS / international",
-      "what_to_do": "针对核心分类进行 GEO 优化，抢占尚未被竞品垄断的 AI 搜索引用份额。",
-      "confidence": "Data-backed",
-      "impact": "P2",
-      "section": "AI Search / GEO",
-      "score": 85,
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google announced version 0.2 of the Open Knowledge Format, introducing five new trust signals.",
-      "why_it_matters": "知识图谱和实体识别的底层标准更新，直接影响 Google 对信息可信度（E-E-A-T）和实体关系的理解。",
-      "evidence": "Google's official release of Open Knowledge Format v0.2 spec adding 5 trust signals.",
+      "what_happened": "Google launches Platform Properties in GSC to track Instagram, TikTok, X, and YouTube in Search and Discover.",
+      "why_it_matters": "允许SEO专家在GSC中直接监测品牌社交媒体资产在Google Search、Discover和News中的曝光和CTR。在AI Overviews和丰富SERP占位导致官网流量下滑的背景下，这为衡量“去中心化搜索”和多渠道品牌曝光提供了官方数据支持。",
+      "evidence": "Official Google Search Central Blog announcement and global rollout in Search Console.",
       "who_it_affects": "all",
-      "what_to_do": "研究新版 Open Knowledge Format 规范，优化网站的实体结构化数据和信任信号。",
+      "what_to_do": "在Google Search Console中配置并验证品牌的社交媒体平台属性（Platform Properties），开始监测社交内容在Google渠道的流量表现。",
       "confidence": "Confirmed",
       "impact": "P1",
       "section": "Confirmed Search Updates",
-      "score": 90,
+      "score": 92,
       "sources": [
         {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/googles-open-knowledge-format-adds-five-trust-signals/584120/"
+          "name": "Google Search Central Blog",
+          "url": "https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide"
+        },
+        {
+          "name": "Aleyda Solis",
+          "url": "https://x.com/aleyda/status/2082548747213426842"
         }
       ]
     },
     {
-      "what_happened": "Analysis of Perplexity's live answer stream reveals how it selects web sources, video, and local citations.",
-      "why_it_matters": "揭示了 Perplexity 并非直接生成答案，而是通过实时检索流筛选网页，这意味着所有实时查询皆可被优化。",
-      "evidence": "Analysis of Perplexity's live network stream and API response payloads during query execution.",
-      "who_it_affects": "ecommerce / publisher / SaaS / local",
-      "what_to_do": "针对 Perplexity 的实时检索流特征，优化页面加载速度、结构化数据和直接回答段落。",
-      "confidence": "Data-backed",
+      "what_happened": "ChatGPT autonomously queries and returns bookable inventory from travel site using structured data and GET endpoints.",
+      "why_it_matters": "证明了AI Agent（如ChatGPT）能够自主识别网页上的结构化数据，并通过公开的GET API端点直接获取实时数据进行交互。这意味着网站无需复杂的MCP或插件，只需通过标准的Structured Data和开放的GET接口即可实现“Agent-ready”。",
+      "evidence": "Practitioner observation and reproducible ChatGPT query on Alpina.travel without custom plugins.",
+      "who_it_affects": "ecommerce / SaaS / local / international",
+      "what_to_do": "检查并优化网站的Schema结构化数据，确保关键交互（如查询、搜索）使用可被公开爬取的GET请求端点，以便AI Agent能够直接调用。",
+      "confidence": "Observed",
       "impact": "P2",
       "section": "AI Search / GEO",
-      "score": 88,
+      "score": 68,
       "sources": [
         {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/how-perplexity-actually-picks-sources-i-read-the-stream-not-the-answers/583769/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google opens Search Console platform properties and social/video search data reporting to everyone worldwide.",
-      "why_it_matters": "允许站长在 GSC 中直接监测和分析来自社交媒体和视频搜索的流量与曝光数据，提升多渠道 SEO 归因。",
-      "evidence": "Google's global rollout of platform properties and official guide on reading social/video search data.",
-      "who_it_affects": "publisher / SaaS / ecommerce / UGC",
-      "what_to_do": "登录 GSC 检查并配置平台属性，分析社交与视频搜索带来的有机流量。",
-      "confidence": "Confirmed",
-      "impact": "P1",
-      "section": "Confirmed Search Updates",
-      "score": 87,
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/google-opens-search-console-social-reporting-to-everyone/584144/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google's John Mueller warns against testing conflicting metadata, advising SEOs to fix conflicts directly.",
-      "why_it_matters": "明确了 Google 处理冲突元数据（如 conflicting canonicals 或 robots 标签）时的不可预测性，测试无意义。",
-      "evidence": "Public statement by Google's John Mueller on Mastodon/X regarding metadata conflicts.",
-      "who_it_affects": "all",
-      "what_to_do": "运行技术 SEO 审计，清理 HTML、HTTP 标头和 XML 站点地图中所有冲突的元数据指令。",
-      "confidence": "Confirmed",
-      "impact": "P2",
-      "section": "Technical SEO Experiments",
-      "score": 80,
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/googles-mueller-fix-conflicting-metadata-dont-test-it/584055/"
+          "name": "Andy Davies",
+          "url": "https://x.com/cyberandy/status/2082430686531612996"
         }
       ]
     }
