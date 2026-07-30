@@ -163,16 +163,15 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-07-30T07:46:06.231089+00:00",
+    "ran_at": "2026-07-30T07:48:57.544941+00:00",
     "sources": {
       "x": {
-        "ok": 27,
+        "ok": 28,
         "total": 29,
         "failed_names": [
-          "JohnMu",
-          "VeryWellVersed"
+          "JohnMu"
         ],
-        "items": 72
+        "items": 74
       },
       "rss": {
         "ok": 7,
@@ -189,8 +188,8 @@
         "items": 0
       }
     },
-    "candidates_fetched": 87,
-    "candidates_fresh": 1,
+    "candidates_fetched": 89,
+    "candidates_fresh": 0,
     "llm_provider": ""
   }
 }
