@@ -1,331 +1,99 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T04:59:37.851753+00:00",
-  "headline": "Google Search Console Platform Properties globally live; AI Overviews expand to France",
+  "generated_at": "2026-07-30T07:12:38.404846+00:00",
+  "headline": "Cloudflare launches granular AI bot controls; Case study warns firewall bot defense can strip SEO metadata",
   "sections": {
-    "Confirmed Search Updates": [
-      {
-        "what_happened": "GSC Platform Properties Globally Live | Google Search Console 平台属性全球上线，支持社交与视频数据监测",
-        "why_it_matters": "允许SEO追踪品牌在 Instagram、TikTok、X 和 YouTube 等第三方平台在 Google Search、Discover 和 News 中的表现，帮助评估整体品牌搜索资产。",
-        "evidence": "Official Google Search Central Blog announcement and global rollout confirmation.",
-        "who_it_affects": "all",
-        "what_to_do": "在 GSC 中配置 Platform Properties，开始监测社交和视频内容在 Google 生态中的曝光与点击。",
-        "confidence": "Confirmed",
-        "impact": "P1",
-        "section": "Confirmed Search Updates",
-        "score": 95,
-        "sources": [
-          {
-            "name": "Google Search Central Blog",
-            "url": "https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide"
-          },
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2082446351908937778"
-          }
-        ]
-      },
-      {
-        "what_happened": "Google AI Overviews Live in France at 27% SERP Coverage | Google AI Overviews 在法国正式上线，覆盖27%的搜索结果页",
-        "why_it_matters": "AI Overviews 在欧洲核心市场落地，Semrush Sensor 监测到 27% 的渗透率，国际化SEO必须开始应对流量分流和 GEO 优化。",
-        "evidence": "Semrush Sensor data and practitioner observations in France (Glenn Gabe, Lily Ray).",
-        "who_it_affects": "international / publisher / ecommerce",
-        "what_to_do": "监测法国站点的关键关键词是否触发 AI Overviews，评估流量波动并调整 GEO 策略。",
-        "confidence": "Confirmed",
-        "impact": "P1",
-        "section": "Confirmed Search Updates",
-        "score": 90,
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2082438935326642420"
-          },
-          {
-            "name": "lilyraynyc",
-            "url": "https://x.com/lilyraynyc/status/2082463681258893357"
-          }
-        ]
-      }
-    ],
-    "Official Explanations": [
-      {
-        "what_happened": "John Mueller: No Precedence Order for Conflicting Metadata | John Mueller：冲突的元数据没有公开的优先顺序",
-        "why_it_matters": "证实了当页面存在冲突的元数据（如 conflicting robots tags）时，Google 没有固定的解决逻辑，必须保持代码干净，而不是试图分析 Google 会优先选择哪一个。",
-        "evidence": "Statement by John Mueller: 'There's no publicly defined order of precedence... if you're giving conflicting metadata, you should fix it.'",
-        "who_it_affects": "all",
-        "what_to_do": "运行技术SEO审计，清理页面中所有冲突的 title、description 或 robots 指令，避免依赖 Google 的猜测。",
-        "confidence": "Confirmed",
-        "impact": "P2",
-        "section": "Official Explanations",
-        "score": 85,
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2082433531347718532"
-          }
-        ]
-      }
-    ],
-    "Technical SEO Experiments": [
-      {
-        "what_happened": "Claude Shared Chats Indexed: The Robots.txt vs Noindex Trap | Claude共享对话被索引：robots.txt与noindex冲突陷阱",
-        "why_it_matters": "揭示了经典技术SEO误区：如果用 robots.txt 封禁了抓取，Google 就无法解析页面上的 noindex 标签，导致 URL 仍会被索引。必须先允许抓取才能让 noindex 生效。",
-        "evidence": "CNET and Wired reports on Claude shared chats being indexed, with expert analysis from Glenn Gabe.",
-        "who_it_affects": "SaaS / UGC / all",
-        "what_to_do": "检查敏感或动态生成的 URL，确保不要同时使用 robots.txt 封禁和 HTML noindex；使用 x-robots-tag 或先允许抓取再 noindex。",
-        "confidence": "Data-backed",
-        "impact": "P2",
-        "section": "Technical SEO Experiments",
-        "score": 88,
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2082069384105971807"
-          }
-        ]
-      }
-    ],
     "AI Search / GEO": [
       {
-        "what_happened": "ChatGPT Restricts YMYL Query Fan-Outs to .gov Sites | ChatGPT将YMYL法律类查询的Query Fan-Out限制在.gov站点",
-        "why_it_matters": "ChatGPT 在处理高风险（YMYL）法律查询时，其 Query Fan-Out 机制会强制使用 site:.gov 进行检索，非政府站点极难在这些词下获得引用。",
-        "evidence": "Resoneo ChatGPT plugin analysis by Lily Ray showing 100% of cited domains in specific legal queries are .gov.",
-        "who_it_affects": "publisher / SaaS / all",
-        "what_to_do": "评估 YMYL 领域的 GEO 可行性。如果目标词触发了强烈的权威限制，应转向非 YMYL 的长尾词或品牌词。",
-        "confidence": "Observed",
-        "impact": "P2",
+        "what_happened": "Cloudflare introduces granular AI traffic controls, moving beyond one-size-fits-all blocking | Cloudflare 推出细粒度 AI 流量控制功能",
+        "why_it_matters": "传统的 robots.txt 或一刀切式阻断（Block All AI）会误伤有益的 AI 搜索引用流量（如 Perplexity/SearchGPT）。Cloudflare 的新功能允许站点在“允许 AI 搜索/引用”与“阻止 AI 模型训练/抓取”之间进行精细化平衡，这是 GEO 时代基础设施层的重要升级。",
+        "evidence": "official doc",
+        "evidence_detail": "Cloudflare has rolled out granular controls for AI bots, allowing site owners to distinguish between different types of AI traffic (such as search/citations vs. training scrapers) rather than relying on a binary block. This is managed directly within the Cloudflare dashboard under security/bot settings.",
+        "who_it_affects": "all",
+        "what_to_do": "登录 Cloudflare 后台，评估并调整 AI 爬虫策略，建议放行 AI 搜索/引用类 Bot（如 SearchGPT、Perplexity），同时阻断纯训练类 Bot。",
+        "confidence": "Speculative",
+        "impact": "P1",
         "section": "AI Search / GEO",
-        "score": 80,
-        "sources": [
-          {
-            "name": "lilyraynyc",
-            "url": "https://x.com/lilyraynyc/status/2082467744474169709"
-          }
-        ]
-      },
-      {
-        "what_happened": "Study: 89% of AI Search Demand Has No Clear Brand Owner | 研究显示：89%的AI搜索需求没有明确的品牌主导者",
-        "why_it_matters": "Kevin Indig 跨 1094 个品类的数据表明，仅 15.2% 的品类在 ChatGPT 中有明确的品牌推荐，GEO 窗口期依然完全敞开，且引用量并不能完全预测品牌提及。",
-        "evidence": "Data research by Kevin Indig across 1,094 categories published in Search Engine Journal.",
-        "who_it_affects": "ecommerce / SaaS / local / all",
-        "what_to_do": "针对无主导品牌的品类，通过优化第三方提及和结构化数据，抢占 ChatGPT 和 Claude 的推荐位。",
-        "confidence": "Data-backed",
-        "impact": "P2",
-        "section": "AI Search / GEO",
-        "score": 82,
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"
-          }
-        ]
-      }
-    ],
-    "Research & Retrieval": [
-      {
-        "what_happened": "LLM Brand Recommendations Correlate with Search Rankings, Wiki, and Reddit | LLM品牌推荐与搜索排名、维基百科及Reddit高度相关",
-        "why_it_matters": "证实了 GEO 的底层逻辑：LLM 推荐并非凭空产生，而是高度依赖传统搜索引擎排名、Wikipedia 实体存在以及 Reddit 上的真实讨论。GEO 依然要建立在传统 SEO 基础之上。",
-        "evidence": "Analysis of 20M URLs and citation index regressions shared by Lily Ray.",
-        "who_it_affects": "ecommerce / SaaS / publisher / all",
-        "what_to_do": "协同传统 SEO（提升排名）、公关（建立 Wikipedia/Wikidata 实体）和社群运营（在 Reddit/Quora 布局讨论）来做 GEO。",
-        "confidence": "Data-backed",
-        "impact": "P2",
-        "section": "Research & Retrieval",
-        "score": 87,
-        "sources": [
-          {
-            "name": "lilyraynyc",
-            "url": "https://x.com/lilyraynyc/status/2082535760889283017"
-          }
-        ]
+        "score": 85,
+        "sources": [],
+        "unverified": true
       }
     ],
     "Playbook: Worth Testing": [
       {
-        "what_happened": "Playbook: Scale SEO Content Updates with Claude Code | 实战指南：利用 Claude Code 规模化诊断并更新衰退内容",
-        "why_it_matters": "提供了一个可落地的技术工作流，利用本地终端工具 Claude Code 自动分析内容衰退，保护排名并挽回流量损失。",
-        "evidence": "14-step workflow published on Search Engine Land demonstrating traffic and revenue gains.",
-        "who_it_affects": "publisher / SaaS / ecommerce",
-        "what_to_do": "部署 Claude Code，运行内容衰退诊断脚本，自动生成更新建议并批量应用。",
+        "what_happened": "Aggressive firewall bot mitigation can strip critical SEO metadata and block search crawlers | 激进的防火墙防爬虫策略可能导致 SEO 元数据被剥离",
+        "why_it_matters": "在应对恶意 Bot 攻击时，运维团队常通过 CDN/防火墙（如 Cloudflare、AWS WAF）实施紧急限制。这可能导致服务器在过载时向爬虫返回剥离了 title、canonical、hreflang 和 schema 的简化版 HTML，或者直接误杀 Googlebot，导致索引量和排名暴跌。",
+        "evidence": "practitioner_observation",
+        "evidence_detail": "A case study of a large online marketplace revealed a severe SEO drop caused by firewall-level bot restrictions that stripped title tags, hreflang, canonicals, and schema across core page types during a bot attack. After upgrading servers, implementing robots.txt crawl delays for non-essential bots, and whitelisting search crawlers, indexation recovered from 250k to 600k pages.",
+        "who_it_affects": "ecommerce / publisher / SaaS / UGC / all",
+        "what_to_do": "检查 CDN/WAF 的速率限制和 Bot 管理规则，确保在触发防御机制时不会向 Googlebot 返回受损的 HTML，并使用工具模拟不同 IP/User-Agent 进行验证。",
         "confidence": "Data-backed",
         "impact": "P2",
         "section": "Playbook: Worth Testing",
-        "score": 89,
-        "how_to_test": "选择 20 个流量衰退的页面，使用 Claude Code 分析其与当前 Top 3 竞品的差距，自动生成并替换过时段落。",
-        "success_metric": "30天内这 20 个页面的 Google Search Console 展现量和点击量回升幅度。",
-        "effort": "中等。需要配置 Claude Code 命令行工具，存在 AI 生成内容幻觉风险，需人工审核。",
+        "score": 72,
+        "how_to_test": "使用外部测试工具（如 SERP Lens 或自定义脚本）模拟 Googlebot，从不同区域的 IP 访问网站，特别是在高负载或触发防火墙规则时，检查返回的 HTML 中 title、canonical、hreflang 和 schema 是否完整，以及是否返回了 503 或 403 状态码。",
+        "success_metric": "确保 Googlebot 在任何负载/防御状态下均能 100% 获取完整的 SEO 元数据和 200 OK 状态码，避免索引量异常波动。",
+        "effort": "低成本。主要风险是运维团队在配置防火墙时未将 Googlebot/Bingbot 列入白名单，或在边缘计算（Edge Functions）中错误地剥离了元数据。",
         "sources": [
           {
-            "name": "Search Engine Land",
-            "url": "https://searchengineland.com/scale-seo-content-updates-claude-code-483862"
+            "name": "brodieseo",
+            "url": "https://x.com/brodieseo/status/2082719739139469318",
+            "excerpt": "This was an SEO disaster... while it may look like the result of a core update or even a spam update, it wasn't. It was a result of bots heavily impacting the servers of an online marketplace (this is just one of many domains), and the team needed to put in place bot access restrictions at the firewall level that destroyed SEO just to keep the site up. To make matters worse, important attributes such as title tags, hreflang, canonicals, schema and more were removed or altered across core page types while the teams were scrambling to resolve the issues... not ideal at all. Now that their servers have been upgraded, we've put in place crawl delay mechanisms in robots.txt for all bots, blocked…",
+            "author": "@brodieseo",
+            "published": "2026-07-30T06:47:35+00:00",
+            "source_type": "expert_analysis"
           }
         ]
       }
     ],
     "Today's Action Items": [
       {
-        "what_to_do": "在 GSC 中配置并验证 Platform Properties，开始监测社交和视频内容在 Google 搜索中的表现。",
+        "what_to_do": "登录 Cloudflare 后台配置精细化 AI 爬虫策略，平衡 AI 搜索流量与训练数据保护。",
         "impact": "P1"
       },
       {
-        "what_to_do": "针对法国市场，监测 AI Overviews 的触发情况并评估流量影响。",
-        "impact": "P1"
-      },
-      {
-        "what_to_do": "检查敏感 URL 的 robots.txt 与 noindex 配置，确保没有陷入无法解析 noindex 的索引陷阱。",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "测试使用 Claude Code 自动诊断并批量更新流量衰退的页面。",
+        "what_to_do": "审计 CDN/WAF 防火墙规则，确保在高负载防爬虫机制触发时，Googlebot 不会被误杀或返回缺失元数据的 HTML。",
         "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "GSC Platform Properties Globally Live | Google Search Console 平台属性全球上线，支持社交与视频数据监测",
-      "why_it_matters": "允许SEO追踪品牌在 Instagram、TikTok、X 和 YouTube 等第三方平台在 Google Search、Discover 和 News 中的表现，帮助评估整体品牌搜索资产。",
-      "evidence": "Official Google Search Central Blog announcement and global rollout confirmation.",
+      "what_happened": "Cloudflare introduces granular AI traffic controls, moving beyond one-size-fits-all blocking | Cloudflare 推出细粒度 AI 流量控制功能",
+      "why_it_matters": "传统的 robots.txt 或一刀切式阻断（Block All AI）会误伤有益的 AI 搜索引用流量（如 Perplexity/SearchGPT）。Cloudflare 的新功能允许站点在“允许 AI 搜索/引用”与“阻止 AI 模型训练/抓取”之间进行精细化平衡，这是 GEO 时代基础设施层的重要升级。",
+      "evidence": "official doc",
+      "evidence_detail": "Cloudflare has rolled out granular controls for AI bots, allowing site owners to distinguish between different types of AI traffic (such as search/citations vs. training scrapers) rather than relying on a binary block. This is managed directly within the Cloudflare dashboard under security/bot settings.",
       "who_it_affects": "all",
-      "what_to_do": "在 GSC 中配置 Platform Properties，开始监测社交和视频内容在 Google 生态中的曝光与点击。",
-      "confidence": "Confirmed",
+      "what_to_do": "登录 Cloudflare 后台，评估并调整 AI 爬虫策略，建议放行 AI 搜索/引用类 Bot（如 SearchGPT、Perplexity），同时阻断纯训练类 Bot。",
+      "confidence": "Speculative",
       "impact": "P1",
-      "section": "Confirmed Search Updates",
-      "score": 95,
-      "sources": [
-        {
-          "name": "Google Search Central Blog",
-          "url": "https://developers.google.com/search/blog/2026/07/platform-properties-social-video-guide"
-        },
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2082446351908937778"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google AI Overviews Live in France at 27% SERP Coverage | Google AI Overviews 在法国正式上线，覆盖27%的搜索结果页",
-      "why_it_matters": "AI Overviews 在欧洲核心市场落地，Semrush Sensor 监测到 27% 的渗透率，国际化SEO必须开始应对流量分流和 GEO 优化。",
-      "evidence": "Semrush Sensor data and practitioner observations in France (Glenn Gabe, Lily Ray).",
-      "who_it_affects": "international / publisher / ecommerce",
-      "what_to_do": "监测法国站点的关键关键词是否触发 AI Overviews，评估流量波动并调整 GEO 策略。",
-      "confidence": "Confirmed",
-      "impact": "P1",
-      "section": "Confirmed Search Updates",
-      "score": 90,
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2082438935326642420"
-        },
-        {
-          "name": "lilyraynyc",
-          "url": "https://x.com/lilyraynyc/status/2082463681258893357"
-        }
-      ]
-    },
-    {
-      "what_happened": "John Mueller: No Precedence Order for Conflicting Metadata | John Mueller：冲突的元数据没有公开的优先顺序",
-      "why_it_matters": "证实了当页面存在冲突的元数据（如 conflicting robots tags）时，Google 没有固定的解决逻辑，必须保持代码干净，而不是试图分析 Google 会优先选择哪一个。",
-      "evidence": "Statement by John Mueller: 'There's no publicly defined order of precedence... if you're giving conflicting metadata, you should fix it.'",
-      "who_it_affects": "all",
-      "what_to_do": "运行技术SEO审计，清理页面中所有冲突的 title、description 或 robots 指令，避免依赖 Google 的猜测。",
-      "confidence": "Confirmed",
-      "impact": "P2",
-      "section": "Official Explanations",
+      "section": "AI Search / GEO",
       "score": 85,
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2082433531347718532"
-        }
-      ]
+      "sources": [],
+      "unverified": true
     },
     {
-      "what_happened": "Claude Shared Chats Indexed: The Robots.txt vs Noindex Trap | Claude共享对话被索引：robots.txt与noindex冲突陷阱",
-      "why_it_matters": "揭示了经典技术SEO误区：如果用 robots.txt 封禁了抓取，Google 就无法解析页面上的 noindex 标签，导致 URL 仍会被索引。必须先允许抓取才能让 noindex 生效。",
-      "evidence": "CNET and Wired reports on Claude shared chats being indexed, with expert analysis from Glenn Gabe.",
-      "who_it_affects": "SaaS / UGC / all",
-      "what_to_do": "检查敏感或动态生成的 URL，确保不要同时使用 robots.txt 封禁和 HTML noindex；使用 x-robots-tag 或先允许抓取再 noindex。",
-      "confidence": "Data-backed",
-      "impact": "P2",
-      "section": "Technical SEO Experiments",
-      "score": 88,
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2082069384105971807"
-        }
-      ]
-    },
-    {
-      "what_happened": "ChatGPT Restricts YMYL Query Fan-Outs to .gov Sites | ChatGPT将YMYL法律类查询的Query Fan-Out限制在.gov站点",
-      "why_it_matters": "ChatGPT 在处理高风险（YMYL）法律查询时，其 Query Fan-Out 机制会强制使用 site:.gov 进行检索，非政府站点极难在这些词下获得引用。",
-      "evidence": "Resoneo ChatGPT plugin analysis by Lily Ray showing 100% of cited domains in specific legal queries are .gov.",
-      "who_it_affects": "publisher / SaaS / all",
-      "what_to_do": "评估 YMYL 领域的 GEO 可行性。如果目标词触发了强烈的权威限制，应转向非 YMYL 的长尾词或品牌词。",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "AI Search / GEO",
-      "score": 80,
-      "sources": [
-        {
-          "name": "lilyraynyc",
-          "url": "https://x.com/lilyraynyc/status/2082467744474169709"
-        }
-      ]
-    },
-    {
-      "what_happened": "Study: 89% of AI Search Demand Has No Clear Brand Owner | 研究显示：89%的AI搜索需求没有明确的品牌主导者",
-      "why_it_matters": "Kevin Indig 跨 1094 个品类的数据表明，仅 15.2% 的品类在 ChatGPT 中有明确的品牌推荐，GEO 窗口期依然完全敞开，且引用量并不能完全预测品牌提及。",
-      "evidence": "Data research by Kevin Indig across 1,094 categories published in Search Engine Journal.",
-      "who_it_affects": "ecommerce / SaaS / local / all",
-      "what_to_do": "针对无主导品牌的品类，通过优化第三方提及和结构化数据，抢占 ChatGPT 和 Claude 的推荐位。",
-      "confidence": "Data-backed",
-      "impact": "P2",
-      "section": "AI Search / GEO",
-      "score": 82,
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/"
-        }
-      ]
-    },
-    {
-      "what_happened": "LLM Brand Recommendations Correlate with Search Rankings, Wiki, and Reddit | LLM品牌推荐与搜索排名、维基百科及Reddit高度相关",
-      "why_it_matters": "证实了 GEO 的底层逻辑：LLM 推荐并非凭空产生，而是高度依赖传统搜索引擎排名、Wikipedia 实体存在以及 Reddit 上的真实讨论。GEO 依然要建立在传统 SEO 基础之上。",
-      "evidence": "Analysis of 20M URLs and citation index regressions shared by Lily Ray.",
-      "who_it_affects": "ecommerce / SaaS / publisher / all",
-      "what_to_do": "协同传统 SEO（提升排名）、公关（建立 Wikipedia/Wikidata 实体）和社群运营（在 Reddit/Quora 布局讨论）来做 GEO。",
-      "confidence": "Data-backed",
-      "impact": "P2",
-      "section": "Research & Retrieval",
-      "score": 87,
-      "sources": [
-        {
-          "name": "lilyraynyc",
-          "url": "https://x.com/lilyraynyc/status/2082535760889283017"
-        }
-      ]
-    },
-    {
-      "what_happened": "Playbook: Scale SEO Content Updates with Claude Code | 实战指南：利用 Claude Code 规模化诊断并更新衰退内容",
-      "why_it_matters": "提供了一个可落地的技术工作流，利用本地终端工具 Claude Code 自动分析内容衰退，保护排名并挽回流量损失。",
-      "evidence": "14-step workflow published on Search Engine Land demonstrating traffic and revenue gains.",
-      "who_it_affects": "publisher / SaaS / ecommerce",
-      "what_to_do": "部署 Claude Code，运行内容衰退诊断脚本，自动生成更新建议并批量应用。",
+      "what_happened": "Aggressive firewall bot mitigation can strip critical SEO metadata and block search crawlers | 激进的防火墙防爬虫策略可能导致 SEO 元数据被剥离",
+      "why_it_matters": "在应对恶意 Bot 攻击时，运维团队常通过 CDN/防火墙（如 Cloudflare、AWS WAF）实施紧急限制。这可能导致服务器在过载时向爬虫返回剥离了 title、canonical、hreflang 和 schema 的简化版 HTML，或者直接误杀 Googlebot，导致索引量和排名暴跌。",
+      "evidence": "practitioner_observation",
+      "evidence_detail": "A case study of a large online marketplace revealed a severe SEO drop caused by firewall-level bot restrictions that stripped title tags, hreflang, canonicals, and schema across core page types during a bot attack. After upgrading servers, implementing robots.txt crawl delays for non-essential bots, and whitelisting search crawlers, indexation recovered from 250k to 600k pages.",
+      "who_it_affects": "ecommerce / publisher / SaaS / UGC / all",
+      "what_to_do": "检查 CDN/WAF 的速率限制和 Bot 管理规则，确保在触发防御机制时不会向 Googlebot 返回受损的 HTML，并使用工具模拟不同 IP/User-Agent 进行验证。",
       "confidence": "Data-backed",
       "impact": "P2",
       "section": "Playbook: Worth Testing",
-      "score": 89,
-      "how_to_test": "选择 20 个流量衰退的页面，使用 Claude Code 分析其与当前 Top 3 竞品的差距，自动生成并替换过时段落。",
-      "success_metric": "30天内这 20 个页面的 Google Search Console 展现量和点击量回升幅度。",
-      "effort": "中等。需要配置 Claude Code 命令行工具，存在 AI 生成内容幻觉风险，需人工审核。",
+      "score": 72,
+      "how_to_test": "使用外部测试工具（如 SERP Lens 或自定义脚本）模拟 Googlebot，从不同区域的 IP 访问网站，特别是在高负载或触发防火墙规则时，检查返回的 HTML 中 title、canonical、hreflang 和 schema 是否完整，以及是否返回了 503 或 403 状态码。",
+      "success_metric": "确保 Googlebot 在任何负载/防御状态下均能 100% 获取完整的 SEO 元数据和 200 OK 状态码，避免索引量异常波动。",
+      "effort": "低成本。主要风险是运维团队在配置防火墙时未将 Googlebot/Bingbot 列入白名单，或在边缘计算（Edge Functions）中错误地剥离了元数据。",
       "sources": [
         {
-          "name": "Search Engine Land",
-          "url": "https://searchengineland.com/scale-seo-content-updates-claude-code-483862"
+          "name": "brodieseo",
+          "url": "https://x.com/brodieseo/status/2082719739139469318",
+          "excerpt": "This was an SEO disaster... while it may look like the result of a core update or even a spam update, it wasn't. It was a result of bots heavily impacting the servers of an online marketplace (this is just one of many domains), and the team needed to put in place bot access restrictions at the firewall level that destroyed SEO just to keep the site up. To make matters worse, important attributes such as title tags, hreflang, canonicals, schema and more were removed or altered across core page types while the teams were scrambling to resolve the issues... not ideal at all. Now that their servers have been upgraded, we've put in place crawl delay mechanisms in robots.txt for all bots, blocked…",
+          "author": "@brodieseo",
+          "published": "2026-07-30T06:47:35+00:00",
+          "source_type": "expert_analysis"
         }
       ]
     }
@@ -437,5 +205,36 @@
       "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
       "triggers_brief": true
     }
-  ]
+  ],
+  "run_meta": {
+    "ran_at": "2026-07-30T07:12:12.842739+00:00",
+    "sources": {
+      "x": {
+        "ok": 27,
+        "total": 29,
+        "failed_names": [
+          "JohnMu",
+          "thetafferboy"
+        ],
+        "items": 73
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 15
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 88,
+    "candidates_fresh": 3,
+    "llm_provider": ""
+  }
 }
