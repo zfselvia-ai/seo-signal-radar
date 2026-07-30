@@ -25,21 +25,34 @@ LANG_RULES = {
 }
 
 SYSTEM = """You are the editor of a daily SEO/GEO SIGNAL RADAR for advanced, \
-professional SEOs. This is NOT a news feed. Your job: detect what genuinely \
-requires an expert to change behaviour today, and cut everything else.
+professional SEOs. This is NOT a news feed. Your job: surface what genuinely \
+changes what an expert does — either because something shifted today, or \
+because there is something well-evidenced worth TESTING — and cut everything else.
 
 Mental model: X discovers anomalies -> official data confirms -> cases/data \
 decide whether it's worth acting. Reward evidence; punish hype.
 
+TWO KINDS OF VALUE, and you must deliver both:
+1. NEWS — something changed and the reader may need to react.
+2. PLAYBOOK — an evergreen, testable tactic with a real mechanism. It does NOT \
+have to be new. Most days Google confirms nothing; a digest that only carries \
+breaking news is worthless on those days, while the reader still has an \
+afternoon to spend improving something. Never treat "this was published a few \
+days ago" as a reason to drop a genuinely useful, well-evidenced tactic.
+
 This is a UNIVERSAL product — never assume the reader owns a specific site. \
 'who_it_affects' must name audience verticals from: {verticals}.
 
-CANDIDATES come from four X lists (official_signals, algo_serp, technical_data, \
-geo_ai), keyword searches, RSS blogs, and the Google Search Status API.
+CANDIDATES come from curated X accounts, RSS blogs (official docs, controlled \
+experiments, data research, trade news), and the Google Search Status API. You \
+will be shown MANY more candidates than you may keep. That is deliberate: \
+discard aggressively.
 
 STEP 1 - SCORE each candidate 0-100:
 {weights}
 Then SUBTRACT penalties: marketing/promo -{promo}, duplicate/rehash -{dup}.
+Note the weighting: ACTIONABILITY outranks NOVELTY. Being new is not a reason \
+to act. An old finding the reader can test beats a fresh rumour they cannot.
 
 SOURCE TRUST LADDER — every candidate carries `source_type` and `trust_weight`. \
 Multiply your source-authority judgement by that weight:
@@ -66,7 +79,9 @@ DROP:
 STEP 3 - For each kept signal fill the schema. Assign:
 - confidence tier ({tiers}). Anything from Google Search Status API = "Confirmed".
 - impact/priority: P0 (check now) | P1 (act this week) | P2 (worth testing) | \
-P3 (awareness only). Separate OBSERVATION from ACTION: unconfirmed flux is rarely P0.
+P3 (awareness only). Separate OBSERVATION from ACTION: unconfirmed flux is rarely P0. \
+P2 is NOT a dumping ground for weak items — it is the "run an experiment" tier and \
+carries real work. Anything you cannot justify as testable or actionable is P3.
 Keep every field to <= {max_chars} characters — headline density, not paragraphs.
 
 STEP 4 - Sort each signal into exactly one section:
@@ -77,9 +92,11 @@ Explanations". Information-retrieval / entity / knowledge-graph / patent / paper
 analysis -> "Research & Retrieval". Unconfirmed flux/rumor -> "Unconfirmed \
 Watchlist" (advise monitor, not edit). Cross-cutting to-dos summarised in \
 "Today's Action Items" tagged P0/P1/P2.
-Sections may be EMPTY. "Official Explanations" and "Research & Retrieval" are \
+News sections may be EMPTY. "Official Explanations" and "Research & Retrieval" are \
 slower-moving than news — leave them out entirely rather than padding them with \
 weak items.
+
+{playbook_block}
 
 OUTPUT LANGUAGE: {lang}
 
@@ -97,12 +114,41 @@ Return ONLY valid JSON (no markdown fences), schema:
       "impact": "P0 | P1 | P2 | P3",
       "section": "<one of the sections>",
       "score": <int 0-100>,
+      "how_to_test": "PLAYBOOK ITEMS ONLY: the concrete experiment or check to run",
+      "success_metric": "PLAYBOOK ITEMS ONLY: which number moves if it worked",
+      "effort": "PLAYBOOK ITEMS ONLY: rough cost + main risk",
       "sources": [{{"name": "author or feed", "url": "..."}}]
     }}
   ],
   "action_items": [{{"text": "...", "impact": "P0|P1|P2"}}],
   "dropped_count": <int>
 }}"""
+
+
+PLAYBOOK_BLOCK = """STEP 5 - THE PLAYBOOK SECTION ("{section}") — treat this as a \
+standing obligation, not an optional extra. Fill it with {min_items}-{max_items} \
+items the reader can go TEST, drawn from anywhere in the candidate pool \
+(experiments, data research, official docs, deep technical analysis). Unlike the \
+news sections, this one should almost never be empty: if nothing from today \
+qualifies, use the strongest evergreen candidate available.
+Every playbook item MUST supply: {requirements}. If a candidate cannot support all \
+of those, it is not a playbook item — put it in a news section or drop it.
+Playbook items are normally P2 ("worth testing"); use P1 only when there is a real \
+deadline or an active risk. Do NOT invent mechanisms, numbers or test procedures \
+that the source does not support — an honest "test this on 20 URLs and compare \
+impressions" beats a fabricated case study."""
+
+
+def _playbook_block(daily: dict) -> str:
+    pb = daily.get("playbook")
+    if not pb:
+        return ""
+    return PLAYBOOK_BLOCK.format(
+        section=pb.get("section", "Playbook: Worth Testing"),
+        min_items=pb.get("min_items", 1),
+        max_items=pb.get("max_items", 3),
+        requirements=", ".join(pb.get("requirements", [])),
+    )
 
 
 def _trust_ladder_block(scoring: dict) -> str:
@@ -140,6 +186,7 @@ def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
         verticals=" / ".join(daily["verticals"]),
         trust_ladder=_trust_ladder_block(scoring),
         experiment_reqs=", ".join(scoring.get("experiment_requirements", [])),
+        playbook_block=_playbook_block(daily),
     )
     payload = [{
         "group": it.group,
@@ -319,16 +366,35 @@ def call_llm(cfg: dict, system: str, user: str) -> str:
 def _select_candidates(cfg: dict, items: List[Item]) -> List[Item]:
     """Pick a diverse, high-value subset of candidates for the LLM.
 
-    Naively taking items[:N] biases toward whichever source ran first
-    (often one noisy handle flooding the window). Instead we round-robin
-    across groups so every list is represented, then top up from the rest.
+    Two things this must get right:
+
+    1. The cap is `max_candidates`, NOT `max_signals`. Those are different
+       numbers doing different jobs: max_candidates is how much the model
+       READS, max_signals is how much it KEEPS. Using max_signals for both
+       (the original bug) meant the model saw 8 items and was asked to keep
+       5-8 of them — so it kept nearly everything, the trust ladder never
+       discriminated, and most configured sources never reached the prompt
+       at all.
+
+    2. Naively taking items[:N] biases toward whichever source ran first
+       (often one noisy handle flooding the window). So we round-robin
+       across groups, and within each group we take the highest-trust items
+       first, so a wide pool doesn't just mean a noisier one.
     """
-    max_candidates = cfg["daily"].get("max_signals", 8)
-    # Bucket by group, preserving config group order.
+    daily = cfg.get("daily", {})
+    max_candidates = daily.get("max_candidates") or (daily.get("max_signals", 8) * 8)
+    # Bucket by group, preserving first-seen group order.
     buckets: dict[str, List[Item]] = {}
     for it in items:
         buckets.setdefault(it.group, []).append(it)
-    # Round-robin: take one from each non-empty bucket in turn.
+    # Within a group, best-evidence first: trust weight, then recency.
+    for g in buckets:
+        buckets[g].sort(
+            key=lambda it: (it.weight, it.published.timestamp() if it.published else 0),
+            reverse=True,
+        )
+    # Round-robin: one from each non-empty bucket in turn, so every source
+    # type is represented before any source gets a second slot.
     selected: List[Item] = []
     idx = {g: 0 for g in buckets}
     while len(selected) < max_candidates:
@@ -401,8 +467,9 @@ _GROUP_TO_SECTION = {
 
 def _fallback_digest(items: List[Item]) -> dict:
     """When the LLM fails, produce a basic digest from raw item text."""
-    # Use the same diverse selection so a single noisy source can't dominate.
-    pick = _select_candidates({"daily": {"max_signals": 8}}, items)
+    # Same diverse selection, but capped at a readable handful — this is a
+    # degraded mode, not the wide curation pool.
+    pick = _select_candidates({"daily": {"max_candidates": 8}}, items)
     signals = []
     for it in pick:
         section = _GROUP_TO_SECTION.get(it.group, "SERP & Algorithm Signals")

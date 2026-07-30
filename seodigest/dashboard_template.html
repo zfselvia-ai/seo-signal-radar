@@ -81,7 +81,8 @@
      Hierarchy by weight, not by wall-to-wall colour:
        P0 = tinted + strong bar   (stop and read)
        P1 = white + accent bar    (act this week)
-       P2/P3 = compact single row (awareness)  */
+       P2 = white + amber bar     (worth testing — real work, gets a full card)
+       P3 = compact single row    (awareness only)  */
   .card{border-radius:var(--radius);padding:16px 20px;margin-bottom:10px;
     background:var(--surface);box-shadow:var(--shadow);
     border:1px solid var(--line);position:relative;overflow:hidden;
@@ -93,8 +94,16 @@
   .card.P0{background:var(--p0-bg);border-color:rgba(220,38,38,.22);}
   .card.P0::before{background:var(--p0-accent);width:4px;}
   .card.P1::before{background:var(--p1-accent);}
-  .card.P2::before{background:var(--line-strong);}
+  .card.P2::before{background:var(--p2-accent);}
   .card.P3::before{background:var(--line-strong);}
+
+  /* Playbook rows: the test recipe, visually distinct from news fields
+     without adding another colour to the page. */
+  .card .row.test .lab{color:var(--p2);}
+  .card .testbox{margin-top:11px;padding:11px 13px;background:var(--surface-strong);
+    border-radius:8px;border-left:2px solid var(--p2-accent);}
+  .card .testbox .row{margin:3px 0;}
+  .card .testbox .row:first-child{margin-top:0;}
 
   .card .what{font-weight:650;font-size:15.5px;line-height:1.45;margin-bottom:10px;
     display:flex;gap:10px;align-items:flex-start;justify-content:space-between;}
@@ -122,7 +131,7 @@
   /* only P0 is loud; the rest are legible but quiet */
   .tag.P0{color:#fff;background:var(--p0-accent);border:1px solid var(--p0-accent);}
   .tag.P1{color:var(--p1);background:rgba(234,88,12,.09);border:1px solid rgba(234,88,12,.22);}
-  .tag.P2{color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line-strong);}
+  .tag.P2{color:var(--p2);background:rgba(202,138,4,.09);border:1px solid rgba(202,138,4,.22);}
   .tag.P3{color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line);}
   .tag.conf{color:var(--ink-3);background:transparent;border:1px solid var(--line-strong);font-weight:600;}
 
@@ -319,7 +328,10 @@ function morningBrief(rec){
   const top=["P0","P1","P2","P3"].find(p=>impacts.includes(p))||"—";
   const confirmed=(rec.sections?.["Confirmed Search Updates"]||[]).length>0;
   const band=(rec.serp||{}).global_band||"Unknown";
-  return {n:sigs.length,top,confirmed,band};
+  // Surface the actionable tier explicitly: on days when nothing is confirmed,
+  // "3 to test" is the reason to keep reading.
+  const testable=impacts.filter(i=>i==="P0"||i==="P1"||i==="P2").length;
+  return {n:sigs.length,top,confirmed,band,testable};
 }
 
 function renderToday(){
@@ -332,6 +344,7 @@ function renderToday(){
   h+=`<div class="brief">
       <div class="stat lead${urgent?" urgent":""}"><span class="k">Top priority</span><span class="v">${esc(b.top)}</span></div>
       <div class="stat"><span class="k">Signals</span><span class="v">${b.n}</span></div>
+      <div class="stat"><span class="k">To act / test</span><span class="v">${b.testable}</span></div>
       <div class="stat"><span class="k">Confirmed update</span><span class="v">${b.confirmed?"Yes":"No"}</span></div>
       <div class="stat"><span class="k">SERP heat</span><span class="v">
         <span class="dot-heat" style="background:${heatColor(b.band)}"></span>${esc(b.band)}</span></div>
@@ -352,11 +365,12 @@ function renderToday(){
     const arr=(rec.sections||{})[sec];
     if(!arr||!arr.length)return;
     h+=`<h2 class="section">${esc(sec)} <span class="count">${arr.length}</span></h2>`;
-    // Weight the page: P0/P1 get full cards, P2/P3 collapse to compact rows so
-    // the eye lands on what actually needs action.
+    // Weight the page: P0/P1/P2 get full cards, P3 collapses to a compact row.
+    // P2 means "worth testing" — that's real work with a test recipe attached,
+    // so it earns a card. Only P3 ("awareness only") is safe to compress.
     arr.forEach(s=>{
       const imp=(s.impact||"").toUpperCase();
-      h+=(imp==="P2"||imp==="P3") ? miniRow(s) : signalCard(s);
+      h+=(imp==="P3") ? miniRow(s) : signalCard(s);
     });
   });
   if(rec.dropped_count) h+=`<p class="date-label" style="margin-top:20px">Filtered out ${rec.dropped_count} lower-value candidates.</p>`;
@@ -367,11 +381,17 @@ function signalCard(s){
   const imp=s.impact||"";
   const row=(lab,key)=> s[key]?`<div class="row"><span class="lab">${lab}</span><span>${esc(s[key])}</span></div>`:"";
   const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join("");
+  // Playbook items carry a test recipe. Group those fields so the reader can
+  // see at a glance that this one is something to go DO, not just read.
+  const recipe=[row("Test","how_to_test"),row("Measure","success_metric"),
+                row("Effort","effort")].join("");
+  const testbox=recipe.trim()?`<div class="testbox">${recipe}</div>`:"";
   return `<div class="card ${esc(imp)}">
     <div class="what"><span class="wtext">${esc(s.what_happened)}</span>
       <span class="badges">${tag(s.impact)}${confTag(s.confidence)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
+    ${testbox}
     ${srcs?`<div class="srcs">${srcs}</div>`:""}
   </div>`;
 }

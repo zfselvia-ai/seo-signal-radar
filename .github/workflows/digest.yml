@@ -12,13 +12,17 @@ jobs:
   daily:
     runs-on: ubuntu-latest
     steps:
+      # Shallow clone: we only ever append, never inspect history here. Keeps
+      # the checkout fast even years in.
       - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
-      - name: Restore X cookies
-        env: {COOKIES_JSON: "${{ secrets.X_COOKIES_JSON }}"}
-        run: '[ -n "$COOKIES_JSON" ] && echo "$COOKIES_JSON" > cookies.json || echo "no cookies"'
+
+      # X needs no credentials at all — x_source.py reads public Nitter RSS.
+      # (The old cookie/password steps are gone; twikit is no longer used.)
+
       - name: Cache state
         uses: actions/cache@v4
         with:
@@ -27,27 +31,38 @@ jobs:
             data/serp_history.csv
           key: radar-state-v2-${{ github.run_id }}
           restore-keys: radar-state-v2-
+
       - name: Run daily
         env:
           SCNET_API_KEY: ${{ secrets.SCNET_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          X_USERNAME: ${{ secrets.X_USERNAME }}
-          X_EMAIL: ${{ secrets.X_EMAIL }}
-          X_PASSWORD: ${{ secrets.X_PASSWORD }}
           NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
         run: python main.py daily      # also rebuilds dashboard/ + sends push
-      - name: Commit
+
+      # Commit ONLY the append-only source of truth: the daily archive and the
+      # rendered reports. dashboard/index.html is deliberately NOT committed —
+      # it embeds the entire archive inline, so it is fully rewritten every run.
+      # Committing it stored a whole new multi-MB blob daily and made .git grow
+      # QUADRATICALLY (~136MB after 1 year, ~1.2GB after 3). It is a build
+      # artifact: regenerable from data/archive at any time, and published
+      # straight to the gh-pages branch below.
+      - name: Commit archive + reports
         run: |
           git config user.name "radar-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add reports/ data/ dashboard/ || true
+          git add data/archive reports/ || true
           git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push skipped"
+
       - name: Publish dashboard to Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dashboard
           keep_files: false
+          # gh-pages is a build-output branch, so squash its history to a single
+          # commit each run. Without this, the same quadratic growth just moves
+          # from main into the gh-pages branch.
+          force_orphan: true

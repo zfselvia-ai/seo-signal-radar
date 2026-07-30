@@ -26,19 +26,33 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
     if not cfg.get("rss", {}).get("enabled"):
         return []
     import feedparser
+    from datetime import timedelta
 
     items: List[Item] = []
     max_per = cfg["rss"].get("max_items_per_feed", 10)
     weights = (cfg.get("scoring") or {}).get("source_weights", {})
+
+    # Slow-moving, high-trust sources get a longer window. A controlled
+    # experiment or an official docs change is just as actionable three days
+    # after publication, but a strict 24h window silently drops it — which is
+    # how a digest ends up with nothing but same-day chatter. Deduplication
+    # downstream stops the extra days from repeating across runs.
+    daily = cfg.get("daily", {})
+    evergreen_cats = set(daily.get("evergreen_categories") or [])
+    ever_hours = daily.get("evergreen_lookback_hours")
+    evergreen_since = (since - timedelta(hours=ever_hours - daily.get("lookback_hours", 24))
+                       if ever_hours and evergreen_cats else since)
+
     for feed in cfg["rss"].get("feeds", []):
         name, url = feed["name"], feed["url"]
         category = feed.get("category", "trade_news")
         weight = float(feed.get("weight", weights.get(category, 0.55)))
+        cutoff = evergreen_since if category in evergreen_cats else since
         try:
             parsed = feedparser.parse(url)
             for entry in parsed.entries[:max_per]:
                 dt = _entry_datetime(entry)
-                if not _within_window(dt, since):
+                if not _within_window(dt, cutoff):
                     continue
                 summary = getattr(entry, "summary", "") or ""
                 # strip crude HTML so the LLM gets clean text

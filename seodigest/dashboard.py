@@ -46,7 +46,7 @@ def _flatten_signals(records: list) -> list:
             for s in sigs:
                 if not s.get("what_happened"):
                     continue
-                out.append({
+                row = {
                     "date": date,
                     "section": section,
                     "what_happened": s.get("what_happened", ""),
@@ -57,7 +57,13 @@ def _flatten_signals(records: list) -> list:
                     "confidence": s.get("confidence", ""),
                     "impact": s.get("impact", ""),
                     "sources": s.get("sources", []),
-                })
+                }
+                # Playbook fields: only carried when present, so the archive
+                # stays lean but a past tactic remains searchable months later.
+                for k in ("how_to_test", "success_metric", "effort"):
+                    if s.get(k):
+                        row[k] = s[k]
+                out.append(row)
     return out
 
 

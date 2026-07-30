@@ -7,6 +7,12 @@ PASSWORD.local
 data/seen.json
 data/serp_history.csv
 
+# Build artifact, NOT source. dashboard/index.html embeds the whole archive
+# inline, so it's rewritten in full on every run. Committing it stored a fresh
+# multi-MB blob daily and made .git grow quadratically. It's regenerable any
+# time with `python main.py dashboard`, and CI publishes it straight to Pages.
+dashboard/index.html
+
 # python
 __pycache__/
 *.pyc

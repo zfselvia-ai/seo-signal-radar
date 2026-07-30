@@ -23,6 +23,22 @@ daily:
   max_signals: 8
   min_signals: 5
   lookback_hours: 24
+  # How many raw candidates the LLM is allowed to SEE before curating.
+  # This is NOT max_signals. Curation can only be as good as the pool it
+  # judges: if the model sees 8 candidates and is asked to keep 5-8, it keeps
+  # almost everything and the whole trust ladder never gets exercised. Show it
+  # a wide pool, let it throw most of it away.
+  max_candidates: 70
+  # Slow-moving, high-trust sources (controlled experiments, official docs,
+  # deep analysis) don't publish daily. Judging them on a 24h window means a
+  # quiet news day produces a thin digest. These categories get a longer
+  # window, so an evergreen testable tactic can still surface today.
+  evergreen_lookback_hours: 168        # 7 days
+  evergreen_categories:
+    - reproducible_experiment
+    - data_research
+    - official_documentation
+    - official_person
   # Fixed sections, in display order. The LLM sorts signals into these.
   # Sections may be EMPTY — research and official explanations are slower-moving
   # than news, and padding them would defeat the point. Empty sections are
@@ -34,9 +50,28 @@ daily:
     - "Technical SEO Experiments"
     - "AI Search / GEO"
     - "Research & Retrieval"           # IR / entity / knowledge-graph / papers
+    - "Playbook: Worth Testing"        # evergreen, testable tactics (see below)
     - "Tools, Papers & Open Source"
     - "Unconfirmed Watchlist"
     - "Today's Action Items"
+  # The one section that is NOT news. Most days Google confirms nothing, and a
+  # digest that only carries breaking algorithm updates is empty on those days
+  # while the reader still has hours to spend improving something. This section
+  # carries tactics an SEO can go TEST — mechanism explained, effort and metric
+  # named — in the spirit of a good Ahrefs/SearchPilot post. It does not need to
+  # be new; it needs to be true, specific, and worth someone's afternoon.
+  playbook:
+    section: "Playbook: Worth Testing"
+    # Unlike the news sections, this one should rarely be empty. If nothing
+    # published today qualifies, reach into the longer evergreen window.
+    min_items: 1
+    max_items: 3
+    # A playbook item is only worth printing if it answers all of these.
+    requirements:
+      - mechanism        # WHY it should work — not just that it did once
+      - how_to_test      # the concrete check/experiment the reader runs
+      - effort_and_risk  # rough cost, and what could go wrong
+      - success_metric   # what number moves if it worked
   # Per-signal schema each item must fill.
   signal_fields:
     - "what_happened"     # 发生了什么 (<=120 chars, headline-style)
@@ -58,12 +93,17 @@ daily:
 # Weights sum to 100. A promo/duplicate penalty is subtracted after.
 # --------------------------------------------------------------------------
 scoring:
+  # Rebalanced 2026-07-30. Was novelty 20 / actionability 10, which quietly
+  # made this a news feed: a brand-new rumour outscored a well-evidenced
+  # tactic the reader could actually go test. Novelty is now worth LESS than
+  # actionability — being new is not a reason to act, and an evergreen finding
+  # doesn't lose value because it was published last week.
   weights:
-    source_authority: 30      # 来源权威性
+    source_authority: 25      # 来源权威性
     data_and_evidence: 25     # 数据与证据
-    novelty: 20               # 新颖度
-    potential_impact: 15      # 潜在影响
-    actionability: 10         # 可执行性
+    actionability: 20         # 可执行性 — can the reader do something with it
+    potential_impact: 20      # 潜在影响
+    novelty: 10               # 新颖度 — a tiebreaker, not a driver
   penalty:
     marketing_promo: 20       # subtract for course/lead-magnet/self-promo
     duplicate: 15             # subtract for rehash of already-covered items
@@ -111,6 +151,10 @@ curation:
     - "Technical SEO depth: crawling, rendering, indexing, structured data, log analysis, edge SEO"
     - "Primary-source statements from platform reps (@searchliaison, @googlesearchc, @BingWMC)"
     - "Query fan-out, entity/knowledge-graph, agentic-traffic research with evidence"
+    # Evergreen actionability: the reason this isn't just a news feed.
+    - "Repeatable tactics with a stated MECHANISM the reader can test on their own site — even if not new"
+    - "Controlled experiments including NEGATIVE and inconclusive results (they stop wasted work)"
+    - "Concrete diagnostic workflows: how to check, measure or debug a specific problem"
   drop:
     - "'SEO is dead' takes, hot takes with no data"
     - "Course / cohort / lead-magnet promotion, pure self-promo"
@@ -118,6 +162,8 @@ curation:
     - "Single-site ranking screenshots presented as trends"
     - "GEO experiments that dress correlation as causation, or lack sample sizes"
     - "AI-citation 'wins' with no methodology"
+    # A tactic without a mechanism is superstition, however confidently stated.
+    - "Tactics with no explanation of WHY they work, or no way to verify them"
 
 # --------------------------------------------------------------------------
 # X / TWITTER — four separate Lists, not one info hot-pot.
@@ -390,6 +436,10 @@ dashboard:
   enabled: true
   output_file: "dashboard/index.html"
   # How many days of archive to embed (Library + Map history).
+  # Sizing, from real measurements: ~12 KB of archive per day, embedded inline,
+  # so 365 days is a ~4.5 MB single page. That's fine on desktop. If you ever
+  # push this past ~1000 days the page gets heavy on mobile — at that point
+  # split the Library into a separate lazy-loaded JSON rather than raising this.
   history_days: 365
   # One-line thesis shown in the header.
   thesis: "What changed in Search, why it matters, and what to do next."

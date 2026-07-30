@@ -138,6 +138,7 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
     if not cfg.get("x", {}).get("enabled"):
         return []
     import feedparser
+    from datetime import timedelta
 
     xcfg = cfg["x"]
     per = xcfg.get("tweets_per_handle", 15)
@@ -146,17 +147,27 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
     accounts = _resolve_accounts(xcfg)
     items: List[Item] = []
 
+    # Longer window for rarely-posting, high-trust accounts (Google staff,
+    # controlled-experiment people). @JohnMu explaining an indexing boundary is
+    # still the signal of the week three days later; a 24h cutoff throws it away.
+    daily = cfg.get("daily", {})
+    evergreen_types = set(daily.get("evergreen_categories") or [])
+    ever_hours = daily.get("evergreen_lookback_hours")
+    evergreen_since = (since - timedelta(hours=ever_hours - daily.get("lookback_hours", 24))
+                       if ever_hours and evergreen_types else since)
+
     for handle, meta in accounts.items():
         meta = dict(meta)
         meta.setdefault("weight", weights.get(meta.get("source_type"), 0.6))
         # `group` keeps the primary tag so downstream grouping still works.
         group = (meta.get("tags") or ["general"])[0]
+        cutoff = evergreen_since if meta.get("source_type") in evergreen_types else since
         tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
         for t in tweets[:per]:
             # Plain retweets carry no added analysis — config x.filters.drop.
             if t.text.startswith("RT @"):
                 continue
-            if _within(t.published, since):
+            if _within(t.published, cutoff):
                 items.append(t)
 
     # Keyword search is not supported via Nitter RSS (no search endpoint that's

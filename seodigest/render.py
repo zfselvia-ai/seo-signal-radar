@@ -104,6 +104,13 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
                 md.append(f"  - 影响 / Affects: {s['who_it_affects']}")
             if s.get("what_to_do"):
                 md.append(f"  - 行动 / Action: {s['what_to_do']}")
+            # Playbook items carry a test recipe; only present when relevant.
+            if s.get("how_to_test"):
+                md.append(f"  - 如何测试 / Test: {s['how_to_test']}")
+            if s.get("success_metric"):
+                md.append(f"  - 衡量 / Measure: {s['success_metric']}")
+            if s.get("effort"):
+                md.append(f"  - 成本与风险 / Effort: {s['effort']}")
             for src in s.get("sources", []):
                 md.append(f"  - [{src.get('name','source')}]({src.get('url','')})")
         md.append("")
@@ -157,7 +164,11 @@ def _daily_html(digest, cfg, date_str, serp, title, brief=None):
             for lab, key in (("为何重要 Why", "why_it_matters"),
                              ("证据 Evidence", "evidence"),
                              ("影响 Affects", "who_it_affects"),
-                             ("行动 Action", "what_to_do")):
+                             ("行动 Action", "what_to_do"),
+                             # Playbook-only fields, skipped when absent.
+                             ("如何测试 Test", "how_to_test"),
+                             ("衡量 Measure", "success_metric"),
+                             ("成本与风险 Effort", "effort")):
                 if s.get(key):
                     parts.append(f"<div class='meta'><b>{lab}:</b> {_esc(s[key])}</div>")
             for src in s.get("sources", []):

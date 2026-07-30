@@ -5,9 +5,23 @@ Not a news aggregator — a **signal radar** for advanced SEOs:
 > **X discovers anomalies → official data confirms → cases & data decide whether it's worth acting.**
 
 It pulls from 29 curated X accounts, 11 SEO/official feeds (RSS), and the **official Google
-Search Status API**, then an LLM scores every candidate, keeps only the 5–8 that
-matter, and files them into fixed sections with a **priority (P0–P3)**, a
-**confidence tier**, and a concrete "what to do." Daily signals are archived as
+Search Status API**, then an LLM reads up to **70 candidates** and keeps only the 5–8 that
+matter, filing them into fixed sections with a **priority (P0–P3)**, a
+**confidence tier**, and a concrete "what to do."
+
+It delivers **two kinds of value**, because most days Google confirms nothing and a
+pure news feed is empty on those days:
+
+1. **News** — something changed and you may need to react.
+2. **Playbook: Worth Testing** — evergreen, testable tactics with a stated mechanism,
+   a test procedure, a success metric and an effort/risk note. These do *not* have to
+   be new, in the spirit of a good Ahrefs or SearchPilot post. Scoring reflects this:
+   **actionability (20) outranks novelty (10)** — being new is not a reason to act.
+   Slow-moving, high-trust sources (controlled experiments, official docs, Google
+   staff) get a 7-day window instead of 24h, so a quiet news day still yields
+   something to go try.
+
+Daily signals are archived as
 structured JSON that feeds three things: a **Weekly** and **Monthly** rollup,
 event-driven **Special Briefs**, and a self-contained **web dashboard** (the
 single source of truth). A compressed **push notification** links back to it.
@@ -18,7 +32,7 @@ any one site's own data.
 
 ```
 Google Status API ─┐
-29 X accounts ─────┼─► fetch ─► dedup ─► score+curate (LLM) ─► 9 sections ─► daily MD/HTML
+29 X accounts ─────┼─► fetch ─► dedup ─► score+curate (LLM) ─► 10 sections ─► daily MD/HTML
 RSS feeds ─────────┘                                    │
 SERP volatility ───► percentile + 4-quadrant ───────────┘
                                                          ▼
@@ -119,9 +133,23 @@ The **dashboard** (`dashboard/index.html`) is the full product and single source
 of truth: one self-contained HTML file, no build step, no external calls — the
 archive is embedded as JSON. Three views:
 
-- **Today** — Morning Brief status bar, headline, SERP weather, the 7 sections, action items.
+- **Today** — Morning Brief status bar, headline, SERP weather, the 10 sections, action items.
 - **Algorithm Map** — the three-track timeline (Official / External flux / Community) across 7D/30D/90D/1Y.
 - **Source Library** — every archived signal, searchable and filterable by section, confidence, priority, and vertical.
+
+`dashboard/index.html` is a **build artifact and is not committed** (it's gitignored).
+It embeds the whole archive inline, so it's rewritten in full on every run —
+committing it stored a fresh multi-MB blob daily and made `.git` grow *quadratically*
+(~136 MB after a year, ~1.2 GB after three). CI publishes it straight to the
+`gh-pages` branch with `force_orphan` instead. Regenerate it any time with
+`python main.py dashboard`.
+
+**Storage, measured:** the archive is ~12 KB/day — about **4.5 MB/year**, 22 MB after
+five years. That is comfortably inside GitHub's limits, so no external database or
+cloud hosting is needed; GitHub Actions plus Pages is sufficient indefinitely. The
+only real ceiling is page weight: past roughly 1,000 days of embedded history the
+single-file dashboard gets heavy on mobile, at which point split the Library into a
+separate lazy-loaded JSON rather than raising `dashboard.history_days`.
 
 The **notification** is only a cover: Morning Brief + top 3 signals + confirmed-update
 flag + up to 2 actions + a link back. Set the webhook URL in the environment
