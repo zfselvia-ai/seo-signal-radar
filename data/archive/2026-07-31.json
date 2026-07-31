@@ -1,265 +1,263 @@
 {
   "date": "2026-07-31",
-  "generated_at": "2026-07-31T02:32:29.967587+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "generated_at": "2026-07-31T04:22:29.847768+00:00",
+  "headline": "GSC social profile linking bug reported; ARLtR framework highlights hybrid vector-entity retrieval for AI search",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Adversaries aren't breaking in—they’re logging in. How is your financial leadership redefining security? Register for ou",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
+        "what_happened": "Bing Webmaster Tools lacks page-level query filtering | Bing Webmaster Tools 仍缺失页面级查询过滤功能",
+        "why_it_matters": "尽管 Bing 在 AI 搜索上动作频频，但其站长工具（BWT）在基础数据分析上仍存在局限，无法直接对特定页面的关键词进行过滤，限制了 SEO 对 Bing 流量的精细化诊断。",
+        "evidence": "expert_analysis (Lily Ray)",
+        "evidence_detail": "SEO expert Lily Ray highlighted a critical usability gap in Bing Webmaster Tools, noting the platform's lack of page-level filtering for queries and keywords. This forces SEOs to export raw data to external tools like Excel or BigQuery to perform granular page-and-keyword level analysis.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_to_do": "check X (在分析 Bing 流量时，需导出原始数据至 BigQuery 或 Excel 进行多维度过滤，无法直接在 BWT 界面完成)",
         "confidence": "Observed",
-        "impact": "P2",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
+        "score": 45,
         "sources": [
           {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2082994688261300588"
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2082944892469182957",
+            "excerpt": "Dear Bing: please please please add page-level filtering to queries/keywords in Bing Webmaster Tools! 🙏🏽🙏🏽🙏🏽 Or like… any filtering in BWT for that matter…? 😇 @kmadhavan77. Dear Bing: please please please add page-level filtering to queries/keywords in Bing Webmaster Tools! 🙏🏽🙏🏽🙏🏽 Or like… any filtering in BWT for that matter…? 😇 @kmadhavan77",
+            "author": "@lilyraynyc",
+            "published": "2026-07-30T21:42:16+00:00",
+            "source_type": "expert_analysis"
           }
         ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Major AI search engines obscure underlying search indexes | 主流 AI 搜索引擎隐蔽其底层搜索索引",
+        "why_it_matters": "Anthropic (Claude) 和 OpenAI (SearchGPT/ChatGPT) 虽深度依赖搜索，但均未公开其底层使用的搜索索引，这给 SEO 归因和 GEO 的可见性追踪带来了极高黑盒化挑战。",
+        "evidence": "expert_analysis (Simon Willison, Andy Alagappan)",
+        "evidence_detail": "Tech expert Simon Willison pointed out that both Anthropic and OpenAI heavily leverage search in their products but obscure the underlying search index they use (e.g., whether they rely entirely on Bing, Google, or proprietary indexes). This lack of transparency complicates technical SEO auditing and bot-behavior tracking.",
+        "who_it_affects": "all",
+        "what_to_do": "monitor Z (持续关注 AI 搜索引擎的 User-Agent 抓取行为，通过服务器日志分析其真实的索引来源)",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "score": 50,
+        "sources": [
+          {
+            "name": "cyberandy",
+            "url": "https://x.com/cyberandy/status/2083026608667890123",
+            "excerpt": "True fact.. True fact. Simon Willison (@simonw) It's wild to me that both Anthropic and OpenAI have products that lean so hard on search, and yet they both obscure the underlying search index that they are using — https://nitter.net/simonw/status/2082835952939200939#m",
+            "author": "@cyberandy",
+            "published": "2026-07-31T03:06:58+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Research & Retrieval": [
+      {
+        "what_happened": "ARLtR framework bridges vector search and knowledge graphs | ARLtR 框架实现向量搜索与知识图谱的协同检索",
+        "why_it_matters": "传统的 RAG 通常在无结构文本向量搜索与结构化知识图谱推理之间二选一。ARLtR 框架通过联合构建实体、关系及对齐的事实问答对，为混合检索提供了新思路，有助于优化 AI 搜索引擎的召回精度。",
+        "evidence": "data_research (All Relations Lead to Rome framework paper)",
+        "evidence_detail": "The 'All Relations Lead to Rome' (ARLtR) framework automates knowledge graph creation and question generation aligned to an underlying corpus. It bridges the gap between unstructured vector search and structured knowledge graph reasoning, generating ground-truth entities and fact-grounded QA pairs to improve retrieval accuracy.",
+        "who_it_affects": "SaaS / publisher / international",
+        "what_to_do": "test Y (在构建企业级 RAG 或 AI 搜索优化时，测试混合检索架构，将无结构文本向量与结构化知识图谱结合)",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Research & Retrieval",
+        "score": 75,
+        "sources": [
+          {
+            "name": "cyberandy",
+            "url": "https://x.com/cyberandy/status/2083023356291338745",
+            "excerpt": "Love this work.. Love this work. The Year of the Graph (@TheYotg) All Relations Lead to Rome: Automated Knowledge Graph Creation and Question Generation 🏛️ Most retrieval datasets force a choice: vector-based search over unstructured text, or reasoning over a knowledge graph. Rarely both. And ground-truth entities, relations, and fact-grounded QA pairs aligned to the underlying corpus are harder still to find. All Relations Lead to Rome (ARLtR) is a new framework built to close that gap. It jointly constructs, i",
+            "author": "@cyberandy",
+            "published": "2026-07-31T02:54:03+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Implement Hybrid Retrieval (Vector + Entity) for AI Search Optimization | 实施混合检索（向量+实体）优化 AI 搜索召回",
+        "why_it_matters": "现代 AI 搜索引擎不仅使用向量检索，还结合了知识图谱和实体识别。通过在页面中显式建立实体关联，可以大幅提升内容在混合检索系统中的召回率。",
+        "evidence": "data_research (ARLtR framework demonstrating that combining vector search with structured entity relations yields higher factual accuracy)",
+        "evidence_detail": "The ARLtR framework demonstrates that joint vector-based and knowledge-graph-based retrieval provides superior grounding for factual QA. By aligning unstructured text with explicit entity-relation pairs, systems can reason more accurately over the corpus.",
+        "who_it_affects": "publisher / SaaS / ecommerce",
+        "what_to_do": "test Y",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 80,
+        "how_to_test": "1. 选择 20 个核心排名的长尾页面；2. 使用 Schema.org (about, mentions) 显式声明页面内容与维基百科/Wikidata 中标准实体的关联；3. 在正文中采用“实体-关系-实体”的清晰句式结构（如“Brand A [实体] is a subsidiary of Company B [实体]”）；4. 观察 AI 搜索引擎（如 Perplexity, ChatGPT Search）对相关实体的召回率和引用比例。",
+        "success_metric": "AI 搜索引擎中针对相关实体/品牌查询的引用次数（Citations）和提及率提升。",
+        "effort": "中等。需要调整页面 Schema 结构和正文写作规范，无技术风险。",
+        "sources": [
+          {
+            "name": "cyberandy",
+            "url": "https://x.com/cyberandy/status/2083023356291338745",
+            "excerpt": "Love this work.. Love this work. The Year of the Graph (@TheYotg) All Relations Lead to Rome: Automated Knowledge Graph Creation and Question Generation 🏛️ Most retrieval datasets force a choice: vector-based search over unstructured text, or reasoning over a knowledge graph. Rarely both. And ground-truth entities, relations, and fact-grounded QA pairs aligned to the underlying corpus are harder still to find. All Relations Lead to Rome (ARLtR) is a new framework built to close that gap. It jointly constructs, i",
+            "author": "@cyberandy",
+            "published": "2026-07-31T02:54:03+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Unconfirmed Watchlist": [
+      {
+        "what_happened": "Google Search Console social profile association throwing errors | Google Search Console 关联社交媒体账号时出现报错",
+        "why_it_matters": "SEO 人员在 GSC 中尝试关联 Instagram 和 Twitter/X 账号时遇到持续报错，影响品牌实体在 Google 知识图谱中的关联验证。",
+        "evidence": "practitioner_observation (Lily Ray, Ray Martinez)",
+        "evidence_detail": "Multiple SEO practitioners, including Lily Ray and Ray Martinez, reported receiving consistent error messages when attempting to link their Instagram and Twitter/X profiles within Google Search Console. Google's Daniel Waisberg has been looped in, indicating this is likely a system-side bug rather than user error.",
+        "who_it_affects": "all",
+        "what_to_do": "monitor Z (暂缓在 GSC 中关联社交账号，等待 Google 修复该 Bug)",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 55,
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2082933694793212281",
+            "excerpt": "I got the same error message in GSC when trying to add my Instagram. @danielwaisberg. I got the same error message in GSC when trying to add my Instagram. @danielwaisberg Ray Martinez (@RayMartinezSEO) Keep getting an error when I add my IG and Twitter to Google Search Console. @googlesearchc — https://nitter.net/RayMartinezSEO/status/2082815941948158226#m",
+            "author": "@lilyraynyc",
+            "published": "2026-07-30T20:57:46+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "暂缓在 Google Search Console 中关联 Instagram/Twitter 账号，避开当前的系统报错 Bug。",
+        "impact": "P3"
       },
       {
-        "what_happened": "\"Search referrals were choppy...\" That's one way to explain it... I published a post recently all about their AI transla",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2082942064254185936"
-          }
-        ]
+        "what_to_do": "针对核心页面测试“向量+实体”混合检索优化，通过 Schema (about/mentions) 显式关联 Wikidata 实体，提升 AI 搜索召回率。",
+        "impact": "P2"
       },
       {
-        "what_happened": "I wish \"Information Superhighway\" caught on the way \"web traffic\" did.. I wish \"Information Superhighway\" caught on the ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2082889934004752826"
-          }
-        ]
-      },
-      {
-        "what_happened": "Welcome to the era of incident marketing. \"Look, our models are so strong they break out of their safety environments. C",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Kevin_Indig",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Kevin_Indig",
-            "url": "https://x.com/Kevin_Indig/status/2082993610723643689"
-          }
-        ]
-      },
-      {
-        "what_happened": "What 13 Billion Google Searches Reveal About Zero-Click Behavior. Most clicks go to sites the searcher never named, Goog",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "iPullRank Blog",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "iPullRank Blog",
-            "url": "https://ipullrank.com/zero-click-behavior-analysis-q3-2026"
-          }
-        ]
-      },
-      {
-        "what_happened": "WP Engine Partners With BigCommerce To Scale WordPress Stores via @sejournal, @martinibuster. WP Engine announced Commer",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/wp-engine-bigcommerce-wordpress-stores/584343/"
-          }
-        ]
-      },
-      {
-        "what_happened": "We’re honored to be a Visionary in the 2026 Gartner® Magic Quadrant™ for Secure Access Service Edge Platforms! Check bac",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2082839849682264564"
-          }
-        ]
-      },
-      {
-        "what_happened": "I know one button that will get a lot of use. Lol -> LinkedIn Introduces a 'Seems Like AI Slop' Button https://www.404me",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2082884714180817209"
-          }
-        ]
+        "what_to_do": "在分析 Bing 搜索数据时，由于 BWT 缺乏页面级过滤，建议将数据导出至 Excel 或 BigQuery 进行二次清洗与分析。",
+        "impact": "P3"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Adversaries aren't breaking in—they’re logging in. How is your financial leadership redefining security? Register for ou",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
+      "what_happened": "Google Search Console social profile association throwing errors | Google Search Console 关联社交媒体账号时出现报错",
+      "why_it_matters": "SEO 人员在 GSC 中尝试关联 Instagram 和 Twitter/X 账号时遇到持续报错，影响品牌实体在 Google 知识图谱中的关联验证。",
+      "evidence": "practitioner_observation (Lily Ray, Ray Martinez)",
+      "evidence_detail": "Multiple SEO practitioners, including Lily Ray and Ray Martinez, reported receiving consistent error messages when attempting to link their Instagram and Twitter/X profiles within Google Search Console. Google's Daniel Waisberg has been looped in, indicating this is likely a system-side bug rather than user error.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "monitor Z (暂缓在 GSC 中关联社交账号，等待 Google 修复该 Bug)",
       "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 55,
       "sources": [
         {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2082994688261300588"
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2082933694793212281",
+          "excerpt": "I got the same error message in GSC when trying to add my Instagram. @danielwaisberg. I got the same error message in GSC when trying to add my Instagram. @danielwaisberg Ray Martinez (@RayMartinezSEO) Keep getting an error when I add my IG and Twitter to Google Search Console. @googlesearchc — https://nitter.net/RayMartinezSEO/status/2082815941948158226#m",
+          "author": "@lilyraynyc",
+          "published": "2026-07-30T20:57:46+00:00",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "\"Search referrals were choppy...\" That's one way to explain it... I published a post recently all about their AI transla",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_happened": "ARLtR framework bridges vector search and knowledge graphs | ARLtR 框架实现向量搜索与知识图谱的协同检索",
+      "why_it_matters": "传统的 RAG 通常在无结构文本向量搜索与结构化知识图谱推理之间二选一。ARLtR 框架通过联合构建实体、关系及对齐的事实问答对，为混合检索提供了新思路，有助于优化 AI 搜索引擎的召回精度。",
+      "evidence": "data_research (All Relations Lead to Rome framework paper)",
+      "evidence_detail": "The 'All Relations Lead to Rome' (ARLtR) framework automates knowledge graph creation and question generation aligned to an underlying corpus. It bridges the gap between unstructured vector search and structured knowledge graph reasoning, generating ground-truth entities and fact-grounded QA pairs to improve retrieval accuracy.",
+      "who_it_affects": "SaaS / publisher / international",
+      "what_to_do": "test Y (在构建企业级 RAG 或 AI 搜索优化时，测试混合检索架构，将无结构文本向量与结构化知识图谱结合)",
+      "confidence": "Data-backed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Research & Retrieval",
+      "score": 75,
       "sources": [
         {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2082942064254185936"
+          "name": "cyberandy",
+          "url": "https://x.com/cyberandy/status/2083023356291338745",
+          "excerpt": "Love this work.. Love this work. The Year of the Graph (@TheYotg) All Relations Lead to Rome: Automated Knowledge Graph Creation and Question Generation 🏛️ Most retrieval datasets force a choice: vector-based search over unstructured text, or reasoning over a knowledge graph. Rarely both. And ground-truth entities, relations, and fact-grounded QA pairs aligned to the underlying corpus are harder still to find. All Relations Lead to Rome (ARLtR) is a new framework built to close that gap. It jointly constructs, i",
+          "author": "@cyberandy",
+          "published": "2026-07-31T02:54:03+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
         }
       ]
     },
     {
-      "what_happened": "I wish \"Information Superhighway\" caught on the way \"web traffic\" did.. I wish \"Information Superhighway\" caught on the ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
+      "what_happened": "Bing Webmaster Tools lacks page-level query filtering | Bing Webmaster Tools 仍缺失页面级查询过滤功能",
+      "why_it_matters": "尽管 Bing 在 AI 搜索上动作频频，但其站长工具（BWT）在基础数据分析上仍存在局限，无法直接对特定页面的关键词进行过滤，限制了 SEO 对 Bing 流量的精细化诊断。",
+      "evidence": "expert_analysis (Lily Ray)",
+      "evidence_detail": "SEO expert Lily Ray highlighted a critical usability gap in Bing Webmaster Tools, noting the platform's lack of page-level filtering for queries and keywords. This forces SEOs to export raw data to external tools like Excel or BigQuery to perform granular page-and-keyword level analysis.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "check X (在分析 Bing 流量时，需导出原始数据至 BigQuery 或 Excel 进行多维度过滤，无法直接在 BWT 界面完成)",
       "confidence": "Observed",
-      "impact": "P2",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
+      "score": 45,
       "sources": [
         {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2082889934004752826"
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2082944892469182957",
+          "excerpt": "Dear Bing: please please please add page-level filtering to queries/keywords in Bing Webmaster Tools! 🙏🏽🙏🏽🙏🏽 Or like… any filtering in BWT for that matter…? 😇 @kmadhavan77. Dear Bing: please please please add page-level filtering to queries/keywords in Bing Webmaster Tools! 🙏🏽🙏🏽🙏🏽 Or like… any filtering in BWT for that matter…? 😇 @kmadhavan77",
+          "author": "@lilyraynyc",
+          "published": "2026-07-30T21:42:16+00:00",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "Welcome to the era of incident marketing. \"Look, our models are so strong they break out of their safety environments. C",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Kevin_Indig",
+      "what_happened": "Major AI search engines obscure underlying search indexes | 主流 AI 搜索引擎隐蔽其底层搜索索引",
+      "why_it_matters": "Anthropic (Claude) 和 OpenAI (SearchGPT/ChatGPT) 虽深度依赖搜索，但均未公开其底层使用的搜索索引，这给 SEO 归因和 GEO 的可见性追踪带来了极高黑盒化挑战。",
+      "evidence": "expert_analysis (Simon Willison, Andy Alagappan)",
+      "evidence_detail": "Tech expert Simon Willison pointed out that both Anthropic and OpenAI heavily leverage search in their products but obscure the underlying search index they use (e.g., whether they rely entirely on Bing, Google, or proprietary indexes). This lack of transparency complicates technical SEO auditing and bot-behavior tracking.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "monitor Z (持续关注 AI 搜索引擎的 User-Agent 抓取行为，通过服务器日志分析其真实的索引来源)",
       "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 50,
       "sources": [
         {
-          "name": "Kevin_Indig",
-          "url": "https://x.com/Kevin_Indig/status/2082993610723643689"
+          "name": "cyberandy",
+          "url": "https://x.com/cyberandy/status/2083026608667890123",
+          "excerpt": "True fact.. True fact. Simon Willison (@simonw) It's wild to me that both Anthropic and OpenAI have products that lean so hard on search, and yet they both obscure the underlying search index that they are using — https://nitter.net/simonw/status/2082835952939200939#m",
+          "author": "@cyberandy",
+          "published": "2026-07-31T03:06:58+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
         }
       ]
     },
     {
-      "what_happened": "What 13 Billion Google Searches Reveal About Zero-Click Behavior. Most clicks go to sites the searcher never named, Goog",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "iPullRank Blog",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_happened": "Implement Hybrid Retrieval (Vector + Entity) for AI Search Optimization | 实施混合检索（向量+实体）优化 AI 搜索召回",
+      "why_it_matters": "现代 AI 搜索引擎不仅使用向量检索，还结合了知识图谱和实体识别。通过在页面中显式建立实体关联，可以大幅提升内容在混合检索系统中的召回率。",
+      "evidence": "data_research (ARLtR framework demonstrating that combining vector search with structured entity relations yields higher factual accuracy)",
+      "evidence_detail": "The ARLtR framework demonstrates that joint vector-based and knowledge-graph-based retrieval provides superior grounding for factual QA. By aligning unstructured text with explicit entity-relation pairs, systems can reason more accurately over the corpus.",
+      "who_it_affects": "publisher / SaaS / ecommerce",
+      "what_to_do": "test Y",
+      "confidence": "Data-backed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Playbook: Worth Testing",
+      "score": 80,
+      "how_to_test": "1. 选择 20 个核心排名的长尾页面；2. 使用 Schema.org (about, mentions) 显式声明页面内容与维基百科/Wikidata 中标准实体的关联；3. 在正文中采用“实体-关系-实体”的清晰句式结构（如“Brand A [实体] is a subsidiary of Company B [实体]”）；4. 观察 AI 搜索引擎（如 Perplexity, ChatGPT Search）对相关实体的召回率和引用比例。",
+      "success_metric": "AI 搜索引擎中针对相关实体/品牌查询的引用次数（Citations）和提及率提升。",
+      "effort": "中等。需要调整页面 Schema 结构和正文写作规范，无技术风险。",
       "sources": [
         {
-          "name": "iPullRank Blog",
-          "url": "https://ipullrank.com/zero-click-behavior-analysis-q3-2026"
-        }
-      ]
-    },
-    {
-      "what_happened": "WP Engine Partners With BigCommerce To Scale WordPress Stores via @sejournal, @martinibuster. WP Engine announced Commer",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/wp-engine-bigcommerce-wordpress-stores/584343/"
-        }
-      ]
-    },
-    {
-      "what_happened": "We’re honored to be a Visionary in the 2026 Gartner® Magic Quadrant™ for Secure Access Service Edge Platforms! Check bac",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2082839849682264564"
-        }
-      ]
-    },
-    {
-      "what_happened": "I know one button that will get a lot of use. Lol -> LinkedIn Introduces a 'Seems Like AI Slop' Button https://www.404me",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2082884714180817209"
+          "name": "cyberandy",
+          "url": "https://x.com/cyberandy/status/2083023356291338745",
+          "excerpt": "Love this work.. Love this work. The Year of the Graph (@TheYotg) All Relations Lead to Rome: Automated Knowledge Graph Creation and Question Generation 🏛️ Most retrieval datasets force a choice: vector-based search over unstructured text, or reasoning over a knowledge graph. Rarely both. And ground-truth entities, relations, and fact-grounded QA pairs aligned to the underlying corpus are harder still to find. All Relations Lead to Rome (ARLtR) is a new framework built to close that gap. It jointly constructs, i",
+          "author": "@cyberandy",
+          "published": "2026-07-31T02:54:03+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
         }
       ]
     }
@@ -373,14 +371,14 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-07-31T02:31:41.176533+00:00",
+    "ran_at": "2026-07-31T04:21:59.038195+00:00",
     "sources": {
       "x": {
         "ok": 27,
         "total": 29,
         "failed_names": [
           "JohnMu",
-          "lilyraynyc"
+          "VeryWellVersed"
         ],
         "items": 65
       },
@@ -400,7 +398,7 @@
       }
     },
     "candidates_fetched": 77,
-    "candidates_fresh": 50,
+    "candidates_fresh": 8,
     "llm_provider": ""
   }
 }

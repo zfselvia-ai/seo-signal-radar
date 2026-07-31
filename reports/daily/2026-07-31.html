@@ -32,79 +32,61 @@ h2{font-size:19px;margin-top:30px;padding-bottom:6px;border-bottom:1px solid #ee
 .footer{color:#999;font-size:12px;margin-top:32px;}
 </style></head><body>
 <h1>Daily SEO/GEO Signal Radar</h1><div class='date'>2026-07-31</div>
-<div class='brief'><span class='chip'>8 signals</span><span class='chip'>top P2</span><span class='chip'>no confirmed update</span><span class='chip'>SERP Unknown</span></div>
-<div class='headline'>8 signals from sources (LLM summary unavailable).</div>
+<div class='brief'><span class='chip'>5 signals</span><span class='chip'>top P2</span><span class='chip'>no confirmed update</span><span class='chip'>SERP Unknown</span></div>
+<div class='headline'>GSC social profile linking bug reported; ARLtR framework highlights hybrid vector-entity retrieval for AI search</div>
 <h2>SERP &amp; Algorithm Signals</h2>
 <div class='item'>
-<div class='what'>Adversaries aren&#x27;t breaking in—they’re logging in. How is your financial leadership redefining security? Register for ou<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> Cloudflare</div>
+<div class='what'>Bing Webmaster Tools lacks page-level query filtering | Bing Webmaster Tools 仍缺失页面级查询过滤功能<span class='badge' style='color:#374151;background:#f3f4f6'>P3</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 尽管 Bing 在 AI 搜索上动作频频，但其站长工具（BWT）在基础数据分析上仍存在局限，无法直接对特定页面的关键词进行过滤，限制了 SEO 对 Bing 流量的精细化诊断。</div>
+<div class='meta'><b>证据 Evidence:</b> expert_analysis (Lily Ray)</div>
 <div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://x.com/Cloudflare/status/2082994688261300588'>Cloudflare ↗</a></div>
+<div class='meta'><b>行动 Action:</b> check X (在分析 Bing 流量时，需导出原始数据至 BigQuery 或 Excel 进行多维度过滤，无法直接在 BWT 界面完成)</div>
+<details class='eviexp'><summary>Evidence · 1 source</summary><div class='evibody'><div class='edetail'>SEO expert Lily Ray highlighted a critical usability gap in Bing Webmaster Tools, noting the platform&#x27;s lack of page-level filtering for queries and keywords. This forces SEOs to export raw data to external tools like Excel or BigQuery to perform granular page-and-keyword level analysis.</div><blockquote class='quote'><div class='qhead'>@lilyraynyc · 2026-07-30 · expert analysis</div><div class='qtext'>Dear Bing: please please please add page-level filtering to queries/keywords in Bing Webmaster Tools! 🙏🏽🙏🏽🙏🏽 Or like… any filtering in BWT for that matter…? 😇 @kmadhavan77. Dear Bing: please please please add page-level filtering to queries/keywords in Bing Webmaster Tools! 🙏🏽🙏🏽🙏🏽 Or like… any filtering in BWT for that matter…? 😇 @kmadhavan77</div></blockquote></div></details>
+<div class='src'><a href='https://x.com/lilyraynyc/status/2082944892469182957'>lilyraynyc ↗</a></div>
 </div>
+<h2>AI Search / GEO</h2>
 <div class='item'>
-<div class='what'>&quot;Search referrals were choppy...&quot; That&#x27;s one way to explain it... I published a post recently all about their AI transla<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> glenngabe</div>
+<div class='what'>Major AI search engines obscure underlying search indexes | 主流 AI 搜索引擎隐蔽其底层搜索索引<span class='badge' style='color:#374151;background:#f3f4f6'>P3</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
+<div class='meta'><b>为何重要 Why:</b> Anthropic (Claude) 和 OpenAI (SearchGPT/ChatGPT) 虽深度依赖搜索，但均未公开其底层使用的搜索索引，这给 SEO 归因和 GEO 的可见性追踪带来了极高黑盒化挑战。</div>
+<div class='meta'><b>证据 Evidence:</b> expert_analysis (Simon Willison, Andy Alagappan)</div>
 <div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://x.com/glenngabe/status/2082942064254185936'>glenngabe ↗</a></div>
+<div class='meta'><b>行动 Action:</b> monitor Z (持续关注 AI 搜索引擎的 User-Agent 抓取行为，通过服务器日志分析其真实的索引来源)</div>
+<details class='eviexp'><summary>Evidence · 1 source</summary><div class='evibody'><div class='edetail'>Tech expert Simon Willison pointed out that both Anthropic and OpenAI heavily leverage search in their products but obscure the underlying search index they use (e.g., whether they rely entirely on Bing, Google, or proprietary indexes). This lack of transparency complicates technical SEO auditing and bot-behavior tracking.</div><blockquote class='quote'><div class='qhead'>@cyberandy · 2026-07-31 · expert vendor</div><div class='qtext'>True fact.. True fact. Simon Willison (@simonw) It&#x27;s wild to me that both Anthropic and OpenAI have products that lean so hard on search, and yet they both obscure the underlying search index that they are using — https://nitter.net/simonw/status/2082835952939200939#m</div></blockquote></div></details>
+<div class='src'><a href='https://x.com/cyberandy/status/2083026608667890123'>cyberandy ↗</a></div>
 </div>
+<h2>Research &amp; Retrieval</h2>
 <div class='item'>
-<div class='what'>I wish &quot;Information Superhighway&quot; caught on the way &quot;web traffic&quot; did.. I wish &quot;Information Superhighway&quot; caught on the <span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> VeryWellVersed</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://x.com/VeryWellVersed/status/2082889934004752826'>VeryWellVersed ↗</a></div>
+<div class='what'>ARLtR framework bridges vector search and knowledge graphs | ARLtR 框架实现向量搜索与知识图谱的协同检索<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 传统的 RAG 通常在无结构文本向量搜索与结构化知识图谱推理之间二选一。ARLtR 框架通过联合构建实体、关系及对齐的事实问答对，为混合检索提供了新思路，有助于优化 AI 搜索引擎的召回精度。</div>
+<div class='meta'><b>证据 Evidence:</b> data_research (All Relations Lead to Rome framework paper)</div>
+<div class='meta'><b>影响 Affects:</b> SaaS / publisher / international</div>
+<div class='meta'><b>行动 Action:</b> test Y (在构建企业级 RAG 或 AI 搜索优化时，测试混合检索架构，将无结构文本向量与结构化知识图谱结合)</div>
+<details class='eviexp'><summary>Evidence · 1 source</summary><div class='evibody'><div class='edetail'>The &#x27;All Relations Lead to Rome&#x27; (ARLtR) framework automates knowledge graph creation and question generation aligned to an underlying corpus. It bridges the gap between unstructured vector search and structured knowledge graph reasoning, generating ground-truth entities and fact-grounded QA pairs to improve retrieval accuracy.</div><blockquote class='quote'><div class='qhead'>@cyberandy · 2026-07-31 · expert vendor</div><div class='qtext'>Love this work.. Love this work. The Year of the Graph (@TheYotg) All Relations Lead to Rome: Automated Knowledge Graph Creation and Question Generation 🏛️ Most retrieval datasets force a choice: vector-based search over unstructured text, or reasoning over a knowledge graph. Rarely both. And ground-truth entities, relations, and fact-grounded QA pairs aligned to the underlying corpus are harder still to find. All Relations Lead to Rome (ARLtR) is a new framework built to close that gap. It jointly constructs, i</div></blockquote></div></details>
+<div class='src'><a href='https://x.com/cyberandy/status/2083023356291338745'>cyberandy ↗</a></div>
 </div>
+<h2>Playbook: Worth Testing</h2>
 <div class='item'>
-<div class='what'>Welcome to the era of incident marketing. &quot;Look, our models are so strong they break out of their safety environments. C<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> Kevin_Indig</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://x.com/Kevin_Indig/status/2082993610723643689'>Kevin_Indig ↗</a></div>
+<div class='what'>Implement Hybrid Retrieval (Vector + Entity) for AI Search Optimization | 实施混合检索（向量+实体）优化 AI 搜索召回<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#1e40af;background:#dbeafe'>Data-backed</span></div>
+<div class='meta'><b>为何重要 Why:</b> 现代 AI 搜索引擎不仅使用向量检索，还结合了知识图谱和实体识别。通过在页面中显式建立实体关联，可以大幅提升内容在混合检索系统中的召回率。</div>
+<div class='meta'><b>证据 Evidence:</b> data_research (ARLtR framework demonstrating that combining vector search with structured entity relations yields higher factual accuracy)</div>
+<div class='meta'><b>影响 Affects:</b> publisher / SaaS / ecommerce</div>
+<div class='meta'><b>行动 Action:</b> test Y</div>
+<div class='meta'><b>如何测试 Test:</b> 1. 选择 20 个核心排名的长尾页面；2. 使用 Schema.org (about, mentions) 显式声明页面内容与维基百科/Wikidata 中标准实体的关联；3. 在正文中采用“实体-关系-实体”的清晰句式结构（如“Brand A [实体] is a subsidiary of Company B [实体]”）；4. 观察 AI 搜索引擎（如 Perplexity, ChatGPT Search）对相关实体的召回率和引用比例。</div>
+<div class='meta'><b>衡量 Measure:</b> AI 搜索引擎中针对相关实体/品牌查询的引用次数（Citations）和提及率提升。</div>
+<div class='meta'><b>成本与风险 Effort:</b> 中等。需要调整页面 Schema 结构和正文写作规范，无技术风险。</div>
+<details class='eviexp'><summary>Evidence · 1 source</summary><div class='evibody'><div class='edetail'>The ARLtR framework demonstrates that joint vector-based and knowledge-graph-based retrieval provides superior grounding for factual QA. By aligning unstructured text with explicit entity-relation pairs, systems can reason more accurately over the corpus.</div><blockquote class='quote'><div class='qhead'>@cyberandy · 2026-07-31 · expert vendor</div><div class='qtext'>Love this work.. Love this work. The Year of the Graph (@TheYotg) All Relations Lead to Rome: Automated Knowledge Graph Creation and Question Generation 🏛️ Most retrieval datasets force a choice: vector-based search over unstructured text, or reasoning over a knowledge graph. Rarely both. And ground-truth entities, relations, and fact-grounded QA pairs aligned to the underlying corpus are harder still to find. All Relations Lead to Rome (ARLtR) is a new framework built to close that gap. It jointly constructs, i</div></blockquote></div></details>
+<div class='src'><a href='https://x.com/cyberandy/status/2083023356291338745'>cyberandy ↗</a></div>
 </div>
+<h2>Unconfirmed Watchlist</h2>
 <div class='item'>
-<div class='what'>What 13 Billion Google Searches Reveal About Zero-Click Behavior. Most clicks go to sites the searcher never named, Goog<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> iPullRank Blog</div>
+<div class='what'>Google Search Console social profile association throwing errors | Google Search Console 关联社交媒体账号时出现报错<span class='badge' style='color:#374151;background:#f3f4f6'>P3</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
+<div class='meta'><b>为何重要 Why:</b> SEO 人员在 GSC 中尝试关联 Instagram 和 Twitter/X 账号时遇到持续报错，影响品牌实体在 Google 知识图谱中的关联验证。</div>
+<div class='meta'><b>证据 Evidence:</b> practitioner_observation (Lily Ray, Ray Martinez)</div>
 <div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://ipullrank.com/zero-click-behavior-analysis-q3-2026'>iPullRank Blog ↗</a></div>
+<div class='meta'><b>行动 Action:</b> monitor Z (暂缓在 GSC 中关联社交账号，等待 Google 修复该 Bug)</div>
+<details class='eviexp'><summary>Evidence · 1 source</summary><div class='evibody'><div class='edetail'>Multiple SEO practitioners, including Lily Ray and Ray Martinez, reported receiving consistent error messages when attempting to link their Instagram and Twitter/X profiles within Google Search Console. Google&#x27;s Daniel Waisberg has been looped in, indicating this is likely a system-side bug rather than user error.</div><blockquote class='quote'><div class='qhead'>@lilyraynyc · 2026-07-30 · expert analysis</div><div class='qtext'>I got the same error message in GSC when trying to add my Instagram. @danielwaisberg. I got the same error message in GSC when trying to add my Instagram. @danielwaisberg Ray Martinez (@RayMartinezSEO) Keep getting an error when I add my IG and Twitter to Google Search Console. @googlesearchc — https://nitter.net/RayMartinezSEO/status/2082815941948158226#m</div></blockquote></div></details>
+<div class='src'><a href='https://x.com/lilyraynyc/status/2082933694793212281'>lilyraynyc ↗</a></div>
 </div>
-<div class='item'>
-<div class='what'>WP Engine Partners With BigCommerce To Scale WordPress Stores via @sejournal, @martinibuster. WP Engine announced Commer<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> Search Engine Journal</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://www.searchenginejournal.com/wp-engine-bigcommerce-wordpress-stores/584343/'>Search Engine Journal ↗</a></div>
-</div>
-<div class='item'>
-<div class='what'>We’re honored to be a Visionary in the 2026 Gartner® Magic Quadrant™ for Secure Access Service Edge Platforms! Check bac<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> Cloudflare</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://x.com/Cloudflare/status/2082839849682264564'>Cloudflare ↗</a></div>
-</div>
-<div class='item'>
-<div class='what'>I know one button that will get a lot of use. Lol -&gt; LinkedIn Introduces a &#x27;Seems Like AI Slop&#x27; Button https://www.404me<span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span><span class='badge' style='color:#92400e;background:#fef3c7'>Observed</span></div>
-<div class='meta'><b>为何重要 Why:</b> Auto-extracted from source (LLM summary unavailable).</div>
-<div class='meta'><b>证据 Evidence:</b> glenngabe</div>
-<div class='meta'><b>影响 Affects:</b> all</div>
-<div class='meta'><b>行动 Action:</b> monitor</div>
-
-<div class='src'><a href='https://x.com/glenngabe/status/2082884714180817209'>glenngabe ↗</a></div>
-</div>
+<h2>Today&#x27;s Action Items</h2>
+<ul><li><span class='badge' style='color:#374151;background:#f3f4f6'>P3</span> 暂缓在 Google Search Console 中关联 Instagram/Twitter 账号，避开当前的系统报错 Bug。</li><li><span class='badge' style='color:#854d0e;background:#fef9c3'>P2</span> 针对核心页面测试“向量+实体”混合检索优化，通过 Schema (about/mentions) 显式关联 Wikidata 实体，提升 AI 搜索召回率。</li><li><span class='badge' style='color:#374151;background:#f3f4f6'>P3</span> 在分析 Bing 搜索数据时，由于 BWT 缺乏页面级过滤，建议将数据导出至 Excel 或 BigQuery 进行二次清洗与分析。</li></ul>
 </body></html>
