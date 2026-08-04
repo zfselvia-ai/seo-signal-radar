@@ -7,22 +7,16 @@ on:
 
 permissions:
   contents: write
-  pages: write
 
 jobs:
   daily:
     runs-on: ubuntu-latest
     steps:
-      # Shallow clone: we only ever append, never inspect history here. Keeps
-      # the checkout fast even years in.
       - uses: actions/checkout@v4
         with: {fetch-depth: 1}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
-
-      # X needs no credentials at all — x_source.py reads public Nitter RSS.
-      # (The old cookie/password steps are gone; twikit is no longer used.)
 
       - name: Cache state
         uses: actions/cache@v4
@@ -41,11 +35,8 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-        run: python main.py daily      # also rebuilds dashboard/ + sends push
+        run: python main.py daily
 
-      # Commit ONLY the append-only source of truth: the daily archive and the
-      # rendered reports. dashboard/index.html is deliberately NOT committed —
-      # it embeds the entire archive inline, so it is fully rewritten every run.
       - name: Commit archive + reports
         run: |
           git config user.name "radar-bot"
@@ -53,11 +44,3 @@ jobs:
           git add data/archive reports/ || true
           git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push skipped"
-
-      # Publish the dashboard to GitHub Pages (gh-pages branch).
-      - name: Publish dashboard to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dashboard
-          publish_branch: gh-pages
