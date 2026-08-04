@@ -475,7 +475,7 @@ notify:
   top_signals: 3
   max_actions: 2
   # Where "view full digest" points (your Pages URL or file path).
-  dashboard_url: "https://seo-signal-radar.pages.dev/"
+  dashboard_url: "https://zfselvia-ai.github.io/seo-signal-radar/"
   # channel format: "slack" | "discord" | "telegram" | "feishu" | "pushplus" | "plain"
   channel: "pushplus"
   # Webhook URL read from env NOTIFY_WEBHOOK_URL (keep secrets out of config).

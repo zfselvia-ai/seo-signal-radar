@@ -7,15 +7,11 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   daily:
     runs-on: ubuntu-latest
-    env:
-      # Secrets can't be used in an `if:` directly, so reduce their presence to
-      # a plain boolean here. Lets the publish step skip cleanly (instead of
-      # failing the whole run) before Cloudflare is set up.
-      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
     steps:
       # Shallow clone: we only ever append, never inspect history here. Keeps
       # the checkout fast even years in.
@@ -50,10 +46,6 @@ jobs:
       # Commit ONLY the append-only source of truth: the daily archive and the
       # rendered reports. dashboard/index.html is deliberately NOT committed —
       # it embeds the entire archive inline, so it is fully rewritten every run.
-      # Committing it stored a whole new multi-MB blob daily and made .git grow
-      # QUADRATICALLY (~136MB after 1 year, ~1.2GB after 3). It is a build
-      # artifact: regenerable from data/archive at any time, and published
-      # straight to the gh-pages branch below.
       - name: Commit archive + reports
         run: |
           git config user.name "radar-bot"
@@ -62,32 +54,10 @@ jobs:
           git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push skipped"
 
-      # Publish the dashboard to Cloudflare Pages, NOT GitHub Pages.
-      #
-      # Why: GitHub Pages serves a public URL even from a private repo on most
-      # plans, and the only gate we could add there was a client-side password
-      # check — which ships its own hash to the browser and is therefore
-      # decoration, not security. Cloudflare Access enforces auth at the edge
-      # BEFORE any HTML is served, so an unauthenticated request never receives
-      # the data at all.
-      #
-      # Requires two repo secrets: CLOUDFLARE_API_TOKEN (scoped to
-      # "Cloudflare Pages: Edit") and CLOUDFLARE_ACCOUNT_ID. If they are absent
-      # this step is skipped rather than failing the run, so the archive commit
-      # above still succeeds while you finish setting Cloudflare up.
-      - name: Publish dashboard to Cloudflare Pages
-        # Step-level `env` is not visible to a step's own `if`, so this reads the
-        # job-level HAS_CF defined at the top of the job.
-        if: env.HAS_CF == 'true'
-        uses: cloudflare/wrangler-action@v3
+      # Publish the dashboard to GitHub Pages (gh-pages branch).
+      - name: Publish dashboard to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dashboard --project-name=seo-signal-radar --branch=main
-
-      - name: Note when Cloudflare is not configured
-        if: env.HAS_CF != 'true'
-        run: |
-          echo "::warning::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set —" \
-               "dashboard was generated but not published. See README ‘Private" \
-               "dashboard’ for the one-time setup."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dashboard
+          publish_branch: gh-pages
