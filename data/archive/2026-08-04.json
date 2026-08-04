@@ -1,265 +1,65 @@
 {
   "date": "2026-08-04",
-  "generated_at": "2026-08-04T04:14:41.576776+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "generated_at": "2026-08-04T08:42:11.020705+00:00",
+  "headline": "Bing Merchant Center free listings may require active ads to display, impacting AI search indexing",
   "sections": {
-    "SERP & Algorithm Signals": [
+    "Playbook: Worth Testing": [
       {
-        "what_happened": "The gap between a cool AI experiment and a scalable enterprise asset is governance. Join our exclusive webinar for the b",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Bing Merchant Center free listings may require active ads | Bing Merchant Center 免费商品列表或需启用广告后方可展示",
+        "why_it_matters": "尽管官方文档声称免费列表无需广告，但测试表明未启用广告时可能无法展示，直接影响 Bing AI 和 ChatGPT 的商品数据召回。",
+        "evidence": "Practitioner observation of Bing Merchant Center product indexing behavior.",
+        "evidence_detail": "SEO consultant Brodie Clark observed in an experiment that free product listings in the Bing Shopping tab only began displaying after enabling active ad campaigns, directly contradicting Microsoft's official documentation. This suggests a potential 'pay-to-play' gate for indexing, which is critical for brands leveraging product feeds to feed Bing AI and ChatGPT's search indexes.",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "在 Bing Merchant Center 中为商品 feed 启用低预算广告，测试是否能激活免费列表的展示与 AI 引用。",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Playbook: Worth Testing",
+        "score": 75,
+        "how_to_test": "针对已配置 Bing Merchant Center Feed 但未投放广告的电商站点，启动一个极低预算（如每日 1-5 美元）的伴随式购物广告系列。在 7-14 天内监测 Bing Merchant Center 后台的‘免费列表（Free Listings）’状态、曝光量以及 Bing AI/ChatGPT 中的引用变化。",
+        "success_metric": "Bing Merchant Center 中免费列表的曝光量与点击量，以及 Bing AI/ChatGPT 中该商品的引用频次。",
+        "effort": "低成本（仅需极少广告预算），低风险（预算可控，不影响现有 SEO 架构）。",
         "sources": [
           {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2084444249211183523"
+            "name": "Brodie Clark",
+            "url": "https://x.com/brodieseo/status/2084557446866190707",
+            "excerpt": "By the way, I did an experiment with Bing that resulted in free listings (in the Shopping tab) only showing after enabling ads. This was surprising as all of their documentation goes against this. Important for if you want your products to be in Bing results for LLM purposes.. By the way, I did an experiment with Bing that resulted in free listings (in the Shopping tab) only showing after enabling ads. This was surprising as all of their documentation goes against this. Important for if you want your products to be in Bing results for LLM purposes. Brodie Clark (@brodieseo) The future of Ecommerce AI SEO is in product feeds. This is the article to read to stay ahead of the trend. I spent…",
+            "author": "@brodieseo",
+            "published": "2026-08-04T08:29:59+00:00",
+            "source_type": "expert_analysis"
           }
         ]
-      },
+      }
+    ],
+    "Today's Action Items": [
       {
-        "what_happened": "Newish client. From 21K+ domains disavowed to none in the blink of an eye. They never should have been disavowing links.",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2084326104819437857"
-          }
-        ]
-      },
-      {
-        "what_happened": "It's kind of crazy how many people I've talked to that thought I didn't actually work at Ahrefs. Apparently my job title",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "patrickstox",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "patrickstox",
-            "url": "https://x.com/patrickstox/status/2084354359932932186"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @willcritchlow: The casino is not worried about loaded dice. It is worried about the people who have learned to sl",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "willcritchlow",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "willcritchlow",
-            "url": "https://x.com/willcritchlow/status/2084000952403607591"
-          }
-        ]
-      },
-      {
-        "what_happened": "🐦 We’ve now received the 80 responses to Finchling’s survey on news overwhelm in PR! Some interesting preliminary findin",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "aleyda",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "aleyda",
-            "url": "https://x.com/aleyda/status/2084178968488329260"
-          }
-        ]
-      },
-      {
-        "what_happened": "WooCommerce Social Login WordPress Plugin Enables Full Site Takeover via @sejournal, @martinibuster. WooCommerce Social ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/woocommerce-social-login-wordpress-plugin-enables-full-site-takeover/584601/"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @Cloudflare: It's Agents Week at Cloudflare again, and even though it's only Monday there's already a lot to cover",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2084421768278954012"
-          }
-        ]
-      },
-      {
-        "what_happened": "Sounds like you'll be able to customize your handle in your Google Search profile (if you meet the minimum requirements)",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2084320989286912297"
-          }
-        ]
+        "what_to_do": "针对电商站点，检查 Bing Merchant Center 免费列表是否正常曝光；若无曝光，测试开启低预算广告以激活免费展示与 AI 搜索引用。",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "The gap between a cool AI experiment and a scalable enterprise asset is governance. Join our exclusive webinar for the b",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Bing Merchant Center free listings may require active ads | Bing Merchant Center 免费商品列表或需启用广告后方可展示",
+      "why_it_matters": "尽管官方文档声称免费列表无需广告，但测试表明未启用广告时可能无法展示，直接影响 Bing AI 和 ChatGPT 的商品数据召回。",
+      "evidence": "Practitioner observation of Bing Merchant Center product indexing behavior.",
+      "evidence_detail": "SEO consultant Brodie Clark observed in an experiment that free product listings in the Bing Shopping tab only began displaying after enabling active ad campaigns, directly contradicting Microsoft's official documentation. This suggests a potential 'pay-to-play' gate for indexing, which is critical for brands leveraging product feeds to feed Bing AI and ChatGPT's search indexes.",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "在 Bing Merchant Center 中为商品 feed 启用低预算广告，测试是否能激活免费列表的展示与 AI 引用。",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Playbook: Worth Testing",
+      "score": 75,
+      "how_to_test": "针对已配置 Bing Merchant Center Feed 但未投放广告的电商站点，启动一个极低预算（如每日 1-5 美元）的伴随式购物广告系列。在 7-14 天内监测 Bing Merchant Center 后台的‘免费列表（Free Listings）’状态、曝光量以及 Bing AI/ChatGPT 中的引用变化。",
+      "success_metric": "Bing Merchant Center 中免费列表的曝光量与点击量，以及 Bing AI/ChatGPT 中该商品的引用频次。",
+      "effort": "低成本（仅需极少广告预算），低风险（预算可控，不影响现有 SEO 架构）。",
       "sources": [
         {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2084444249211183523"
-        }
-      ]
-    },
-    {
-      "what_happened": "Newish client. From 21K+ domains disavowed to none in the blink of an eye. They never should have been disavowing links.",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2084326104819437857"
-        }
-      ]
-    },
-    {
-      "what_happened": "It's kind of crazy how many people I've talked to that thought I didn't actually work at Ahrefs. Apparently my job title",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "patrickstox",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "patrickstox",
-          "url": "https://x.com/patrickstox/status/2084354359932932186"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @willcritchlow: The casino is not worried about loaded dice. It is worried about the people who have learned to sl",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "willcritchlow",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "willcritchlow",
-          "url": "https://x.com/willcritchlow/status/2084000952403607591"
-        }
-      ]
-    },
-    {
-      "what_happened": "🐦 We’ve now received the 80 responses to Finchling’s survey on news overwhelm in PR! Some interesting preliminary findin",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "aleyda",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "aleyda",
-          "url": "https://x.com/aleyda/status/2084178968488329260"
-        }
-      ]
-    },
-    {
-      "what_happened": "WooCommerce Social Login WordPress Plugin Enables Full Site Takeover via @sejournal, @martinibuster. WooCommerce Social ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/woocommerce-social-login-wordpress-plugin-enables-full-site-takeover/584601/"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @Cloudflare: It's Agents Week at Cloudflare again, and even though it's only Monday there's already a lot to cover",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2084421768278954012"
-        }
-      ]
-    },
-    {
-      "what_happened": "Sounds like you'll be able to customize your handle in your Google Search profile (if you meet the minimum requirements)",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2084320989286912297"
+          "name": "Brodie Clark",
+          "url": "https://x.com/brodieseo/status/2084557446866190707",
+          "excerpt": "By the way, I did an experiment with Bing that resulted in free listings (in the Shopping tab) only showing after enabling ads. This was surprising as all of their documentation goes against this. Important for if you want your products to be in Bing results for LLM purposes.. By the way, I did an experiment with Bing that resulted in free listings (in the Shopping tab) only showing after enabling ads. This was surprising as all of their documentation goes against this. Important for if you want your products to be in Bing results for LLM purposes. Brodie Clark (@brodieseo) The future of Ecommerce AI SEO is in product feeds. This is the article to read to stay ahead of the trend. I spent…",
+          "author": "@brodieseo",
+          "published": "2026-08-04T08:29:59+00:00",
+          "source_type": "expert_analysis"
         }
       ]
     }
@@ -373,15 +173,16 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-08-04T04:13:41.305301+00:00",
+    "ran_at": "2026-08-04T08:41:46.417363+00:00",
     "sources": {
       "x": {
-        "ok": 28,
+        "ok": 27,
         "total": 29,
         "failed_names": [
+          "BingWMC",
           "JohnMu"
         ],
-        "items": 61
+        "items": 59
       },
       "rss": {
         "ok": 7,
@@ -392,14 +193,14 @@
           "Search Engine Roundtable",
           "Search Engine Land"
         ],
-        "items": 12
+        "items": 11
       },
       "google_status": {
         "items": 0
       }
     },
-    "candidates_fetched": 73,
-    "candidates_fresh": 60,
+    "candidates_fetched": 70,
+    "candidates_fresh": 4,
     "llm_provider": ""
   }
 }
