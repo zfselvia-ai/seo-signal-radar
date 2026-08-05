@@ -2,6 +2,11 @@
 # so every twikit request fails. X tweets are now fetched via Nitter RSS in
 # seodigest/x_source.py — no auth, no cookies, more stable.
 feedparser>=6.0.11
+# Both fetchers GET through httpx directly (see rss_source.FETCH_HEADERS for why
+# we don't let feedparser do its own fetching). It was previously absent here and
+# only present as a transitive dep of anthropic/openai — so swapping LLM SDKs, or
+# installing without them, would have broken all data collection at once.
+httpx>=0.27.0
 PyYAML>=6.0.2
 python-dotenv>=1.0.1
 anthropic>=0.40.0

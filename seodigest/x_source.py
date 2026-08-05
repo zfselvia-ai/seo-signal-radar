@@ -142,7 +142,16 @@ def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None):
     the whole point: "no tweets" and "cannot reach X at all" produce identical
     digests otherwise, and a totally dead Nitter would look like a quiet day.
     """
-    import httpx
+    try:
+        import httpx
+    except ImportError:
+        # See rss_source.fetch_feed_text: a missing dep must not masquerade as
+        # 29 separate unreachable accounts.
+        msg = ("MISSING DEPENDENCY: httpx is not installed — "
+               "run: pip install -r requirements.txt")
+        LAST_ERRORS[handle] = msg
+        print(f"  [x] {msg}")
+        return None
     headers = {"User-Agent": FETCH_UA}
     errors = []
     for host in instances:

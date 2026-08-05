@@ -43,7 +43,15 @@ def fetch_feed_text(url: str, timeout: int = FETCH_TIMEOUT):
     Exactly one of text/error is meaningful. Kept separate from fetch() so the
     `doctor` command can probe a feed without running the whole pipeline.
     """
-    import httpx
+    try:
+        import httpx
+    except ImportError:
+        # Distinguished from a network error on purpose: without this, a missing
+        # dependency is reported once per feed as an ordinary fetch failure, and
+        # 11 identical "failed" lines look like the network is down rather than
+        # like one pip install away. Same wording in x_source.
+        return None, None, ("MISSING DEPENDENCY: httpx is not installed — "
+                            "run: pip install -r requirements.txt")
     try:
         r = httpx.get(url, headers=FETCH_HEADERS, timeout=timeout,
                       follow_redirects=True)

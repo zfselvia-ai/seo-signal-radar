@@ -400,10 +400,44 @@ def _probe_nitter(cfg, timeout):
     return alive, len(instances)
 
 
+# doctor is the command you run when the system is ALREADY broken, so it must
+# not be the command that dies with a traceback. A missing dependency is the
+# most likely reason `daily` produced nothing at all, and "ModuleNotFoundError:
+# feedparser" tells you the module name but not that it's in requirements.txt or
+# which interpreter is missing it — which is the actual question when several
+# pythons are on the machine.
+def _preflight():
+    import importlib.util
+    def present(name):
+        # find_spec RAISES ValueError when the module is already in sys.modules
+        # with a None __spec__ (stubs and some frozen imports do this), so a bare
+        # find_spec call turns the health check into the thing that crashes.
+        if name in sys.modules:
+            return True
+        try:
+            return importlib.util.find_spec(name) is not None
+        except (ImportError, ValueError):
+            return False
+    missing = [m for m in ("feedparser", "httpx", "yaml") if not present(m)]
+    if not missing:
+        return True
+    print("\n  Cannot probe anything: this Python is missing "
+          + ", ".join(missing) + ".")
+    print(f"  Interpreter: {sys.executable}")
+    print("  Install the dependencies into THIS interpreter:")
+    print(f"    {sys.executable} -m pip install -r requirements.txt")
+    print("  (If you use a virtualenv, activate it first — a module installed")
+    print("   into a different python is invisible here.)")
+    return False
+
+
 def run_doctor(cfg, args):
     timeout = args.timeout
     print("SEO Signal Radar · source health check")
     print("Nothing is written; safe to re-run while fixing URLs.")
+
+    if not _preflight():
+        return 1
 
     bad = _probe_feeds(cfg, timeout)
     if bad and not args.no_alternates:
