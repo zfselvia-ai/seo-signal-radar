@@ -446,6 +446,12 @@ function confTag(c){return c?`<span class="tag conf">${esc(c)}</span>`:"";}
    like one we simply didn't bother to cite. */
 function unverTag(s){return s.unverified?`<span class="tag unver" title="No source URL could be verified against the candidate pool">unverified</span>`:"";}
 
+/* Uncurated items from a degraded run. Reuses the same alarming style as
+   `unverified` on purpose: both mean "this card did not earn the labels next to
+   it". Without a per-card mark, a raw item is indistinguishable from an
+   assessed signal once it's scrolled past the banner or reached the Library. */
+function degTag(s){return s.degraded?`<span class="tag unver" title="Raw source item — curation was unavailable, so its confidence and priority are placeholders">uncurated</span>`:"";}
+
 function morningBrief(rec){
   const sigs=[];
   Object.entries(rec.sections||{}).forEach(([sec,arr])=>{
@@ -460,11 +466,17 @@ function morningBrief(rec){
 }
 
 /* Source health strip. Silent-failure guard: a dead Nitter and a quiet news
-   day produce the same short digest, so coverage has to be visible. */
+   day produce the same short digest, so coverage has to be visible.
+
+   It also carries the DEGRADED banner, because a day where the LLM call failed
+   has the same problem in a different place: the page fills with cards that
+   look normal but were never curated. Fetching and curation are the two ways
+   this product can quietly stop working, so they warn in the same strip. */
 function healthStrip(rec){
   const rm=rec.run_meta||{};
   const src=rm.sources||{};
-  if(!src.x&&!src.rss) return "";
+  const degraded=!!rec.degraded;
+  if(!src.x&&!src.rss&&!degraded) return "";
   const parts=[];let worst=0;  // 0 ok, 1 degraded, 2 down
   [["X",src.x],["RSS",src.rss]].forEach(([label,h])=>{
     if(!h||!h.total) return;
@@ -472,15 +484,22 @@ function healthStrip(rec){
     if(h.ok===0) worst=2; else if(ratio<(DATA.source_warn_ratio??0.7)) worst=Math.max(worst,1);
     parts.push(`<span class="hitem">${label} ${h.ok}/${h.total}</span>`);
   });
-  if(!parts.length) return "";
+  // Uncurated cards are a red-level problem: the reader cannot tell by looking.
+  if(degraded) worst=2;
+  if(!parts.length&&!degraded) return "";
   const cls=worst===2?"down":(worst===1?"warn":"");
   let note="";
-  if(worst===2) note="One source layer is completely unavailable — today's digest is NOT representative.";
+  if(degraded){
+    note="Curation unavailable — these are RAW source items, not assessed signals. "
+        +"Confidence and priority labels are placeholders.";
+    if(rec.degraded_reason) note+=` (${rec.degraded_reason})`;
+  }
+  else if(worst===2) note="One source layer is completely unavailable — today's digest is NOT representative.";
   else if(worst===1) note="Reduced source coverage — today may be thinner than reality.";
   const failed=[...(src.x?.failed_names||[]),...(src.rss?.failed_names||[])];
-  if(worst&&failed.length) note+=` Unreachable: ${failed.slice(0,6).join(", ")}`;
+  if(worst&&!degraded&&failed.length) note+=` Unreachable: ${failed.slice(0,6).join(", ")}`;
   return `<div class="health ${cls}"><span class="hdot"></span>
-    <span class="hitem">Sources</span>${parts.join("")}
+    <span class="hitem">${degraded?"Degraded":"Sources"}</span>${parts.join("")}
     ${note?`<span class="hnote">${esc(note)}</span>`:""}</div>`;
 }
 
@@ -570,7 +589,7 @@ function signalCard(s, multiDay){
   const dateTag = (multiDay && s._date) ? `<span class="tag" style="color:var(--ink-3);background:var(--surface-strong);border:1px solid var(--line);font-family:var(--mono);">${esc(s._date)}</span>` : "";
   return `<div class="card ${esc(imp)}">
     <div class="what"><span class="wtext">${esc(s.what_happened)}</span>
-      <span class="badges">${dateTag}${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}</span></div>
+      <span class="badges">${dateTag}${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}${degTag(s)}</span></div>
     ${row("Why","why_it_matters")}${row("Evidence","evidence")}
     ${row("Affects","who_it_affects")}${row("Action","what_to_do")}
     ${evidencePanel(s)}
@@ -585,7 +604,7 @@ function miniRow(s, multiDay){
   const link=src?`<a class="msrc" href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name||"source")} ↗</a>`:"";
   const why=s.why_it_matters?` — ${esc(s.why_it_matters)}`:"";
   const dateTag = (multiDay && s._date) ? `<span style="font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-right:6px;">${esc(s._date)}</span>` : "";
-  return `<div class="mini">${tag(s.impact)}${dateTag}
+  return `<div class="mini">${tag(s.impact)}${dateTag}${degTag(s)}
     <span class="mtext"><b>${esc(s.what_happened)}</b>${why}</span>${link}</div>`;
 }
 
@@ -713,7 +732,7 @@ function drawLibResults(){
     const srcs=(s.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||"source")} ↗</a>`).join(" ");
     h+=`<div class="lib-row">
       <div class="ld">${esc(s.date)}</div>
-      <div><div class="lw">${esc(s.what_happened)} <span class="badges">${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}</span></div>
+      <div><div class="lw">${esc(s.what_happened)} <span class="badges">${tag(s.impact)}${confTag(s.confidence)}${unverTag(s)}${degTag(s)}</span></div>
         <div class="lmeta"><span>${esc(s.section)}</span>${s.who_it_affects?`<span>· ${esc(s.who_it_affects)}</span>`:""}${srcs?`<span>· ${srcs}</span>`:""}</div>
         ${evidencePanel(s)}
       </div></div>`;

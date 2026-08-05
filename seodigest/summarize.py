@@ -687,12 +687,12 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     raw = _extract_json(call_llm(cfg, system, user))
     if not raw:
         print("[!] LLM returned empty response; falling back to raw items.")
-        return _fallback_digest(items)
+        return _fallback_digest(items, "LLM returned an empty response")
     try:
         data = json.loads(raw)
     except json.JSONDecodeError as e:
         print(f"[!] LLM JSON parse failed: {e}; falling back to raw items.")
-        return _fallback_digest(items)
+        return _fallback_digest(items, f"LLM output was not valid JSON: {e}")
 
     # Verify every citation against what the model was actually shown, BEFORE
     # the signals are grouped, archived and rendered.
@@ -730,7 +730,8 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     if not data.get("signals") and not emptied_by_dedup:
         print(f"[!] LLM kept 0 signals (dropped {data.get('dropped_count', '?')}); "
               f"falling back to raw items.")
-        return _fallback_digest(items)
+        return _fallback_digest(
+            items, "curation rejected every candidate — showing the raw feed")
     if emptied_by_dedup:
         print("[*] every signal today was already reported in the last "
               "few days — publishing a quiet day rather than repeating them.")
@@ -752,8 +753,21 @@ _GROUP_TO_SECTION = {
 }
 
 
-def _fallback_digest(items: List[Item]) -> dict:
-    """When the LLM fails, produce a basic digest from raw item text."""
+def _fallback_digest(items: List[Item], reason: str = "") -> dict:
+    """When the LLM fails, produce a basic digest from raw item text.
+
+    This is a DEGRADED mode and says so in the data, not just in the headline.
+    Nothing here has been curated: the text is a raw truncation, the section is
+    guessed from the source group, and no one judged whether any of it matters.
+    Two consequences, both deliberate:
+
+    - `confidence` is "Speculative", not "Observed". The old value implied
+      somebody had observed and vouched for the item; only the fetcher had.
+      Same reasoning as an unverified source URL, which is also capped here.
+    - `impact` is "P3" (awareness only), not "P2" ("worth testing"). Telling a
+      reader to spend an afternoon testing something no one assessed is the
+      most expensive kind of wrong this product can be.
+    """
     # Same diverse selection, but capped at a readable handful — this is a
     # degraded mode, not the wide curation pool.
     pick = _select_candidates({"daily": {"max_candidates": 8}}, items)
@@ -766,19 +780,22 @@ def _fallback_digest(items: List[Item]) -> dict:
             "evidence": it.source_name,
             "who_it_affects": "all",
             "what_to_do": "monitor",
-            "confidence": "Observed",
-            "impact": "P2",
+            "confidence": "Speculative",
+            "impact": "P3",
             "section": section,
             "sources": [{"name": it.source_name, "url": it.url}],
+            "degraded": True,
         })
     # Group by the section we just assigned.
     grouped: dict[str, list] = {}
     for s in signals:
         grouped.setdefault(s["section"], []).append(s)
     return {
-        "headline": f"{len(signals)} signals from sources (LLM summary unavailable).",
+        "headline": f"{len(signals)} raw items — curation unavailable, nothing here is assessed.",
         "signals": signals,
         "sections": grouped,
         "action_items": [],
         "dropped_count": max(0, len(items) - len(signals)),
+        "degraded": True,
+        "degraded_reason": reason or "LLM step failed",
     }

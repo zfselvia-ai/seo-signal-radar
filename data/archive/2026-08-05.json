@@ -10,15 +10,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/what-top-stories-inside-ai-overviews-means-for-publishers-and-brands-in-2026-and-beyond/584175/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Report That Cloudflare AI Bot Blocking Prevents Googlebot From Indexing Sites via @sejournal, @martinibuster. Anecdotal ",
@@ -26,15 +27,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/report-that-cloudflare-ai-bot-blocking-prevents-googlebot-from-indexing-sites/584673/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Now Reports AI Search Impressions. Here’s How To Read Them via @sejournal, @cshel. Comparing which pages Google u",
@@ -42,15 +44,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/google-reports-ai-search-impressions-how-to-read-them/582824/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Paid Search Absorbed Organic’s Collapse – Then Q2 Slowed Down via @sejournal, @brookeosmundson. Google paid search growt",
@@ -58,15 +61,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/paid-search-absorbed-organics-collapse-then-q2-slowed-down/583560/"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -77,15 +81,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/what-top-stories-inside-ai-overviews-means-for-publishers-and-brands-in-2026-and-beyond/584175/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Report That Cloudflare AI Bot Blocking Prevents Googlebot From Indexing Sites via @sejournal, @martinibuster. Anecdotal ",
@@ -93,15 +98,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/report-that-cloudflare-ai-bot-blocking-prevents-googlebot-from-indexing-sites/584673/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Now Reports AI Search Impressions. Here’s How To Read Them via @sejournal, @cshel. Comparing which pages Google u",
@@ -109,15 +115,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/google-reports-ai-search-impressions-how-to-read-them/582824/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Paid Search Absorbed Organic’s Collapse – Then Q2 Slowed Down via @sejournal, @brookeosmundson. Google paid search growt",
@@ -125,15 +132,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/paid-search-absorbed-organics-collapse-then-q2-slowed-down/583560/"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -282,5 +290,8 @@
     "candidates_fetched": 4,
     "candidates_fresh": 4,
     "llm_provider": ""
-  }
+  },
+  "degraded": true,
+  "degraded_reason": "LLM step failed (backfilled — original reason not recorded)",
+  "quiet_day": false
 }

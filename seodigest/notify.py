@@ -64,6 +64,11 @@ def build_summary(cfg: dict, digest: dict, date_str: str,
         "actions": [{"text": a.get("what_to_do", ""), "impact": a.get("impact", "")}
                     for a in actions],
         "dashboard_url": cfg["notify"].get("dashboard_url", ""),
+        # The push is the most compressed surface in the product: a reader sees
+        # four labels and a headline, with none of the dashboard's context. So a
+        # degraded run has to be stated here too, or the placeholder P3 /
+        # Speculative labels arrive looking like real judgements.
+        "degraded": bool(digest.get("degraded")),
     }
 
 
@@ -75,6 +80,9 @@ def _lines(sm: dict) -> list:
             f"{'✅ confirmed update' if b['confirmed'] else 'no confirmed update'} · "
             f"SERP {b['serp_band']}")
     lines = [head]
+    if sm.get("degraded"):
+        lines.append("\n⚠️ DEGRADED: curation failed — the items below are raw "
+                     "source text, not assessed signals.")
     if sm.get("headline"):
         lines.append(f"\n{sm['headline']}")
     if sm["top_signals"]:
@@ -106,6 +114,9 @@ def _markdown(sm: dict) -> str:
         f"> {b['signals']} 条信号 · 最高优先级 **{b['top_impact']}** · "
         f"{'✅ 有确认更新' if b['confirmed'] else '无确认更新'} · SERP {b['serp_band']}",
     ]
+    if sm.get("degraded"):
+        lines += ["", "> ⚠️ **降级运行**：本次未完成筛选，下列为原始来源条目，"
+                      "优先级与置信度标签仅为占位符。"]
     if sm.get("headline"):
         lines += ["", f"**{sm['headline']}**"]
     if sm["top_signals"]:

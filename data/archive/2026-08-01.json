@@ -10,15 +10,16 @@
         "evidence": "BingWMC",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "BingWMC",
             "url": "https://x.com/BingWMC/status/2083207462040354913"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "You'll have to approve payments and other sensitive actions. I hope :) -> Google starts rolling out access to Gemini Spa",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2083226735202500844"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "The Black Mirror music video will be on @BET this weekend. Tune in!. The Black Mirror music video will be on @BET this w",
@@ -42,15 +44,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2083365345771831304"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "💯💯💯. 💯💯💯 Klaas (@forgebitz) * open linkedin * mark all as slop * close linkedin * — https://nitter.net/forgebitz/status/",
@@ -58,15 +61,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2083253581130416368"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Are you investing in digital PR or social media this year to expand your brand third-party web footprint and increase yo",
@@ -74,15 +78,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2083285810627936461"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Cloudflare’s PACT Is Not Live Yet – Decide Which Track Your Traffic Needs via @sejournal, @slobodanmanic. Cloudflare and",
@@ -90,15 +95,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/cloudflares-pact-is-not-live-yet-decide-which-track-your-traffic-needs/580328/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Last year, we brought Media over QUIC (MoQ) to our global network. Today, we’re adding isolated relays & pub/sub access ",
@@ -106,15 +112,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2083177117857005765"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I hate when companies blame AIOs when they tanked from a core update or spam update. Easy to say that versus, \"We have a",
@@ -122,15 +129,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2083167405459603655"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -141,15 +149,16 @@
       "evidence": "BingWMC",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "BingWMC",
           "url": "https://x.com/BingWMC/status/2083207462040354913"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "You'll have to approve payments and other sensitive actions. I hope :) -> Google starts rolling out access to Gemini Spa",
@@ -157,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2083226735202500844"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "The Black Mirror music video will be on @BET this weekend. Tune in!. The Black Mirror music video will be on @BET this w",
@@ -173,15 +183,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2083365345771831304"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "💯💯💯. 💯💯💯 Klaas (@forgebitz) * open linkedin * mark all as slop * close linkedin * — https://nitter.net/forgebitz/status/",
@@ -189,15 +200,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2083253581130416368"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Are you investing in digital PR or social media this year to expand your brand third-party web footprint and increase yo",
@@ -205,15 +217,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2083285810627936461"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Cloudflare’s PACT Is Not Live Yet – Decide Which Track Your Traffic Needs via @sejournal, @slobodanmanic. Cloudflare and",
@@ -221,15 +234,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/cloudflares-pact-is-not-live-yet-decide-which-track-your-traffic-needs/580328/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Last year, we brought Media over QUIC (MoQ) to our global network. Today, we’re adding isolated relays & pub/sub access ",
@@ -237,15 +251,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2083177117857005765"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I hate when companies blame AIOs when they tanked from a core update or spam update. Easy to say that versus, \"We have a",
@@ -253,15 +268,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2083167405459603655"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -402,5 +418,8 @@
     "candidates_fetched": 55,
     "candidates_fresh": 40,
     "llm_provider": ""
-  }
+  },
+  "degraded": true,
+  "degraded_reason": "LLM step failed (backfilled — original reason not recorded)",
+  "quiet_day": false
 }

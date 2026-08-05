@@ -69,6 +69,15 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
     title = cfg["brand"]["daily_title"]
     brief = _morning_brief(digest, serp)
     md = [f"# {title}", "", f"**{date_str}**", ""]
+    # A degraded run still fills the page with cards, so the warning has to come
+    # before them — by the time a reader reaches the per-card `uncurated` chip
+    # they have already read a claim as if someone vouched for it.
+    if digest.get("degraded"):
+        why = digest.get("degraded_reason", "")
+        md += [f"> ⚠️ **DEGRADED RUN — nothing below was curated.** These are raw "
+               f"source items; their confidence and priority labels are "
+               f"placeholders, not judgements."
+               + (f" ({why})" if why else ""), ""]
     md += [f"> **Morning Brief** · {brief['signals']} signals · "
            f"top {brief['top_impact']} · "
            f"{'✅ confirmed update' if brief['confirmed'] else 'no confirmed update'} · "
@@ -95,7 +104,8 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
             imp = s.get("impact", "")
             tags = " ".join(t for t in (f"`{imp}`" if imp else "",
                                         f"`{conf}`" if conf else "",
-                                        "`unverified`" if s.get("unverified") else "") if t)
+                                        "`unverified`" if s.get("unverified") else "",
+                                        "`uncurated`" if s.get("degraded") else "") if t)
             md.append(f"- **{s.get('what_happened','')}**  {tags}")
             if s.get("why_it_matters"):
                 md.append(f"  - 为何重要 / Why: {s['why_it_matters']}")
@@ -137,6 +147,14 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
 def _daily_html(digest, cfg, date_str, serp, title, brief=None):
     parts = [_HTML_HEAD.format(title=_esc(title), date=_esc(date_str)),
              f"<h1>{_esc(title)}</h1><div class='date'>{_esc(date_str)}</div>"]
+    if digest.get("degraded"):
+        why = digest.get("degraded_reason", "")
+        parts.append(
+            "<div class='degraded'>⚠️ <b>Degraded run — nothing below was curated.</b> "
+            "These are raw source items; their confidence and priority labels are "
+            "placeholders, not judgements."
+            + (f" <span class='dwhy'>({_esc(why)})</span>" if why else "")
+            + "</div>")
     if brief:
         chips = (f"<span class='chip'>{brief['signals']} signals</span>"
                  f"<span class='chip'>top {_esc(brief['top_impact'])}</span>"
@@ -178,7 +196,11 @@ def _daily_html(digest, cfg, date_str, serp, title, brief=None):
             # uncited claim read like a cited one.
             ubadge = ("<span class='badge' style='color:#b22222;background:#fef2f2'>"
                       "unverified</span>") if s.get("unverified") else ""
-            parts.append(f"<div class='what'>{_esc(s.get('what_happened',''))}{ibadge}{badge}{ubadge}</div>")
+            # Raw item from a run where curation failed. Same alarming style as
+            # `unverified`: both mean the card did not earn the labels beside it.
+            dbadge = ("<span class='badge' style='color:#b22222;background:#fef2f2'>"
+                      "uncurated</span>") if s.get("degraded") else ""
+            parts.append(f"<div class='what'>{_esc(s.get('what_happened',''))}{ibadge}{badge}{ubadge}{dbadge}</div>")
             for lab, key in (("为何重要 Why", "why_it_matters"),
                              ("证据 Evidence", "evidence"),
                              ("影响 Affects", "who_it_affects"),
@@ -372,6 +394,9 @@ h2{{font-size:19px;margin-top:30px;padding-bottom:6px;border-bottom:1px solid #e
 .serp-tbl td{{padding:4px 6px;border-bottom:1px solid #f0f0f0;}}
 .serp-tbl td:first-child{{color:#666;width:180px;}}
 .interp{{margin-top:10px;font-size:14px;color:#333;font-style:italic;}}
+.degraded{{background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #b22222;
+ border-radius:6px;padding:12px 16px;margin-bottom:20px;font-size:14px;color:#7f1d1d;}}
+.degraded .dwhy{{color:#9b6b6b;font-size:13px;}}
 .eviexp{{margin:8px 0 4px;}}
 .eviexp>summary{{font-size:12px;color:#666;cursor:pointer;display:inline-block;
  padding:2px 8px;border:1px solid #e5e7eb;border-radius:5px;}}

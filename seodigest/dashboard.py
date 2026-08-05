@@ -72,6 +72,12 @@ def _flatten_signals(records: list) -> list:
                 # day it ran.
                 if s.get("unverified"):
                     row["unverified"] = True
+                # Same for uncurated items from a degraded run. The Library is
+                # where signals outlive the day they ran and get compared
+                # against each other — a raw, unassessed item sitting there
+                # unmarked is worse than not archiving it at all.
+                if s.get("degraded") or rec.get("degraded"):
+                    row["degraded"] = True
                 out.append(row)
     return out
 

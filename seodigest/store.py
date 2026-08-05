@@ -89,6 +89,14 @@ def archive_daily(cfg: dict, date_str: str, digest: dict,
         "signals": signals,
         "serp": serp_snapshot or {},
         "confirmed_updates": digest.get("confirmed_updates", []),
+        # Structured flags, not prose. A day where the LLM call failed still
+        # produces cards — uncurated raw text wearing the same confidence and
+        # priority labels as a real signal — and the ONLY thing distinguishing
+        # it was English in the headline. Nothing downstream could filter it,
+        # and a reader skimming the dashboard could not tell. Now it is a field.
+        "degraded": bool(digest.get("degraded")),
+        "degraded_reason": digest.get("degraded_reason", ""),
+        "quiet_day": bool(digest.get("quiet_day")),
     }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
