@@ -11,6 +11,48 @@ from .models import Item
 # archive alongside the X numbers. See x_source.LAST_HEALTH.
 LAST_HEALTH: dict = {}
 
+# Per-feed diagnostic detail: {name: "403 Forbidden" | "0 entries" | "timeout"}.
+# LAST_HEALTH only counts successes and failures, which is enough for the
+# dashboard strip but useless when you need to know WHY a feed is dark.
+LAST_ERRORS: dict = {}
+
+# A browser User-Agent, deliberately.
+#
+# feedparser fetches URLs itself when handed a string, and identifies itself as
+# "feedparser/x.y". Cloudflare-fronted publishers (seroundtable,
+# searchengineland) routinely 403 that, and feedparser does not raise on a 403
+# — it returns an empty feed. So four feeds failed every single run for nine
+# days while looking, from the inside, exactly like "no new articles".
+#
+# We therefore fetch the bytes ourselves and hand feedparser a string. That
+# also lets us set a hard timeout (feedparser's default is the socket default,
+# i.e. potentially forever) and record the real status code.
+FETCH_HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                   "Chrome/126.0.0.0 Safari/537.36"),
+    "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+FETCH_TIMEOUT = 15
+
+
+def fetch_feed_text(url: str, timeout: int = FETCH_TIMEOUT):
+    """GET a feed URL as text. Returns (text, status, error).
+
+    Exactly one of text/error is meaningful. Kept separate from fetch() so the
+    `doctor` command can probe a feed without running the whole pipeline.
+    """
+    import httpx
+    try:
+        r = httpx.get(url, headers=FETCH_HEADERS, timeout=timeout,
+                      follow_redirects=True)
+    except Exception as e:  # DNS, TLS, timeout, connection reset
+        return None, None, f"{type(e).__name__}: {e}"
+    if r.status_code >= 400:
+        return None, r.status_code, f"HTTP {r.status_code}"
+    return r.text, r.status_code, None
+
 
 def _entry_datetime(entry):
     for key in ("published_parsed", "updated_parsed"):
@@ -56,13 +98,23 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         weight = float(feed.get("weight", weights.get(category, 0.55)))
         cutoff = evergreen_since if category in evergreen_cats else since
         try:
-            parsed = feedparser.parse(url)
-            # feedparser doesn't raise on HTTP/DNS failure — it returns an
-            # empty feed. Without this check a permanently dead feed URL (a
-            # renamed blog, a moved path) stays invisible forever.
+            # Fetch ourselves rather than letting feedparser do it — see
+            # FETCH_HEADERS for why the User-Agent is load-bearing.
+            text, status, err = fetch_feed_text(url)
+            if err:
+                failed_feeds.append(name)
+                LAST_ERRORS[name] = err
+                print(f"  [rss] feed '{name}' failed: {err}")
+                continue
+            parsed = feedparser.parse(text)
+            # A 200 that parses to nothing is still a failure: a renamed blog
+            # often serves an HTML error page with a 200. Without this check a
+            # permanently dead feed URL stays invisible forever.
             if not parsed.entries and not (parsed.feed or {}).get("title"):
                 failed_feeds.append(name)
-                print(f"  [rss] feed '{name}' returned nothing — check the URL")
+                LAST_ERRORS[name] = f"HTTP {status} but no parseable entries"
+                print(f"  [rss] feed '{name}' returned nothing parseable "
+                      f"(HTTP {status}) — check the URL")
                 continue
             ok_feeds.append(name)
             for entry in parsed.entries[:max_per]:
@@ -95,6 +147,7 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                 )
         except Exception as e:
             failed_feeds.append(name)
+            LAST_ERRORS[name] = f"{type(e).__name__}: {e}"
             print(f"  [rss] feed '{name}' failed: {e}")
 
     LAST_HEALTH.update({
@@ -103,5 +156,8 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         "failed": len(failed_feeds),
         "total": len(ok_feeds) + len(failed_feeds),
         "failed_names": failed_feeds,
+        # Why each one failed, so a repeat offender is diagnosable from the
+        # archive months later instead of just being a name in a list.
+        "errors": {k: v for k, v in LAST_ERRORS.items() if k in failed_feeds},
     })
     return items

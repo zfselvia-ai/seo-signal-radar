@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # One-time local setup for the SEO Signal Radar.
-# Installs deps, checks your Kimi key is present, and runs a real daily digest
-# so you can eyeball the output before pushing to GitHub.
+# Installs deps, checks an LLM key is present, and runs a real daily digest.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -28,4 +27,5 @@ python3 main.py daily
 
 echo
 echo "Done. Open dashboard/index.html in a browser and check reports/daily/ for today's file."
-echo "If it looks good, push to GitHub and add SCNET_API_KEY as a repo secret."
+echo "From now on, run it yourself with: python3 main.py daily"
+echo "If sources look thin, run: python3 main.py doctor"

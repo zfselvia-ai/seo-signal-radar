@@ -188,8 +188,16 @@ curation:
 x:
   enabled: true
   tweets_per_handle: 15
+  # Preferred Nitter instances, tried FIRST. The code appends its own built-in
+  # list after these as fallback, so listing one here expresses a preference
+  # without disabling the fallback. (It used to REPLACE the defaults, which left
+  # a single instance and no fallback at all: nitter.net rate-limits partway
+  # through a 29-handle run, so @JohnMu looked permanently dead and other
+  # handles failed at random. Run `python main.py doctor` to see which
+  # instances are actually alive right now.)
   nitter_instances:
     - nitter.net
+    - nitter.privacyredirect.com
 
   # ONE ACCOUNT, MANY TAGS.
   # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
@@ -281,7 +289,11 @@ rss:
        category: official_documentation, weight: 1.0}
     # Finer-grained than the blog: robots, structured data, Search Console and
     # feature-rule changes often appear ONLY in the docs-changelog feed.
-    - {name: "Google Search Docs Updates", url: "https://developers.google.com/static/search/blog/release-notes.xml",
+    # NOTE: this URL previously had a `/static/` segment, which is a CDN path
+    # and not where the feed lives — it failed 10 runs out of 10. The version
+    # below is unverified from this machine; `python main.py doctor` probes it
+    # and prints working alternates if it is still wrong.
+    - {name: "Google Search Docs Updates", url: "https://developers.google.com/search/blog/release-notes.xml",
        category: official_documentation, weight: 1.0, always_include_if_material: true}
     - {name: "Bing Webmaster Blog", url: "https://blogs.bing.com/webmaster/feed",
        category: official_documentation, weight: 0.95}
@@ -473,8 +485,11 @@ notify:
   enabled: true
   top_signals: 3
   max_actions: 2
-  # Where "view full digest" points (your Pages URL or file path).
-  dashboard_url: "https://zfselvia-ai.github.io/seo-signal-radar/"
+  # Where "view full digest" points. The dashboard is a LOCAL file now, and a
+  # file:// path is not clickable from a phone, so this is left blank: the push
+  # then carries the signals and no dead link. Put a real URL here only if you
+  # actually host dashboard/index.html somewhere.
+  dashboard_url: ""
   # channel format: "slack" | "discord" | "telegram" | "feishu" | "pushplus" | "plain"
   channel: "pushplus"
   # Webhook URL read from env NOTIFY_WEBHOOK_URL (keep secrets out of config).

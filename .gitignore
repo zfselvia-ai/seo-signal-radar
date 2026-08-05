@@ -9,8 +9,8 @@ data/serp_history.csv
 
 # Build artifact, NOT source. dashboard/index.html embeds the whole archive
 # inline, so it's rewritten in full on every run. Committing it stored a fresh
-# multi-MB blob daily and made .git grow quadratically. It's regenerable any
-# time with `python main.py dashboard`, and CI publishes it straight to Pages.
+# multi-MB blob daily and made .git grow quadratically. Regenerate it any time
+# with `python main.py dashboard`.
 dashboard/index.html
 
 # python
@@ -21,3 +21,4 @@ venv/
 
 # os
 .DS_Store
+.uploads/

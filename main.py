@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
 import yaml
@@ -279,6 +280,157 @@ def run_serp_add(cfg, args):
     print(f"[*] recorded {args.source} reading {args.value}")
 
 
+# ------------------------------ doctor ------------------------------------
+# Probes every source and prints what the network actually said. Exists because
+# the failure mode this system is most prone to is a SILENT one: feedparser does
+# not raise on a 403, and a rate-limited Nitter instance is indistinguishable
+# from a quiet week. `daily` records that a feed failed; `doctor` says why.
+#
+# Deliberately does not need the LLM key or write anything — it is safe to run
+# any number of times while fixing URLs.
+def _probe_feeds(cfg, timeout):
+    from seodigest import rss_source
+    import feedparser
+    feeds = (cfg.get("rss") or {}).get("feeds", [])
+    print(f"\n=== RSS · {len(feeds)} feeds ===")
+    bad = []
+    for f in feeds:
+        name, url = f["name"], f["url"]
+        t0 = time.time()
+        text, status, err = rss_source.fetch_feed_text(url, timeout=timeout)
+        ms = int((time.time() - t0) * 1000)
+        if err:
+            print(f"  FAIL  {name:<32} {err:<28} {ms:>5}ms")
+            print(f"        {url}")
+            bad.append((name, url, err))
+            continue
+        parsed = feedparser.parse(text)
+        n = len(parsed.entries)
+        title = (parsed.feed or {}).get("title", "")
+        if not n and not title:
+            print(f"  FAIL  {name:<32} {'200 but unparseable':<28} {ms:>5}ms")
+            print(f"        {url}")
+            bad.append((name, url, "200 but unparseable"))
+        else:
+            newest = ""
+            if n:
+                d = rss_source._entry_datetime(parsed.entries[0])
+                newest = f" · newest {d.date()}" if d else ""
+            print(f"  ok    {name:<32} {str(n) + ' entries':<28} {ms:>5}ms{newest}")
+    return bad
+
+
+# Common alternate locations for a feed. When a URL is wrong, guessing is
+# cheaper than asking the user to go hunting — and unlike me, the machine
+# running this has network access.
+def _alternates(url):
+    from urllib.parse import urlsplit
+    u = urlsplit(url)
+    base = f"{u.scheme}://{u.netloc}"
+    cands = []
+    # A stray CDN path segment is a real mistake I made once already.
+    if "/static/" in u.path:
+        cands.append(base + u.path.replace("/static/", "/"))
+    for suffix in ("/feed", "/feed/", "/rss", "/rss.xml", "/index.rss",
+                   "/atom.xml", "/feed.xml", "/blog/feed/"):
+        cands.append(base + suffix)
+    # Same directory, different conventional filename.
+    parent = u.path.rsplit("/", 1)[0]
+    if parent:
+        for fn in ("feed.xml", "rss.xml", "atom.xml", "release-notes.xml"):
+            cands.append(f"{base}{parent}/{fn}")
+    seen, out = set(), []
+    for c in cands:
+        if c != url and c not in seen:
+            seen.add(c)
+            out.append(c)
+    return out
+
+
+def _probe_alternates(bad, timeout):
+    from seodigest import rss_source
+    import feedparser
+    print(f"\n=== Probing alternates for {len(bad)} broken feed(s) ===")
+    for name, url, _err in bad:
+        print(f"\n  {name}")
+        found = False
+        for cand in _alternates(url):
+            text, status, err = rss_source.fetch_feed_text(cand, timeout=timeout)
+            if err:
+                continue
+            parsed = feedparser.parse(text)
+            if parsed.entries:
+                print(f"    WORKS  {cand}  ({len(parsed.entries)} entries)")
+                found = True
+        if not found:
+            print("    no alternate found — the feed may need a manual look")
+
+
+def _probe_nitter(cfg, timeout):
+    import httpx
+    import feedparser
+    from seodigest import x_source
+    xcfg = cfg.get("x") or {}
+    instances = x_source._resolve_instances(xcfg)
+    handles = list(x_source._resolve_accounts(xcfg).keys())
+    # One well-known handle is enough to tell a live instance from a dead one.
+    probe = "searchliaison" if "searchliaison" in handles else (handles[0] if handles else "jack")
+    print(f"\n=== Nitter · {len(instances)} instances (probing @{probe}) ===")
+    alive = []
+    for host in instances:
+        t0 = time.time()
+        try:
+            r = httpx.get(f"https://{host}/{probe}/rss",
+                          headers={"User-Agent": x_source.FETCH_UA},
+                          timeout=timeout, follow_redirects=True)
+            ms = int((time.time() - t0) * 1000)
+            if r.status_code >= 400:
+                note = " (rate-limited — alive but throttling)" if r.status_code == 429 else ""
+                print(f"  FAIL  {host:<32} HTTP {r.status_code}{note:<20} {ms:>5}ms")
+                continue
+            n = len(feedparser.parse(r.text).entries)
+            if not n:
+                print(f"  FAIL  {host:<32} {'200 but 0 entries':<25} {ms:>5}ms")
+                continue
+            print(f"  ok    {host:<32} {str(n) + ' tweets':<25} {ms:>5}ms")
+            alive.append(host)
+        except Exception as e:
+            ms = int((time.time() - t0) * 1000)
+            print(f"  FAIL  {host:<32} {type(e).__name__:<25} {ms:>5}ms")
+    return alive, len(instances)
+
+
+def run_doctor(cfg, args):
+    timeout = args.timeout
+    print("SEO Signal Radar · source health check")
+    print("Nothing is written; safe to re-run while fixing URLs.")
+
+    bad = _probe_feeds(cfg, timeout)
+    if bad and not args.no_alternates:
+        _probe_alternates(bad, timeout)
+
+    alive, total = _probe_nitter(cfg, timeout)
+
+    print("\n=== Summary ===")
+    feeds = len((cfg.get("rss") or {}).get("feeds", []))
+    print(f"  RSS      {feeds - len(bad)}/{feeds} feeds reachable")
+    print(f"  Nitter   {len(alive)}/{total} instances alive")
+    if not alive:
+        print("\n  Every Nitter instance is down or blocking this network.")
+        print("  X coverage will be zero until one comes back. Check")
+        print("  https://status.d420.de/ for a current instance list and put")
+        print("  working hosts in config.yaml under x.nitter_instances.")
+    elif len(alive) < 2:
+        print("\n  Only one instance is alive, so there is no headroom when it")
+        print("  throttles mid-run. Add more under x.nitter_instances.")
+    if bad:
+        print(f"\n  Broken feeds: {', '.join(n for n, _, _ in bad)}")
+        print("  Fix the URLs in config.yaml (any WORKS line above is a drop-in).")
+    if not bad and len(alive) >= 2:
+        print("\n  All sources healthy.")
+    return 1 if (bad or not alive) else 0
+
+
 def main():
     load_dotenv()
     p = argparse.ArgumentParser(description="SEO Signal Radar")
@@ -291,6 +443,13 @@ def main():
     sub.add_parser("brief")
     sub.add_parser("dashboard", help="rebuild the static dashboard from the archive")
     sub.add_parser("notify", help="send the compressed push for the latest day")
+
+    doc = sub.add_parser("doctor", help="probe every RSS feed and Nitter instance "
+                                       "and report what actually failed")
+    doc.add_argument("--timeout", type=int, default=15,
+                     help="per-request timeout in seconds (default 15)")
+    doc.add_argument("--no-alternates", action="store_true",
+                     help="skip guessing replacement URLs for broken feeds")
 
     sa = sub.add_parser("serp-add", help="record a manual SERP volatility reading")
     sa.add_argument("--source", required=True, choices=["sistrix", "algoroo", "awr"])
@@ -317,6 +476,8 @@ def main():
         run_notify(cfg)
     elif args.cmd == "serp-add":
         run_serp_add(cfg, args)
+    elif args.cmd == "doctor":
+        return run_doctor(cfg, args)
 
 
 if __name__ == "__main__":

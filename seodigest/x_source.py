@@ -22,17 +22,38 @@ from typing import List
 from .models import Item
 
 # Public Nitter instances, tried in order. The first that returns valid RSS
-# for a handle wins. Instances come and go — update this list when needed.
-# Keep this short: each dead instance adds up to 8s per handle of stall time.
+# for a handle wins. Instances come and go — update this list when needed, and
+# run `python main.py doctor` to see which are alive right now.
+#
+# Keep it short (each dead instance costs up to `timeout` seconds per handle)
+# but never down to one: a single instance means the fallback cannot fire, and
+# public Nitter instances rate-limit aggressively. That is what made @JohnMu
+# look permanently dead and other handles fail at random — nitter.net throttling
+# partway through a 29-handle run, with nowhere to fall back to.
 NITTER_INSTANCES = [
     "nitter.net",
     "nitter.privacyredirect.com",
+    "nitter.poast.org",
+    "lightbrd.com",
 ]
+
+# A browser UA. Nitter instances sit behind the same anti-bot layers as
+# everything else and a library-shaped UA gets challenged. Shared with the
+# doctor command so both probe identically — a health check that used different
+# headers from the real fetch would be measuring the wrong thing.
+FETCH_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/126.0.0.0 Safari/537.36")
 
 # Populated by fetch() so the caller can record source availability in the
 # archive. A module-level dict rather than a return value because fetch()'s
 # signature is shared with the other sources and callers only want Items.
 LAST_HEALTH: dict = {}
+
+# Per-handle failure detail: {handle: "nitter.net:429, nitter.poast.org:empty"}.
+# Which instance refused and how is the difference between "this account is
+# gone" and "we are being rate-limited".
+LAST_ERRORS: dict = {}
 
 
 def _entry_datetime(entry):
@@ -95,6 +116,24 @@ def _parse_handle_rss(parsed, handle, group, meta=None) -> List[Item]:
     return items
 
 
+def _resolve_instances(xcfg: dict) -> list:
+    """Config instances FIRST, then the built-in defaults as fallback.
+
+    Deliberately additive rather than a replacement. Listing one preferred
+    instance in config.yaml is a reasonable thing to do, but when it silently
+    replaced the default list it also disabled the fallback — and a lone
+    rate-limited instance is indistinguishable from every account having gone
+    quiet. Config now expresses preference, not exclusivity.
+    """
+    seen, out = set(), []
+    for host in list(xcfg.get("nitter_instances") or []) + NITTER_INSTANCES:
+        host = (host or "").strip().rstrip("/")
+        if host and host not in seen:
+            seen.add(host)
+            out.append(host)
+    return out
+
+
 def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None):
     """Fetch one handle's timeline, trying each Nitter instance in turn.
 
@@ -104,23 +143,31 @@ def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None):
     digests otherwise, and a totally dead Nitter would look like a quiet day.
     """
     import httpx
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; SEO-Signal-Radar/1.0)"}
+    headers = {"User-Agent": FETCH_UA}
+    errors = []
     for host in instances:
         url = f"https://{host}/{handle}/rss"
         try:
-            # Hard 8s timeout per instance so one slow/dead instance can't
-            # stall the whole fetch for minutes.
+            # Hard timeout per instance so one slow/dead instance can't stall
+            # the whole fetch for minutes.
             r = httpx.get(url, headers=headers, timeout=8, follow_redirects=True)
             if r.status_code >= 400:
+                # 429 is worth distinguishing when reading the log: it means the
+                # instance is alive and the handle probably fine, we're just
+                # being throttled — a reason to add instances, not drop accounts.
+                errors.append(f"{host}:{r.status_code}")
                 continue
             parsed = feedparser.parse(r.text)
             # Detect real failure: empty feed with no channel title.
             if not parsed.entries and not parsed.feed.get("title"):
+                errors.append(f"{host}:empty")
                 continue
             return _parse_handle_rss(parsed, handle, group, meta)
-        except Exception:
+        except Exception as e:
+            errors.append(f"{host}:{type(e).__name__}")
             continue
-    print(f"  [x] @{handle} ({group}) failed: no Nitter instance returned a feed")
+    LAST_ERRORS[handle] = ", ".join(errors)
+    print(f"  [x] @{handle} ({group}) failed: {', '.join(errors)}")
     return None
 
 
@@ -155,7 +202,7 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
 
     xcfg = cfg["x"]
     per = xcfg.get("tweets_per_handle", 15)
-    instances = xcfg.get("nitter_instances") or NITTER_INSTANCES
+    instances = _resolve_instances(xcfg)
     weights = (cfg.get("scoring") or {}).get("source_weights", {})
     accounts = _resolve_accounts(xcfg)
     items: List[Item] = []
@@ -194,6 +241,9 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         "failed": len(failed_handles),
         "total": len(ok_handles) + len(failed_handles),
         "failed_names": failed_handles,
+        # Which instance refused, and how. A run where every handle reports
+        # ":429" is a rate-limit problem, not 29 dead accounts.
+        "errors": {k: v for k, v in LAST_ERRORS.items() if k in failed_handles},
     })
 
     # Keyword search is not supported via Nitter RSS (no search endpoint that's

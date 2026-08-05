@@ -69,7 +69,30 @@ Business events like migrations or launches belong in your own change log.)
 
 Each signal answers: **what happened · why it matters · evidence (official doc / dataset / case / observation) · who it affects (ecommerce/publisher/SaaS/UGC/local/international/all) · what to do (check/test/monitor/none) · confidence (Confirmed / Data-backed / Observed / Speculative) · priority (P0 check now / P1 act this week / P2 worth testing / P3 awareness only)**. Fields are capped at 120 chars — headline density, not paragraphs.
 
-Scoring (tunable in `config.yaml`): 30% source authority + 25% data & evidence + 20% novelty + 15% potential impact + 10% actionability, minus penalties for promo and duplication.
+**Every card opens.** One line is enough to triage but not to act on, so each
+signal carries an expandable panel with two halves. First a **verbatim excerpt**
+(700 chars) copied straight from the fetched page or tweet, with its author, date
+and trust tier — this is the only thing on the card that *cannot* have been
+fabricated, so you check our summary rather than trusting it. Second an
+LLM-written **detail** (2–4 sentences: methodology, sample size, actual numbers,
+main caveat), the one field exempt from the 120-char cap because it sits behind a
+click and costs a scanner nothing. It's a native `<details>` element, closed by
+default, keyboard-accessible, and it renders nothing at all when a signal has
+neither — an unverified claim has no quotable source and must not open onto an
+empty box.
+
+Scoring (tunable in `config.yaml`): 25% source authority + 25% data & evidence +
+20% actionability + 20% potential impact + 10% novelty, minus penalties for promo
+and duplication. Novelty is deliberately the smallest weight — it is a tiebreaker,
+not a reason to act.
+
+Above the score sits a **trust ladder** (`scoring.source_weights`): official API
+and documentation 1.00, a Google engineer explaining mechanics 0.90, a
+reproducible experiment 0.90, data research 0.85, independent analysis 0.70, an
+expert who also sells a tool 0.65, trade news 0.55, an unverified screenshot 0.20.
+Accounts flagged `commercial_interest` have their *opinions* capped at "Observed"
+— only data, code or a paper lifts them higher. An "experiment" only earns 0.90
+if it shows methodology, sample/scope and a measured outcome.
 
 ## SERP Volatility & Consensus Layer
 
@@ -100,24 +123,27 @@ watchlist inputs (verify licensing before automating).
 
 ## Setup
 
+Runs entirely on your own machine. There is no CI, no hosting and no deploy step.
+
 ```bash
 pip install -r requirements.txt
-cp .env.example .env      # add LLM key; add X creds for first login
+cp .env.example .env      # paste ONE LLM API key
 ```
 
-Pick the LLM provider in `config.yaml` (`llm.provider`) and set the matching key.
-Default is **Kimi K2.5** (`moonshot`) — set `MOONSHOT_API_KEY`; `anthropic` and
-`openai` are drop-in alternatives.
+Pick the LLM provider in `config.yaml` (`llm.provider: auto` detects whichever
+key you set). `scripts/setup_local.sh` does all of the above and runs one real
+digest so you can eyeball the output.
 
 **X needs no credentials at all.** `x_source.py` reads public Nitter RSS, so
-there is no account to log in, no cookie to refresh, and no password anywhere in
-CI. The only secret the pipeline requires is one LLM API key.
+there is no account to log in, no cookie to refresh, and no password anywhere.
+The only secret the pipeline requires is one LLM API key.
 
 ## Run
 
 ```bash
 python main.py daily            # today's radar (+ archive, dashboard rebuild, push)
 python main.py daily --dry-run  # fetch + dedup only, no LLM cost
+python main.py doctor           # probe every feed + Nitter instance; no LLM key needed
 python main.py weekly           # Search Intelligence Weekly
 python main.py monthly          # State of Search Monthly (only runs on 4th working day; --force to override)
 python main.py brief            # generate any pending Special Briefs
@@ -125,11 +151,47 @@ python main.py dashboard        # rebuild dashboard/index.html from the archive
 python main.py notify           # (re)send the compressed push for the latest day
 ```
 
+Nothing is scheduled for you. Run `daily` when you want it, or wire it to `cron`
+/ `launchd` yourself:
+
+```cron
+0 9 * * *  cd /path/to/SEO看板 && /usr/bin/python3 main.py daily >> radar.log 2>&1
+```
+
+### When the digest looks thin: `python main.py doctor`
+
+Every failure in this pipeline is **silent**. `feedparser` does not raise on a
+403, and a rate-limited Nitter instance returns the same nothing as an account
+that simply didn't post — so a broken source and a quiet news day produce an
+identical short digest. That is worth knowing about, because you would otherwise
+trust a half-dead digest for weeks.
+
+`doctor` probes every RSS feed and every Nitter instance with the *same headers
+the real fetch uses*, and prints the actual status code, entry count and timing:
+
+```
+=== RSS · 11 feeds ===
+  ok    Google Search Central Blog       20 entries      412ms · newest 2026-08-04
+  FAIL  Search Engine Roundtable         HTTP 403        280ms
+        https://www.seroundtable.com/index.rss
+
+=== Probing alternates for 1 broken feed(s) ===
+  Search Engine Roundtable
+    WORKS  https://www.seroundtable.com/feed  (30 entries)
+```
+
+It writes nothing and needs no API key, so it is safe to re-run while fixing
+URLs. Any `WORKS` line is a drop-in replacement for `config.yaml`. If every
+Nitter instance is down, it says so and points at
+[status.d420.de](https://status.d420.de/) for a current instance list — put
+working hosts under `x.nitter_instances`, which are tried *before* the built-in
+defaults rather than replacing them.
+
 ## Dashboard & notification (two ends, one library)
 
 The **dashboard** (`dashboard/index.html`) is the full product and single source
 of truth: one self-contained HTML file, no build step, no external calls — the
-archive is embedded as JSON. Three views:
+archive is embedded as JSON. Open it directly in a browser. Three views:
 
 - **Today** — Morning Brief status bar, headline, SERP weather, the 10 sections, action items.
 - **Algorithm Map** — the three-track timeline (Official / External flux / Community) across 7D/30D/90D/1Y.
@@ -138,107 +200,66 @@ archive is embedded as JSON. Three views:
 `dashboard/index.html` is a **build artifact and is not committed** (it's gitignored).
 It embeds the whole archive inline, so it's rewritten in full on every run —
 committing it stored a fresh multi-MB blob daily and made `.git` grow *quadratically*
-(~136 MB after a year, ~1.2 GB after three). CI publishes it straight to
-Cloudflare Pages instead. Regenerate it any time with `python main.py dashboard`.
+(~136 MB after a year, ~1.2 GB after three). Regenerate it any time with
+`python main.py dashboard`.
 
-### Private dashboard (Cloudflare Pages + Access)
-
-The dashboard is published to **Cloudflare Pages** behind **Cloudflare Access**,
-which authenticates at the edge before any HTML is served.
-
-This replaced an in-page password prompt, which was security theatre: a static
-site has no server to check a password, so the check ran in JavaScript and the
-page had to ship its own hash. Anyone could read it with View Source, and it was
-bypassed outright on `file:`/`localhost`. Making the repo private wouldn't have
-helped either — GitHub Pages serves a public URL regardless.
-
-One-time setup, about ten minutes:
-
-1. **Make the repo private.** GitHub → Settings → General → Danger Zone →
-   Change visibility → Private. Then Settings → Pages → Source → **None**, to
-   stop the old public URL from serving anything.
-2. **Create the Pages project.** In the Cloudflare dashboard: Workers & Pages →
-   Create → Pages → *Upload assets* (not the Git integration — CI does the
-   deploying). Name it exactly **`seo-signal-radar`** so it matches
-   `--project-name` in `digest.yml`. Upload any placeholder file to finish
-   creation; the first CI run overwrites it.
-3. **Create an API token.** My Profile → API Tokens → Create Token → *Custom
-   token*. Permissions: **Account → Cloudflare Pages → Edit**. Nothing else —
-   this token only needs to deploy.
-4. **Add two GitHub secrets** (repo → Settings → Secrets and variables →
-   Actions): `CLOUDFLARE_API_TOKEN` (from step 3) and `CLOUDFLARE_ACCOUNT_ID`
-   (right sidebar of any Cloudflare dashboard page). Until both exist the
-   publish step skips with a warning instead of failing the run.
-5. **Turn on Access.** Zero Trust → Access → Applications → Add an application →
-   Self-hosted. Domain: your `seo-signal-radar.pages.dev`. Add a policy:
-   Action **Allow**, Include → **Emails** → list the handful of addresses that
-   should get in. Choose the **One-time PIN** login method so nobody needs a
-   Cloudflare account — they enter their email, receive a code, and are in.
-   Session duration of a week or a month keeps phones from re-authenticating
-   constantly.
-
-Free on Cloudflare's free plan up to 50 Access users. Works on mobile: a normal
-browser login, no VPN or client certificate.
-
-> The old hash sits in git history at commits `924f402` and `fc77e0c`. It never
-> protected anything, so there's nothing to rotate — but don't reuse that
-> password elsewhere.
+Because it's a local file there is no login to worry about, and no public URL to
+protect. (An earlier version published to GitHub Pages behind an in-page password
+prompt. That was security theatre: a static site has no server to check a
+password, so the check ran in JavaScript and the page shipped its own hash for
+anyone to read with View Source. Keeping the file local removes the problem
+rather than papering over it.)
 
 **Storage, measured:** the archive is ~12 KB/day — about **4.5 MB/year**, 22 MB after
-five years. That is comfortably inside GitHub's limits, so no external database or
-cloud hosting is needed; GitHub Actions plus Pages is sufficient indefinitely. The
-only real ceiling is page weight: past roughly 1,000 days of embedded history the
-single-file dashboard gets heavy on mobile, at which point split the Library into a
-separate lazy-loaded JSON rather than raising `dashboard.history_days`.
+five years. No database or cloud hosting is needed. The only real ceiling is page
+weight: past roughly 1,000 days of embedded history the single-file dashboard gets
+heavy on mobile, at which point split the Library into a separate lazy-loaded JSON
+rather than raising `dashboard.history_days`.
 
 The **notification** is only a cover: Morning Brief + top 3 signals + confirmed-update
-flag + up to 2 actions + a link back. Set the webhook URL in the environment
-(kept out of `config.yaml`) and pick a channel format in `notify.channel`:
+flag + up to 2 actions. Set the webhook URL in the environment (kept out of
+`config.yaml`) and pick a channel format in `notify.channel`:
 
 ```bash
 export NOTIFY_WEBHOOK_URL="https://hooks.slack.com/…"   # slack|discord|telegram|feishu|plain
+export PUSHPLUS_TOKEN="…"                               # if notify.channel is pushplus
 ```
 
-If no URL is set, `python main.py notify` just prints the preview.
-
-## Automation
-
-- `.github/workflows/digest.yml` — daily at 07:00 Asia/Shanghai; runs the digest, rebuilds the dashboard, sends the push, commits the archive, and publishes `dashboard/` to Cloudflare Pages.
-- `.github/workflows/reports.yml` — weekly (Tue) + monthly (code verifies the 4th working day).
-
-Repo secrets: ONE LLM key (`MOONSHOT_API_KEY`, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`
-— the provider is auto-detected) and optional `NOTIFY_WEBHOOK_URL` for the push.
-X needs **no credentials at all**: it reads public Nitter RSS. State (`data/`) is cached between runs
-so items never repeat and the archive survives for weekly/monthly rollups.
+If no URL is set, `python main.py notify` just prints the preview. `notify.dashboard_url`
+is blank by default — a `file://` path isn't clickable from a phone, so the push
+carries the signals themselves rather than a dead link.
 
 ## Layout
 
 ```
-config.yaml              # everything: lists, scoring, sections, SERP rules, cadence, rubric, dashboard, notify
-main.py                  # orchestrator (daily/weekly/monthly/brief/dashboard/notify/serp-add)
+config.yaml              # everything: accounts, scoring, sections, SERP rules, cadence, rubric, dashboard, notify
+main.py                  # orchestrator (daily/weekly/monthly/brief/dashboard/notify/serp-add/doctor)
 seodigest/
   models.py              # Item + Signal
   x_source.py            # Nitter RSS — 29 tagged accounts, each fetched once
-  rss_source.py          # feedparser
+  rss_source.py          # RSS/Atom, fetched with a browser UA + hard timeout
   google_status.py       # official confirmation layer + brief triggers
   serp_layer.py          # percentile math, four-quadrant, event detection (Global + Vertical Heat)
-  summarize.py           # daily scoring + curation + 7-field/7-section LLM step
+  summarize.py           # daily scoring + curation + LLM step + source-URL verification
   reports.py             # weekly / monthly / special-brief synthesis
   render.py              # MD + HTML for all report kinds
-  store.py               # dedup, structured archive, SERP history DB
+  store.py               # dedup, structured archive, run-health records, SERP history
   dashboard.py           # builds the single-file static dashboard from the archive
   dashboard_template.html# the dashboard shell (data injected at build time)
   notify.py              # compressed push + per-channel webhook formats
+scripts/setup_local.sh   # one-time install + key check + first real run
 reports/{daily,weekly,monthly,special}/
 data/archive/            # structured daily JSON (weekly/monthly/dashboard read from here)
-dashboard/index.html     # the deployed product
-.github/workflows/
+dashboard/index.html     # the product (gitignored build artifact — open it locally)
 ```
 
 ## Notes & limits
 
-- **X is the fragile part** — Nitter instances go down often. `x_source.py` rotates through several and, crucially, distinguishes "no tweets" from "every instance refused": the source health strip on the dashboard turns amber or red when coverage drops, because a dead fetcher and a quiet news day otherwise produce an identical short digest.
+- **X is the fragile part** — Nitter instances go down and rate-limit constantly. `x_source.py` tries several in order and distinguishes "no tweets" from "every instance refused", recording *which* instance refused and how (a run where every handle reports `:429` is a throttling problem, not 29 dead accounts). The health strip on the dashboard turns amber below `dashboard.source_warn_ratio` and red at zero coverage. Run `doctor` when it does.
+- **Fetching is done with a browser User-Agent, deliberately.** Cloudflare-fronted publishers 403 a library-shaped UA, and `feedparser` returns an empty feed instead of raising — which is why four feeds failed silently for nine days while looking exactly like "no new articles". A 200 that parses to nothing is also treated as a failure, since a renamed blog usually serves an HTML error page with a 200.
 - **Sources are verified, not trusted.** Every URL the LLM cites is checked against the candidate pool it was actually shown. Anything invented is stripped, the signal is marked `unverified`, and its confidence is capped at Speculative.
-- **Percentiles need history.** Until ~10+ days of SERP readings accrue, the layer records data and reports "insufficient history" rather than guessing.
+- **Repeats are filtered across days, escalations are not.** Item-level dedup keys on ID, so one story discussed by five accounts over three days would otherwise occupy a slot all week. Story-level dedup (Jaccard overlap, CJK compared per character) runs in two layers — the prompt is told what already ran, *and* the output is post-filtered, because the model sometimes ignores the instruction. A rumour that becomes officially confirmed always survives: that escalation is the single most valuable thing this product delivers.
+- **A quiet day is allowed to look quiet.** If nothing survives, the digest says so rather than backfilling from raw items — which would resurrect exactly what dedup just dropped.
+- **Percentiles need history.** Until ~10+ days of SERP readings accrue, the layer records data and reports "insufficient history" rather than guessing. All SERP adapters are `manual`, so the External-flux lane shows "not connected" instead of asserting calm without data.
 - **GEO open-source tools** (e.g. `geo-aeo-tracker`, `awesome-generative-engine-optimization`) are treated as *candidate sources* for the "Tools, Papers & Open Source" section, not integrated runtimes — self-hosting them still needs paid API keys (Bright Data / OpenRouter / Gemini).
 - LLM cost is roughly one call per daily run plus one per weekly/monthly — cents.
