@@ -1,13 +1,13 @@
 {
   "date": "2026-08-05",
-  "generated_at": "2026-08-05T04:13:15.035560+00:00",
-  "headline": "4 signals from sources (LLM summary unavailable).",
+  "generated_at": "2026-08-05T07:41:09.362244+00:00",
+  "headline": "8 signals from sources (LLM summary unavailable).",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "What Top Stories Inside AI Overviews Means For Publishers And Brands In 2026 And Beyond via @sejournal, @gregjarboe. Mos",
+        "what_happened": "APIs are your business engine, but also your biggest attack surface. Learn how to secure your ecosystem without sacrific",
         "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
+        "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
         "confidence": "Observed",
@@ -15,15 +15,15 @@
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/what-top-stories-inside-ai-overviews-means-for-publishers-and-brands-in-2026-and-beyond/584175/"
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2084806659361153078"
           }
         ]
       },
       {
-        "what_happened": "Report That Cloudflare AI Bot Blocking Prevents Googlebot From Indexing Sites via @sejournal, @martinibuster. Anecdotal ",
+        "what_happened": "But it's not 9/15 yet :) -> Report That Cloudflare AI Bot Blocking Prevents Googlebot and Bingbot From Indexing Sites \"I",
         "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
+        "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
         "confidence": "Observed",
@@ -31,15 +31,15 @@
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/report-that-cloudflare-ai-bot-blocking-prevents-googlebot-from-indexing-sites/584673/"
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2084682049080733838"
           }
         ]
       },
       {
-        "what_happened": "Google Now Reports AI Search Impressions. Here’s How To Read Them via @sejournal, @cshel. Comparing which pages Google u",
+        "what_happened": "People can't even do this.. People can't even do this. OpenAI (@OpenAI) GPT-Live can listen while it speaks. To make tha",
         "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
+        "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
         "confidence": "Observed",
@@ -47,15 +47,15 @@
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/google-reports-ai-search-impressions-how-to-read-them/582824/"
+            "name": "VeryWellVersed",
+            "url": "https://x.com/VeryWellVersed/status/2084795759321346470"
           }
         ]
       },
       {
-        "what_happened": "Paid Search Absorbed Organic’s Collapse – Then Q2 Slowed Down via @sejournal, @brookeosmundson. Google paid search growt",
+        "what_happened": "Today in \"dangerous texts to send Will\". Today in \"dangerous texts to send Will\"",
         "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
+        "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
         "confidence": "Observed",
@@ -63,8 +63,72 @@
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/paid-search-absorbed-organics-collapse-then-q2-slowed-down/583560/"
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2084668021553926317"
+          }
+        ]
+      },
+      {
+        "what_happened": "RT by @cyberandy: 1,000,000 Brands in Gemini's Parametric Memory Process: https://dejan.ai/blog/brands/ Data: https://au",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "cyberandy",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "cyberandy",
+            "url": "https://x.com/cyberandy/status/2084848933378089087"
+          }
+        ]
+      },
+      {
+        "what_happened": "NEW V3 of SparkToro launched today 🔥 - our first new version in 2.5 years - only the 3rd since 2020's - new features, gr",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "randfish",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "randfish",
+            "url": "https://x.com/randfish/status/2084895079832142300"
+          }
+        ]
+      },
+      {
+        "what_happened": "It's Agents Week. This week, we're shipping across the full agent stack: the execution layer, the development lifecycle,",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2084675542557565166"
+          }
+        ]
+      },
+      {
+        "what_happened": "Building agents? -> Introducing: Cloudflare Agents - Agent tracing, making agents observable, a dedicated agents view in",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2084679841962426614"
           }
         ]
       }
@@ -72,9 +136,9 @@
   },
   "signals": [
     {
-      "what_happened": "What Top Stories Inside AI Overviews Means For Publishers And Brands In 2026 And Beyond via @sejournal, @gregjarboe. Mos",
+      "what_happened": "APIs are your business engine, but also your biggest attack surface. Learn how to secure your ecosystem without sacrific",
       "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
+      "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
       "confidence": "Observed",
@@ -82,15 +146,15 @@
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/what-top-stories-inside-ai-overviews-means-for-publishers-and-brands-in-2026-and-beyond/584175/"
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2084806659361153078"
         }
       ]
     },
     {
-      "what_happened": "Report That Cloudflare AI Bot Blocking Prevents Googlebot From Indexing Sites via @sejournal, @martinibuster. Anecdotal ",
+      "what_happened": "But it's not 9/15 yet :) -> Report That Cloudflare AI Bot Blocking Prevents Googlebot and Bingbot From Indexing Sites \"I",
       "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
+      "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
       "confidence": "Observed",
@@ -98,15 +162,15 @@
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/report-that-cloudflare-ai-bot-blocking-prevents-googlebot-from-indexing-sites/584673/"
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2084682049080733838"
         }
       ]
     },
     {
-      "what_happened": "Google Now Reports AI Search Impressions. Here’s How To Read Them via @sejournal, @cshel. Comparing which pages Google u",
+      "what_happened": "People can't even do this.. People can't even do this. OpenAI (@OpenAI) GPT-Live can listen while it speaks. To make tha",
       "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
+      "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
       "confidence": "Observed",
@@ -114,15 +178,15 @@
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/google-reports-ai-search-impressions-how-to-read-them/582824/"
+          "name": "VeryWellVersed",
+          "url": "https://x.com/VeryWellVersed/status/2084795759321346470"
         }
       ]
     },
     {
-      "what_happened": "Paid Search Absorbed Organic’s Collapse – Then Q2 Slowed Down via @sejournal, @brookeosmundson. Google paid search growt",
+      "what_happened": "Today in \"dangerous texts to send Will\". Today in \"dangerous texts to send Will\"",
       "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
+      "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
       "confidence": "Observed",
@@ -130,8 +194,72 @@
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/paid-search-absorbed-organics-collapse-then-q2-slowed-down/583560/"
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2084668021553926317"
+        }
+      ]
+    },
+    {
+      "what_happened": "RT by @cyberandy: 1,000,000 Brands in Gemini's Parametric Memory Process: https://dejan.ai/blog/brands/ Data: https://au",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "cyberandy",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "cyberandy",
+          "url": "https://x.com/cyberandy/status/2084848933378089087"
+        }
+      ]
+    },
+    {
+      "what_happened": "NEW V3 of SparkToro launched today 🔥 - our first new version in 2.5 years - only the 3rd since 2020's - new features, gr",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "randfish",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "randfish",
+          "url": "https://x.com/randfish/status/2084895079832142300"
+        }
+      ]
+    },
+    {
+      "what_happened": "It's Agents Week. This week, we're shipping across the full agent stack: the execution layer, the development lifecycle,",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2084675542557565166"
+        }
+      ]
+    },
+    {
+      "what_happened": "Building agents? -> Introducing: Cloudflare Agents - Agent tracing, making agents observable, a dedicated agents view in",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2084679841962426614"
         }
       ]
     }
@@ -245,24 +373,15 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-08-05T04:12:29.326834+00:00",
+    "ran_at": "2026-08-05T07:39:17.708509+00:00",
     "sources": {
       "x": {
-        "ok": 0,
+        "ok": 28,
         "total": 29,
         "failed_names": [
-          "searchliaison",
-          "googlesearchc",
-          "BingWMC",
-          "Cloudflare",
-          "JohnMu",
-          "methode",
-          "rustybrick",
-          "glenngabe",
-          "Marie_Haynes",
-          "lilyraynyc"
+          "JohnMu"
         ],
-        "items": 0
+        "items": 64
       },
       "rss": {
         "ok": 7,
@@ -279,8 +398,8 @@
         "items": 0
       }
     },
-    "candidates_fetched": 4,
-    "candidates_fresh": 4,
+    "candidates_fetched": 68,
+    "candidates_fresh": 54,
     "llm_provider": ""
   }
 }
