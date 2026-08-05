@@ -190,7 +190,6 @@ x:
   tweets_per_handle: 15
   nitter_instances:
     - nitter.net
-    - nitter.privacyredirect.com
 
   # ONE ACCOUNT, MANY TAGS.
   # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
