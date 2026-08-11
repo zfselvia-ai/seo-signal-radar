@@ -1,0 +1,405 @@
+{
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T03:05:04.183716+00:00",
+  "headline": "8 signals from sources (LLM summary unavailable).",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Our latest #AgentsWeek has come to a close. Here’s a recap of all the announcements we made, from Wallets to Radar. http",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2086884640724238576"
+          }
+        ]
+      },
+      {
+        "what_happened": "Yelp going all in -> Yelp Brings Reservations and Waitlist to ChatGPT, allowing people to book a table or join a waitlis",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2086841857397436708"
+          }
+        ]
+      },
+      {
+        "what_happened": "Made myself famous. 😏. Made myself famous. 😏",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "VeryWellVersed",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "VeryWellVersed",
+            "url": "https://x.com/VeryWellVersed/status/2086959781730771041"
+          }
+        ]
+      },
+      {
+        "what_happened": "The weight of third-party AI citations shows how both social media and digital PR are needed, although their relative im",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2086928300556067041"
+          }
+        ]
+      },
+      {
+        "what_happened": "These AI engines are your untrained salesforce. They're going to sell for somebody. You need to train them to sell for y",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "jasonmbarnard",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "jasonmbarnard",
+            "url": "https://x.com/jasonmbarnard/status/2086809812491194544"
+          }
+        ]
+      },
+      {
+        "what_happened": "The Scenic Route To ROI: Mastering Non-Linear Targeting In Google Ads. Six real non-linear campaigns showing which adjac",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Journal",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/the-scenic-route-to-roi-mastering-non-linear-targeting-in-google-ads/581784/"
+          }
+        ]
+      },
+      {
+        "what_happened": "Connect and protect your workforce, AI agents, and infrastructure. https://cfl.re/45tzEgU. Connect and protect your work",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2086863929792172323"
+          }
+        ]
+      },
+      {
+        "what_happened": "Will be interesting to watch People Inc's moves based on Jonathon's advice -> A profile of People Inc. Chief Innovation ",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2086796836883268064"
+          }
+        ]
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Our latest #AgentsWeek has come to a close. Here’s a recap of all the announcements we made, from Wallets to Radar. http",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2086884640724238576"
+        }
+      ]
+    },
+    {
+      "what_happened": "Yelp going all in -> Yelp Brings Reservations and Waitlist to ChatGPT, allowing people to book a table or join a waitlis",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2086841857397436708"
+        }
+      ]
+    },
+    {
+      "what_happened": "Made myself famous. 😏. Made myself famous. 😏",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "VeryWellVersed",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "VeryWellVersed",
+          "url": "https://x.com/VeryWellVersed/status/2086959781730771041"
+        }
+      ]
+    },
+    {
+      "what_happened": "The weight of third-party AI citations shows how both social media and digital PR are needed, although their relative im",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2086928300556067041"
+        }
+      ]
+    },
+    {
+      "what_happened": "These AI engines are your untrained salesforce. They're going to sell for somebody. You need to train them to sell for y",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "jasonmbarnard",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "jasonmbarnard",
+          "url": "https://x.com/jasonmbarnard/status/2086809812491194544"
+        }
+      ]
+    },
+    {
+      "what_happened": "The Scenic Route To ROI: Mastering Non-Linear Targeting In Google Ads. Six real non-linear campaigns showing which adjac",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Journal",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/the-scenic-route-to-roi-mastering-non-linear-targeting-in-google-ads/581784/"
+        }
+      ]
+    },
+    {
+      "what_happened": "Connect and protect your workforce, AI agents, and infrastructure. https://cfl.re/45tzEgU. Connect and protect your work",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2086863929792172323"
+        }
+      ]
+    },
+    {
+      "what_happened": "Will be interesting to watch People Inc's moves based on Jonathon's advice -> A profile of People Inc. Chief Innovation ",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2086796836883268064"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-08-11T03:04:08.371241+00:00",
+    "sources": {
+      "x": {
+        "ok": 28,
+        "total": 29,
+        "failed_names": [
+          "JohnMu"
+        ],
+        "items": 69
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 5
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 74,
+    "candidates_fresh": 46,
+    "llm_provider": ""
+  }
+}
