@@ -1,0 +1,503 @@
+{
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T02:22:17.595341+00:00",
+  "headline": "Anthropic confirms upcoming watermark detection API as GSC workflows evolve to track AI Mode queries",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Google Analytics Adds Benchmarking; New ChatGPT Index Details | GA 新增基准测试功能；ChatGPT 索引新数据曝光",
+        "why_it_matters": "GA 引入行业基准测试，帮助 SEO 评估自身流量表现；同时披露了 ChatGPT 搜索索引的最新数据，有助于评估其作为流量来源的潜力。",
+        "evidence": "Google Analytics product update and ChatGPT search index data reports.",
+        "evidence_detail": "Google Analytics has officially rolled out campaign benchmarking features to compare performance against industry peers. Concurrently, new data has emerged regarding the scale and indexing behavior of ChatGPT's search index, alongside Google refiling its SerpApi complaint under updated terms.",
+        "who_it_affects": "all",
+        "what_to_do": "check X",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 75,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/seo-pulse-chatgpts-index-ga-benchmarks-google-refiles-complaint/585748/",
+            "excerpt": "ChatGPT’s Index, GA Benchmarks, Google Refiles Complaint – SEO Pulse via @sejournal, @MattGSouthern. Google Analytics adds campaign benchmarking, new data on ChatGPT's index search index, and Google refiles its SerpApi claims with new terms. The post ChatGPT&#8217;s Index, GA Benchmarks, Google Refiles Complaint – SEO Pulse appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-08-15T12:00:14+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Dejan SEO Publishes Comprehensive Web Crawler Census | Dejan SEO 发布全面 Web 爬虫普查报告",
+        "why_it_matters": "揭示了当前主流 AI 爬虫与搜索引擎爬虫的活跃度、行为特征及对服务器资源的消耗，有助于优化 robots.txt 和服务器抓取预算。",
+        "evidence": "Dejan SEO's crawler census dataset analyzing user-agent activity and crawl rates across multiple sites.",
+        "evidence_detail": "The study analyzes log files and crawler activity across a sample of websites to map the behavior of search and AI bots. It provides empirical data on crawl frequency, resource consumption, and the effectiveness of blocking specific user-agents.",
+        "who_it_affects": "all",
+        "what_to_do": "check X",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Technical SEO Experiments",
+        "score": 80,
+        "sources": [
+          {
+            "name": "VeryWellVersed",
+            "url": "https://x.com/VeryWellVersed/status/2088496438057865416",
+            "excerpt": "RT by @VeryWellVersed: dejan.ai/blog/crawler-census…. dejan.ai/blog/crawler-census…",
+            "author": "@VeryWellVersed",
+            "published": "2026-08-15T05:22:07+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      },
+      {
+        "what_happened": "OpenAI Computer History Feature Exposes Prompt Injection Risks | OpenAI 电脑历史记录功能暴露 Prompt 注入风险",
+        "why_it_matters": "OpenAI 的 Computer History 功能在本地存储未加密的 Markdown 记忆文件。如果 SEO 在浏览网页时，网页中嵌入了恶意指令，可能会诱导 ChatGPT 执行恶意操作。",
+        "evidence": "OpenAI official documentation and security analysis of the Computer History feature.",
+        "evidence_detail": "OpenAI's documentation warns that the Computer History feature captures user activity across apps and websites, storing text summaries locally as unencrypted Markdown files. Because it processes content from active web pages, malicious instructions embedded on a site can trigger prompt injections.",
+        "who_it_affects": "all",
+        "what_to_do": "monitor Z",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "Technical SEO Experiments",
+        "score": 70,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2088609620046549242",
+            "excerpt": "Just what everyone wants! A way for ChatGPT to track everything you're doing... Its own documentation warns of prompt injection risks. Beware -> OpenAI's Computer History tracks user activity across apps and websites, turning it into a searchable timeline with memories that ChatGPT and Codex can use as context \"The captured events are periodically converted into text summaries and stored locally as Markdown memory files. The timeline view groups these summaries by day and time and shows which apps were involved.\" \"These files aren't encrypted, meaning any program running under the same macOS user account could potentially read them. To generate the memories, OpenAI processes the temporary…",
+            "author": "@glenngabe",
+            "published": "2026-08-15T12:51:52+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Anthropic Confirms SynthID-Text Watermarking & Upcoming Detection API | Anthropic 确认采用 SynthID-Text 水印并即将推出检测 API",
+        "why_it_matters": "Anthropic 确认使用 SynthID-Text 技术，并计划推出官方水印检测 API。这意味着使用 Claude 生成未改写内容的网站面临被搜索引擎或平台直接识别的风险。",
+        "evidence": "Official Anthropic FAQ documentation regarding watermarking implementation and detection API plans.",
+        "evidence_detail": "Anthropic's official documentation details that their watermarking discretely influences word selection during token generation using a secret key. They confirmed they are working on a watermark detection API to allow verification of Claude-generated text, noting that only a full rewrite can erase the pattern.",
+        "who_it_affects": "publisher / SaaS / ecommerce / all",
+        "what_to_do": "monitor Z",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 85,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2088586559385649321",
+            "excerpt": "SynthID-Text will be used for watermarking content and detection will be possible via their detection API: How do I check if a piece of text was written by Claude? \"We will soon be offering a watermark detection API. We’re in the process of working out the details of its implementation.\" Check their post for all the details. They provided a ton of information there.. SynthID-Text will be used for watermarking content and detection will be possible via their detection API: How do I check if a piece of text was written by Claude? \"We will soon be offering a watermark detection API. We’re in the process of working out the details of its implementation.\" Check their post for all the details.…",
+            "author": "@glenngabe",
+            "published": "2026-08-15T11:20:14+00:00",
+            "source_type": "data_research"
+          },
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/anthropic-reveals-what-the-watermark-is-and-how-it-can-be-defeated/585930/",
+            "excerpt": "Anthropic Reveals What The Watermark Is And How It Can Be Defeated via @sejournal, @martinibuster. Anthropic offers more details about its watermark including how it can be defeated. The post Anthropic Reveals What The Watermark Is And How It Can Be Defeated appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-08-15T10:46:00+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "Gemini 3.7 Flash Shows Minimal Intent Understanding Shift in AI Mode | Gemini 3.7 Flash 在 AI Mode 中意图理解提升不明显",
+        "why_it_matters": "尽管 Google 宣称 Gemini 3.7 Flash 拥有更强的意图理解能力，但早期测试显示其在 AI Mode 中的表现与默认的 3.5 Flash-Lite 差异极小。",
+        "evidence": "Practitioner testing comparing Gemini 3.7 Flash vs Gemini 3.5 Flash-Lite in Google's AI Mode.",
+        "evidence_detail": "Glenn Gabe conducted side-by-side comparisons of Gemini 3.7 Flash in AI Mode against the default Gemini 3.5 Flash-Lite. Initial observations indicate no significant breakthrough in understanding complex user search intent between the two models.",
+        "who_it_affects": "all",
+        "what_to_do": "monitor Z",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "score": 60,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2088622573697278250",
+            "excerpt": "Testing Gemini 3.7 Flash in AI Mode versus the default version most users have (which I believe is Gemini 3.5 Flash-Lite). Google said it's better at understanding intent. So far not really seeing a huge difference there. I'll keep testing, though. :) Here are two comparisons of 3.7 Flash versus the default that most people see, which is 3.5 Flash-Lite.. Testing Gemini 3.7 Flash in AI Mode versus the default version most users have (which I believe is Gemini 3.5 Flash-Lite). Google said it's better at understanding intent. So far not really seeing a huge difference there. I'll keep testing, though. :) Here are two comparisons of 3.7 Flash versus the default that most people see, which is…",
+            "author": "@glenngabe",
+            "published": "2026-08-15T13:43:20+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Research & Retrieval": [
+      {
+        "what_happened": "Patent Analysis Explores Google's Use of User Behavior & Layouts | 专利分析探讨 Google 如何利用用户行为与网页布局进行评估",
+        "why_it_matters": "深入探讨了 Google 关于“文档评估”和用户行为的专利，揭示了网页设计、布局和用户交互可能如何直接影响搜索引擎的排名评估。",
+        "evidence": "Analysis of Google patents related to document evaluation and user behavior metrics.",
+        "evidence_detail": "The analysis reviews specific Google patents focusing on how the search engine evaluates document layout and user interaction signals. It suggests that layout structure and user engagement patterns are systematically analyzed to assess page quality and relevance.",
+        "who_it_affects": "all",
+        "what_to_do": "check X",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Research & Retrieval",
+        "score": 68,
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2088531167003713984",
+            "excerpt": "Does Google Use User Behaviour, Website Design & Layouts in SEO Rank Assessments? - via @AssertiveMedia & @foley_seo #seo https://www.assertive-media.co.uk/blog/does-google-use-user-behaviour-website-design-layouts-in-seo-rank-assessments/?ck_subscriber_id=2782829340&utm_source=convertkit&utm_medium=email&utm_campaign=%E2%98%80%EF%B8%8F%20Not%20to%20Be%20Missed%20SEO%20%2B%20AI%20Search%20News%20Of%20the%20Week%20%5BSEOFOMO%20-%20August%209%2C%202026%5D%20-%2022836370. Does Google Use User Behaviour, Website Design &amp; Layouts in SEO Rank Assessments? - via @AssertiveMedia &amp; @foley_seo #seo assertive-media.co.uk/blog/d… Link Does Google Use User Behaviour, Website Design &amp; Layouts…",
+            "author": "@sitebulb",
+            "published": "2026-08-15T07:40:07+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Identify AI Mode Queries via GSC API & Claude | 通过 GSC API 与 Claude 识别 AI Mode 查询",
+        "why_it_matters": "帮助 SEO 识别哪些查询正在触发 Google 的 AI Mode（AI Overviews），并量化其对 CTR 和点击量（通常为 0）的真实影响。",
+        "evidence": "GSC Search Analytics API data processed via Claude to classify AI Mode prompts and analyze click distribution.",
+        "evidence_detail": "Glenn Gabe demonstrated a workflow exporting full query and landing page data from GSC via the Search Analytics API, then using Claude to classify queries likely originating from AI Mode. The analysis reveals a high frequency of cited or ranking pages receiving 0 clicks despite being featured.",
+        "who_it_affects": "all",
+        "what_to_do": "test Y",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "how_to_test": "Export GSC query/landing page data via API, prompt Claude to classify AI Mode queries, and analyze click metrics.",
+        "success_metric": "Percentage of AI Mode queries identified and their corresponding CTR/click distribution mapped.",
+        "effort": "Low effort (1-2 hours). Requires GSC API access and a Claude account. No risk.",
+        "score": 85,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2088616406925398457",
+            "excerpt": "Saturday AM is a great time to analyze your AI Mode queries. That's right, you can surface those using the right approach. I published an article this week explaining how to export all of your query/landing page data from GSC via the Search Analytics API and then feed that to Claude. The resulting spreadsheet breaks out prompts that are *probably* from AI Mode, along with your pages that were cited/ranking. You can do this in just a few minutes. But brace yourself, the click data might be alarming to see. E.g. a 0 clicks column is what I'm seeing often when running the numbers.. Saturday AM is a great time to analyze your AI Mode queries. That's right, you can surface those using the right…",
+            "author": "@glenngabe",
+            "published": "2026-08-15T13:18:50+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "评估 AI 生成内容工作流，防范 Anthropic SynthID-Text 水印检测 API 带来的合规与识别风险。",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "使用 GSC API 导出查询数据并利用 Claude 识别 AI Mode 查询，分析其对 CTR 的真实影响。",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "检查 Google Analytics 中的新 Campaign Benchmarking 功能，对比行业基准数据。",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Identify AI Mode Queries via GSC API & Claude | 通过 GSC API 与 Claude 识别 AI Mode 查询",
+      "why_it_matters": "帮助 SEO 识别哪些查询正在触发 Google 的 AI Mode（AI Overviews），并量化其对 CTR 和点击量（通常为 0）的真实影响。",
+      "evidence": "GSC Search Analytics API data processed via Claude to classify AI Mode prompts and analyze click distribution.",
+      "evidence_detail": "Glenn Gabe demonstrated a workflow exporting full query and landing page data from GSC via the Search Analytics API, then using Claude to classify queries likely originating from AI Mode. The analysis reveals a high frequency of cited or ranking pages receiving 0 clicks despite being featured.",
+      "who_it_affects": "all",
+      "what_to_do": "test Y",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "how_to_test": "Export GSC query/landing page data via API, prompt Claude to classify AI Mode queries, and analyze click metrics.",
+      "success_metric": "Percentage of AI Mode queries identified and their corresponding CTR/click distribution mapped.",
+      "effort": "Low effort (1-2 hours). Requires GSC API access and a Claude account. No risk.",
+      "score": 85,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2088616406925398457",
+          "excerpt": "Saturday AM is a great time to analyze your AI Mode queries. That's right, you can surface those using the right approach. I published an article this week explaining how to export all of your query/landing page data from GSC via the Search Analytics API and then feed that to Claude. The resulting spreadsheet breaks out prompts that are *probably* from AI Mode, along with your pages that were cited/ranking. You can do this in just a few minutes. But brace yourself, the click data might be alarming to see. E.g. a 0 clicks column is what I'm seeing often when running the numbers.. Saturday AM is a great time to analyze your AI Mode queries. That's right, you can surface those using the right…",
+          "author": "@glenngabe",
+          "published": "2026-08-15T13:18:50+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Anthropic Confirms SynthID-Text Watermarking & Upcoming Detection API | Anthropic 确认采用 SynthID-Text 水印并即将推出检测 API",
+      "why_it_matters": "Anthropic 确认使用 SynthID-Text 技术，并计划推出官方水印检测 API。这意味着使用 Claude 生成未改写内容的网站面临被搜索引擎或平台直接识别的风险。",
+      "evidence": "Official Anthropic FAQ documentation regarding watermarking implementation and detection API plans.",
+      "evidence_detail": "Anthropic's official documentation details that their watermarking discretely influences word selection during token generation using a secret key. They confirmed they are working on a watermark detection API to allow verification of Claude-generated text, noting that only a full rewrite can erase the pattern.",
+      "who_it_affects": "publisher / SaaS / ecommerce / all",
+      "what_to_do": "monitor Z",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 85,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2088586559385649321",
+          "excerpt": "SynthID-Text will be used for watermarking content and detection will be possible via their detection API: How do I check if a piece of text was written by Claude? \"We will soon be offering a watermark detection API. We’re in the process of working out the details of its implementation.\" Check their post for all the details. They provided a ton of information there.. SynthID-Text will be used for watermarking content and detection will be possible via their detection API: How do I check if a piece of text was written by Claude? \"We will soon be offering a watermark detection API. We’re in the process of working out the details of its implementation.\" Check their post for all the details.…",
+          "author": "@glenngabe",
+          "published": "2026-08-15T11:20:14+00:00",
+          "source_type": "data_research"
+        },
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/anthropic-reveals-what-the-watermark-is-and-how-it-can-be-defeated/585930/",
+          "excerpt": "Anthropic Reveals What The Watermark Is And How It Can Be Defeated via @sejournal, @martinibuster. Anthropic offers more details about its watermark including how it can be defeated. The post Anthropic Reveals What The Watermark Is And How It Can Be Defeated appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-08-15T10:46:00+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Dejan SEO Publishes Comprehensive Web Crawler Census | Dejan SEO 发布全面 Web 爬虫普查报告",
+      "why_it_matters": "揭示了当前主流 AI 爬虫与搜索引擎爬虫的活跃度、行为特征及对服务器资源的消耗，有助于优化 robots.txt 和服务器抓取预算。",
+      "evidence": "Dejan SEO's crawler census dataset analyzing user-agent activity and crawl rates across multiple sites.",
+      "evidence_detail": "The study analyzes log files and crawler activity across a sample of websites to map the behavior of search and AI bots. It provides empirical data on crawl frequency, resource consumption, and the effectiveness of blocking specific user-agents.",
+      "who_it_affects": "all",
+      "what_to_do": "check X",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 80,
+      "sources": [
+        {
+          "name": "VeryWellVersed",
+          "url": "https://x.com/VeryWellVersed/status/2088496438057865416",
+          "excerpt": "RT by @VeryWellVersed: dejan.ai/blog/crawler-census…. dejan.ai/blog/crawler-census…",
+          "author": "@VeryWellVersed",
+          "published": "2026-08-15T05:22:07+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "OpenAI Computer History Feature Exposes Prompt Injection Risks | OpenAI 电脑历史记录功能暴露 Prompt 注入风险",
+      "why_it_matters": "OpenAI 的 Computer History 功能在本地存储未加密的 Markdown 记忆文件。如果 SEO 在浏览网页时，网页中嵌入了恶意指令，可能会诱导 ChatGPT 执行恶意操作。",
+      "evidence": "OpenAI official documentation and security analysis of the Computer History feature.",
+      "evidence_detail": "OpenAI's documentation warns that the Computer History feature captures user activity across apps and websites, storing text summaries locally as unencrypted Markdown files. Because it processes content from active web pages, malicious instructions embedded on a site can trigger prompt injections.",
+      "who_it_affects": "all",
+      "what_to_do": "monitor Z",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 70,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2088609620046549242",
+          "excerpt": "Just what everyone wants! A way for ChatGPT to track everything you're doing... Its own documentation warns of prompt injection risks. Beware -> OpenAI's Computer History tracks user activity across apps and websites, turning it into a searchable timeline with memories that ChatGPT and Codex can use as context \"The captured events are periodically converted into text summaries and stored locally as Markdown memory files. The timeline view groups these summaries by day and time and shows which apps were involved.\" \"These files aren't encrypted, meaning any program running under the same macOS user account could potentially read them. To generate the memories, OpenAI processes the temporary…",
+          "author": "@glenngabe",
+          "published": "2026-08-15T12:51:52+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google Analytics Adds Benchmarking; New ChatGPT Index Details | GA 新增基准测试功能；ChatGPT 索引新数据曝光",
+      "why_it_matters": "GA 引入行业基准测试，帮助 SEO 评估自身流量表现；同时披露了 ChatGPT 搜索索引的最新数据，有助于评估其作为流量来源的潜力。",
+      "evidence": "Google Analytics product update and ChatGPT search index data reports.",
+      "evidence_detail": "Google Analytics has officially rolled out campaign benchmarking features to compare performance against industry peers. Concurrently, new data has emerged regarding the scale and indexing behavior of ChatGPT's search index, alongside Google refiling its SerpApi complaint under updated terms.",
+      "who_it_affects": "all",
+      "what_to_do": "check X",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 75,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/seo-pulse-chatgpts-index-ga-benchmarks-google-refiles-complaint/585748/",
+          "excerpt": "ChatGPT’s Index, GA Benchmarks, Google Refiles Complaint – SEO Pulse via @sejournal, @MattGSouthern. Google Analytics adds campaign benchmarking, new data on ChatGPT's index search index, and Google refiles its SerpApi claims with new terms. The post ChatGPT&#8217;s Index, GA Benchmarks, Google Refiles Complaint – SEO Pulse appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-08-15T12:00:14+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Patent Analysis Explores Google's Use of User Behavior & Layouts | 专利分析探讨 Google 如何利用用户行为与网页布局进行评估",
+      "why_it_matters": "深入探讨了 Google 关于“文档评估”和用户行为的专利，揭示了网页设计、布局和用户交互可能如何直接影响搜索引擎的排名评估。",
+      "evidence": "Analysis of Google patents related to document evaluation and user behavior metrics.",
+      "evidence_detail": "The analysis reviews specific Google patents focusing on how the search engine evaluates document layout and user interaction signals. It suggests that layout structure and user engagement patterns are systematically analyzed to assess page quality and relevance.",
+      "who_it_affects": "all",
+      "what_to_do": "check X",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "Research & Retrieval",
+      "score": 68,
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2088531167003713984",
+          "excerpt": "Does Google Use User Behaviour, Website Design & Layouts in SEO Rank Assessments? - via @AssertiveMedia & @foley_seo #seo https://www.assertive-media.co.uk/blog/does-google-use-user-behaviour-website-design-layouts-in-seo-rank-assessments/?ck_subscriber_id=2782829340&utm_source=convertkit&utm_medium=email&utm_campaign=%E2%98%80%EF%B8%8F%20Not%20to%20Be%20Missed%20SEO%20%2B%20AI%20Search%20News%20Of%20the%20Week%20%5BSEOFOMO%20-%20August%209%2C%202026%5D%20-%2022836370. Does Google Use User Behaviour, Website Design &amp; Layouts in SEO Rank Assessments? - via @AssertiveMedia &amp; @foley_seo #seo assertive-media.co.uk/blog/d… Link Does Google Use User Behaviour, Website Design &amp; Layouts…",
+          "author": "@sitebulb",
+          "published": "2026-08-15T07:40:07+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ]
+    },
+    {
+      "what_happened": "Gemini 3.7 Flash Shows Minimal Intent Understanding Shift in AI Mode | Gemini 3.7 Flash 在 AI Mode 中意图理解提升不明显",
+      "why_it_matters": "尽管 Google 宣称 Gemini 3.7 Flash 拥有更强的意图理解能力，但早期测试显示其在 AI Mode 中的表现与默认的 3.5 Flash-Lite 差异极小。",
+      "evidence": "Practitioner testing comparing Gemini 3.7 Flash vs Gemini 3.5 Flash-Lite in Google's AI Mode.",
+      "evidence_detail": "Glenn Gabe conducted side-by-side comparisons of Gemini 3.7 Flash in AI Mode against the default Gemini 3.5 Flash-Lite. Initial observations indicate no significant breakthrough in understanding complex user search intent between the two models.",
+      "who_it_affects": "all",
+      "what_to_do": "monitor Z",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 60,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2088622573697278250",
+          "excerpt": "Testing Gemini 3.7 Flash in AI Mode versus the default version most users have (which I believe is Gemini 3.5 Flash-Lite). Google said it's better at understanding intent. So far not really seeing a huge difference there. I'll keep testing, though. :) Here are two comparisons of 3.7 Flash versus the default that most people see, which is 3.5 Flash-Lite.. Testing Gemini 3.7 Flash in AI Mode versus the default version most users have (which I believe is Gemini 3.5 Flash-Lite). Google said it's better at understanding intent. So far not really seeing a huge difference there. I'll keep testing, though. :) Here are two comparisons of 3.7 Flash versus the default that most people see, which is…",
+          "author": "@glenngabe",
+          "published": "2026-08-15T13:43:20+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-08-16T02:21:35.781671+00:00",
+    "sources": {
+      "x": {
+        "ok": 28,
+        "total": 29,
+        "failed_names": [
+          "JohnMu"
+        ],
+        "items": 36
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 4
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 40,
+    "candidates_fresh": 25,
+    "llm_provider": ""
+  }
+}
