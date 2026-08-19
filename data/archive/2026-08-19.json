@@ -1,269 +1,375 @@
 {
   "date": "2026-08-19",
-  "generated_at": "2026-08-19T02:37:04.221233+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "generated_at": "2026-08-19T09:09:05.654287+00:00",
+  "headline": "Cloudflare x AWS enable agent-to-agent payments; ChatGPT fan-out still cites migrated domains",
   "sections": {
     "Confirmed Search Updates": [
       {
-        "what_happened": "[Spam Update] August 2026 spam update. Released the August 2026 spam update <https://developers.google.com/search/docs/a",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Google Search Status",
+        "what_happened": "Google August 2026 spam update confirmed rolling out | Google 确认推出 2026 年 8 月垃圾内容算法更新",
+        "why_it_it_matters": "年度第四次 spam update，需确认是否影响自身站点及观察 GEO/AEO spam 清理效果",
+        "evidence": "Google Search Central official confirmation + SER tracking",
+        "evidence_detail": "Google Search Central announced the August 2026 spam update on August 19. This follows the March, June, and earlier August spam updates. No specific targets were named, but Glenn Gabe and others are tracking for GEO/AEO spam impact. Rollout status will be updated on the Google ranking release history page.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "what_to_do": "检查 GSC 安全与手动操作报告；监控排名/流量异常波动",
+        "confidence": "Confirmed",
+        "impact": "P0",
         "section": "Confirmed Search Updates",
+        "score": 85,
         "sources": [
           {
-            "name": "Google Search Status",
-            "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE"
+            "name": "@googlesearchc",
+            "url": "https://x.com/lilyraynyc/status/2089794147787976709",
+            "excerpt": "RIP my inbox lol. RIP my inbox lol Google Search Central (@googlesearchc) Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc… — https://nitter.net/googlesearchc/status/2089752491499938186#m",
+            "author": "@lilyraynyc",
+            "published": "2026-08-18T19:18:45+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google Search Console performance report bug confirmed as logging issue, affects Search + Discover | GSC 性能报告数据异常确认为日志问题",
+        "why_it_matters": "非实际排名或流量损失，避免基于错误数据做出错误优化决策",
+        "evidence": "John Mueller confirmation via Barry Schwartz/SERoundtable",
+        "evidence_detail": "John Mueller confirmed the GSC performance report drop is a logging issue, not an actual traffic loss. The bug affects both Search and Discover reports. This was previously reported on August 18 as a potential data problem.",
+        "who_it_affects": "all",
+        "what_to_do": "无需调整 SEO 策略；等待 Google 修复，用 GA4 交叉验证流量数据",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 78,
+        "sources": [
+          {
+            "name": "@rustybrick",
+            "url": "https://x.com/rustybrick/status/2089798978963427372",
+            "excerpt": "The Google Search Performance data bug is not just for Search, but also Discover. Story updated at. https://www.seroundtable.com/google-search-console-performance-reports-drop-41884.html. The Google Search Performance data bug is not just for Search, but also Discover. Story updated at. seroundtable.com/google-sear… Barry Schwartz (@rustybrick) Google's John Mueller has confirmed the Search Console performance report issue - it is just a logging issue seroundtable.com/google-sear… — https://nitter.net/rustybrick/status/2089695180093829217#m",
+            "author": "@rustybrick",
+            "published": "2026-08-18T19:37:57+00:00",
+            "source_type": "trade_news"
           }
         ]
       }
     ],
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complet",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "googlesearchc",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Reddit citations dropping in Claude, down in ChatGPT; still dominates 70M Google queries | Reddit 在 Claude 中引用锐减，ChatGPT 中下降，但 Google 仍覆盖 7000 万查询",
+        "why_it_matters": "平台间引用分布分化，GEO 策略需区分 Claude/ChatGPT/Google 的 source preference",
+        "evidence": "Practitioner observation by Ross Simmonds, amplified by Lily Ray",
+        "evidence_detail": "Ross Simmonds notes Reddit barely appears in Claude citations and is down in ChatGPT, despite 5.7 billion monthly visits and ranking 1-3 for 70 million Google queries. This suggests AI platforms are actively downweighting Reddit or Reddit is blocking crawlers, while Google continues to surface it heavily.",
+        "who_it_affects": "publisher / UGC / all",
+        "what_to_do": "评估 Reddit 在目标平台的引用价值；分散 GEO  effort 至其他 corroboration 来源",
         "confidence": "Observed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
+        "score": 68,
         "sources": [
           {
-            "name": "googlesearchc",
-            "url": "https://x.com/googlesearchc/status/2089752491499938186"
+            "name": "@lilyraynyc / @TheCoolestCool",
+            "url": "https://x.com/lilyraynyc/status/2089919961263190434",
+            "excerpt": "Watch all of this return Reddit back to what it was supposed to be in the first place. Watch all of this return Reddit back to what it was supposed to be in the first place Ross Simmonds (@TheCoolestCool) Reddit barely exists in Claude. Reddit is down citations in ChatGPT. Reddit has 5.7 billion total visits per month. Reddit ranks in 1-3 in Google for 70M queries. Reddit is still the front page of the internet. — https://nitter.net/TheCoolestCool/status/2089892472629424177#m",
+            "author": "@lilyraynyc",
+            "published": "2026-08-19T03:38:42+00:00",
+            "source_type": "expert_analysis"
           }
         ]
       },
       {
-        "what_happened": "Here we go. The August 2026 Spam Update is rolling out. Again, I hope more GEO/AEO spam is nuked. Stay tuned. I'll be tr",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Meta crawlers now read more of the web than blocked AI bots; no negotiations ongoing | Meta 爬虫抓取量超被屏蔽的 AI bot，且无内容授权谈判",
+        "why_it_matters": "robots.txt 屏蔽策略存在盲点：Meta 以非 AI bot 身份大规模抓取，规避出版商防御",
+        "evidence": "Search Engine Journal article via Sitebulb share",
+        "evidence_detail": "Meta's crawlers are reading more of the web than the AI bots that publishers actively block, and there are no ongoing negotiations with Meta for content access. This highlights a gap in current bot management strategies where traditional robots.txt approaches fail to address Meta's crawling behavior.",
+        "who_it_affects": "publisher / all",
+        "what_to_do": "审计服务器日志中的 Meta crawler 行为；评估是否需要针对性 rate limiting 或 TOS 层面的限制",
         "confidence": "Observed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
+        "score": 65,
+        "sources": [],
+        "unverified": true
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Google Search to support HTTP QUERY method | Google Search 将支持 HTTP QUERY 方法",
+        "why_it_matters": "可能改变爬虫与服务器交互方式，影响 log analysis 和 rate limiting 策略",
+        "evidence": "SERoundtable report of Google announcement",
+        "evidence_detail": "Google announced support for the HTTP QUERY method in Search. This is a technical infrastructure change that could affect how search-related requests are made and logged. Limited detail available on implementation timeline or specific use cases.",
+        "who_it_affects": "technical SEO / all",
+        "what_to_do": "监控服务器日志中的 QUERY 请求；评估 CDN/WAF 规则是否需要更新",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "Technical SEO Experiments",
+        "score": 62,
         "sources": [
           {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2089754492061237486"
+            "name": "@rustybrick",
+            "url": "https://x.com/rustybrick/status/2089710405316710537",
+            "excerpt": "Google Search will support HTTP QUERY method https://www.seroundtable.com/google-support-http-query-method-41882.html. Google Search will support HTTP QUERY method seroundtable.com/google-supp…",
+            "author": "@rustybrick",
+            "published": "2026-08-18T13:46:00+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Cloudflare Monetization Gateway + AWS AgentCore Payments now let AI agents pay per request via x402 | Cloudflare 与 AWS 推出 AI 代理按请求付费网关",
+        "why_it_matters": "agentic traffic 的商业模式从'免费抓取'转向'按需付费'，内容方和 API 提供商可设置定价策略，影响 GEO/AEO 内容分发逻辑",
+        "evidence": "Cloudflare official API announcement + AWS Bedrock GA release",
+        "evidence_detail": "Cloudflare's Monetization Gateway uses the x402 payment protocol to let content owners and MCP servers charge AI agents per request. AWS AgentCore Payments is now generally available, meaning enterprises building agents on Bedrock can transact with that supply from launch. This is infrastructure-level: it doesn't change rankings but creates a new economic layer for agentic access.",
+        "who_it_affects": "SaaS / publisher / ecommerce",
+        "what_to_do": "评估是否对高价值内容启用 agent 付费墙；监控 MCP server 流量日志中的 x402 请求头",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 82,
+        "how_to_test": "在 Cloudflare Dashboard 启用 Monetization Gateway，为特定 API 端点或内容路径设置 x402 定价，对比启用前后 agent 流量与直接收入",
+        "success_metric": "agent 请求转化率 × 平均请求收入；对比免费抓取 vs 付费 agent 的引用频次",
+        "effort": "中 — 需配置 x402 合约与定价策略；风险是早期 agent 生态渗透率有限",
+        "sources": [
+          {
+            "name": "@Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2089797902407229903",
+            "excerpt": "AI agents don't just reason anymore. They transact. Cloudflare's Monetization Gateway lets content owners, API providers, and MCP servers charge agents directly, per request, using x402. And today, enterprises building agents with @AWScloud AgentCore Payments can tap into that supply from day one. https://cfl.re/3TVKvOr. AI agents don't just reason anymore. They transact. Cloudflare's Monetization Gateway lets content owners, API providers, and MCP servers charge agents directly, per request, using x402. And today, enterprises building agents with @AWScloud AgentCore Payments can tap into that supply from day one. cfl.re/3TVKvOr Link Amazon Bedrock AgentCore payments is now generally…",
+            "author": "@Cloudflare",
+            "published": "2026-08-18T19:33:41+00:00",
+            "source_type": "official_api"
           }
         ]
       },
       {
-        "what_happened": "If you’re interested in SEO and AI agents - I have something new for you! Now available on macOS and Windows, take the “",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "brodieseo",
+        "what_happened": "ChatGPT fan-out queries still use site:old-domain for brands 6+ months post-migration | ChatGPT 域名迁移半年后仍引用旧域名",
+        "why_it_matters": "AI search 的记忆滞后于传统 SEO 迁移周期，旧域名持续获得 brand mention 而新域名被排除在 fan-out 结果外",
+        "evidence": "Practitioner observation by Lily Ray with specific case (URL withheld)",
+        "evidence_detail": "A well-known brand that migrated domains over 6 months ago was found in ChatGPT's fan-out queries using site:old-domain. The migration followed SEO best practices, but ChatGPT's memory retains the old domain. Critical limitation: when the fan-out uses site:old-domain, new domain URLs do not appear in those search results, so they are excluded from the AI response unless discovered through other queries.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_to_do": "迁移后持续监控 ChatGPT/Perplexity 的引用域名；在旧域名保留 301 + 强化新域名 brand signals",
         "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 71,
+        "how_to_test": "定期在 ChatGPT/Perplexity 查询品牌相关问题时检查引用来源域名；使用 site:old-domain 和 site:new-domain 对比 fan-out 覆盖度",
+        "success_metric": "新域名在 AI 引用中的占比提升；旧域名引用占比下降",
+        "effort": "低 — 主要是监控与报告；风险是平台侧记忆更新不可控",
         "sources": [
           {
-            "name": "brodieseo",
-            "url": "https://x.com/brodieseo/status/2089837253266919730"
+            "name": "@lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2089821023877345459",
+            "excerpt": "I can't share the URL, but I just found an example of ChatGPT using fan-out queries that contained site: for the *old domain* for a well-known brand that migrated its domain over 6 months ago. 👀 The migration was handled well from an SEO perspective, but the old domain name must be stored in ChatGPT's memory. The worst part? When you use Google or Bing to do a site: search that is limited to the old version of the domain, the new domain's URLs don't show up in the search results. So your shiny new URLs likely won't be part of the response unless they are discovered through another fan-out query or another part of the search 🫠. I can't share the URL, but I just found an example of ChatGPT…",
+            "author": "@lilyraynyc",
+            "published": "2026-08-18T21:05:33+00:00",
+            "source_type": "expert_analysis"
           }
         ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Aleyda Solis publishes citation study: AI search as 3rd-party citation + on-page corroboration problem across SaaS, ecommerce, finance | Aleyda Solis 发布 AI 搜索引用模式跨行业研究",
+        "why_it_matters": "提供可复制的 GEO 策略框架：social/digital PR 与 on-page 证据需协同，且 playbook 因垂直而异",
+        "evidence": "Data research across three verticals by established SEO expert",
+        "evidence_detail": "The study analyzes how AI search citations work across SaaS, ecommerce, and finance, finding that third-party citations require on-page corroboration to maximize visibility. The source mix varies by vertical and platform, making social media and digital PR essential workstreams. Published on aleydasolis.com with methodology implied but not fully detailed in the candidate text.",
+        "who_it_affects": "SaaS / ecommerce / publisher",
+        "what_to_do": "按垂直行业审计引用来源组合；将 trade pubs 和工具品牌纳入 digital PR 目标",
+        "confidence": "Speculative",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 74,
+        "how_to_test": "选取 20-30 个核心关键词，记录 ChatGPT/Perplexity/Claude 的引用来源类型（trade pub, social, brand site, review site 等），对比自身 on-page 内容是否 corroborate 这些来源的 claims",
+        "success_metric": "目标关键词的 AI 引用率提升；引用来源多样性指数变化",
+        "effort": "中高 — 需跨平台手动审计或开发监控工具；风险是平台引用机制变化快",
+        "sources": [],
+        "unverified": true
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "检查 GSC 安全与手动操作报告，确认 August 2026 spam update 是否影响站点",
+        "impact": "P0"
       },
       {
-        "what_happened": "This looks great!. This looks great! Boss (@_ValTown_) Snowfall: The Drop Official Trailer. FX &amp; Hulu September 8. V",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2089727585076867345"
-          }
-        ]
+        "what_to_do": "用 GA4 交叉验证 GSC 数据，确认性能报告 bug 未导致误判",
+        "impact": "P1"
       },
       {
-        "what_happened": "RT by @dawnieando: Google has unleashed the August 2026 spam update https://www.seroundtable.com/google-august-2026-spam",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "dawnieando",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "dawnieando",
-            "url": "https://x.com/dawnieando/status/2089756050014560631"
-          }
-        ]
+        "what_to_do": "审计 ChatGPT/Claude/Perplexity 对品牌的引用域名，确认无旧域名残留",
+        "impact": "P1"
       },
       {
-        "what_happened": "When things get scary .... When things get scary ... OrcaRouter 🐳 (@OrcaRouter) We just shipped our official Qwen 3.8 27",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "cyberandy",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "cyberandy",
-            "url": "https://x.com/cyberandy/status/2089801680774660492"
-          }
-        ]
-      },
-      {
-        "what_happened": "Opus 5 feels nerfed. gets things wrong a lot lately. new model coming already?. Opus 5 feels nerfed. gets things wrong a",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Kevin_Indig",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Kevin_Indig",
-            "url": "https://x.com/Kevin_Indig/status/2089631474332897784"
-          }
-        ]
+        "what_to_do": "按垂直行业测试 Aleyda Solis 的 citation + corroboration 框架",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "[Spam Update] August 2026 spam update. Released the August 2026 spam update <https://developers.google.com/search/docs/a",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Google Search Status",
+      "what_happened": "Cloudflare Monetization Gateway + AWS AgentCore Payments now let AI agents pay per request via x402 | Cloudflare 与 AWS 推出 AI 代理按请求付费网关",
+      "why_it_matters": "agentic traffic 的商业模式从'免费抓取'转向'按需付费'，内容方和 API 提供商可设置定价策略，影响 GEO/AEO 内容分发逻辑",
+      "evidence": "Cloudflare official API announcement + AWS Bedrock GA release",
+      "evidence_detail": "Cloudflare's Monetization Gateway uses the x402 payment protocol to let content owners and MCP servers charge AI agents per request. AWS AgentCore Payments is now generally available, meaning enterprises building agents on Bedrock can transact with that supply from launch. This is infrastructure-level: it doesn't change rankings but creates a new economic layer for agentic access.",
+      "who_it_affects": "SaaS / publisher / ecommerce",
+      "what_to_do": "评估是否对高价值内容启用 agent 付费墙；监控 MCP server 流量日志中的 x402 请求头",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 82,
+      "how_to_test": "在 Cloudflare Dashboard 启用 Monetization Gateway，为特定 API 端点或内容路径设置 x402 定价，对比启用前后 agent 流量与直接收入",
+      "success_metric": "agent 请求转化率 × 平均请求收入；对比免费抓取 vs 付费 agent 的引用频次",
+      "effort": "中 — 需配置 x402 合约与定价策略；风险是早期 agent 生态渗透率有限",
+      "sources": [
+        {
+          "name": "@Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2089797902407229903",
+          "excerpt": "AI agents don't just reason anymore. They transact. Cloudflare's Monetization Gateway lets content owners, API providers, and MCP servers charge agents directly, per request, using x402. And today, enterprises building agents with @AWScloud AgentCore Payments can tap into that supply from day one. https://cfl.re/3TVKvOr. AI agents don't just reason anymore. They transact. Cloudflare's Monetization Gateway lets content owners, API providers, and MCP servers charge agents directly, per request, using x402. And today, enterprises building agents with @AWScloud AgentCore Payments can tap into that supply from day one. cfl.re/3TVKvOr Link Amazon Bedrock AgentCore payments is now generally…",
+          "author": "@Cloudflare",
+          "published": "2026-08-18T19:33:41+00:00",
+          "source_type": "official_api"
+        }
+      ]
+    },
+    {
+      "what_happened": "ChatGPT fan-out queries still use site:old-domain for brands 6+ months post-migration | ChatGPT 域名迁移半年后仍引用旧域名",
+      "why_it_matters": "AI search 的记忆滞后于传统 SEO 迁移周期，旧域名持续获得 brand mention 而新域名被排除在 fan-out 结果外",
+      "evidence": "Practitioner observation by Lily Ray with specific case (URL withheld)",
+      "evidence_detail": "A well-known brand that migrated domains over 6 months ago was found in ChatGPT's fan-out queries using site:old-domain. The migration followed SEO best practices, but ChatGPT's memory retains the old domain. Critical limitation: when the fan-out uses site:old-domain, new domain URLs do not appear in those search results, so they are excluded from the AI response unless discovered through other queries.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "迁移后持续监控 ChatGPT/Perplexity 的引用域名；在旧域名保留 301 + 强化新域名 brand signals",
       "confidence": "Observed",
-      "impact": "P2",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 71,
+      "how_to_test": "定期在 ChatGPT/Perplexity 查询品牌相关问题时检查引用来源域名；使用 site:old-domain 和 site:new-domain 对比 fan-out 覆盖度",
+      "success_metric": "新域名在 AI 引用中的占比提升；旧域名引用占比下降",
+      "effort": "低 — 主要是监控与报告；风险是平台侧记忆更新不可控",
+      "sources": [
+        {
+          "name": "@lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2089821023877345459",
+          "excerpt": "I can't share the URL, but I just found an example of ChatGPT using fan-out queries that contained site: for the *old domain* for a well-known brand that migrated its domain over 6 months ago. 👀 The migration was handled well from an SEO perspective, but the old domain name must be stored in ChatGPT's memory. The worst part? When you use Google or Bing to do a site: search that is limited to the old version of the domain, the new domain's URLs don't show up in the search results. So your shiny new URLs likely won't be part of the response unless they are discovered through another fan-out query or another part of the search 🫠. I can't share the URL, but I just found an example of ChatGPT…",
+          "author": "@lilyraynyc",
+          "published": "2026-08-18T21:05:33+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google August 2026 spam update confirmed rolling out | Google 确认推出 2026 年 8 月垃圾内容算法更新",
+      "why_it_it_matters": "年度第四次 spam update，需确认是否影响自身站点及观察 GEO/AEO spam 清理效果",
+      "evidence": "Google Search Central official confirmation + SER tracking",
+      "evidence_detail": "Google Search Central announced the August 2026 spam update on August 19. This follows the March, June, and earlier August spam updates. No specific targets were named, but Glenn Gabe and others are tracking for GEO/AEO spam impact. Rollout status will be updated on the Google ranking release history page.",
+      "who_it_affects": "all",
+      "what_to_do": "检查 GSC 安全与手动操作报告；监控排名/流量异常波动",
+      "confidence": "Confirmed",
+      "impact": "P0",
       "section": "Confirmed Search Updates",
+      "score": 85,
       "sources": [
         {
-          "name": "Google Search Status",
-          "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE"
+          "name": "@googlesearchc",
+          "url": "https://x.com/lilyraynyc/status/2089794147787976709",
+          "excerpt": "RIP my inbox lol. RIP my inbox lol Google Search Central (@googlesearchc) Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc… — https://nitter.net/googlesearchc/status/2089752491499938186#m",
+          "author": "@lilyraynyc",
+          "published": "2026-08-18T19:18:45+00:00",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complet",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "googlesearchc",
+      "what_happened": "Google Search Console performance report bug confirmed as logging issue, affects Search + Discover | GSC 性能报告数据异常确认为日志问题",
+      "why_it_matters": "非实际排名或流量损失，避免基于错误数据做出错误优化决策",
+      "evidence": "John Mueller confirmation via Barry Schwartz/SERoundtable",
+      "evidence_detail": "John Mueller confirmed the GSC performance report drop is a logging issue, not an actual traffic loss. The bug affects both Search and Discover reports. This was previously reported on August 18 as a potential data problem.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_to_do": "无需调整 SEO 策略；等待 Google 修复，用 GA4 交叉验证流量数据",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 78,
       "sources": [
         {
-          "name": "googlesearchc",
-          "url": "https://x.com/googlesearchc/status/2089752491499938186"
+          "name": "@rustybrick",
+          "url": "https://x.com/rustybrick/status/2089798978963427372",
+          "excerpt": "The Google Search Performance data bug is not just for Search, but also Discover. Story updated at. https://www.seroundtable.com/google-search-console-performance-reports-drop-41884.html. The Google Search Performance data bug is not just for Search, but also Discover. Story updated at. seroundtable.com/google-sear… Barry Schwartz (@rustybrick) Google's John Mueller has confirmed the Search Console performance report issue - it is just a logging issue seroundtable.com/google-sear… — https://nitter.net/rustybrick/status/2089695180093829217#m",
+          "author": "@rustybrick",
+          "published": "2026-08-18T19:37:57+00:00",
+          "source_type": "trade_news"
         }
       ]
     },
     {
-      "what_happened": "Here we go. The August 2026 Spam Update is rolling out. Again, I hope more GEO/AEO spam is nuked. Stay tuned. I'll be tr",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Aleyda Solis publishes citation study: AI search as 3rd-party citation + on-page corroboration problem across SaaS, ecommerce, finance | Aleyda Solis 发布 AI 搜索引用模式跨行业研究",
+      "why_it_matters": "提供可复制的 GEO 策略框架：social/digital PR 与 on-page 证据需协同，且 playbook 因垂直而异",
+      "evidence": "Data research across three verticals by established SEO expert",
+      "evidence_detail": "The study analyzes how AI search citations work across SaaS, ecommerce, and finance, finding that third-party citations require on-page corroboration to maximize visibility. The source mix varies by vertical and platform, making social media and digital PR essential workstreams. Published on aleydasolis.com with methodology implied but not fully detailed in the candidate text.",
+      "who_it_affects": "SaaS / ecommerce / publisher",
+      "what_to_do": "按垂直行业审计引用来源组合；将 trade pubs 和工具品牌纳入 digital PR 目标",
+      "confidence": "Speculative",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 74,
+      "how_to_test": "选取 20-30 个核心关键词，记录 ChatGPT/Perplexity/Claude 的引用来源类型（trade pub, social, brand site, review site 等），对比自身 on-page 内容是否 corroborate 这些来源的 claims",
+      "success_metric": "目标关键词的 AI 引用率提升；引用来源多样性指数变化",
+      "effort": "中高 — 需跨平台手动审计或开发监控工具；风险是平台引用机制变化快",
+      "sources": [],
+      "unverified": true
+    },
+    {
+      "what_happened": "Reddit citations dropping in Claude, down in ChatGPT; still dominates 70M Google queries | Reddit 在 Claude 中引用锐减，ChatGPT 中下降，但 Google 仍覆盖 7000 万查询",
+      "why_it_matters": "平台间引用分布分化，GEO 策略需区分 Claude/ChatGPT/Google 的 source preference",
+      "evidence": "Practitioner observation by Ross Simmonds, amplified by Lily Ray",
+      "evidence_detail": "Ross Simmonds notes Reddit barely appears in Claude citations and is down in ChatGPT, despite 5.7 billion monthly visits and ranking 1-3 for 70 million Google queries. This suggests AI platforms are actively downweighting Reddit or Reddit is blocking crawlers, while Google continues to surface it heavily.",
+      "who_it_affects": "publisher / UGC / all",
+      "what_to_do": "评估 Reddit 在目标平台的引用价值；分散 GEO  effort 至其他 corroboration 来源",
       "confidence": "Observed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
+      "score": 68,
       "sources": [
         {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2089754492061237486"
+          "name": "@lilyraynyc / @TheCoolestCool",
+          "url": "https://x.com/lilyraynyc/status/2089919961263190434",
+          "excerpt": "Watch all of this return Reddit back to what it was supposed to be in the first place. Watch all of this return Reddit back to what it was supposed to be in the first place Ross Simmonds (@TheCoolestCool) Reddit barely exists in Claude. Reddit is down citations in ChatGPT. Reddit has 5.7 billion total visits per month. Reddit ranks in 1-3 in Google for 70M queries. Reddit is still the front page of the internet. — https://nitter.net/TheCoolestCool/status/2089892472629424177#m",
+          "author": "@lilyraynyc",
+          "published": "2026-08-19T03:38:42+00:00",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "If you’re interested in SEO and AI agents - I have something new for you! Now available on macOS and Windows, take the “",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "brodieseo",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_happened": "Google Search to support HTTP QUERY method | Google Search 将支持 HTTP QUERY 方法",
+      "why_it_matters": "可能改变爬虫与服务器交互方式，影响 log analysis 和 rate limiting 策略",
+      "evidence": "SERoundtable report of Google announcement",
+      "evidence_detail": "Google announced support for the HTTP QUERY method in Search. This is a technical infrastructure change that could affect how search-related requests are made and logged. Limited detail available on implementation timeline or specific use cases.",
+      "who_it_affects": "technical SEO / all",
+      "what_to_do": "监控服务器日志中的 QUERY 请求；评估 CDN/WAF 规则是否需要更新",
+      "confidence": "Confirmed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Technical SEO Experiments",
+      "score": 62,
       "sources": [
         {
-          "name": "brodieseo",
-          "url": "https://x.com/brodieseo/status/2089837253266919730"
+          "name": "@rustybrick",
+          "url": "https://x.com/rustybrick/status/2089710405316710537",
+          "excerpt": "Google Search will support HTTP QUERY method https://www.seroundtable.com/google-support-http-query-method-41882.html. Google Search will support HTTP QUERY method seroundtable.com/google-supp…",
+          "author": "@rustybrick",
+          "published": "2026-08-18T13:46:00+00:00",
+          "source_type": "trade_news"
         }
       ]
     },
     {
-      "what_happened": "This looks great!. This looks great! Boss (@_ValTown_) Snowfall: The Drop Official Trailer. FX &amp; Hulu September 8. V",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Meta crawlers now read more of the web than blocked AI bots; no negotiations ongoing | Meta 爬虫抓取量超被屏蔽的 AI bot，且无内容授权谈判",
+      "why_it_matters": "robots.txt 屏蔽策略存在盲点：Meta 以非 AI bot 身份大规模抓取，规避出版商防御",
+      "evidence": "Search Engine Journal article via Sitebulb share",
+      "evidence_detail": "Meta's crawlers are reading more of the web than the AI bots that publishers actively block, and there are no ongoing negotiations with Meta for content access. This highlights a gap in current bot management strategies where traditional robots.txt approaches fail to address Meta's crawling behavior.",
+      "who_it_affects": "publisher / all",
+      "what_to_do": "审计服务器日志中的 Meta crawler 行为；评估是否需要针对性 rate limiting 或 TOS 层面的限制",
       "confidence": "Observed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2089727585076867345"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @dawnieando: Google has unleashed the August 2026 spam update https://www.seroundtable.com/google-august-2026-spam",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "dawnieando",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "dawnieando",
-          "url": "https://x.com/dawnieando/status/2089756050014560631"
-        }
-      ]
-    },
-    {
-      "what_happened": "When things get scary .... When things get scary ... OrcaRouter 🐳 (@OrcaRouter) We just shipped our official Qwen 3.8 27",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "cyberandy",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "cyberandy",
-          "url": "https://x.com/cyberandy/status/2089801680774660492"
-        }
-      ]
-    },
-    {
-      "what_happened": "Opus 5 feels nerfed. gets things wrong a lot lately. new model coming already?. Opus 5 feels nerfed. gets things wrong a",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Kevin_Indig",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Kevin_Indig",
-          "url": "https://x.com/Kevin_Indig/status/2089631474332897784"
-        }
-      ]
+      "score": 65,
+      "sources": [],
+      "unverified": true
     }
   ],
   "serp": {},
@@ -390,21 +496,22 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-08-19T02:18:24.803298+00:00",
+    "ran_at": "2026-08-19T09:08:24.404793+00:00",
     "sources": {
       "x": {
-        "ok": 22,
+        "ok": 21,
         "total": 29,
         "failed_names": [
-          "searchliaison",
-          "Cloudflare",
           "JohnMu",
-          "rustybrick",
-          "lilyraynyc",
+          "methode",
+          "VeryWellVersed",
           "Jammer_Volts",
-          "jasonmbarnard"
+          "jonoalderson",
+          "dawnieando",
+          "Olaf_Kopp",
+          "cyberandy"
         ],
-        "items": 50
+        "items": 70
       },
       "rss": {
         "ok": 7,
@@ -421,8 +528,8 @@
         "items": 1
       }
     },
-    "candidates_fetched": 60,
-    "candidates_fresh": 44,
+    "candidates_fetched": 80,
+    "candidates_fresh": 27,
     "llm_provider": ""
   }
 }
