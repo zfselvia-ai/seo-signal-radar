@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   daily:
@@ -44,3 +45,10 @@ jobs:
           git add data/archive reports/ || true
           git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push skipped"
+
+      - name: Publish dashboard to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dashboard
+          publish_branch: gh-pages
