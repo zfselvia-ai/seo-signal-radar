@@ -195,7 +195,7 @@ x:
   # all gate RSS behind JS challenges). Pacing + retry keep a 29-handle run
   # under its rate limit.
   request_delay_seconds: 1.5
-  retry_pause_seconds: 10
+  retry_pause_seconds: 20
 
   # ONE ACCOUNT, MANY TAGS.
   # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
@@ -215,7 +215,9 @@ x:
 
     # ---- Official people: Google staff explaining mechanics -------------
     # Not daily news, but when they explain a boundary it outranks any pundit.
-    JohnMu:         {source_type: official_person, tags: [official_explainer, indexing, crawling, content_quality]}
+    # (@JohnMu removed 2026-08-19: the X account is deleted — nitter returns
+    #  "User not found". John Mueller moved to Bluesky, which Nitter can't
+    #  read. His statements still surface via Search Engine Journal's feed.)
     methode:        {source_type: official_person, tags: [official_explainer, crawling, indexing, serving, search_architecture]}
 
     # ---- Algorithm & SERP observation ----------------------------------
@@ -287,14 +289,17 @@ rss:
        category: official_documentation, weight: 1.0}
     # Finer-grained than the blog: robots, structured data, Search Console and
     # feature-rule changes often appear ONLY in the docs-changelog feed.
-    - {name: "Google Search Docs Updates", url: "https://developers.google.com/static/search/blog/release-notes.xml",
+    # (release-notes.xml died 2026-07-30; the changelog moved to /search/updates/.)
+    - {name: "Google Search Docs Updates", url: "https://developers.google.com/search/updates/search_docs_updates.rss",
        category: official_documentation, weight: 1.0, always_include_if_material: true}
     - {name: "Bing Webmaster Blog", url: "https://blogs.bing.com/webmaster/feed",
        category: official_documentation, weight: 0.95}
 
     # ---- Controlled experiments (the scarcest, most valuable input) ------
     # Keep negative and inconclusive tests — they are often worth more than wins.
-    - {name: "SearchPilot Resources", url: "https://www.searchpilot.com/resources/rss.xml",
+    # (searchpilot.com killed its rss.xml 2026-07-30; Google News mirror instead.
+    #  Mirrors also survive datacenter-IP blocks that kill direct fetches in CI.)
+    - {name: "SearchPilot Resources", url: "https://news.google.com/rss/search?q=site:searchpilot.com&hl=en-US&gl=US&ceid=US:en",
        category: reproducible_experiment, weight: 0.95}
 
     # ---- Data research --------------------------------------------------
@@ -312,9 +317,11 @@ rss:
        category: expert_analysis, weight: 0.75, requires_citation: true}
 
     # ---- Trade news: fast event radar, low weight ------------------------
-    - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.rss",
+    # (seroundtable.com feeds return empty bodies since 2026-07-30; SEL blocks
+    #  datacenter IPs in CI. Google News mirrors serve both from any IP.)
+    - {name: "Search Engine Roundtable", url: "https://news.google.com/rss/search?q=site:seroundtable.com&hl=en-US&gl=US&ceid=US:en",
        category: trade_news, weight: 0.6}
-    - {name: "Search Engine Land", url: "https://searchengineland.com/feed",
+    - {name: "Search Engine Land", url: "https://news.google.com/rss/search?q=site:searchengineland.com&hl=en-US&gl=US&ceid=US:en",
        category: trade_news, weight: 0.6}
     # Discovery tier only — rarely the reason a signal makes the digest.
     - {name: "Search Engine Journal", url: "https://www.searchenginejournal.com/feed/",

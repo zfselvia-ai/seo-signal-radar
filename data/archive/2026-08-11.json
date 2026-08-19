@@ -1,265 +1,183 @@
 {
   "date": "2026-08-11",
   "generated_at": "2026-08-11T03:05:04.183716+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Cloudflare rolls out AI agent infrastructure tools; Yelp deepens ChatGPT integration — AI search distribution accelerates",
   "sections": {
-    "SERP & Algorithm Signals": [
+    "AI Search / GEO": [
       {
-        "what_happened": "Our latest #AgentsWeek has come to a close. Here’s a recap of all the announcements we made, from Wallets to Radar. http",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
+        "what_happened": "Cloudflare launches AI agent security and connectivity suite during #AgentsWeek | Cloudflare推出AI代理安全与连接套件",
+        "why_it_matters": "AI爬虫和agentic traffic的基础设施正在快速成型，Cloudflare作为CDN/安全层的关键角色，其工具将直接影响网站如何控制、监控和优化来自AI代理的流量。对GEO策略有结构性影响。",
+        "evidence": "Cloudflare official X account announcing #AgentsWeek recap covering Wallets, Radar, and workforce/infrastructure protection for AI agents",
+        "evidence_detail": "Cloudflare's #AgentsWeek (concluded 2025-06-19) included multiple product announcements: AI agent wallet/payment infrastructure, Radar analytics for AI traffic patterns, and workforce/infrastructure protection tools. The announcements are high-level recap posts without technical specifications or pricing details. No third-party validation or deployment data available yet.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "what_to_do": "评估当前robots.txt和Cloudflare防火墙规则对AI爬虫的覆盖 | 关注Cloudflare Radar AI流量报告的数据发布",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 72,
+        "how_to_test": "PLAYBOOK ITEMS ONLY: the concrete experiment or check to run",
+        "success_metric": "PLAYBOOK ITEMS ONLY: which number moves if it worked",
+        "effort": "PLAYBOOK ITEMS ONLY: rough cost + main risk",
         "sources": [
           {
             "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2086884640724238576"
+            "url": "https://x.com/Cloudflare/status/2086884640724238576",
+            "excerpt": "Our latest #AgentsWeek has come to a close. Here’s a recap of all the announcements we made, from Wallets to Radar. http",
+            "author": "Cloudflare",
+            "source_type": "official_api"
+          },
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2086863929792172323",
+            "excerpt": "Connect and protect your workforce, AI agents, and infrastructure. https://cfl.re/45tzEgU. Connect and protect your work",
+            "author": "Cloudflare",
+            "source_type": "official_api"
           }
         ]
       },
       {
-        "what_happened": "Yelp going all in -> Yelp Brings Reservations and Waitlist to ChatGPT, allowing people to book a table or join a waitlis",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Yelp integrates Reservations and Waitlist directly into ChatGPT | Yelp将预订和排队功能接入ChatGPT",
+        "why_it_matters": "这是本地服务GEO（Generative Engine Optimization）的关键案例：ChatGPT正在成为本地搜索的交易层，而非仅信息层。对本地SEO/GEO策略有直接影响，第三方平台在AI搜索中的权重分配正在变化。",
+        "evidence": "glenngabe observation of Yelp's ChatGPT integration for table booking and waitlist functionality",
+        "evidence_detail": "Glenn Gabe (data researcher tracking algorithm changes and platform moves) reported on Yelp's expansion into ChatGPT with transactional capabilities. This follows Yelp's earlier AI search integrations. No quantitative data on adoption or traffic impact provided. The integration appears to be US-market focused initially.",
+        "who_it_affects": "local",
+        "what_to_do": "监控Yelp商家后台的AI来源数据 | 评估餐厅/服务类客户的ChatGPT可见性优化",
         "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 65,
+        "how_to_test": "PLAYBOOK ITEMS ONLY: the concrete experiment or check to run",
+        "success_metric": "PLAYBOOK ITEMS ONLY: which number moves if it worked",
+        "effort": "PLAYBOOK ITEMS ONLY: rough cost + main risk",
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2086841857397436708"
+            "url": "https://x.com/glenngabe/status/2086841857397436708",
+            "excerpt": "Yelp going all in -> Yelp Brings Reservations and Waitlist to ChatGPT, allowing people to book a table or join a waitlis",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
-      },
+      }
+    ],
+    "Playbook: Worth Testing": [
       {
-        "what_happened": "Made myself famous. 😏. Made myself famous. 😏",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Third-party AI citations reinforce need for combined social media and digital PR strategy | 第三方AI引用强化社媒+数字PR组合策略",
+        "why_it_matters": "Aleyda指出AI引用中第三方来源的权重分布，说明GEO不能只依赖单一渠道。社媒信号和数字PR在AI搜索中的相对重要性正在重新平衡，需要整合策略。",
+        "evidence": "aleyda analysis of AI citation patterns showing social media and digital PR both required with shifting relative importance",
+        "evidence_detail": "Aleyda Solis (international SEO expert, no commercial interest stated) analyzed AI citation patterns and concluded that both social media and digital PR are necessary, though their relative importance varies. No specific data set, methodology, or platform breakdown was provided in the source text. This is expert interpretation rather than controlled experiment.",
+        "who_it_affects": "publisher / SaaS / international",
+        "what_to_do": "审计现有AI引用来源分布 | 测试社媒内容对Perplexity/ChatGPT引用的影响",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2086959781730771041"
-          }
-        ]
-      },
-      {
-        "what_happened": "The weight of third-party AI citations shows how both social media and digital PR are needed, although their relative im",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "aleyda",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Playbook: Worth Testing",
+        "score": 58,
+        "how_to_test": "选择5-10个已获AI引用的页面，在LinkedIn/Twitter发布带原始数据图表的摘要，30天后对比AI引用来源中社媒占比变化",
+        "success_metric": "AI引用中社媒来源占比提升；品牌查询的AI Overview出现率",
+        "effort": "低至中等工作量；风险为社媒内容可能分散SEO资源",
         "sources": [
           {
             "name": "aleyda",
-            "url": "https://x.com/aleyda/status/2086928300556067041"
+            "url": "https://x.com/aleyda/status/2086928300556067041",
+            "excerpt": "The weight of third-party AI citations shows how both social media and digital PR are needed, although their relative im",
+            "author": "aleyda",
+            "source_type": "expert_analysis"
           }
         ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "检查Cloudflare设置中AI代理相关安全规则",
+        "impact": "P1"
       },
       {
-        "what_happened": "These AI engines are your untrained salesforce. They're going to sell for somebody. You need to train them to sell for y",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jasonmbarnard",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "jasonmbarnard",
-            "url": "https://x.com/jasonmbarnard/status/2086809812491194544"
-          }
-        ]
+        "what_to_do": "本地服务客户：确认Yelp商家资料完整性和ChatGPT集成状态",
+        "impact": "P1"
       },
       {
-        "what_happened": "The Scenic Route To ROI: Mastering Non-Linear Targeting In Google Ads. Six real non-linear campaigns showing which adjac",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/the-scenic-route-to-roi-mastering-non-linear-targeting-in-google-ads/581784/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Connect and protect your workforce, AI agents, and infrastructure. https://cfl.re/45tzEgU. Connect and protect your work",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2086863929792172323"
-          }
-        ]
-      },
-      {
-        "what_happened": "Will be interesting to watch People Inc's moves based on Jonathon's advice -> A profile of People Inc. Chief Innovation ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2086796836883268064"
-          }
-        ]
+        "what_to_do": "设计社媒-数字PR联合测试框架验证AI引用来源",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Our latest #AgentsWeek has come to a close. Here’s a recap of all the announcements we made, from Wallets to Radar. http",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
+      "what_happened": "Cloudflare launches AI agent security and connectivity suite during #AgentsWeek | Cloudflare推出AI代理安全与连接套件",
+      "why_it_matters": "AI爬虫和agentic traffic的基础设施正在快速成型，Cloudflare作为CDN/安全层的关键角色，其工具将直接影响网站如何控制、监控和优化来自AI代理的流量。对GEO策略有结构性影响。",
+      "evidence": "Cloudflare official X account announcing #AgentsWeek recap covering Wallets, Radar, and workforce/infrastructure protection for AI agents",
+      "evidence_detail": "Cloudflare's #AgentsWeek (concluded 2025-06-19) included multiple product announcements: AI agent wallet/payment infrastructure, Radar analytics for AI traffic patterns, and workforce/infrastructure protection tools. The announcements are high-level recap posts without technical specifications or pricing details. No third-party validation or deployment data available yet.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_to_do": "评估当前robots.txt和Cloudflare防火墙规则对AI爬虫的覆盖 | 关注Cloudflare Radar AI流量报告的数据发布",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 72,
+      "how_to_test": "PLAYBOOK ITEMS ONLY: the concrete experiment or check to run",
+      "success_metric": "PLAYBOOK ITEMS ONLY: which number moves if it worked",
+      "effort": "PLAYBOOK ITEMS ONLY: rough cost + main risk",
       "sources": [
         {
           "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2086884640724238576"
+          "url": "https://x.com/Cloudflare/status/2086884640724238576",
+          "excerpt": "Our latest #AgentsWeek has come to a close. Here’s a recap of all the announcements we made, from Wallets to Radar. http",
+          "author": "Cloudflare",
+          "source_type": "official_api"
+        },
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2086863929792172323",
+          "excerpt": "Connect and protect your workforce, AI agents, and infrastructure. https://cfl.re/45tzEgU. Connect and protect your work",
+          "author": "Cloudflare",
+          "source_type": "official_api"
         }
       ]
     },
     {
-      "what_happened": "Yelp going all in -> Yelp Brings Reservations and Waitlist to ChatGPT, allowing people to book a table or join a waitlis",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Yelp integrates Reservations and Waitlist directly into ChatGPT | Yelp将预订和排队功能接入ChatGPT",
+      "why_it_matters": "这是本地服务GEO（Generative Engine Optimization）的关键案例：ChatGPT正在成为本地搜索的交易层，而非仅信息层。对本地SEO/GEO策略有直接影响，第三方平台在AI搜索中的权重分配正在变化。",
+      "evidence": "glenngabe observation of Yelp's ChatGPT integration for table booking and waitlist functionality",
+      "evidence_detail": "Glenn Gabe (data researcher tracking algorithm changes and platform moves) reported on Yelp's expansion into ChatGPT with transactional capabilities. This follows Yelp's earlier AI search integrations. No quantitative data on adoption or traffic impact provided. The integration appears to be US-market focused initially.",
+      "who_it_affects": "local",
+      "what_to_do": "监控Yelp商家后台的AI来源数据 | 评估餐厅/服务类客户的ChatGPT可见性优化",
       "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 65,
+      "how_to_test": "PLAYBOOK ITEMS ONLY: the concrete experiment or check to run",
+      "success_metric": "PLAYBOOK ITEMS ONLY: which number moves if it worked",
+      "effort": "PLAYBOOK ITEMS ONLY: rough cost + main risk",
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2086841857397436708"
+          "url": "https://x.com/glenngabe/status/2086841857397436708",
+          "excerpt": "Yelp going all in -> Yelp Brings Reservations and Waitlist to ChatGPT, allowing people to book a table or join a waitlis",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "Made myself famous. 😏. Made myself famous. 😏",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Third-party AI citations reinforce need for combined social media and digital PR strategy | 第三方AI引用强化社媒+数字PR组合策略",
+      "why_it_matters": "Aleyda指出AI引用中第三方来源的权重分布，说明GEO不能只依赖单一渠道。社媒信号和数字PR在AI搜索中的相对重要性正在重新平衡，需要整合策略。",
+      "evidence": "aleyda analysis of AI citation patterns showing social media and digital PR both required with shifting relative importance",
+      "evidence_detail": "Aleyda Solis (international SEO expert, no commercial interest stated) analyzed AI citation patterns and concluded that both social media and digital PR are necessary, though their relative importance varies. No specific data set, methodology, or platform breakdown was provided in the source text. This is expert interpretation rather than controlled experiment.",
+      "who_it_affects": "publisher / SaaS / international",
+      "what_to_do": "审计现有AI引用来源分布 | 测试社媒内容对Perplexity/ChatGPT引用的影响",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2086959781730771041"
-        }
-      ]
-    },
-    {
-      "what_happened": "The weight of third-party AI citations shows how both social media and digital PR are needed, although their relative im",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "aleyda",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Playbook: Worth Testing",
+      "score": 58,
+      "how_to_test": "选择5-10个已获AI引用的页面，在LinkedIn/Twitter发布带原始数据图表的摘要，30天后对比AI引用来源中社媒占比变化",
+      "success_metric": "AI引用中社媒来源占比提升；品牌查询的AI Overview出现率",
+      "effort": "低至中等工作量；风险为社媒内容可能分散SEO资源",
       "sources": [
         {
           "name": "aleyda",
-          "url": "https://x.com/aleyda/status/2086928300556067041"
-        }
-      ]
-    },
-    {
-      "what_happened": "These AI engines are your untrained salesforce. They're going to sell for somebody. You need to train them to sell for y",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jasonmbarnard",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "jasonmbarnard",
-          "url": "https://x.com/jasonmbarnard/status/2086809812491194544"
-        }
-      ]
-    },
-    {
-      "what_happened": "The Scenic Route To ROI: Mastering Non-Linear Targeting In Google Ads. Six real non-linear campaigns showing which adjac",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/the-scenic-route-to-roi-mastering-non-linear-targeting-in-google-ads/581784/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Connect and protect your workforce, AI agents, and infrastructure. https://cfl.re/45tzEgU. Connect and protect your work",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2086863929792172323"
-        }
-      ]
-    },
-    {
-      "what_happened": "Will be interesting to watch People Inc's moves based on Jonathon's advice -> A profile of People Inc. Chief Innovation ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2086796836883268064"
+          "url": "https://x.com/aleyda/status/2086928300556067041",
+          "excerpt": "The weight of third-party AI citations shows how both social media and digital PR are needed, although their relative im",
+          "author": "aleyda",
+          "source_type": "expert_analysis"
         }
       ]
     }
@@ -400,6 +318,21 @@
     },
     "candidates_fetched": 74,
     "candidates_fresh": 46,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "检查Cloudflare设置中AI代理相关安全规则",
+      "impact": "P1"
+    },
+    {
+      "text": "本地服务客户：确认Yelp商家资料完整性和ChatGPT集成状态",
+      "impact": "P1"
+    },
+    {
+      "text": "设计社媒-数字PR联合测试框架验证AI引用来源",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

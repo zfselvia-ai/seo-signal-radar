@@ -1,265 +1,147 @@
 {
   "date": "2026-08-01",
   "generated_at": "2026-08-01T04:21:44.161236+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Bing retires legacy SOAP/POX APIs Aug 2026; Cloudflare expands MoQ infrastructure",
   "sections": {
-    "SERP & Algorithm Signals": [
+    "Confirmed Search Updates": [
       {
-        "what_happened": "ANNOUNCEMENT!! Using the Bing Webmaster Tools SOAP/POX APIs? These legacy APIs will be retired on August 31, 2026. Pleas",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "BingWMC",
+        "what_happened": "Bing to retire legacy SOAP/POX APIs on August 31, 2026 | Bing将于2026年8月31日停用旧版SOAP/POX API",
+        "why_it_matters": "依赖Bing Webmaster Tools API进行批量数据抓取、排名监控或报告自动化的团队必须迁移到新API，否则服务中断。",
+        "evidence": "Official BingWMC announcement on X",
+        "evidence_detail": "Bing Webmaster Tools官方账号宣布，SOAP/POX格式的旧版API将于2026年8月31日正式停用。这是官方API渠道的直接通知，非推测。迁移窗口约14个月，涉及任何仍在使用legacy API进行程序化访问的工作流。",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "what_to_do": "audit现有Bing API集成，评估迁移至REST API的时间表",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 82,
         "sources": [
           {
             "name": "BingWMC",
-            "url": "https://x.com/BingWMC/status/2083207462040354913"
+            "url": "https://x.com/BingWMC/status/2083207462040354913",
+            "excerpt": "ANNOUNCEMENT!! Using the Bing Webmaster Tools SOAP/POX APIs? These legacy APIs will be retired on August 31, 2026. Pleas",
+            "author": "BingWMC",
+            "source_type": "official_api"
           }
         ]
       },
       {
-        "what_happened": "You'll have to approve payments and other sensitive actions. I hope :) -> Google starts rolling out access to Gemini Spa",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
+        "what_happened": "Cloudflare expands Media over QUIC with isolated relays and pub/sub access | Cloudflare扩展MoQ基础设施，新增隔离中继与发布订阅功能",
+        "why_it_matters": "虽非直接搜索产品，但Cloudflare基础设施层的变化影响AI爬虫抓取效率、实时内容分发及边缘SEO策略，尤其涉及agentic traffic和AI搜索引用的内容可达性。",
+        "evidence": "Official Cloudflare announcement on X",
+        "evidence_detail": "Cloudflare官方宣布在其全球网络中扩展Media over QUIC (MoQ)能力，新增isolated relays和pub/sub access。这是2024年MoQ上线后的功能扩展。对SEO的间接影响在于：更快的媒体传输可能改善Core Web Vitals，而pub/sub架构可能改变内容被AI爬虫发现和抓取的方式。",
+        "who_it_affects": "publisher / international / all",
+        "what_to_do": "monitor Cloudflare PACT rollout timeline for AI crawler traffic routing",
+        "confidence": "Confirmed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2083226735202500844"
-          }
-        ]
-      },
-      {
-        "what_happened": "The Black Mirror music video will be on @BET this weekend. Tune in!. The Black Mirror music video will be on @BET this w",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2083365345771831304"
-          }
-        ]
-      },
-      {
-        "what_happened": "💯💯💯. 💯💯💯 Klaas (@forgebitz) * open linkedin * mark all as slop * close linkedin * — https://nitter.net/forgebitz/status/",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "dawnieando",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "dawnieando",
-            "url": "https://x.com/dawnieando/status/2083253581130416368"
-          }
-        ]
-      },
-      {
-        "what_happened": "Are you investing in digital PR or social media this year to expand your brand third-party web footprint and increase yo",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "aleyda",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "aleyda",
-            "url": "https://x.com/aleyda/status/2083285810627936461"
-          }
-        ]
-      },
-      {
-        "what_happened": "Cloudflare’s PACT Is Not Live Yet – Decide Which Track Your Traffic Needs via @sejournal, @slobodanmanic. Cloudflare and",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/cloudflares-pact-is-not-live-yet-decide-which-track-your-traffic-needs/580328/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Last year, we brought Media over QUIC (MoQ) to our global network. Today, we’re adding isolated relays & pub/sub access ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Confirmed Search Updates",
+        "score": 68,
         "sources": [
           {
             "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2083177117857005765"
+            "url": "https://x.com/Cloudflare/status/2083177117857005765",
+            "excerpt": "Last year, we brought Media over QUIC (MoQ) to our global network. Today, we’re adding isolated relays & pub/sub access",
+            "author": "Cloudflare",
+            "source_type": "official_api"
           }
         ]
-      },
+      }
+    ],
+    "SERP & Algorithm Signals": [
       {
-        "what_happened": "I hate when companies blame AIOs when they tanked from a core update or spam update. Easy to say that versus, \"We have a",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
+        "what_happened": "Glenn Gabe: AIO blame deflection masks core update damage | Glenn Gabe指出：将流量下滑归咎于AI Overviews可能掩盖真正的核心更新问题",
+        "why_it_matters": "提醒SEO专家在诊断流量下跌时区分AI Overviews影响与核心算法更新，避免错误归因导致策略失误。",
+        "evidence": "Practitioner observation from data_research source",
+        "evidence_detail": "Glenn Gabe（data_research级别来源，trust_weight 0.85）观察到一种行业现象：部分公司在经历核心更新或垃圾更新导致排名下滑后，将原因归咎于AI Overviews。这是基于其客户案例的观察，非系统性研究。缺乏具体样本量或对比数据，但来源权威性较高。",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_to_do": "diagnose traffic drops using Search Console segment by query type, not AIO assumption",
         "confidence": "Observed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
+        "score": 61,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2083167405459603655"
+            "url": "https://x.com/glenngabe/status/2083167405459603655",
+            "excerpt": "I hate when companies blame AIOs when they tanked from a core update or spam update. Easy to say that versus, \"We have a",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Audit all Bing API integrations; confirm SOAP/POX usage and plan REST migration",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "Review recent traffic drop diagnoses for AIO vs. core update misattribution",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "ANNOUNCEMENT!! Using the Bing Webmaster Tools SOAP/POX APIs? These legacy APIs will be retired on August 31, 2026. Pleas",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "BingWMC",
+      "what_happened": "Bing to retire legacy SOAP/POX APIs on August 31, 2026 | Bing将于2026年8月31日停用旧版SOAP/POX API",
+      "why_it_matters": "依赖Bing Webmaster Tools API进行批量数据抓取、排名监控或报告自动化的团队必须迁移到新API，否则服务中断。",
+      "evidence": "Official BingWMC announcement on X",
+      "evidence_detail": "Bing Webmaster Tools官方账号宣布，SOAP/POX格式的旧版API将于2026年8月31日正式停用。这是官方API渠道的直接通知，非推测。迁移窗口约14个月，涉及任何仍在使用legacy API进行程序化访问的工作流。",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_to_do": "audit现有Bing API集成，评估迁移至REST API的时间表",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 82,
       "sources": [
         {
           "name": "BingWMC",
-          "url": "https://x.com/BingWMC/status/2083207462040354913"
+          "url": "https://x.com/BingWMC/status/2083207462040354913",
+          "excerpt": "ANNOUNCEMENT!! Using the Bing Webmaster Tools SOAP/POX APIs? These legacy APIs will be retired on August 31, 2026. Pleas",
+          "author": "BingWMC",
+          "source_type": "official_api"
         }
       ]
     },
     {
-      "what_happened": "You'll have to approve payments and other sensitive actions. I hope :) -> Google starts rolling out access to Gemini Spa",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_happened": "Cloudflare expands Media over QUIC with isolated relays and pub/sub access | Cloudflare扩展MoQ基础设施，新增隔离中继与发布订阅功能",
+      "why_it_matters": "虽非直接搜索产品，但Cloudflare基础设施层的变化影响AI爬虫抓取效率、实时内容分发及边缘SEO策略，尤其涉及agentic traffic和AI搜索引用的内容可达性。",
+      "evidence": "Official Cloudflare announcement on X",
+      "evidence_detail": "Cloudflare官方宣布在其全球网络中扩展Media over QUIC (MoQ)能力，新增isolated relays和pub/sub access。这是2024年MoQ上线后的功能扩展。对SEO的间接影响在于：更快的媒体传输可能改善Core Web Vitals，而pub/sub架构可能改变内容被AI爬虫发现和抓取的方式。",
+      "who_it_affects": "publisher / international / all",
+      "what_to_do": "monitor Cloudflare PACT rollout timeline for AI crawler traffic routing",
+      "confidence": "Confirmed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2083226735202500844"
-        }
-      ]
-    },
-    {
-      "what_happened": "The Black Mirror music video will be on @BET this weekend. Tune in!. The Black Mirror music video will be on @BET this w",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2083365345771831304"
-        }
-      ]
-    },
-    {
-      "what_happened": "💯💯💯. 💯💯💯 Klaas (@forgebitz) * open linkedin * mark all as slop * close linkedin * — https://nitter.net/forgebitz/status/",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "dawnieando",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "dawnieando",
-          "url": "https://x.com/dawnieando/status/2083253581130416368"
-        }
-      ]
-    },
-    {
-      "what_happened": "Are you investing in digital PR or social media this year to expand your brand third-party web footprint and increase yo",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "aleyda",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "aleyda",
-          "url": "https://x.com/aleyda/status/2083285810627936461"
-        }
-      ]
-    },
-    {
-      "what_happened": "Cloudflare’s PACT Is Not Live Yet – Decide Which Track Your Traffic Needs via @sejournal, @slobodanmanic. Cloudflare and",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/cloudflares-pact-is-not-live-yet-decide-which-track-your-traffic-needs/580328/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Last year, we brought Media over QUIC (MoQ) to our global network. Today, we’re adding isolated relays & pub/sub access ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Confirmed Search Updates",
+      "score": 68,
       "sources": [
         {
           "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2083177117857005765"
+          "url": "https://x.com/Cloudflare/status/2083177117857005765",
+          "excerpt": "Last year, we brought Media over QUIC (MoQ) to our global network. Today, we’re adding isolated relays & pub/sub access",
+          "author": "Cloudflare",
+          "source_type": "official_api"
         }
       ]
     },
     {
-      "what_happened": "I hate when companies blame AIOs when they tanked from a core update or spam update. Easy to say that versus, \"We have a",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
+      "what_happened": "Glenn Gabe: AIO blame deflection masks core update damage | Glenn Gabe指出：将流量下滑归咎于AI Overviews可能掩盖真正的核心更新问题",
+      "why_it_matters": "提醒SEO专家在诊断流量下跌时区分AI Overviews影响与核心算法更新，避免错误归因导致策略失误。",
+      "evidence": "Practitioner observation from data_research source",
+      "evidence_detail": "Glenn Gabe（data_research级别来源，trust_weight 0.85）观察到一种行业现象：部分公司在经历核心更新或垃圾更新导致排名下滑后，将原因归咎于AI Overviews。这是基于其客户案例的观察，非系统性研究。缺乏具体样本量或对比数据，但来源权威性较高。",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "diagnose traffic drops using Search Console segment by query type, not AIO assumption",
       "confidence": "Observed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
+      "score": 61,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2083167405459603655"
+          "url": "https://x.com/glenngabe/status/2083167405459603655",
+          "excerpt": "I hate when companies blame AIOs when they tanked from a core update or spam update. Easy to say that versus, \"We have a",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     }
@@ -401,6 +283,17 @@
     },
     "candidates_fetched": 55,
     "candidates_fresh": 40,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "Audit all Bing API integrations; confirm SOAP/POX usage and plan REST migration",
+      "impact": "P1"
+    },
+    {
+      "text": "Review recent traffic drop diagnoses for AIO vs. core update misattribution",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

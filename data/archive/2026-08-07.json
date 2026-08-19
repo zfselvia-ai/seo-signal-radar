@@ -1,265 +1,169 @@
 {
   "date": "2026-08-07",
   "generated_at": "2026-08-07T03:50:18.902924+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "No high-signal developments today; one actionable GEO content framework worth testing",
   "sections": {
-    "SERP & Algorithm Signals": [
+    "Confirmed Search Updates": [
       {
-        "what_happened": "AI isn't just an innovation engine—it’s a new class of supply chain risk. Join our webinar for a strategic briefing on b",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
+        "what_happened": "WordPress 7.0.3 patches high-severity XSS vulnerability | WordPress 7.0.3修复高危XSS漏洞",
+        "why_it_matters": "XSS漏洞可被利用注入恶意脚本，影响搜索可见性与用户信任；未及时修补可能导致排名下降或安全警告。",
+        "evidence": "Official WordPress security release covered by Search Engine Journal",
+        "evidence_detail": "Search Engine Journal reported on WordPress security release 7.0.3, which fixes a high-severity XSS vulnerability. The article references Martinibuster as a source. No technical details of the exploit mechanism or affected version scope were provided in the candidate text.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2085531412250108099"
-          }
-        ]
-      },
-      {
-        "what_happened": "Is another web index on its way? Possibly... and this time it's from Meta. ChatGPT grounding is already getting sketchy.",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2085486976048750922"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @jonoalderson: AI Search makes search easier than ever, with no Cloudflare primitives to stitch together. Point it",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jonoalderson",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "jonoalderson",
-            "url": "https://x.com/jonoalderson/status/2085387960313127060"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @willcritchlow: BREAKING: The UK government is expanding the Global Talent visa programme to attract the world's b",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "willcritchlow",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "willcritchlow",
-            "url": "https://x.com/willcritchlow/status/2085252028616368250"
-          }
-        ]
-      },
-      {
-        "what_happened": "Content Prioritization in an AI Search Era: A Framework + Worksheet 👇 What type of content is still worth creating when ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "aleyda",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "aleyda",
-            "url": "https://x.com/aleyda/status/2085369304011194789"
-          }
-        ]
-      },
-      {
-        "what_happened": "WordPress Security Release 7.0.3 Fixes High Severity XSS Vulnerability via @sejournal, @martinibuster. WordPress securit",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "what_to_do": "检查WordPress版本，如<7.0.3立即更新",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 58,
         "sources": [
           {
             "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/wordpress-security-release-7-0-3-fixes-high-severity-xss-vulnerability/584927/"
+            "url": "https://www.searchenginejournal.com/wordpress-security-release-7-0-3-fixes-high-severity-xss-vulnerability/584927/",
+            "excerpt": "WordPress Security Release 7.0.3 Fixes High Severity XSS Vulnerability via @sejournal, @martinibuster. WordPress securit",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
           }
         ]
-      },
+      }
+    ],
+    "Playbook: Worth Testing": [
       {
-        "what_happened": "AI Search makes search easier than ever, with no Cloudflare primitives to stitch together. Point it at your data to crea",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Aleyda Solís publishes Content Prioritization Framework for AI Search era | Aleyda发布AI搜索时代内容优先级框架",
+        "why_it_matters": "AI搜索时代，并非所有内容都值得同等投入；需要系统性地将资源重新分配到agentic traffic仍依赖的页面类型上。",
+        "evidence": "Expert analysis with downloadable worksheet from established international SEO practitioner",
+        "evidence_detail": "Aleyda Solís, a widely-cited international SEO consultant, released a framework and worksheet for categorizing content types by their resilience in an AI search environment. The framework appears designed to help teams audit existing content and prioritize creation based on which formats are likely to continue driving value as AI Overviews and agentic search reduce traditional CTR. No controlled experiment or traffic data is included; the value lies in the operational structure for team decision-making.",
+        "who_it_affects": "publisher / SaaS / ecommerce",
+        "what_to_do": "下载工作表，在20-50个URL的样本上运行框架，对比agentic traffic前后的表现",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Playbook: Worth Testing",
+        "score": 62,
+        "how_to_test": "选取20-50个URL，按框架分为'高AI风险/低AI风险'两类，追踪90天内来自AI Overviews和直接搜索的impressions与CTR变化",
+        "success_metric": "低AI风险类别的impressions和CTR下降幅度显著小于高AI风险类别（>15%差距）",
+        "effort": "中等：需内容审计+标签+90天追踪；风险低，主要是时间成本",
         "sources": [
           {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2085387960313127060"
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2085369304011194789",
+            "excerpt": "Content Prioritization in an AI Search Era: A Framework + Worksheet 👇 What type of content is still worth creating when",
+            "author": "aleyda",
+            "source_type": "expert_analysis"
           }
         ]
-      },
+      }
+    ],
+    "Unconfirmed Watchlist": [
       {
-        "what_happened": "Ladies and Gentlemen, the big OpenAI device will be ... a smart speaker. Oof -> OpenAI's new device, slated for 2027, is",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "what_happened": "Glenn Gabe observes ChatGPT grounding quality declining, flags potential Meta web index | Glenn Gabe观察到ChatGPT grounding质量下滑，提及Meta可能构建网页索引",
+        "why_it_matters": "若ChatGPT grounding持续退化，GEO策略需调整；Meta入局搜索索引将改变AI搜索竞争格局与流量分配。",
+        "evidence": "Practitioner observation from data-focused SEO analyst with history of accurate algorithm tracking",
+        "evidence_detail": "Glenn Gabe, who regularly tracks search volatility and AI search developments, posted two observations: that ChatGPT's grounding (ability to accurately cite and use web content) is becoming 'sketchy,' and separately that Meta may be building a web index. Neither claim includes methodology, sample size, or official confirmation. The grounding observation aligns with broader practitioner chatter but lacks quantitative backing.",
+        "who_it_affects": "publisher / SaaS / all",
+        "what_to_do": "监控ChatGPT引用自己品牌的准确性；关注Meta搜索相关专利或招聘",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 42,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2085486460518486372"
+            "url": "https://x.com/glenngabe/status/2085486976048750922",
+            "excerpt": "Is another web index on its way? Possibly... and this time it's from Meta. ChatGPT grounding is already getting sketchy.",
+            "author": "glenngabe",
+            "source_type": "data_research"
+          },
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2085486460518486372",
+            "excerpt": "Ladies and Gentlemen, the big OpenAI device will be ... a smart speaker. Oof -> OpenAI's new device, slated for 2027, is",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "WordPress站点检查并更新至7.0.3",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "下载Aleyda内容优先级框架，在样本URL上启动90天测试",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "AI isn't just an innovation engine—it’s a new class of supply chain risk. Join our webinar for a strategic briefing on b",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Aleyda Solís publishes Content Prioritization Framework for AI Search era | Aleyda发布AI搜索时代内容优先级框架",
+      "why_it_matters": "AI搜索时代，并非所有内容都值得同等投入；需要系统性地将资源重新分配到agentic traffic仍依赖的页面类型上。",
+      "evidence": "Expert analysis with downloadable worksheet from established international SEO practitioner",
+      "evidence_detail": "Aleyda Solís, a widely-cited international SEO consultant, released a framework and worksheet for categorizing content types by their resilience in an AI search environment. The framework appears designed to help teams audit existing content and prioritize creation based on which formats are likely to continue driving value as AI Overviews and agentic search reduce traditional CTR. No controlled experiment or traffic data is included; the value lies in the operational structure for team decision-making.",
+      "who_it_affects": "publisher / SaaS / ecommerce",
+      "what_to_do": "下载工作表，在20-50个URL的样本上运行框架，对比agentic traffic前后的表现",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2085531412250108099"
-        }
-      ]
-    },
-    {
-      "what_happened": "Is another web index on its way? Possibly... and this time it's from Meta. ChatGPT grounding is already getting sketchy.",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2085486976048750922"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @jonoalderson: AI Search makes search easier than ever, with no Cloudflare primitives to stitch together. Point it",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jonoalderson",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "jonoalderson",
-          "url": "https://x.com/jonoalderson/status/2085387960313127060"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @willcritchlow: BREAKING: The UK government is expanding the Global Talent visa programme to attract the world's b",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "willcritchlow",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "willcritchlow",
-          "url": "https://x.com/willcritchlow/status/2085252028616368250"
-        }
-      ]
-    },
-    {
-      "what_happened": "Content Prioritization in an AI Search Era: A Framework + Worksheet 👇 What type of content is still worth creating when ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "aleyda",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Playbook: Worth Testing",
+      "score": 62,
+      "how_to_test": "选取20-50个URL，按框架分为'高AI风险/低AI风险'两类，追踪90天内来自AI Overviews和直接搜索的impressions与CTR变化",
+      "success_metric": "低AI风险类别的impressions和CTR下降幅度显著小于高AI风险类别（>15%差距）",
+      "effort": "中等：需内容审计+标签+90天追踪；风险低，主要是时间成本",
       "sources": [
         {
           "name": "aleyda",
-          "url": "https://x.com/aleyda/status/2085369304011194789"
+          "url": "https://x.com/aleyda/status/2085369304011194789",
+          "excerpt": "Content Prioritization in an AI Search Era: A Framework + Worksheet 👇 What type of content is still worth creating when",
+          "author": "aleyda",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "WordPress Security Release 7.0.3 Fixes High Severity XSS Vulnerability via @sejournal, @martinibuster. WordPress securit",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
+      "what_happened": "WordPress 7.0.3 patches high-severity XSS vulnerability | WordPress 7.0.3修复高危XSS漏洞",
+      "why_it_matters": "XSS漏洞可被利用注入恶意脚本，影响搜索可见性与用户信任；未及时修补可能导致排名下降或安全警告。",
+      "evidence": "Official WordPress security release covered by Search Engine Journal",
+      "evidence_detail": "Search Engine Journal reported on WordPress security release 7.0.3, which fixes a high-severity XSS vulnerability. The article references Martinibuster as a source. No technical details of the exploit mechanism or affected version scope were provided in the candidate text.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_to_do": "检查WordPress版本，如<7.0.3立即更新",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 58,
       "sources": [
         {
           "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/wordpress-security-release-7-0-3-fixes-high-severity-xss-vulnerability/584927/"
+          "url": "https://www.searchenginejournal.com/wordpress-security-release-7-0-3-fixes-high-severity-xss-vulnerability/584927/",
+          "excerpt": "WordPress Security Release 7.0.3 Fixes High Severity XSS Vulnerability via @sejournal, @martinibuster. WordPress securit",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
         }
       ]
     },
     {
-      "what_happened": "AI Search makes search easier than ever, with no Cloudflare primitives to stitch together. Point it at your data to crea",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2085387960313127060"
-        }
-      ]
-    },
-    {
-      "what_happened": "Ladies and Gentlemen, the big OpenAI device will be ... a smart speaker. Oof -> OpenAI's new device, slated for 2027, is",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_happened": "Glenn Gabe observes ChatGPT grounding quality declining, flags potential Meta web index | Glenn Gabe观察到ChatGPT grounding质量下滑，提及Meta可能构建网页索引",
+      "why_it_matters": "若ChatGPT grounding持续退化，GEO策略需调整；Meta入局搜索索引将改变AI搜索竞争格局与流量分配。",
+      "evidence": "Practitioner observation from data-focused SEO analyst with history of accurate algorithm tracking",
+      "evidence_detail": "Glenn Gabe, who regularly tracks search volatility and AI search developments, posted two observations: that ChatGPT's grounding (ability to accurately cite and use web content) is becoming 'sketchy,' and separately that Meta may be building a web index. Neither claim includes methodology, sample size, or official confirmation. The grounding observation aligns with broader practitioner chatter but lacks quantitative backing.",
+      "who_it_affects": "publisher / SaaS / all",
+      "what_to_do": "监控ChatGPT引用自己品牌的准确性；关注Meta搜索相关专利或招聘",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 42,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2085486460518486372"
+          "url": "https://x.com/glenngabe/status/2085486976048750922",
+          "excerpt": "Is another web index on its way? Possibly... and this time it's from Meta. ChatGPT grounding is already getting sketchy.",
+          "author": "glenngabe",
+          "source_type": "data_research"
+        },
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2085486460518486372",
+          "excerpt": "Ladies and Gentlemen, the big OpenAI device will be ... a smart speaker. Oof -> OpenAI's new device, slated for 2027, is",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     }
@@ -401,6 +305,17 @@
     },
     "candidates_fetched": 69,
     "candidates_fresh": 62,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "WordPress站点检查并更新至7.0.3",
+      "impact": "P1"
+    },
+    {
+      "text": "下载Aleyda内容优先级框架，在样本URL上启动90天测试",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

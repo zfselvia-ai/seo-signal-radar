@@ -1,265 +1,159 @@
 {
   "date": "2026-08-15",
   "generated_at": "2026-08-15T02:14:30.783328+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Gemini 3.7 Flash rolls into Google Search AI Mode; no confirmed ranking impact yet",
   "sections": {
-    "SERP & Algorithm Signals": [
+    "Technical SEO Experiments": [
       {
-        "what_happened": "What is your home or/and work desk setup look like? #CloudflareChat. What is your home or/and work desk setup look like?",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
+        "what_happened": "Cloudflare Gateway adds MCP protocol-level request identification | Cloudflare Gateway新增MCP协议级请求识别能力",
+        "why_it_matters": "MCP (Model Context Protocol) 是AI agent与工具交互的新兴标准，Cloudflare的安全信号可帮助识别agent流量，为GEO和agentic traffic分析提供基础设施层面的数据基础。",
+        "evidence": "Cloudflare official API announcement on X",
+        "evidence_detail": "Cloudflare官方宣布其Gateway产品可通过协议级启发式方法识别MCP请求，安全团队可利用该信号发现影子AI工具使用。这是基础设施层面的能力发布，而非搜索算法变更。目前该功能主要面向企业安全场景，对SEO/GEO的直接应用需要额外的日志分析和流量分类工作。",
+        "who_it_affects": "SaaS / publisher / all",
+        "what_to_do": "评估是否可通过Cloudflare日志区分agent流量 | 与基础设施团队确认MCP识别能力",
+        "confidence": "Confirmed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Technical SEO Experiments",
+        "score": 62,
         "sources": [
           {
             "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2088266648016806191"
+            "url": "https://x.com/Cloudflare/status/2088258098154615139",
+            "excerpt": "Cloudflare Gateway identifies MCP requests using protocol-level heuristics. Security teams can use that signal to find s",
+            "author": "Cloudflare",
+            "source_type": "official_api"
           }
         ]
-      },
+      }
+    ],
+    "AI Search / GEO": [
       {
-        "what_happened": "Eager to try this out. As of now, I don't have access yet, but it sounds like it will arrive today. 3.7 Flash is coming ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2088342412208803847"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @VeryWellVersed: Next stop for Gemini 3.7 Flash? Google Search! ⚡ We’re bringing our most intelligent workhorse mo",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2088326120651542577"
-          }
-        ]
-      },
-      {
-        "what_happened": "Prioritize the content that still has a role after the AI answer 👇 What type of content is still worth creating when AI ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "aleyda",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "aleyda",
-            "url": "https://x.com/aleyda/status/2088300964159652350"
-          }
-        ]
-      },
-      {
-        "what_happened": "Headspace is the most valuable thing in the world to me. Not time, not money. There's delegating without authority, dele",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jasonmbarnard",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "jasonmbarnard",
-            "url": "https://x.com/jasonmbarnard/status/2088272457769587075"
-          }
-        ]
-      },
-      {
-        "what_happened": "Claude Now Watermarks Everything It Writes. Here’s What It Means for Marketers. For most marketers, I don’t think so. Go",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Ahrefs Blog",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Ahrefs Blog",
-            "url": "https://ahrefs.com/blog/claude-now-watermarks-everything-it-writes/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Google Brings Gemini 3.7 Flash To AI Mode In Search via @sejournal, @MattGSouthern. Google is rolling out Gemini 3.7 Fla",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "what_happened": "Google deploys Gemini 3.7 Flash in Search AI Mode | Google在搜索AI模式中部署Gemini 3.7 Flash模型",
+        "why_it_matters": "AI Mode是Google搜索体验的核心演进方向，模型升级可能改变AI Overviews的生成质量、速度和引用来源选择逻辑，直接影响GEO策略。",
+        "evidence": "Search Engine Journal reports rollout; Google official announcement implied in coverage",
+        "evidence_detail": "Search Engine Journal报道Google正在向Search AI Mode推出Gemini 3.7 Flash。该模型此前已在Vertex AI等平台可用，但进入搜索产品层是新的部署阶段。目前尚无关于该模型对搜索结果排名、AI Overviews引用率或GEO可见性影响的独立测试数据。SEJ属于trade_news来源，其报道基于Google官方沟通但未提供具体技术参数或A/B测试细节。",
+        "who_it_affects": "publisher / ecommerce / SaaS / all",
+        "what_to_do": "monitor AI Mode引用变化 | 记录当前AI Overviews覆盖率基线",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 68,
         "sources": [
           {
             "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/"
+            "url": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/",
+            "excerpt": "Google Brings Gemini 3.7 Flash To AI Mode In Search via @sejournal, @MattGSouthern. Google is rolling out Gemini 3.7 Fla",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
           }
         ]
-      },
+      }
+    ],
+    "Playbook: Worth Testing": [
       {
-        "what_happened": "Cloudflare Gateway identifies MCP requests using protocol-level heuristics. Security teams can use that signal to find s",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Aleyda Solis: prioritize content that survives after AI answers | Aleyda Solis：优先创作AI回答后仍有价值的内容",
+        "why_it_matters": "AI搜索时代内容策略需要重新校准——不是所有内容类型都能同等抵御AI Overviews的替代效应，需要识别并投资'剩余价值'内容类型。",
+        "evidence": "Expert analysis from Aleyda Solis (expert_analysis, 0.7 trust weight)",
+        "evidence_detail": "Aleyda Solis在X上提出应优先创作在AI回答后仍有角色的内容类型。这是一个战略框架性观点，而非基于实验数据的结论。该信号的价值在于其来自一线GEO实践者的经验判断，但缺乏定量验证（如不同内容类型的AI引用率对比、流量保留率等）。适合作为假设生成，而非执行依据。",
+        "who_it_affects": "publisher / ecommerce / SaaS / all",
+        "what_to_do": "audit现有内容按'AI替代风险'分类 | 测试高保留价值内容格式的表现",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Playbook: Worth Testing",
+        "score": 55,
+        "how_to_test": "选取20-30篇现有内容，按类型分类（产品对比、教程、观点、数据研究等），追踪AI Overviews推出前后各类型内容的自然搜索CTR和绝对点击量变化，识别'幸存'内容特征。",
+        "success_metric": "AI Overviews存在时的CTR保留率（vs. 无AI Overviews时）；被AI Overview引用的内容类型分布",
+        "effort": "中等：需要Search Console数据导出和分类标注，无技术风险",
         "sources": [
           {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2088258098154615139"
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2088300964159652350",
+            "excerpt": "Prioritize the content that still has a role after the AI answer 👇 What type of content is still worth creating when AI",
+            "author": "aleyda",
+            "source_type": "expert_analysis"
           }
         ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "记录当前AI Mode/AI Overviews覆盖率基线，准备对比Gemini 3.7 Flash部署后的引用变化",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "与基础设施团队确认Cloudflare MCP识别能力，评估agent流量日志分析可行性",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "启动内容类型'AI替代风险'分类审计，为GEO策略调整提供数据基础",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "What is your home or/and work desk setup look like? #CloudflareChat. What is your home or/and work desk setup look like?",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2088266648016806191"
-        }
-      ]
-    },
-    {
-      "what_happened": "Eager to try this out. As of now, I don't have access yet, but it sounds like it will arrive today. 3.7 Flash is coming ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2088342412208803847"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @VeryWellVersed: Next stop for Gemini 3.7 Flash? Google Search! ⚡ We’re bringing our most intelligent workhorse mo",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2088326120651542577"
-        }
-      ]
-    },
-    {
-      "what_happened": "Prioritize the content that still has a role after the AI answer 👇 What type of content is still worth creating when AI ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "aleyda",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "aleyda",
-          "url": "https://x.com/aleyda/status/2088300964159652350"
-        }
-      ]
-    },
-    {
-      "what_happened": "Headspace is the most valuable thing in the world to me. Not time, not money. There's delegating without authority, dele",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jasonmbarnard",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "jasonmbarnard",
-          "url": "https://x.com/jasonmbarnard/status/2088272457769587075"
-        }
-      ]
-    },
-    {
-      "what_happened": "Claude Now Watermarks Everything It Writes. Here’s What It Means for Marketers. For most marketers, I don’t think so. Go",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Ahrefs Blog",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Ahrefs Blog",
-          "url": "https://ahrefs.com/blog/claude-now-watermarks-everything-it-writes/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google Brings Gemini 3.7 Flash To AI Mode In Search via @sejournal, @MattGSouthern. Google is rolling out Gemini 3.7 Fla",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_happened": "Google deploys Gemini 3.7 Flash in Search AI Mode | Google在搜索AI模式中部署Gemini 3.7 Flash模型",
+      "why_it_matters": "AI Mode是Google搜索体验的核心演进方向，模型升级可能改变AI Overviews的生成质量、速度和引用来源选择逻辑，直接影响GEO策略。",
+      "evidence": "Search Engine Journal reports rollout; Google official announcement implied in coverage",
+      "evidence_detail": "Search Engine Journal报道Google正在向Search AI Mode推出Gemini 3.7 Flash。该模型此前已在Vertex AI等平台可用，但进入搜索产品层是新的部署阶段。目前尚无关于该模型对搜索结果排名、AI Overviews引用率或GEO可见性影响的独立测试数据。SEJ属于trade_news来源，其报道基于Google官方沟通但未提供具体技术参数或A/B测试细节。",
+      "who_it_affects": "publisher / ecommerce / SaaS / all",
+      "what_to_do": "monitor AI Mode引用变化 | 记录当前AI Overviews覆盖率基线",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 68,
       "sources": [
         {
           "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/"
+          "url": "https://www.searchenginejournal.com/google-brings-gemini-3-7-flash-to-ai-mode-in-search/585923/",
+          "excerpt": "Google Brings Gemini 3.7 Flash To AI Mode In Search via @sejournal, @MattGSouthern. Google is rolling out Gemini 3.7 Fla",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
         }
       ]
     },
     {
-      "what_happened": "Cloudflare Gateway identifies MCP requests using protocol-level heuristics. Security teams can use that signal to find s",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_happened": "Cloudflare Gateway adds MCP protocol-level request identification | Cloudflare Gateway新增MCP协议级请求识别能力",
+      "why_it_matters": "MCP (Model Context Protocol) 是AI agent与工具交互的新兴标准，Cloudflare的安全信号可帮助识别agent流量，为GEO和agentic traffic分析提供基础设施层面的数据基础。",
+      "evidence": "Cloudflare official API announcement on X",
+      "evidence_detail": "Cloudflare官方宣布其Gateway产品可通过协议级启发式方法识别MCP请求，安全团队可利用该信号发现影子AI工具使用。这是基础设施层面的能力发布，而非搜索算法变更。目前该功能主要面向企业安全场景，对SEO/GEO的直接应用需要额外的日志分析和流量分类工作。",
+      "who_it_affects": "SaaS / publisher / all",
+      "what_to_do": "评估是否可通过Cloudflare日志区分agent流量 | 与基础设施团队确认MCP识别能力",
+      "confidence": "Confirmed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Technical SEO Experiments",
+      "score": 62,
       "sources": [
         {
           "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2088258098154615139"
+          "url": "https://x.com/Cloudflare/status/2088258098154615139",
+          "excerpt": "Cloudflare Gateway identifies MCP requests using protocol-level heuristics. Security teams can use that signal to find s",
+          "author": "Cloudflare",
+          "source_type": "official_api"
+        }
+      ]
+    },
+    {
+      "what_happened": "Aleyda Solis: prioritize content that survives after AI answers | Aleyda Solis：优先创作AI回答后仍有价值的内容",
+      "why_it_matters": "AI搜索时代内容策略需要重新校准——不是所有内容类型都能同等抵御AI Overviews的替代效应，需要识别并投资'剩余价值'内容类型。",
+      "evidence": "Expert analysis from Aleyda Solis (expert_analysis, 0.7 trust weight)",
+      "evidence_detail": "Aleyda Solis在X上提出应优先创作在AI回答后仍有角色的内容类型。这是一个战略框架性观点，而非基于实验数据的结论。该信号的价值在于其来自一线GEO实践者的经验判断，但缺乏定量验证（如不同内容类型的AI引用率对比、流量保留率等）。适合作为假设生成，而非执行依据。",
+      "who_it_affects": "publisher / ecommerce / SaaS / all",
+      "what_to_do": "audit现有内容按'AI替代风险'分类 | 测试高保留价值内容格式的表现",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 55,
+      "how_to_test": "选取20-30篇现有内容，按类型分类（产品对比、教程、观点、数据研究等），追踪AI Overviews推出前后各类型内容的自然搜索CTR和绝对点击量变化，识别'幸存'内容特征。",
+      "success_metric": "AI Overviews存在时的CTR保留率（vs. 无AI Overviews时）；被AI Overview引用的内容类型分布",
+      "effort": "中等：需要Search Console数据导出和分类标注，无技术风险",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2088300964159652350",
+          "excerpt": "Prioritize the content that still has a role after the AI answer 👇 What type of content is still worth creating when AI",
+          "author": "aleyda",
+          "source_type": "expert_analysis"
         }
       ]
     }
@@ -400,6 +294,21 @@
     },
     "candidates_fetched": 60,
     "candidates_fresh": 47,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "记录当前AI Mode/AI Overviews覆盖率基线，准备对比Gemini 3.7 Flash部署后的引用变化",
+      "impact": "P1"
+    },
+    {
+      "text": "与基础设施团队确认Cloudflare MCP识别能力，评估agent流量日志分析可行性",
+      "impact": "P2"
+    },
+    {
+      "text": "启动内容类型'AI替代风险'分类审计，为GEO策略调整提供数据基础",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

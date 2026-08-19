@@ -1,265 +1,163 @@
 {
   "date": "2026-08-18",
   "generated_at": "2026-08-18T02:17:39.330287+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "YouTube view-count methodology changes Aug 1; no search signals confirmed today",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Going AI-first? Don't compromise on security. Join our webinar to learn how to fortify your API architecture without the",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "what_happened": "YouTube to count view on video start (not 30s watch) from Aug 1 | YouTube将从8月1日起将视频开始播放即计为一次观看",
+        "why_it_matters": "跨平台视频策略需重新基准化：观看数将显著膨胀，CPM/ engagement rate 等KPI口径失真，需提前与stakeholder对齐计量定义",
+        "evidence": "YouTube official announcement via Search Engine Journal; Glenn Gabe independent verification",
+        "evidence_detail": "Search Engine Journal reported YouTube's official policy change: views on long-form and live content will register at play-start rather than after 30 seconds of watch time, effective August 1, 2025. Glenn Gabe separately confirmed the same mechanism on X. No A/B test data or impact estimates provided by source. This is a platform policy change, not an algorithmic ranking update.",
+        "who_it_affects": "publisher",
+        "what_to_do": "audit current YouTube reporting dashboards | update Q3/Q4 KPI baselines | brief stakeholders on inflated view metrics",
+        "confidence": "Confirmed",
+        "impact": "P1",
         "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2089517675428909123"
-          }
-        ]
-      },
-      {
-        "what_happened": "Like I thought, it's just a logging issue.... Like I thought, it's just a logging issue... Barry Schwartz (@rustybrick) ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2089439661252817096"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @jonoalderson: Be among the first to govern connections between your workforce, MCP servers, and internal data. ht",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jonoalderson",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "jonoalderson",
-            "url": "https://x.com/jonoalderson/status/2089400387799236789"
-          }
-        ]
-      },
-      {
-        "what_happened": "The question of \"what is the largest tweetable number?\" is surprisingly interesting. There is one (tweets are finite len",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "willcritchlow",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "willcritchlow",
-            "url": "https://x.com/willcritchlow/status/2089386621728657738"
-          }
-        ]
-      },
-      {
-        "what_happened": "YouTube Changes How It Counts Views On Long-Form & Live via @sejournal, @MattGSouthern. YouTube is changing how it count",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "score": 72,
         "sources": [
           {
             "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/youtube-changes-how-it-counts-views-on-long-form-live/586166/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Be among the first to govern connections between your workforce, MCP servers, and internal data. https://cfl.re/45tzEgU.",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2089400387799236789"
-          }
-        ]
-      },
-      {
-        "what_happened": "View counts might rise (significantly) -> YouTube will start counting a view as soon as a video starts to play, from Aug",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
+            "url": "https://www.searchenginejournal.com/youtube-changes-how-it-counts-views-on-long-form-live/586166/",
+            "excerpt": "YouTube Changes How It Counts Views On Long-Form & Live via @sejournal, @MattGSouthern. YouTube is changing how it count",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
+          },
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2089439168027910393"
+            "url": "https://x.com/glenngabe/status/2089439168027910393",
+            "excerpt": "View counts might rise (significantly) -> YouTube will start counting a view as soon as a video starts to play, from Aug",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
-      },
+      }
+    ],
+    "Technical SEO Experiments": [
       {
-        "what_happened": "RT by @jonoalderson: #1. The web just got a little more intelligent. 🤟 Meet `contrast-color()`: You give it any color; i",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jonoalderson",
+        "what_happened": "CSS `contrast-color()` reaches baseline support | CSS contrast-color()函数获主流浏览器支持",
+        "why_it_matters": "结构化数据与可访问性(A11Y)信号可能间接影响E-E-A-T评分；高对比度实现无需手动计算，减少CLS和渲染阻塞风险",
+        "evidence": "Jono Alderson RT of web standards announcement on X",
+        "evidence_detail": "Jono Alderson amplified announcement that CSS `contrast-color()` is now available, which automatically computes accessible contrast color from any input color. No browser version matrix or caniuse data cited in source. Alderson's track record on technical standards is strong, but this is a social amplification without original testing.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_to_do": "audit color-contrast implementation | test `contrast-color()` on design system components | validate with Lighthouse A11Y scores",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "Technical SEO Experiments",
+        "score": 55,
         "sources": [
           {
             "name": "jonoalderson",
-            "url": "https://x.com/jonoalderson/status/2089350534440395228"
+            "url": "https://x.com/jonoalderson/status/2089350534440395228",
+            "excerpt": "RT by @jonoalderson: #1. The web just got a little more intelligent. 🤟 Meet `contrast-color()`: You give it any color; i",
+            "author": "jonoalderson",
+            "source_type": "expert_analysis"
           }
         ]
+      }
+    ],
+    "Unconfirmed Watchlist": [
+      {
+        "what_happened": "Glenn Gabe: Google logging issue confirmed, not algorithm update | Glenn Gabe确认Google仅为日志问题，非算法更新",
+        "why_it_matters": "近期流量波动可能被误判为排名惩罚或gain；专家应优先排查数据管道完整性，避免对site做不必要的反向优化",
+        "evidence": "Barry Schwartz reporting + Glenn Gabe confirmation on X",
+        "evidence_detail": "Barry Schwartz (rustybrick) identified a Google logging issue affecting data reporting; Glenn Gabe confirmed 'Like I thought, it's just a logging issue.' No details on which properties, date ranges, or metric types affected. No Google Search Status Dashboard entry cited. Treat as diagnostic reminder rather than incident requiring action.",
+        "who_it_affects": "all",
+        "what_to_do": "cross-check Search Console data with GA4/server logs before concluding algorithm impact",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Unconfirmed Watchlist",
+        "score": 58,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2089439661252817096",
+            "excerpt": "Like I thought, it's just a logging issue.... Like I thought, it's just a logging issue... Barry Schwartz (@rustybrick)",
+            "author": "glenngabe",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "YouTube: Update view KPI baselines before Aug 1 policy change takes effect",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "Google: Verify any recent traffic anomalies against server logs before attributing to algorithm",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Going AI-first? Don't compromise on security. Join our webinar to learn how to fortify your API architecture without the",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "what_happened": "YouTube to count view on video start (not 30s watch) from Aug 1 | YouTube将从8月1日起将视频开始播放即计为一次观看",
+      "why_it_matters": "跨平台视频策略需重新基准化：观看数将显著膨胀，CPM/ engagement rate 等KPI口径失真，需提前与stakeholder对齐计量定义",
+      "evidence": "YouTube official announcement via Search Engine Journal; Glenn Gabe independent verification",
+      "evidence_detail": "Search Engine Journal reported YouTube's official policy change: views on long-form and live content will register at play-start rather than after 30 seconds of watch time, effective August 1, 2025. Glenn Gabe separately confirmed the same mechanism on X. No A/B test data or impact estimates provided by source. This is a platform policy change, not an algorithmic ranking update.",
+      "who_it_affects": "publisher",
+      "what_to_do": "audit current YouTube reporting dashboards | update Q3/Q4 KPI baselines | brief stakeholders on inflated view metrics",
+      "confidence": "Confirmed",
+      "impact": "P1",
       "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2089517675428909123"
-        }
-      ]
-    },
-    {
-      "what_happened": "Like I thought, it's just a logging issue.... Like I thought, it's just a logging issue... Barry Schwartz (@rustybrick) ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2089439661252817096"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @jonoalderson: Be among the first to govern connections between your workforce, MCP servers, and internal data. ht",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jonoalderson",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "jonoalderson",
-          "url": "https://x.com/jonoalderson/status/2089400387799236789"
-        }
-      ]
-    },
-    {
-      "what_happened": "The question of \"what is the largest tweetable number?\" is surprisingly interesting. There is one (tweets are finite len",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "willcritchlow",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "willcritchlow",
-          "url": "https://x.com/willcritchlow/status/2089386621728657738"
-        }
-      ]
-    },
-    {
-      "what_happened": "YouTube Changes How It Counts Views On Long-Form & Live via @sejournal, @MattGSouthern. YouTube is changing how it count",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "score": 72,
       "sources": [
         {
           "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/youtube-changes-how-it-counts-views-on-long-form-live/586166/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Be among the first to govern connections between your workforce, MCP servers, and internal data. https://cfl.re/45tzEgU.",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
+          "url": "https://www.searchenginejournal.com/youtube-changes-how-it-counts-views-on-long-form-live/586166/",
+          "excerpt": "YouTube Changes How It Counts Views On Long-Form & Live via @sejournal, @MattGSouthern. YouTube is changing how it count",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
+        },
         {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2089400387799236789"
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2089439168027910393",
+          "excerpt": "View counts might rise (significantly) -> YouTube will start counting a view as soon as a video starts to play, from Aug",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "View counts might rise (significantly) -> YouTube will start counting a view as soon as a video starts to play, from Aug",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
+      "what_happened": "Glenn Gabe: Google logging issue confirmed, not algorithm update | Glenn Gabe确认Google仅为日志问题，非算法更新",
+      "why_it_matters": "近期流量波动可能被误判为排名惩罚或gain；专家应优先排查数据管道完整性，避免对site做不必要的反向优化",
+      "evidence": "Barry Schwartz reporting + Glenn Gabe confirmation on X",
+      "evidence_detail": "Barry Schwartz (rustybrick) identified a Google logging issue affecting data reporting; Glenn Gabe confirmed 'Like I thought, it's just a logging issue.' No details on which properties, date ranges, or metric types affected. No Google Search Status Dashboard entry cited. Treat as diagnostic reminder rather than incident requiring action.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "cross-check Search Console data with GA4/server logs before concluding algorithm impact",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Unconfirmed Watchlist",
+      "score": 58,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2089439168027910393"
+          "url": "https://x.com/glenngabe/status/2089439661252817096",
+          "excerpt": "Like I thought, it's just a logging issue.... Like I thought, it's just a logging issue... Barry Schwartz (@rustybrick)",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "RT by @jonoalderson: #1. The web just got a little more intelligent. 🤟 Meet `contrast-color()`: You give it any color; i",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jonoalderson",
+      "what_happened": "CSS `contrast-color()` reaches baseline support | CSS contrast-color()函数获主流浏览器支持",
+      "why_it_matters": "结构化数据与可访问性(A11Y)信号可能间接影响E-E-A-T评分；高对比度实现无需手动计算，减少CLS和渲染阻塞风险",
+      "evidence": "Jono Alderson RT of web standards announcement on X",
+      "evidence_detail": "Jono Alderson amplified announcement that CSS `contrast-color()` is now available, which automatically computes accessible contrast color from any input color. No browser version matrix or caniuse data cited in source. Alderson's track record on technical standards is strong, but this is a social amplification without original testing.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "audit color-contrast implementation | test `contrast-color()` on design system components | validate with Lighthouse A11Y scores",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "Technical SEO Experiments",
+      "score": 55,
       "sources": [
         {
           "name": "jonoalderson",
-          "url": "https://x.com/jonoalderson/status/2089350534440395228"
+          "url": "https://x.com/jonoalderson/status/2089350534440395228",
+          "excerpt": "RT by @jonoalderson: #1. The web just got a little more intelligent. 🤟 Meet `contrast-color()`: You give it any color; i",
+          "author": "jonoalderson",
+          "source_type": "expert_analysis"
         }
       ]
     }
@@ -403,6 +301,17 @@
     },
     "candidates_fetched": 65,
     "candidates_fresh": 57,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "YouTube: Update view KPI baselines before Aug 1 policy change takes effect",
+      "impact": "P1"
+    },
+    {
+      "text": "Google: Verify any recent traffic anomalies against server logs before attributing to algorithm",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

@@ -1,267 +1,143 @@
 {
   "date": "2026-08-06",
   "generated_at": "2026-08-06T04:13:07.632529+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Reddit shifts karma system to AI moderation; Google loses key search architect Jeff Dean shifts role",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Secure your \"AI first\" organization without slowing down. Learn how to extend Zero Trust to non-human identities in our ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Reddit aims to make 'karma' less important for first-time posters with shift to AI moderation | Reddit正降低新用户发帖的karma权重，转向AI审核",
+        "why_it_matters": "UGC平台的内容审核机制变化直接影响品牌声誉管理和社区营销策略，AI审核可能改变内容可见性规则",
+        "evidence": "Glenn Gabe data research on Reddit platform changes",
+        "evidence_detail": "Glenn Gabe flagged Reddit's announced shift from karma-based to AI-driven moderation for first-time posters. The change aims to reduce barrier to entry but may alter content distribution patterns. No quantitative impact data available yet; this is platform-reported intent, not measured outcome.",
+        "who_it_affects": "UGC / publisher / SaaS",
+        "what_to_do": "monitor Reddit brand mention patterns | audit community management workflows",
         "confidence": "Observed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2085169015484277126"
-          }
-        ]
-      },
-      {
-        "what_happened": "Some interesting Reddit changes -> Reddit aims to make ‘karma’ less important for first-time posters with shift to AI mo",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "score": 62,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2085081245180940451"
+            "url": "https://x.com/glenngabe/status/2085081245180940451",
+            "excerpt": "Some interesting Reddit changes -> Reddit aims to make ‘karma’ less important for first-time posters with shift to AI mo",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
-      },
+      }
+    ],
+    "Playbook: Worth Testing": [
       {
-        "what_happened": "R to @brodieseo: Read the full guide: https://brodieclark.com/bing-product-feeds-ecommerce-ai-seo/. Read the full guide:",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "brodieseo",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Bing product feeds guide for ecommerce AI SEO published | Bing商品Feed优化指南发布",
+        "why_it_matters": "Bing Shopping在AI搜索中的权重上升，product feed优化是ecommerce GEO的关键基础设施",
+        "evidence": "Brodie Clark expert analysis with full methodology guide",
+        "evidence_detail": "Brodie Clark published a comprehensive guide on brodieclark.com covering Bing product feed setup, optimization, and integration with AI search features. The guide includes specific feed specifications and ecommerce-focused tactics. No controlled experiment data; this is practitioner-tested methodology based on platform documentation and client work.",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "audit Bing Merchant Center feed completeness | test product title optimization",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "brodieseo",
-            "url": "https://x.com/brodieseo/status/2084952932110463128"
-          }
-        ]
-      },
+        "section": "Playbook: Worth Testing",
+        "score": 68,
+        "how_to_test": "Set up Bing product feed with AI-optimized titles (feature-benefit structure, 150 chars), submit to Bing Merchant Center, compare CTR and impression share vs. standard titles over 4-6 weeks",
+        "success_metric": "Bing Shopping CTR, impression share, and conversion rate from product listing ads",
+        "effort": "Medium: feed setup 2-4 hours; risk of title changes affecting existing performance",
+        "sources": [],
+        "unverified": true
+      }
+    ],
+    "Unconfirmed Watchlist": [
       {
-        "what_happened": "This is so 🔥. It basically says we built all the products you use and taught all the people everyone invested in 😂. This",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
+        "what_happened": "Google Chief Scientist Jeff Dean steps away from core search/AI leadership role | Google搜索与AI核心架构师Jeff Dean转岗",
+        "why_it_matters": "搜索架构长期稳定性存疑，需关注Google Search技术路线是否转向Gemini-first，传统ranking系统可能加速重构",
+        "evidence": "Search Engine Journal reporting on internal Google reorganization",
+        "evidence_detail": "Jeff Dean, who led Google Brain and was instrumental in modern search infrastructure, is reportedly shifting to a less central role. This follows DeepMind CEO Demis Hassabis taking broader control of Google AI. SEJ cites internal sources; Google has not issued formal statement on search leadership changes.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_to_do": "monitor Google Search quality updates frequency | no immediate action",
         "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2085114951111196678"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @cyberandy: Recording available: #OpenRefine LLM Extension Demo. Includes data journalism workflows, name cleaning",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "cyberandy",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "cyberandy",
-            "url": "https://x.com/cyberandy/status/2084992319544016930"
-          }
-        ]
-      },
-      {
-        "what_happened": "Image",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Dixon_Jones",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Dixon_Jones",
-            "url": "https://x.com/Dixon_Jones/status/2084922611134283820"
-          }
-        ]
-      },
-      {
-        "what_happened": "I wonder how much delayed Gemini 4 has to do with Hassabis' \"shuffle\". I wonder how much delayed Gemini 4 has to do with",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Kevin_Indig",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Kevin_Indig",
-            "url": "https://x.com/Kevin_Indig/status/2085093467227590940"
-          }
-        ]
-      },
-      {
-        "what_happened": "Google Chief Scientist Who Helped Build Modern Search And AI Steps Away via @sejournal, @martinibuster. Google loses Jef",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 55,
         "sources": [
           {
             "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/google-loses-the-engineer-who-helped-build-search-and-modern-ai/584785/"
+            "url": "https://www.searchenginejournal.com/google-loses-the-engineer-who-helped-build-search-and-modern-ai/584785/",
+            "excerpt": "Google Chief Scientist Who Helped Build Modern Search And AI Steps Away via @sejournal, @martinibuster. Google loses Jef",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
           }
         ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Monitor Reddit brand/community mentions for AI moderation impact on visibility",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review Bing Merchant Center product feed status if ecommerce",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Secure your \"AI first\" organization without slowing down. Learn how to extend Zero Trust to non-human identities in our ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Reddit aims to make 'karma' less important for first-time posters with shift to AI moderation | Reddit正降低新用户发帖的karma权重，转向AI审核",
+      "why_it_matters": "UGC平台的内容审核机制变化直接影响品牌声誉管理和社区营销策略，AI审核可能改变内容可见性规则",
+      "evidence": "Glenn Gabe data research on Reddit platform changes",
+      "evidence_detail": "Glenn Gabe flagged Reddit's announced shift from karma-based to AI-driven moderation for first-time posters. The change aims to reduce barrier to entry but may alter content distribution patterns. No quantitative impact data available yet; this is platform-reported intent, not measured outcome.",
+      "who_it_affects": "UGC / publisher / SaaS",
+      "what_to_do": "monitor Reddit brand mention patterns | audit community management workflows",
       "confidence": "Observed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2085169015484277126"
-        }
-      ]
-    },
-    {
-      "what_happened": "Some interesting Reddit changes -> Reddit aims to make ‘karma’ less important for first-time posters with shift to AI mo",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "score": 62,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2085081245180940451"
+          "url": "https://x.com/glenngabe/status/2085081245180940451",
+          "excerpt": "Some interesting Reddit changes -> Reddit aims to make ‘karma’ less important for first-time posters with shift to AI mo",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "R to @brodieseo: Read the full guide: https://brodieclark.com/bing-product-feeds-ecommerce-ai-seo/. Read the full guide:",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "brodieseo",
+      "what_happened": "Google Chief Scientist Jeff Dean steps away from core search/AI leadership role | Google搜索与AI核心架构师Jeff Dean转岗",
+      "why_it_matters": "搜索架构长期稳定性存疑，需关注Google Search技术路线是否转向Gemini-first，传统ranking系统可能加速重构",
+      "evidence": "Search Engine Journal reporting on internal Google reorganization",
+      "evidence_detail": "Jeff Dean, who led Google Brain and was instrumental in modern search infrastructure, is reportedly shifting to a less central role. This follows DeepMind CEO Demis Hassabis taking broader control of Google AI. SEJ cites internal sources; Google has not issued formal statement on search leadership changes.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "monitor Google Search quality updates frequency | no immediate action",
       "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "brodieseo",
-          "url": "https://x.com/brodieseo/status/2084952932110463128"
-        }
-      ]
-    },
-    {
-      "what_happened": "This is so 🔥. It basically says we built all the products you use and taught all the people everyone invested in 😂. This",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2085114951111196678"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @cyberandy: Recording available: #OpenRefine LLM Extension Demo. Includes data journalism workflows, name cleaning",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "cyberandy",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "cyberandy",
-          "url": "https://x.com/cyberandy/status/2084992319544016930"
-        }
-      ]
-    },
-    {
-      "what_happened": "Image",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Dixon_Jones",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Dixon_Jones",
-          "url": "https://x.com/Dixon_Jones/status/2084922611134283820"
-        }
-      ]
-    },
-    {
-      "what_happened": "I wonder how much delayed Gemini 4 has to do with Hassabis' \"shuffle\". I wonder how much delayed Gemini 4 has to do with",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Kevin_Indig",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Kevin_Indig",
-          "url": "https://x.com/Kevin_Indig/status/2085093467227590940"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google Chief Scientist Who Helped Build Modern Search And AI Steps Away via @sejournal, @martinibuster. Google loses Jef",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 55,
       "sources": [
         {
           "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/google-loses-the-engineer-who-helped-build-search-and-modern-ai/584785/"
+          "url": "https://www.searchenginejournal.com/google-loses-the-engineer-who-helped-build-search-and-modern-ai/584785/",
+          "excerpt": "Google Chief Scientist Who Helped Build Modern Search And AI Steps Away via @sejournal, @martinibuster. Google loses Jef",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
         }
       ]
+    },
+    {
+      "what_happened": "Bing product feeds guide for ecommerce AI SEO published | Bing商品Feed优化指南发布",
+      "why_it_matters": "Bing Shopping在AI搜索中的权重上升，product feed优化是ecommerce GEO的关键基础设施",
+      "evidence": "Brodie Clark expert analysis with full methodology guide",
+      "evidence_detail": "Brodie Clark published a comprehensive guide on brodieclark.com covering Bing product feed setup, optimization, and integration with AI search features. The guide includes specific feed specifications and ecommerce-focused tactics. No controlled experiment data; this is practitioner-tested methodology based on platform documentation and client work.",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "audit Bing Merchant Center feed completeness | test product title optimization",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 68,
+      "how_to_test": "Set up Bing product feed with AI-optimized titles (feature-benefit structure, 150 chars), submit to Bing Merchant Center, compare CTR and impression share vs. standard titles over 4-6 weeks",
+      "success_metric": "Bing Shopping CTR, impression share, and conversion rate from product listing ads",
+      "effort": "Medium: feed setup 2-4 hours; risk of title changes affecting existing performance",
+      "sources": [],
+      "unverified": true
     }
   ],
   "serp": {},
@@ -401,6 +277,17 @@
     },
     "candidates_fetched": 71,
     "candidates_fresh": 66,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "Monitor Reddit brand/community mentions for AI moderation impact on visibility",
+      "impact": "P2"
+    },
+    {
+      "text": "Review Bing Merchant Center product feed status if ecommerce",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

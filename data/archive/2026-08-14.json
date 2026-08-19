@@ -1,265 +1,243 @@
 {
   "date": "2026-08-14",
   "generated_at": "2026-08-14T03:24:46.829214+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Shopify data: AI referrals +197% but organic still leads; Google brings back free listing 'add to cart'",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "AI deployment outpacing your security? Stop treating autonomous agents as an afterthought. Register for our webinar to s",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "what_happened": "Shopify: AI-referred sessions up 197% YoY, yet organic search remains top traffic source | Shopify数据显示AI引荐流量同比增长197%，但自然搜索仍是最大流量来源",
+        "why_it_matters": "验证了AI search/GEO流量正在快速爬坡，但尚未取代organic的主导地位。对预算分配和渠道策略有直接影响——不能因追逐AI visibility而忽视organic基本盘。",
+        "evidence": "Shopify official earnings/merchant data cited by Glenn Gabe; AI-referred sessions to merchant storefronts +197% YoY",
+        "evidence_detail": "Glenn Gabe引用Shopify官方数据：AI引荐至商家店面的会话数同比增长197%。关键限定：该数据为Shopify单一平台，未披露绝对值或占整体流量比例；organic search仍是其声明的最大单一流量来源。",
+        "who_it_affects": "ecommerce / SaaS",
+        "what_to_do": "评估当前AI引荐流量占比，设定organic vs. AI visibility的预算分配比例，测试AI-optimized内容格式",
+        "confidence": "Data-backed",
+        "impact": "P1",
         "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2088068123094110494"
-          }
-        ]
-      },
-      {
-        "what_happened": "Yep -> Shopify: AI referrals up 197%, but organic search still leads traffic \"AI-referred sessions to merchant storefron",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "score": 78,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2087982083008532833"
+            "url": "https://x.com/glenngabe/status/2087982083008532833",
+            "excerpt": "Yep -> Shopify: AI referrals up 197%, but organic search still leads traffic \"AI-referred sessions to merchant storefron",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
       },
       {
-        "what_happened": "Ecommerce SEO: Google is bringing back its \"add to cart\" links within free product listing results. This is in conjuncti",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "brodieseo",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Google restores 'add to cart' links in free product listings, tied to Merchant Center Next | Google在免费商品列表中恢复\"加入购物车\"按钮，与Merchant Center Next联动",
+        "why_it_matters": "免费listing的转化路径缩短，直接影响电商站点的CTR和CVR。Merchant Center Next的整合意味着feed质量和结构化数据的重要性进一步上升。",
+        "evidence": "Brodie Clark observation of live SERP feature; linked to Merchant Center Next rollout",
+        "evidence_detail": "Brodie Clark观察到Google在免费商品列表结果中重新显示\"add to cart\"按钮。该功能与Merchant Center Next的推出相关，但Google尚未发布官方文档确认覆盖范围或资格要求。",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "检查Google Merchant Center账户是否已迁移至Next版本；验证产品feed和结构化数据完整性；监控免费listing的CTR变化",
         "confidence": "Observed",
-        "impact": "P2",
+        "impact": "P1",
         "section": "SERP & Algorithm Signals",
+        "score": 72,
         "sources": [
           {
             "name": "brodieseo",
-            "url": "https://x.com/brodieseo/status/2087851388617253197"
+            "url": "https://x.com/brodieseo/status/2087851388617253197",
+            "excerpt": "Ecommerce SEO: Google is bringing back its \"add to cart\" links within free product listing results. This is in conjuncti",
+            "author": "brodieseo",
+            "source_type": "expert_analysis"
           }
         ]
       },
       {
-        "what_happened": "Having the NYC premiere of my video tonight. You should watch it right now though. https://www.youtube.com/watch?v=RPZcd",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
+        "what_happened": "Google Ads removing language targeting from Search campaigns | Google Ads将移除搜索广告系列中的语言定位功能",
+        "why_it_matters": "付费搜索的操作逻辑变化，可能间接影响organic的多语言/国际化策略——竞争格局和语言覆盖的边界模糊化。",
+        "evidence": "Search Engine Journal reporting on Google Ads policy change",
+        "evidence_detail": "SEJ报道Google Ads将从搜索广告系列中移除语言定位功能。该变化属于paid search范畴，对organic SEO的直接影响有限，但国际化站点需关注语言覆盖竞争环境的变化。",
+        "who_it_affects": "international / ecommerce",
+        "what_to_do": "监控多语言市场的CPC和竞争强度变化；评估是否需要调整organic多语言策略",
+        "confidence": "Confirmed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2088001574199025792"
-          }
-        ]
-      },
-      {
-        "what_happened": "Unironically this. Unironically this Sam Rose (@samwhoo) This might be the most beautiful thing I've read in my life. Wh",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "willcritchlow",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "willcritchlow",
-            "url": "https://x.com/willcritchlow/status/2088032011826946233"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @Kevin_Indig: If you're investing in AI visibility, don't treat community as a side channel. In ~35K #ChatGPT cita",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Kevin_Indig",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Kevin_Indig",
-            "url": "https://x.com/Kevin_Indig/status/2087597476945555704"
-          }
-        ]
-      },
-      {
-        "what_happened": "37 Proven Ways to Use AI in Marketing. 37 proven ways to use AI in marketing, from SEO to international marketing, each ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Ahrefs Blog",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Ahrefs Blog",
-            "url": "https://ahrefs.com/blog/how-to-use-ai-in-marketing/"
-          }
-        ]
-      },
-      {
-        "what_happened": "Google Is Removing Language Targeting From Search Campaigns via @sejournal, @brookeosmundson. Google Ads is changing lan",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "score": 58,
         "sources": [
           {
             "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/google-is-removing-language-targeting-from-search-campaigns/585592/"
+            "url": "https://www.searchenginejournal.com/google-is-removing-language-targeting-from-search-campaigns/585592/",
+            "excerpt": "Google Is Removing Language Targeting From Search Campaigns via @sejournal, @brookeosmundson. Google Ads is changing lan",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
           }
         ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "~35K ChatGPT citations analyzed: community/forum content significantly outperforms in AI visibility | 约3.5万条ChatGPT引用分析：社区/论坛内容在AI可见度中表现显著优于其他类型",
+        "why_it_matters": "为GEO策略提供数据支撑：UGC平台和社区内容可能是获取AI citation的高杠杆渠道，需重新评估内容矩阵中社区资产的优先级。",
+        "evidence": "Kevin Indig citing analysis of ~35K ChatGPT citations showing community content overrepresentation",
+        "evidence_detail": "Kevin Indig转发的一项研究分析了约35,000条ChatGPT引用，发现社区/论坛类内容在AI引用中占比显著高于其在传统搜索中的份额。关键局限：未披露具体方法论（如何抓取、去重、分类标准）或置信区间。",
+        "who_it_affects": "UGC / publisher / SaaS",
+        "what_to_do": "审计现有社区/论坛内容的AI可发现性；测试在Reddit、Quora等平台的品牌 presence 和专家贡献策略",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 75,
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2087597476945555704",
+            "excerpt": "RT by @Kevin_Indig: If you're investing in AI visibility, don't treat community as a side channel. In ~35K #ChatGPT cita",
+            "author": "Kevin_Indig",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Will Critchlow amplifies rigorous A/B testing methodology for SEO causality | Will Critchlow推广SEO因果推断的严谨A/B测试方法",
+        "why_it_matters": "SEO行业长期缺乏因果推断能力，该框架可帮助区分correlation与causation，减少基于ranking fluctuation的错误决策。",
+        "evidence": "Will Critchlow (Distilled/SearchPilot) endorsing Sam Rose's A/B testing framework for SEO",
+        "evidence_detail": "Will Critchlow转发Sam Rose关于SEO A/B测试的框架。SearchPilot在该领域有长期实验积累，但该推文本身为观点转发，未提供具体案例数据或方法细节。",
+        "who_it_affects": "all",
+        "what_to_do": "审查现有SEO测试框架；若站点流量允许，部署SearchPilot-style split-testing验证核心假设",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 68,
+        "how_to_test": "选择20-50个结构相似的URL，对title tag或meta description进行随机分组A/B测试，使用SEO A/B testing工具（如SearchPilot、SplitSignal）或自建bucketing逻辑，运行4-6周",
+        "success_metric": "测试组vs对照组的organic CTR变化（Search Console数据），辅以impressions和position的稳定性监控",
+        "effort": "中等：需技术资源实现分组和追踪；风险低，但需足够样本量（建议单组>1000 clicks/month）",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2088032011826946233",
+            "excerpt": "Unironically this. Unironically this Sam Rose (@samwhoo) This might be the most beautiful thing I've read in my life. Wh",
+            "author": "willcritchlow",
+            "source_type": "reproducible_experiment"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "检查Google Merchant Center是否已迁移至Next版本，验证免费listing的'add to cart'展示状态",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "基于~35K ChatGPT引用数据，审计现有社区/论坛内容在AI搜索中的可见度，制定UGC渠道测试计划",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "评估站点是否具备SEO A/B测试条件（月点击量、技术资源），准备causal inference实验框架",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "AI deployment outpacing your security? Stop treating autonomous agents as an afterthought. Register for our webinar to s",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "what_happened": "Shopify: AI-referred sessions up 197% YoY, yet organic search remains top traffic source | Shopify数据显示AI引荐流量同比增长197%，但自然搜索仍是最大流量来源",
+      "why_it_matters": "验证了AI search/GEO流量正在快速爬坡，但尚未取代organic的主导地位。对预算分配和渠道策略有直接影响——不能因追逐AI visibility而忽视organic基本盘。",
+      "evidence": "Shopify official earnings/merchant data cited by Glenn Gabe; AI-referred sessions to merchant storefronts +197% YoY",
+      "evidence_detail": "Glenn Gabe引用Shopify官方数据：AI引荐至商家店面的会话数同比增长197%。关键限定：该数据为Shopify单一平台，未披露绝对值或占整体流量比例；organic search仍是其声明的最大单一流量来源。",
+      "who_it_affects": "ecommerce / SaaS",
+      "what_to_do": "评估当前AI引荐流量占比，设定organic vs. AI visibility的预算分配比例，测试AI-optimized内容格式",
+      "confidence": "Data-backed",
+      "impact": "P1",
       "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2088068123094110494"
-        }
-      ]
-    },
-    {
-      "what_happened": "Yep -> Shopify: AI referrals up 197%, but organic search still leads traffic \"AI-referred sessions to merchant storefron",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "score": 78,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2087982083008532833"
+          "url": "https://x.com/glenngabe/status/2087982083008532833",
+          "excerpt": "Yep -> Shopify: AI referrals up 197%, but organic search still leads traffic \"AI-referred sessions to merchant storefron",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "Ecommerce SEO: Google is bringing back its \"add to cart\" links within free product listing results. This is in conjuncti",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "brodieseo",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Google restores 'add to cart' links in free product listings, tied to Merchant Center Next | Google在免费商品列表中恢复\"加入购物车\"按钮，与Merchant Center Next联动",
+      "why_it_matters": "免费listing的转化路径缩短，直接影响电商站点的CTR和CVR。Merchant Center Next的整合意味着feed质量和结构化数据的重要性进一步上升。",
+      "evidence": "Brodie Clark observation of live SERP feature; linked to Merchant Center Next rollout",
+      "evidence_detail": "Brodie Clark观察到Google在免费商品列表结果中重新显示\"add to cart\"按钮。该功能与Merchant Center Next的推出相关，但Google尚未发布官方文档确认覆盖范围或资格要求。",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "检查Google Merchant Center账户是否已迁移至Next版本；验证产品feed和结构化数据完整性；监控免费listing的CTR变化",
       "confidence": "Observed",
-      "impact": "P2",
+      "impact": "P1",
       "section": "SERP & Algorithm Signals",
+      "score": 72,
       "sources": [
         {
           "name": "brodieseo",
-          "url": "https://x.com/brodieseo/status/2087851388617253197"
+          "url": "https://x.com/brodieseo/status/2087851388617253197",
+          "excerpt": "Ecommerce SEO: Google is bringing back its \"add to cart\" links within free product listing results. This is in conjuncti",
+          "author": "brodieseo",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "Having the NYC premiere of my video tonight. You should watch it right now though. https://www.youtube.com/watch?v=RPZcd",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_happened": "Google Ads removing language targeting from Search campaigns | Google Ads将移除搜索广告系列中的语言定位功能",
+      "why_it_matters": "付费搜索的操作逻辑变化，可能间接影响organic的多语言/国际化策略——竞争格局和语言覆盖的边界模糊化。",
+      "evidence": "Search Engine Journal reporting on Google Ads policy change",
+      "evidence_detail": "SEJ报道Google Ads将从搜索广告系列中移除语言定位功能。该变化属于paid search范畴，对organic SEO的直接影响有限，但国际化站点需关注语言覆盖竞争环境的变化。",
+      "who_it_affects": "international / ecommerce",
+      "what_to_do": "监控多语言市场的CPC和竞争强度变化；评估是否需要调整organic多语言策略",
+      "confidence": "Confirmed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2088001574199025792"
-        }
-      ]
-    },
-    {
-      "what_happened": "Unironically this. Unironically this Sam Rose (@samwhoo) This might be the most beautiful thing I've read in my life. Wh",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "willcritchlow",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "willcritchlow",
-          "url": "https://x.com/willcritchlow/status/2088032011826946233"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @Kevin_Indig: If you're investing in AI visibility, don't treat community as a side channel. In ~35K #ChatGPT cita",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Kevin_Indig",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Kevin_Indig",
-          "url": "https://x.com/Kevin_Indig/status/2087597476945555704"
-        }
-      ]
-    },
-    {
-      "what_happened": "37 Proven Ways to Use AI in Marketing. 37 proven ways to use AI in marketing, from SEO to international marketing, each ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Ahrefs Blog",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Ahrefs Blog",
-          "url": "https://ahrefs.com/blog/how-to-use-ai-in-marketing/"
-        }
-      ]
-    },
-    {
-      "what_happened": "Google Is Removing Language Targeting From Search Campaigns via @sejournal, @brookeosmundson. Google Ads is changing lan",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "score": 58,
       "sources": [
         {
           "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/google-is-removing-language-targeting-from-search-campaigns/585592/"
+          "url": "https://www.searchenginejournal.com/google-is-removing-language-targeting-from-search-campaigns/585592/",
+          "excerpt": "Google Is Removing Language Targeting From Search Campaigns via @sejournal, @brookeosmundson. Google Ads is changing lan",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "~35K ChatGPT citations analyzed: community/forum content significantly outperforms in AI visibility | 约3.5万条ChatGPT引用分析：社区/论坛内容在AI可见度中表现显著优于其他类型",
+      "why_it_matters": "为GEO策略提供数据支撑：UGC平台和社区内容可能是获取AI citation的高杠杆渠道，需重新评估内容矩阵中社区资产的优先级。",
+      "evidence": "Kevin Indig citing analysis of ~35K ChatGPT citations showing community content overrepresentation",
+      "evidence_detail": "Kevin Indig转发的一项研究分析了约35,000条ChatGPT引用，发现社区/论坛类内容在AI引用中占比显著高于其在传统搜索中的份额。关键局限：未披露具体方法论（如何抓取、去重、分类标准）或置信区间。",
+      "who_it_affects": "UGC / publisher / SaaS",
+      "what_to_do": "审计现有社区/论坛内容的AI可发现性；测试在Reddit、Quora等平台的品牌 presence 和专家贡献策略",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 75,
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2087597476945555704",
+          "excerpt": "RT by @Kevin_Indig: If you're investing in AI visibility, don't treat community as a side channel. In ~35K #ChatGPT cita",
+          "author": "Kevin_Indig",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Will Critchlow amplifies rigorous A/B testing methodology for SEO causality | Will Critchlow推广SEO因果推断的严谨A/B测试方法",
+      "why_it_matters": "SEO行业长期缺乏因果推断能力，该框架可帮助区分correlation与causation，减少基于ranking fluctuation的错误决策。",
+      "evidence": "Will Critchlow (Distilled/SearchPilot) endorsing Sam Rose's A/B testing framework for SEO",
+      "evidence_detail": "Will Critchlow转发Sam Rose关于SEO A/B测试的框架。SearchPilot在该领域有长期实验积累，但该推文本身为观点转发，未提供具体案例数据或方法细节。",
+      "who_it_affects": "all",
+      "what_to_do": "审查现有SEO测试框架；若站点流量允许，部署SearchPilot-style split-testing验证核心假设",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 68,
+      "how_to_test": "选择20-50个结构相似的URL，对title tag或meta description进行随机分组A/B测试，使用SEO A/B testing工具（如SearchPilot、SplitSignal）或自建bucketing逻辑，运行4-6周",
+      "success_metric": "测试组vs对照组的organic CTR变化（Search Console数据），辅以impressions和position的稳定性监控",
+      "effort": "中等：需技术资源实现分组和追踪；风险低，但需足够样本量（建议单组>1000 clicks/month）",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2088032011826946233",
+          "excerpt": "Unironically this. Unironically this Sam Rose (@samwhoo) This might be the most beautiful thing I've read in my life. Wh",
+          "author": "willcritchlow",
+          "source_type": "reproducible_experiment"
         }
       ]
     }
@@ -400,6 +378,21 @@
     },
     "candidates_fetched": 75,
     "candidates_fresh": 62,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "检查Google Merchant Center是否已迁移至Next版本，验证免费listing的'add to cart'展示状态",
+      "impact": "P1"
+    },
+    {
+      "text": "基于~35K ChatGPT引用数据，审计现有社区/论坛内容在AI搜索中的可见度，制定UGC渠道测试计划",
+      "impact": "P2"
+    },
+    {
+      "text": "评估站点是否具备SEO A/B测试条件（月点击量、技术资源），准备causal inference实验框架",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 3
 }

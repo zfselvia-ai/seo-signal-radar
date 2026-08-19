@@ -1,267 +1,273 @@
 {
   "date": "2026-08-13",
   "generated_at": "2026-08-13T03:28:02.883910+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Google Knowledge Graph vulnerability exposed via Wikipedia vandalism; ChatGPT ads expand rapidly in SERP",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Watch our on-demand webinar for a conversation exploring how transitioning AI apps from experimentation to production op",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
+        "what_happened": "Wikipedia vandalism falsely reported Sam Altman as deceased, which propagated to Google's Knowledge Graph | 维基百科恶意编辑导致谷歌知识图谱显示Sam Altman已去世",
+        "why_it_matters": "知识图谱的实时性与准确性直接影响品牌声誉和E-E-A-T信号；虚假信息在AI搜索时代传播更快",
+        "evidence": "glenngabe (data_research, 0.85) RT'd verified case of KG showing false death date",
+        "evidence_detail": "A Wikipedia edit falsely stated Sam Altman had died. Google picked this up and displayed an incorrect death date in his Knowledge Panel. The error was later corrected, but the incident demonstrates the latency and verification gaps in Google's knowledge graph pipeline. No data on how long the false information persisted.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "what_to_do": "monitor your brand's Knowledge Panel for inaccuracies | set up Google Knowledge Panel alerts",
+        "confidence": "Confirmed",
+        "impact": "P1",
         "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2087568077143630053"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @glenngabe: Perhaps this is obvious to everyone... But I've just realized that a major benefit to watermarking AI ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "score": 72,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2087589557059326388"
+            "url": "https://x.com/glenngabe/status/2087572018828808630",
+            "excerpt": "RT by @glenngabe: Someone edited Wikipedia to say Sam Altman was dead and Google showed he died on his Google knowledge",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
       },
       {
-        "what_happened": "RT by @brodieseo: Ads are rolling out rapidly in ChatGPT! There are some that were announced, but not all are showing ju",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "brodieseo",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "ChatGPT ads rolling out rapidly with unannounced formats appearing in results | ChatGPT广告快速铺开，未宣布格式已出现",
+        "why_it_matters": "AI搜索商业化加速，零点击流量风险上升；电商和出版商需重新评估流量获取策略",
+        "evidence": "brodieseo (expert_analysis, 0.7) observed rapid ad rollout beyond announced formats",
+        "evidence_detail": "Brodie Clark reports that ads are appearing in ChatGPT beyond the officially announced placements, with some formats not yet publicly disclosed by OpenAI. This suggests an accelerated monetization push. No methodology or sample size provided for the observation scope.",
+        "who_it_affects": "ecommerce / publisher / SaaS",
+        "what_to_do": "monitor ChatGPT SERP for your category keywords | audit if your brand appears in cited sources",
         "confidence": "Observed",
-        "impact": "P2",
+        "impact": "P1",
         "section": "SERP & Algorithm Signals",
+        "score": 61,
         "sources": [
           {
             "name": "brodieseo",
-            "url": "https://x.com/brodieseo/status/2087489726035243441"
+            "url": "https://x.com/brodieseo/status/2087489726035243441",
+            "excerpt": "RT by @brodieseo: Ads are rolling out rapidly in ChatGPT! There are some that were announced, but not all are showing ju",
+            "author": "brodieseo",
+            "source_type": "expert_analysis"
           }
         ]
       },
       {
-        "what_happened": "Somehow I'm always on a boat during this week in April.. Somehow I'm always on a boat during this week in April.",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "VeryWellVersed",
+        "what_happened": "Google Gemini passes 1 billion monthly users; 63% now use voice input | Google Gemini月活用户破10亿，63%使用语音",
+        "why_it_matters": "语音查询比例确认上升，query fan-out和对话式搜索优化成为必要投资",
+        "evidence": "Search Engine Journal (trade_news, 0.55) citing Google official announcement",
+        "evidence_detail": "Google announced Gemini app has surpassed 1 billion monthly active users, with 63% of users engaging via voice. The figure comes from a Google marketing announcement at an industry event; no independent verification or methodology disclosed. Voice usage percentage may reflect app-specific behavior rather than web search behavior.",
         "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
+        "what_to_do": "optimize for conversational, long-tail queries | test voice search result capture for priority keywords",
+        "confidence": "Confirmed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "VeryWellVersed",
-            "url": "https://x.com/VeryWellVersed/status/2087694198614995325"
-          }
-        ]
-      },
-      {
-        "what_happened": "Compliance is only part of the story. Content marking helps them prevent context contamination and, more importantly, ma",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "cyberandy",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "cyberandy",
-            "url": "https://x.com/cyberandy/status/2087435781627379852"
-          }
-        ]
-      },
-      {
-        "what_happened": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "randfish",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "randfish",
-            "url": "https://x.com/randfish/status/2087612290610970640"
-          }
-        ]
-      },
-      {
-        "what_happened": "Google Gemini Passes 1B Monthly Users, 63% Now Use Voice via @sejournal, @MattGSouthern. Google says its Gemini app pass",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Search Engine Journal",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "score": 55,
         "sources": [
           {
             "name": "Search Engine Journal",
-            "url": "https://www.searchenginejournal.com/google-gemini-passes-1b-monthly-users-63-now-use-voice/585624/"
+            "url": "https://www.searchenginejournal.com/google-gemini-passes-1b-monthly-users-63-now-use-voice/585624/",
+            "excerpt": "Google Gemini Passes 1B Monthly Users, 63% Now Use Voice via @sejournal, @MattGSouthern. Google says its Gemini app pass",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Rand Fishkin warns AI citation analysis research is fundamentally misleading | Rand Fishkin警告AI引用分析研究存在根本性误导",
+        "why_it_matters": "当前大量GEO策略基于有缺陷的引用假设；若AI工具已预设品牌偏好，传统引用优化可能无效",
+        "evidence": "randfish (expert_analysis, 0.7) states AI tools often already know target brands before citing",
+        "evidence_detail": "Fishkin argues that AI systems frequently determine which brands to mention before generating citations, meaning citation volume studies measure a secondary effect rather than a causal driver. This challenges the methodological foundation of many current GEO 'wins.' No empirical data provided; this is analytical framing from industry observation.",
+        "who_it_affects": "all",
+        "what_to_do": "re-evaluate GEO metrics | prioritize brand salience over citation volume in AI search reporting",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 58,
+        "sources": [
+          {
+            "name": "randfish",
+            "url": "https://x.com/randfish/status/2087612290610970640",
+            "excerpt": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're",
+            "author": "randfish",
+            "source_type": "expert_analysis"
           }
         ]
       },
       {
-        "what_happened": "RT by @glenngabe: Someone edited Wikipedia to say Sam Altman was dead and Google showed he died on his Google knowledge ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "AI watermarking debate links content provenance to search quality signals | AI水印讨论将内容溯源与搜索质量信号关联",
+        "why_it_matters": "内容标记可能成为未来排名因素，提前实施可建立技术壁垒",
+        "evidence": "glenngabe (data_research, 0.85) RT'd observation on watermarking benefits for content quality",
+        "evidence_detail": "Glenn Gabe amplified a point that AI watermarking/content marking serves search engines by enabling provenance verification and reducing context contamination. The original claim lacks experimental backing; it is theoretical reasoning about future-proofing rather than confirmed ranking signal.",
+        "who_it_affects": "publisher / all",
+        "what_to_do": "evaluate C2PA/content credential implementation | test on high-traffic content pages",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "section": "AI Search / GEO",
+        "score": 54,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2087572018828808630"
+            "url": "https://x.com/glenngabe/status/2087589557059326388",
+            "excerpt": "RT by @glenngabe: Perhaps this is obvious to everyone... But I've just realized that a major benefit to watermarking AI",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "PLAYBOOK: Test C2PA/content credential markup for AI-generated content to assess indexing and GEO impact | 测试C2PA标记对AI内容索引和GEO的影响",
+        "why_it_matters": "提前建立内容溯源技术能力，应对可能的算法偏好变化",
+        "evidence": "Derived from watermarking discussion and knowledge graph accuracy concerns",
+        "evidence_detail": "Based on the convergence of AI watermarking discourse and knowledge graph vulnerability incidents, testing content provenance markup provides actionable data before any algorithmic preference is confirmed. No direct study links C2PA to ranking; this is a forward-positioning experiment.",
+        "who_it_affects": "publisher / all",
+        "what_to_do": "implement C2PA or schema.org ClaimReview on 20-50 AI-assisted content pages | monitor indexing rate and AI Overview inclusion",
+        "confidence": "Speculative",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 48,
+        "how_to_test": "Select 20-50 pages with AI-generated content. Add C2PA manifest or contentCredential structured data. Maintain a control group. Track for 60 days: Google indexing speed, AI Overview citation rate, and any Knowledge Panel changes.",
+        "success_metric": "indexing rate delta vs control; AI Overview inclusion rate; featured snippet capture",
+        "effort": "Medium: 4-8 hours dev + structured data implementation; risk of no signal",
+        "sources": [],
+        "unverified": true
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Verify your brand Knowledge Panel for accuracy (P1)",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "Audit ChatGPT ad placements in your priority SERPs (P1)",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "Launch C2PA/content credential test on 20-50 pages (P2)",
+        "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Watch our on-demand webinar for a conversation exploring how transitioning AI apps from experimentation to production op",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
+      "what_happened": "Wikipedia vandalism falsely reported Sam Altman as deceased, which propagated to Google's Knowledge Graph | 维基百科恶意编辑导致谷歌知识图谱显示Sam Altman已去世",
+      "why_it_matters": "知识图谱的实时性与准确性直接影响品牌声誉和E-E-A-T信号；虚假信息在AI搜索时代传播更快",
+      "evidence": "glenngabe (data_research, 0.85) RT'd verified case of KG showing false death date",
+      "evidence_detail": "A Wikipedia edit falsely stated Sam Altman had died. Google picked this up and displayed an incorrect death date in his Knowledge Panel. The error was later corrected, but the incident demonstrates the latency and verification gaps in Google's knowledge graph pipeline. No data on how long the false information persisted.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "what_to_do": "monitor your brand's Knowledge Panel for inaccuracies | set up Google Knowledge Panel alerts",
+      "confidence": "Confirmed",
+      "impact": "P1",
       "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2087568077143630053"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @glenngabe: Perhaps this is obvious to everyone... But I've just realized that a major benefit to watermarking AI ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "score": 72,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2087589557059326388"
+          "url": "https://x.com/glenngabe/status/2087572018828808630",
+          "excerpt": "RT by @glenngabe: Someone edited Wikipedia to say Sam Altman was dead and Google showed he died on his Google knowledge",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "RT by @brodieseo: Ads are rolling out rapidly in ChatGPT! There are some that were announced, but not all are showing ju",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "brodieseo",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "ChatGPT ads rolling out rapidly with unannounced formats appearing in results | ChatGPT广告快速铺开，未宣布格式已出现",
+      "why_it_matters": "AI搜索商业化加速，零点击流量风险上升；电商和出版商需重新评估流量获取策略",
+      "evidence": "brodieseo (expert_analysis, 0.7) observed rapid ad rollout beyond announced formats",
+      "evidence_detail": "Brodie Clark reports that ads are appearing in ChatGPT beyond the officially announced placements, with some formats not yet publicly disclosed by OpenAI. This suggests an accelerated monetization push. No methodology or sample size provided for the observation scope.",
+      "who_it_affects": "ecommerce / publisher / SaaS",
+      "what_to_do": "monitor ChatGPT SERP for your category keywords | audit if your brand appears in cited sources",
       "confidence": "Observed",
-      "impact": "P2",
+      "impact": "P1",
       "section": "SERP & Algorithm Signals",
+      "score": 61,
       "sources": [
         {
           "name": "brodieseo",
-          "url": "https://x.com/brodieseo/status/2087489726035243441"
+          "url": "https://x.com/brodieseo/status/2087489726035243441",
+          "excerpt": "RT by @brodieseo: Ads are rolling out rapidly in ChatGPT! There are some that were announced, but not all are showing ju",
+          "author": "brodieseo",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "Somehow I'm always on a boat during this week in April.. Somehow I'm always on a boat during this week in April.",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "VeryWellVersed",
+      "what_happened": "Rand Fishkin warns AI citation analysis research is fundamentally misleading | Rand Fishkin警告AI引用分析研究存在根本性误导",
+      "why_it_matters": "当前大量GEO策略基于有缺陷的引用假设；若AI工具已预设品牌偏好，传统引用优化可能无效",
+      "evidence": "randfish (expert_analysis, 0.7) states AI tools often already know target brands before citing",
+      "evidence_detail": "Fishkin argues that AI systems frequently determine which brands to mention before generating citations, meaning citation volume studies measure a secondary effect rather than a causal driver. This challenges the methodological foundation of many current GEO 'wins.' No empirical data provided; this is analytical framing from industry observation.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_to_do": "re-evaluate GEO metrics | prioritize brand salience over citation volume in AI search reporting",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "VeryWellVersed",
-          "url": "https://x.com/VeryWellVersed/status/2087694198614995325"
-        }
-      ]
-    },
-    {
-      "what_happened": "Compliance is only part of the story. Content marking helps them prevent context contamination and, more importantly, ma",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "cyberandy",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "cyberandy",
-          "url": "https://x.com/cyberandy/status/2087435781627379852"
-        }
-      ]
-    },
-    {
-      "what_happened": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "randfish",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "AI Search / GEO",
+      "score": 58,
       "sources": [
         {
           "name": "randfish",
-          "url": "https://x.com/randfish/status/2087612290610970640"
+          "url": "https://x.com/randfish/status/2087612290610970640",
+          "excerpt": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're",
+          "author": "randfish",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "Google Gemini Passes 1B Monthly Users, 63% Now Use Voice via @sejournal, @MattGSouthern. Google says its Gemini app pass",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Search Engine Journal",
+      "what_happened": "Google Gemini passes 1 billion monthly users; 63% now use voice input | Google Gemini月活用户破10亿，63%使用语音",
+      "why_it_matters": "语音查询比例确认上升，query fan-out和对话式搜索优化成为必要投资",
+      "evidence": "Search Engine Journal (trade_news, 0.55) citing Google official announcement",
+      "evidence_detail": "Google announced Gemini app has surpassed 1 billion monthly active users, with 63% of users engaging via voice. The figure comes from a Google marketing announcement at an industry event; no independent verification or methodology disclosed. Voice usage percentage may reflect app-specific behavior rather than web search behavior.",
       "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
+      "what_to_do": "optimize for conversational, long-tail queries | test voice search result capture for priority keywords",
+      "confidence": "Confirmed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
+      "score": 55,
       "sources": [
         {
           "name": "Search Engine Journal",
-          "url": "https://www.searchenginejournal.com/google-gemini-passes-1b-monthly-users-63-now-use-voice/585624/"
+          "url": "https://www.searchenginejournal.com/google-gemini-passes-1b-monthly-users-63-now-use-voice/585624/",
+          "excerpt": "Google Gemini Passes 1B Monthly Users, 63% Now Use Voice via @sejournal, @MattGSouthern. Google says its Gemini app pass",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
         }
       ]
     },
     {
-      "what_happened": "RT by @glenngabe: Someone edited Wikipedia to say Sam Altman was dead and Google showed he died on his Google knowledge ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "AI watermarking debate links content provenance to search quality signals | AI水印讨论将内容溯源与搜索质量信号关联",
+      "why_it_matters": "内容标记可能成为未来排名因素，提前实施可建立技术壁垒",
+      "evidence": "glenngabe (data_research, 0.85) RT'd observation on watermarking benefits for content quality",
+      "evidence_detail": "Glenn Gabe amplified a point that AI watermarking/content marking serves search engines by enabling provenance verification and reducing context contamination. The original claim lacks experimental backing; it is theoretical reasoning about future-proofing rather than confirmed ranking signal.",
+      "who_it_affects": "publisher / all",
+      "what_to_do": "evaluate C2PA/content credential implementation | test on high-traffic content pages",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "section": "AI Search / GEO",
+      "score": 54,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2087572018828808630"
+          "url": "https://x.com/glenngabe/status/2087589557059326388",
+          "excerpt": "RT by @glenngabe: Perhaps this is obvious to everyone... But I've just realized that a major benefit to watermarking AI",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
+    },
+    {
+      "what_happened": "PLAYBOOK: Test C2PA/content credential markup for AI-generated content to assess indexing and GEO impact | 测试C2PA标记对AI内容索引和GEO的影响",
+      "why_it_matters": "提前建立内容溯源技术能力，应对可能的算法偏好变化",
+      "evidence": "Derived from watermarking discussion and knowledge graph accuracy concerns",
+      "evidence_detail": "Based on the convergence of AI watermarking discourse and knowledge graph vulnerability incidents, testing content provenance markup provides actionable data before any algorithmic preference is confirmed. No direct study links C2PA to ranking; this is a forward-positioning experiment.",
+      "who_it_affects": "publisher / all",
+      "what_to_do": "implement C2PA or schema.org ClaimReview on 20-50 AI-assisted content pages | monitor indexing rate and AI Overview inclusion",
+      "confidence": "Speculative",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 48,
+      "how_to_test": "Select 20-50 pages with AI-generated content. Add C2PA manifest or contentCredential structured data. Maintain a control group. Track for 60 days: Google indexing speed, AI Overview citation rate, and any Knowledge Panel changes.",
+      "success_metric": "indexing rate delta vs control; AI Overview inclusion rate; featured snippet capture",
+      "effort": "Medium: 4-8 hours dev + structured data implementation; risk of no signal",
+      "sources": [],
+      "unverified": true
     }
   ],
   "serp": {},
@@ -400,6 +406,21 @@
     },
     "candidates_fetched": 68,
     "candidates_fresh": 49,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "Verify your brand Knowledge Panel for accuracy (P1)",
+      "impact": "P1"
+    },
+    {
+      "text": "Audit ChatGPT ad placements in your priority SERPs (P1)",
+      "impact": "P1"
+    },
+    {
+      "text": "Launch C2PA/content credential test on 20-50 pages (P2)",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 3
 }

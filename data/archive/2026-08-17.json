@@ -1,265 +1,193 @@
 {
   "date": "2026-08-17",
   "generated_at": "2026-08-17T02:20:29.304816+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "headline": "Health/medical YMYL sites show volatile recovery pattern post-July algorithm hit",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Yep, they will continue to get smarter, AND the platforms will be forced to clean up the BS. Note, I had Claude several ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Health/medical YMYL sites see sharp July drops, partial recovery | 医疗健康类YMYL网站7月暴跌后部分恢复",
+        "why_it_matters": "YMYL垂直领域持续经历极端波动性，表明Google对医疗内容的质量评估仍在剧烈调整，影响内容策略稳定性",
+        "evidence": "Glenn Gabe data research: multiple independent health/medical sites showing matching pattern of July 8 drop followed by recent recovery",
+        "evidence_detail": "Gabe tracked at least two additional health/medical sites with identical volatility pattern: significant traffic drop beginning July 8, then recent recovery. This follows earlier pattern of YMYL sites being hit during core updates. No sample size or traffic numbers disclosed; pattern identified through cross-site observation of Search Console data trends. Caveat: correlation with specific update unconfirmed, recovery may be partial or temporary.",
+        "who_it_affects": "publisher",
+        "what_to_do": "监控YMYL页面流量波动，记录恢复节点与内容变更的对应关系",
         "confidence": "Observed",
-        "impact": "P2",
+        "impact": "P1",
         "section": "SERP & Algorithm Signals",
+        "score": 72,
         "sources": [
           {
             "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2088982365452239101"
+            "url": "https://x.com/glenngabe/status/2088977939543068682",
+            "excerpt": "R to @glenngabe: Two more health/medical sites seeing big drops in July and then recovering recently. That's across visi",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
       },
       {
-        "what_happened": "The Future of Discoverability #seo https://www.leadershipinseo.com/p/the-future-of-discoverability?ck_subscriber_id=2782",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "sitebulb",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Single YMYL health site shows massive July 8 drop with ongoing recovery | 单一YMYL健康网站7月8日暴跌后持续恢复",
+        "why_it_matters": "具体案例验证了YMYL领域算法敏感性的时间边界，为同类站点提供可对标的时间锚点",
+        "evidence": "Glenn Gabe observation: specific health site 'huge drop on 7/8' with visible recovery trajectory in Search Console data",
+        "evidence_detail": "Individual site case showing dramatic July 8 traffic collapse followed by recovery pattern. Site noted as 'seeming to recover' — recovery incomplete at time of observation. No domain disclosed, no traffic volume or percentage change specified. Single-site observation without comparative baseline; value lies in temporal alignment with other reported cases suggesting coordinated algorithmic event.",
+        "who_it_affects": "publisher",
+        "what_to_do": "检查7月8日前后内容更新记录，排查E-E-A-T信号变化",
         "confidence": "Observed",
         "impact": "P2",
         "section": "SERP & Algorithm Signals",
+        "score": 65,
         "sources": [
           {
-            "name": "sitebulb",
-            "url": "https://x.com/sitebulb/status/2089041273017577580"
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2088975409505341748",
+            "excerpt": "Not sure what happened here with this YMYL site (health), but that's a huge drop on 7/8... The site does seem to be reco",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
-      },
+      }
+    ],
+    "AI Search / GEO": [
       {
-        "what_happened": "R to @cyberandy: V2 is on its way. A dual neuro-symbolic loop and an ontology help the Agent evolve by: 1. Defining the ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "cyberandy",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
+        "what_happened": "Aleyda releases SEO + AI Search weekly digest with international GEO focus | Aleyda发布含国际GEO视角的SEO+AI搜索周报",
+        "why_it_matters": "国际GEO策略需要持续关注Google降低Shopping订阅门槛等政策变化对搜索格局的重塑",
+        "evidence": "Aleyda SEOFOMO newsletter August 16 edition: covers Google subscriber requirement changes, AI search developments",
+        "evidence_detail": "Weekly curation from established practitioner; includes Google lowering subscriber requirements for Shopping (specific threshold not stated in preview). Newsletter format means full methodology and sources behind paywall. No original data presented in social preview; value is curation of multiple signals into actionable summary. International angle noted but not detailed in available text.",
+        "who_it_affects": "international",
+        "what_to_do": "查阅完整SEOFOMO简报，提取国际GEO相关策略更新",
         "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "cyberandy",
-            "url": "https://x.com/cyberandy/status/2088918414450364655"
-          }
-        ]
-      },
-      {
-        "what_happened": "🎉 Your Latest SEO + AI Search Updates [From #SEOFOMO - August 16, 2026] 👇 * ​Google Lowers Subscriber Requirements For S",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "aleyda",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "score": 58,
         "sources": [
           {
             "name": "aleyda",
-            "url": "https://x.com/aleyda/status/2088999237430198286"
+            "url": "https://x.com/aleyda/status/2088999237430198286",
+            "excerpt": "🎉 Your Latest SEO + AI Search Updates [From #SEOFOMO - August 16, 2026] 👇 * ​Google Lowers Subscriber Requirements For S",
+            "author": "aleyda",
+            "source_type": "expert_analysis"
           }
         ]
-      },
+      }
+    ],
+    "Unconfirmed Watchlist": [
       {
-        "what_happened": "R to @glenngabe: Two more health/medical sites seeing big drops in July and then recovering recently. That's across visi",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
+        "what_happened": "Cyberandy previews V2 neuro-symbolic agent with ontology-driven evolution | Cyberandy预告V2神经符号Agent，支持本体驱动进化",
+        "why_it_matters": "神经符号+本体论的双循环架构可能是GEO优化的下一代技术栈，影响AI Agent可发现性策略",
+        "evidence": "Cyberandy tweet thread: 'dual neuro-symbolic loop and an ontology help the Agent evolve'",
+        "evidence_detail": "Vendor announcement of upcoming product version with architectural claims. No released product, no reproducible results, no methodology disclosed. 'Neuro-symbolic' and 'ontology' are technically specific terms suggesting structured knowledge representation combined with neural processing, but implementation details absent. Commercial interest (sells AI/SEO services) limits confidence in claims. Worth monitoring as directional signal for AI agent optimization.",
+        "who_it_affects": "SaaS",
+        "what_to_do": "关注正式发布后的技术文档，评估本体映射在GEO中的实际应用",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 48,
         "sources": [
           {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2088977939543068682"
+            "name": "cyberandy",
+            "url": "https://x.com/cyberandy/status/2088918414450364655",
+            "excerpt": "R to @cyberandy: V2 is on its way. A dual neuro-symbolic loop and an ontology help the Agent evolve by: 1. Defining the",
+            "author": "cyberandy",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
           }
         ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "检查YMYL站点7月8日前后流量曲线，标记恢复节点",
+        "impact": "P1"
       },
       {
-        "what_happened": "We don't hang out here as much as we do on LinkedIn. Find us there at https://www.linkedin.com/company/sitebulb/. We don",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "sitebulb",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "sitebulb",
-            "url": "https://x.com/sitebulb/status/2088949168958050569"
-          }
-        ]
-      },
-      {
-        "what_happened": "Not sure what happened here with this YMYL site (health), but that's a huge drop on 7/8... The site does seem to be reco",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2088975409505341748"
-          }
-        ]
-      },
-      {
-        "what_happened": "Study: Whitespark Analyzed GBP Review Questions for 765 Businesses. Here’s What We Found. - via @Miriam_Ellis_ #seo http",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "sitebulb",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "sitebulb",
-            "url": "https://x.com/sitebulb/status/2088920480430297190"
-          }
-        ]
+        "what_to_do": "审阅SEOFOMO简报中Google Shopping订阅门槛变化详情",
+        "impact": "P3"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "Yep, they will continue to get smarter, AND the platforms will be forced to clean up the BS. Note, I had Claude several ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Health/medical YMYL sites see sharp July drops, partial recovery | 医疗健康类YMYL网站7月暴跌后部分恢复",
+      "why_it_matters": "YMYL垂直领域持续经历极端波动性，表明Google对医疗内容的质量评估仍在剧烈调整，影响内容策略稳定性",
+      "evidence": "Glenn Gabe data research: multiple independent health/medical sites showing matching pattern of July 8 drop followed by recent recovery",
+      "evidence_detail": "Gabe tracked at least two additional health/medical sites with identical volatility pattern: significant traffic drop beginning July 8, then recent recovery. This follows earlier pattern of YMYL sites being hit during core updates. No sample size or traffic numbers disclosed; pattern identified through cross-site observation of Search Console data trends. Caveat: correlation with specific update unconfirmed, recovery may be partial or temporary.",
+      "who_it_affects": "publisher",
+      "what_to_do": "监控YMYL页面流量波动，记录恢复节点与内容变更的对应关系",
       "confidence": "Observed",
-      "impact": "P2",
+      "impact": "P1",
       "section": "SERP & Algorithm Signals",
+      "score": 72,
       "sources": [
         {
           "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2088982365452239101"
+          "url": "https://x.com/glenngabe/status/2088977939543068682",
+          "excerpt": "R to @glenngabe: Two more health/medical sites seeing big drops in July and then recovering recently. That's across visi",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "The Future of Discoverability #seo https://www.leadershipinseo.com/p/the-future-of-discoverability?ck_subscriber_id=2782",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "sitebulb",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Single YMYL health site shows massive July 8 drop with ongoing recovery | 单一YMYL健康网站7月8日暴跌后持续恢复",
+      "why_it_matters": "具体案例验证了YMYL领域算法敏感性的时间边界，为同类站点提供可对标的时间锚点",
+      "evidence": "Glenn Gabe observation: specific health site 'huge drop on 7/8' with visible recovery trajectory in Search Console data",
+      "evidence_detail": "Individual site case showing dramatic July 8 traffic collapse followed by recovery pattern. Site noted as 'seeming to recover' — recovery incomplete at time of observation. No domain disclosed, no traffic volume or percentage change specified. Single-site observation without comparative baseline; value lies in temporal alignment with other reported cases suggesting coordinated algorithmic event.",
+      "who_it_affects": "publisher",
+      "what_to_do": "检查7月8日前后内容更新记录，排查E-E-A-T信号变化",
       "confidence": "Observed",
       "impact": "P2",
       "section": "SERP & Algorithm Signals",
+      "score": 65,
       "sources": [
         {
-          "name": "sitebulb",
-          "url": "https://x.com/sitebulb/status/2089041273017577580"
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2088975409505341748",
+          "excerpt": "Not sure what happened here with this YMYL site (health), but that's a huge drop on 7/8... The site does seem to be reco",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "R to @cyberandy: V2 is on its way. A dual neuro-symbolic loop and an ontology help the Agent evolve by: 1. Defining the ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "cyberandy",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
+      "what_happened": "Aleyda releases SEO + AI Search weekly digest with international GEO focus | Aleyda发布含国际GEO视角的SEO+AI搜索周报",
+      "why_it_matters": "国际GEO策略需要持续关注Google降低Shopping订阅门槛等政策变化对搜索格局的重塑",
+      "evidence": "Aleyda SEOFOMO newsletter August 16 edition: covers Google subscriber requirement changes, AI search developments",
+      "evidence_detail": "Weekly curation from established practitioner; includes Google lowering subscriber requirements for Shopping (specific threshold not stated in preview). Newsletter format means full methodology and sources behind paywall. No original data presented in social preview; value is curation of multiple signals into actionable summary. International angle noted but not detailed in available text.",
+      "who_it_affects": "international",
+      "what_to_do": "查阅完整SEOFOMO简报，提取国际GEO相关策略更新",
       "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "cyberandy",
-          "url": "https://x.com/cyberandy/status/2088918414450364655"
-        }
-      ]
-    },
-    {
-      "what_happened": "🎉 Your Latest SEO + AI Search Updates [From #SEOFOMO - August 16, 2026] 👇 * ​Google Lowers Subscriber Requirements For S",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "aleyda",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 58,
       "sources": [
         {
           "name": "aleyda",
-          "url": "https://x.com/aleyda/status/2088999237430198286"
+          "url": "https://x.com/aleyda/status/2088999237430198286",
+          "excerpt": "🎉 Your Latest SEO + AI Search Updates [From #SEOFOMO - August 16, 2026] 👇 * ​Google Lowers Subscriber Requirements For S",
+          "author": "aleyda",
+          "source_type": "expert_analysis"
         }
       ]
     },
     {
-      "what_happened": "R to @glenngabe: Two more health/medical sites seeing big drops in July and then recovering recently. That's across visi",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
+      "what_happened": "Cyberandy previews V2 neuro-symbolic agent with ontology-driven evolution | Cyberandy预告V2神经符号Agent，支持本体驱动进化",
+      "why_it_matters": "神经符号+本体论的双循环架构可能是GEO优化的下一代技术栈，影响AI Agent可发现性策略",
+      "evidence": "Cyberandy tweet thread: 'dual neuro-symbolic loop and an ontology help the Agent evolve'",
+      "evidence_detail": "Vendor announcement of upcoming product version with architectural claims. No released product, no reproducible results, no methodology disclosed. 'Neuro-symbolic' and 'ontology' are technically specific terms suggesting structured knowledge representation combined with neural processing, but implementation details absent. Commercial interest (sells AI/SEO services) limits confidence in claims. Worth monitoring as directional signal for AI agent optimization.",
+      "who_it_affects": "SaaS",
+      "what_to_do": "关注正式发布后的技术文档，评估本体映射在GEO中的实际应用",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 48,
       "sources": [
         {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2088977939543068682"
-        }
-      ]
-    },
-    {
-      "what_happened": "We don't hang out here as much as we do on LinkedIn. Find us there at https://www.linkedin.com/company/sitebulb/. We don",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "sitebulb",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "sitebulb",
-          "url": "https://x.com/sitebulb/status/2088949168958050569"
-        }
-      ]
-    },
-    {
-      "what_happened": "Not sure what happened here with this YMYL site (health), but that's a huge drop on 7/8... The site does seem to be reco",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2088975409505341748"
-        }
-      ]
-    },
-    {
-      "what_happened": "Study: Whitespark Analyzed GBP Review Questions for 765 Businesses. Here’s What We Found. - via @Miriam_Ellis_ #seo http",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "sitebulb",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "sitebulb",
-          "url": "https://x.com/sitebulb/status/2088920480430297190"
+          "name": "cyberandy",
+          "url": "https://x.com/cyberandy/status/2088918414450364655",
+          "excerpt": "R to @cyberandy: V2 is on its way. A dual neuro-symbolic loop and an ontology help the Agent evolve by: 1. Defining the",
+          "author": "cyberandy",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
         }
       ]
     }
@@ -404,6 +332,17 @@
     },
     "candidates_fetched": 27,
     "candidates_fresh": 14,
-    "llm_provider": ""
-  }
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "检查YMYL站点7月8日前后流量曲线，标记恢复节点",
+      "impact": "P1"
+    },
+    {
+      "text": "审阅SEOFOMO简报中Google Shopping订阅门槛变化详情",
+      "impact": "P3"
+    }
+  ],
+  "dropped_count": 4
 }

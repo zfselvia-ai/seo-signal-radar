@@ -105,12 +105,15 @@ def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None):
     """
     import httpx
     headers = {"User-Agent": "Mozilla/5.0 (compatible; SEO-Signal-Radar/1.0)"}
+    # 25s, not 8s: when nitter.net's timeline cache for a handle has expired,
+    # the request triggers a live re-fetch from X and regularly takes 10-20s.
+    # An 8s timeout kills exactly the handles whose cache just went cold —
+    # they look dead for the whole run but work fine an hour later.
     for host in instances:
         url = f"https://{host}/{handle}/rss"
         try:
-            # Hard 8s timeout per instance so one slow/dead instance can't
-            # stall the whole fetch for minutes.
-            r = httpx.get(url, headers=headers, timeout=8, follow_redirects=True)
+            r = httpx.get(url, headers=headers, timeout=25,
+                          follow_redirects=True)
             if r.status_code >= 400:
                 continue
             parsed = feedparser.parse(r.text)
