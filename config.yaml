@@ -190,6 +190,12 @@ x:
   tweets_per_handle: 15
   nitter_instances:
     - nitter.net
+  # nitter.net is the only public instance still serving RSS without a bot
+  # shield (verified 2026-08-19; poast.org / lightbrd.com / privacyredirect
+  # all gate RSS behind JS challenges). Pacing + retry keep a 29-handle run
+  # under its rate limit.
+  request_delay_seconds: 1.5
+  retry_pause_seconds: 10
 
   # ONE ACCOUNT, MANY TAGS.
   # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
@@ -421,8 +427,12 @@ llm:
   # "auto" = use whichever API key you set in .env / GitHub secrets.
   # Force one explicitly with: scnet(glm) | moonshot(kimi) | anthropic | openai
   provider: "auto"
-  # SCNet (超算互联网) — SCNet-Max (fast, non-reasoning) via OpenAI-compatible API
-  scnet_model: "SCNet-Max"
+  # SCNet (超算互联网) — Kimi-K2.6 via OpenAI-compatible API.
+  # Do NOT switch back to SCNet-Max: it silently became a reasoning model that
+  # burns the whole max_output_tokens budget on thinking and returns empty
+  # content (finish=length) — every daily digest then fell back to raw,
+  # uncurated items. Kimi-K2.6 returns complete JSON directly.
+  scnet_model: "Kimi-K2.6"
   scnet_base_url: "https://api.scnet.cn/api/llm/v1"
   moonshot_model: "kimi-k2.5"
   moonshot_base_url: "https://api.moonshot.ai/v1"

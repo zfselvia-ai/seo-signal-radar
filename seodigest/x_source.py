@@ -151,11 +151,14 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                             "failed_names": []})
         return []
     import feedparser
+    import time
     from datetime import timedelta
 
     xcfg = cfg["x"]
     per = xcfg.get("tweets_per_handle", 15)
     instances = xcfg.get("nitter_instances") or NITTER_INSTANCES
+    request_delay = xcfg.get("request_delay_seconds", 1.5)
+    retry_pause = xcfg.get("retry_pause_seconds", 10)
     weights = (cfg.get("scoring") or {}).get("source_weights", {})
     accounts = _resolve_accounts(xcfg)
     items: List[Item] = []
@@ -177,6 +180,12 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         group = (meta.get("tags") or ["general"])[0]
         cutoff = evergreen_since if meta.get("source_type") in evergreen_types else since
         tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
+        if tweets is None:
+            # nitter.net rate-limits bursts: the tail of a 29-handle run fails
+            # at random and the handles look dead. One polite retry after a
+            # pause recovers most of them.
+            time.sleep(retry_pause)
+            tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
         # Reachability, not productivity: an account that simply didn't post
         # today returned a valid feed. `_fetch_handle` returns None only when
         # every Nitter instance refused.
@@ -187,6 +196,9 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                 continue
             if _within(t.published, cutoff):
                 items.append(t)
+        # Pacing: a burst of back-to-back requests is what trips nitter.net's
+        # rate limiter partway through the run.
+        time.sleep(request_delay)
 
     LAST_HEALTH.update({
         "enabled": True,
