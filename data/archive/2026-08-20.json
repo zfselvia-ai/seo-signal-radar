@@ -1,0 +1,555 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T02:21:19.214144+00:00",
+  "headline": "ChatGPT Search shifts to site: fan-out, slashes Reddit citations 86%",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "John Mueller: Google does not roll out updates prior to announcement | John Mueller确认：Google不会在正式宣布前推出更新",
+        "why_it_matters": "澄清了近期关于8月垃圾内容更新提前推出的误解，避免SEO对排名波动的错误归因。",
+        "evidence": "John Mueller via Search Engine Roundtable/Search Engine Journal: Google does not release updates prior to announcing them; pre-announcement volatility is from other system changes.",
+        "evidence_detail": "John Mueller explicitly stated that Google does not release updates like the spam update before their official announcement. This clarifies that ranking volatility observed before the August 2026 spam update announcement was due to other system changes (including 'smaller core updates'), not the spam update itself. Glenn Gabe and Barry Schwartz both amplified this clarification. This is a recurring Google communication pattern but important for correct diagnosis of ranking changes.",
+        "who_it_affects": "all",
+        "what_to_do": "不要将8月19日前的排名波动归因于本次垃圾内容更新；继续监控但避免错误诊断",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Official Explanations",
+        "score": 75,
+        "sources": [
+          {
+            "name": "Glenn Gabe",
+            "url": "https://x.com/glenngabe/status/2090047816106221716",
+            "excerpt": "Lots of confusion about this. Google has said many times that what you saw BEFORE the update rolls out was NOT the update... Remember, Google pushes many other changes all the time, including what they call \"smaller core updates\" which is when they update a system, or several, outside of a core update. So for the August spam update, what you saw recently was not the spam update.. Lots of confusion about this. Google has said many times that what you saw BEFORE the update rolls out was NOT the update... Remember, Google pushes many other changes all the time, including what they call \"smaller core updates\" which is when they update a system, or several, outside of a core update. So for the…",
+            "author": "@glenngabe",
+            "published": "2026-08-19T12:06:45+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Google expands generative UI from AI Mode to AI Overviews | Google将生成式UI从AI Mode扩展至AI Overviews",
+        "why_it_matters": "AI Overviews的视觉呈现正在从纯文本摘要转向交互式工具布局，影响传统搜索结果页的流量分配和点击率优化空间。",
+        "evidence": "Search Engine Journal reports generative UI, which builds custom visual layouts and interactive tools, has started reaching AI Overviews after launching in AI Mode last year.",
+        "evidence_detail": "Google's generative UI creates custom visual layouts and interactive tools rather than standard text snippets. The feature launched in AI Mode (the conversational search interface) and is now expanding to AI Overviews (the standard search result summaries). This represents a shift from text-based answers to richer, more interactive formats. No traffic impact data is yet available. The expansion appears gradual rather than universal.",
+        "who_it_affects": "all",
+        "what_to_do": "监控AI Overviews中你的品牌查询是否出现交互式元素；评估现有结构化数据是否支持富媒体展示",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 72,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/google-expands-generative-ui-beyond-ai-mode-into-ai-overviews/586452/",
+            "excerpt": "Google Expands Generative UI Beyond AI Mode Into AI Overviews via @sejournal, @MattGSouthern. Google's generative UI, which builds custom visual layouts and interactive tools, has started reaching AI Overviews after launching in AI Mode last year. The post Google Expands Generative UI Beyond AI Mode Into AI Overviews appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-08-19T19:00:27+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "Microsoft Advertising rolls out AI Max globally | Microsoft Advertising全球推出AI Max功能",
+        "why_it_matters": "AI驱动的广告自动化进一步扩展，搜索广告竞争格局持续演变，需关注竞价策略调整。",
+        "evidence": "Search Engine Journal reports Microsoft Advertising rolling out AI Max globally with expanded Search matching, text customization, URL expansion and new advertiser controls.",
+        "evidence_detail": "Microsoft Advertising's AI Max, previously in limited testing, is now globally available. Features include: expanded Search matching (broader query coverage), text customization (AI-generated ad copy variations), URL expansion (dynamic landing pages), and new advertiser controls for brand safety and placement exclusions. This represents Microsoft's counter to Google's AI-powered campaign features. Impact on CPCs and competitive dynamics in Bing Ads ecosystem is yet unmeasured.",
+        "who_it_affects": "ecommerce / SaaS",
+        "what_to_do": "评估AI Max功能是否适合你的Bing Ads账户；测试自动文本生成与人工文案的CTR对比",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 65,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/microsoft-advertising-rolls-out-ai-max-globally/586459/",
+            "excerpt": "Microsoft Advertising Rolls Out AI Max Globally via @sejournal, @brookeosmundson. Microsoft Advertising is rolling out AI Max globally, bringing expanded Search matching, text customization, URL expansion and new advertiser controls to Search campaigns. The post Microsoft Advertising Rolls Out AI Max Globally appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-08-19T19:41:53+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "ChatGPT Search massively adopted site: operator fan-outs on Aug 8; Reddit citations fell 86% | ChatGPT搜索8月8日起大规模使用site:限定查询，Reddit引用量暴跌86%",
+        "why_it_matters": "OpenAI正在用'官方域名优先'的粗暴信任过滤替代开放网页检索，非官方站点在ChatGPT Search中的可见性急剧下降，GEO策略需重新校准。",
+        "evidence": "Promptwatch data: site: searches jumped from 0.4% to ~17% of background queries on Aug 8; Reddit citations fell from 3.83% to 0.52% between Aug 14-17 per Search Engine Land/SEJ reporting on Promptwatch and Suganthan analysis.",
+        "evidence_detail": "Promptwatch tracked the site: operator spike in real-time. The 0.4%→17% jump occurred in a single day (August 8). Reddit's citation share inside ChatGPT Search dropped from 3.83% to 0.52% between August 14-17 — an 86% decline. Multiple independent observers (Lily Ray, Suganthan, Search Engine Land) confirmed the correlation. The mechanism appears to be: ChatGPT first generates a search naming brands, then runs site: lookups on each brand's own domain for pricing/specs. This privileges .gov, .org, and established brand domains while excluding forums and lesser-known publishers. Caveat: the 'official domain' guess is sometimes wrong, hitting parked sites.",
+        "who_it_affects": "publisher / ecommerce / SaaS",
+        "what_to_do": "测试你的品牌是否出现在ChatGPT的品类查询中；确保官网在site:查询下能直接提供价格、规格等关键信息；监控第三方评测和媒体报道中的品牌提及",
+        "confidence": "Data-backed",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 85,
+        "how_to_test": "Ask your core category question 5 times in ChatGPT Search, note which brands appear; then run site:yourdomain.com for key product pages and check if pricing/specs render in plain HTML without JS dependency",
+        "success_metric": "Brand mention rate in ChatGPT Search responses for target category queries; site:yourdomain.com crawl success rate for key pages",
+        "effort": "Medium effort (2-4 hours audit); low risk",
+        "sources": [
+          {
+            "name": "Lily Ray / Promptwatch / Suganthan",
+            "url": "https://x.com/lilyraynyc/status/2090193398766739641",
+            "excerpt": "RT by @lilyraynyc: ChatGPT Search changed how it looks things up on 8 August. It started using site: at scale. Promptwatch saw those domain-scoped searches jump from about 0.4% of background queries to about 17% in a day. Same week, the queries started saying “official” more often. @suganthan has been reading the traffic: one search that already names the brands, then a site: look-up on each brand’s own website for pricing and specs. Reddit’s share of citations inside ChatGPT Search then fell from 3.83% to 0.52% between 14 and 17 August. The first slip was 8 August, the same day as the site: change. Google’s AI Overviews and AI Mode did not do this. So this is not “Reddit stopped working.”…",
+            "author": "@lilyraynyc",
+            "published": "2026-08-19T21:45:14+00:00",
+            "source_type": "expert_analysis"
+          },
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/why-reddits-chatgpt-citation-drop-isnt-fully-explained/586479/",
+            "excerpt": "Why Reddit’s ChatGPT Citation Drop Isn’t Fully Explained via @sejournal, @MattGSouthern. New Promptwatch data shows a sharp drop in Reddit's ChatGPT Search citations this month. The post Why Reddit&#8217;s ChatGPT Citation Drop Isn&#8217;t Fully Explained appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-08-19T22:03:26+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "ChatGPT 5.6 reduces fan-out queries and citations for listicles, comparisons | ChatGPT 5.6减少列表、对比类内容的fan-out查询和引用",
+        "why_it_matters": "GEO优化的列表和对比内容可能正被OpenAI降权，需重新评估内容格式策略。",
+        "evidence": "Peec AI data shared by Lily Ray: ChatGPT 5.6 reducing fan-out queries and citations for listicles and comparison content.",
+        "evidence_detail": "Tomek Rudzki from Peec AI shared data with Lily Ray indicating ChatGPT 5.6 has reduced fan-out queries and citations specifically for listicles and comparison-type content. This follows the broader pattern of OpenAI reducing reliance on forum/reddit content and affiliate-style comparison pages. The data source (Peec AI) is a specialized monitoring tool, but specific methodology and sample size were not detailed in the social post. Treat as directional signal requiring independent verification.",
+        "who_it_affects": "publisher / ecommerce / SaaS",
+        "what_to_do": "监控你的列表/对比内容在ChatGPT中的引用情况；测试深度单主题内容替代列表格式的表现",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 70,
+        "sources": [
+          {
+            "name": "Lily Ray / Peec AI",
+            "url": "https://x.com/lilyraynyc/status/2090256147441746150",
+            "excerpt": "New Peec AI data from suggests ChatGPT 5.6 is reducing fan-out queries and citations for listicles, comparisons. Are they cracking down on GEO-focused articles? @tomekrudzki @peecAI. New Peec AI data from suggests ChatGPT 5.6 is reducing fan-out queries and citations for listicles, comparisons. Are they cracking down on GEO-focused articles? @tomekrudzki @peecAI Article ChatGPT is Changing Which Page Types it Cites in AI Responses (New Peec AI Data) Wow, I found this VERY interesting: Tomek Rudzki from Peec AI just shared some brand new data with me regarding ChatGPT&apos;s evolving search behavior with the launch of 5.6. Earlier this week, I",
+            "author": "@lilyraynyc",
+            "published": "2026-08-20T01:54:35+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Research & Retrieval": [
+      {
+        "what_happened": "Study: Gemini cites same sources only 40% of the time for identical queries | 研究：Gemini对相同查询的引用一致性仅40%",
+        "why_it_matters": "AI搜索引用具有高度不确定性，品牌无法依赖单一优化点；需建立多触点的AI可见性策略。",
+        "evidence": "TheSocialDude study of 14,472 AI citations across 1,487 local search queries; Gemini source match rate ~40% for identical questions.",
+        "evidence_detail": "Ben Fisher (TheSocialDude) analyzed 14,472 AI citations across 1,487 local search queries. Key finding: when asked the same question, Gemini's cited sources matched only 40% of the time — indicating high variability in AI search citations. Second finding: a business's own website was the most frequently cited source, suggesting on-site control remains significant. The study focused on local search queries; generalizability to non-local queries is unclear. Marie Haynes contributed a quote, lending practitioner validation.",
+        "who_it_affects": "local / all",
+        "what_to_do": "对同一查询多次测试AI引用结果；确保官网信息完整准确以最大化被引用概率；不依赖单一引用来源",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Research & Retrieval",
+        "score": 78,
+        "sources": [
+          {
+            "name": "Marie Haynes / TheSocialDude",
+            "url": "https://x.com/Marie_Haynes/status/2090126912651690174",
+            "excerpt": "Fascinating study by @TheSocialDude on 14,000+ AI search citations: ▪️ When asked the same question, Gemini's cited sources matched only 40% of the time. ▪️ Your own website is the most often cited source - you control much of what AI models say about you. Happy to have contributed a quote!. Fascinating study by @TheSocialDude on 14,000+ AI search citations: ▪️ When asked the same question, Gemini's cited sources matched only 40% of the time. ▪️ Your own website is the most often cited source - you control much of what AI models say about you. Happy to have contributed a quote! Ben Fisher (@TheSocialDude) We analyzed 14,472 AI citations across 1,487 local search queries to see what Gemini…",
+            "author": "@Marie_Haynes",
+            "published": "2026-08-19T17:21:03+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "SEOFOMO survey: content expansion tops AI Search visibility tactics (48%) | SEOFOMO调查：内容扩展成AI搜索可见性首要策略(48%)",
+        "why_it_matters": "社区实证数据确认AI Search优化仍回归搜索基本面：全面覆盖意图、技术可抓取性、结构化数据——而非玄学技巧。",
+        "evidence": "SEOFOMO State of AI Search Optimization Survey, 80 responses in 3 days: expanding content for questions/topics/intents 48%, restructuring content 43%, improving crawlability/accessibility 40%, structured data 26%.",
+        "evidence_detail": "Survey of 80 SEO practitioners conducted by Aleyda Solis/SEOFOMO community. Self-reported activities with 'meaningful positive impact' on AI Search visibility. Top response: expanding content to cover questions/topics/intents (38/80 = 48%). Restructuring content for retrievability followed at 43%. Technical crawlability/accessibility at 40%. Structured data lagged at 26%. Self-reported data with potential selection bias toward active practitioners; no control group or causal claim. Still useful as directional signal of what's working in the field.",
+        "who_it_affects": "all",
+        "what_to_do": "审计内容缺口：用AlsoAsked/AnswerThePublic补全问题覆盖；检查H2-H3结构是否直接回答查询意图",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 68,
+        "how_to_test": "Pick 10 underperforming pages; expand each with 3-5 directly-answered sub-questions in H2/H3 format; compare impressions at 30/60 days",
+        "success_metric": "Impressions from AI Mode / AI Overviews queries; average position for question-keywords",
+        "effort": "Low-medium (content team dependent); low risk",
+        "sources": [
+          {
+            "name": "Aleyda Solis / SEOFOMO",
+            "url": "https://x.com/aleyda/status/2090089168332267525",
+            "excerpt": "📊 After just 3 days, the #SEOFOMO State of AI Search Optimization Survey has gotten 80 answers and we can already see some interesting insights, like the activities most often reported as delivering a meaningful positive impact on AI Search visibility: * Expanding content to better cover relevant questions, topics and intents with 38 responses (48%) * Restructuring content to make answers and information easier to retrieve with 34 (43%) * Improving technical crawlability and accessibility for AI Search platforms with 32 (40%) * Structured data follows with 21 responses (26%). Note how the most impactful activities focus on making relevant information more comprehensive, easier to retrieve…",
+            "author": "@aleyda",
+            "published": "2026-08-19T14:51:04+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Tools, Papers & Open Source": [
+      {
+        "what_happened": "Google Trends adds explore maps and regional breakdown | Google Trends新增探索地图和区域细分功能",
+        "why_it_matters": "为国际SEO和本地SEO提供更精细的地理需求洞察，支持更精准的内容本地化决策。",
+        "evidence": "Search Engine Roundtable reports Google Trends added interactive explore maps and regional breakdown features for clearer data storytelling.",
+        "evidence_detail": "Google announced two new features: interactive 'explore maps' for visualizing trend data geographically, and 'regional breakdown' for comparing interest across sub-regions. Designed for clearer data storytelling. The feature appears to be rolling out globally. No impact on search rankings; this is a research tool enhancement.",
+        "who_it_affects": "international / local",
+        "what_to_do": "利用新功能识别区域需求差异，指导本地化内容策略",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "score": 62,
+        "sources": [],
+        "unverified": true
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "测试你的品牌在ChatGPT Search品类查询中的出现率，并验证site:yourdomain.com下的页面信息完整性",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "审计列表/对比格式内容在AI搜索中的表现，考虑增加深度单主题内容测试",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "利用Google Trends新地图功能识别国际市场的区域需求差异",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "ChatGPT Search massively adopted site: operator fan-outs on Aug 8; Reddit citations fell 86% | ChatGPT搜索8月8日起大规模使用site:限定查询，Reddit引用量暴跌86%",
+      "why_it_matters": "OpenAI正在用'官方域名优先'的粗暴信任过滤替代开放网页检索，非官方站点在ChatGPT Search中的可见性急剧下降，GEO策略需重新校准。",
+      "evidence": "Promptwatch data: site: searches jumped from 0.4% to ~17% of background queries on Aug 8; Reddit citations fell from 3.83% to 0.52% between Aug 14-17 per Search Engine Land/SEJ reporting on Promptwatch and Suganthan analysis.",
+      "evidence_detail": "Promptwatch tracked the site: operator spike in real-time. The 0.4%→17% jump occurred in a single day (August 8). Reddit's citation share inside ChatGPT Search dropped from 3.83% to 0.52% between August 14-17 — an 86% decline. Multiple independent observers (Lily Ray, Suganthan, Search Engine Land) confirmed the correlation. The mechanism appears to be: ChatGPT first generates a search naming brands, then runs site: lookups on each brand's own domain for pricing/specs. This privileges .gov, .org, and established brand domains while excluding forums and lesser-known publishers. Caveat: the 'official domain' guess is sometimes wrong, hitting parked sites.",
+      "who_it_affects": "publisher / ecommerce / SaaS",
+      "what_to_do": "测试你的品牌是否出现在ChatGPT的品类查询中；确保官网在site:查询下能直接提供价格、规格等关键信息；监控第三方评测和媒体报道中的品牌提及",
+      "confidence": "Data-backed",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 85,
+      "how_to_test": "Ask your core category question 5 times in ChatGPT Search, note which brands appear; then run site:yourdomain.com for key product pages and check if pricing/specs render in plain HTML without JS dependency",
+      "success_metric": "Brand mention rate in ChatGPT Search responses for target category queries; site:yourdomain.com crawl success rate for key pages",
+      "effort": "Medium effort (2-4 hours audit); low risk",
+      "sources": [
+        {
+          "name": "Lily Ray / Promptwatch / Suganthan",
+          "url": "https://x.com/lilyraynyc/status/2090193398766739641",
+          "excerpt": "RT by @lilyraynyc: ChatGPT Search changed how it looks things up on 8 August. It started using site: at scale. Promptwatch saw those domain-scoped searches jump from about 0.4% of background queries to about 17% in a day. Same week, the queries started saying “official” more often. @suganthan has been reading the traffic: one search that already names the brands, then a site: look-up on each brand’s own website for pricing and specs. Reddit’s share of citations inside ChatGPT Search then fell from 3.83% to 0.52% between 14 and 17 August. The first slip was 8 August, the same day as the site: change. Google’s AI Overviews and AI Mode did not do this. So this is not “Reddit stopped working.”…",
+          "author": "@lilyraynyc",
+          "published": "2026-08-19T21:45:14+00:00",
+          "source_type": "expert_analysis"
+        },
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/why-reddits-chatgpt-citation-drop-isnt-fully-explained/586479/",
+          "excerpt": "Why Reddit’s ChatGPT Citation Drop Isn’t Fully Explained via @sejournal, @MattGSouthern. New Promptwatch data shows a sharp drop in Reddit's ChatGPT Search citations this month. The post Why Reddit&#8217;s ChatGPT Citation Drop Isn&#8217;t Fully Explained appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-08-19T22:03:26+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google expands generative UI from AI Mode to AI Overviews | Google将生成式UI从AI Mode扩展至AI Overviews",
+      "why_it_matters": "AI Overviews的视觉呈现正在从纯文本摘要转向交互式工具布局，影响传统搜索结果页的流量分配和点击率优化空间。",
+      "evidence": "Search Engine Journal reports generative UI, which builds custom visual layouts and interactive tools, has started reaching AI Overviews after launching in AI Mode last year.",
+      "evidence_detail": "Google's generative UI creates custom visual layouts and interactive tools rather than standard text snippets. The feature launched in AI Mode (the conversational search interface) and is now expanding to AI Overviews (the standard search result summaries). This represents a shift from text-based answers to richer, more interactive formats. No traffic impact data is yet available. The expansion appears gradual rather than universal.",
+      "who_it_affects": "all",
+      "what_to_do": "监控AI Overviews中你的品牌查询是否出现交互式元素；评估现有结构化数据是否支持富媒体展示",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 72,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/google-expands-generative-ui-beyond-ai-mode-into-ai-overviews/586452/",
+          "excerpt": "Google Expands Generative UI Beyond AI Mode Into AI Overviews via @sejournal, @MattGSouthern. Google's generative UI, which builds custom visual layouts and interactive tools, has started reaching AI Overviews after launching in AI Mode last year. The post Google Expands Generative UI Beyond AI Mode Into AI Overviews appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-08-19T19:00:27+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "SEOFOMO survey: content expansion tops AI Search visibility tactics (48%) | SEOFOMO调查：内容扩展成AI搜索可见性首要策略(48%)",
+      "why_it_matters": "社区实证数据确认AI Search优化仍回归搜索基本面：全面覆盖意图、技术可抓取性、结构化数据——而非玄学技巧。",
+      "evidence": "SEOFOMO State of AI Search Optimization Survey, 80 responses in 3 days: expanding content for questions/topics/intents 48%, restructuring content 43%, improving crawlability/accessibility 40%, structured data 26%.",
+      "evidence_detail": "Survey of 80 SEO practitioners conducted by Aleyda Solis/SEOFOMO community. Self-reported activities with 'meaningful positive impact' on AI Search visibility. Top response: expanding content to cover questions/topics/intents (38/80 = 48%). Restructuring content for retrievability followed at 43%. Technical crawlability/accessibility at 40%. Structured data lagged at 26%. Self-reported data with potential selection bias toward active practitioners; no control group or causal claim. Still useful as directional signal of what's working in the field.",
+      "who_it_affects": "all",
+      "what_to_do": "审计内容缺口：用AlsoAsked/AnswerThePublic补全问题覆盖；检查H2-H3结构是否直接回答查询意图",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 68,
+      "how_to_test": "Pick 10 underperforming pages; expand each with 3-5 directly-answered sub-questions in H2/H3 format; compare impressions at 30/60 days",
+      "success_metric": "Impressions from AI Mode / AI Overviews queries; average position for question-keywords",
+      "effort": "Low-medium (content team dependent); low risk",
+      "sources": [
+        {
+          "name": "Aleyda Solis / SEOFOMO",
+          "url": "https://x.com/aleyda/status/2090089168332267525",
+          "excerpt": "📊 After just 3 days, the #SEOFOMO State of AI Search Optimization Survey has gotten 80 answers and we can already see some interesting insights, like the activities most often reported as delivering a meaningful positive impact on AI Search visibility: * Expanding content to better cover relevant questions, topics and intents with 38 responses (48%) * Restructuring content to make answers and information easier to retrieve with 34 (43%) * Improving technical crawlability and accessibility for AI Search platforms with 32 (40%) * Structured data follows with 21 responses (26%). Note how the most impactful activities focus on making relevant information more comprehensive, easier to retrieve…",
+          "author": "@aleyda",
+          "published": "2026-08-19T14:51:04+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Study: Gemini cites same sources only 40% of the time for identical queries | 研究：Gemini对相同查询的引用一致性仅40%",
+      "why_it_matters": "AI搜索引用具有高度不确定性，品牌无法依赖单一优化点；需建立多触点的AI可见性策略。",
+      "evidence": "TheSocialDude study of 14,472 AI citations across 1,487 local search queries; Gemini source match rate ~40% for identical questions.",
+      "evidence_detail": "Ben Fisher (TheSocialDude) analyzed 14,472 AI citations across 1,487 local search queries. Key finding: when asked the same question, Gemini's cited sources matched only 40% of the time — indicating high variability in AI search citations. Second finding: a business's own website was the most frequently cited source, suggesting on-site control remains significant. The study focused on local search queries; generalizability to non-local queries is unclear. Marie Haynes contributed a quote, lending practitioner validation.",
+      "who_it_affects": "local / all",
+      "what_to_do": "对同一查询多次测试AI引用结果；确保官网信息完整准确以最大化被引用概率；不依赖单一引用来源",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "Research & Retrieval",
+      "score": 78,
+      "sources": [
+        {
+          "name": "Marie Haynes / TheSocialDude",
+          "url": "https://x.com/Marie_Haynes/status/2090126912651690174",
+          "excerpt": "Fascinating study by @TheSocialDude on 14,000+ AI search citations: ▪️ When asked the same question, Gemini's cited sources matched only 40% of the time. ▪️ Your own website is the most often cited source - you control much of what AI models say about you. Happy to have contributed a quote!. Fascinating study by @TheSocialDude on 14,000+ AI search citations: ▪️ When asked the same question, Gemini's cited sources matched only 40% of the time. ▪️ Your own website is the most often cited source - you control much of what AI models say about you. Happy to have contributed a quote! Ben Fisher (@TheSocialDude) We analyzed 14,472 AI citations across 1,487 local search queries to see what Gemini…",
+          "author": "@Marie_Haynes",
+          "published": "2026-08-19T17:21:03+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "ChatGPT 5.6 reduces fan-out queries and citations for listicles, comparisons | ChatGPT 5.6减少列表、对比类内容的fan-out查询和引用",
+      "why_it_matters": "GEO优化的列表和对比内容可能正被OpenAI降权，需重新评估内容格式策略。",
+      "evidence": "Peec AI data shared by Lily Ray: ChatGPT 5.6 reducing fan-out queries and citations for listicles and comparison content.",
+      "evidence_detail": "Tomek Rudzki from Peec AI shared data with Lily Ray indicating ChatGPT 5.6 has reduced fan-out queries and citations specifically for listicles and comparison-type content. This follows the broader pattern of OpenAI reducing reliance on forum/reddit content and affiliate-style comparison pages. The data source (Peec AI) is a specialized monitoring tool, but specific methodology and sample size were not detailed in the social post. Treat as directional signal requiring independent verification.",
+      "who_it_affects": "publisher / ecommerce / SaaS",
+      "what_to_do": "监控你的列表/对比内容在ChatGPT中的引用情况；测试深度单主题内容替代列表格式的表现",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 70,
+      "sources": [
+        {
+          "name": "Lily Ray / Peec AI",
+          "url": "https://x.com/lilyraynyc/status/2090256147441746150",
+          "excerpt": "New Peec AI data from suggests ChatGPT 5.6 is reducing fan-out queries and citations for listicles, comparisons. Are they cracking down on GEO-focused articles? @tomekrudzki @peecAI. New Peec AI data from suggests ChatGPT 5.6 is reducing fan-out queries and citations for listicles, comparisons. Are they cracking down on GEO-focused articles? @tomekrudzki @peecAI Article ChatGPT is Changing Which Page Types it Cites in AI Responses (New Peec AI Data) Wow, I found this VERY interesting: Tomek Rudzki from Peec AI just shared some brand new data with me regarding ChatGPT&apos;s evolving search behavior with the launch of 5.6. Earlier this week, I",
+          "author": "@lilyraynyc",
+          "published": "2026-08-20T01:54:35+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google Trends adds explore maps and regional breakdown | Google Trends新增探索地图和区域细分功能",
+      "why_it_matters": "为国际SEO和本地SEO提供更精细的地理需求洞察，支持更精准的内容本地化决策。",
+      "evidence": "Search Engine Roundtable reports Google Trends added interactive explore maps and regional breakdown features for clearer data storytelling.",
+      "evidence_detail": "Google announced two new features: interactive 'explore maps' for visualizing trend data geographically, and 'regional breakdown' for comparing interest across sub-regions. Designed for clearer data storytelling. The feature appears to be rolling out globally. No impact on search rankings; this is a research tool enhancement.",
+      "who_it_affects": "international / local",
+      "what_to_do": "利用新功能识别区域需求差异，指导本地化内容策略",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "score": 62,
+      "sources": [],
+      "unverified": true
+    },
+    {
+      "what_happened": "Microsoft Advertising rolls out AI Max globally | Microsoft Advertising全球推出AI Max功能",
+      "why_it_matters": "AI驱动的广告自动化进一步扩展，搜索广告竞争格局持续演变，需关注竞价策略调整。",
+      "evidence": "Search Engine Journal reports Microsoft Advertising rolling out AI Max globally with expanded Search matching, text customization, URL expansion and new advertiser controls.",
+      "evidence_detail": "Microsoft Advertising's AI Max, previously in limited testing, is now globally available. Features include: expanded Search matching (broader query coverage), text customization (AI-generated ad copy variations), URL expansion (dynamic landing pages), and new advertiser controls for brand safety and placement exclusions. This represents Microsoft's counter to Google's AI-powered campaign features. Impact on CPCs and competitive dynamics in Bing Ads ecosystem is yet unmeasured.",
+      "who_it_affects": "ecommerce / SaaS",
+      "what_to_do": "评估AI Max功能是否适合你的Bing Ads账户；测试自动文本生成与人工文案的CTR对比",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 65,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/microsoft-advertising-rolls-out-ai-max-globally/586459/",
+          "excerpt": "Microsoft Advertising Rolls Out AI Max Globally via @sejournal, @brookeosmundson. Microsoft Advertising is rolling out AI Max globally, bringing expanded Search matching, text customization, URL expansion and new advertiser controls to Search campaigns. The post Microsoft Advertising Rolls Out AI Max Globally appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-08-19T19:41:53+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "John Mueller: Google does not roll out updates prior to announcement | John Mueller确认：Google不会在正式宣布前推出更新",
+      "why_it_matters": "澄清了近期关于8月垃圾内容更新提前推出的误解，避免SEO对排名波动的错误归因。",
+      "evidence": "John Mueller via Search Engine Roundtable/Search Engine Journal: Google does not release updates prior to announcing them; pre-announcement volatility is from other system changes.",
+      "evidence_detail": "John Mueller explicitly stated that Google does not release updates like the spam update before their official announcement. This clarifies that ranking volatility observed before the August 2026 spam update announcement was due to other system changes (including 'smaller core updates'), not the spam update itself. Glenn Gabe and Barry Schwartz both amplified this clarification. This is a recurring Google communication pattern but important for correct diagnosis of ranking changes.",
+      "who_it_affects": "all",
+      "what_to_do": "不要将8月19日前的排名波动归因于本次垃圾内容更新；继续监控但避免错误诊断",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Official Explanations",
+      "score": 75,
+      "sources": [
+        {
+          "name": "Glenn Gabe",
+          "url": "https://x.com/glenngabe/status/2090047816106221716",
+          "excerpt": "Lots of confusion about this. Google has said many times that what you saw BEFORE the update rolls out was NOT the update... Remember, Google pushes many other changes all the time, including what they call \"smaller core updates\" which is when they update a system, or several, outside of a core update. So for the August spam update, what you saw recently was not the spam update.. Lots of confusion about this. Google has said many times that what you saw BEFORE the update rolls out was NOT the update... Remember, Google pushes many other changes all the time, including what they call \"smaller core updates\" which is when they update a system, or several, outside of a core update. So for the…",
+          "author": "@glenngabe",
+          "published": "2026-08-19T12:06:45+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": null,
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": true,
+      "latest_update": "Released the August 2026 spam update <https://developers.google.com/search/docs/appearance/spam-updates>, which applies globally and to all languages. The rollout may take a few days to complete.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-08-20T02:20:31.645267+00:00",
+    "sources": {
+      "x": {
+        "ok": 19,
+        "total": 28,
+        "failed_names": [
+          "patrickstox",
+          "thetafferboy",
+          "VeryWellVersed",
+          "Jammer_Volts",
+          "sitebulb",
+          "dawnieando",
+          "cyberandy",
+          "Dixon_Jones",
+          "Kevin_Indig"
+        ],
+        "items": 54
+      },
+      "rss": {
+        "ok": 11,
+        "total": 11,
+        "failed_names": [],
+        "items": 14
+      },
+      "google_status": {
+        "items": 1
+      }
+    },
+    "candidates_fetched": 69,
+    "candidates_fresh": 46,
+    "llm_provider": ""
+  }
+}
