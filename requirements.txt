@@ -2,6 +2,7 @@
 # so every twikit request fails. X tweets are now fetched via Nitter RSS in
 # seodigest/x_source.py — no auth, no cookies, more stable.
 feedparser>=6.0.11
+httpx>=0.27.0
 PyYAML>=6.0.2
 python-dotenv>=1.0.1
 anthropic>=0.40.0
