@@ -189,7 +189,9 @@ x:
   enabled: true
   tweets_per_handle: 15
   nitter_instances:
-    - nitter.net
+    - tw.eir-nya.gay
+    - nitter.jaydenha.uk
+    - x.n0g.xyz
   # nitter.net is the only public instance still serving RSS without a bot
   # shield (verified 2026-08-19; poast.org / lightbrd.com / privacyredirect
   # all gate RSS behind JS challenges). Pacing + retry keep a 29-handle run
