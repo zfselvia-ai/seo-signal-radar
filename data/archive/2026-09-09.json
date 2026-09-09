@@ -388,26 +388,26 @@
     }
   ],
   "run_meta": {
-    "ran_at": "2026-09-09T05:13:00.722584+00:00",
+    "ran_at": "2026-09-09T05:45:06.781862+00:00",
     "sources": {
       "x": {
         "ok": 28,
         "total": 28,
         "failed_names": [],
-        "items": 217
+        "items": 73
       },
       "rss": {
         "ok": 11,
         "total": 11,
         "failed_names": [],
-        "items": 42
+        "items": 19
       },
       "google_status": {
         "items": 0
       }
     },
-    "candidates_fetched": 259,
-    "candidates_fresh": 258,
+    "candidates_fetched": 92,
+    "candidates_fresh": 0,
     "llm_provider": ""
   }
 }
