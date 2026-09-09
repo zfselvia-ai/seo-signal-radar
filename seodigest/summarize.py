@@ -684,10 +684,21 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     # source — the LLM curation rubric needs cross-source signal to work.
     candidates = _select_candidates(cfg, items)
     system, user = build_prompt(cfg, candidates)
-    raw = _extract_json(call_llm(cfg, system, user))
+    try:
+        raw = _extract_json(call_llm(cfg, system, user))
+    except Exception as e:
+        print(f"[!] LLM call failed ({type(e).__name__}: {e}); falling back to raw items.")
+        digest = _fallback_digest(items)
+        digest["degraded"] = True
+        digest["degraded_reason"] = "LLM call failed; generated from raw source items."
+        digest["llm_error"] = str(e)[:500]
+        return digest
     if not raw:
         print("[!] LLM returned empty response; falling back to raw items.")
-        return _fallback_digest(items)
+        digest = _fallback_digest(items)
+        digest["degraded"] = True
+        digest["degraded_reason"] = "LLM returned empty response; generated from raw source items."
+        return digest
     try:
         data = json.loads(raw)
     except json.JSONDecodeError as e:
