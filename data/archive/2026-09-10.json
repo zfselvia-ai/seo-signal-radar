@@ -1,13 +1,13 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T01:54:04.061345+00:00",
-  "headline": "8 signals from sources (LLM summary unavailable).",
+  "generated_at": "2026-09-10T05:39:29.459678+00:00",
+  "headline": "2 signals from sources (LLM summary unavailable).",
   "sections": {
     "SERP & Algorithm Signals": [
       {
-        "what_happened": "Are rising data egress fees and multi-cloud complexity slowing down your enterprise AI initiatives? 💡\n\nWith Cloudflare @",
+        "what_happened": "Caught by Google’s spam update? Don’t make recovery harder - Search Engine Land. Caught by Google’s spam update? Don’t m",
         "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Cloudflare",
+        "evidence": "Search Engine Land",
         "who_it_affects": "all",
         "what_to_do": "monitor",
         "confidence": "Observed",
@@ -15,15 +15,15 @@
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
-            "name": "Cloudflare",
-            "url": "https://x.com/Cloudflare/status/2097794702510604605"
+            "name": "Search Engine Land",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWm5YaVpqZU1nRm5WTHpxaFE2a0huRWlmUThGd0pNTmdNaGVJN251VURIX2ExdjZScWppSWlDOE5GUl84MEY5X2tvWWpRNWtrRnVsSEI2YllDUzFrV3hJczdfb0xPc2hzUDBrX09vRGNBZFFhTTViOThVb0dfZHZMcXliUEFyTWM?oc=5"
           }
         ]
       },
       {
-        "what_happened": "Heads-up if you provide this type of content on your site -> Get ready for the game with new football features in Google",
+        "what_happened": "5 AI Models, 4 Signals: What 120K Mentions Reveal About Multi-Location SEO. Explore how multi-location businesses can op",
         "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "glenngabe",
+        "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
         "confidence": "Observed",
@@ -31,104 +31,8 @@
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
-            "name": "glenngabe",
-            "url": "https://x.com/glenngabe/status/2097723334305698092"
-          }
-        ]
-      },
-      {
-        "what_happened": "RT by @jonoalderson: @404mediaco please have the journalist connect with any number of the #WordPress community about wh",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jonoalderson",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "jonoalderson",
-            "url": "https://x.com/jonoalderson/status/2097799971198447880"
-          }
-        ]
-      },
-      {
-        "what_happened": "We're trying something new for this webinar - the registration landing page has a LIVE poll on it.\n\n@Kevin_Indig  and I ",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "willcritchlow",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "willcritchlow",
-            "url": "https://x.com/willcritchlow/status/2097702317101666630"
-          }
-        ]
-      },
-      {
-        "what_happened": "I see it as a life mission nowadays.. I see it as a life mission nowadays. ⚛ AtomGraph (@atomgraphhq) \"Proponents of gra",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "cyberandy",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "cyberandy",
-            "url": "https://x.com/cyberandy/status/2097791141127028893"
-          }
-        ]
-      },
-      {
-        "what_happened": "1) Connect @sparktoro to @claudeai 2) Run report analyzing the audience for an upcoming webinar 3) Get a great list of p",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "randfish",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "randfish",
-            "url": "https://x.com/randfish/status/2097799584810766580"
-          }
-        ]
-      },
-      {
-        "what_happened": "R to @jasonmbarnard: See whether the machines already understand who you are and what you're credible for, take the AI A",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "jasonmbarnard",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "jasonmbarnard",
-            "url": "https://x.com/jasonmbarnard/status/2097646060877537592"
-          }
-        ]
-      },
-      {
-        "what_happened": "Screaming Frog Crawling Clinic Returns to brightonSEO San Diego ’26!. We&#8217;re packing our bags for our 4th trip to S",
-        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-        "evidence": "Screaming Frog Blog",
-        "who_it_affects": "all",
-        "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "SERP & Algorithm Signals",
-        "sources": [
-          {
-            "name": "Screaming Frog Blog",
-            "url": "https://www.screamingfrog.co.uk/blog/san-diego-26/"
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/ai-signals-multi-location-uberall-spa/587988/"
           }
         ]
       }
@@ -136,9 +40,9 @@
   },
   "signals": [
     {
-      "what_happened": "Are rising data egress fees and multi-cloud complexity slowing down your enterprise AI initiatives? 💡\n\nWith Cloudflare @",
+      "what_happened": "Caught by Google’s spam update? Don’t make recovery harder - Search Engine Land. Caught by Google’s spam update? Don’t m",
       "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Cloudflare",
+      "evidence": "Search Engine Land",
       "who_it_affects": "all",
       "what_to_do": "monitor",
       "confidence": "Observed",
@@ -146,15 +50,15 @@
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
-          "name": "Cloudflare",
-          "url": "https://x.com/Cloudflare/status/2097794702510604605"
+          "name": "Search Engine Land",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWm5YaVpqZU1nRm5WTHpxaFE2a0huRWlmUThGd0pNTmdNaGVJN251VURIX2ExdjZScWppSWlDOE5GUl84MEY5X2tvWWpRNWtrRnVsSEI2YllDUzFrV3hJczdfb0xPc2hzUDBrX09vRGNBZFFhTTViOThVb0dfZHZMcXliUEFyTWM?oc=5"
         }
       ]
     },
     {
-      "what_happened": "Heads-up if you provide this type of content on your site -> Get ready for the game with new football features in Google",
+      "what_happened": "5 AI Models, 4 Signals: What 120K Mentions Reveal About Multi-Location SEO. Explore how multi-location businesses can op",
       "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "glenngabe",
+      "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
       "confidence": "Observed",
@@ -162,104 +66,8 @@
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
-          "name": "glenngabe",
-          "url": "https://x.com/glenngabe/status/2097723334305698092"
-        }
-      ]
-    },
-    {
-      "what_happened": "RT by @jonoalderson: @404mediaco please have the journalist connect with any number of the #WordPress community about wh",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jonoalderson",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "jonoalderson",
-          "url": "https://x.com/jonoalderson/status/2097799971198447880"
-        }
-      ]
-    },
-    {
-      "what_happened": "We're trying something new for this webinar - the registration landing page has a LIVE poll on it.\n\n@Kevin_Indig  and I ",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "willcritchlow",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "willcritchlow",
-          "url": "https://x.com/willcritchlow/status/2097702317101666630"
-        }
-      ]
-    },
-    {
-      "what_happened": "I see it as a life mission nowadays.. I see it as a life mission nowadays. ⚛ AtomGraph (@atomgraphhq) \"Proponents of gra",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "cyberandy",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "cyberandy",
-          "url": "https://x.com/cyberandy/status/2097791141127028893"
-        }
-      ]
-    },
-    {
-      "what_happened": "1) Connect @sparktoro to @claudeai 2) Run report analyzing the audience for an upcoming webinar 3) Get a great list of p",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "randfish",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "randfish",
-          "url": "https://x.com/randfish/status/2097799584810766580"
-        }
-      ]
-    },
-    {
-      "what_happened": "R to @jasonmbarnard: See whether the machines already understand who you are and what you're credible for, take the AI A",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "jasonmbarnard",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "jasonmbarnard",
-          "url": "https://x.com/jasonmbarnard/status/2097646060877537592"
-        }
-      ]
-    },
-    {
-      "what_happened": "Screaming Frog Crawling Clinic Returns to brightonSEO San Diego ’26!. We&#8217;re packing our bags for our 4th trip to S",
-      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
-      "evidence": "Screaming Frog Blog",
-      "who_it_affects": "all",
-      "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "SERP & Algorithm Signals",
-      "sources": [
-        {
-          "name": "Screaming Frog Blog",
-          "url": "https://www.screamingfrog.co.uk/blog/san-diego-26/"
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/ai-signals-multi-location-uberall-spa/587988/"
         }
       ]
     }
@@ -389,15 +197,15 @@
   ],
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
-  "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'b39fe6b2f3f6130a-20260910095403955'}",
+  "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '1411e129cf0e90d9-20260910133929339'}",
   "run_meta": {
-    "ran_at": "2026-09-10T01:54:00.324349+00:00",
+    "ran_at": "2026-09-10T05:39:25.172097+00:00",
     "sources": {
       "x": {
         "ok": 28,
         "total": 28,
         "failed_names": [],
-        "items": 81
+        "items": 80
       },
       "rss": {
         "ok": 11,
@@ -409,8 +217,8 @@
         "items": 0
       }
     },
-    "candidates_fetched": 95,
-    "candidates_fresh": 67,
+    "candidates_fetched": 94,
+    "candidates_fresh": 2,
     "llm_provider": ""
   }
 }
