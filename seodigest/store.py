@@ -90,6 +90,9 @@ def archive_daily(cfg: dict, date_str: str, digest: dict,
         "serp": serp_snapshot or {},
         "confirmed_updates": digest.get("confirmed_updates", []),
     }
+    for key in ("degraded", "degraded_reason", "llm_error", "quiet_day"):
+        if key in digest:
+            record[key] = digest[key]
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
     return path
