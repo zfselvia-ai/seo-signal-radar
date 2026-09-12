@@ -1,0 +1,416 @@
+{
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T05:28:36.991206+00:00",
+  "headline": "8 signals from sources (LLM summary unavailable).",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Today, we’re making Cloudflare CASB more powerful than ever by introducing automatic remediation policies. https://cfl.r",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2098397411970367536"
+          }
+        ]
+      },
+      {
+        "what_happened": "Super-new bug in GSC. Page indexing reporting. A large chunk of data is missing this morning. It was there yesterday (or",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2098404759153639818"
+          }
+        ]
+      },
+      {
+        "what_happened": "RT by @jonoalderson: holy shit kimi was faking it’s performance by serving you claude you have been using claude all alo",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "jonoalderson",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "jonoalderson",
+            "url": "https://x.com/jonoalderson/status/2098335469738344482"
+          }
+        ]
+      },
+      {
+        "what_happened": "My conversation with @BritneyMuller , in which she told some WILD anecdotes and combined deep technical expertise with e",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "willcritchlow",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2098382790207139879"
+          }
+        ]
+      },
+      {
+        "what_happened": "Most people either overstate what they haven't earned, or undersell what they actually have. On The Edward Show, I talke",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "jasonmbarnard",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "jasonmbarnard",
+            "url": "https://x.com/jasonmbarnard/status/2098429271391814123"
+          }
+        ]
+      },
+      {
+        "what_happened": "Dashboards Available In Google Analytics - Search Engine Roundtable. Dashboards Available In Google Analytics &nbsp;&nbs",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9TQ0Z4Q1pteGU5V2RmLUN1MjYyb2hNY19SQjFfTWktc3VzM2VTa1F0TE92YWRXMDB3MTJVMEdjNGM2T3BIcGhibEF4TmRHTHpxN0hIZ09aVFMtd0lwTkdTSVF0cWNQX19GQnloU3g1QWlvZ0MxR1E?oc=5"
+          }
+        ]
+      },
+      {
+        "what_happened": "Wow, rivals will receive some 'user interaction signal' data like clicks, returns to the results page, hovering, scrolli",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2098393617110798375"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google Making AI Overviews Into AI Mode Responses - via @seroundtable & @rustybrick #seo https://www.seroundtable.com/go",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2098455051194818913"
+          }
+        ]
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Today, we’re making Cloudflare CASB more powerful than ever by introducing automatic remediation policies. https://cfl.r",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2098397411970367536"
+        }
+      ]
+    },
+    {
+      "what_happened": "Super-new bug in GSC. Page indexing reporting. A large chunk of data is missing this morning. It was there yesterday (or",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2098404759153639818"
+        }
+      ]
+    },
+    {
+      "what_happened": "RT by @jonoalderson: holy shit kimi was faking it’s performance by serving you claude you have been using claude all alo",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "jonoalderson",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "jonoalderson",
+          "url": "https://x.com/jonoalderson/status/2098335469738344482"
+        }
+      ]
+    },
+    {
+      "what_happened": "My conversation with @BritneyMuller , in which she told some WILD anecdotes and combined deep technical expertise with e",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "willcritchlow",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2098382790207139879"
+        }
+      ]
+    },
+    {
+      "what_happened": "Most people either overstate what they haven't earned, or undersell what they actually have. On The Edward Show, I talke",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "jasonmbarnard",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "jasonmbarnard",
+          "url": "https://x.com/jasonmbarnard/status/2098429271391814123"
+        }
+      ]
+    },
+    {
+      "what_happened": "Dashboards Available In Google Analytics - Search Engine Roundtable. Dashboards Available In Google Analytics &nbsp;&nbs",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9TQ0Z4Q1pteGU5V2RmLUN1MjYyb2hNY19SQjFfTWktc3VzM2VTa1F0TE92YWRXMDB3MTJVMEdjNGM2T3BIcGhibEF4TmRHTHpxN0hIZ09aVFMtd0lwTkdTSVF0cWNQX19GQnloU3g1QWlvZ0MxR1E?oc=5"
+        }
+      ]
+    },
+    {
+      "what_happened": "Wow, rivals will receive some 'user interaction signal' data like clicks, returns to the results page, hovering, scrolli",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2098393617110798375"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google Making AI Overviews Into AI Mode Responses - via @seroundtable & @rustybrick #seo https://www.seroundtable.com/go",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2098455051194818913"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed; generated from raw source items.",
+  "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: d3f0fcd9cb1a6e98-20260912132836820)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'd3f0fcd9cb1a6e98-20260912132836820'}",
+  "run_meta": {
+    "ran_at": "2026-09-12T05:28:33.475645+00:00",
+    "sources": {
+      "x": {
+        "ok": 28,
+        "total": 28,
+        "failed_names": [],
+        "items": 63
+      },
+      "rss": {
+        "ok": 11,
+        "total": 11,
+        "failed_names": [],
+        "items": 9
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 72,
+    "candidates_fresh": 45,
+    "llm_provider": ""
+  }
+}
