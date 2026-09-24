@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Marie_Haynes: 👀 Google is building an open source agentic orchestrator that can run billions o",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review sitebulb: Google Says The Disavow Tool Does Have Effects - via @seroundtable & @rustybrick",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review aleyda: 🔥 The Latest Search News of the Week You Can't Miss [From #SEOFOMO - Sep 20, 202",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -412,5 +426,19 @@
     "candidates_fetched": 54,
     "candidates_fresh": 13,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review Marie_Haynes: 👀 Google is building an open source agentic orchestrator that can run billions o",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review sitebulb: Google Says The Disavow Tool Does Have Effects - via @seroundtable & @rustybrick",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review aleyda: 🔥 The Latest Search News of the Week You Can't Miss [From #SEOFOMO - Sep 20, 202",
+      "impact": "P2"
+    }
+  ]
 }
