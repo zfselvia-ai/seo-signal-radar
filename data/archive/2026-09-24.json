@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Cloudflare: 4 weeks until Connect. Moscone West, San Francisco | Oct 19–21 Network with indu",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review glenngabe: GIFS! :) -> YouTube is making comments more fun with gifs — and fandom more lucr",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review brodieseo: R to @brodieseo: Full release notes: https://serplens.com/changelog/live-change-",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -397,5 +411,19 @@
     "candidates_fetched": 87,
     "candidates_fresh": 0,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review Cloudflare: 4 weeks until Connect. Moscone West, San Francisco | Oct 19–21 Network with indu",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review glenngabe: GIFS! :) -> YouTube is making comments more fun with gifs — and fandom more lucr",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review brodieseo: R to @brodieseo: Full release notes: https://serplens.com/changelog/live-change-",
+      "impact": "P2"
+    }
+  ]
 }
