@@ -782,14 +782,33 @@ def _fallback_digest(items: List[Item]) -> dict:
             "section": section,
             "sources": [{"name": it.source_name, "url": it.url}],
         })
+    # Build a minimal action list even in degraded mode. Without the LLM we
+    # cannot infer strategy, but we can still turn the kept evidence into
+    # concrete review/monitoring tasks so the dashboard's Action Items area does
+    # not disappear during quota outages.
+    action_items = []
+    seen_actions = set()
+    for s in signals:
+        source = s.get("evidence") or "source"
+        topic = s.get("what_happened", "")[:80].strip()
+        text = f"Review {source}: {topic}" if topic else f"Review {source} signal"
+        if text in seen_actions:
+            continue
+        seen_actions.add(text)
+        action_items.append({"what_to_do": text, "impact": s.get("impact", "P2")})
+        if len(action_items) >= 3:
+            break
+
     # Group by the section we just assigned.
     grouped: dict[str, list] = {}
     for s in signals:
         grouped.setdefault(s["section"], []).append(s)
+    if action_items:
+        grouped["Today's Action Items"] = action_items
     return {
         "headline": f"{len(signals)} signals from sources (LLM summary unavailable).",
         "signals": signals,
         "sections": grouped,
-        "action_items": [],
+        "action_items": action_items,
         "dropped_count": max(0, len(items) - len(signals)),
     }
