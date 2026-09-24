@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review glenngabe: Their CEO must not have heard of \"Scaled content abuse\". This will not end well ",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review jonoalderson: RT by @jonoalderson: Ich hasse es, dass ich bei Streaming Diensten nach Ende des",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review willcritchlow: I don’t even think my P(AI did it | something kills me in the next decade) is 10",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -412,5 +426,19 @@
     "candidates_fetched": 59,
     "candidates_fresh": 24,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review glenngabe: Their CEO must not have heard of \"Scaled content abuse\". This will not end well ",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review jonoalderson: RT by @jonoalderson: Ich hasse es, dass ich bei Streaming Diensten nach Ende des",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review willcritchlow: I don’t even think my P(AI did it | something kills me in the next decade) is 10",
+      "impact": "P2"
+    }
+  ]
 }
