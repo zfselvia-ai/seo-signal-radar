@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Cloudflare: Join us on October 7th for an exclusive webinar on Cloudflare OS. We’re discussi",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review glenngabe: Love seeing people take my tutorials and run with them. Hans read my latest post",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review VeryWellVersed: Aight, so y'all are gonna make me really learn this Jev jawn, huh?. Aight, so y'",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -412,5 +426,19 @@
     "candidates_fetched": 63,
     "candidates_fresh": 34,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review Cloudflare: Join us on October 7th for an exclusive webinar on Cloudflare OS. We’re discussi",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review glenngabe: Love seeing people take my tutorials and run with them. Hans read my latest post",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review VeryWellVersed: Aight, so y'all are gonna make me really learn this Jev jawn, huh?. Aight, so y'",
+      "impact": "P2"
+    }
+  ]
 }
