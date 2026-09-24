@@ -376,7 +376,7 @@
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: f1fb84f07f2ef5e8-20260924110337648)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'f1fb84f07f2ef5e8-20260924110337648'}",
   "run_meta": {
-    "ran_at": "2026-09-24T05:30:45.352484+00:00",
+    "ran_at": "2026-09-24T05:58:59.443314+00:00",
     "sources": {
       "x": {
         "ok": 28,
