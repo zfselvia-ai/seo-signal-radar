@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Cloudflare: Ready to build what's next? We're bringing the Cloudflare customer community tog",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review glenngabe: Business Agent for YouTube Ads beta -> I forgot that Google actually beat ChatGP",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review VeryWellVersed: I agree with this.. I agree with this. Scott Shapiro (@ScottShapiroUXD) The repo",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -412,5 +426,19 @@
     "candidates_fetched": 86,
     "candidates_fresh": 64,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review Cloudflare: Ready to build what's next? We're bringing the Cloudflare customer community tog",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review glenngabe: Business Agent for YouTube Ads beta -> I forgot that Google actually beat ChatGP",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review VeryWellVersed: I agree with this.. I agree with this. Scott Shapiro (@ScottShapiroUXD) The repo",
+      "impact": "P2"
+    }
+  ]
 }
