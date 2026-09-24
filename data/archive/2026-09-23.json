@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Cloudflare: We're excited to announce @Accenture as a Diamond sponsor for #CloudflareConnect",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review glenngabe: Again, it makes sense to me that Google might supplement Navboost data with CrUX",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review brodieseo: How do you structure a page to win in the AI era? @chris_nectiv has updated the ",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -397,5 +411,19 @@
     "candidates_fetched": 98,
     "candidates_fresh": 73,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review Cloudflare: We're excited to announce @Accenture as a Diamond sponsor for #CloudflareConnect",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review glenngabe: Again, it makes sense to me that Google might supplement Navboost data with CrUX",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review brodieseo: How do you structure a page to win in the AI era? @chris_nectiv has updated the ",
+      "impact": "P2"
+    }
+  ]
 }
