@@ -132,6 +132,20 @@
           }
         ]
       }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Cloudflare: 📣 Speaker announcement: @CompleteSkeptic CEO, @typesafeai at Cloudflare Connect ",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review glenngabe: If Discover is important for your business, a big heads up. I hope this never ro",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review VeryWellVersed: I wish @Zoom would stop opening tabs in my browser after I get off a call.. I wi",
+        "impact": "P2"
+      }
     ]
   },
   "signals": [
@@ -412,5 +426,19 @@
     "candidates_fetched": 90,
     "candidates_fresh": 62,
     "llm_provider": ""
-  }
+  },
+  "action_items": [
+    {
+      "what_to_do": "Review Cloudflare: 📣 Speaker announcement: @CompleteSkeptic CEO, @typesafeai at Cloudflare Connect ",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review glenngabe: If Discover is important for your business, a big heads up. I hope this never ro",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review VeryWellVersed: I wish @Zoom would stop opening tabs in my browser after I get off a call.. I wi",
+      "impact": "P2"
+    }
+  ]
 }
