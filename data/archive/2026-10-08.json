@@ -1,0 +1,444 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T07:03:00.877374+00:00",
+  "headline": "8 signals from sources (LLM summary unavailable).",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Security alerts don't arrive one at a time. They flood in. To solve alert fatigue, we built an evidence-grounded agentic",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2107907641808658490"
+          }
+        ]
+      },
+      {
+        "what_happened": "OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements like charts, but",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2107917347482714225"
+          }
+        ]
+      },
+      {
+        "what_happened": "RT by @VeryWellVersed: Repost my NYC X marketing mutuals I’ll be there too come hang out. Repost my NYC X marketing mutu",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "VeryWellVersed",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "VeryWellVersed",
+            "url": "https://x.com/VeryWellVersed/status/2107960963572068474"
+          }
+        ]
+      },
+      {
+        "what_happened": "It's annual planning season, but how do you plan when traffic is down, attribution is broken, and AI disrupts everything",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2107901603718078619"
+          }
+        ]
+      },
+      {
+        "what_happened": "R to @jasonmbarnard: See where you stand with the machines before that window closes, take the AI Audit for FREE >> http",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "jasonmbarnard",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "jasonmbarnard",
+            "url": "https://x.com/jasonmbarnard/status/2107778196016140745"
+          }
+        ]
+      },
+      {
+        "what_happened": "Breaking into SEO starts with creating your own opportunities - Search Engine Land. Breaking into SEO starts with creati",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Land",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Land",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OTTkzQjgyMWx1RGRmc25YLU4wb2pqWGlyRkZHdUtfOWZnd3Q1RnBDWnZKZEdoaDRUZGQxNWNNQUZyclZqUXpWekw3TnN1c1dsTDFOUmJBV0M1MVZRQzhNal9iSzY3ckFicHBBbVljMEZROG9IeHQ4MFNkRTNBTlk?oc=5"
+          }
+        ]
+      },
+      {
+        "what_happened": "The decisions you make today prepare you for tomorrow. @zatlyn's advice is to immerse yourself at #CloudflareConnect: me",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2107836897028346130"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google launches SynthID Detector, a website that lets users detect AI-generated image, video, and audio media across doz",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2107860111871840649"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "Review Cloudflare: Security alerts don't arrive one at a time. They flood in. To solve alert fatigu",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review glenngabe: OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includ",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "Review VeryWellVersed: RT by @VeryWellVersed: Repost my NYC X marketing mutuals I’ll be there too come",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Security alerts don't arrive one at a time. They flood in. To solve alert fatigue, we built an evidence-grounded agentic",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2107907641808658490"
+        }
+      ]
+    },
+    {
+      "what_happened": "OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements like charts, but",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2107917347482714225"
+        }
+      ]
+    },
+    {
+      "what_happened": "RT by @VeryWellVersed: Repost my NYC X marketing mutuals I’ll be there too come hang out. Repost my NYC X marketing mutu",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "VeryWellVersed",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "VeryWellVersed",
+          "url": "https://x.com/VeryWellVersed/status/2107960963572068474"
+        }
+      ]
+    },
+    {
+      "what_happened": "It's annual planning season, but how do you plan when traffic is down, attribution is broken, and AI disrupts everything",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2107901603718078619"
+        }
+      ]
+    },
+    {
+      "what_happened": "R to @jasonmbarnard: See where you stand with the machines before that window closes, take the AI Audit for FREE >> http",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "jasonmbarnard",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "jasonmbarnard",
+          "url": "https://x.com/jasonmbarnard/status/2107778196016140745"
+        }
+      ]
+    },
+    {
+      "what_happened": "Breaking into SEO starts with creating your own opportunities - Search Engine Land. Breaking into SEO starts with creati",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Land",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Land",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OTTkzQjgyMWx1RGRmc25YLU4wb2pqWGlyRkZHdUtfOWZnd3Q1RnBDWnZKZEdoaDRUZGQxNWNNQUZyclZqUXpWekw3TnN1c1dsTDFOUmJBV0M1MVZRQzhNal9iSzY3ckFicHBBbVljMEZROG9IeHQ4MFNkRTNBTlk?oc=5"
+        }
+      ]
+    },
+    {
+      "what_happened": "The decisions you make today prepare you for tomorrow. @zatlyn's advice is to immerse yourself at #CloudflareConnect: me",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2107836897028346130"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google launches SynthID Detector, a website that lets users detect AI-generated image, video, and audio media across doz",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2107860111871840649"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": null,
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": true,
+      "latest_update": "Released the September 2026 spam update <https://developers.google.com/search/docs/appearance/spam-updates>, which applies globally and to all languages. The rollout may take up to two weeks to complete.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed; generated from raw source items.",
+  "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: e8be4e3cefd3a442-20261008150300715)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'e8be4e3cefd3a442-20261008150300715'}",
+  "action_items": [
+    {
+      "what_to_do": "Review Cloudflare: Security alerts don't arrive one at a time. They flood in. To solve alert fatigu",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review glenngabe: OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includ",
+      "impact": "P2"
+    },
+    {
+      "what_to_do": "Review VeryWellVersed: RT by @VeryWellVersed: Repost my NYC X marketing mutuals I’ll be there too come",
+      "impact": "P2"
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-10-08T07:02:55.073171+00:00",
+    "sources": {
+      "x": {
+        "ok": 28,
+        "total": 28,
+        "failed_names": [],
+        "items": 65
+      },
+      "rss": {
+        "ok": 11,
+        "total": 11,
+        "failed_names": [],
+        "items": 15
+      },
+      "google_status": {
+        "items": 1
+      }
+    },
+    "candidates_fetched": 81,
+    "candidates_fresh": 59,
+    "llm_provider": ""
+  }
+}
