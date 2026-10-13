@@ -116,6 +116,13 @@ def fetch(cfg: dict, since: datetime) -> tuple[List[Item], List[dict]]:
                 url=detail_url,
                 published=begin_dt,
                 metrics={"impact": rec["impact"] or ""},
+                # Top of the trust ladder. Without this the Item kept the
+                # dataclass default (practitioner_observation, weight 0) and the
+                # official API ranked below every tweet in the no-LLM path.
+                source_type="official_api",
+                tags=["official", "ranking_update"],
+                weight=float((cfg.get("scoring") or {}).get("source_weights", {})
+                             .get("official_api", 1.0)),
             ))
 
     confirmed.sort(key=lambda r: r.get("start") or "", reverse=True)
