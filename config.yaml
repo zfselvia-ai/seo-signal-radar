@@ -195,9 +195,14 @@ x:
   # through a 29-handle run, so @JohnMu looked permanently dead and other
   # handles failed at random. Run `python main.py doctor` to see which
   # instances are actually alive right now.)
+  # Verified alive with RSS on 2026-10-09 via `doctor` + status.d420.de.
+  # nitter.net / nitter.privacyredirect.com were dead (ConnectError / 404) and
+  # were the reason X coverage was zero.
   nitter_instances:
-    - nitter.net
-    - nitter.privacyredirect.com
+    - nitter.kareem.one
+    - nitter.meowing.monster
+    - shitter.thepixora.com
+    - nitter.pp.ua
 
   # ONE ACCOUNT, MANY TAGS.
   # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
@@ -293,20 +298,23 @@ rss:
     # and not where the feed lives — it failed 10 runs out of 10. The version
     # below is unverified from this machine; `python main.py doctor` probes it
     # and prints working alternates if it is still wrong.
-    - {name: "Google Search Docs Updates", url: "https://developers.google.com/search/blog/release-notes.xml",
-       category: official_documentation, weight: 1.0, always_include_if_material: true}
+    # 2026-10-09: release-notes.xml returns 404 and the only working alternate
+    # doctor found is blog/feed.xml, i.e. the Search Central Blog above. Disabled
+    # until Google publishes a docs-changelog feed again.
+    # - {name: "Google Search Docs Updates", url: "https://developers.google.com/search/blog/release-notes.xml",
+    #    category: official_documentation, weight: 1.0, always_include_if_material: true}
     - {name: "Bing Webmaster Blog", url: "https://blogs.bing.com/webmaster/feed",
        category: official_documentation, weight: 0.95}
 
     # ---- Controlled experiments (the scarcest, most valuable input) ------
     # Keep negative and inconclusive tests — they are often worth more than wins.
-    - {name: "SearchPilot Resources", url: "https://www.searchpilot.com/resources/rss.xml",
+    - {name: "SearchPilot Resources", url: "https://www.searchpilot.com/resources/case-studies/rss.xml",
        category: reproducible_experiment, weight: 0.95}
 
     # ---- Data research --------------------------------------------------
     - {name: "Ahrefs Blog", url: "https://ahrefs.com/blog/feed/",
        category: data_research, weight: 0.85}
-    - {name: "SISTRIX Blog", url: "https://www.sistrix.com/blog/feed/",
+    - {name: "SISTRIX Blog", url: "https://www.sistrix.com/feed/",
        category: data_research, weight: 0.8}
 
     # ---- Technical / tooling --------------------------------------------
@@ -318,7 +326,7 @@ rss:
        category: expert_analysis, weight: 0.75, requires_citation: true}
 
     # ---- Trade news: fast event radar, low weight ------------------------
-    - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.rss",
+    - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.xml",
        category: trade_news, weight: 0.6}
     - {name: "Search Engine Land", url: "https://searchengineland.com/feed",
        category: trade_news, weight: 0.6}
