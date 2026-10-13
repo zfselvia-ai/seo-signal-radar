@@ -1,0 +1,392 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-12T05:17:54.959733+00:00",
+  "headline": "Google rewrites its helpful-content doc around 'main content' effort, originality and accuracy as experts predict a major update | Google 以“主要内容”的投入/原创/准确性重写帮助文档，专家预判大型更新将至",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "Helpful-content doc adds a 'main content' definition and four rater attributes — Effort, Originality, Talent/skill, Accuracy; unsupervised bulk gen-AI text = 'little to no effort' | 帮助文档新增“主要内容”定义与四项评估属性：投入、原创、才能/技巧、准确性；无人工监督的批量 AI 文本 = “几乎零投入”",
+        "why_it_matters": "质量评估指南的语言第一次大段进入面向站长的官方文档，且与 10/1 的 AI 内容指南、虚构作者警告同一周落地。文档不是算法，但它定义了下一次更新会惩罚什么。",
+        "evidence": "official doc: developers.google.com/search/docs/fundamentals/creating-helpful-content (Oct 1–2); verified against the live doc Oct 10",
+        "evidence_detail": "The doc now states that rater guidelines treat main-content quality as 'one of the most critical factors for assessing page quality', defines main content in five categories (primary text/media, interactive features, user-generated contributions, tabbed/expanded sections, titles and headings) and lists four attributes raters assess: Effort, Originality, Talent or skill, Accuracy. It says feed-generated or unsupervised bulk generative-AI text 'represents little to no effort' and that YMYL content must match expert consensus. Google announced no ranking-system change. Search Engine Roundtable and SEOFOMO surfaced the edit; Marie Haynes notes the 'filler' language has long been in the QRG. Cited sources are the X posts that surfaced it.",
+        "who_it_affects": "publisher / SaaS / all",
+        "what_to_do": "抽 20 个核心页面按四项属性自评（投入/原创/才能/准确），删掉“主要内容”前的 filler（长导语、重复摘要），把结论和数据提到首屏。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Official Explanations",
+        "score": 84,
+        "sources": [
+          {
+            "name": "@aleyda (#SEOFOMO roundup)",
+            "url": "https://x.com/aleyda/status/2106757923481276664",
+            "excerpt": "🍿 All The Search Updates & News You can't Miss [#SEOFOMO - Oct 4, 2026] 👇 * ​Google: Manually Fact-Check & Review AI-Generated Content For Accuracy * ​Google Helpful Content Doc With New Main Content & EOT/SA Sections * ​AI Overviews on branded queries tripled in September * ​Google Gemini Adds UTM Parameters For Referral Attribution * ​Microsoft Clarity Now Lets You Customize Your Brand Terms in AI Visibility Dashboard * ​Creating News Content That Stands Out in AI and Multimodal Search * ​Which Rendering Approach is Best for SEO on E-commerce Sites? * ​Catching Technical SEO regressions and rendering disasters in CI for Shopify Stores [Presentation] * ​How AI Agents Use Websites, Where…",
+            "author": "@aleyda",
+            "published": "2026-10-04T06:46:45+00:00",
+            "source_type": "expert_analysis"
+          },
+          {
+            "name": "@Kevin_Indig (quoting @rustybrick)",
+            "url": "https://x.com/Kevin_Indig/status/2106351211578273803",
+            "excerpt": "Straight shot at programmatic content, commodity content and ai slop imho. Straight shot at programmatic content, commodity content and ai slop imho Barry Schwartz (@rustybrick) Google updates creating helpful, reliable, people-first content with new main content section and how search quality raters review it seroundtable.com/google-help… Link Google Updates Helpful Content Page With Main Content &amp; EOT/SA Google has updated the creating helpful, reliable, people-first content help document to primarily add two new sections. First, it added that the main content is",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-03T03:50:37+00:00",
+            "source_type": "data_research"
+          },
+          {
+            "name": "@Marie_Haynes (QRG excerpts)",
+            "url": "https://x.com/Marie_Haynes/status/2106737429575082390",
+            "excerpt": "Google's advice on \"main content\" is not new. Here are some excerpts from the Quality Raters Guidelines. The most interesting part is what they say about \"filler\" content: \"The main content (MC) of a page should support its purpose. so that visitors can immediately access it. A high quality page has the most helpful MC placed most prominently. Content that supports the page purpose without directly contributing to the primary goal can be included, but it should be shown lower on the page in a less prominent position.\" In other words: Make it easy for the searcher to find what they are looking for. Now why did they add this to the helpful content guidance now? It could be to help site owners…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-04T05:25:19+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google at Search Central Live Barcelona: for a URL of unknown quality or popularity, crawl demand uses the aggregate of its parent path, then that path's parent | Google 在 SCL 巴塞罗那：未知 URL 的爬取需求取其父路径的聚合值，再逐级上溯",
+        "why_it_matters": "这把 URL 目录结构和爬取预算直接绑在一起：把新页面放在历史表现差的目录下，会继承低爬取需求；反之亦然。对大站的信息架构是可操作的规则。",
+        "evidence": "official explanation (Google speaker at SCL Deep Dive Barcelona), relayed via John Campbell/ROAST and retweeted by @VeryWellVersed",
+        "evidence_detail": "A second-hand summary of a Google presentation at Search Central Live Deep Dive Barcelona (Sep 30–Oct 2, 2026): when Google does not know a URL's quality or popularity, crawl demand is estimated from the aggregate of its parent path, then the parent's parent, and so on. The Google speaker and exact wording are not in the tweet and no documentation page states this; it is consistent with Google's crawl-budget guidance but should be treated as a conference remark, not a spec.",
+        "who_it_affects": "ecommerce / publisher / SaaS",
+        "what_to_do": "新内容/新品类上线时，放在既有高表现目录下而不是新建顶级目录；清理长期低质目录（合并或 noindex）以避免其拖累同路径新页的爬取。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Official Explanations",
+        "score": 68,
+        "sources": [
+          {
+            "name": "@VeryWellVersed (RT)",
+            "url": "https://x.com/VeryWellVersed/status/2106743953194090822",
+            "excerpt": "RT by @VeryWellVersed: Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -> When Google doesn’t know the quality or popularity of a URL, it uses the aggregate for its parent path. Then that path’s parent, and so on. https://weareroast.com/news/google-search-central-live-deep-dive-barcelona-day-1-recap/#:~:text=When%20Google%20doesn%E2%80%99t%20know%20the%20quality%20or%20popularity%20of%20a%20URL. Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -&gt; When Google doesn’t know the quality or popularity of a URL, it uses the aggregate…",
+            "author": "@VeryWellVersed",
+            "published": "2026-10-04T05:51:14+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Gemini starts appending UTM parameters to outbound links (undocumented); John Mueller: 'I see it too' | Gemini 开始给外链附加 UTM 参数（无官方文档）；John Mueller 确认“我也看到了”",
+        "why_it_matters": "AI 引荐流量此前大量落在 GA4 的 Direct（移动端 app 剥掉 referrer）。有了 UTM 就能真正量化 Gemini 带来的访问，但要先确认分析工具不会把它归到错误渠道。",
+        "evidence": "observation: Reddit thread + John Mueller reply, reported by SEJ (Roger Montti) ~Oct 1; shared by @screamingfrog",
+        "evidence_detail": "A Reddit thread spotted Gemini adding UTM parameters to outbound links about 24 hours earlier; John Mueller replied 'Nice. I see it too' and asked why the referrer isn't sufficient, offering to forward reproducible referrer-loss cases. A commenter claimed the referrer survives mostly on desktop and only ~9% passes through from the Gemini mobile app, with Android assistant stripping it so traffic lands in GA4 as Direct — an anonymous figure. Google has not documented the parameters, their values or trigger conditions. ChatGPT already adds UTMs on web-grounded answers.",
+        "who_it_affects": "all",
+        "what_to_do": "在 GA4 里查 session_source/medium 含 gemini 的会话并建自定义渠道分组“AI referral”（gemini、chatgpt、perplexity、copilot）；对照近 30 天 Direct 流量是否相应下降。",
+        "confidence": "Observed",
+        "impact": "P1",
+        "section": "SERP & Algorithm Signals",
+        "score": 72,
+        "sources": [
+          {
+            "name": "@screamingfrog (sharing SEJ)",
+            "url": "https://x.com/screamingfrog/status/2107031599502000142",
+            "excerpt": "Google Gemini Adds UTM Parameters For Referral Attribution - https://www.searchenginejournal.com/google-gemini-adds-utm-parameters-for-referral-attribution/591754/. Google Gemini Adds UTM Parameters For Referral Attribution - searchenginejournal.com/goog… Link Google Gemini Adds UTM Parameters For Referral Attribution Google Gemini added UTM parameters to links, giving SEOs better numbers for measuring AI traffic and deciding where resources should go. searchenginejournal.com",
+            "author": "@screamingfrog",
+            "published": "2026-10-05T00:54:14+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      },
+      {
+        "what_happened": "SERP Squeeze: 'baggy jeans' (US) gets ~60% more searches YoY but ~30% fewer organic clicks as AI and shopping modules absorb the page | SERP 挤压：“baggy jeans”（美国）搜索量同比约 +60%，自然点击约 −30%",
+        "why_it_matters": "单个查询的案例，但量化了电商非品牌词的“搜索增长、点击下降”剪刀差，提醒把 KPI 从排名转到展示份额与 SERP 占位。",
+        "evidence": "observation: one commercial US query in Aleyda Solis's weekly 'SERP Squeeze Monday' series",
+        "evidence_detail": "Aleyda Solis's weekly series looks at one commercial US query; for 'baggy jeans' she reports roughly 60% more searches year over year alongside about 30% fewer organic clicks, attributing the gap to the SERP features now occupying the page. Tool source and exact figures are in the thread; this is a single-query illustration, not a dataset.",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "监控：挑 20 个核心非品牌商业词，记录搜索量趋势 vs GSC 点击趋势，识别“量涨点击跌”的词并评估 Shopping/免费列表的补位。",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "score": 50,
+        "sources": [
+          {
+            "name": "@aleyda",
+            "url": "https://x.com/aleyda/status/2107112128356155792",
+            "excerpt": "60% more YOY searches, 30% fewer organic search clicks? Welcome to the second SERP Squeeze Monday! 👇 Every Monday, I’m going through a commercial query SERP to see how the relationship of organic search rankings <> visibility <> clicks is shifting. This week’s query: “baggy jeans” in the US. According to @Similarweb August 2026 vs 2025: 📈 Search volume grew from 114.1K to 182.1K: +60% 📉 Organic clicks fell from 24.8K to 17.3K: -30% 📉 Paid clicks also fell, from 13K to 12.3K: -5% What changed in the SERP? @ahrefs ' August 26 YOY snapshots show: * Traditional organic search results decreased from 9 to 5 within the top 10 positions. * Shopping Packs increased from 1 to 3, appearing at…",
+            "author": "@aleyda",
+            "published": "2026-10-05T06:14:14+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Playbook: audit Merchant Center image coverage — one global retailer is missing ~8M product images in its feed (2M+ products, average 1 image each) | 玩法：审计 Merchant Center 商品图覆盖率，一家全球零售商 feed 里缺约 800 万张图（200 万+商品，平均每个仅 1 张图）",
+        "why_it_matters": "免费商品列表与 AI 购物面都吃 feed 里的图片属性；站上有图、feed 里没图是最常见也最容易修的差距，直接影响商品卡的展示资格与点击。",
+        "evidence": "case: ecommerce audit shared by Brodie Clark (@brodieseo), Oct 5",
+        "evidence_detail": "Brodie Clark describes a store with 2M+ products in Merchant Center where the average image count per product is 1 and each country feed carries about 116K products including variants; multiplied across markets the gap is roughly 8 million images that exist on site but not in the feed. A single audit observation with no uplift measured; the mechanism (additional_image_link populating product cards and visual surfaces) is documented by Google.",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "导出 Merchant Center 商品数据，统计 additional_image_link 为空或仅 1 张图的商品占比；优先补齐头部 SKU 的多图，并观察免费列表的展示与点击。",
+        "how_to_test": "Merchant Center 导出 → 统计每商品图片数分布 → 对 Top 1000 SKU 补齐 3+ 张图 → 对比 4 周免费商品列表展示/点击。",
+        "success_metric": "免费商品列表（Shopping 标签 + 搜索）展示与点击的变化；补图 SKU 与未补图 SKU 的对比。",
+        "effort": "低到中：feed 规则或开发对接；风险是图片不合规（水印、文字）被拒登。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 64,
+        "sources": [
+          {
+            "name": "@brodieseo",
+            "url": "https://x.com/brodieseo/status/2107078351945163086",
+            "excerpt": "Ecommerce SEO: This store is missing ~8 million product images in Google Merchant Center. Not on the site. In the feed. 2M+ products in the account. Average image count: 1. Each location carries ~116K products (incl. variants). Multiply that across every country in a global operation, and you get millions of free listings competing with a single image each. Visuals sell the product. When the listing doesn't show enough of it, searchers scroll past and never reach the PDP. And CTR is only part of it. Adding ~4 more images per product (~8M across the account) also strengthens how those offers perform within free listings themselves. The good news: GMC already rates the existing images as high…",
+            "author": "@brodieseo",
+            "published": "2026-10-05T04:00:01+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Unconfirmed Watchlist": [
+      {
+        "what_happened": "Lily Ray predicts a major Google update is imminent: 4 spam updates in 2026 at shrinking intervals, a week of doc rewrites, and AIOs citing 38% fewer self-promotional listicles | Lily Ray 预判大型更新将至：2026 年 4 次垃圾更新且间隔缩短、一周内文档密集改写、AIO 引用自我推广型 listicle 减少 38%",
+        "why_it_matters": "预测本身是推测，但她列出的三类证据（更新节奏、文档改写、AIO 引用结构变化）各自可核查。即便“大更新”不来，这些方向也在逐步落地。",
+        "evidence": "expert analysis + author's own 100-query AIO panel (Lily Ray, Substack, Oct 4); amplified by @Marie_Haynes, @screamingfrog",
+        "evidence_detail": "Ray's Oct 4 Substack piece assembles: the four 2026 spam updates (Mar 24, Jun 24, Aug 18, Sep 24) with gaps of 92, 55 and 37 days; the Oct 1–2 edits to the AI-content, helpful-content and authorship docs; Search Central Live Barcelona remarks that scaled content is a bigger problem than link spam; and her own panel of 100 'best B2B software' queries where AIOs cite 38% fewer self-promotional listicles than in June while the queried brand is omitted 83% of the time (was 69%). She calls the timing uncertain — 'a matter of when, not if'. Google has confirmed nothing; Ray runs an SEO consultancy.",
+        "who_it_affects": "all",
+        "what_to_do": "监控，不要预防性大改：把 scaled content 审计、虚构作者清理、listicle 合并列为本月任务；若更新落地，以 GSC 按模板的日点击做判断。",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 58,
+        "sources": [
+          {
+            "name": "@aleyda (RT of Lily Ray)",
+            "url": "https://x.com/aleyda/status/2106854591623000282",
+            "excerpt": "RT by @aleyda: Just published my latest piece in Substack! If you’ve been paying attention, you’ve probably also connected the dots: All signs point to a major Google update on the horizon. This is especially true with Google’s recent communications and edits to their documentation this past week. I believe they will be targeting low-quality, scaled AI content, tactics meant to manipulate AI search responses, paid/inauthentic mentions, and other deceptive approaches. I put together a new Substack explaining why I’m predicting that a massive Google update is imminent - perhaps similar to what we’ve seen with Panda, Penguin, the Helpful Content Update or March 2024 core update. Shout outs to…",
+            "author": "@aleyda",
+            "published": "2026-10-04T13:10:52+00:00",
+            "source_type": "expert_analysis"
+          },
+          {
+            "name": "@screamingfrog (sharing Lily Ray)",
+            "url": "https://x.com/screamingfrog/status/2107094196561535102",
+            "excerpt": "Prediction: the next massive Google update is around the corner - https://lilyraynyc.substack.com/p/prediction-the-next-massive-google from @lilyraynyc. Prediction: the next massive Google update is around the corner - lilyraynyc.substack.com/p/pr… from @lilyraynyc",
+            "author": "@screamingfrog",
+            "published": "2026-10-05T05:02:59+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          },
+          {
+            "name": "@Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2107088402701029677",
+            "excerpt": "Such a good piece by @lilyraynyc. The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a big update coming back in March of 2024, and sure enough, the next day the March core update was launched, which Google called an evolution in how they determine the helpfulness of content. https://lilyraynyc.substack.com/p/prediction-the-next-massive-google?r=17bs0&utm_medium=ios&triedRedirect=true. Such a good piece by @lilyraynyc . The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-05T04:39:57+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "按“投入/原创/才能/准确”四项自评 20 个核心页面，删掉主要内容前的 filler",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "GA4 建“AI referral”自定义渠道分组，纳入 gemini/chatgpt/perplexity/copilot",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "电商：统计 Merchant Center 每商品图片数分布，补齐头部 SKU 多图",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Helpful-content doc adds a 'main content' definition and four rater attributes — Effort, Originality, Talent/skill, Accuracy; unsupervised bulk gen-AI text = 'little to no effort' | 帮助文档新增“主要内容”定义与四项评估属性：投入、原创、才能/技巧、准确性；无人工监督的批量 AI 文本 = “几乎零投入”",
+      "why_it_matters": "质量评估指南的语言第一次大段进入面向站长的官方文档，且与 10/1 的 AI 内容指南、虚构作者警告同一周落地。文档不是算法，但它定义了下一次更新会惩罚什么。",
+      "evidence": "official doc: developers.google.com/search/docs/fundamentals/creating-helpful-content (Oct 1–2); verified against the live doc Oct 10",
+      "evidence_detail": "The doc now states that rater guidelines treat main-content quality as 'one of the most critical factors for assessing page quality', defines main content in five categories (primary text/media, interactive features, user-generated contributions, tabbed/expanded sections, titles and headings) and lists four attributes raters assess: Effort, Originality, Talent or skill, Accuracy. It says feed-generated or unsupervised bulk generative-AI text 'represents little to no effort' and that YMYL content must match expert consensus. Google announced no ranking-system change. Search Engine Roundtable and SEOFOMO surfaced the edit; Marie Haynes notes the 'filler' language has long been in the QRG. Cited sources are the X posts that surfaced it.",
+      "who_it_affects": "publisher / SaaS / all",
+      "what_to_do": "抽 20 个核心页面按四项属性自评（投入/原创/才能/准确），删掉“主要内容”前的 filler（长导语、重复摘要），把结论和数据提到首屏。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Official Explanations",
+      "score": 84,
+      "sources": [
+        {
+          "name": "@aleyda (#SEOFOMO roundup)",
+          "url": "https://x.com/aleyda/status/2106757923481276664",
+          "excerpt": "🍿 All The Search Updates & News You can't Miss [#SEOFOMO - Oct 4, 2026] 👇 * ​Google: Manually Fact-Check & Review AI-Generated Content For Accuracy * ​Google Helpful Content Doc With New Main Content & EOT/SA Sections * ​AI Overviews on branded queries tripled in September * ​Google Gemini Adds UTM Parameters For Referral Attribution * ​Microsoft Clarity Now Lets You Customize Your Brand Terms in AI Visibility Dashboard * ​Creating News Content That Stands Out in AI and Multimodal Search * ​Which Rendering Approach is Best for SEO on E-commerce Sites? * ​Catching Technical SEO regressions and rendering disasters in CI for Shopify Stores [Presentation] * ​How AI Agents Use Websites, Where…",
+          "author": "@aleyda",
+          "published": "2026-10-04T06:46:45+00:00",
+          "source_type": "expert_analysis"
+        },
+        {
+          "name": "@Kevin_Indig (quoting @rustybrick)",
+          "url": "https://x.com/Kevin_Indig/status/2106351211578273803",
+          "excerpt": "Straight shot at programmatic content, commodity content and ai slop imho. Straight shot at programmatic content, commodity content and ai slop imho Barry Schwartz (@rustybrick) Google updates creating helpful, reliable, people-first content with new main content section and how search quality raters review it seroundtable.com/google-help… Link Google Updates Helpful Content Page With Main Content &amp; EOT/SA Google has updated the creating helpful, reliable, people-first content help document to primarily add two new sections. First, it added that the main content is",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-03T03:50:37+00:00",
+          "source_type": "data_research"
+        },
+        {
+          "name": "@Marie_Haynes (QRG excerpts)",
+          "url": "https://x.com/Marie_Haynes/status/2106737429575082390",
+          "excerpt": "Google's advice on \"main content\" is not new. Here are some excerpts from the Quality Raters Guidelines. The most interesting part is what they say about \"filler\" content: \"The main content (MC) of a page should support its purpose. so that visitors can immediately access it. A high quality page has the most helpful MC placed most prominently. Content that supports the page purpose without directly contributing to the primary goal can be included, but it should be shown lower on the page in a less prominent position.\" In other words: Make it easy for the searcher to find what they are looking for. Now why did they add this to the helpful content guidance now? It could be to help site owners…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-04T05:25:19+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Lily Ray predicts a major Google update is imminent: 4 spam updates in 2026 at shrinking intervals, a week of doc rewrites, and AIOs citing 38% fewer self-promotional listicles | Lily Ray 预判大型更新将至：2026 年 4 次垃圾更新且间隔缩短、一周内文档密集改写、AIO 引用自我推广型 listicle 减少 38%",
+      "why_it_matters": "预测本身是推测，但她列出的三类证据（更新节奏、文档改写、AIO 引用结构变化）各自可核查。即便“大更新”不来，这些方向也在逐步落地。",
+      "evidence": "expert analysis + author's own 100-query AIO panel (Lily Ray, Substack, Oct 4); amplified by @Marie_Haynes, @screamingfrog",
+      "evidence_detail": "Ray's Oct 4 Substack piece assembles: the four 2026 spam updates (Mar 24, Jun 24, Aug 18, Sep 24) with gaps of 92, 55 and 37 days; the Oct 1–2 edits to the AI-content, helpful-content and authorship docs; Search Central Live Barcelona remarks that scaled content is a bigger problem than link spam; and her own panel of 100 'best B2B software' queries where AIOs cite 38% fewer self-promotional listicles than in June while the queried brand is omitted 83% of the time (was 69%). She calls the timing uncertain — 'a matter of when, not if'. Google has confirmed nothing; Ray runs an SEO consultancy.",
+      "who_it_affects": "all",
+      "what_to_do": "监控，不要预防性大改：把 scaled content 审计、虚构作者清理、listicle 合并列为本月任务；若更新落地，以 GSC 按模板的日点击做判断。",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 58,
+      "sources": [
+        {
+          "name": "@aleyda (RT of Lily Ray)",
+          "url": "https://x.com/aleyda/status/2106854591623000282",
+          "excerpt": "RT by @aleyda: Just published my latest piece in Substack! If you’ve been paying attention, you’ve probably also connected the dots: All signs point to a major Google update on the horizon. This is especially true with Google’s recent communications and edits to their documentation this past week. I believe they will be targeting low-quality, scaled AI content, tactics meant to manipulate AI search responses, paid/inauthentic mentions, and other deceptive approaches. I put together a new Substack explaining why I’m predicting that a massive Google update is imminent - perhaps similar to what we’ve seen with Panda, Penguin, the Helpful Content Update or March 2024 core update. Shout outs to…",
+          "author": "@aleyda",
+          "published": "2026-10-04T13:10:52+00:00",
+          "source_type": "expert_analysis"
+        },
+        {
+          "name": "@screamingfrog (sharing Lily Ray)",
+          "url": "https://x.com/screamingfrog/status/2107094196561535102",
+          "excerpt": "Prediction: the next massive Google update is around the corner - https://lilyraynyc.substack.com/p/prediction-the-next-massive-google from @lilyraynyc. Prediction: the next massive Google update is around the corner - lilyraynyc.substack.com/p/pr… from @lilyraynyc",
+          "author": "@screamingfrog",
+          "published": "2026-10-05T05:02:59+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        },
+        {
+          "name": "@Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2107088402701029677",
+          "excerpt": "Such a good piece by @lilyraynyc. The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a big update coming back in March of 2024, and sure enough, the next day the March core update was launched, which Google called an evolution in how they determine the helpfulness of content. https://lilyraynyc.substack.com/p/prediction-the-next-massive-google?r=17bs0&utm_medium=ios&triedRedirect=true. Such a good piece by @lilyraynyc . The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-05T04:39:57+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Gemini starts appending UTM parameters to outbound links (undocumented); John Mueller: 'I see it too' | Gemini 开始给外链附加 UTM 参数（无官方文档）；John Mueller 确认“我也看到了”",
+      "why_it_matters": "AI 引荐流量此前大量落在 GA4 的 Direct（移动端 app 剥掉 referrer）。有了 UTM 就能真正量化 Gemini 带来的访问，但要先确认分析工具不会把它归到错误渠道。",
+      "evidence": "observation: Reddit thread + John Mueller reply, reported by SEJ (Roger Montti) ~Oct 1; shared by @screamingfrog",
+      "evidence_detail": "A Reddit thread spotted Gemini adding UTM parameters to outbound links about 24 hours earlier; John Mueller replied 'Nice. I see it too' and asked why the referrer isn't sufficient, offering to forward reproducible referrer-loss cases. A commenter claimed the referrer survives mostly on desktop and only ~9% passes through from the Gemini mobile app, with Android assistant stripping it so traffic lands in GA4 as Direct — an anonymous figure. Google has not documented the parameters, their values or trigger conditions. ChatGPT already adds UTMs on web-grounded answers.",
+      "who_it_affects": "all",
+      "what_to_do": "在 GA4 里查 session_source/medium 含 gemini 的会话并建自定义渠道分组“AI referral”（gemini、chatgpt、perplexity、copilot）；对照近 30 天 Direct 流量是否相应下降。",
+      "confidence": "Observed",
+      "impact": "P1",
+      "section": "SERP & Algorithm Signals",
+      "score": 72,
+      "sources": [
+        {
+          "name": "@screamingfrog (sharing SEJ)",
+          "url": "https://x.com/screamingfrog/status/2107031599502000142",
+          "excerpt": "Google Gemini Adds UTM Parameters For Referral Attribution - https://www.searchenginejournal.com/google-gemini-adds-utm-parameters-for-referral-attribution/591754/. Google Gemini Adds UTM Parameters For Referral Attribution - searchenginejournal.com/goog… Link Google Gemini Adds UTM Parameters For Referral Attribution Google Gemini added UTM parameters to links, giving SEOs better numbers for measuring AI traffic and deciding where resources should go. searchenginejournal.com",
+          "author": "@screamingfrog",
+          "published": "2026-10-05T00:54:14+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ]
+    },
+    {
+      "what_happened": "Google at Search Central Live Barcelona: for a URL of unknown quality or popularity, crawl demand uses the aggregate of its parent path, then that path's parent | Google 在 SCL 巴塞罗那：未知 URL 的爬取需求取其父路径的聚合值，再逐级上溯",
+      "why_it_matters": "这把 URL 目录结构和爬取预算直接绑在一起：把新页面放在历史表现差的目录下，会继承低爬取需求；反之亦然。对大站的信息架构是可操作的规则。",
+      "evidence": "official explanation (Google speaker at SCL Deep Dive Barcelona), relayed via John Campbell/ROAST and retweeted by @VeryWellVersed",
+      "evidence_detail": "A second-hand summary of a Google presentation at Search Central Live Deep Dive Barcelona (Sep 30–Oct 2, 2026): when Google does not know a URL's quality or popularity, crawl demand is estimated from the aggregate of its parent path, then the parent's parent, and so on. The Google speaker and exact wording are not in the tweet and no documentation page states this; it is consistent with Google's crawl-budget guidance but should be treated as a conference remark, not a spec.",
+      "who_it_affects": "ecommerce / publisher / SaaS",
+      "what_to_do": "新内容/新品类上线时，放在既有高表现目录下而不是新建顶级目录；清理长期低质目录（合并或 noindex）以避免其拖累同路径新页的爬取。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Official Explanations",
+      "score": 68,
+      "sources": [
+        {
+          "name": "@VeryWellVersed (RT)",
+          "url": "https://x.com/VeryWellVersed/status/2106743953194090822",
+          "excerpt": "RT by @VeryWellVersed: Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -> When Google doesn’t know the quality or popularity of a URL, it uses the aggregate for its parent path. Then that path’s parent, and so on. https://weareroast.com/news/google-search-central-live-deep-dive-barcelona-day-1-recap/#:~:text=When%20Google%20doesn%E2%80%99t%20know%20the%20quality%20or%20popularity%20of%20a%20URL. Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -&gt; When Google doesn’t know the quality or popularity of a URL, it uses the aggregate…",
+          "author": "@VeryWellVersed",
+          "published": "2026-10-04T05:51:14+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Playbook: audit Merchant Center image coverage — one global retailer is missing ~8M product images in its feed (2M+ products, average 1 image each) | 玩法：审计 Merchant Center 商品图覆盖率，一家全球零售商 feed 里缺约 800 万张图（200 万+商品，平均每个仅 1 张图）",
+      "why_it_matters": "免费商品列表与 AI 购物面都吃 feed 里的图片属性；站上有图、feed 里没图是最常见也最容易修的差距，直接影响商品卡的展示资格与点击。",
+      "evidence": "case: ecommerce audit shared by Brodie Clark (@brodieseo), Oct 5",
+      "evidence_detail": "Brodie Clark describes a store with 2M+ products in Merchant Center where the average image count per product is 1 and each country feed carries about 116K products including variants; multiplied across markets the gap is roughly 8 million images that exist on site but not in the feed. A single audit observation with no uplift measured; the mechanism (additional_image_link populating product cards and visual surfaces) is documented by Google.",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "导出 Merchant Center 商品数据，统计 additional_image_link 为空或仅 1 张图的商品占比；优先补齐头部 SKU 的多图，并观察免费列表的展示与点击。",
+      "how_to_test": "Merchant Center 导出 → 统计每商品图片数分布 → 对 Top 1000 SKU 补齐 3+ 张图 → 对比 4 周免费商品列表展示/点击。",
+      "success_metric": "免费商品列表（Shopping 标签 + 搜索）展示与点击的变化；补图 SKU 与未补图 SKU 的对比。",
+      "effort": "低到中：feed 规则或开发对接；风险是图片不合规（水印、文字）被拒登。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 64,
+      "sources": [
+        {
+          "name": "@brodieseo",
+          "url": "https://x.com/brodieseo/status/2107078351945163086",
+          "excerpt": "Ecommerce SEO: This store is missing ~8 million product images in Google Merchant Center. Not on the site. In the feed. 2M+ products in the account. Average image count: 1. Each location carries ~116K products (incl. variants). Multiply that across every country in a global operation, and you get millions of free listings competing with a single image each. Visuals sell the product. When the listing doesn't show enough of it, searchers scroll past and never reach the PDP. And CTR is only part of it. Adding ~4 more images per product (~8M across the account) also strengthens how those offers perform within free listings themselves. The good news: GMC already rates the existing images as high…",
+          "author": "@brodieseo",
+          "published": "2026-10-05T04:00:01+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "SERP Squeeze: 'baggy jeans' (US) gets ~60% more searches YoY but ~30% fewer organic clicks as AI and shopping modules absorb the page | SERP 挤压：“baggy jeans”（美国）搜索量同比约 +60%，自然点击约 −30%",
+      "why_it_matters": "单个查询的案例，但量化了电商非品牌词的“搜索增长、点击下降”剪刀差，提醒把 KPI 从排名转到展示份额与 SERP 占位。",
+      "evidence": "observation: one commercial US query in Aleyda Solis's weekly 'SERP Squeeze Monday' series",
+      "evidence_detail": "Aleyda Solis's weekly series looks at one commercial US query; for 'baggy jeans' she reports roughly 60% more searches year over year alongside about 30% fewer organic clicks, attributing the gap to the SERP features now occupying the page. Tool source and exact figures are in the thread; this is a single-query illustration, not a dataset.",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "监控：挑 20 个核心非品牌商业词，记录搜索量趋势 vs GSC 点击趋势，识别“量涨点击跌”的词并评估 Shopping/免费列表的补位。",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "score": 50,
+      "sources": [
+        {
+          "name": "@aleyda",
+          "url": "https://x.com/aleyda/status/2107112128356155792",
+          "excerpt": "60% more YOY searches, 30% fewer organic search clicks? Welcome to the second SERP Squeeze Monday! 👇 Every Monday, I’m going through a commercial query SERP to see how the relationship of organic search rankings <> visibility <> clicks is shifting. This week’s query: “baggy jeans” in the US. According to @Similarweb August 2026 vs 2025: 📈 Search volume grew from 114.1K to 182.1K: +60% 📉 Organic clicks fell from 24.8K to 17.3K: -30% 📉 Paid clicks also fell, from 13K to 12.3K: -5% What changed in the SERP? @ahrefs ' August 26 YOY snapshots show: * Traditional organic search results decreased from 9 to 5 within the top 10 positions. * Shopping Packs increased from 1 to 3, appearing at…",
+          "author": "@aleyda",
+          "published": "2026-10-05T06:14:14+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": false,
+  "degraded_reason": "",
+  "quiet_day": false,
+  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "backfilled": true
+}

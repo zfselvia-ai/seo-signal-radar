@@ -1,0 +1,266 @@
+{
+  "date": "2026-08-18",
+  "generated_at": "2026-10-12T05:17:54.370580+00:00",
+  "headline": "Google rolls out the August 2026 spam update (Aug 18–21), its third spam update of the year | Google 推出 2026 年 8 月垃圾内容更新（8/18–8/21），今年第三次",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "August 2026 spam update released Aug 18, rollout complete Aug 21 — the 3rd spam update of 2026 | 8 月垃圾内容更新 8/18 发布、8/21 完成，今年第三次",
+        "why_it_matters": "三天跑完的垃圾更新通常针对明确违规（scaled content、site reputation abuse、expired domain abuse），不是广谱质量重排；这期间掉的流量要先对照 spam policies 排查，而不是改内容质量。",
+        "evidence": "official: Google Search Status incident + @googlesearchc announcement and completion notice",
+        "evidence_detail": "Google Search Status logged the incident starting Aug 18, 2026 and marked the rollout complete on Aug 21 (about 3 days). Google Search Central announced it on X the same day and pointed to the ranking release history page. Google publishes no scope or affected-site data for spam updates; the only diagnostic available is comparing GSC clicks per template for Aug 18–21 against the preceding weeks.",
+        "who_it_affects": "all",
+        "what_to_do": "对比 8/18–8/21 与前两周的 GSC 点击（按目录/模板），有明显下跌的目录逐条对照 spam policies，重点查 scaled content 与第三方内容。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 90,
+        "sources": [
+          {
+            "name": "Google Search Status",
+            "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+            "excerpt": "[Spam Update] August 2026 spam update. The rollout was complete as of August 21, 2026.",
+            "author": "Google Search Status Dashboard",
+            "published": "2026-08-18T16:27:00+00:00",
+            "source_type": "practitioner_observation"
+          },
+          {
+            "name": "@googlesearchc",
+            "url": "https://x.com/googlesearchc/status/2089752491499938186",
+            "excerpt": "Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE. Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc…",
+            "author": "@googlesearchc",
+            "published": "2026-08-18T08:33:14+00:00",
+            "source_type": "official_api"
+          },
+          {
+            "name": "@googlesearchc (completion)",
+            "url": "https://x.com/googlesearchc/status/2090723476092985668",
+            "excerpt": "R to @googlesearchc: The rollout was complete as of August 21, 2026.. The rollout was complete as of August 21, 2026.",
+            "author": "@googlesearchc",
+            "published": "2026-08-21T00:51:35+00:00",
+            "source_type": "official_api"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Google adds a 'Preferred Sources' button in Search, News and Discover plus topic controls for the Discover feed | Google 在搜索/新闻/Discover 加入“首选来源”按钮与 Discover 话题控制",
+        "why_it_matters": "读者把你设为首选来源后，你的内容在 Top Stories 和 Discover 里获得优先展示。这是出版商为数不多能直接影响分发的用户信号，但需要主动引导读者去点那个按钮。",
+        "evidence": "Google product announcement (Aug 20), relayed by @dawnieando retweet",
+        "evidence_detail": "Google's Aug 20 announcement, retweeted by Dawn Anderson, lists the changes: a Preferred Sources button to save favourite websites, feedback controls to see more or less of specific topics and links in the Discover feed, and related tweaks across Search, News and Discover. It is the product announcement itself, not a measurement — Google gives no data on how preferred-source status changes impressions or clicks.",
+        "who_it_affects": "publisher",
+        "what_to_do": "在站内和邮件里加入“将我们设为 Google 首选来源”的引导（含操作截图），记录开始推广的日期，以便之后与 Top Stories/Discover 展示量变化对照。",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 70,
+        "sources": [
+          {
+            "name": "@dawnieando (RT of Google)",
+            "url": "https://x.com/dawnieando/status/2090478864275570693",
+            "excerpt": "RT by @dawnieando: A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like you’d text a friend 🎧 Stay up to date with custom daily audio briefings in the Google News app (Android). A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like…",
+            "author": "@dawnieando",
+            "published": "2026-08-20T08:39:35+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Research & Retrieval": [
+      {
+        "what_happened": "Study: ChatGPT names brands in its own search queries before fetching anything — 21 of 27 first queries included brands the user never typed | 研究：ChatGPT 在检索前就已决定候选品牌，27 次首轮查询中 21 次带入用户未提及的品牌",
+        "why_it_matters": "如果模型先从训练记忆里拉出品牌清单、再用 site: 探针去验证，那么只盯“被引用的 URL”做 GEO 是把结果当原因。品牌是否进入模型的先验，才是第一道门。",
+        "evidence": "observation: 57 conversations / 3,554 fetched pages from one ChatGPT Plus account (Suganthan Mohanadasan), shared by @randfish",
+        "evidence_detail": "Suganthan Mohanadasan read the search_queries field in ChatGPT's network responses on one logged-in account (Dubai, Jul 24–25, 2026). 21 of 27 first queries already named brands; brands that appeared in ChatGPT's own query reached the final answer 68.9% of the time (n=119) versus 2.1% for pages that were merely fetched (n=51). Only 110 of 3,554 retrieved pages (3.1%) were cited. The author calls every percentage directional: one account, personalised results, a software-heavy question mix; he also sells Keyword Insights. Rand Fishkin's framing: citation-analysis research may be misleading practitioners.",
+        "who_it_affects": "SaaS / ecommerce / all",
+        "what_to_do": "测试：针对你的品类问 ChatGPT 10 个“best X”类问题并抓取其 search_queries，记录你的品牌是否出现在模型自己生成的查询里；没出现就先做品牌提及（第三方评测、对比页），而不是优化被引用页面。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Research & Retrieval",
+        "score": 68,
+        "sources": [
+          {
+            "name": "@randfish",
+            "url": "https://x.com/randfish/status/2087612290610970640",
+            "excerpt": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: https://suganthan.com/blog/chatgpt-decides-before-it-searches/. I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: suganthan.com/blog/chatgpt-d… Video",
+            "author": "@randfish",
+            "published": "2026-08-12T10:48:50+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Playbook: isolate Google AI Mode traffic in Search Console by classifying conversational query fragments | 玩法：在 Search Console 里通过识别对话式查询片段拆出 AI Mode 流量",
+        "why_it_matters": "GSC 不单列 AI Mode，但 John Mueller 确认 AI Mode 的追问会以普通查询形式进入报表，所以长句、带代词、多轮式的查询片段可以当作 AI Mode 流量的代理指标。",
+        "evidence": "practitioner method (Suganthan Mohanadasan), four extraction approaches compared; shared by @screamingfrog",
+        "evidence_detail": "The write-up compares four ways to pull conversational fragments out of GSC — Glenn Gabe's API+Excel approach, a regex method, a browser extension, and the author's own classifier combining deterministic rules with a fine-tuned xlm-roberta-base model trained on his labelled queries plus synthetic rows in 8 languages — handling up to 100,000 unique queries per run. Hard limit stated by the author: on his property 57.7% of impressions sat in Google's anonymised query pool over 59 days, so every method undercounts; no precision/recall figures are published. The tool is free; large jobs route to his agency.",
+        "who_it_affects": "all",
+        "what_to_do": "导出近 90 天 GSC 查询（API/BigQuery），用正则或分类器标出对话式片段（≥6 词、含 I/my/should/which 等），按周看其展示与点击占比。",
+        "how_to_test": "导出 GSC 查询 → 规则/分类器打标 → 对话式片段占比按周跟踪，与 AI Mode 在你市场的上线日期对照。",
+        "success_metric": "对话式片段的展示/点击占比及其周环比；若上线后占比上升且 CTR 明显不同于普通查询，说明分割有效。",
+        "effort": "中：需要 API/BigQuery 导出与脚本；风险是匿名化查询（作者站点占展示的 57.7%）导致系统性低估。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 66,
+        "sources": [
+          {
+            "name": "@screamingfrog (sharing Suganthan)",
+            "url": "https://x.com/screamingfrog/status/2089644764077416531",
+            "excerpt": "How to Track Google AI Mode Traffic in Search Console - https://suganthan.com/blog/how-to-track-ai-mode-traffic/ from @suganthan. How to Track Google AI Mode Traffic in Search Console - suganthan.com/blog/how-to-tr… from @suganthan Link How to Track Google AI Mode Traffic in Search Console — Suganthan Four ways to surface AI Mode and AI Overview queries hiding in Search Console, from a custom regex to a free classifier that labels 100,000 queries per run. suganthan.com",
+            "author": "@screamingfrog",
+            "published": "2026-08-18T01:25:10+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "对照 8/18–8/21 的 GSC 点击变化排查 spam policies 违规（scaled content / 第三方内容）",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "出版商：上线“设为首选来源”引导并记录推广起始日期",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "August 2026 spam update released Aug 18, rollout complete Aug 21 — the 3rd spam update of 2026 | 8 月垃圾内容更新 8/18 发布、8/21 完成，今年第三次",
+      "why_it_matters": "三天跑完的垃圾更新通常针对明确违规（scaled content、site reputation abuse、expired domain abuse），不是广谱质量重排；这期间掉的流量要先对照 spam policies 排查，而不是改内容质量。",
+      "evidence": "official: Google Search Status incident + @googlesearchc announcement and completion notice",
+      "evidence_detail": "Google Search Status logged the incident starting Aug 18, 2026 and marked the rollout complete on Aug 21 (about 3 days). Google Search Central announced it on X the same day and pointed to the ranking release history page. Google publishes no scope or affected-site data for spam updates; the only diagnostic available is comparing GSC clicks per template for Aug 18–21 against the preceding weeks.",
+      "who_it_affects": "all",
+      "what_to_do": "对比 8/18–8/21 与前两周的 GSC 点击（按目录/模板），有明显下跌的目录逐条对照 spam policies，重点查 scaled content 与第三方内容。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 90,
+      "sources": [
+        {
+          "name": "Google Search Status",
+          "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+          "excerpt": "[Spam Update] August 2026 spam update. The rollout was complete as of August 21, 2026.",
+          "author": "Google Search Status Dashboard",
+          "published": "2026-08-18T16:27:00+00:00",
+          "source_type": "practitioner_observation"
+        },
+        {
+          "name": "@googlesearchc",
+          "url": "https://x.com/googlesearchc/status/2089752491499938186",
+          "excerpt": "Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE. Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc…",
+          "author": "@googlesearchc",
+          "published": "2026-08-18T08:33:14+00:00",
+          "source_type": "official_api"
+        },
+        {
+          "name": "@googlesearchc (completion)",
+          "url": "https://x.com/googlesearchc/status/2090723476092985668",
+          "excerpt": "R to @googlesearchc: The rollout was complete as of August 21, 2026.. The rollout was complete as of August 21, 2026.",
+          "author": "@googlesearchc",
+          "published": "2026-08-21T00:51:35+00:00",
+          "source_type": "official_api"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google adds a 'Preferred Sources' button in Search, News and Discover plus topic controls for the Discover feed | Google 在搜索/新闻/Discover 加入“首选来源”按钮与 Discover 话题控制",
+      "why_it_matters": "读者把你设为首选来源后，你的内容在 Top Stories 和 Discover 里获得优先展示。这是出版商为数不多能直接影响分发的用户信号，但需要主动引导读者去点那个按钮。",
+      "evidence": "Google product announcement (Aug 20), relayed by @dawnieando retweet",
+      "evidence_detail": "Google's Aug 20 announcement, retweeted by Dawn Anderson, lists the changes: a Preferred Sources button to save favourite websites, feedback controls to see more or less of specific topics and links in the Discover feed, and related tweaks across Search, News and Discover. It is the product announcement itself, not a measurement — Google gives no data on how preferred-source status changes impressions or clicks.",
+      "who_it_affects": "publisher",
+      "what_to_do": "在站内和邮件里加入“将我们设为 Google 首选来源”的引导（含操作截图），记录开始推广的日期，以便之后与 Top Stories/Discover 展示量变化对照。",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 70,
+      "sources": [
+        {
+          "name": "@dawnieando (RT of Google)",
+          "url": "https://x.com/dawnieando/status/2090478864275570693",
+          "excerpt": "RT by @dawnieando: A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like you’d text a friend 🎧 Stay up to date with custom daily audio briefings in the Google News app (Android). A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like…",
+          "author": "@dawnieando",
+          "published": "2026-08-20T08:39:35+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Study: ChatGPT names brands in its own search queries before fetching anything — 21 of 27 first queries included brands the user never typed | 研究：ChatGPT 在检索前就已决定候选品牌，27 次首轮查询中 21 次带入用户未提及的品牌",
+      "why_it_matters": "如果模型先从训练记忆里拉出品牌清单、再用 site: 探针去验证，那么只盯“被引用的 URL”做 GEO 是把结果当原因。品牌是否进入模型的先验，才是第一道门。",
+      "evidence": "observation: 57 conversations / 3,554 fetched pages from one ChatGPT Plus account (Suganthan Mohanadasan), shared by @randfish",
+      "evidence_detail": "Suganthan Mohanadasan read the search_queries field in ChatGPT's network responses on one logged-in account (Dubai, Jul 24–25, 2026). 21 of 27 first queries already named brands; brands that appeared in ChatGPT's own query reached the final answer 68.9% of the time (n=119) versus 2.1% for pages that were merely fetched (n=51). Only 110 of 3,554 retrieved pages (3.1%) were cited. The author calls every percentage directional: one account, personalised results, a software-heavy question mix; he also sells Keyword Insights. Rand Fishkin's framing: citation-analysis research may be misleading practitioners.",
+      "who_it_affects": "SaaS / ecommerce / all",
+      "what_to_do": "测试：针对你的品类问 ChatGPT 10 个“best X”类问题并抓取其 search_queries，记录你的品牌是否出现在模型自己生成的查询里；没出现就先做品牌提及（第三方评测、对比页），而不是优化被引用页面。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Research & Retrieval",
+      "score": 68,
+      "sources": [
+        {
+          "name": "@randfish",
+          "url": "https://x.com/randfish/status/2087612290610970640",
+          "excerpt": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: https://suganthan.com/blog/chatgpt-decides-before-it-searches/. I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: suganthan.com/blog/chatgpt-d… Video",
+          "author": "@randfish",
+          "published": "2026-08-12T10:48:50+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Playbook: isolate Google AI Mode traffic in Search Console by classifying conversational query fragments | 玩法：在 Search Console 里通过识别对话式查询片段拆出 AI Mode 流量",
+      "why_it_matters": "GSC 不单列 AI Mode，但 John Mueller 确认 AI Mode 的追问会以普通查询形式进入报表，所以长句、带代词、多轮式的查询片段可以当作 AI Mode 流量的代理指标。",
+      "evidence": "practitioner method (Suganthan Mohanadasan), four extraction approaches compared; shared by @screamingfrog",
+      "evidence_detail": "The write-up compares four ways to pull conversational fragments out of GSC — Glenn Gabe's API+Excel approach, a regex method, a browser extension, and the author's own classifier combining deterministic rules with a fine-tuned xlm-roberta-base model trained on his labelled queries plus synthetic rows in 8 languages — handling up to 100,000 unique queries per run. Hard limit stated by the author: on his property 57.7% of impressions sat in Google's anonymised query pool over 59 days, so every method undercounts; no precision/recall figures are published. The tool is free; large jobs route to his agency.",
+      "who_it_affects": "all",
+      "what_to_do": "导出近 90 天 GSC 查询（API/BigQuery），用正则或分类器标出对话式片段（≥6 词、含 I/my/should/which 等），按周看其展示与点击占比。",
+      "how_to_test": "导出 GSC 查询 → 规则/分类器打标 → 对话式片段占比按周跟踪，与 AI Mode 在你市场的上线日期对照。",
+      "success_metric": "对话式片段的展示/点击占比及其周环比；若上线后占比上升且 CTR 明显不同于普通查询，说明分割有效。",
+      "effort": "中：需要 API/BigQuery 导出与脚本；风险是匿名化查询（作者站点占展示的 57.7%）导致系统性低估。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 66,
+      "sources": [
+        {
+          "name": "@screamingfrog (sharing Suganthan)",
+          "url": "https://x.com/screamingfrog/status/2089644764077416531",
+          "excerpt": "How to Track Google AI Mode Traffic in Search Console - https://suganthan.com/blog/how-to-track-ai-mode-traffic/ from @suganthan. How to Track Google AI Mode Traffic in Search Console - suganthan.com/blog/how-to-tr… from @suganthan Link How to Track Google AI Mode Traffic in Search Console — Suganthan Four ways to surface AI Mode and AI Overview queries hiding in Search Console, from a custom regex to a free classifier that labels 100,000 queries per run. suganthan.com",
+          "author": "@screamingfrog",
+          "published": "2026-08-18T01:25:10+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": false,
+  "degraded_reason": "",
+  "quiet_day": false,
+  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "backfilled": true
+}

@@ -1,0 +1,242 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-10-12T05:17:54.668234+00:00",
+  "headline": "Google starts the September 2026 spam update — the 4th of the year — as Search Console splits Web traffic into text and multimodal | Google 启动 9 月垃圾内容更新（今年第四次），Search Console 同步拆分文本与多模态流量",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "September 2026 spam update begins Sep 24 — the 4th spam update of 2026 vs 1 in all of 2025; intervals shrinking 92→55→37 days | 9 月垃圾内容更新 9/24 开始，2026 年第四次（2025 全年仅一次），间隔 92→55→37 天",
+        "why_it_matters": "频率本身就是信号：Google 在 SCL 巴塞罗那称 scaled content 比链接垃圾问题更大。更新进行中不要动站，先按模板记录每日点击基线，结束后再判断。",
+        "evidence": "official: Google Search Status incident + @googlesearchc; cadence per @patrickstox (Sep 28)",
+        "evidence_detail": "Google Search Status opened the incident on Sep 24, 2026 and Search Central announced it on X. As of this back-dated record the status page shows the rollout completed Oct 8 (about 14 days, the longest of the year's four). Patrick Stox noted on Sep 28 that 2026 has had four spam updates against one in 2025. Google publishes no scope data for spam updates; the practical reading is that it is iterating spam classifiers (scaled content, site reputation, expired domains) far more often than before.",
+        "who_it_affects": "all",
+        "what_to_do": "更新期间冻结大改版；每日导出 GSC 点击按目录/模板，标注 9/24 起始点，等官方宣布结束后再比较前后两周。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 92,
+        "sources": [
+          {
+            "name": "Google Search Status",
+            "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+            "excerpt": "[Spam Update] September 2026 spam update. The rollout was complete as of October 8, 2026.",
+            "author": "Google Search Status Dashboard",
+            "published": "2026-09-24T16:15:00+00:00",
+            "source_type": "practitioner_observation"
+          },
+          {
+            "name": "@googlesearchc",
+            "url": "https://x.com/googlesearchc/status/2103159043347128638",
+            "excerpt": "Today we released the September 2026 spam update. We'll update our ranking release history page when the rollout is complete: https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu. Today we released the September 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc…",
+            "author": "@googlesearchc",
+            "published": "2026-09-24T08:26:05+00:00",
+            "source_type": "official_api"
+          },
+          {
+            "name": "@patrickstox",
+            "url": "https://x.com/patrickstox/status/2104642975712088473",
+            "excerpt": "4 Google spam updates so far this year really says something about the state of the web. There was only 1 in 2025.. 4 Google spam updates so far this year really says something about the state of the web. There was only 1 in 2025.",
+            "author": "@patrickstox",
+            "published": "2026-09-28T10:42:42+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      },
+      {
+        "what_happened": "Search Console adds a 'Web: multimodal' search type (Lens, Circle to Search, image upload, Chrome 'search this image'), rolling out globally | Search Console 新增“Web：多模态”搜索类型（Lens、圈选搜索、图片上传等），全球推出",
+        "why_it_matters": "第一次能把视觉入口的流量从文本搜索里拆出来。对有大量商品图/实拍图的站点，这决定了图片 SEO 的投入能否被量化。",
+        "evidence": "official doc: Google Search Central blog, Sep 24, 2026; details via @brodieseo",
+        "evidence_detail": "Google (Harsh Kharbanda, Google Lens PM lead, and Moshe Samet, Search Console PM lead) added a multimodal filter to the Performance report's search type and to the Generative AI features report, covering Google Lens, Circle to Search on Android, image uploads to Search and Chrome's right-click image search. It rolls out globally from Sep 24 and only appears for sites that receive such traffic; export is supported. Not stated: data start date, whether history is backfilled, API availability, or how much of 'Web' this traffic previously made up.",
+        "who_it_affects": "ecommerce / publisher / local",
+        "what_to_do": "在 GSC 效果报告切到“Web：多模态”，看哪些页面带来展示并对比其 CTR 与文本搜索；有数据的站点把商品/实拍图的 alt、结构化数据和图片 sitemap 纳入季度计划。",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "Confirmed Search Updates",
+        "score": 80,
+        "sources": [
+          {
+            "name": "Google Search Central Blog",
+            "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+            "excerpt": "Announcing web multimodal Search performance reporting in Search Console. Understanding how users find your content is crucial for any publisher or site owner. As Search evolves to include more visual and multimodal experiences, we want to ensure you have the data you need to analyze your performance.",
+            "author": "Google Search Central Blog",
+            "published": "2026-09-23T16:00:00+00:00",
+            "source_type": "official_documentation"
+          },
+          {
+            "name": "@brodieseo",
+            "url": "https://x.com/brodieseo/status/2103098703037026484",
+            "excerpt": "SEO News: Google Search Console just added a new \"Multimodal\" filter to the Performance report. Opening the Search type filter now splits the \"Web\" option into two: Text-based and Multimodal. Google's definition: \"Web-multimodal tracks search results triggered by a query that uses an image, photo, or screenshot. Text-only queries are tracked as Web text-based.\" In practice, that means you can finally isolate discovery coming from: • Google Lens • Circle to Search on Android • Image uploads to Google Search • The Chrome right-click \"Search this image\" option One important caveat before you get excited: there's no query data for multimodal traffic. Google's own docs say the queries dimension…",
+            "author": "@brodieseo",
+            "published": "2026-09-24T04:26:19+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "SearchPilot simulation: across 12 LLM shopping conversations the first-named brand won only once; final picks spanned 4 brands | SearchPilot 模拟：12 轮 LLM 购物对话中首个被提及的品牌仅赢 1 次，最终选择分散到 4 个品牌",
+        "why_it_matters": "如果多轮对话会推翻首轮答案，那么基于固定 prompt 首答的“AI 可见度分数”量的是错的东西。这也解释了为什么各家 AI 追踪工具互相矛盾。",
+        "evidence": "experiment (simulated): 12 runs × 2 categories, Gemini via API, LLM-as-shopper (Will Critchlow, SearchPilot)",
+        "evidence_detail": "Will Critchlow had Claude build a persona from a one-line goal, a small local LLM 'shop' by conversing with Gemini, and Claude analyse the transcripts — 12 runs each for running shoes and garden furniture. Shoes: Brooks was named first in 6 runs but chosen in 1; Saucony was never chosen when named first yet was the most frequent final pick (5). Furniture: Wayfair was named first 3 times and won 0; only 2 of 12 journeys ended where they began. Critchlow states this is a toy model, not real users: n=24, one engine, no statistics. SearchPilot sells testing that competes with prompt trackers.",
+        "who_it_affects": "ecommerce / SaaS / all",
+        "what_to_do": "评估 AI 追踪工具时要求多轮对话采样而非单 prompt 首答；自己测时用 3–5 轮带追问的脚本重复 10 次，看推荐品牌的分布而不是“第一名”。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 66,
+        "sources": [
+          {
+            "name": "@willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2102799497898393839",
+            "excerpt": "I've been in the lab. I wanted to see if I could model the impact of combining randomness in LLM outputs with the branching chaos of conversational paths. I wondered how stable the recommended product and brand would be. The answer? Extremely unstable. Given a static persona and buying objective, one of my experiments \"bought\" 9 different products in 12 runs. The one pictured below \"bought\" 5 different products from 4 different brands from 4 different retailers.One-shot prompt tracking isn't anywhere near capturing this complexity. I have more questions than answers, but I'm excited to do more testing.. I've been in the lab. I wanted to see if I could model the impact of combining…",
+            "author": "@willcritchlow",
+            "published": "2026-09-23T08:37:23+00:00",
+            "source_type": "reproducible_experiment"
+          },
+          {
+            "name": "@willcritchlow (methodology)",
+            "url": "https://x.com/willcritchlow/status/2102799500334997917",
+            "excerpt": "R to @willcritchlow: Full write up and methodology: https://www.searchpilot.com/resources/blog/conversations. Full write up and methodology: searchpilot.com/resources/bl… Link Buying journeys are conversations, not prompts Buying journeys are better modeled as conversations, not prompts, and randomness at every step means that prompt tracking misses a lot of the picture. searchpilot.com",
+            "author": "@willcritchlow",
+            "published": "2026-09-23T08:37:23+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "冻结大改版，开始按模板记录每日 GSC 点击基线，标注 9/24",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "在 GSC 查看“Web：多模态”是否已有数据，评估图片 SEO 投入",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "September 2026 spam update begins Sep 24 — the 4th spam update of 2026 vs 1 in all of 2025; intervals shrinking 92→55→37 days | 9 月垃圾内容更新 9/24 开始，2026 年第四次（2025 全年仅一次），间隔 92→55→37 天",
+      "why_it_matters": "频率本身就是信号：Google 在 SCL 巴塞罗那称 scaled content 比链接垃圾问题更大。更新进行中不要动站，先按模板记录每日点击基线，结束后再判断。",
+      "evidence": "official: Google Search Status incident + @googlesearchc; cadence per @patrickstox (Sep 28)",
+      "evidence_detail": "Google Search Status opened the incident on Sep 24, 2026 and Search Central announced it on X. As of this back-dated record the status page shows the rollout completed Oct 8 (about 14 days, the longest of the year's four). Patrick Stox noted on Sep 28 that 2026 has had four spam updates against one in 2025. Google publishes no scope data for spam updates; the practical reading is that it is iterating spam classifiers (scaled content, site reputation, expired domains) far more often than before.",
+      "who_it_affects": "all",
+      "what_to_do": "更新期间冻结大改版；每日导出 GSC 点击按目录/模板，标注 9/24 起始点，等官方宣布结束后再比较前后两周。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 92,
+      "sources": [
+        {
+          "name": "Google Search Status",
+          "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+          "excerpt": "[Spam Update] September 2026 spam update. The rollout was complete as of October 8, 2026.",
+          "author": "Google Search Status Dashboard",
+          "published": "2026-09-24T16:15:00+00:00",
+          "source_type": "practitioner_observation"
+        },
+        {
+          "name": "@googlesearchc",
+          "url": "https://x.com/googlesearchc/status/2103159043347128638",
+          "excerpt": "Today we released the September 2026 spam update. We'll update our ranking release history page when the rollout is complete: https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu. Today we released the September 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc…",
+          "author": "@googlesearchc",
+          "published": "2026-09-24T08:26:05+00:00",
+          "source_type": "official_api"
+        },
+        {
+          "name": "@patrickstox",
+          "url": "https://x.com/patrickstox/status/2104642975712088473",
+          "excerpt": "4 Google spam updates so far this year really says something about the state of the web. There was only 1 in 2025.. 4 Google spam updates so far this year really says something about the state of the web. There was only 1 in 2025.",
+          "author": "@patrickstox",
+          "published": "2026-09-28T10:42:42+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Search Console adds a 'Web: multimodal' search type (Lens, Circle to Search, image upload, Chrome 'search this image'), rolling out globally | Search Console 新增“Web：多模态”搜索类型（Lens、圈选搜索、图片上传等），全球推出",
+      "why_it_matters": "第一次能把视觉入口的流量从文本搜索里拆出来。对有大量商品图/实拍图的站点，这决定了图片 SEO 的投入能否被量化。",
+      "evidence": "official doc: Google Search Central blog, Sep 24, 2026; details via @brodieseo",
+      "evidence_detail": "Google (Harsh Kharbanda, Google Lens PM lead, and Moshe Samet, Search Console PM lead) added a multimodal filter to the Performance report's search type and to the Generative AI features report, covering Google Lens, Circle to Search on Android, image uploads to Search and Chrome's right-click image search. It rolls out globally from Sep 24 and only appears for sites that receive such traffic; export is supported. Not stated: data start date, whether history is backfilled, API availability, or how much of 'Web' this traffic previously made up.",
+      "who_it_affects": "ecommerce / publisher / local",
+      "what_to_do": "在 GSC 效果报告切到“Web：多模态”，看哪些页面带来展示并对比其 CTR 与文本搜索；有数据的站点把商品/实拍图的 alt、结构化数据和图片 sitemap 纳入季度计划。",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "Confirmed Search Updates",
+      "score": 80,
+      "sources": [
+        {
+          "name": "Google Search Central Blog",
+          "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+          "excerpt": "Announcing web multimodal Search performance reporting in Search Console. Understanding how users find your content is crucial for any publisher or site owner. As Search evolves to include more visual and multimodal experiences, we want to ensure you have the data you need to analyze your performance.",
+          "author": "Google Search Central Blog",
+          "published": "2026-09-23T16:00:00+00:00",
+          "source_type": "official_documentation"
+        },
+        {
+          "name": "@brodieseo",
+          "url": "https://x.com/brodieseo/status/2103098703037026484",
+          "excerpt": "SEO News: Google Search Console just added a new \"Multimodal\" filter to the Performance report. Opening the Search type filter now splits the \"Web\" option into two: Text-based and Multimodal. Google's definition: \"Web-multimodal tracks search results triggered by a query that uses an image, photo, or screenshot. Text-only queries are tracked as Web text-based.\" In practice, that means you can finally isolate discovery coming from: • Google Lens • Circle to Search on Android • Image uploads to Google Search • The Chrome right-click \"Search this image\" option One important caveat before you get excited: there's no query data for multimodal traffic. Google's own docs say the queries dimension…",
+          "author": "@brodieseo",
+          "published": "2026-09-24T04:26:19+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "SearchPilot simulation: across 12 LLM shopping conversations the first-named brand won only once; final picks spanned 4 brands | SearchPilot 模拟：12 轮 LLM 购物对话中首个被提及的品牌仅赢 1 次，最终选择分散到 4 个品牌",
+      "why_it_matters": "如果多轮对话会推翻首轮答案，那么基于固定 prompt 首答的“AI 可见度分数”量的是错的东西。这也解释了为什么各家 AI 追踪工具互相矛盾。",
+      "evidence": "experiment (simulated): 12 runs × 2 categories, Gemini via API, LLM-as-shopper (Will Critchlow, SearchPilot)",
+      "evidence_detail": "Will Critchlow had Claude build a persona from a one-line goal, a small local LLM 'shop' by conversing with Gemini, and Claude analyse the transcripts — 12 runs each for running shoes and garden furniture. Shoes: Brooks was named first in 6 runs but chosen in 1; Saucony was never chosen when named first yet was the most frequent final pick (5). Furniture: Wayfair was named first 3 times and won 0; only 2 of 12 journeys ended where they began. Critchlow states this is a toy model, not real users: n=24, one engine, no statistics. SearchPilot sells testing that competes with prompt trackers.",
+      "who_it_affects": "ecommerce / SaaS / all",
+      "what_to_do": "评估 AI 追踪工具时要求多轮对话采样而非单 prompt 首答；自己测时用 3–5 轮带追问的脚本重复 10 次，看推荐品牌的分布而不是“第一名”。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 66,
+      "sources": [
+        {
+          "name": "@willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2102799497898393839",
+          "excerpt": "I've been in the lab. I wanted to see if I could model the impact of combining randomness in LLM outputs with the branching chaos of conversational paths. I wondered how stable the recommended product and brand would be. The answer? Extremely unstable. Given a static persona and buying objective, one of my experiments \"bought\" 9 different products in 12 runs. The one pictured below \"bought\" 5 different products from 4 different brands from 4 different retailers.One-shot prompt tracking isn't anywhere near capturing this complexity. I have more questions than answers, but I'm excited to do more testing.. I've been in the lab. I wanted to see if I could model the impact of combining…",
+          "author": "@willcritchlow",
+          "published": "2026-09-23T08:37:23+00:00",
+          "source_type": "reproducible_experiment"
+        },
+        {
+          "name": "@willcritchlow (methodology)",
+          "url": "https://x.com/willcritchlow/status/2102799500334997917",
+          "excerpt": "R to @willcritchlow: Full write up and methodology: https://www.searchpilot.com/resources/blog/conversations. Full write up and methodology: searchpilot.com/resources/bl… Link Buying journeys are conversations, not prompts Buying journeys are better modeled as conversations, not prompts, and randomness at every step means that prompt tracking misses a lot of the picture. searchpilot.com",
+          "author": "@willcritchlow",
+          "published": "2026-09-23T08:37:23+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": false,
+  "degraded_reason": "",
+  "quiet_day": false,
+  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "backfilled": true
+}

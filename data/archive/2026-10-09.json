@@ -1,0 +1,610 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-12T05:17:55.161272+00:00",
+  "headline": "Rumblings of another update a day after the spam update ended; Aleyda's four-market study shows AI citations are local, not global | 垃圾更新刚结束一天就传出新一轮更新；Aleyda 四市场研究显示 AI 引用是本地化的而非全球统一",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "Google explains HTML sitemaps can still help users and crawlers reach pages, even though XML sitemaps replaced them for discovery | Google 解释 HTML 站点地图仍有助于用户和爬虫到达页面，尽管 XML 已取代其发现功能",
+        "why_it_matters": "低优先级，但对大站的内链扁平化有参考价值：HTML 站点地图本质是一个全站内链枢纽页。",
+        "evidence": "Google statement reported by Search Engine Journal (Roger Montti), Oct 9",
+        "evidence_detail": "SEJ summarises a Google explanation of why HTML sitemaps may still be useful: they act as navigational pages for users and give crawlers another internal-link path to deep pages, while XML sitemaps remain the discovery standard. The original Google statement is not quoted in this note.",
+        "who_it_affects": "all",
+        "what_to_do": "无需行动；大站可核对深层页面（点击深度 ≥4）的内链入口，HTML 站点地图是补内链的一种低成本方式。",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "score": 44,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508/",
+            "excerpt": "Google Explains How To Use HTML Sitemaps For SEO via @sejournal, @martinibuster. Google explains why HTML sitemaps may still be useful even though the XML standard has largely replaced it. The post Google Explains How To Use HTML Sitemaps For SEO appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-10-09T13:31:30+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Lily Ray: Google seems 'hell-bent' on showing AI Overviews for as many queries as possible, while reliable data to measure the impact is getting scarcer daily | Lily Ray：Google 似乎执意让 AIO 覆盖尽可能多的查询，而可用于衡量影响的可靠数据每天都在减少",
+        "why_it_matters": "与 Ahrefs 的 83% 品牌词数据、法国 CTR 数据一致：AIO 覆盖扩张是常态而不是一次性事件。测量能力的下降（排名工具、GSC 匿名化）是第二个问题。",
+        "evidence": "expert commentary (Oct 9), consistent with Ahrefs branded-AIO data (Oct 2)",
+        "evidence_detail": "Ray suspects the rapid AIO expansion is driven by Google's need to demonstrate growth in AI product usage versus competitors, and separately notes the lack of reliable data to measure any of it — a problem she says is getting worse daily, echoing this month's rank-tracker outages. Opinion, but anchored to the Ahrefs finding that AIOs now appear on 83% of US branded searches.",
+        "who_it_affects": "all",
+        "what_to_do": "无需行动；把 AIO 覆盖率（Ahrefs/Semrush 的 SERP 特征筛选）加入月度仪表盘，作为长期趋势项。",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "score": 52,
+        "sources": [
+          {
+            "name": "@lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2108649368396149042",
+            "excerpt": "Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage & outpace competitors in user adoption. Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage &amp; outpace competitors in user adoption",
+            "author": "@lilyraynyc",
+            "published": "2026-10-09T12:02:40+00:00",
+            "source_type": "expert_analysis"
+          },
+          {
+            "name": "@lilyraynyc (data access)",
+            "url": "https://x.com/lilyraynyc/status/2108616099835125839",
+            "excerpt": "Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily. Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily JH Scherck (@JHTScherck) You can tell clients \"LLMs are probabilistic\" until you're blue in the face, but I don't think most people fully appreciate how much of a mind bender it is for GTM teams who want to win AEO but don't live and breathe this stuff. We all started our careers working with systems where the relationship between inputs and outputs was predictable, but LLMs are",
+            "author": "@lilyraynyc",
+            "published": "2026-10-09T09:50:29+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google revamps the Reader Revenue Manager page, now naming AI Overviews, AI Mode and Gemini as surfaces where subscribers see 'From your subscriptions' content | Google 改版 Reader Revenue Manager 页面，首次把 AI Overviews、AI Mode 与 Gemini 列为订阅内容的展示面",
+        "why_it_matters": "对付费墙出版商：订阅关系开始被带进 AI 答案面，意味着“订阅者可见”可能成为在 AIO/AI Mode 里获得展示的一种方式。",
+        "evidence": "Google product page update, reported by Search Engine Roundtable and quoted by @glenngabe, Oct 9",
+        "evidence_detail": "Search Engine Roundtable notes a major redesign of the Reader Revenue Manager homepage that adds AI Mode, AI Overviews and Gemini alongside Search and Discover; Glenn Gabe quotes the page: readers who subscribe or contribute through RRM can see your content featured in a 'From your subscriptions' module. No launch date or data for the AI surfaces is given.",
+        "who_it_affects": "publisher",
+        "what_to_do": "使用 RRM 或付费墙的出版商：核对订阅结构化数据（isAccessibleForFree、hasPart）完整，并关注订阅者在 AI Mode/Gemini 里是否看到“来自你的订阅”模块。",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "score": 46,
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/google-updates-reader-revenue-manager-42261.html",
+            "excerpt": "Google Updates Reader Revenue Manager Home Page. Google has made major updates to the Reader Revenue Manager homepage. It was a large redesign of the page, it also now lists AI Mode, AI Overviews, and Gemini, added a matrix to the page and moved things around as well.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-09T03:31:00+00:00",
+            "source_type": "trade_news"
+          },
+          {
+            "name": "@glenngabe",
+            "url": "https://x.com/glenngabe/status/2108529345778123263",
+            "excerpt": "Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your subscriptions\" distinction on Google Search, AI Mode, AI Overviews, and Gemini, helping to grow engagement and reinforce your brand.\". Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your…",
+            "author": "@glenngabe",
+            "published": "2026-10-09T04:05:45+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Aleyda Solis: local ccTLDs make up 41% of AI citations in Brazil, 38% in the UK and 24% in Spain — and which engine is most local changes by country | Aleyda Solis：本地 ccTLD 占 AI 引用的比例巴西 41%、英国 38%、西班牙 24%，且“最本地化”的引擎因国家而异",
+        "why_it_matters": "AI 可见度不能只测英语/美国。多语言品牌需要在每个市场各自获得本地媒体与评测的提及，一处优化不会自动在其他市场生效；而且每个市场要盯的引擎还不一样。",
+        "evidence": "dataset: Aleyda Solis's own prompt library, 4 markets × 10 topics × 3 engines (ChatGPT, Gemini, AI Mode), Oct 8",
+        "evidence_detail": "Aleyda analysed the citations returned by ChatGPT, Gemini and Google AI Mode for the same prompt library localised to the US, UK, Spain and Brazil across ten topics. Using ccTLDs as the local indicator (.uk/.es/.br), local domains make up 41.4% of citations in Brazil, 38.3% in the UK and 24.0% in Spain. ChatGPT has the highest local share in the UK and Spain; Gemini leads in Brazil at 51.7% but is lowest in Spain at 16.6%; AI Mode varies least (22.6%–27.5%). Personal finance, home/DIY and automotive have the highest local shares. She notes ccTLDs understate local targeting since many local sites use .com/.org; prompt counts per cell and repetitions are not stated in the thread.",
+        "who_it_affects": "international / all",
+        "what_to_do": "多市场品牌：按市场各跑一组 20 个品类 prompt，列出每个引擎的引用域名，找出本地媒体/评测/社区的空缺，交给当地 PR；按国家决定优先盯哪个引擎。",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 72,
+        "sources": [
+          {
+            "name": "@aleyda",
+            "url": "https://x.com/aleyda/status/2108304494882906118",
+            "excerpt": "🌎 Local vs Global AI Citations: What Changes Across Markets, Topics and Platforms? 👇 I’ve analyzed the citations used by ChatGPT, Gemini and AI Mode across ten topics in the US, UK, Spain and Brazil markets for the same prompts library localized for each market, with the goal was to understand which sources appear in each, how much the platforms differ, and what this means for international AI search optimization. The main finding is that local domains (.br, .uk and .es) represent 41.4% of citations in Brazil, 38.3% in the UK and 24.0% in Spain. The platform with the highest local share varies by country, and the share also differs by topic. To easily identify local citation shares for each…",
+            "author": "@aleyda",
+            "published": "2026-10-08T13:12:16+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      },
+      {
+        "what_happened": "Anthropic's updated usage policy names seeding search and AI-answer sources with misleading content as prohibited, and drops automated publishing from its high-risk list | Anthropic 更新使用政策：禁止用误导性内容“投喂”搜索与 AI 答案来源，同时把自动化发布从高风险清单移除",
+        "why_it_matters": "第一家模型厂商把“为操纵 AI 答案而制造虚假来源”写进政策。对 GEO 的灰色操作（Reddit 水军、假评测）是明确信号；而自动化发布本身不再被视为高风险。",
+        "evidence": "policy change reported by Search Engine Journal (Matt G. Southern), Oct 9; primary policy text not checked here",
+        "evidence_detail": "SEJ reports that Anthropic's updated usage policy explicitly names seeding search engines and AI answer sources with misleading content as a prohibited use, while removing automated publishing from its list of high-risk uses. The primary policy text was not reviewed for this note; the practical reading is that model providers are starting to police source manipulation on the supply side, not only the ranking side.",
+        "who_it_affects": "all",
+        "what_to_do": "无需行动；GEO 供应商合同里加入“不制造虚假评测/来源”的条款，避免被平台政策牵连。",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "score": 50,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/claude-rules-fake-sources-ai-answers/592456/",
+            "excerpt": "Claude’s New Rules Target Fake Sources Built To Sway AI Answers via @sejournal, @MattGSouthern. Anthropic's updated usage policy names seeding search and AI answer sources with misleading content, and drops automated publishing from its high-risk list. The post Claude&#8217;s New Rules Target Fake Sources Built To Sway AI Answers appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-10-09T00:00:16+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "OpenAI's GPT-6 launch: web-search answers start 44% sooner than GPT-5.6 Instant and 'improve the quality of answers', plus an Intelligent UI with charts, buttons and forms | OpenAI GPT-6 发布：联网搜索回答比 GPT-5.6 Instant 快 44% 并提升答案质量，新增带图表/按钮/表单的 Intelligent UI",
+        "why_it_matters": "ChatGPT 搜索更快更可信 + 交互式 UI，意味着更多查询在对话内闭环。对出版商/SaaS 的影响是引用方式变化，需要观察引用在新 UI 里的位置。",
+        "evidence": "OpenAI announcement quoted by Glenn Gabe (@glenngabe), Oct 7–9",
+        "evidence_detail": "Glenn Gabe quotes OpenAI's GPT-6 announcement: for questions needing web search, GPT-6 Instant starts answering 44% sooner on average than GPT-5.6 Instant, and GPT-6 'improves the quality of answers' for web-grounded questions; the same release adds Intelligent UI — streamable native components (charts, buttons, forms) compiled as the model generates. No citation-display changes are described.",
+        "who_it_affects": "publisher / SaaS / all",
+        "what_to_do": "监控：用 10 个你的核心查询在 GPT-6 里检查引用是否仍可见、位置是否变化；记录 ChatGPT 引荐流量周环比。",
+        "confidence": "Observed",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "score": 48,
+        "sources": [
+          {
+            "name": "@glenngabe (web search)",
+            "url": "https://x.com/glenngabe/status/2108541179117642140",
+            "excerpt": "In OpenAI's announcement about GPT-6 and Intelligent UI, they mention the updates to web search (including speed and *quality of answers*): \"For questions that need web search, GPT‑6 Instant starts answering 44% sooner, on average, than GPT‑5.6 Instant.\" \"GPT‑6 also improves the quality of answers that require web search. It makes better decisions about when to look something up and more reliably finds information that supports its answer. In an internal evaluation of difficult problems, GPT‑6 correctly addressed the key aspect of the user’s question more often than GPT‑5.6.\" https://openai.com/index/gpt-6-for-everyone/#:~:text=For%20questions%20that%20need%20web%20search. In OpenAI's…",
+            "author": "@glenngabe",
+            "published": "2026-10-09T04:52:46+00:00",
+            "source_type": "data_research"
+          },
+          {
+            "name": "@glenngabe (Intelligent UI)",
+            "url": "https://x.com/glenngabe/status/2107917347482714225",
+            "excerpt": "OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements like charts, buttons, and forms in answers \"We built a library of native, streamable components, along with a compiler that processes the interface as the model generates it. The library gives each response a familiar design foundation while leaving the model room to decide how the pieces fit together. The compiler allows the interface to appear progressively as the model generates it, without waiting for the entire response to be complete.\" https://openai.com/index/gpt-6-for-everyone/. OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements…",
+            "author": "@glenngabe",
+            "published": "2026-10-07T11:33:53+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Research & Retrieval": [
+      {
+        "what_happened": "SEJ (Duane Forrester): a Google DeepMind paper shows one model can in theory rank without a separate index — visibility would become inclusion or absence | SEJ（Duane Forrester）：DeepMind 论文表明单一模型理论上可不依赖独立索引直接排序，可见性将变成“在/不在”",
+        "why_it_matters": "纯研究层面的方向性信号：如果检索与排序合一，传统“排名位置”概念消失。短期无行动，但值得留在研究雷达上。",
+        "evidence": "analysis of a DeepMind paper (SEJ, Oct 8); the paper itself was not reviewed here",
+        "evidence_detail": "Duane Forrester argues from a Google DeepMind paper that a single model can theoretically perform ranking without a separate index, and that if such a system shipped, visibility would stop being a position and become inclusion or absence from the answer. This is an interpretation of theoretical research; the paper, its evaluation and any deployment plans were not reviewed for this note.",
+        "who_it_affects": "all",
+        "what_to_do": "无需行动；留作研究跟踪。",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Research & Retrieval",
+        "score": 40,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/google-now-has-the-math-to-rank-without-an-index-and-the-results-page-does-not-survive-it/591945/",
+            "excerpt": "Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It via @sejournal, @DuaneForrester. Google DeepMind proved one model can theoretically rank without a separate index. If it ships, visibility stops being a position and becomes inclusion or absence. The post Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-10-08T06:30:43+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Playbook: measure AI search impact with seven signals when referrers fail — Ahrefs finds ChatGPT + Claude drive 21.7% of its signups, above YouTube | 玩法：引荐数据失效时用七个信号衡量 AI 搜索影响——Ahrefs 发现 ChatGPT + Claude 贡献 21.7% 的注册，超过 YouTube",
+        "why_it_matters": "AI 平台剥掉 referrer、用户事后再 Google 品牌，所以引荐流量系统性低估 AI 的作用。用注册调查、品牌词搜索量、直接流量变化等旁证拼出全貌，比等一个准确归因更可行。",
+        "evidence": "first-party data + method (Ahrefs: signup survey, Ahrefs Web Analytics, Brand Radar), Oct 6",
+        "evidence_detail": "Ahrefs' write-up proposes seven signals: self-reported attribution at signup, AI referral traffic, branded search volume, direct-traffic shifts, web mentions, AI-visibility tracking and conversion rate by source. Its own numbers: ChatGPT plus Claude account for 21.7% of Ahrefs signups ('more than one in five'), ahead of YouTube and behind Google; on wordcount.com AI referrals are 92.4% ChatGPT; AI visitors convert to Ahrefs Free at 6%, four times the organic rate. All figures come from Ahrefs' own properties with no sample sizes, and the author concedes nobody can definitively prove AI search value; Ahrefs sells the tools used.",
+        "who_it_affects": "SaaS / all",
+        "what_to_do": "在注册/询盘表单加“你从哪里听说我们”（含 ChatGPT/Gemini/Perplexity 选项），同时按月记录品牌词搜索量与直接流量；三者同向变化即可作为 AI 影响的量化证据。",
+        "how_to_test": "表单加来源问题 → 跑 4 周 → 对比自报 AI 来源占比与 GA4 AI 引荐占比，差值即“暗流量”规模。",
+        "success_metric": "自报 AI 来源占比；品牌词搜索量与直接流量的月环比；AI 来源的转化率 vs 自然流量。",
+        "effort": "低：一个表单字段 + 月度表格；风险是自报偏差，需与品牌词搜索量交叉验证。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 64,
+        "sources": [
+          {
+            "name": "Ahrefs Blog",
+            "url": "https://ahrefs.com/blog/how-to-measure-ai-search-visibility/",
+            "excerpt": "How to Measure AI Search Visibility When Attribution Falls Short. That puts AI ahead of YouTube as a source of signups, and second only to Google. If we’d relied on our referral traffic alone, we’d have badly undersold it. Most AI influence happens out of sight. A buyer can read &#8230; Read more &#8250;",
+            "author": "Ahrefs Blog",
+            "published": "2026-10-06T08:00:29+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Tools, Papers & Open Source": [
+      {
+        "what_happened": "Google releases EmbeddingGemma 2: an open (Apache 2.0), natively multimodal on-device embedding model unifying text, images, video, audio and code | Google 发布 EmbeddingGemma 2：Apache 2.0 开源、原生多模态的端侧嵌入模型，统一文本/图像/视频/音频/代码",
+        "why_it_matters": "对 SEO 的实际用途是本地化、免 API 的内容聚类、内链推荐和多模态去重；也是理解 Google 多模态检索方向的一个公开样本。",
+        "evidence": "Google DeepMind release announcement (Oct 6), retweeted by @dawnieando",
+        "evidence_detail": "Google's announcement describes EmbeddingGemma 2 as its first natively multimodal open embedding model, built on the Gemma 4 architecture and released under Apache 2.0, unifying images, video, audio, code and text in a single embedding space for on-device use. No benchmark figures are in the post.",
+        "who_it_affects": "all",
+        "what_to_do": "可选：用它替代付费 embedding API 做站内内容聚类与多模态去重实验；无需紧急行动。",
+        "confidence": "Confirmed",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "score": 46,
+        "sources": [
+          {
+            "name": "@dawnieando (RT of Google)",
+            "url": "https://x.com/dawnieando/status/2107505117511528640",
+            "excerpt": "RT by @dawnieando: We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space.. We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space. Video",
+            "author": "@dawnieando",
+            "published": "2026-10-06T08:15:50+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Unconfirmed Watchlist": [
+      {
+        "what_happened": "Barry Schwartz hears 'rumblings' of another Google update rolling out Oct 9; Glenn Gabe and Marie Haynes expect a core update soon | Barry Schwartz 听闻 10/9 又有更新在滚动；Glenn Gabe 与 Marie Haynes 预期核心更新将至",
+        "why_it_matters": "垃圾更新结束次日的波动可能是余波、也可能是新更新；排名工具失准的当下更难判断。只监控，不要动站。",
+        "evidence": "observation: @rustybrick asking for reports (Oct 9); @glenngabe and @Marie_Haynes predictions (Oct 8); no Search Status incident",
+        "evidence_detail": "On Oct 9 Barry Schwartz asked whether anyone was seeing a new update rolling out after the spam update finished; he has no data yet. Glenn Gabe (Oct 8) expects 'a very big update soon' based on the week's doc changes and the volume of AI-search spam; Marie Haynes asked 'core update soon?'. Google Search Status shows no new incident as of this record, and rank-tracker data is unreliable this month (see Oct 8), so volatility reports are weaker evidence than usual.",
+        "who_it_affects": "all",
+        "what_to_do": "监控 Google Search Status 与 GSC 日点击；不做预防性改动。",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 50,
+        "sources": [
+          {
+            "name": "@rustybrick",
+            "url": "https://x.com/rustybrick/status/2108497173231079851",
+            "excerpt": "Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?. Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?",
+            "author": "@rustybrick",
+            "published": "2026-10-09T01:57:54+00:00",
+            "source_type": "trade_news"
+          },
+          {
+            "name": "@glenngabe",
+            "url": "https://x.com/glenngabe/status/2108140480202698980",
+            "excerpt": "The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned.. The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned. Barry Schwartz (@rustybrick) The long Google September 2026 spam update 👾 is now done rolling out seroundtable.com/google-sept… Link Google…",
+            "author": "@glenngabe",
+            "published": "2026-10-08T02:20:32+00:00",
+            "source_type": "data_research"
+          },
+          {
+            "name": "@Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2108150078917451913",
+            "excerpt": "The spam update is complete. Core update soon?. The spam update is complete. Core update soon? Google Search Central (@googlesearchc) The rollout was complete as of October 8, 2026. — http://nitter.meowing.monster/googlesearchc/status/2108114841005105171#m",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-08T02:58:41+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "监控 Google Search Status 与 GSC 日点击，不做预防性改动",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "注册/询盘表单加“从哪里听说我们”（含 AI 工具选项），开始记录 AI 自报来源占比",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "多市场品牌：按市场各跑 20 个品类 prompt，列出各引擎引用域名的本地空缺",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Barry Schwartz hears 'rumblings' of another Google update rolling out Oct 9; Glenn Gabe and Marie Haynes expect a core update soon | Barry Schwartz 听闻 10/9 又有更新在滚动；Glenn Gabe 与 Marie Haynes 预期核心更新将至",
+      "why_it_matters": "垃圾更新结束次日的波动可能是余波、也可能是新更新；排名工具失准的当下更难判断。只监控，不要动站。",
+      "evidence": "observation: @rustybrick asking for reports (Oct 9); @glenngabe and @Marie_Haynes predictions (Oct 8); no Search Status incident",
+      "evidence_detail": "On Oct 9 Barry Schwartz asked whether anyone was seeing a new update rolling out after the spam update finished; he has no data yet. Glenn Gabe (Oct 8) expects 'a very big update soon' based on the week's doc changes and the volume of AI-search spam; Marie Haynes asked 'core update soon?'. Google Search Status shows no new incident as of this record, and rank-tracker data is unreliable this month (see Oct 8), so volatility reports are weaker evidence than usual.",
+      "who_it_affects": "all",
+      "what_to_do": "监控 Google Search Status 与 GSC 日点击；不做预防性改动。",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 50,
+      "sources": [
+        {
+          "name": "@rustybrick",
+          "url": "https://x.com/rustybrick/status/2108497173231079851",
+          "excerpt": "Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?. Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?",
+          "author": "@rustybrick",
+          "published": "2026-10-09T01:57:54+00:00",
+          "source_type": "trade_news"
+        },
+        {
+          "name": "@glenngabe",
+          "url": "https://x.com/glenngabe/status/2108140480202698980",
+          "excerpt": "The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned.. The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned. Barry Schwartz (@rustybrick) The long Google September 2026 spam update 👾 is now done rolling out seroundtable.com/google-sept… Link Google…",
+          "author": "@glenngabe",
+          "published": "2026-10-08T02:20:32+00:00",
+          "source_type": "data_research"
+        },
+        {
+          "name": "@Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2108150078917451913",
+          "excerpt": "The spam update is complete. Core update soon?. The spam update is complete. Core update soon? Google Search Central (@googlesearchc) The rollout was complete as of October 8, 2026. — http://nitter.meowing.monster/googlesearchc/status/2108114841005105171#m",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-08T02:58:41+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Aleyda Solis: local ccTLDs make up 41% of AI citations in Brazil, 38% in the UK and 24% in Spain — and which engine is most local changes by country | Aleyda Solis：本地 ccTLD 占 AI 引用的比例巴西 41%、英国 38%、西班牙 24%，且“最本地化”的引擎因国家而异",
+      "why_it_matters": "AI 可见度不能只测英语/美国。多语言品牌需要在每个市场各自获得本地媒体与评测的提及，一处优化不会自动在其他市场生效；而且每个市场要盯的引擎还不一样。",
+      "evidence": "dataset: Aleyda Solis's own prompt library, 4 markets × 10 topics × 3 engines (ChatGPT, Gemini, AI Mode), Oct 8",
+      "evidence_detail": "Aleyda analysed the citations returned by ChatGPT, Gemini and Google AI Mode for the same prompt library localised to the US, UK, Spain and Brazil across ten topics. Using ccTLDs as the local indicator (.uk/.es/.br), local domains make up 41.4% of citations in Brazil, 38.3% in the UK and 24.0% in Spain. ChatGPT has the highest local share in the UK and Spain; Gemini leads in Brazil at 51.7% but is lowest in Spain at 16.6%; AI Mode varies least (22.6%–27.5%). Personal finance, home/DIY and automotive have the highest local shares. She notes ccTLDs understate local targeting since many local sites use .com/.org; prompt counts per cell and repetitions are not stated in the thread.",
+      "who_it_affects": "international / all",
+      "what_to_do": "多市场品牌：按市场各跑一组 20 个品类 prompt，列出每个引擎的引用域名，找出本地媒体/评测/社区的空缺，交给当地 PR；按国家决定优先盯哪个引擎。",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 72,
+      "sources": [
+        {
+          "name": "@aleyda",
+          "url": "https://x.com/aleyda/status/2108304494882906118",
+          "excerpt": "🌎 Local vs Global AI Citations: What Changes Across Markets, Topics and Platforms? 👇 I’ve analyzed the citations used by ChatGPT, Gemini and AI Mode across ten topics in the US, UK, Spain and Brazil markets for the same prompts library localized for each market, with the goal was to understand which sources appear in each, how much the platforms differ, and what this means for international AI search optimization. The main finding is that local domains (.br, .uk and .es) represent 41.4% of citations in Brazil, 38.3% in the UK and 24.0% in Spain. The platform with the highest local share varies by country, and the share also differs by topic. To easily identify local citation shares for each…",
+          "author": "@aleyda",
+          "published": "2026-10-08T13:12:16+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Playbook: measure AI search impact with seven signals when referrers fail — Ahrefs finds ChatGPT + Claude drive 21.7% of its signups, above YouTube | 玩法：引荐数据失效时用七个信号衡量 AI 搜索影响——Ahrefs 发现 ChatGPT + Claude 贡献 21.7% 的注册，超过 YouTube",
+      "why_it_matters": "AI 平台剥掉 referrer、用户事后再 Google 品牌，所以引荐流量系统性低估 AI 的作用。用注册调查、品牌词搜索量、直接流量变化等旁证拼出全貌，比等一个准确归因更可行。",
+      "evidence": "first-party data + method (Ahrefs: signup survey, Ahrefs Web Analytics, Brand Radar), Oct 6",
+      "evidence_detail": "Ahrefs' write-up proposes seven signals: self-reported attribution at signup, AI referral traffic, branded search volume, direct-traffic shifts, web mentions, AI-visibility tracking and conversion rate by source. Its own numbers: ChatGPT plus Claude account for 21.7% of Ahrefs signups ('more than one in five'), ahead of YouTube and behind Google; on wordcount.com AI referrals are 92.4% ChatGPT; AI visitors convert to Ahrefs Free at 6%, four times the organic rate. All figures come from Ahrefs' own properties with no sample sizes, and the author concedes nobody can definitively prove AI search value; Ahrefs sells the tools used.",
+      "who_it_affects": "SaaS / all",
+      "what_to_do": "在注册/询盘表单加“你从哪里听说我们”（含 ChatGPT/Gemini/Perplexity 选项），同时按月记录品牌词搜索量与直接流量；三者同向变化即可作为 AI 影响的量化证据。",
+      "how_to_test": "表单加来源问题 → 跑 4 周 → 对比自报 AI 来源占比与 GA4 AI 引荐占比，差值即“暗流量”规模。",
+      "success_metric": "自报 AI 来源占比；品牌词搜索量与直接流量的月环比；AI 来源的转化率 vs 自然流量。",
+      "effort": "低：一个表单字段 + 月度表格；风险是自报偏差，需与品牌词搜索量交叉验证。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 64,
+      "sources": [
+        {
+          "name": "Ahrefs Blog",
+          "url": "https://ahrefs.com/blog/how-to-measure-ai-search-visibility/",
+          "excerpt": "How to Measure AI Search Visibility When Attribution Falls Short. That puts AI ahead of YouTube as a source of signups, and second only to Google. If we’d relied on our referral traffic alone, we’d have badly undersold it. Most AI influence happens out of sight. A buyer can read &#8230; Read more &#8250;",
+          "author": "Ahrefs Blog",
+          "published": "2026-10-06T08:00:29+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Lily Ray: Google seems 'hell-bent' on showing AI Overviews for as many queries as possible, while reliable data to measure the impact is getting scarcer daily | Lily Ray：Google 似乎执意让 AIO 覆盖尽可能多的查询，而可用于衡量影响的可靠数据每天都在减少",
+      "why_it_matters": "与 Ahrefs 的 83% 品牌词数据、法国 CTR 数据一致：AIO 覆盖扩张是常态而不是一次性事件。测量能力的下降（排名工具、GSC 匿名化）是第二个问题。",
+      "evidence": "expert commentary (Oct 9), consistent with Ahrefs branded-AIO data (Oct 2)",
+      "evidence_detail": "Ray suspects the rapid AIO expansion is driven by Google's need to demonstrate growth in AI product usage versus competitors, and separately notes the lack of reliable data to measure any of it — a problem she says is getting worse daily, echoing this month's rank-tracker outages. Opinion, but anchored to the Ahrefs finding that AIOs now appear on 83% of US branded searches.",
+      "who_it_affects": "all",
+      "what_to_do": "无需行动；把 AIO 覆盖率（Ahrefs/Semrush 的 SERP 特征筛选）加入月度仪表盘，作为长期趋势项。",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "score": 52,
+      "sources": [
+        {
+          "name": "@lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2108649368396149042",
+          "excerpt": "Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage & outpace competitors in user adoption. Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage &amp; outpace competitors in user adoption",
+          "author": "@lilyraynyc",
+          "published": "2026-10-09T12:02:40+00:00",
+          "source_type": "expert_analysis"
+        },
+        {
+          "name": "@lilyraynyc (data access)",
+          "url": "https://x.com/lilyraynyc/status/2108616099835125839",
+          "excerpt": "Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily. Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily JH Scherck (@JHTScherck) You can tell clients \"LLMs are probabilistic\" until you're blue in the face, but I don't think most people fully appreciate how much of a mind bender it is for GTM teams who want to win AEO but don't live and breathe this stuff. We all started our careers working with systems where the relationship between inputs and outputs was predictable, but LLMs are",
+          "author": "@lilyraynyc",
+          "published": "2026-10-09T09:50:29+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Anthropic's updated usage policy names seeding search and AI-answer sources with misleading content as prohibited, and drops automated publishing from its high-risk list | Anthropic 更新使用政策：禁止用误导性内容“投喂”搜索与 AI 答案来源，同时把自动化发布从高风险清单移除",
+      "why_it_matters": "第一家模型厂商把“为操纵 AI 答案而制造虚假来源”写进政策。对 GEO 的灰色操作（Reddit 水军、假评测）是明确信号；而自动化发布本身不再被视为高风险。",
+      "evidence": "policy change reported by Search Engine Journal (Matt G. Southern), Oct 9; primary policy text not checked here",
+      "evidence_detail": "SEJ reports that Anthropic's updated usage policy explicitly names seeding search engines and AI answer sources with misleading content as a prohibited use, while removing automated publishing from its list of high-risk uses. The primary policy text was not reviewed for this note; the practical reading is that model providers are starting to police source manipulation on the supply side, not only the ranking side.",
+      "who_it_affects": "all",
+      "what_to_do": "无需行动；GEO 供应商合同里加入“不制造虚假评测/来源”的条款，避免被平台政策牵连。",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 50,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/claude-rules-fake-sources-ai-answers/592456/",
+          "excerpt": "Claude’s New Rules Target Fake Sources Built To Sway AI Answers via @sejournal, @MattGSouthern. Anthropic's updated usage policy names seeding search and AI answer sources with misleading content, and drops automated publishing from its high-risk list. The post Claude&#8217;s New Rules Target Fake Sources Built To Sway AI Answers appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-10-09T00:00:16+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "OpenAI's GPT-6 launch: web-search answers start 44% sooner than GPT-5.6 Instant and 'improve the quality of answers', plus an Intelligent UI with charts, buttons and forms | OpenAI GPT-6 发布：联网搜索回答比 GPT-5.6 Instant 快 44% 并提升答案质量，新增带图表/按钮/表单的 Intelligent UI",
+      "why_it_matters": "ChatGPT 搜索更快更可信 + 交互式 UI，意味着更多查询在对话内闭环。对出版商/SaaS 的影响是引用方式变化，需要观察引用在新 UI 里的位置。",
+      "evidence": "OpenAI announcement quoted by Glenn Gabe (@glenngabe), Oct 7–9",
+      "evidence_detail": "Glenn Gabe quotes OpenAI's GPT-6 announcement: for questions needing web search, GPT-6 Instant starts answering 44% sooner on average than GPT-5.6 Instant, and GPT-6 'improves the quality of answers' for web-grounded questions; the same release adds Intelligent UI — streamable native components (charts, buttons, forms) compiled as the model generates. No citation-display changes are described.",
+      "who_it_affects": "publisher / SaaS / all",
+      "what_to_do": "监控：用 10 个你的核心查询在 GPT-6 里检查引用是否仍可见、位置是否变化；记录 ChatGPT 引荐流量周环比。",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 48,
+      "sources": [
+        {
+          "name": "@glenngabe (web search)",
+          "url": "https://x.com/glenngabe/status/2108541179117642140",
+          "excerpt": "In OpenAI's announcement about GPT-6 and Intelligent UI, they mention the updates to web search (including speed and *quality of answers*): \"For questions that need web search, GPT‑6 Instant starts answering 44% sooner, on average, than GPT‑5.6 Instant.\" \"GPT‑6 also improves the quality of answers that require web search. It makes better decisions about when to look something up and more reliably finds information that supports its answer. In an internal evaluation of difficult problems, GPT‑6 correctly addressed the key aspect of the user’s question more often than GPT‑5.6.\" https://openai.com/index/gpt-6-for-everyone/#:~:text=For%20questions%20that%20need%20web%20search. In OpenAI's…",
+          "author": "@glenngabe",
+          "published": "2026-10-09T04:52:46+00:00",
+          "source_type": "data_research"
+        },
+        {
+          "name": "@glenngabe (Intelligent UI)",
+          "url": "https://x.com/glenngabe/status/2107917347482714225",
+          "excerpt": "OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements like charts, buttons, and forms in answers \"We built a library of native, streamable components, along with a compiler that processes the interface as the model generates it. The library gives each response a familiar design foundation while leaving the model room to decide how the pieces fit together. The compiler allows the interface to appear progressively as the model generates it, without waiting for the entire response to be complete.\" https://openai.com/index/gpt-6-for-everyone/. OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements…",
+          "author": "@glenngabe",
+          "published": "2026-10-07T11:33:53+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google explains HTML sitemaps can still help users and crawlers reach pages, even though XML sitemaps replaced them for discovery | Google 解释 HTML 站点地图仍有助于用户和爬虫到达页面，尽管 XML 已取代其发现功能",
+      "why_it_matters": "低优先级，但对大站的内链扁平化有参考价值：HTML 站点地图本质是一个全站内链枢纽页。",
+      "evidence": "Google statement reported by Search Engine Journal (Roger Montti), Oct 9",
+      "evidence_detail": "SEJ summarises a Google explanation of why HTML sitemaps may still be useful: they act as navigational pages for users and give crawlers another internal-link path to deep pages, while XML sitemaps remain the discovery standard. The original Google statement is not quoted in this note.",
+      "who_it_affects": "all",
+      "what_to_do": "无需行动；大站可核对深层页面（点击深度 ≥4）的内链入口，HTML 站点地图是补内链的一种低成本方式。",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "score": 44,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508/",
+          "excerpt": "Google Explains How To Use HTML Sitemaps For SEO via @sejournal, @martinibuster. Google explains why HTML sitemaps may still be useful even though the XML standard has largely replaced it. The post Google Explains How To Use HTML Sitemaps For SEO appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-10-09T13:31:30+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google revamps the Reader Revenue Manager page, now naming AI Overviews, AI Mode and Gemini as surfaces where subscribers see 'From your subscriptions' content | Google 改版 Reader Revenue Manager 页面，首次把 AI Overviews、AI Mode 与 Gemini 列为订阅内容的展示面",
+      "why_it_matters": "对付费墙出版商：订阅关系开始被带进 AI 答案面，意味着“订阅者可见”可能成为在 AIO/AI Mode 里获得展示的一种方式。",
+      "evidence": "Google product page update, reported by Search Engine Roundtable and quoted by @glenngabe, Oct 9",
+      "evidence_detail": "Search Engine Roundtable notes a major redesign of the Reader Revenue Manager homepage that adds AI Mode, AI Overviews and Gemini alongside Search and Discover; Glenn Gabe quotes the page: readers who subscribe or contribute through RRM can see your content featured in a 'From your subscriptions' module. No launch date or data for the AI surfaces is given.",
+      "who_it_affects": "publisher",
+      "what_to_do": "使用 RRM 或付费墙的出版商：核对订阅结构化数据（isAccessibleForFree、hasPart）完整，并关注订阅者在 AI Mode/Gemini 里是否看到“来自你的订阅”模块。",
+      "confidence": "Observed",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "score": 46,
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/google-updates-reader-revenue-manager-42261.html",
+          "excerpt": "Google Updates Reader Revenue Manager Home Page. Google has made major updates to the Reader Revenue Manager homepage. It was a large redesign of the page, it also now lists AI Mode, AI Overviews, and Gemini, added a matrix to the page and moved things around as well.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-09T03:31:00+00:00",
+          "source_type": "trade_news"
+        },
+        {
+          "name": "@glenngabe",
+          "url": "https://x.com/glenngabe/status/2108529345778123263",
+          "excerpt": "Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your subscriptions\" distinction on Google Search, AI Mode, AI Overviews, and Gemini, helping to grow engagement and reinforce your brand.\". Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your…",
+          "author": "@glenngabe",
+          "published": "2026-10-09T04:05:45+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "SEJ (Duane Forrester): a Google DeepMind paper shows one model can in theory rank without a separate index — visibility would become inclusion or absence | SEJ（Duane Forrester）：DeepMind 论文表明单一模型理论上可不依赖独立索引直接排序，可见性将变成“在/不在”",
+      "why_it_matters": "纯研究层面的方向性信号：如果检索与排序合一，传统“排名位置”概念消失。短期无行动，但值得留在研究雷达上。",
+      "evidence": "analysis of a DeepMind paper (SEJ, Oct 8); the paper itself was not reviewed here",
+      "evidence_detail": "Duane Forrester argues from a Google DeepMind paper that a single model can theoretically perform ranking without a separate index, and that if such a system shipped, visibility would stop being a position and become inclusion or absence from the answer. This is an interpretation of theoretical research; the paper, its evaluation and any deployment plans were not reviewed for this note.",
+      "who_it_affects": "all",
+      "what_to_do": "无需行动；留作研究跟踪。",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Research & Retrieval",
+      "score": 40,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/google-now-has-the-math-to-rank-without-an-index-and-the-results-page-does-not-survive-it/591945/",
+          "excerpt": "Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It via @sejournal, @DuaneForrester. Google DeepMind proved one model can theoretically rank without a separate index. If it ships, visibility stops being a position and becomes inclusion or absence. The post Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-10-08T06:30:43+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google releases EmbeddingGemma 2: an open (Apache 2.0), natively multimodal on-device embedding model unifying text, images, video, audio and code | Google 发布 EmbeddingGemma 2：Apache 2.0 开源、原生多模态的端侧嵌入模型，统一文本/图像/视频/音频/代码",
+      "why_it_matters": "对 SEO 的实际用途是本地化、免 API 的内容聚类、内链推荐和多模态去重；也是理解 Google 多模态检索方向的一个公开样本。",
+      "evidence": "Google DeepMind release announcement (Oct 6), retweeted by @dawnieando",
+      "evidence_detail": "Google's announcement describes EmbeddingGemma 2 as its first natively multimodal open embedding model, built on the Gemma 4 architecture and released under Apache 2.0, unifying images, video, audio, code and text in a single embedding space for on-device use. No benchmark figures are in the post.",
+      "who_it_affects": "all",
+      "what_to_do": "可选：用它替代付费 embedding API 做站内内容聚类与多模态去重实验；无需紧急行动。",
+      "confidence": "Confirmed",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "score": 46,
+      "sources": [
+        {
+          "name": "@dawnieando (RT of Google)",
+          "url": "https://x.com/dawnieando/status/2107505117511528640",
+          "excerpt": "RT by @dawnieando: We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space.. We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space. Video",
+          "author": "@dawnieando",
+          "published": "2026-10-06T08:15:50+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": false,
+  "degraded_reason": "",
+  "quiet_day": false,
+  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "run_meta": {
+    "ran_at": "2026-10-09T08:21:48.672151+00:00",
+    "sources": {
+      "x": {
+        "ok": 29,
+        "total": 29,
+        "failed_names": [],
+        "items": 275
+      },
+      "rss": {
+        "ok": 9,
+        "total": 10,
+        "failed_names": [
+          "Search Engine Land"
+        ],
+        "items": 50
+      },
+      "google_status": {
+        "items": 2
+      }
+    },
+    "candidates_fetched": 327,
+    "candidates_fresh": 327,
+    "llm_provider": ""
+  }
+}

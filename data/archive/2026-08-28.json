@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-28",
+  "generated_at": "2026-10-12T05:17:54.471488+00:00",
+  "headline": "Site reputation policy: from Aug 30, manual actions only affect users outside the EEA, after talks with the European Commission | 站点声誉政策：8/30 起手动处罚仅影响 EEA 以外用户，源于与欧盟委员会的讨论",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "Google narrows site reputation manual actions to non-EEA users from Aug 30; in the EEA the affected section may be separated to rank on its own | Google 8/30 起将站点声誉手动处罚限定于 EEA 以外用户；EEA 内受影响板块可被拆开独立排名",
+        "why_it_matters": "这是 DMA 压力下第一次按地域拆分手动处罚的执行方式。面向欧洲的出版商若曾因第三方内容（优惠券、外包评测）被处罚，EEA 流量可能回升；但非 EEA 市场处罚照旧，且 Google 明确表示会继续警告这类做法。",
+        "evidence": "official doc: Google Search Central blog, Aug 28, 2026; spam-policies page updated",
+        "evidence_detail": "Google's post states that from Aug 30, 2026 the impact of a site reputation manual action applies only to results shown to users outside the EEA; for EEA users the affected section 'may be separated' so it ranks independently over time. Google attributes the change to discussion with the European Commission while warning that an overbroad application of the DMA could stop it acting on real threats. Search Console notices and reconsideration requests continue, and 'eligible sites' may take disputes to mediation — neither eligibility nor the mediation process is defined, and no affected-site counts are given.",
+        "who_it_affects": "publisher / international",
+        "what_to_do": "曾收到 site reputation 手动处罚的站点：按国家拆分 GSC 数据，观察 8/30 后 EEA 国家流量是否回升；非 EEA 市场仍需清理或迁移第三方内容后再提交复审。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 85,
+        "sources": [
+          {
+            "name": "Google Search Central Blog",
+            "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
+            "excerpt": "Update to the Site Reputation Policy. In 2024, we introduced our site reputation policy to stop a practice where third-party content is published on a trusted website just to exploit that site's good reputation to rank higher in Search. This practice hurts search quality, and creates a bad experience for users.",
+            "author": "Google Search Central Blog",
+            "published": "2026-08-27T16:00:00+00:00",
+            "source_type": "official_documentation"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "曾被 site reputation 处罚的站点：按国家分组 GSC，核对 8/30 后 EEA 流量变化",
+        "impact": "P1"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Google narrows site reputation manual actions to non-EEA users from Aug 30; in the EEA the affected section may be separated to rank on its own | Google 8/30 起将站点声誉手动处罚限定于 EEA 以外用户；EEA 内受影响板块可被拆开独立排名",
+      "why_it_matters": "这是 DMA 压力下第一次按地域拆分手动处罚的执行方式。面向欧洲的出版商若曾因第三方内容（优惠券、外包评测）被处罚，EEA 流量可能回升；但非 EEA 市场处罚照旧，且 Google 明确表示会继续警告这类做法。",
+      "evidence": "official doc: Google Search Central blog, Aug 28, 2026; spam-policies page updated",
+      "evidence_detail": "Google's post states that from Aug 30, 2026 the impact of a site reputation manual action applies only to results shown to users outside the EEA; for EEA users the affected section 'may be separated' so it ranks independently over time. Google attributes the change to discussion with the European Commission while warning that an overbroad application of the DMA could stop it acting on real threats. Search Console notices and reconsideration requests continue, and 'eligible sites' may take disputes to mediation — neither eligibility nor the mediation process is defined, and no affected-site counts are given.",
+      "who_it_affects": "publisher / international",
+      "what_to_do": "曾收到 site reputation 手动处罚的站点：按国家拆分 GSC 数据，观察 8/30 后 EEA 国家流量是否回升；非 EEA 市场仍需清理或迁移第三方内容后再提交复审。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 85,
+      "sources": [
+        {
+          "name": "Google Search Central Blog",
+          "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
+          "excerpt": "Update to the Site Reputation Policy. In 2024, we introduced our site reputation policy to stop a practice where third-party content is published on a trusted website just to exploit that site's good reputation to rank higher in Search. This practice hurts search quality, and creates a bad experience for users.",
+          "author": "Google Search Central Blog",
+          "published": "2026-08-27T16:00:00+00:00",
+          "source_type": "official_documentation"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [],
+  "degraded": false,
+  "degraded_reason": "",
+  "quiet_day": false,
+  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "backfilled": true
+}
