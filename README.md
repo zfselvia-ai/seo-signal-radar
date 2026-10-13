@@ -4,10 +4,14 @@ Not a news aggregator — a **signal radar** for advanced SEOs:
 
 > **X discovers anomalies → official data confirms → cases & data decide whether it's worth acting.**
 
-It pulls from 29 curated X accounts, 11 SEO/official feeds (RSS), and the **official Google
-Search Status API**, then an LLM reads up to **70 candidates** and keeps only the 5–8 that
-matter, filing them into fixed sections with a **priority (P0–P3)**, a
-**confidence tier**, and a concrete "what to do."
+It pulls from 21 curated X accounts, 5 Bluesky accounts (the Google staff who left X),
+22 SEO/official feeds (RSS — including the newsletters and blogs of people who mostly
+post on LinkedIn), the **official Google Search Status API**, and a **manual inbox** for
+things you read somewhere without a feed. Then a curation step — an LLM when you have a
+key, a rule-based ranker plus hand curation when you don't (see *Running without an
+LLM*) — reads up to **70 candidates** and keeps only the 5–10 that matter, filing them
+into fixed sections with a **priority (P0–P3)**, a **confidence tier**, and a concrete
+"what to do."
 
 It delivers **two kinds of value**, because most days Google confirms nothing and a
 pure news feed is empty on those days:
@@ -32,8 +36,10 @@ any one site's own data.
 
 ```
 Google Status API ─┐
-29 X accounts ─────┼─► fetch ─► dedup ─► score+curate (LLM) ─► 10 sections ─► daily MD/HTML
-RSS feeds ─────────┘                                    │
+21 X accounts ─────┤
+5 Bluesky accounts ┼─► fetch ─► dedup ─► score+curate (LLM | rules + hand) ─► 10 sections ─► daily MD/HTML
+22 RSS feeds ──────┤                                    │
+manual inbox ──────┘                                    │
 SERP volatility ───► percentile + 4-quadrant ───────────┘
                                                          ▼
                        data/archive/*.json ─► Weekly (Tue) ─► Monthly (4th working day)
@@ -144,12 +150,68 @@ The only secret the pipeline requires is one LLM API key.
 python main.py daily            # today's radar (+ archive, dashboard rebuild, push)
 python main.py daily --dry-run  # fetch + dedup only, no LLM cost
 python main.py doctor           # probe every feed + Nitter instance; no LLM key needed
+python main.py capture --url … --text "…" --author "Name (LinkedIn)"   # paste something you read into the pool
 python main.py weekly           # Search Intelligence Weekly
 python main.py monthly          # State of Search Monthly (only runs on 4th working day; --force to override)
 python main.py brief            # generate any pending Special Briefs
 python main.py dashboard        # rebuild dashboard/index.html from the archive
 python main.py notify           # (re)send the compressed push for the latest day
 ```
+
+(`python` here means the interpreter that has the dependencies — if you used
+`python3 -m venv .venv`, that is `.venv/bin/python`. `doctor` tells you when
+you've picked the wrong one.)
+
+### LinkedIn, and other places without a feed
+
+LinkedIn has no public feed, its API does not expose other people's posts, and
+scraping it breaks the terms of service and the login wall — the same trap X
+turned into. So LinkedIn is covered two honest ways:
+
+1. **Follow the long-form outlet instead.** Nearly everyone worth reading there
+   publishes the full analysis in a newsletter or blog that *does* have a feed
+   (Growth Memo, Lily Ray's Substack, Zyppy Signal, GSQi, DEJAN, Jono Alderson,
+   Marie Haynes, Suganthan, Detailed, Moz, SearchPilot). These are under
+   `rss.feeds`, each probed before it was added.
+2. **Capture it yourself.** When you read a post worth keeping, run
+   `python main.py capture --url <post url> --text "<the passage you read>"`
+   with `--author` and optionally `--type data_research` (any rung of
+   `scoring.source_weights`). It lands in `data/inbox/captures.jsonl` and is
+   offered to the next `daily` run as a normal candidate — your pasted text
+   becomes the verbatim excerpt on the card, and it is deduped by URL after
+   that. Default trust is `practitioner_observation` (0.60); say otherwise if
+   it's data or an official statement.
+
+Bluesky, by contrast, publishes a public RSS feed per account
+(`bsky.app/profile/<handle>/rss`), which is how John Mueller, Gary Illyes and
+Danny Sullivan are followed now that their X accounts are dormant.
+
+## Running without an LLM
+
+Set `llm.provider: "none"` in `config.yaml` (it is, as of 2026-10) and `daily`
+still fetches, dedups and publishes — but what it publishes is the **top 10 raw
+items by a rule-based ranker** (trust weight + SEO keyword hits, minus promo;
+plain retweets, reply chatter and off-topic posts dropped; two per source;
+near-duplicates collapsed). Those cards are honest about what they are: marked
+`uncurated`, `P3` and `Speculative` as placeholders, with the original text
+expandable underneath. Nobody has judged them.
+
+Real curation then happens by hand, through two scripts that keep the same
+guarantees the LLM path has:
+
+```bash
+python scripts/dump_candidates.py --since 2026-10-09 --out /tmp/pool   # pool.json + pool.md, no state touched
+# …read pool.md, write curated.json in the schema summarize.SYSTEM asks the model for…
+python scripts/ingest_curated.py --curated curated.json --pool /tmp/pool.json --date 2026-10-09
+```
+
+`ingest_curated.py` runs the hand-written digest through exactly the post-LLM
+pipeline: **every cited URL must exist in the pool** (anything else is stripped
+and the signal marked `unverified`, same as a fabricated model citation),
+cross-day story dedup, sectioning, archive, MD/HTML, dashboard rebuild. Records
+written this way carry `curated_by` and, if back-dated, `backfilled: true`, so a
+hand-filled gap is distinguishable from a day the pipeline actually ran. When a
+valid key is back, set `provider` to `auto` and the LLM path resumes unchanged.
 
 Nothing is scheduled for you. Run `daily` when you want it, or wire it to `cron`
 / `launchd` yourself:
@@ -236,8 +298,9 @@ config.yaml              # everything: accounts, scoring, sections, SERP rules, 
 main.py                  # orchestrator (daily/weekly/monthly/brief/dashboard/notify/serp-add/doctor)
 seodigest/
   models.py              # Item + Signal
-  x_source.py            # Nitter RSS — 29 tagged accounts, each fetched once
-  rss_source.py          # RSS/Atom, fetched with a browser UA + hard timeout
+  x_source.py            # Nitter RSS — 21 tagged accounts, each fetched once
+  rss_source.py          # RSS/Atom + Bluesky feeds, fetched with a browser UA + hard timeout
+  manual_source.py       # data/inbox captures (LinkedIn etc.) → candidates
   google_status.py       # official confirmation layer + brief triggers
   serp_layer.py          # percentile math, four-quadrant, event detection (Global + Vertical Heat)
   summarize.py           # daily scoring + curation + LLM step + source-URL verification
@@ -248,8 +311,11 @@ seodigest/
   dashboard_template.html# the dashboard shell (data injected at build time)
   notify.py              # compressed push + per-channel webhook formats
 scripts/setup_local.sh   # one-time install + key check + first real run
+scripts/dump_candidates.py   # export the candidate pool for hand curation (no state touched)
+scripts/ingest_curated.py    # publish a hand-curated JSON through the normal pipeline
 reports/{daily,weekly,monthly,special}/
 data/archive/            # structured daily JSON (weekly/monthly/dashboard read from here)
+data/inbox/              # captures.jsonl — things you pasted in with `capture`
 dashboard/index.html     # the product (gitignored build artifact — open it locally)
 ```
 
@@ -260,6 +326,8 @@ dashboard/index.html     # the product (gitignored build artifact — open it lo
 - **Sources are verified, not trusted.** Every URL the LLM cites is checked against the candidate pool it was actually shown. Anything invented is stripped, the signal is marked `unverified`, and its confidence is capped at Speculative.
 - **Repeats are filtered across days, escalations are not.** Item-level dedup keys on ID, so one story discussed by five accounts over three days would otherwise occupy a slot all week. Story-level dedup (Jaccard overlap, CJK compared per character) runs in two layers — the prompt is told what already ran, *and* the output is post-filtered, because the model sometimes ignores the instruction. A rumour that becomes officially confirmed always survives: that escalation is the single most valuable thing this product delivers.
 - **A quiet day is allowed to look quiet.** If nothing survives, the digest says so rather than backfilling from raw items — which would resurrect exactly what dedup just dropped.
+- **A reachable account is not a live one.** In Oct 2026, 8 of 29 X handles returned a valid feed on every run and contributed nothing for two months — they had stopped posting a year or more earlier (Google staff moved to Bluesky). "29/29 ok" was true and useless. Dormant handles now sit in `x.excluded_or_manual_review` with their last-post date; when a source goes quiet for months, probe it rather than trusting the green light.
+- **No fabricated data, ever.** Early demo records (Jul 27–28) carried an invented "August core update" and made-up SERP heat; they were deleted on 2026-10-12 and every cited URL in the archive was re-fetched (27/27 live). Anything that enters the archive must trace to a fetched item or a pasted capture.
 - **Percentiles need history.** Until ~10+ days of SERP readings accrue, the layer records data and reports "insufficient history" rather than guessing. All SERP adapters are `manual`, so the External-flux lane shows "not connected" instead of asserting calm without data.
 - **GEO open-source tools** (e.g. `geo-aeo-tracker`, `awesome-generative-engine-optimization`) are treated as *candidate sources* for the "Tools, Papers & Open Source" section, not integrated runtimes — self-hosting them still needs paid API keys (Bright Data / OpenRouter / Gemini).
 - LLM cost is roughly one call per daily run plus one per weekly/monthly — cents.
