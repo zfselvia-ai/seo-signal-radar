@@ -79,7 +79,7 @@ daily:
     # Unlike the news sections, this one should rarely be empty. If nothing
     # published today qualifies, reach into the longer evergreen window.
     min_items: 1
-    max_items: 3
+    max_items: 5    # 2026-10-10: raised from 3 — rank by evidence strength, don't cap
     # A playbook item is only worth printing if it answers all of these.
     requirements:
       - mechanism        # WHY it should work — not just that it did once
@@ -521,7 +521,11 @@ reports:
 llm:
   # "auto" = use whichever API key you set in .env / GitHub secrets.
   # Force one explicitly with: scnet(glm) | moonshot(kimi) | anthropic | openai
-  provider: "auto"
+  # "none" = no API call at all: daily fetches + dedups and publishes the top
+  # raw items (marked uncurated). Set back to "auto" once a valid key is in .env.
+  # 2026-10-09: switched to none — the API keys in .env had expired and the
+  # SCNet call hung instead of failing.
+  provider: "none"
   # SCNet (超算互联网) — SCNet-Max (fast, non-reasoning) via OpenAI-compatible API
   scnet_model: "SCNet-Max"
   scnet_base_url: "https://api.scnet.cn/api/llm/v1"

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from typing import List
 
 from .models import Item
@@ -407,7 +408,16 @@ def _detect_provider() -> str:
     )
 
 
+def llm_disabled(cfg: dict) -> bool:
+    """True when config opts out of the LLM entirely (llm.provider: none)."""
+    return str((cfg.get("llm") or {}).get("provider", "auto")).lower() in ("none", "off", "")
+
+
 def call_llm(cfg: dict, system: str, user: str) -> str:
+    if llm_disabled(cfg):
+        raise RuntimeError(
+            "LLM is disabled (llm.provider: none in config.yaml). Weekly, monthly "
+            "and special briefs need an LLM; set a provider + valid key to run them.")
     provider = cfg["llm"].get("provider", "auto")
     if provider == "auto":
         provider = _detect_provider()
@@ -680,6 +690,21 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         return {"headline": "No new SEO signals in this window.",
                 "signals": [], "sections": {}, "action_items": [],
                 "dropped_count": 0}
+    # No-LLM mode: query the sources and publish the top raw items directly.
+    # Still flagged degraded/uncurated — nobody judged these, and the labels
+    # must not imply otherwise.
+    if llm_disabled(cfg):
+        daily = cfg.get("daily", {})
+        limit = daily.get("max_signals", 10)
+        pick = rank_raw_items(items, limit, daily.get("dedupe_similarity", 0.65))
+        print(f"[*] LLM disabled — publishing top {len(pick)} of {len(items)} "
+              f"raw items by rule-based ranking (uncurated).")
+        data = _fallback_digest(
+            pick, "LLM disabled (llm.provider: none) — raw source items ranked "
+                  "by source trust + SEO keywords, not assessed", limit=limit,
+            section_fn=_raw_section)
+        data["dropped_count"] = max(0, len(items) - len(data["signals"]))
+        return data
     # Pick a diverse subset so one noisy handle can't crowd out every other
     # source — the LLM curation rubric needs cross-source signal to work.
     candidates = _select_candidates(cfg, items)
@@ -694,6 +719,19 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         print(f"[!] LLM JSON parse failed: {e}; falling back to raw items.")
         return _fallback_digest(items, f"LLM output was not valid JSON: {e}")
 
+    return finalize_digest(cfg, data, candidates, items)
+
+
+def finalize_digest(cfg: dict, data: dict, candidates: List[Item],
+                    items: List[Item] | None = None) -> dict:
+    """Everything that happens to a curated JSON after the LLM (or a human) wrote it.
+
+    Shared by the LLM path and ingest_curated.py: a hand-written digest must go
+    through the same source verification, cross-day dedup and grouping as a
+    model-written one, or the hand-written path becomes the one that can cite
+    URLs nobody fetched.
+    """
+    items = items if items is not None else candidates
     # Verify every citation against what the model was actually shown, BEFORE
     # the signals are grouped, archived and rendered.
     data = verify_sources(data, candidates)
@@ -753,7 +791,103 @@ _GROUP_TO_SECTION = {
 }
 
 
-def _fallback_digest(items: List[Item], reason: str = "") -> dict:
+# ------------------------- no-LLM ranking ---------------------------------
+# Used only when llm.provider is "none". This is NOT curation: it is a cheap
+# filter that keeps obvious noise (plain retweets, chit-chat replies, promo,
+# off-topic posts) out of the ten slots, and lets RSS articles compete with X
+# on trust weight instead of losing to round-robin order.
+_PROMO_RE = re.compile(
+    r"\b(webinar|register now|sign up|signup|discount|coupon|giveaway|"
+    r"for free|free audit|join us|livestream|tickets?|use code|% off|"
+    r"masterclass|enrol+ment)\b", re.I)
+_SEO_TERMS = (
+    "google", "search", "seo", "serp", "rank", "index", "crawl", "core update",
+    "spam update", "algorithm", "ai overview", "ai mode", "gemini", "chatgpt",
+    "llm", "schema", "structured data", "robots", "sitemap", "canonical",
+    "search console", "discover", "bing", "traffic", "ctr", "click", "citation",
+    "geo", "aeo", "backlink", "link", "core web vitals", "inp", "javascript",
+    "render", "snippet", "query", "keyword", "e-e-a-t", "entity", "embedding",
+    "retrieval", "agent", "crawler", "googlebot",
+)
+_OFFICIAL_TYPES = {"official_api", "official_documentation", "official_person"}
+
+
+def _raw_score(it: Item) -> float | None:
+    """Rule-based score, or None to drop the item outright."""
+    text = it.text or ""
+    low = text.lower()
+    micropost = it.source in ("x", "bluesky")
+    if it.source == "x":
+        if text.startswith("RT by @"):
+            return None  # plain retweet: the trust weight belongs to someone else
+        if text.startswith("R to @") and it.source_type not in _OFFICIAL_TYPES:
+            return None  # reply chatter; official replies carry rollout status
+    if _PROMO_RE.search(text):
+        return None
+    hits = sum(1 for t in _SEO_TERMS if t in low)
+    if micropost and hits == 0:
+        return None  # off-topic post from an on-topic account
+    score = (it.weight or 0.6) * 100 + min(hits, 5) * 6
+    if it.source in ("rss", "google_status", "manual"):
+        score += 10  # an article / official record / hand-picked item beats a post at equal trust
+    if it.commercial_interest:
+        score -= 10
+    return score
+
+
+def rank_raw_items(items: List[Item], limit: int, similarity: float = 0.65) -> List[Item]:
+    """Top `limit` items: official status first, then by score, max 2 per source."""
+    scored = []
+    for it in items:
+        s = _raw_score(it)
+        if s is not None:
+            ts = it.published.timestamp() if it.published else 0
+            scored.append((it.source == "google_status", s, ts, it))
+    scored.sort(key=lambda t: (t[0], t[1], t[2]), reverse=True)
+    pick: List[Item] = []
+    per_source: dict = {}
+    for _, _, _, it in scored:
+        if len(pick) >= limit:
+            break
+        if per_source.get(it.source_name, 0) >= 2:
+            continue
+        if any(_similar(it.text[:200], p.text[:200]) >= similarity for p in pick):
+            continue  # same story from another source
+        pick.append(it)
+        per_source[it.source_name] = per_source.get(it.source_name, 0) + 1
+    return pick
+
+
+def _raw_section(it: Item) -> str:
+    """Section by source metadata (no model to read the content)."""
+    tags = set(it.tags or [])
+    if it.source == "google_status" or it.group == "official_signals":
+        return "Confirmed Search Updates"
+    if it.source_type in _OFFICIAL_TYPES:
+        return "Official Explanations"
+    if it.source_type == "reproducible_experiment":
+        return "Technical SEO Experiments"
+    if tags & {"ai_search", "geo", "ai_crawler", "ai_visibility", "ai_agent"}:
+        return "AI Search / GEO"
+    if tags & {"information_retrieval", "entity", "knowledge_graph",
+               "semantic_seo", "patents", "data_research"}:
+        return "Research & Retrieval"
+    if tags & {"tools", "expert_vendor"}:
+        return "Tools, Papers & Open Source"
+    return "SERP & Algorithm Signals"
+
+
+def _headline(text: str, n: int = 120) -> str:
+    text = " ".join((text or "").split())
+    if len(text) <= n:
+        return text
+    cut = text[:n]
+    sp = cut.rfind(" ")
+    return (cut[:sp] if sp > n * 0.6 else cut).rstrip(" .,:;") + "…"
+
+
+def _fallback_digest(items: List[Item], reason: str = "", limit: int = 8,
+                     section_fn=None) -> dict:
     """When the LLM fails, produce a basic digest from raw item text.
 
     This is a DEGRADED mode and says so in the data, not just in the headline.
@@ -770,12 +904,13 @@ def _fallback_digest(items: List[Item], reason: str = "") -> dict:
     """
     # Same diverse selection, but capped at a readable handful — this is a
     # degraded mode, not the wide curation pool.
-    pick = _select_candidates({"daily": {"max_candidates": 8}}, items)
+    pick = _select_candidates({"daily": {"max_candidates": limit}}, items)
     signals = []
     for it in pick:
-        section = _GROUP_TO_SECTION.get(it.group, "SERP & Algorithm Signals")
+        section = (section_fn(it) if section_fn else
+                   _GROUP_TO_SECTION.get(it.group, "SERP & Algorithm Signals"))
         signals.append({
-            "what_happened": it.text[:120],
+            "what_happened": _headline(it.text),
             "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
             "evidence": it.source_name,
             "who_it_affects": "all",
@@ -783,7 +918,9 @@ def _fallback_digest(items: List[Item], reason: str = "") -> dict:
             "confidence": "Speculative",
             "impact": "P3",
             "section": section,
-            "sources": [{"name": it.source_name, "url": it.url}],
+            # Verbatim excerpt/author/date straight from the fetched item, so the
+            # card still opens onto the original text with nothing generated.
+            "sources": [{"name": it.source_name, "url": it.url, **_source_detail(it)}],
             "degraded": True,
         })
     # Group by the section we just assigned.
