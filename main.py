@@ -8,11 +8,14 @@ Subcommands:
   python main.py brief            # generate any pending Special Briefs
   python main.py dashboard        # rebuild the static dashboard from archive
   python main.py notify           # send compressed push for the latest day
+  python main.py capture ...      # paste in something you read (LinkedIn etc.)
   python main.py serp-add ...     # record a manual SERP volatility reading
+  python main.py doctor           # probe every feed + Nitter instance
 """
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -20,7 +23,7 @@ from datetime import datetime, timedelta, timezone
 import yaml
 from dotenv import load_dotenv
 
-from seodigest import (x_source, rss_source, google_status, store,
+from seodigest import (x_source, rss_source, google_status, manual_source, store,
                        summarize, reports, render, serp_layer, dashboard, notify)
 
 
@@ -53,7 +56,8 @@ def compute_since(cfg):
     return lookback
 
 
-def _run_meta(cfg, x_items, rss_items, gs_items, fresh, provider_hint=None):
+def _run_meta(cfg, x_items, rss_items, gs_items, fresh, provider_hint=None,
+              manual_items=()):
     """Per-run health record, archived alongside the digest.
 
     Why bother: every failure mode in this pipeline is SILENT. If Nitter dies
@@ -74,8 +78,10 @@ def _run_meta(cfg, x_items, rss_items, gs_items, fresh, provider_hint=None):
                     "failed_names": rh.get("failed_names", [])[:10],
                     "items": len(rss_items)},
             "google_status": {"items": len(gs_items)},
+            "manual": {"items": len(manual_items)},
         },
-        "candidates_fetched": len(x_items) + len(rss_items) + len(gs_items),
+        "candidates_fetched": (len(x_items) + len(rss_items) + len(gs_items)
+                               + len(manual_items)),
         "candidates_fresh": len(fresh),
         "llm_provider": provider_hint or "",
     }
@@ -94,6 +100,9 @@ def run_daily(cfg, dry_run=False):
     print(f"    RSS: {len(rss_items)} items from {rh.get('ok', 0)}/{rh.get('total', 0)} feeds")
     gs_items, confirmed = google_status.fetch(cfg, since)
     print(f"    Google Status: {len(gs_items)} items, {len(confirmed)} confirmed updates")
+    manual_items = manual_source.fetch(cfg, since)
+    if manual_items:
+        print(f"    Manual inbox: {len(manual_items)} capture(s)")
 
     # Loud warning when a whole source layer is down — a thin digest caused by
     # a dead Nitter must never be mistaken for a quiet day.
@@ -102,7 +111,7 @@ def run_daily(cfg, dry_run=False):
             print(f"[!!] {label} is COMPLETELY unavailable — today's digest is "
                   f"not representative. Check the source config.")
 
-    all_items = gs_items + x_items + rss_items
+    all_items = gs_items + manual_items + x_items + rss_items
     fresh = store.filter_unseen(all_items)
     print(f"[*] {len(fresh)} fresh after dedup")
 
@@ -122,7 +131,8 @@ def run_daily(cfg, dry_run=False):
         return
 
     date_str = _date_str(cfg)
-    run_meta = _run_meta(cfg, x_items, rss_items, gs_items, fresh)
+    run_meta = _run_meta(cfg, x_items, rss_items, gs_items, fresh,
+                         manual_items=manual_items)
 
     if not fresh and not confirmed:
         print("[*] nothing new.")
@@ -265,6 +275,35 @@ def _send_notify_from_latest_archive(cfg):
 def run_notify(cfg):
     """Rebuild the compressed push from the most recent archived day and send."""
     _send_notify_from_latest_archive(cfg)
+
+
+# ------------------------------ capture -----------------------------------
+def run_capture(cfg, args):
+    """Append one hand-captured item to data/inbox/captures.jsonl."""
+    text = args.text or ""
+    if args.text_file:
+        with open(args.text_file, encoding="utf-8") as f:
+            text = f.read()
+    ladder = (cfg.get("scoring") or {}).get("source_weights", {})
+    if args.source_type not in ladder:
+        print(f"[!] unknown --type '{args.source_type}'. Use one of: {', '.join(ladder)}")
+        return 1
+    try:
+        rec = manual_source.append_capture({
+            "url": args.url, "text": text, "author": args.author,
+            "published": args.date, "source_type": args.source_type,
+            "tags": [t.strip() for t in args.tags.split(",") if t.strip()],
+            "commercial_interest": args.commercial, "note": args.note,
+        }, path=os.path.join((cfg.get("manual") or {}).get("inbox_dir", manual_source.INBOX_DIR),
+                             "captures.jsonl"))
+    except ValueError as e:
+        print(f"[!] not captured: {e}")
+        return 1
+    print(f"[*] captured ({rec['source_type']}, weight {ladder[rec['source_type']]}): "
+          f"{rec['url']}")
+    print("    It enters the pool on the next `daily` (or dump_candidates) run, "
+          "and is deduped by URL after that.")
+    return 0
 
 
 # ------------------------------ serp-add ----------------------------------
@@ -485,6 +524,21 @@ def main():
     doc.add_argument("--no-alternates", action="store_true",
                      help="skip guessing replacement URLs for broken feeds")
 
+    cap = sub.add_parser("capture", help="drop something you read (e.g. a LinkedIn "
+                                         "post) into the candidate pool")
+    cap.add_argument("--url", required=True)
+    cap.add_argument("--text", help="the passage you actually read (verbatim)")
+    cap.add_argument("--text-file", dest="text_file",
+                     help="read the passage from a file instead of --text")
+    cap.add_argument("--author", default="", help="who wrote it, e.g. 'Kevin Indig (LinkedIn)'")
+    cap.add_argument("--date", default="", help="when it was published, ISO date")
+    cap.add_argument("--type", dest="source_type", default=manual_source.DEFAULT_SOURCE_TYPE,
+                     help="rung on scoring.source_weights (default practitioner_observation)")
+    cap.add_argument("--tags", default="", help="comma-separated topic tags")
+    cap.add_argument("--commercial", action="store_true",
+                     help="author sells a tool/consultancy in this space")
+    cap.add_argument("--note", default="", help="why you captured it (kept in the inbox only)")
+
     sa = sub.add_parser("serp-add", help="record a manual SERP volatility reading")
     sa.add_argument("--source", required=True, choices=["sistrix", "algoroo", "awr"])
     sa.add_argument("--value", required=True, type=float)
@@ -508,6 +562,8 @@ def main():
         run_dashboard(cfg)
     elif args.cmd == "notify":
         run_notify(cfg)
+    elif args.cmd == "capture":
+        return run_capture(cfg, args)
     elif args.cmd == "serp-add":
         run_serp_add(cfg, args)
     elif args.cmd == "doctor":

@@ -213,17 +213,22 @@ x:
   #   source_type      -> maps into scoring.source_weights (the trust ladder)
   #   commercial_interest: true -> has a tool/consultancy to sell. Opinion stays
   #                        "Observed"; only data/code/papers lift it higher.
+  #
+  # 2026-10-12 audit: 8 of the 29 handles had posted NOTHING in the Aug–Oct
+  # window. Probed via Nitter — not a fetch failure, the accounts are dormant
+  # (see excluded_or_manual_review below for last-post dates). Google staff
+  # (JohnMu, methode) now post on Bluesky, which is followed through its public
+  # RSS under rss.feeds. Dormant handles are removed here so "21/21 ok" means
+  # 21 live sources, not 21 reachable feeds of which 8 are tombstones.
   accounts:
     # ---- Official platform accounts ------------------------------------
-    searchliaison:  {source_type: official_api,   tags: [official, algorithm, ranking]}
     googlesearchc:  {source_type: official_api,   tags: [official, documentation, technical_seo]}
     BingWMC:        {source_type: official_api,   tags: [official, bing, ai_search]}
     Cloudflare:     {source_type: official_api,   tags: [official, infrastructure, ai_crawler]}
 
     # ---- Official people: Google staff explaining mechanics -------------
-    # Not daily news, but when they explain a boundary it outranks any pundit.
-    JohnMu:         {source_type: official_person, tags: [official_explainer, indexing, crawling, content_quality]}
-    methode:        {source_type: official_person, tags: [official_explainer, crawling, indexing, serving, search_architecture]}
+    # JohnMu and methode (Gary Illyes) left X; they are under rss.feeds as
+    # Bluesky accounts with source_type official_person.
 
     # ---- Algorithm & SERP observation ----------------------------------
     rustybrick:     {source_type: trade_news,      tags: [algorithm, serp_features, news]}
@@ -234,10 +239,7 @@ x:
 
     # ---- Technical SEO & reproducible experiments -----------------------
     patrickstox:    {source_type: expert_analysis, tags: [technical_seo, indexing]}
-    thetafferboy:   {source_type: expert_analysis, tags: [technical_seo, performance]}
     VeryWellVersed: {source_type: expert_analysis, tags: [technical_seo, information_retrieval, ai_search, experiments]}
-    jroakes:        {source_type: expert_analysis, tags: [technical_seo, python, information_retrieval]}
-    Jammer_Volts:   {source_type: expert_analysis, tags: [technical_seo, crawling, rendering, indexing, javascript, ai_crawler]}
     jonoalderson:   {source_type: expert_analysis, tags: [technical_seo, web_standards, performance, structured_data]}
     willcritchlow:  {source_type: reproducible_experiment, tags: [experiments, ab_testing, causal_inference]}
     screamingfrog:  {source_type: expert_vendor,   tags: [technical_seo, tools, crawling], commercial_interest: true}
@@ -245,7 +247,6 @@ x:
 
     # ---- Retrieval, entities, knowledge graph, AI search ----------------
     dawnieando:     {source_type: expert_analysis, tags: [information_retrieval, entity, technical_seo, ai_search]}
-    Olaf_Kopp:      {source_type: expert_analysis, tags: [semantic_seo, entity, e_e_a_t, patents, ai_search]}
     cyberandy:      {source_type: expert_vendor,   tags: [knowledge_graph, structured_data, linked_data, ai_agent], commercial_interest: true}
     Dixon_Jones:    {source_type: expert_vendor,   tags: [entity, knowledge_graph, internal_linking, ai_visibility], commercial_interest: true}
     aleyda:         {source_type: expert_analysis, tags: [ai_search, geo, international]}
@@ -253,14 +254,21 @@ x:
     randfish:       {source_type: expert_analysis, tags: [ai_search, zero_click, industry]}
     jasonmbarnard:  {source_type: expert_vendor,   tags: [entity, knowledge_graph, brand_serp], commercial_interest: true}
 
-    # ---- Publisher / News / Discover ------------------------------------
-    NewsSEO_:       {source_type: expert_analysis, tags: [publishers, google_news, discover]}
-
   # Deliberately NOT fetched. Kept here so nobody re-adds them by accident.
+  # Last-post dates below were read from the accounts' Nitter RSS on 2026-10-12
+  # (nitter.meowing.monster, two separate probes agreed).
   excluded_or_manual_review:
     badams:    "Old handle — X account no longer belongs to Barry Adams. Track Polemic Digital / NewsSEO instead."
     facan:     "Fabrice Canel retired from Microsoft 2026-07-01 — no longer a current Bing source. Use @BingWMC."
     g33konaut: "Martin Splitt — current X status unverified. Track via Search Central + Search Off the Record instead."
+    searchliaison: "Dormant: last X post 2025-08-01, account says it is no longer active. Covered by @googlesearchc + Danny Sullivan on Bluesky (rss.feeds)."
+    JohnMu:        "Dormant on X: last post 2024-04-04. Followed on Bluesky (johnmu.com) via rss.feeds."
+    methode:       "Dormant on X: last post 2023-01-22. Followed on Bluesky (methode.bsky.social) via rss.feeds."
+    jroakes:       "Dormant on X: last post 2024-12-01. Followed on Bluesky (jroakes.bsky.social) via rss.feeds."
+    thetafferboy:  "Dormant: last X post 2024-12-31; Bluesky account has 1 post (2024-11). No live feed found."
+    Jammer_Volts:  "Dormant: last X post 2024-11-08; Bluesky (not-a-robot) last post 2024-11-15. No live feed found."
+    Olaf_Kopp:     "Dormant: last X post 2025-11-05. No Bluesky found. Re-check in 2027 or capture his LinkedIn posts by hand."
+    NewsSEO_:      "Dormant: last X post 2025-10-22 (Barry Adams). No Bluesky found. Capture LinkedIn posts by hand if needed."
 
   # Keyword search is disabled — Nitter RSS has no reliable search endpoint.
   # The curated accounts above are the primary signal source.
@@ -333,6 +341,79 @@ rss:
     # Discovery tier only — rarely the reason a signal makes the digest.
     - {name: "Search Engine Journal", url: "https://www.searchenginejournal.com/feed/",
        category: trade_news, weight: 0.45}
+
+    # ---- Bluesky: where the Google staff went -----------------------------
+    # Bluesky publishes a public RSS feed per account; no login, no instance
+    # roulette. These replace X handles that have been dormant for a year or
+    # more (see x.excluded_or_manual_review). rss_source marks them
+    # source="bluesky" so they rank as posts, not articles. Every URL below was
+    # fetched successfully on 2026-10-12 with the newest post dated in brackets.
+    - {name: "John Mueller (Bluesky)", url: "https://bsky.app/profile/johnmu.com/rss",            # [2026-10-04]
+       category: official_person, weight: 0.9, author: "@johnmu.com",
+       tags: [official_explainer, indexing, crawling, content_quality]}
+    - {name: "Gary Illyes (Bluesky)", url: "https://bsky.app/profile/methode.bsky.social/rss",    # [2026-09-20]
+       category: official_person, weight: 0.9, author: "@methode.bsky.social",
+       tags: [official_explainer, crawling, indexing, serving, search_architecture]}
+    # Personal account, mixed content; when he talks about Search it is the
+    # Search Liaison talking. Curation filters the snacks.
+    - {name: "Danny Sullivan (Bluesky)", url: "https://bsky.app/profile/dannysullivan.bsky.social/rss",  # [2026-10-03]
+       category: official_person, weight: 0.9, author: "@dannysullivan.bsky.social",
+       tags: [official_explainer, algorithm, ranking]}
+    - {name: "JR Oakes (Bluesky)", url: "https://bsky.app/profile/jroakes.bsky.social/rss",      # [2026-08-18]
+       category: expert_analysis, weight: 0.7, author: "@jroakes.bsky.social",
+       tags: [technical_seo, python, information_retrieval]}
+    - {name: "Mark Williams-Cook (Bluesky)", url: "https://bsky.app/profile/withcandour.co.uk/rss",  # [2026-10-12]
+       category: expert_analysis, weight: 0.7, author: "@withcandour.co.uk",
+       tags: [technical_seo, algorithm, experiments]}
+
+    # ---- Long-form outlets of practitioners who mostly post on LinkedIn ----
+    # LinkedIn has no public feed and forbids scraping; their analysis is
+    # published first (or in full) in these newsletters/blogs, which do have
+    # feeds. Added 2026-10-12, each verified with the real fetch headers;
+    # newest entry date in brackets. Slow feeds are fine — these categories
+    # get the 7-day evergreen window.
+    - {name: "Growth Memo (Kevin Indig)", url: "https://www.growth-memo.com/feed",               # [2026-10-12]
+       category: data_research, weight: 0.85, tags: [ai_search, data_research, growth, saas]}
+    - {name: "Lily Ray (Substack)", url: "https://lilyraynyc.substack.com/feed",                 # [2026-10-04]
+       category: expert_analysis, weight: 0.7, tags: [algorithm, content_quality, ai_search, publishers]}
+    - {name: "Zyppy Signal (Cyrus Shepard)", url: "https://signal.zyppy.com/feed",               # [2026-09-24]
+       category: data_research, weight: 0.85, tags: [experiments, ranking_factors, ai_search]}
+    - {name: "GSQi (Glenn Gabe)", url: "https://www.gsqi.com/marketing-blog/feed/",              # [2026-09-16]
+       category: data_research, weight: 0.85, tags: [algorithm, volatility, content_quality, discover]}
+    - {name: "DEJAN (Dan Petrovic)", url: "https://dejan.ai/feed/",                              # [2026-10-11]
+       category: expert_vendor, weight: 0.7, commercial_interest: true,
+       tags: [information_retrieval, experiments, ai_search, technical_seo]}
+    - {name: "Jono Alderson", url: "https://www.jonoalderson.com/feed/",                         # [2026-10-08]
+       category: expert_analysis, weight: 0.7, tags: [technical_seo, web_standards, performance, structured_data]}
+    - {name: "Brodie Clark", url: "https://brodieclark.com/feed/",                               # [2026-08-02]
+       category: expert_analysis, weight: 0.7, tags: [serp_features, ecommerce, ai_search]}
+    - {name: "Marie Haynes", url: "https://www.mariehaynes.com/feed/",                           # [2026-10-02]
+       category: expert_analysis, weight: 0.7, tags: [algorithm, content_quality, e_e_a_t]}
+    - {name: "Suganthan Mohanadasan", url: "https://suganthan.com/rss.xml",                      # [2026-10-11]
+       category: expert_analysis, weight: 0.7, commercial_interest: true,
+       tags: [ai_search, technical_seo, experiments]}
+    - {name: "Detailed (Glen Allsopp)", url: "https://detailed.com/feed/",                       # [2026-06-20]
+       category: data_research, weight: 0.85, tags: [data_research, ai_search, publishers]}
+    - {name: "Moz Blog", url: "https://moz.com/feeds/blog.rss",                                  # [2026-09-24]
+       category: expert_vendor, weight: 0.65, commercial_interest: true,
+       tags: [data_research, ai_search, tools]}
+    - {name: "SearchPilot Blog", url: "https://www.searchpilot.com/resources/blog/rss.xml",      # [2026-10-02]
+       category: expert_vendor, weight: 0.7, commercial_interest: true,
+       tags: [experiments, ab_testing, ai_search]}
+    # Probed and NOT added (2026-10-12): Candour blog (404 on every feed path —
+    # Mark's Bluesky covers it), aleydasolis.com (403 — her X covers it),
+    # elischwartz.co (400), merj.com (no feed found).
+
+# --------------------------------------------------------------------------
+# MANUAL INBOX — what you read on LinkedIn (or anywhere without a feed).
+# `python main.py capture --url ... --text "..."` appends to
+# data/inbox/captures.jsonl; the next daily run offers it as a candidate, with
+# the verbatim text as its excerpt and your stated source_type on the ladder.
+# Deduped by URL via data/seen.json like everything else.
+# --------------------------------------------------------------------------
+manual:
+  enabled: true
+  inbox_dir: "data/inbox"
 
 # --------------------------------------------------------------------------
 # GOOGLE SEARCH STATUS — official confirmation layer (drives Special Briefs)

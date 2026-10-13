@@ -105,6 +105,14 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         category = feed.get("category", "trade_news")
         weight = float(feed.get("weight", weights.get(category, 0.55)))
         cutoff = evergreen_since if category in evergreen_cats else since
+        # Bluesky exposes a plain RSS feed per account (bsky.app/profile/<h>/rss),
+        # which is how the Google staff who left X are followed now. They ride
+        # the RSS fetcher but are POSTS, not articles: the raw ranker must not
+        # give them the article bonus, and the entries have no <title>.
+        is_bluesky = "bsky.app/" in url
+        source_kind = "bluesky" if is_bluesky else "rss"
+        author = feed.get("author") or name
+        tags = list(feed.get("tags") or [category])
         try:
             # Fetch ourselves rather than letting feedparser do it — see
             # FETCH_HEADERS for why the User-Agent is load-bearing.
@@ -134,21 +142,28 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                 import re
                 summary = re.sub(r"<[^>]+>", " ", summary)
                 summary = re.sub(r"\s+", " ", summary).strip()
-                title = getattr(entry, "title", "")
+                title = (getattr(entry, "title", "") or "").strip()
                 link = getattr(entry, "link", "")
                 guid = getattr(entry, "id", None) or link
+                # Bluesky items have no title, only the post body; a leading
+                # ". " would otherwise open every excerpt. Bluesky also appends
+                # a boilerplate marker for quote posts that is noise in a card.
+                if is_bluesky:
+                    summary = summary.replace(
+                        "[contains quote post or other embedded content]", "").strip()
+                text = f"{title}. {summary[:500]}" if title else summary[:600]
                 items.append(
                     Item(
                         id=str(guid),
-                        source="rss",
+                        source=source_kind,
                         source_name=name,
                         group=category,
-                        author=name,
-                        text=f"{title}. {summary[:500]}",
+                        author=author,
+                        text=text,
                         url=link,
                         published=dt,
                         source_type=category,
-                        tags=[category],
+                        tags=tags,
                         commercial_interest=bool(feed.get("commercial_interest", False)),
                         weight=weight,
                     )
