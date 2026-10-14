@@ -1,32 +1,8 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-12T05:17:54.767368+00:00",
-  "headline": "Google's AI-content guidance now says to manually fact-check everything before publishing; SearchPilot shows a one-link template change lifting PLP traffic 18% | Google AI 内容指南改为“发布前必须人工核查”；SearchPilot 实验显示一处模板内链让品类页流量 +18%",
+  "generated_at": "2026-10-14T00:40:56.983139+00:00",
+  "headline": "SearchPilot: one template link from product pages to the brand PLP lifted its organic traffic 18%; Merj finds AI agents now complete about 60% of web tasks | SearchPilot：商品页一处指向品牌品类页的模板内链让品类页自然流量 +18%；Merj 发现 AI 代理完成网页任务的成功率约 60%",
   "sections": {
-    "Official Explanations": [
-      {
-        "what_happened": "Google updates its generative-AI content guidance: 'critical to manually factcheck and review all AI-generated content' — titles, meta, schema and alt text included | Google 更新生成式 AI 内容指南：“发布前必须人工核查所有 AI 生成内容”，含标题、meta、结构化数据与 alt",
-        "why_it_matters": "措辞从“可以用 AI”变成“必须人工复核”，并直接引用质量评估指南 4.6.5（scaled content abuse）和 4.6.6（低投入/低原创）。这是在给无人监督的批量生成划线。",
-        "evidence": "official doc: developers.google.com/search/docs/fundamentals/using-gen-ai-content (changelog Oct 1); verified against the live doc Oct 10",
-        "evidence_detail": "The Search Central changelog for Oct 1, 2026 says the gen-AI guide was updated with information from the Search Quality Rater Guidelines. New text explains that models predict a likely sequence of words and 'may contain inaccuracies (also known as hallucinations)', and that it is critical to manually fact-check and review all AI-generated content — explicitly including title elements, meta descriptions, structured data and image alt text — before publishing. The doc cites QRG sections 4.6.5 and 4.6.6. Google frames this as syncing documentation with its developer-event talks and announces no ranking-system or policy change. Cited source: Search Engine Roundtable's report, retweeted by Dawn Anderson.",
-        "who_it_affects": "all",
-        "what_to_do": "检查内容流程里 AI 生成的标题/meta/结构化数据/alt 是否有人工复核环节；没有的先补到发布 checklist，并抽样回查已发布页面的事实错误。",
-        "confidence": "Confirmed",
-        "impact": "P1",
-        "section": "Official Explanations",
-        "score": 82,
-        "sources": [
-          {
-            "name": "@dawnieando (RT of Search Engine Roundtable)",
-            "url": "https://x.com/dawnieando/status/2105814357183549654",
-            "excerpt": "RT by @dawnieando: Google updates the AI content guidelines to say you should \"manually factcheck and review all AI-generated content for accuracy and trustworthiness before publishing\" https://www.seroundtable.com/google-updates-ai-content-guidelines-factcheck-review-42217.html. Google updates the AI content guidelines to say you should \"manually factcheck and review all AI-generated content for accuracy and trustworthiness before publishing\" seroundtable.com/google-upda… Link Google Updates AI Content Guidelines: Manually Factcheck &amp; Review AI-Generated Content Google has updated Google Search&apos;s &quot;guidance on using generative AI content on your website&quot; document to tell…",
-            "author": "@dawnieando",
-            "published": "2026-10-01T16:17:21+00:00",
-            "source_type": "expert_analysis"
-          }
-        ]
-      }
-    ],
     "Technical SEO Experiments": [
       {
         "what_happened": "Merj: AI agents complete ~60% of 100 web tasks (up from ~30% in Nov 2025); a mislabeled ARIA button made ChatGPT Agent click Cancel 25/25 times | Merj：AI 代理在 100 项网页任务中成功率约 60%（去年 11 月约 30%）；ARIA 标签错误让 ChatGPT Agent 25 次全点了“取消”",
@@ -45,7 +21,7 @@
             "url": "https://x.com/screamingfrog/status/2105670773150974278",
             "excerpt": "How AI Agents Use Websites, Where They Fail, and What to Fix - https://merj.com/blog/agent-interaction-research from @giacomozecchini and @MerjCom. How AI Agents Use Websites, Where They Fail, and What to Fix - merj.com/blog/agent-interact… from @giacomozecchini and @MerjCom Link How AI Agents Use Websites, Where They Fail, and What to Fix Agent interaction monitoring shows why browser-based AI agents fail on real sites, and how accessibility engineering and task-level tests reveal breakpoints. merj.com",
             "author": "@screamingfrog",
-            "published": "2026-10-01T06:46:48+00:00",
+            "published": "2026-10-01T14:46:48+00:00",
             "source_type": "expert_vendor",
             "commercial_interest": true
           }
@@ -73,7 +49,7 @@
             "url": "https://www.searchpilot.com/resources/case-studies/how-we-increased-organic-pdp-traffic-by-18-percent",
             "excerpt": "How We Increased Organic PLP Traffic by 18% with SEO A/B Testing. Are you missing opportunities to direct crawlers to some of the most valuable pages on your site? A simple internal link, hiding in plain sight on every product page, drove a +18% improvement in organic traffic to a valuable page type for one of our ecommerce customers. Here's what happened when we made one simple internal linking change to their product detail pages.",
             "author": "SearchPilot Resources",
-            "published": "2026-09-30T12:47:58+00:00",
+            "published": "2026-09-30T20:47:58+00:00",
             "source_type": "reproducible_experiment"
           }
         ]
@@ -97,17 +73,13 @@
             "url": "https://x.com/dawnieando/status/2104248821865648354",
             "excerpt": "RT by @dawnieando: 🎢 The Top Search Updates & News of the Week are Here [From #SEOFOMO - Sep 27, 2026] 👇 * ​Google September 2026 Spam Update Has Been Unleashed * ​Google announces web multimodal Search performance reporting in Search Console * ​Google Lighthouse Adds Audit For AI Agent Resource Discovery * ​Google Merchant Center Auto Enables Native Checkout: Buy On AI Mode & Gemini * Microsoft introduces Page Classification in Clarity Bot Activity * ​Google AI Mode cuts clicks and user satisfaction: Study * ​How to segment SEO data for multi-location brands * ​The Perfectly Optimized Page For AEO * ​The Generative AI Report Sucks - Let’s Make It Brilliant * ​There Is No “Accuracy” in AI…",
             "author": "@dawnieando",
-            "published": "2026-09-27T08:36:28+00:00",
+            "published": "2026-09-27T16:36:28+00:00",
             "source_type": "expert_analysis"
           }
         ]
       }
     ],
     "Today's Action Items": [
-      {
-        "what_to_do": "给内容发布流程加上 AI 生成文本（含 title/meta/schema/alt）的人工核查环节",
-        "impact": "P1"
-      },
       {
         "what_to_do": "电商：上线 PDP→PLP 品牌/品类链接的分流测试",
         "impact": "P2"
@@ -119,28 +91,6 @@
     ]
   },
   "signals": [
-    {
-      "what_happened": "Google updates its generative-AI content guidance: 'critical to manually factcheck and review all AI-generated content' — titles, meta, schema and alt text included | Google 更新生成式 AI 内容指南：“发布前必须人工核查所有 AI 生成内容”，含标题、meta、结构化数据与 alt",
-      "why_it_matters": "措辞从“可以用 AI”变成“必须人工复核”，并直接引用质量评估指南 4.6.5（scaled content abuse）和 4.6.6（低投入/低原创）。这是在给无人监督的批量生成划线。",
-      "evidence": "official doc: developers.google.com/search/docs/fundamentals/using-gen-ai-content (changelog Oct 1); verified against the live doc Oct 10",
-      "evidence_detail": "The Search Central changelog for Oct 1, 2026 says the gen-AI guide was updated with information from the Search Quality Rater Guidelines. New text explains that models predict a likely sequence of words and 'may contain inaccuracies (also known as hallucinations)', and that it is critical to manually fact-check and review all AI-generated content — explicitly including title elements, meta descriptions, structured data and image alt text — before publishing. The doc cites QRG sections 4.6.5 and 4.6.6. Google frames this as syncing documentation with its developer-event talks and announces no ranking-system or policy change. Cited source: Search Engine Roundtable's report, retweeted by Dawn Anderson.",
-      "who_it_affects": "all",
-      "what_to_do": "检查内容流程里 AI 生成的标题/meta/结构化数据/alt 是否有人工复核环节；没有的先补到发布 checklist，并抽样回查已发布页面的事实错误。",
-      "confidence": "Confirmed",
-      "impact": "P1",
-      "section": "Official Explanations",
-      "score": 82,
-      "sources": [
-        {
-          "name": "@dawnieando (RT of Search Engine Roundtable)",
-          "url": "https://x.com/dawnieando/status/2105814357183549654",
-          "excerpt": "RT by @dawnieando: Google updates the AI content guidelines to say you should \"manually factcheck and review all AI-generated content for accuracy and trustworthiness before publishing\" https://www.seroundtable.com/google-updates-ai-content-guidelines-factcheck-review-42217.html. Google updates the AI content guidelines to say you should \"manually factcheck and review all AI-generated content for accuracy and trustworthiness before publishing\" seroundtable.com/google-upda… Link Google Updates AI Content Guidelines: Manually Factcheck &amp; Review AI-Generated Content Google has updated Google Search&apos;s &quot;guidance on using generative AI content on your website&quot; document to tell…",
-          "author": "@dawnieando",
-          "published": "2026-10-01T16:17:21+00:00",
-          "source_type": "expert_analysis"
-        }
-      ]
-    },
     {
       "what_happened": "Playbook: turning the plain-text brand label on product pages into a link to the brand PLP lifted PLP organic traffic +18% in a SearchPilot A/B test | 玩法：把商品页上的纯文本品牌名改成指向品牌品类页的链接，品类页自然流量 +18%（SearchPilot A/B 测试）",
       "why_it_matters": "机制是全站一致的 PDP→品类页内链给爬虫更清晰的“商品归属集合”信号，等于用一处模板改动给品类页注入内链权重；成本极低，且商品页本身没有受损。",
@@ -161,7 +111,7 @@
           "url": "https://www.searchpilot.com/resources/case-studies/how-we-increased-organic-pdp-traffic-by-18-percent",
           "excerpt": "How We Increased Organic PLP Traffic by 18% with SEO A/B Testing. Are you missing opportunities to direct crawlers to some of the most valuable pages on your site? A simple internal link, hiding in plain sight on every product page, drove a +18% improvement in organic traffic to a valuable page type for one of our ecommerce customers. Here's what happened when we made one simple internal linking change to their product detail pages.",
           "author": "SearchPilot Resources",
-          "published": "2026-09-30T12:47:58+00:00",
+          "published": "2026-09-30T20:47:58+00:00",
           "source_type": "reproducible_experiment"
         }
       ]
@@ -183,7 +133,7 @@
           "url": "https://x.com/screamingfrog/status/2105670773150974278",
           "excerpt": "How AI Agents Use Websites, Where They Fail, and What to Fix - https://merj.com/blog/agent-interaction-research from @giacomozecchini and @MerjCom. How AI Agents Use Websites, Where They Fail, and What to Fix - merj.com/blog/agent-interact… from @giacomozecchini and @MerjCom Link How AI Agents Use Websites, Where They Fail, and What to Fix Agent interaction monitoring shows why browser-based AI agents fail on real sites, and how accessibility engineering and task-level tests reveal breakpoints. merj.com",
           "author": "@screamingfrog",
-          "published": "2026-10-01T06:46:48+00:00",
+          "published": "2026-10-01T14:46:48+00:00",
           "source_type": "expert_vendor",
           "commercial_interest": true
         }
@@ -206,7 +156,7 @@
           "url": "https://x.com/dawnieando/status/2104248821865648354",
           "excerpt": "RT by @dawnieando: 🎢 The Top Search Updates & News of the Week are Here [From #SEOFOMO - Sep 27, 2026] 👇 * ​Google September 2026 Spam Update Has Been Unleashed * ​Google announces web multimodal Search performance reporting in Search Console * ​Google Lighthouse Adds Audit For AI Agent Resource Discovery * ​Google Merchant Center Auto Enables Native Checkout: Buy On AI Mode & Gemini * Microsoft introduces Page Classification in Clarity Bot Activity * ​Google AI Mode cuts clicks and user satisfaction: Study * ​How to segment SEO data for multi-location brands * ​The Perfectly Optimized Page For AEO * ​The Generative AI Report Sucks - Let’s Make It Brilliant * ​There Is No “Accuracy” in AI…",
           "author": "@dawnieando",
-          "published": "2026-09-27T08:36:28+00:00",
+          "published": "2026-09-27T16:36:28+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -222,10 +172,10 @@
         "ranking"
       ],
       "start": "2026-09-24T16:15:00+00:00",
-      "end": "2026-10-08T08:00:00+00:00",
+      "end": null,
       "impact": "SERVICE_INFORMATION",
-      "ongoing": false,
-      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "ongoing": true,
+      "latest_update": "",
       "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
       "triggers_brief": true
     }
@@ -233,6 +183,6 @@
   "degraded": false,
   "degraded_reason": "",
   "quiet_day": false,
-  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "curated_by": "Kiro (hand-curated, no LLM)",
   "backfilled": true
 }

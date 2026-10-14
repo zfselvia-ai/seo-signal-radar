@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-16",
-  "generated_at": "2026-10-12T05:17:54.571566+00:00",
+  "date": "2026-09-17",
+  "generated_at": "2026-10-14T00:40:56.803075+00:00",
   "headline": "Ahrefs: AI Overviews cut median CTR 23.1% for the most exposed French domains within 9 days of launch | Ahrefs：法国 AIO 上线 9 天，高曝光域名 CTR 中位数下跌 23.1%",
   "sections": {
     "Official Explanations": [
@@ -21,7 +21,7 @@
             "url": "https://x.com/dawnieando/status/2096941701759680973",
             "excerpt": "RT by @dawnieando: Google's @JohnMu said Google can lose faith in sites over programmatic SEO efforts, leading to a long recovery period https://www.seroundtable.com/google-lose-faith-42032.html. Google's @JohnMu said Google can lose faith in sites over programmatic SEO efforts, leading to a long recovery period seroundtable.com/google-lose…",
             "author": "@dawnieando",
-            "published": "2026-09-07T04:40:35+00:00",
+            "published": "2026-09-07T12:40:35+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -45,7 +45,7 @@
             "url": "https://ahrefs.com/blog/ai-overviews-france-impact/",
             "excerpt": "AI Overviews Cut CTR by 23.1% in France. France got AI Overviews on July 22, 2026. We tracked 963 domains in GSC, 28 days before and 9 days after. The most exposed lost 23.1% of their CTR. Read more &#8250;",
             "author": "Ahrefs Blog",
-            "published": "2026-09-16T08:04:30+00:00",
+            "published": "2026-09-16T16:04:30+00:00",
             "source_type": "data_research"
           }
         ]
@@ -69,7 +69,7 @@
             "url": "https://ipullrank.com/accuracy-vs-precision",
             "excerpt": "There Is No “Accuracy” in AI Search Tracking – Only Precision. I get some version of the same question every week now. A client has two AI visibility platforms running side by side. One says they show up in 41% of the prompts that matter to them. The other says 23%. Somebody on the marketing team has to put a number in a board deck, and [&#8230;] The post There Is No &#8220;Accuracy&#8221; in AI Search Tracking &#8211; Only Precision appeared first on iPullRank .",
             "author": "iPullRank Blog",
-            "published": "2026-09-17T11:20:56+00:00",
+            "published": "2026-09-17T19:20:56+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -104,7 +104,7 @@
           "url": "https://ahrefs.com/blog/ai-overviews-france-impact/",
           "excerpt": "AI Overviews Cut CTR by 23.1% in France. France got AI Overviews on July 22, 2026. We tracked 963 domains in GSC, 28 days before and 9 days after. The most exposed lost 23.1% of their CTR. Read more &#8250;",
           "author": "Ahrefs Blog",
-          "published": "2026-09-16T08:04:30+00:00",
+          "published": "2026-09-16T16:04:30+00:00",
           "source_type": "data_research"
         }
       ]
@@ -126,7 +126,7 @@
           "url": "https://ipullrank.com/accuracy-vs-precision",
           "excerpt": "There Is No “Accuracy” in AI Search Tracking – Only Precision. I get some version of the same question every week now. A client has two AI visibility platforms running side by side. One says they show up in 41% of the prompts that matter to them. The other says 23%. Somebody on the marketing team has to put a number in a board deck, and [&#8230;] The post There Is No &#8220;Accuracy&#8221; in AI Search Tracking &#8211; Only Precision appeared first on iPullRank .",
           "author": "iPullRank Blog",
-          "published": "2026-09-17T11:20:56+00:00",
+          "published": "2026-09-17T19:20:56+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -148,7 +148,7 @@
           "url": "https://x.com/dawnieando/status/2096941701759680973",
           "excerpt": "RT by @dawnieando: Google's @JohnMu said Google can lose faith in sites over programmatic SEO efforts, leading to a long recovery period https://www.seroundtable.com/google-lose-faith-42032.html. Google's @JohnMu said Google can lose faith in sites over programmatic SEO efforts, leading to a long recovery period seroundtable.com/google-lose…",
           "author": "@dawnieando",
-          "published": "2026-09-07T04:40:35+00:00",
+          "published": "2026-09-07T12:40:35+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -159,6 +159,6 @@
   "degraded": false,
   "degraded_reason": "",
   "quiet_day": false,
-  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "curated_by": "Kiro (hand-curated, no LLM)",
   "backfilled": true
 }

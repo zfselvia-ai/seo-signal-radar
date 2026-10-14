@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "generated_at": "2026-10-12T05:17:54.471488+00:00",
+  "generated_at": "2026-10-14T00:40:56.715088+00:00",
   "headline": "Site reputation policy: from Aug 30, manual actions only affect users outside the EEA, after talks with the European Commission | 站点声誉政策：8/30 起手动处罚仅影响 EEA 以外用户，源于与欧盟委员会的讨论",
   "sections": {
     "Confirmed Search Updates": [
@@ -21,7 +21,7 @@
             "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
             "excerpt": "Update to the Site Reputation Policy. In 2024, we introduced our site reputation policy to stop a practice where third-party content is published on a trusted website just to exploit that site's good reputation to rank higher in Search. This practice hurts search quality, and creates a bad experience for users.",
             "author": "Google Search Central Blog",
-            "published": "2026-08-27T16:00:00+00:00",
+            "published": "2026-08-28T00:00:00+00:00",
             "source_type": "official_documentation"
           }
         ]
@@ -52,7 +52,7 @@
           "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
           "excerpt": "Update to the Site Reputation Policy. In 2024, we introduced our site reputation policy to stop a practice where third-party content is published on a trusted website just to exploit that site's good reputation to rank higher in Search. This practice hurts search quality, and creates a bad experience for users.",
           "author": "Google Search Central Blog",
-          "published": "2026-08-27T16:00:00+00:00",
+          "published": "2026-08-28T00:00:00+00:00",
           "source_type": "official_documentation"
         }
       ]
@@ -63,6 +63,6 @@
   "degraded": false,
   "degraded_reason": "",
   "quiet_day": false,
-  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "curated_by": "Kiro (hand-curated, no LLM)",
   "backfilled": true
 }

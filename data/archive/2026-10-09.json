@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-12T05:17:55.161272+00:00",
+  "generated_at": "2026-10-14T00:40:57.358978+00:00",
   "headline": "Rumblings of another update a day after the spam update ended; Aleyda's four-market study shows AI citations are local, not global | 垃圾更新刚结束一天就传出新一轮更新；Aleyda 四市场研究显示 AI 引用是本地化的而非全球统一",
   "sections": {
     "Official Explanations": [
@@ -21,7 +21,7 @@
             "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508/",
             "excerpt": "Google Explains How To Use HTML Sitemaps For SEO via @sejournal, @martinibuster. Google explains why HTML sitemaps may still be useful even though the XML standard has largely replaced it. The post Google Explains How To Use HTML Sitemaps For SEO appeared first on Search Engine Journal .",
             "author": "Search Engine Journal",
-            "published": "2026-10-09T13:31:30+00:00",
+            "published": "2026-10-09T21:31:30+00:00",
             "source_type": "trade_news"
           }
         ]
@@ -45,7 +45,7 @@
             "url": "https://x.com/lilyraynyc/status/2108649368396149042",
             "excerpt": "Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage & outpace competitors in user adoption. Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage &amp; outpace competitors in user adoption",
             "author": "@lilyraynyc",
-            "published": "2026-10-09T12:02:40+00:00",
+            "published": "2026-10-09T20:02:40+00:00",
             "source_type": "expert_analysis"
           },
           {
@@ -53,7 +53,7 @@
             "url": "https://x.com/lilyraynyc/status/2108616099835125839",
             "excerpt": "Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily. Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily JH Scherck (@JHTScherck) You can tell clients \"LLMs are probabilistic\" until you're blue in the face, but I don't think most people fully appreciate how much of a mind bender it is for GTM teams who want to win AEO but don't live and breathe this stuff. We all started our careers working with systems where the relationship between inputs and outputs was predictable, but LLMs are",
             "author": "@lilyraynyc",
-            "published": "2026-10-09T09:50:29+00:00",
+            "published": "2026-10-09T17:50:29+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -75,7 +75,7 @@
             "url": "https://www.seroundtable.com/google-updates-reader-revenue-manager-42261.html",
             "excerpt": "Google Updates Reader Revenue Manager Home Page. Google has made major updates to the Reader Revenue Manager homepage. It was a large redesign of the page, it also now lists AI Mode, AI Overviews, and Gemini, added a matrix to the page and moved things around as well.",
             "author": "Search Engine Roundtable",
-            "published": "2026-10-09T03:31:00+00:00",
+            "published": "2026-10-09T11:31:00+00:00",
             "source_type": "trade_news"
           },
           {
@@ -83,7 +83,7 @@
             "url": "https://x.com/glenngabe/status/2108529345778123263",
             "excerpt": "Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your subscriptions\" distinction on Google Search, AI Mode, AI Overviews, and Gemini, helping to grow engagement and reinforce your brand.\". Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your…",
             "author": "@glenngabe",
-            "published": "2026-10-09T04:05:45+00:00",
+            "published": "2026-10-09T12:05:45+00:00",
             "source_type": "data_research"
           }
         ]
@@ -107,7 +107,7 @@
             "url": "https://x.com/aleyda/status/2108304494882906118",
             "excerpt": "🌎 Local vs Global AI Citations: What Changes Across Markets, Topics and Platforms? 👇 I’ve analyzed the citations used by ChatGPT, Gemini and AI Mode across ten topics in the US, UK, Spain and Brazil markets for the same prompts library localized for each market, with the goal was to understand which sources appear in each, how much the platforms differ, and what this means for international AI search optimization. The main finding is that local domains (.br, .uk and .es) represent 41.4% of citations in Brazil, 38.3% in the UK and 24.0% in Spain. The platform with the highest local share varies by country, and the share also differs by topic. To easily identify local citation shares for each…",
             "author": "@aleyda",
-            "published": "2026-10-08T13:12:16+00:00",
+            "published": "2026-10-08T21:12:16+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -129,7 +129,7 @@
             "url": "https://www.searchenginejournal.com/claude-rules-fake-sources-ai-answers/592456/",
             "excerpt": "Claude’s New Rules Target Fake Sources Built To Sway AI Answers via @sejournal, @MattGSouthern. Anthropic's updated usage policy names seeding search and AI answer sources with misleading content, and drops automated publishing from its high-risk list. The post Claude&#8217;s New Rules Target Fake Sources Built To Sway AI Answers appeared first on Search Engine Journal .",
             "author": "Search Engine Journal",
-            "published": "2026-10-09T00:00:16+00:00",
+            "published": "2026-10-09T08:00:16+00:00",
             "source_type": "trade_news"
           }
         ]
@@ -151,7 +151,7 @@
             "url": "https://x.com/glenngabe/status/2108541179117642140",
             "excerpt": "In OpenAI's announcement about GPT-6 and Intelligent UI, they mention the updates to web search (including speed and *quality of answers*): \"For questions that need web search, GPT‑6 Instant starts answering 44% sooner, on average, than GPT‑5.6 Instant.\" \"GPT‑6 also improves the quality of answers that require web search. It makes better decisions about when to look something up and more reliably finds information that supports its answer. In an internal evaluation of difficult problems, GPT‑6 correctly addressed the key aspect of the user’s question more often than GPT‑5.6.\" https://openai.com/index/gpt-6-for-everyone/#:~:text=For%20questions%20that%20need%20web%20search. In OpenAI's…",
             "author": "@glenngabe",
-            "published": "2026-10-09T04:52:46+00:00",
+            "published": "2026-10-09T12:52:46+00:00",
             "source_type": "data_research"
           },
           {
@@ -159,7 +159,7 @@
             "url": "https://x.com/glenngabe/status/2107917347482714225",
             "excerpt": "OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements like charts, buttons, and forms in answers \"We built a library of native, streamable components, along with a compiler that processes the interface as the model generates it. The library gives each response a familiar design foundation while leaving the model room to decide how the pieces fit together. The compiler allows the interface to appear progressively as the model generates it, without waiting for the entire response to be complete.\" https://openai.com/index/gpt-6-for-everyone/. OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements…",
             "author": "@glenngabe",
-            "published": "2026-10-07T11:33:53+00:00",
+            "published": "2026-10-07T19:33:53+00:00",
             "source_type": "data_research"
           }
         ]
@@ -183,7 +183,7 @@
             "url": "https://www.searchenginejournal.com/google-now-has-the-math-to-rank-without-an-index-and-the-results-page-does-not-survive-it/591945/",
             "excerpt": "Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It via @sejournal, @DuaneForrester. Google DeepMind proved one model can theoretically rank without a separate index. If it ships, visibility stops being a position and becomes inclusion or absence. The post Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It appeared first on Search Engine Journal .",
             "author": "Search Engine Journal",
-            "published": "2026-10-08T06:30:43+00:00",
+            "published": "2026-10-08T14:30:43+00:00",
             "source_type": "trade_news"
           }
         ]
@@ -210,7 +210,7 @@
             "url": "https://ahrefs.com/blog/how-to-measure-ai-search-visibility/",
             "excerpt": "How to Measure AI Search Visibility When Attribution Falls Short. That puts AI ahead of YouTube as a source of signups, and second only to Google. If we’d relied on our referral traffic alone, we’d have badly undersold it. Most AI influence happens out of sight. A buyer can read &#8230; Read more &#8250;",
             "author": "Ahrefs Blog",
-            "published": "2026-10-06T08:00:29+00:00",
+            "published": "2026-10-06T16:00:29+00:00",
             "source_type": "data_research"
           }
         ]
@@ -234,7 +234,7 @@
             "url": "https://x.com/dawnieando/status/2107505117511528640",
             "excerpt": "RT by @dawnieando: We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space.. We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space. Video",
             "author": "@dawnieando",
-            "published": "2026-10-06T08:15:50+00:00",
+            "published": "2026-10-06T16:15:50+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -258,7 +258,7 @@
             "url": "https://x.com/rustybrick/status/2108497173231079851",
             "excerpt": "Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?. Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?",
             "author": "@rustybrick",
-            "published": "2026-10-09T01:57:54+00:00",
+            "published": "2026-10-09T09:57:54+00:00",
             "source_type": "trade_news"
           },
           {
@@ -266,7 +266,7 @@
             "url": "https://x.com/glenngabe/status/2108140480202698980",
             "excerpt": "The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned.. The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned. Barry Schwartz (@rustybrick) The long Google September 2026 spam update 👾 is now done rolling out seroundtable.com/google-sept… Link Google…",
             "author": "@glenngabe",
-            "published": "2026-10-08T02:20:32+00:00",
+            "published": "2026-10-08T10:20:32+00:00",
             "source_type": "data_research"
           },
           {
@@ -274,7 +274,7 @@
             "url": "https://x.com/Marie_Haynes/status/2108150078917451913",
             "excerpt": "The spam update is complete. Core update soon?. The spam update is complete. Core update soon? Google Search Central (@googlesearchc) The rollout was complete as of October 8, 2026. — http://nitter.meowing.monster/googlesearchc/status/2108114841005105171#m",
             "author": "@Marie_Haynes",
-            "published": "2026-10-08T02:58:41+00:00",
+            "published": "2026-10-08T10:58:41+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -313,7 +313,7 @@
           "url": "https://x.com/rustybrick/status/2108497173231079851",
           "excerpt": "Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?. Hearing rumblings about another Google update rolling out now post the Spam update finishing - anyone seeing anything this morning specifically?",
           "author": "@rustybrick",
-          "published": "2026-10-09T01:57:54+00:00",
+          "published": "2026-10-09T09:57:54+00:00",
           "source_type": "trade_news"
         },
         {
@@ -321,7 +321,7 @@
           "url": "https://x.com/glenngabe/status/2108140480202698980",
           "excerpt": "The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned.. The September 2026 spam update has completed rolling out. Nearly 14 days. Now the question becomes, what's next and when will that roll out? Again, based on the doc updates, and the heavy spamming going on to game AI Search, I think we'll see a very big update soon. Stay tuned. Barry Schwartz (@rustybrick) The long Google September 2026 spam update 👾 is now done rolling out seroundtable.com/google-sept… Link Google…",
           "author": "@glenngabe",
-          "published": "2026-10-08T02:20:32+00:00",
+          "published": "2026-10-08T10:20:32+00:00",
           "source_type": "data_research"
         },
         {
@@ -329,7 +329,7 @@
           "url": "https://x.com/Marie_Haynes/status/2108150078917451913",
           "excerpt": "The spam update is complete. Core update soon?. The spam update is complete. Core update soon? Google Search Central (@googlesearchc) The rollout was complete as of October 8, 2026. — http://nitter.meowing.monster/googlesearchc/status/2108114841005105171#m",
           "author": "@Marie_Haynes",
-          "published": "2026-10-08T02:58:41+00:00",
+          "published": "2026-10-08T10:58:41+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -351,7 +351,7 @@
           "url": "https://x.com/aleyda/status/2108304494882906118",
           "excerpt": "🌎 Local vs Global AI Citations: What Changes Across Markets, Topics and Platforms? 👇 I’ve analyzed the citations used by ChatGPT, Gemini and AI Mode across ten topics in the US, UK, Spain and Brazil markets for the same prompts library localized for each market, with the goal was to understand which sources appear in each, how much the platforms differ, and what this means for international AI search optimization. The main finding is that local domains (.br, .uk and .es) represent 41.4% of citations in Brazil, 38.3% in the UK and 24.0% in Spain. The platform with the highest local share varies by country, and the share also differs by topic. To easily identify local citation shares for each…",
           "author": "@aleyda",
-          "published": "2026-10-08T13:12:16+00:00",
+          "published": "2026-10-08T21:12:16+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -376,7 +376,7 @@
           "url": "https://ahrefs.com/blog/how-to-measure-ai-search-visibility/",
           "excerpt": "How to Measure AI Search Visibility When Attribution Falls Short. That puts AI ahead of YouTube as a source of signups, and second only to Google. If we’d relied on our referral traffic alone, we’d have badly undersold it. Most AI influence happens out of sight. A buyer can read &#8230; Read more &#8250;",
           "author": "Ahrefs Blog",
-          "published": "2026-10-06T08:00:29+00:00",
+          "published": "2026-10-06T16:00:29+00:00",
           "source_type": "data_research"
         }
       ]
@@ -398,7 +398,7 @@
           "url": "https://x.com/lilyraynyc/status/2108649368396149042",
           "excerpt": "Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage & outpace competitors in user adoption. Google seems hell-bent on showing as many AI Overviews for as many queries as possible, as quickly as possible I suspect much of this is driven by the need to demonstrate rapid growth in AI product usage &amp; outpace competitors in user adoption",
           "author": "@lilyraynyc",
-          "published": "2026-10-09T12:02:40+00:00",
+          "published": "2026-10-09T20:02:40+00:00",
           "source_type": "expert_analysis"
         },
         {
@@ -406,7 +406,7 @@
           "url": "https://x.com/lilyraynyc/status/2108616099835125839",
           "excerpt": "Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily. Not to mention the lack of access to reliable data to even measure any of this, a problem that is getting worse daily JH Scherck (@JHTScherck) You can tell clients \"LLMs are probabilistic\" until you're blue in the face, but I don't think most people fully appreciate how much of a mind bender it is for GTM teams who want to win AEO but don't live and breathe this stuff. We all started our careers working with systems where the relationship between inputs and outputs was predictable, but LLMs are",
           "author": "@lilyraynyc",
-          "published": "2026-10-09T09:50:29+00:00",
+          "published": "2026-10-09T17:50:29+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -428,7 +428,7 @@
           "url": "https://www.searchenginejournal.com/claude-rules-fake-sources-ai-answers/592456/",
           "excerpt": "Claude’s New Rules Target Fake Sources Built To Sway AI Answers via @sejournal, @MattGSouthern. Anthropic's updated usage policy names seeding search and AI answer sources with misleading content, and drops automated publishing from its high-risk list. The post Claude&#8217;s New Rules Target Fake Sources Built To Sway AI Answers appeared first on Search Engine Journal .",
           "author": "Search Engine Journal",
-          "published": "2026-10-09T00:00:16+00:00",
+          "published": "2026-10-09T08:00:16+00:00",
           "source_type": "trade_news"
         }
       ]
@@ -450,7 +450,7 @@
           "url": "https://x.com/glenngabe/status/2108541179117642140",
           "excerpt": "In OpenAI's announcement about GPT-6 and Intelligent UI, they mention the updates to web search (including speed and *quality of answers*): \"For questions that need web search, GPT‑6 Instant starts answering 44% sooner, on average, than GPT‑5.6 Instant.\" \"GPT‑6 also improves the quality of answers that require web search. It makes better decisions about when to look something up and more reliably finds information that supports its answer. In an internal evaluation of difficult problems, GPT‑6 correctly addressed the key aspect of the user’s question more often than GPT‑5.6.\" https://openai.com/index/gpt-6-for-everyone/#:~:text=For%20questions%20that%20need%20web%20search. In OpenAI's…",
           "author": "@glenngabe",
-          "published": "2026-10-09T04:52:46+00:00",
+          "published": "2026-10-09T12:52:46+00:00",
           "source_type": "data_research"
         },
         {
@@ -458,7 +458,7 @@
           "url": "https://x.com/glenngabe/status/2107917347482714225",
           "excerpt": "OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements like charts, buttons, and forms in answers \"We built a library of native, streamable components, along with a compiler that processes the interface as the model generates it. The library gives each response a familiar design foundation while leaving the model room to decide how the pieces fit together. The compiler allows the interface to appear progressively as the model generates it, without waiting for the entire response to be complete.\" https://openai.com/index/gpt-6-for-everyone/. OpenAI rolls out GPT-6 in ChatGPT with Intelligent UI, a new feature that includes interactive elements…",
           "author": "@glenngabe",
-          "published": "2026-10-07T11:33:53+00:00",
+          "published": "2026-10-07T19:33:53+00:00",
           "source_type": "data_research"
         }
       ]
@@ -480,7 +480,7 @@
           "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508/",
           "excerpt": "Google Explains How To Use HTML Sitemaps For SEO via @sejournal, @martinibuster. Google explains why HTML sitemaps may still be useful even though the XML standard has largely replaced it. The post Google Explains How To Use HTML Sitemaps For SEO appeared first on Search Engine Journal .",
           "author": "Search Engine Journal",
-          "published": "2026-10-09T13:31:30+00:00",
+          "published": "2026-10-09T21:31:30+00:00",
           "source_type": "trade_news"
         }
       ]
@@ -502,7 +502,7 @@
           "url": "https://www.seroundtable.com/google-updates-reader-revenue-manager-42261.html",
           "excerpt": "Google Updates Reader Revenue Manager Home Page. Google has made major updates to the Reader Revenue Manager homepage. It was a large redesign of the page, it also now lists AI Mode, AI Overviews, and Gemini, added a matrix to the page and moved things around as well.",
           "author": "Search Engine Roundtable",
-          "published": "2026-10-09T03:31:00+00:00",
+          "published": "2026-10-09T11:31:00+00:00",
           "source_type": "trade_news"
         },
         {
@@ -510,7 +510,7 @@
           "url": "https://x.com/glenngabe/status/2108529345778123263",
           "excerpt": "Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your subscriptions\" distinction on Google Search, AI Mode, AI Overviews, and Gemini, helping to grow engagement and reinforce your brand.\". Always interesting when Google updates pages covering tools/features that help publishers earn money, gain subs, etc. Now with mentions of AIOs, AI Mode, and Gemini: \"Readers who subscribe or contribute through Reader Revenue Manager can see your content featured in a \"From your…",
           "author": "@glenngabe",
-          "published": "2026-10-09T04:05:45+00:00",
+          "published": "2026-10-09T12:05:45+00:00",
           "source_type": "data_research"
         }
       ]
@@ -532,7 +532,7 @@
           "url": "https://www.searchenginejournal.com/google-now-has-the-math-to-rank-without-an-index-and-the-results-page-does-not-survive-it/591945/",
           "excerpt": "Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It via @sejournal, @DuaneForrester. Google DeepMind proved one model can theoretically rank without a separate index. If it ships, visibility stops being a position and becomes inclusion or absence. The post Google Now Has The Math To Rank Without An Index, And The Results Page Does Not Survive It appeared first on Search Engine Journal .",
           "author": "Search Engine Journal",
-          "published": "2026-10-08T06:30:43+00:00",
+          "published": "2026-10-08T14:30:43+00:00",
           "source_type": "trade_news"
         }
       ]
@@ -554,7 +554,7 @@
           "url": "https://x.com/dawnieando/status/2107505117511528640",
           "excerpt": "RT by @dawnieando: We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space.. We’re releasing EmbeddingGemma 2, our first natively multimodal open model engineered for on-device embeddings. Built on the Gemma 4 architecture and released under an Apache 2.0 license, it goes beyond text to unify images, video, audio, and code in a single embedding space. Video",
           "author": "@dawnieando",
-          "published": "2026-10-06T08:15:50+00:00",
+          "published": "2026-10-06T16:15:50+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -581,7 +581,7 @@
   "degraded": false,
   "degraded_reason": "",
   "quiet_day": false,
-  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "curated_by": "Kiro (hand-curated, no LLM)",
   "run_meta": {
     "ran_at": "2026-10-09T08:21:48.672151+00:00",
     "sources": {

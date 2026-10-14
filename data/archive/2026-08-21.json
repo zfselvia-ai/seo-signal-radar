@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-10-14T00:40:56.627912+00:00",
+  "headline": "August 2026 spam update finishes after about 3 days; Google adds Preferred Sources controls across Search, News and Discover | 8 月垃圾内容更新约 3 天完成推出；Google 在搜索、新闻、Discover 加入首选来源控制",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "August 2026 spam update rollout complete Aug 21, about 3 days after release | 8 月垃圾内容更新 8/21 完成推出，历时约 3 天",
+        "why_it_matters": "推出已经结束，可以做前后对比了。受影响的目录先对照 spam policies 排查（scaled content、site reputation abuse、expired domain abuse），而不是去改内容质量。",
+        "evidence": "official: @googlesearchc completion notice + Google Search Status incident",
+        "evidence_detail": "Google Search Central posted on Aug 21, 2026 that the rollout was complete; the Search Status incident opened on Aug 18 carries the same completion note. Google publishes no scope or affected-site data for spam updates, so the diagnostic is GSC clicks per directory or template for the two weeks before Aug 18 against the days after Aug 21.",
+        "who_it_affects": "all",
+        "what_to_do": "对比 8/18 之前两周与 8/21 之后的 GSC 点击（按目录/模板），有明显下跌的目录逐条对照 spam policies，重点查 scaled content 与第三方内容。",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 86,
+        "sources": [
+          {
+            "name": "@googlesearchc (completion)",
+            "url": "https://x.com/googlesearchc/status/2090723476092985668",
+            "excerpt": "R to @googlesearchc: The rollout was complete as of August 21, 2026.. The rollout was complete as of August 21, 2026.",
+            "author": "@googlesearchc",
+            "published": "2026-08-21T08:51:35+00:00",
+            "source_type": "official_api"
+          },
+          {
+            "name": "Google Search Status",
+            "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+            "excerpt": "[Spam Update] August 2026 spam update. The rollout was complete as of August 21, 2026.",
+            "author": "Google Search Status Dashboard",
+            "published": "2026-08-18T16:27:00+00:00",
+            "source_type": "practitioner_observation"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Google adds a 'Preferred Sources' button in Search, News and Discover plus topic controls for the Discover feed | Google 在搜索/新闻/Discover 加入“首选来源”按钮与 Discover 话题控制",
+        "why_it_matters": "读者把你设为首选来源后，你的内容在 Top Stories 和 Discover 里获得优先展示。这是出版商为数不多能直接影响分发的用户信号，但需要主动引导读者去点那个按钮。",
+        "evidence": "Google product announcement (Aug 20), relayed by @dawnieando retweet",
+        "evidence_detail": "Google's Aug 20 announcement, retweeted by Dawn Anderson, lists the changes: a Preferred Sources button to save favourite websites, feedback controls to see more or less of specific topics and links in the Discover feed, and related tweaks across Search, News and Discover. It is the product announcement itself, not a measurement — Google gives no data on how preferred-source status changes impressions or clicks.",
+        "who_it_affects": "publisher",
+        "what_to_do": "在站内和邮件里加入“将我们设为 Google 首选来源”的引导（含操作截图），记录开始推广的日期，以便之后与 Top Stories/Discover 展示量变化对照。",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 70,
+        "sources": [
+          {
+            "name": "@dawnieando (RT of Google)",
+            "url": "https://x.com/dawnieando/status/2090478864275570693",
+            "excerpt": "RT by @dawnieando: A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like you’d text a friend 🎧 Stay up to date with custom daily audio briefings in the Google News app (Android). A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like…",
+            "author": "@dawnieando",
+            "published": "2026-08-20T16:39:35+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "对比 8/18 之前两周与 8/21 之后的 GSC 点击（按目录），定位受影响模板并对照 spam policies",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "出版商：上线“设为首选来源”引导并记录推广起始日期",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "August 2026 spam update rollout complete Aug 21, about 3 days after release | 8 月垃圾内容更新 8/21 完成推出，历时约 3 天",
+      "why_it_matters": "推出已经结束，可以做前后对比了。受影响的目录先对照 spam policies 排查（scaled content、site reputation abuse、expired domain abuse），而不是去改内容质量。",
+      "evidence": "official: @googlesearchc completion notice + Google Search Status incident",
+      "evidence_detail": "Google Search Central posted on Aug 21, 2026 that the rollout was complete; the Search Status incident opened on Aug 18 carries the same completion note. Google publishes no scope or affected-site data for spam updates, so the diagnostic is GSC clicks per directory or template for the two weeks before Aug 18 against the days after Aug 21.",
+      "who_it_affects": "all",
+      "what_to_do": "对比 8/18 之前两周与 8/21 之后的 GSC 点击（按目录/模板），有明显下跌的目录逐条对照 spam policies，重点查 scaled content 与第三方内容。",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 86,
+      "sources": [
+        {
+          "name": "@googlesearchc (completion)",
+          "url": "https://x.com/googlesearchc/status/2090723476092985668",
+          "excerpt": "R to @googlesearchc: The rollout was complete as of August 21, 2026.. The rollout was complete as of August 21, 2026.",
+          "author": "@googlesearchc",
+          "published": "2026-08-21T08:51:35+00:00",
+          "source_type": "official_api"
+        },
+        {
+          "name": "Google Search Status",
+          "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+          "excerpt": "[Spam Update] August 2026 spam update. The rollout was complete as of August 21, 2026.",
+          "author": "Google Search Status Dashboard",
+          "published": "2026-08-18T16:27:00+00:00",
+          "source_type": "practitioner_observation"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google adds a 'Preferred Sources' button in Search, News and Discover plus topic controls for the Discover feed | Google 在搜索/新闻/Discover 加入“首选来源”按钮与 Discover 话题控制",
+      "why_it_matters": "读者把你设为首选来源后，你的内容在 Top Stories 和 Discover 里获得优先展示。这是出版商为数不多能直接影响分发的用户信号，但需要主动引导读者去点那个按钮。",
+      "evidence": "Google product announcement (Aug 20), relayed by @dawnieando retweet",
+      "evidence_detail": "Google's Aug 20 announcement, retweeted by Dawn Anderson, lists the changes: a Preferred Sources button to save favourite websites, feedback controls to see more or less of specific topics and links in the Discover feed, and related tweaks across Search, News and Discover. It is the product announcement itself, not a measurement — Google gives no data on how preferred-source status changes impressions or clicks.",
+      "who_it_affects": "publisher",
+      "what_to_do": "在站内和邮件里加入“将我们设为 Google 首选来源”的引导（含操作截图），记录开始推广的日期，以便之后与 Top Stories/Discover 展示量变化对照。",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 70,
+      "sources": [
+        {
+          "name": "@dawnieando (RT of Google)",
+          "url": "https://x.com/dawnieando/status/2090478864275570693",
+          "excerpt": "RT by @dawnieando: A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like you’d text a friend 🎧 Stay up to date with custom daily audio briefings in the Google News app (Android). A few updates today making it easier see the content + publishers you want across Search, News and Discover: ⭐ Click the Preferred Sources button to save your favorite websites 💬 Tell Google about the topics and links you want to see more (or less of) in your Discover feed - just like…",
+          "author": "@dawnieando",
+          "published": "2026-08-20T16:39:35+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": false,
+  "degraded_reason": "",
+  "quiet_day": false,
+  "curated_by": "Kiro (hand-curated, no LLM)",
+  "backfilled": true
+}

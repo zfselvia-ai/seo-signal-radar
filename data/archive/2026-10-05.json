@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-12T05:17:54.959733+00:00",
+  "generated_at": "2026-10-14T00:40:57.163724+00:00",
   "headline": "Google rewrites its helpful-content doc around 'main content' effort, originality and accuracy as experts predict a major update | Google 以“主要内容”的投入/原创/准确性重写帮助文档，专家预判大型更新将至",
   "sections": {
     "Official Explanations": [
@@ -21,7 +21,7 @@
             "url": "https://x.com/aleyda/status/2106757923481276664",
             "excerpt": "🍿 All The Search Updates & News You can't Miss [#SEOFOMO - Oct 4, 2026] 👇 * ​Google: Manually Fact-Check & Review AI-Generated Content For Accuracy * ​Google Helpful Content Doc With New Main Content & EOT/SA Sections * ​AI Overviews on branded queries tripled in September * ​Google Gemini Adds UTM Parameters For Referral Attribution * ​Microsoft Clarity Now Lets You Customize Your Brand Terms in AI Visibility Dashboard * ​Creating News Content That Stands Out in AI and Multimodal Search * ​Which Rendering Approach is Best for SEO on E-commerce Sites? * ​Catching Technical SEO regressions and rendering disasters in CI for Shopify Stores [Presentation] * ​How AI Agents Use Websites, Where…",
             "author": "@aleyda",
-            "published": "2026-10-04T06:46:45+00:00",
+            "published": "2026-10-04T14:46:45+00:00",
             "source_type": "expert_analysis"
           },
           {
@@ -29,7 +29,7 @@
             "url": "https://x.com/Kevin_Indig/status/2106351211578273803",
             "excerpt": "Straight shot at programmatic content, commodity content and ai slop imho. Straight shot at programmatic content, commodity content and ai slop imho Barry Schwartz (@rustybrick) Google updates creating helpful, reliable, people-first content with new main content section and how search quality raters review it seroundtable.com/google-help… Link Google Updates Helpful Content Page With Main Content &amp; EOT/SA Google has updated the creating helpful, reliable, people-first content help document to primarily add two new sections. First, it added that the main content is",
             "author": "@Kevin_Indig",
-            "published": "2026-10-03T03:50:37+00:00",
+            "published": "2026-10-03T11:50:37+00:00",
             "source_type": "data_research"
           },
           {
@@ -37,7 +37,7 @@
             "url": "https://x.com/Marie_Haynes/status/2106737429575082390",
             "excerpt": "Google's advice on \"main content\" is not new. Here are some excerpts from the Quality Raters Guidelines. The most interesting part is what they say about \"filler\" content: \"The main content (MC) of a page should support its purpose. so that visitors can immediately access it. A high quality page has the most helpful MC placed most prominently. Content that supports the page purpose without directly contributing to the primary goal can be included, but it should be shown lower on the page in a less prominent position.\" In other words: Make it easy for the searcher to find what they are looking for. Now why did they add this to the helpful content guidance now? It could be to help site owners…",
             "author": "@Marie_Haynes",
-            "published": "2026-10-04T05:25:19+00:00",
+            "published": "2026-10-04T13:25:19+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -59,7 +59,7 @@
             "url": "https://x.com/VeryWellVersed/status/2106743953194090822",
             "excerpt": "RT by @VeryWellVersed: Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -> When Google doesn’t know the quality or popularity of a URL, it uses the aggregate for its parent path. Then that path’s parent, and so on. https://weareroast.com/news/google-search-central-live-deep-dive-barcelona-day-1-recap/#:~:text=When%20Google%20doesn%E2%80%99t%20know%20the%20quality%20or%20popularity%20of%20a%20URL. Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -&gt; When Google doesn’t know the quality or popularity of a URL, it uses the aggregate…",
             "author": "@VeryWellVersed",
-            "published": "2026-10-04T05:51:14+00:00",
+            "published": "2026-10-04T13:51:14+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -83,7 +83,7 @@
             "url": "https://x.com/screamingfrog/status/2107031599502000142",
             "excerpt": "Google Gemini Adds UTM Parameters For Referral Attribution - https://www.searchenginejournal.com/google-gemini-adds-utm-parameters-for-referral-attribution/591754/. Google Gemini Adds UTM Parameters For Referral Attribution - searchenginejournal.com/goog… Link Google Gemini Adds UTM Parameters For Referral Attribution Google Gemini added UTM parameters to links, giving SEOs better numbers for measuring AI traffic and deciding where resources should go. searchenginejournal.com",
             "author": "@screamingfrog",
-            "published": "2026-10-05T00:54:14+00:00",
+            "published": "2026-10-05T08:54:14+00:00",
             "source_type": "expert_vendor",
             "commercial_interest": true
           }
@@ -106,7 +106,7 @@
             "url": "https://x.com/aleyda/status/2107112128356155792",
             "excerpt": "60% more YOY searches, 30% fewer organic search clicks? Welcome to the second SERP Squeeze Monday! 👇 Every Monday, I’m going through a commercial query SERP to see how the relationship of organic search rankings <> visibility <> clicks is shifting. This week’s query: “baggy jeans” in the US. According to @Similarweb August 2026 vs 2025: 📈 Search volume grew from 114.1K to 182.1K: +60% 📉 Organic clicks fell from 24.8K to 17.3K: -30% 📉 Paid clicks also fell, from 13K to 12.3K: -5% What changed in the SERP? @ahrefs ' August 26 YOY snapshots show: * Traditional organic search results decreased from 9 to 5 within the top 10 positions. * Shopping Packs increased from 1 to 3, appearing at…",
             "author": "@aleyda",
-            "published": "2026-10-05T06:14:14+00:00",
+            "published": "2026-10-05T14:14:14+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -133,7 +133,7 @@
             "url": "https://x.com/brodieseo/status/2107078351945163086",
             "excerpt": "Ecommerce SEO: This store is missing ~8 million product images in Google Merchant Center. Not on the site. In the feed. 2M+ products in the account. Average image count: 1. Each location carries ~116K products (incl. variants). Multiply that across every country in a global operation, and you get millions of free listings competing with a single image each. Visuals sell the product. When the listing doesn't show enough of it, searchers scroll past and never reach the PDP. And CTR is only part of it. Adding ~4 more images per product (~8M across the account) also strengthens how those offers perform within free listings themselves. The good news: GMC already rates the existing images as high…",
             "author": "@brodieseo",
-            "published": "2026-10-05T04:00:01+00:00",
+            "published": "2026-10-05T12:00:01+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -157,7 +157,7 @@
             "url": "https://x.com/aleyda/status/2106854591623000282",
             "excerpt": "RT by @aleyda: Just published my latest piece in Substack! If you’ve been paying attention, you’ve probably also connected the dots: All signs point to a major Google update on the horizon. This is especially true with Google’s recent communications and edits to their documentation this past week. I believe they will be targeting low-quality, scaled AI content, tactics meant to manipulate AI search responses, paid/inauthentic mentions, and other deceptive approaches. I put together a new Substack explaining why I’m predicting that a massive Google update is imminent - perhaps similar to what we’ve seen with Panda, Penguin, the Helpful Content Update or March 2024 core update. Shout outs to…",
             "author": "@aleyda",
-            "published": "2026-10-04T13:10:52+00:00",
+            "published": "2026-10-04T21:10:52+00:00",
             "source_type": "expert_analysis"
           },
           {
@@ -165,7 +165,7 @@
             "url": "https://x.com/screamingfrog/status/2107094196561535102",
             "excerpt": "Prediction: the next massive Google update is around the corner - https://lilyraynyc.substack.com/p/prediction-the-next-massive-google from @lilyraynyc. Prediction: the next massive Google update is around the corner - lilyraynyc.substack.com/p/pr… from @lilyraynyc",
             "author": "@screamingfrog",
-            "published": "2026-10-05T05:02:59+00:00",
+            "published": "2026-10-05T13:02:59+00:00",
             "source_type": "expert_vendor",
             "commercial_interest": true
           },
@@ -174,7 +174,7 @@
             "url": "https://x.com/Marie_Haynes/status/2107088402701029677",
             "excerpt": "Such a good piece by @lilyraynyc. The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a big update coming back in March of 2024, and sure enough, the next day the March core update was launched, which Google called an evolution in how they determine the helpfulness of content. https://lilyraynyc.substack.com/p/prediction-the-next-massive-google?r=17bs0&utm_medium=ios&triedRedirect=true. Such a good piece by @lilyraynyc . The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a…",
             "author": "@Marie_Haynes",
-            "published": "2026-10-05T04:39:57+00:00",
+            "published": "2026-10-05T12:39:57+00:00",
             "source_type": "expert_analysis"
           }
         ]
@@ -213,7 +213,7 @@
           "url": "https://x.com/aleyda/status/2106757923481276664",
           "excerpt": "🍿 All The Search Updates & News You can't Miss [#SEOFOMO - Oct 4, 2026] 👇 * ​Google: Manually Fact-Check & Review AI-Generated Content For Accuracy * ​Google Helpful Content Doc With New Main Content & EOT/SA Sections * ​AI Overviews on branded queries tripled in September * ​Google Gemini Adds UTM Parameters For Referral Attribution * ​Microsoft Clarity Now Lets You Customize Your Brand Terms in AI Visibility Dashboard * ​Creating News Content That Stands Out in AI and Multimodal Search * ​Which Rendering Approach is Best for SEO on E-commerce Sites? * ​Catching Technical SEO regressions and rendering disasters in CI for Shopify Stores [Presentation] * ​How AI Agents Use Websites, Where…",
           "author": "@aleyda",
-          "published": "2026-10-04T06:46:45+00:00",
+          "published": "2026-10-04T14:46:45+00:00",
           "source_type": "expert_analysis"
         },
         {
@@ -221,7 +221,7 @@
           "url": "https://x.com/Kevin_Indig/status/2106351211578273803",
           "excerpt": "Straight shot at programmatic content, commodity content and ai slop imho. Straight shot at programmatic content, commodity content and ai slop imho Barry Schwartz (@rustybrick) Google updates creating helpful, reliable, people-first content with new main content section and how search quality raters review it seroundtable.com/google-help… Link Google Updates Helpful Content Page With Main Content &amp; EOT/SA Google has updated the creating helpful, reliable, people-first content help document to primarily add two new sections. First, it added that the main content is",
           "author": "@Kevin_Indig",
-          "published": "2026-10-03T03:50:37+00:00",
+          "published": "2026-10-03T11:50:37+00:00",
           "source_type": "data_research"
         },
         {
@@ -229,7 +229,7 @@
           "url": "https://x.com/Marie_Haynes/status/2106737429575082390",
           "excerpt": "Google's advice on \"main content\" is not new. Here are some excerpts from the Quality Raters Guidelines. The most interesting part is what they say about \"filler\" content: \"The main content (MC) of a page should support its purpose. so that visitors can immediately access it. A high quality page has the most helpful MC placed most prominently. Content that supports the page purpose without directly contributing to the primary goal can be included, but it should be shown lower on the page in a less prominent position.\" In other words: Make it easy for the searcher to find what they are looking for. Now why did they add this to the helpful content guidance now? It could be to help site owners…",
           "author": "@Marie_Haynes",
-          "published": "2026-10-04T05:25:19+00:00",
+          "published": "2026-10-04T13:25:19+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -251,7 +251,7 @@
           "url": "https://x.com/aleyda/status/2106854591623000282",
           "excerpt": "RT by @aleyda: Just published my latest piece in Substack! If you’ve been paying attention, you’ve probably also connected the dots: All signs point to a major Google update on the horizon. This is especially true with Google’s recent communications and edits to their documentation this past week. I believe they will be targeting low-quality, scaled AI content, tactics meant to manipulate AI search responses, paid/inauthentic mentions, and other deceptive approaches. I put together a new Substack explaining why I’m predicting that a massive Google update is imminent - perhaps similar to what we’ve seen with Panda, Penguin, the Helpful Content Update or March 2024 core update. Shout outs to…",
           "author": "@aleyda",
-          "published": "2026-10-04T13:10:52+00:00",
+          "published": "2026-10-04T21:10:52+00:00",
           "source_type": "expert_analysis"
         },
         {
@@ -259,7 +259,7 @@
           "url": "https://x.com/screamingfrog/status/2107094196561535102",
           "excerpt": "Prediction: the next massive Google update is around the corner - https://lilyraynyc.substack.com/p/prediction-the-next-massive-google from @lilyraynyc. Prediction: the next massive Google update is around the corner - lilyraynyc.substack.com/p/pr… from @lilyraynyc",
           "author": "@screamingfrog",
-          "published": "2026-10-05T05:02:59+00:00",
+          "published": "2026-10-05T13:02:59+00:00",
           "source_type": "expert_vendor",
           "commercial_interest": true
         },
@@ -268,7 +268,7 @@
           "url": "https://x.com/Marie_Haynes/status/2107088402701029677",
           "excerpt": "Such a good piece by @lilyraynyc. The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a big update coming back in March of 2024, and sure enough, the next day the March core update was launched, which Google called an evolution in how they determine the helpfulness of content. https://lilyraynyc.substack.com/p/prediction-the-next-massive-google?r=17bs0&utm_medium=ios&triedRedirect=true. Such a good piece by @lilyraynyc . The signs are clear. It's very likely a big Google update is coming. She tells the story of how she and I were having a similar conversation in a Vegas bar about a…",
           "author": "@Marie_Haynes",
-          "published": "2026-10-05T04:39:57+00:00",
+          "published": "2026-10-05T12:39:57+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -290,7 +290,7 @@
           "url": "https://x.com/screamingfrog/status/2107031599502000142",
           "excerpt": "Google Gemini Adds UTM Parameters For Referral Attribution - https://www.searchenginejournal.com/google-gemini-adds-utm-parameters-for-referral-attribution/591754/. Google Gemini Adds UTM Parameters For Referral Attribution - searchenginejournal.com/goog… Link Google Gemini Adds UTM Parameters For Referral Attribution Google Gemini added UTM parameters to links, giving SEOs better numbers for measuring AI traffic and deciding where resources should go. searchenginejournal.com",
           "author": "@screamingfrog",
-          "published": "2026-10-05T00:54:14+00:00",
+          "published": "2026-10-05T08:54:14+00:00",
           "source_type": "expert_vendor",
           "commercial_interest": true
         }
@@ -313,7 +313,7 @@
           "url": "https://x.com/VeryWellVersed/status/2106743953194090822",
           "excerpt": "RT by @VeryWellVersed: Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -> When Google doesn’t know the quality or popularity of a URL, it uses the aggregate for its parent path. Then that path’s parent, and so on. https://weareroast.com/news/google-search-central-live-deep-dive-barcelona-day-1-recap/#:~:text=When%20Google%20doesn%E2%80%99t%20know%20the%20quality%20or%20popularity%20of%20a%20URL. Google about Crawl Budget (and specifically Crawl Demand). From Google Search Central Live Barcelona (via John Campbell of ROAST) -&gt; When Google doesn’t know the quality or popularity of a URL, it uses the aggregate…",
           "author": "@VeryWellVersed",
-          "published": "2026-10-04T05:51:14+00:00",
+          "published": "2026-10-04T13:51:14+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -338,7 +338,7 @@
           "url": "https://x.com/brodieseo/status/2107078351945163086",
           "excerpt": "Ecommerce SEO: This store is missing ~8 million product images in Google Merchant Center. Not on the site. In the feed. 2M+ products in the account. Average image count: 1. Each location carries ~116K products (incl. variants). Multiply that across every country in a global operation, and you get millions of free listings competing with a single image each. Visuals sell the product. When the listing doesn't show enough of it, searchers scroll past and never reach the PDP. And CTR is only part of it. Adding ~4 more images per product (~8M across the account) also strengthens how those offers perform within free listings themselves. The good news: GMC already rates the existing images as high…",
           "author": "@brodieseo",
-          "published": "2026-10-05T04:00:01+00:00",
+          "published": "2026-10-05T12:00:01+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -360,7 +360,7 @@
           "url": "https://x.com/aleyda/status/2107112128356155792",
           "excerpt": "60% more YOY searches, 30% fewer organic search clicks? Welcome to the second SERP Squeeze Monday! 👇 Every Monday, I’m going through a commercial query SERP to see how the relationship of organic search rankings <> visibility <> clicks is shifting. This week’s query: “baggy jeans” in the US. According to @Similarweb August 2026 vs 2025: 📈 Search volume grew from 114.1K to 182.1K: +60% 📉 Organic clicks fell from 24.8K to 17.3K: -30% 📉 Paid clicks also fell, from 13K to 12.3K: -5% What changed in the SERP? @ahrefs ' August 26 YOY snapshots show: * Traditional organic search results decreased from 9 to 5 within the top 10 positions. * Shopping Packs increased from 1 to 3, appearing at…",
           "author": "@aleyda",
-          "published": "2026-10-05T06:14:14+00:00",
+          "published": "2026-10-05T14:14:14+00:00",
           "source_type": "expert_analysis"
         }
       ]
@@ -376,10 +376,10 @@
         "ranking"
       ],
       "start": "2026-09-24T16:15:00+00:00",
-      "end": "2026-10-08T08:00:00+00:00",
+      "end": null,
       "impact": "SERVICE_INFORMATION",
-      "ongoing": false,
-      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "ongoing": true,
+      "latest_update": "",
       "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
       "triggers_brief": true
     }
@@ -387,6 +387,6 @@
   "degraded": false,
   "degraded_reason": "",
   "quiet_day": false,
-  "curated_by": "Kiro (hand-curated, reviewed with user)",
+  "curated_by": "Kiro (hand-curated, no LLM)",
   "backfilled": true
 }
