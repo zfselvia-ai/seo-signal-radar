@@ -131,7 +131,12 @@ watchlist inputs (verify licensing before automating).
 
 ## Setup
 
-Runs entirely on your own machine. There is no CI, no hosting and no deploy step.
+It runs in two places. **GitHub Actions** runs `daily` every morning
+(`.github/workflows/digest.yml`, 01:00 UTC = 09:00 Asia/Shanghai, often started
+hours late by GitHub), commits the record, and publishes the dashboard to
+**public GitHub Pages**. `pages.yml` republishes it on every push to `main` that
+touches the archive, code or config, so hand-curated records go live within
+minutes. You can also run everything **locally** (below), e.g. to curate by hand.
 
 ```bash
 pip install -r requirements.txt
@@ -215,8 +220,9 @@ written this way carry `curated_by` and, if back-dated, `backfilled: true`, so a
 hand-filled gap is distinguishable from a day the pipeline actually ran. When a
 valid key is back, set `provider` to `auto` and the LLM path resumes unchanged.
 
-Nothing is scheduled for you. Run `daily` when you want it, or wire it to `cron`
-/ `launchd` yourself:
+CI already runs `daily` once a day. A local schedule would produce a second run
+of the same day, which thins that day's record (items the first run already
+marked seen are gone), so only add one if CI is off:
 
 ```cron
 0 9 * * *  cd /path/to/SEO看板 && /usr/bin/python3 main.py daily >> radar.log 2>&1
@@ -267,12 +273,15 @@ committing it stored a fresh multi-MB blob daily and made `.git` grow *quadratic
 (~136 MB after a year, ~1.2 GB after three). Regenerate it any time with
 `python main.py dashboard`.
 
-Because it's a local file there is no login to worry about, and no public URL to
-protect. (An earlier version published to GitHub Pages behind an in-page password
-prompt. That was security theatre: a static site has no server to check a
-password, so the check ran in JavaScript and the page shipped its own hash for
-anyone to read with View Source. Keeping the file local removes the problem
-rather than papering over it.)
+**The dashboard is public**, deliberately: CI builds it and publishes it to
+<https://zfselvia-ai.github.io/seo-signal-radar/>, and the repository is public
+too. There is no login: anyone with the URL can read every archived record, so
+never put private data, client names or site metrics in the archive or in
+`config.yaml`. (An earlier version hid it behind an in-page password prompt.
+That was security theatre: a static site has no server to check a password, so
+the check ran in JavaScript and the page shipped its own hash for anyone to read
+with View Source. If the dashboard ever needs to be private, it needs real access
+control in front of it, not a prompt.)
 
 **Storage, measured:** the archive is ~12 KB/day — about **4.5 MB/year**, 22 MB after
 five years. No database or cloud hosting is needed. The only real ceiling is page
