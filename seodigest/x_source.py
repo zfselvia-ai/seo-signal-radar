@@ -104,6 +104,7 @@ def _parse_handle_rss(parsed, handle, group, meta=None) -> List[Item]:
             id=tweet_id,
             source="x",
             source_name=handle,
+            person=handle.lower(),
             group=group,
             author=f"@{handle}",
             text=text,

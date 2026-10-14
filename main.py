@@ -113,7 +113,11 @@ def run_daily(cfg, dry_run=False):
 
     all_items = gs_items + manual_items + x_items + rss_items
     fresh = store.filter_unseen(all_items)
-    print(f"[*] {len(fresh)} fresh after dedup")
+    # Same post on X and Bluesky (people followed on both) -> keep one.
+    mirrored = store.mirrored_people(cfg)
+    fresh, crossposts = store.collapse_crossposts(fresh, mirrored)
+    note = f" ({len(crossposts)} X/Bluesky cross-post(s) collapsed)" if crossposts else ""
+    print(f"[*] {len(fresh)} fresh after dedup{note}")
 
     # SERP snapshot (manual readings if present; framework no-ops cleanly if empty)
     serp_snapshot = None
@@ -163,7 +167,7 @@ def run_daily(cfg, dry_run=False):
     paths = render.write_report(cfg, "daily", date_str, md, html)
     store.archive_daily(cfg, date_str, digest, serp_snapshot)
     store.archive_run_meta(cfg, date_str, run_meta)
-    store.commit_seen(fresh)
+    store.commit_seen(fresh + crossposts, mirrored)
     for fmt, p in paths.items():
         print(f"[*] wrote daily {fmt}: {p}")
 

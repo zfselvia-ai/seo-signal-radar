@@ -117,6 +117,9 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         source_kind = "bluesky" if is_bluesky else "rss"
         author = feed.get("author") or name
         tags = list(feed.get("tags") or [category])
+        # A Bluesky mirror of an X account names that handle, so the same
+        # person is one person to dedup and the per-person cap.
+        person = str(feed.get("same_as") or "").strip().lstrip("@").lower()
         try:
             # Fetch ourselves rather than letting feedparser do it — see
             # FETCH_HEADERS for why the User-Agent is load-bearing.
@@ -170,6 +173,7 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                         tags=tags,
                         commercial_interest=bool(feed.get("commercial_interest", False)),
                         weight=weight,
+                        person=person,
                     )
                 )
         except Exception as e:

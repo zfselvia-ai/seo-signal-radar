@@ -849,12 +849,15 @@ def rank_raw_items(items: List[Item], limit: int, similarity: float = 0.65) -> L
     for _, _, _, it in scored:
         if len(pick) >= limit:
             break
-        if per_source.get(it.source_name, 0) >= 2:
+        # Cap per PERSON where known, so someone followed on both X and
+        # Bluesky still gets at most two slots, not four.
+        key = it.person or it.source_name
+        if per_source.get(key, 0) >= 2:
             continue
         if any(_similar(it.text[:200], p.text[:200]) >= similarity for p in pick):
             continue  # same story from another source
         pick.append(it)
-        per_source[it.source_name] = per_source.get(it.source_name, 0) + 1
+        per_source[key] = per_source.get(key, 0) + 1
     return pick
 
 

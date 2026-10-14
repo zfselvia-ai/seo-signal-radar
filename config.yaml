@@ -197,7 +197,9 @@ x:
   # instances are actually alive right now.)
   # Verified alive with RSS on 2026-10-09 via `doctor` + status.d420.de.
   # nitter.net / nitter.privacyredirect.com were dead (ConnectError / 404) and
-  # were the reason X coverage was zero.
+  # were the reason X coverage was zero. Public instances stay flaky, so the
+  # four highest-volume accounts are also followed on Bluesky (rss.feeds,
+  # `same_as`) and keep arriving when every instance is down.
   nitter_instances:
     - nitter.kareem.one
     - nitter.meowing.monster
@@ -365,6 +367,24 @@ rss:
     - {name: "Mark Williams-Cook (Bluesky)", url: "https://bsky.app/profile/withcandour.co.uk/rss",  # [2026-10-12]
        category: expert_analysis, weight: 0.7, author: "@withcandour.co.uk",
        tags: [technical_seo, algorithm, experiments]}
+
+    # ---- Bluesky mirrors of X accounts: the fallback when Nitter is down ---
+    # Same people as in x.accounts, same trust and tags. `same_as` names the X
+    # handle so one post made on both platforms is kept once
+    # (store.collapse_crossposts) and the per-person cap counts them as one.
+    # Chosen over the official X API ($0.005 per post read) on 2026-10-13.
+    - {name: "Glenn Gabe (Bluesky)", url: "https://bsky.app/profile/glenngabe.bsky.social/rss",
+       category: data_research, weight: 0.85, author: "@glenngabe.bsky.social", same_as: glenngabe,
+       tags: [algorithm, volatility, content_quality]}
+    - {name: "Aleyda Solis (Bluesky)", url: "https://bsky.app/profile/aleyda.bsky.social/rss",
+       category: expert_analysis, weight: 0.7, author: "@aleyda.bsky.social", same_as: aleyda,
+       tags: [ai_search, geo, international]}
+    - {name: "Lily Ray (Bluesky)", url: "https://bsky.app/profile/lilyray.nyc/rss",
+       category: expert_analysis, weight: 0.7, author: "@lilyray.nyc", same_as: lilyraynyc,
+       tags: [algorithm, content_quality, ai_search, publishers]}
+    - {name: "Barry Schwartz (Bluesky)", url: "https://bsky.app/profile/rustybrick.com/rss",
+       category: trade_news, weight: 0.55, author: "@rustybrick.com", same_as: rustybrick,
+       tags: [algorithm, serp_features, news]}
 
     # ---- Long-form outlets of practitioners who mostly post on LinkedIn ----
     # LinkedIn has no public feed and forbids scraping; their analysis is

@@ -32,7 +32,7 @@ def main() -> int:
     args = ap.parse_args()
 
     import yaml
-    from seodigest import x_source, rss_source, google_status, manual_source
+    from seodigest import x_source, rss_source, google_status, manual_source, store
     with open(args.config, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
 
@@ -56,6 +56,12 @@ def main() -> int:
     print(f"    Manual inbox: {len(manual_items)} capture(s)")
 
     items = gs_items + manual_items + x_items + rss_items
+    # Same post on X and Bluesky -> list it once. No history: a dump ignores
+    # seen state by design (it is used for back-dated curation).
+    items, xdup = store.collapse_crossposts(items, store.mirrored_people(cfg),
+                                            use_history=False)
+    if xdup:
+        print(f"    collapsed {len(xdup)} X/Bluesky cross-post(s)")
     # Newest first within each source, so the reader sees recent posts before
     # the evergreen tail.
     items.sort(key=lambda it: (it.source_name, -(it.published.timestamp() if it.published else 0)))

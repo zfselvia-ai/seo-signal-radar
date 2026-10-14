@@ -14,7 +14,7 @@ from typing import Optional, List
 class Item:
     """One raw piece of content from a source, pre-curation."""
     id: str
-    source: str            # "x" | "rss" | "google_status"
+    source: str            # "x" | "rss" | "bluesky" | "google_status" | "manual"
     source_name: str       # handle, list label, feed name, or "google_status"
     group: str             # X list key, feed name, or product family
     author: str
@@ -27,6 +27,10 @@ class Item:
     tags: List[str] = field(default_factory=list)  # topic tags, not sections
     commercial_interest: bool = False              # sells a tool/consultancy
     weight: float = 0.0                            # resolved trust weight 0-1
+    # Who posted it, across platforms: the X handle (lowercased) for X items
+    # and for Bluesky feeds that declare `same_as: <handle>`; empty otherwise.
+    # Lets one person followed on two channels be deduped and capped as one.
+    person: str = ""
 
     def to_dict(self) -> dict:
         d = asdict(self)
