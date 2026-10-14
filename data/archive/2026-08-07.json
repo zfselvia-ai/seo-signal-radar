@@ -1,0 +1,321 @@
+{
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T03:50:18.902924+00:00",
+  "headline": "No high-signal developments today; one actionable GEO content framework worth testing",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "WordPress 7.0.3 patches high-severity XSS vulnerability | WordPress 7.0.3修复高危XSS漏洞",
+        "why_it_matters": "XSS漏洞可被利用注入恶意脚本，影响搜索可见性与用户信任；未及时修补可能导致排名下降或安全警告。",
+        "evidence": "Official WordPress security release covered by Search Engine Journal",
+        "evidence_detail": "Search Engine Journal reported on WordPress security release 7.0.3, which fixes a high-severity XSS vulnerability. The article references Martinibuster as a source. No technical details of the exploit mechanism or affected version scope were provided in the candidate text.",
+        "who_it_affects": "all",
+        "what_to_do": "检查WordPress版本，如<7.0.3立即更新",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 58,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/wordpress-security-release-7-0-3-fixes-high-severity-xss-vulnerability/584927/",
+            "excerpt": "WordPress Security Release 7.0.3 Fixes High Severity XSS Vulnerability via @sejournal, @martinibuster. WordPress securit",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Aleyda Solís publishes Content Prioritization Framework for AI Search era | Aleyda发布AI搜索时代内容优先级框架",
+        "why_it_matters": "AI搜索时代，并非所有内容都值得同等投入；需要系统性地将资源重新分配到agentic traffic仍依赖的页面类型上。",
+        "evidence": "Expert analysis with downloadable worksheet from established international SEO practitioner",
+        "evidence_detail": "Aleyda Solís, a widely-cited international SEO consultant, released a framework and worksheet for categorizing content types by their resilience in an AI search environment. The framework appears designed to help teams audit existing content and prioritize creation based on which formats are likely to continue driving value as AI Overviews and agentic search reduce traditional CTR. No controlled experiment or traffic data is included; the value lies in the operational structure for team decision-making.",
+        "who_it_affects": "publisher / SaaS / ecommerce",
+        "what_to_do": "下载工作表，在20-50个URL的样本上运行框架，对比agentic traffic前后的表现",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 62,
+        "how_to_test": "选取20-50个URL，按框架分为'高AI风险/低AI风险'两类，追踪90天内来自AI Overviews和直接搜索的impressions与CTR变化",
+        "success_metric": "低AI风险类别的impressions和CTR下降幅度显著小于高AI风险类别（>15%差距）",
+        "effort": "中等：需内容审计+标签+90天追踪；风险低，主要是时间成本",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2085369304011194789",
+            "excerpt": "Content Prioritization in an AI Search Era: A Framework + Worksheet 👇 What type of content is still worth creating when",
+            "author": "aleyda",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Unconfirmed Watchlist": [
+      {
+        "what_happened": "Glenn Gabe observes ChatGPT grounding quality declining, flags potential Meta web index | Glenn Gabe观察到ChatGPT grounding质量下滑，提及Meta可能构建网页索引",
+        "why_it_matters": "若ChatGPT grounding持续退化，GEO策略需调整；Meta入局搜索索引将改变AI搜索竞争格局与流量分配。",
+        "evidence": "Practitioner observation from data-focused SEO analyst with history of accurate algorithm tracking",
+        "evidence_detail": "Glenn Gabe, who regularly tracks search volatility and AI search developments, posted two observations: that ChatGPT's grounding (ability to accurately cite and use web content) is becoming 'sketchy,' and separately that Meta may be building a web index. Neither claim includes methodology, sample size, or official confirmation. The grounding observation aligns with broader practitioner chatter but lacks quantitative backing.",
+        "who_it_affects": "publisher / SaaS / all",
+        "what_to_do": "监控ChatGPT引用自己品牌的准确性；关注Meta搜索相关专利或招聘",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Unconfirmed Watchlist",
+        "score": 42,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2085486976048750922",
+            "excerpt": "Is another web index on its way? Possibly... and this time it's from Meta. ChatGPT grounding is already getting sketchy.",
+            "author": "glenngabe",
+            "source_type": "data_research"
+          },
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2085486460518486372",
+            "excerpt": "Ladies and Gentlemen, the big OpenAI device will be ... a smart speaker. Oof -> OpenAI's new device, slated for 2027, is",
+            "author": "glenngabe",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "WordPress站点检查并更新至7.0.3",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "下载Aleyda内容优先级框架，在样本URL上启动90天测试",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Aleyda Solís publishes Content Prioritization Framework for AI Search era | Aleyda发布AI搜索时代内容优先级框架",
+      "why_it_matters": "AI搜索时代，并非所有内容都值得同等投入；需要系统性地将资源重新分配到agentic traffic仍依赖的页面类型上。",
+      "evidence": "Expert analysis with downloadable worksheet from established international SEO practitioner",
+      "evidence_detail": "Aleyda Solís, a widely-cited international SEO consultant, released a framework and worksheet for categorizing content types by their resilience in an AI search environment. The framework appears designed to help teams audit existing content and prioritize creation based on which formats are likely to continue driving value as AI Overviews and agentic search reduce traditional CTR. No controlled experiment or traffic data is included; the value lies in the operational structure for team decision-making.",
+      "who_it_affects": "publisher / SaaS / ecommerce",
+      "what_to_do": "下载工作表，在20-50个URL的样本上运行框架，对比agentic traffic前后的表现",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 62,
+      "how_to_test": "选取20-50个URL，按框架分为'高AI风险/低AI风险'两类，追踪90天内来自AI Overviews和直接搜索的impressions与CTR变化",
+      "success_metric": "低AI风险类别的impressions和CTR下降幅度显著小于高AI风险类别（>15%差距）",
+      "effort": "中等：需内容审计+标签+90天追踪；风险低，主要是时间成本",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2085369304011194789",
+          "excerpt": "Content Prioritization in an AI Search Era: A Framework + Worksheet 👇 What type of content is still worth creating when",
+          "author": "aleyda",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "WordPress 7.0.3 patches high-severity XSS vulnerability | WordPress 7.0.3修复高危XSS漏洞",
+      "why_it_matters": "XSS漏洞可被利用注入恶意脚本，影响搜索可见性与用户信任；未及时修补可能导致排名下降或安全警告。",
+      "evidence": "Official WordPress security release covered by Search Engine Journal",
+      "evidence_detail": "Search Engine Journal reported on WordPress security release 7.0.3, which fixes a high-severity XSS vulnerability. The article references Martinibuster as a source. No technical details of the exploit mechanism or affected version scope were provided in the candidate text.",
+      "who_it_affects": "all",
+      "what_to_do": "检查WordPress版本，如<7.0.3立即更新",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 58,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/wordpress-security-release-7-0-3-fixes-high-severity-xss-vulnerability/584927/",
+          "excerpt": "WordPress Security Release 7.0.3 Fixes High Severity XSS Vulnerability via @sejournal, @martinibuster. WordPress securit",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Glenn Gabe observes ChatGPT grounding quality declining, flags potential Meta web index | Glenn Gabe观察到ChatGPT grounding质量下滑，提及Meta可能构建网页索引",
+      "why_it_matters": "若ChatGPT grounding持续退化，GEO策略需调整；Meta入局搜索索引将改变AI搜索竞争格局与流量分配。",
+      "evidence": "Practitioner observation from data-focused SEO analyst with history of accurate algorithm tracking",
+      "evidence_detail": "Glenn Gabe, who regularly tracks search volatility and AI search developments, posted two observations: that ChatGPT's grounding (ability to accurately cite and use web content) is becoming 'sketchy,' and separately that Meta may be building a web index. Neither claim includes methodology, sample size, or official confirmation. The grounding observation aligns with broader practitioner chatter but lacks quantitative backing.",
+      "who_it_affects": "publisher / SaaS / all",
+      "what_to_do": "监控ChatGPT引用自己品牌的准确性；关注Meta搜索相关专利或招聘",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Unconfirmed Watchlist",
+      "score": 42,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2085486976048750922",
+          "excerpt": "Is another web index on its way? Possibly... and this time it's from Meta. ChatGPT grounding is already getting sketchy.",
+          "author": "glenngabe",
+          "source_type": "data_research"
+        },
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2085486460518486372",
+          "excerpt": "Ladies and Gentlemen, the big OpenAI device will be ... a smart speaker. Oof -> OpenAI's new device, slated for 2027, is",
+          "author": "glenngabe",
+          "source_type": "data_research"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-08-07T03:49:30.146030+00:00",
+    "sources": {
+      "x": {
+        "ok": 27,
+        "total": 29,
+        "failed_names": [
+          "searchliaison",
+          "JohnMu"
+        ],
+        "items": 63
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 6
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 69,
+    "candidates_fresh": 62,
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "WordPress站点检查并更新至7.0.3",
+      "impact": "P1"
+    },
+    {
+      "text": "下载Aleyda内容优先级框架，在样本URL上启动90天测试",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
+}

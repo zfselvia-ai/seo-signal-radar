@@ -694,30 +694,30 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     # Still flagged degraded/uncurated — nobody judged these, and the labels
     # must not imply otherwise.
     if llm_disabled(cfg):
-        daily = cfg.get("daily", {})
-        limit = daily.get("max_signals", 10)
-        pick = rank_raw_items(items, limit, daily.get("dedupe_similarity", 0.65))
-        print(f"[*] LLM disabled — publishing top {len(pick)} of {len(items)} "
-              f"raw items by rule-based ranking (uncurated).")
-        data = _fallback_digest(
-            pick, "LLM disabled (llm.provider: none) — raw source items ranked "
-                  "by source trust + SEO keywords, not assessed", limit=limit,
-            section_fn=_raw_section)
-        data["dropped_count"] = max(0, len(items) - len(data["signals"]))
-        return data
+        print(f"[*] LLM disabled — publishing raw items by rule-based ranking (uncurated).")
+        return _raw_digest(cfg, items, "LLM disabled (llm.provider: none) — raw source "
+                                       "items ranked by source trust + SEO keywords, not assessed")
     # Pick a diverse subset so one noisy handle can't crowd out every other
     # source — the LLM curation rubric needs cross-source signal to work.
     candidates = _select_candidates(cfg, items)
     system, user = build_prompt(cfg, candidates)
-    raw = _extract_json(call_llm(cfg, system, user))
+    try:
+        raw = _extract_json(call_llm(cfg, system, user))
+    except Exception as e:
+        # An expired key or exhausted quota RAISES; without this the whole run
+        # died and nothing was archived for the day (remote fix 924eae0).
+        print(f"[!] LLM call failed ({type(e).__name__}: {e}); falling back to raw items.")
+        data = _raw_digest(cfg, items, f"LLM call failed ({type(e).__name__})")
+        data["llm_error"] = str(e)[:500]
+        return data
     if not raw:
         print("[!] LLM returned empty response; falling back to raw items.")
-        return _fallback_digest(items, "LLM returned an empty response")
+        return _raw_digest(cfg, items, "LLM returned an empty response")
     try:
         data = json.loads(raw)
     except json.JSONDecodeError as e:
         print(f"[!] LLM JSON parse failed: {e}; falling back to raw items.")
-        return _fallback_digest(items, f"LLM output was not valid JSON: {e}")
+        return _raw_digest(cfg, items, f"LLM output was not valid JSON: {e}")
 
     return finalize_digest(cfg, data, candidates, items)
 
@@ -768,8 +768,8 @@ def finalize_digest(cfg: dict, data: dict, candidates: List[Item],
     if not data.get("signals") and not emptied_by_dedup:
         print(f"[!] LLM kept 0 signals (dropped {data.get('dropped_count', '?')}); "
               f"falling back to raw items.")
-        return _fallback_digest(
-            items, "curation rejected every candidate — showing the raw feed")
+        return _raw_digest(
+            cfg, items, "curation rejected every candidate — showing the raw feed")
     if emptied_by_dedup:
         print("[*] every signal today was already reported in the last "
               "few days — publishing a quiet day rather than repeating them.")
@@ -859,6 +859,18 @@ def rank_raw_items(items: List[Item], limit: int, similarity: float = 0.65) -> L
         pick.append(it)
         per_source[key] = per_source.get(key, 0) + 1
     return pick
+
+
+def _raw_digest(cfg: dict, items: List[Item], reason: str) -> dict:
+    """Every no-curation path (LLM off, failed, empty, unparseable): top items by
+    the rule-based ranker, flagged uncurated, with NO action items — nobody
+    decided what to do about them, so nothing may say "worth testing"."""
+    daily = cfg.get("daily", {})
+    limit = daily.get("max_signals", 10)
+    pick = rank_raw_items(items, limit, daily.get("dedupe_similarity", 0.65))
+    data = _fallback_digest(pick, reason, limit=limit, section_fn=_raw_section)
+    data["dropped_count"] = max(0, len(items) - len(data["signals"]))
+    return data
 
 
 def _raw_section(it: Item) -> str:

@@ -1,0 +1,583 @@
+{
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T02:55:29.640199+00:00",
+  "headline": "Cloudflare launches free AEO visibility reporting; ChatGPT rolls out multi-product shopping ads",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "Google Merchant Center faces ongoing product status incident | Google Merchant Center 发生持续性商品状态故障",
+        "why_it_matters": "Google Merchant Center故障会直接影响电商网站的商品收录和广告展示，导致流量和收入骤降。",
+        "evidence": "official_api",
+        "evidence_detail": "Google Merchant Center status dashboard confirmed an ongoing incident affecting product listings and status updates. Users may experience delays or errors in product data processing.",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "monitor Merchant Center status",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "Confirmed Search Updates",
+        "score": 95,
+        "sources": [
+          {
+            "name": "rustybrick",
+            "url": "https://x.com/rustybrick/status/2085766806346625134",
+            "excerpt": "Google Merchant Center issue ongoing https://merchants.google.com/status/incidents/cFVHBrBkwbAxFzEHjHwq. Google Merchant Center issue ongoing merchants.google.com/status/…",
+            "author": "@rustybrick",
+            "published": "2026-08-07T16:35:32+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "ChatGPT launches multi-product carousel ads for eCommerce | ChatGPT 推出针对电商的多商品轮播广告",
+        "why_it_matters": "ChatGPT Shopping开始商业化，展示极其显眼。电商品牌需要优化其产品Feed，以抢占AI搜索中的付费曝光位置。",
+        "evidence": "practitioner_observation",
+        "evidence_detail": "SEO experts observed a new prominent 5-product carousel ad unit for single brands live in ChatGPT Shopping results, featuring dynamic URL parameters.",
+        "who_it_affects": "ecommerce",
+        "what_to_do": "test product feed ads in ChatGPT",
+        "confidence": "Confirmed",
+        "impact": "P1",
+        "section": "SERP & Algorithm Signals",
+        "score": 88,
+        "sources": [
+          {
+            "name": "brodieseo",
+            "url": "https://x.com/brodieseo/status/2085608156382613525",
+            "excerpt": "Whoa, this is big news for advertising in ChatGPT for eCommerce stores. The new product feed ads carousel unit is now live! Recently, I've been ramping up discussions and tests with clients within ChatGPT, and this new release will only further accelerate interest. The ads unit is super prominent in ChatGPT Shopping results, where 5 individual products show within the carousel for a single brand (different to how Google Shopping operates). The interest point for my clients has really been on making a bet that ChatGPT will transition to focusing on using their own submitted product feeds for organic Shopping, which will likely be the inevitable outcome. You can see multiple other examples of…",
+            "author": "@brodieseo",
+            "published": "2026-08-07T06:05:07+00:00",
+            "source_type": "expert_analysis"
+          },
+          {
+            "name": "rustybrick",
+            "url": "https://x.com/rustybrick/status/2085795987176759593",
+            "excerpt": "ICYMI: ChatGPT Ads update with new multi-product carousel format, dynamic URL parameters, expansion and much more https://www.seroundtable.com/openai-chatgpt-ads-updates-41828.html. ICYMI: ChatGPT Ads update with new multi-product carousel format, dynamic URL parameters, expansion and much more seroundtable.com/openai-chat…",
+            "author": "@rustybrick",
+            "published": "2026-08-07T18:31:30+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "Google tests 'goto' affiliate-style tracking links in SERPs | Google 在搜索结果中测试 'goto' 联盟式追踪链接",
+        "why_it_matters": "Google改变了传统的点击追踪机制，可能影响第三方分析工具对引流渠道的归因，需密切关注其对点击数据的影响。",
+        "evidence": "practitioner_observation",
+        "evidence_detail": "Glenn Gabe and Barry Schwartz observed Google testing search clicks that route through a 'google.com/goto/' redirect before reaching the destination site, mimicking affiliate tracking structures.",
+        "who_it_affects": "all",
+        "what_to_do": "monitor referral traffic and click tracking",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 75,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2085711477680337266",
+            "excerpt": "Was in a test yesterday with Google's 'goto' links. Google is sending the first click to an affiliate-style redirect and then downstream to the site. @rustybrick covered this a few weeks ago. Would love to know what they are analyzing by tracking clicks this way... :) More info in Barry's post about this: https://www.seroundtable.com/google-com-goto-as-tracking-urls-41647.html. Was in a test yesterday with Google's 'goto' links. Google is sending the first click to an affiliate-style redirect and then downstream to the site. @rustybrick covered this a few weeks ago. Would love to know what they are analyzing by tracking clicks this way... :) More info in Barry's post about this:…",
+            "author": "@glenngabe",
+            "published": "2026-08-07T12:55:41+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      },
+      {
+        "what_happened": "Reddit CEO hints at tension over Google AI Overviews licensing | Reddit CEO 暗示对 Google AI Overviews 授权协议感到不满",
+        "why_it_matters": "Reddit若限制Google抓取，将对目前的SERP格局（Reddit占领大量长尾词）产生颠覆性影响，利好独立站和垂直出版商。",
+        "evidence": "trade_news",
+        "evidence_detail": "Reddit's CEO stated they are 'still looking for that win-win' regarding Google's AI Overviews, hinting that Reddit may consider ending its data licensing deal if value exchange isn't balanced.",
+        "who_it_affects": "publisher / SaaS / ecommerce / UGC",
+        "what_to_do": "monitor Reddit visibility in SERPs",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 80,
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2085779732965036413",
+            "excerpt": "When the Reddit CEO says it, that’s when you know it’s bad 👀 H/t @VorticonCmdr https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/. When the Reddit CEO says it, that’s when you know it’s bad 👀 H/t @VorticonCmdr arstechnica.com/ai/2026/08/r… Link Reddit CEO on AI Overviews: &quot;We&apos;re still looking for that win-win&quot; Reddit may still be considering ending its licensing deal with Google. arstechnica.com",
+            "author": "@lilyraynyc",
+            "published": "2026-08-07T17:26:54+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Google confirms crawlers send HEAD, OPTIONS, and other HTTP requests | Google 确认其爬虫会发送 HEAD 等多种 HTTP 请求",
+        "why_it_matters": "确保服务器和API端点能正确响应这些非GET请求，避免因配置错误（如返回500错误）导致Googlebot降低抓取频率。",
+        "evidence": "official_documentation",
+        "evidence_detail": "Google updated its documentation to clarify that Googlebot and other crawlers may send HTTP requests using methods like HEAD, OPTIONS, PUT, PATCH, and DELETE, rather than just GET and POST.",
+        "who_it_affects": "all",
+        "what_to_do": "check server logs and API configurations",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "Technical SEO Experiments",
+        "score": 85,
+        "sources": [
+          {
+            "name": "rustybrick",
+            "url": "https://x.com/rustybrick/status/2085788437693497561",
+            "excerpt": "ICYMI: Google's crawlers send HTTP requests also for HEAD, OPTIONS, PUT, PATCH, and DELETE https://www.seroundtable.com/google-crawlers-head-options-put-patch-delete-41833.html. ICYMI: Google's crawlers send HTTP requests also for HEAD, OPTIONS, PUT, PATCH, and DELETE seroundtable.com/google-craw…",
+            "author": "@rustybrick",
+            "published": "2026-08-07T18:01:30+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "Cloudflare shifts bot mitigation to continuous 'Trust' evaluation | Cloudflare 将机器人防御转向持续性“信任”评估",
+        "why_it_matters": "影响AI智能体（AI Agents）和网络爬虫的访问权限，技术SEO需要精细化调整防火墙规则，避免误杀合规爬虫。",
+        "evidence": "official_api",
+        "evidence_detail": "Cloudflare announced a shift from point-in-time bot risk scoring to continuous behavior-based trust evaluation using new systems called BotBase and Precursor to assess agentic internet behaviors.",
+        "who_it_affects": "all",
+        "what_to_do": "check Cloudflare bot management settings",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "Technical SEO Experiments",
+        "score": 82,
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2085713827388129329",
+            "excerpt": "Cloudflare is shifting bot mitigation from point-in-time Risk assessment to continuous Trust evaluation. Learn how new good and bad behaviors from bots and agents are assessed by our systems, including BotBase and Precursor. https://cfl.re/4q08LL0 #AgentsWeek. Cloudflare is shifting bot mitigation from point-in-time Risk assessment to continuous Trust evaluation. Learn how new good and bad behaviors from bots and agents are assessed by our systems, including BotBase and Precursor. cfl.re/4q08LL0 #AgentsWeek Link Unveiling good and bad behaviors on the Agentic Internet Cloudflare is shifting bot mitigation from point-in-time Risk assessment to continuous Trust evaluation. Learn how new good…",
+            "author": "@Cloudflare",
+            "published": "2026-08-07T13:05:01+00:00",
+            "source_type": "official_api"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Cloudflare launches free AI visibility and AEO reporting beta | Cloudflare 推出免费 AI 可见性与 AEO 报告公测",
+        "why_it_matters": "提供了首个免费的、系统化的AEO和AI可见性基准测试工具，改变了GEO效果无法量化的现状。",
+        "evidence": "official_person",
+        "evidence_detail": "Cloudflare announced 'Agent Readiness' and 'Answer Engine Optimization' (AEO) reporting. The tool queries AI assistants with industry-specific prompts to benchmark which sites are cited, alongside tracking real crawl and referral traffic from AI operators.",
+        "who_it_affects": "all",
+        "what_to_do": "test Cloudflare AEO beta",
+        "confidence": "Confirmed",
+        "impact": "P2",
+        "section": "AI Search / GEO",
+        "score": 90,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2085703866385928685",
+            "excerpt": "Whoa, Cloudflare is launching AI visibility reporting (for free I believe). For companies providing those services and tracking, this is a huge heads-up. You can sign up for the beta today ('Register interest'). See below: \"To evaluate how an AI model perceives your market presence, we build a benchmark across each industry and category before scoring a specific site. We query AI assistants with likely prompts in that category — without specifying your brand — and record which sites are cited, where they appear, and how prominently they feature.\" \"Alongside the answers, an AI Operator Activity shows the real crawl and referral traffic on your site, per operator (OpenAI, Google, and so on):…",
+            "author": "@glenngabe",
+            "published": "2026-08-07T12:25:26+00:00",
+            "source_type": "data_research"
+          },
+          {
+            "name": "screamingfrog",
+            "url": "https://x.com/screamingfrog/status/2085671659713773617",
+            "excerpt": "From ranking to recommended: get your site ready to thrive in the age of AI agents - https://blog.cloudflare.com/aeo/ from @Cloudflare. From ranking to recommended: get your site ready to thrive in the age of AI agents - blog.cloudflare.com/aeo/ from @Cloudflare Link From ranking to recommended: get your site ready to thrive in the age of AI agents More than half of requests now come from machines, not people. Agent Readiness shows how well agents can discover and read your site, while Answer Engine Optimization tracks how often AI assistants... blog.cloudflare.com",
+            "author": "@screamingfrog",
+            "published": "2026-08-07T10:17:28+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "The 'Cats.txt' experiment debunks llms.txt as 'GEO Astrology' | 'Cats.txt' 实验戳穿 llms.txt 的 GEO 伪科学面纱",
+        "why_it_matters": "揭示了当前GEO领域对 `llms.txt` 的盲目崇拜，证明爬虫抓取并不等于LLM在实时生成中使用了该数据。",
+        "evidence": "reproducible_experiment",
+        "evidence_detail": "Mark Williams-Cook's experiment showed that creating a 'cats.txt' file with the same structure as 'llms.txt' passed all the same validation arguments (being crawled, indexed, and cited via hallucination), proving that LLMs do not use these files for real-time retrieval as claimed.",
+        "who_it_affects": "all",
+        "what_to_do": "test LLM retrieval sources",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 92,
+        "how_to_test": "在网站根目录部署一个包含高度独特、虚构事实的自定义文本文件（如 `seo_test.txt`）。监控服务器日志中LLM爬虫的抓取情况。随后在ChatGPT/Claude中，使用包含该独特词汇的提示词进行提问，测试其在开启和关闭联网搜索（Web Search）时的回答，验证其是否真正读取并利用了该文件内容，而非仅仅将其作为普通网页索引或产生幻觉。",
+        "success_metric": "LLM在未联网搜索时，无法回答该虚构事实；仅在联网搜索并明确抓取该URL时才能正确回答，从而证实其并非通过特定txt协议直接读取。",
+        "effort": "低成本：编写一个txt文件并部署需10分钟，使用LLM测试需10分钟。无技术风险。",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2085825433552003424",
+            "excerpt": "👀 A must-read in case you're being asked about \"What are we not using llmx.txt yet?: How cats.txt showed llms.txt evidence is GEO astrology by @thetafferboy 👇 Going through the existing faulty thinking: #1 “It’s definitely used, the LLM bots crawl it!” #2 “It was indexed by Google, so it must matter!” #3 “ChatGPT returned information that was only in my llms.txt file” #4 “ChatGPT itself says llms.txt helps!” More: https://markwilliamscook.substack.com/p/how-catstxt-showed-llmstxt-evidence. 👀 A must-read in case you're being asked about \"What are we not using llmx.txt yet?: How cats.txt showed llms.txt evidence is GEO astrology by @thetafferboy 👇 Going through the existing faulty thinking:…",
+            "author": "@aleyda",
+            "published": "2026-08-07T20:28:30+00:00",
+            "source_type": "expert_analysis"
+          },
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2085871069055811926",
+            "excerpt": "This whole experiment is amazing. This whole experiment is amazing Aleyda Solis 🕊️ (@aleyda) 👀 A must-read in case you're being asked about \"What are we not using llmx.txt yet?: How cats.txt showed llms.txt evidence is GEO astrology by @thetafferboy 👇 Going through the existing faulty thinking: #1 “It’s definitely used, the LLM bots crawl it!” #2 “It was indexed by Google, so it must matter!” #3 “ChatGPT returned information that was only in my llms.txt file” #4 “ChatGPT itself says llms.txt helps!” More: markwilliamscook.substa",
+            "author": "@lilyraynyc",
+            "published": "2026-08-07T23:29:51+00:00",
+            "source_type": "expert_analysis"
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "检查 Google Merchant Center 后台，确认商品状态及 Feed 更新是否受到当前故障影响。",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "申请加入 Cloudflare AEO 报告公测，评估自身网站在主流 AI 搜索引擎中的可见性基准。",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "针对电商站点，测试 ChatGPT Shopping 的多商品轮播广告，优化产品 Feed 字段以适配新格式。",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "检查服务器配置，确保其能正确响应 Googlebot 发送的 HEAD、OPTIONS 等非 GET 请求，避免返回 5xx 错误。",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Google Merchant Center faces ongoing product status incident | Google Merchant Center 发生持续性商品状态故障",
+      "why_it_matters": "Google Merchant Center故障会直接影响电商网站的商品收录和广告展示，导致流量和收入骤降。",
+      "evidence": "official_api",
+      "evidence_detail": "Google Merchant Center status dashboard confirmed an ongoing incident affecting product listings and status updates. Users may experience delays or errors in product data processing.",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "monitor Merchant Center status",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "Confirmed Search Updates",
+      "score": 95,
+      "sources": [
+        {
+          "name": "rustybrick",
+          "url": "https://x.com/rustybrick/status/2085766806346625134",
+          "excerpt": "Google Merchant Center issue ongoing https://merchants.google.com/status/incidents/cFVHBrBkwbAxFzEHjHwq. Google Merchant Center issue ongoing merchants.google.com/status/…",
+          "author": "@rustybrick",
+          "published": "2026-08-07T16:35:32+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google confirms crawlers send HEAD, OPTIONS, and other HTTP requests | Google 确认其爬虫会发送 HEAD 等多种 HTTP 请求",
+      "why_it_matters": "确保服务器和API端点能正确响应这些非GET请求，避免因配置错误（如返回500错误）导致Googlebot降低抓取频率。",
+      "evidence": "official_documentation",
+      "evidence_detail": "Google updated its documentation to clarify that Googlebot and other crawlers may send HTTP requests using methods like HEAD, OPTIONS, PUT, PATCH, and DELETE, rather than just GET and POST.",
+      "who_it_affects": "all",
+      "what_to_do": "check server logs and API configurations",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 85,
+      "sources": [
+        {
+          "name": "rustybrick",
+          "url": "https://x.com/rustybrick/status/2085788437693497561",
+          "excerpt": "ICYMI: Google's crawlers send HTTP requests also for HEAD, OPTIONS, PUT, PATCH, and DELETE https://www.seroundtable.com/google-crawlers-head-options-put-patch-delete-41833.html. ICYMI: Google's crawlers send HTTP requests also for HEAD, OPTIONS, PUT, PATCH, and DELETE seroundtable.com/google-craw…",
+          "author": "@rustybrick",
+          "published": "2026-08-07T18:01:30+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "ChatGPT launches multi-product carousel ads for eCommerce | ChatGPT 推出针对电商的多商品轮播广告",
+      "why_it_matters": "ChatGPT Shopping开始商业化，展示极其显眼。电商品牌需要优化其产品Feed，以抢占AI搜索中的付费曝光位置。",
+      "evidence": "practitioner_observation",
+      "evidence_detail": "SEO experts observed a new prominent 5-product carousel ad unit for single brands live in ChatGPT Shopping results, featuring dynamic URL parameters.",
+      "who_it_affects": "ecommerce",
+      "what_to_do": "test product feed ads in ChatGPT",
+      "confidence": "Confirmed",
+      "impact": "P1",
+      "section": "SERP & Algorithm Signals",
+      "score": 88,
+      "sources": [
+        {
+          "name": "brodieseo",
+          "url": "https://x.com/brodieseo/status/2085608156382613525",
+          "excerpt": "Whoa, this is big news for advertising in ChatGPT for eCommerce stores. The new product feed ads carousel unit is now live! Recently, I've been ramping up discussions and tests with clients within ChatGPT, and this new release will only further accelerate interest. The ads unit is super prominent in ChatGPT Shopping results, where 5 individual products show within the carousel for a single brand (different to how Google Shopping operates). The interest point for my clients has really been on making a bet that ChatGPT will transition to focusing on using their own submitted product feeds for organic Shopping, which will likely be the inevitable outcome. You can see multiple other examples of…",
+          "author": "@brodieseo",
+          "published": "2026-08-07T06:05:07+00:00",
+          "source_type": "expert_analysis"
+        },
+        {
+          "name": "rustybrick",
+          "url": "https://x.com/rustybrick/status/2085795987176759593",
+          "excerpt": "ICYMI: ChatGPT Ads update with new multi-product carousel format, dynamic URL parameters, expansion and much more https://www.seroundtable.com/openai-chatgpt-ads-updates-41828.html. ICYMI: ChatGPT Ads update with new multi-product carousel format, dynamic URL parameters, expansion and much more seroundtable.com/openai-chat…",
+          "author": "@rustybrick",
+          "published": "2026-08-07T18:31:30+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Cloudflare launches free AI visibility and AEO reporting beta | Cloudflare 推出免费 AI 可见性与 AEO 报告公测",
+      "why_it_matters": "提供了首个免费的、系统化的AEO和AI可见性基准测试工具，改变了GEO效果无法量化的现状。",
+      "evidence": "official_person",
+      "evidence_detail": "Cloudflare announced 'Agent Readiness' and 'Answer Engine Optimization' (AEO) reporting. The tool queries AI assistants with industry-specific prompts to benchmark which sites are cited, alongside tracking real crawl and referral traffic from AI operators.",
+      "who_it_affects": "all",
+      "what_to_do": "test Cloudflare AEO beta",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "AI Search / GEO",
+      "score": 90,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2085703866385928685",
+          "excerpt": "Whoa, Cloudflare is launching AI visibility reporting (for free I believe). For companies providing those services and tracking, this is a huge heads-up. You can sign up for the beta today ('Register interest'). See below: \"To evaluate how an AI model perceives your market presence, we build a benchmark across each industry and category before scoring a specific site. We query AI assistants with likely prompts in that category — without specifying your brand — and record which sites are cited, where they appear, and how prominently they feature.\" \"Alongside the answers, an AI Operator Activity shows the real crawl and referral traffic on your site, per operator (OpenAI, Google, and so on):…",
+          "author": "@glenngabe",
+          "published": "2026-08-07T12:25:26+00:00",
+          "source_type": "data_research"
+        },
+        {
+          "name": "screamingfrog",
+          "url": "https://x.com/screamingfrog/status/2085671659713773617",
+          "excerpt": "From ranking to recommended: get your site ready to thrive in the age of AI agents - https://blog.cloudflare.com/aeo/ from @Cloudflare. From ranking to recommended: get your site ready to thrive in the age of AI agents - blog.cloudflare.com/aeo/ from @Cloudflare Link From ranking to recommended: get your site ready to thrive in the age of AI agents More than half of requests now come from machines, not people. Agent Readiness shows how well agents can discover and read your site, while Answer Engine Optimization tracks how often AI assistants... blog.cloudflare.com",
+          "author": "@screamingfrog",
+          "published": "2026-08-07T10:17:28+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ]
+    },
+    {
+      "what_happened": "Google tests 'goto' affiliate-style tracking links in SERPs | Google 在搜索结果中测试 'goto' 联盟式追踪链接",
+      "why_it_matters": "Google改变了传统的点击追踪机制，可能影响第三方分析工具对引流渠道的归因，需密切关注其对点击数据的影响。",
+      "evidence": "practitioner_observation",
+      "evidence_detail": "Glenn Gabe and Barry Schwartz observed Google testing search clicks that route through a 'google.com/goto/' redirect before reaching the destination site, mimicking affiliate tracking structures.",
+      "who_it_affects": "all",
+      "what_to_do": "monitor referral traffic and click tracking",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 75,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2085711477680337266",
+          "excerpt": "Was in a test yesterday with Google's 'goto' links. Google is sending the first click to an affiliate-style redirect and then downstream to the site. @rustybrick covered this a few weeks ago. Would love to know what they are analyzing by tracking clicks this way... :) More info in Barry's post about this: https://www.seroundtable.com/google-com-goto-as-tracking-urls-41647.html. Was in a test yesterday with Google's 'goto' links. Google is sending the first click to an affiliate-style redirect and then downstream to the site. @rustybrick covered this a few weeks ago. Would love to know what they are analyzing by tracking clicks this way... :) More info in Barry's post about this:…",
+          "author": "@glenngabe",
+          "published": "2026-08-07T12:55:41+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Reddit CEO hints at tension over Google AI Overviews licensing | Reddit CEO 暗示对 Google AI Overviews 授权协议感到不满",
+      "why_it_matters": "Reddit若限制Google抓取，将对目前的SERP格局（Reddit占领大量长尾词）产生颠覆性影响，利好独立站和垂直出版商。",
+      "evidence": "trade_news",
+      "evidence_detail": "Reddit's CEO stated they are 'still looking for that win-win' regarding Google's AI Overviews, hinting that Reddit may consider ending its data licensing deal if value exchange isn't balanced.",
+      "who_it_affects": "publisher / SaaS / ecommerce / UGC",
+      "what_to_do": "monitor Reddit visibility in SERPs",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 80,
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2085779732965036413",
+          "excerpt": "When the Reddit CEO says it, that’s when you know it’s bad 👀 H/t @VorticonCmdr https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/. When the Reddit CEO says it, that’s when you know it’s bad 👀 H/t @VorticonCmdr arstechnica.com/ai/2026/08/r… Link Reddit CEO on AI Overviews: &quot;We&apos;re still looking for that win-win&quot; Reddit may still be considering ending its licensing deal with Google. arstechnica.com",
+          "author": "@lilyraynyc",
+          "published": "2026-08-07T17:26:54+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    },
+    {
+      "what_happened": "Cloudflare shifts bot mitigation to continuous 'Trust' evaluation | Cloudflare 将机器人防御转向持续性“信任”评估",
+      "why_it_matters": "影响AI智能体（AI Agents）和网络爬虫的访问权限，技术SEO需要精细化调整防火墙规则，避免误杀合规爬虫。",
+      "evidence": "official_api",
+      "evidence_detail": "Cloudflare announced a shift from point-in-time bot risk scoring to continuous behavior-based trust evaluation using new systems called BotBase and Precursor to assess agentic internet behaviors.",
+      "who_it_affects": "all",
+      "what_to_do": "check Cloudflare bot management settings",
+      "confidence": "Confirmed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 82,
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2085713827388129329",
+          "excerpt": "Cloudflare is shifting bot mitigation from point-in-time Risk assessment to continuous Trust evaluation. Learn how new good and bad behaviors from bots and agents are assessed by our systems, including BotBase and Precursor. https://cfl.re/4q08LL0 #AgentsWeek. Cloudflare is shifting bot mitigation from point-in-time Risk assessment to continuous Trust evaluation. Learn how new good and bad behaviors from bots and agents are assessed by our systems, including BotBase and Precursor. cfl.re/4q08LL0 #AgentsWeek Link Unveiling good and bad behaviors on the Agentic Internet Cloudflare is shifting bot mitigation from point-in-time Risk assessment to continuous Trust evaluation. Learn how new good…",
+          "author": "@Cloudflare",
+          "published": "2026-08-07T13:05:01+00:00",
+          "source_type": "official_api"
+        }
+      ]
+    },
+    {
+      "what_happened": "The 'Cats.txt' experiment debunks llms.txt as 'GEO Astrology' | 'Cats.txt' 实验戳穿 llms.txt 的 GEO 伪科学面纱",
+      "why_it_matters": "揭示了当前GEO领域对 `llms.txt` 的盲目崇拜，证明爬虫抓取并不等于LLM在实时生成中使用了该数据。",
+      "evidence": "reproducible_experiment",
+      "evidence_detail": "Mark Williams-Cook's experiment showed that creating a 'cats.txt' file with the same structure as 'llms.txt' passed all the same validation arguments (being crawled, indexed, and cited via hallucination), proving that LLMs do not use these files for real-time retrieval as claimed.",
+      "who_it_affects": "all",
+      "what_to_do": "test LLM retrieval sources",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 92,
+      "how_to_test": "在网站根目录部署一个包含高度独特、虚构事实的自定义文本文件（如 `seo_test.txt`）。监控服务器日志中LLM爬虫的抓取情况。随后在ChatGPT/Claude中，使用包含该独特词汇的提示词进行提问，测试其在开启和关闭联网搜索（Web Search）时的回答，验证其是否真正读取并利用了该文件内容，而非仅仅将其作为普通网页索引或产生幻觉。",
+      "success_metric": "LLM在未联网搜索时，无法回答该虚构事实；仅在联网搜索并明确抓取该URL时才能正确回答，从而证实其并非通过特定txt协议直接读取。",
+      "effort": "低成本：编写一个txt文件并部署需10分钟，使用LLM测试需10分钟。无技术风险。",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2085825433552003424",
+          "excerpt": "👀 A must-read in case you're being asked about \"What are we not using llmx.txt yet?: How cats.txt showed llms.txt evidence is GEO astrology by @thetafferboy 👇 Going through the existing faulty thinking: #1 “It’s definitely used, the LLM bots crawl it!” #2 “It was indexed by Google, so it must matter!” #3 “ChatGPT returned information that was only in my llms.txt file” #4 “ChatGPT itself says llms.txt helps!” More: https://markwilliamscook.substack.com/p/how-catstxt-showed-llmstxt-evidence. 👀 A must-read in case you're being asked about \"What are we not using llmx.txt yet?: How cats.txt showed llms.txt evidence is GEO astrology by @thetafferboy 👇 Going through the existing faulty thinking:…",
+          "author": "@aleyda",
+          "published": "2026-08-07T20:28:30+00:00",
+          "source_type": "expert_analysis"
+        },
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2085871069055811926",
+          "excerpt": "This whole experiment is amazing. This whole experiment is amazing Aleyda Solis 🕊️ (@aleyda) 👀 A must-read in case you're being asked about \"What are we not using llmx.txt yet?: How cats.txt showed llms.txt evidence is GEO astrology by @thetafferboy 👇 Going through the existing faulty thinking: #1 “It’s definitely used, the LLM bots crawl it!” #2 “It was indexed by Google, so it must matter!” #3 “ChatGPT returned information that was only in my llms.txt file” #4 “ChatGPT itself says llms.txt helps!” More: markwilliamscook.substa",
+          "author": "@lilyraynyc",
+          "published": "2026-08-07T23:29:51+00:00",
+          "source_type": "expert_analysis"
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-08-08T02:54:35.404701+00:00",
+    "sources": {
+      "x": {
+        "ok": 28,
+        "total": 29,
+        "failed_names": [
+          "JohnMu"
+        ],
+        "items": 68
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 5
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 73,
+    "candidates_fresh": 56,
+    "llm_provider": ""
+  }
+}

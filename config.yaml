@@ -205,6 +205,14 @@ x:
     - nitter.meowing.monster
     - shitter.thepixora.com
     - nitter.pp.ua
+    # From the CI branch (2026-08/09); 2026-10-14 it served @glenngabe and
+    # @rustybrick (it 429s/404s some handles). Its two siblings there,
+    # tw.eir-nya.gay and nitter.jaydenha.uk, return 200 with 0 entries: dropped.
+    - x.n0g.xyz
+  # Pacing + one retry keep a 21-handle run under an instance's rate limit.
+  # The retry fires only on 429 / timeouts (see x_source.fetch).
+  request_delay_seconds: 1.5
+  retry_pause_seconds: 20
 
   # ONE ACCOUNT, MANY TAGS.
   # Previously handles were nested under lists, so lilyraynyc / VeryWellVersed /
@@ -546,8 +554,12 @@ llm:
   # 2026-10-09: switched to none — the API keys in .env had expired and the
   # SCNet call hung instead of failing.
   provider: "none"
-  # SCNet (超算互联网) — SCNet-Max (fast, non-reasoning) via OpenAI-compatible API
-  scnet_model: "SCNet-Max"
+  # SCNet (超算互联网) — Kimi-K2.6 via OpenAI-compatible API (used only when a key
+  # is back and provider is not "none"). Do NOT switch back to SCNet-Max: it
+  # silently became a reasoning model that spends the whole max_output_tokens
+  # budget thinking and returns empty content (finish=length), so every digest
+  # fell back to raw items. Kimi-K2.6 returns complete JSON directly.
+  scnet_model: "Kimi-K2.6"
   scnet_base_url: "https://api.scnet.cn/api/llm/v1"
   moonshot_model: "kimi-k2.5"
   moonshot_base_url: "https://api.moonshot.ai/v1"

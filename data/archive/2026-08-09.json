@@ -1,0 +1,491 @@
+{
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T03:02:39.683520+00:00",
+  "headline": "91% of AI citations are platform-exclusive, highlighting extreme fragmentation in GEO tracking",
+  "sections": {
+    "Confirmed Search Updates": [
+      {
+        "what_happened": "OpenAI expands safety testing for Astra model over potential cyber risks | OpenAI 因潜在网络安全风险延迟 Astra 模型发布",
+        "why_it_matters": "AI 搜索和 Agent 技术的演进正受到安全合规的严重制约。Astra 的延迟意味着高度自主的 AI Agent 时代（能代替用户在网页上执行复杂操作）普及时间将被推迟。",
+        "evidence": "Official statement from OpenAI via TestingCatalog",
+        "evidence_detail": "OpenAI announced it has expanded safety testing for its upcoming Astra model because it 'cannot rule out' critical cyber capabilities. This safety threshold evaluation is expected to delay the public launch of the agentic model.",
+        "who_it_affects": "all",
+        "what_to_do": "调整 2026 下半年的 Agentic SEO 规划，短期内仍应聚焦于基于检索的 AEO/GEO，而非全自动 Agent 交互。",
+        "confidence": "Confirmed",
+        "impact": "P3",
+        "section": "Confirmed Search Updates",
+        "score": 70,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2086078439879045390",
+            "excerpt": "Again, this is now... imagine a year down the line or longer... I feel this is all headed down a very dangerous path -> OpenAI says Astra may have reached Critical cyber threshold \"OpenAI says it has expanded safety testing around its upcoming model Astra as it “cannot rule out” critical cyber capabilities, potentially delaying its launch\" https://www.testingcatalog.com/openai-says-astra-may-have-reached-critical-cyber-threshold/. Again, this is now... imagine a year down the line or longer... I feel this is all headed down a very dangerous path -&gt; OpenAI says Astra may have reached Critical cyber threshold \"OpenAI says it has expanded safety testing around its upcoming model Astra as it…",
+            "author": "@glenngabe",
+            "published": "2026-08-08T13:13:52+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Google's 'goto' redirect test analyzed as anti-scraping measure | Google 的 'goto' 重定向测试被指旨在打击爬虫",
+        "why_it_matters": "如果 Google 强制通过 JS 驱动的 'goto' 链接进行重定向，依赖住宅代理和简单 HTML 解析的第三方 SEO 工具及 AI 爬虫将无法准确记录点击，甚至可能被完全阻断。",
+        "evidence": "Expert analysis by Viktor Lofgren and Glenn Gabe",
+        "evidence_detail": "Viktor Lofgren (Marginalia Search) notes that Google's 'goto' redirects rely on JavaScript to detect clicks. If a scraper uses residential proxies without executing JS or simulating real user clicks, Google sees a search with zero clicks, potentially poisoning the scraper's data or blocking them.",
+        "who_it_affects": "SaaS / publisher / all",
+        "what_to_do": "监控爬虫与抓取工具的 JS 渲染配置，确保能正确处理 JS 重定向。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 75,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2086102806000263216",
+            "excerpt": "Good thread about why Google might be testing those 'goto' links in the SERPs (which I shared about the other day). The redirects have been tested over the past few weeks. Viktor explains why this could be a very bad sign for third-parties scraping Google (including tools and AI companies).. Good thread about why Google might be testing those 'goto' links in the SERPs (which I shared about the other day). The redirects have been tested over the past few weeks. Viktor explains why this could be a very bad sign for third-parties scraping Google (including tools and AI companies). Viktor Lofgren | Marginalia Search Guy (@MarginaliaNu) If a 3rd party scrapes google via a residential proxy,…",
+            "author": "@glenngabe",
+            "published": "2026-08-08T14:50:41+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      },
+      {
+        "what_happened": "Overstock.com relaunch fails to recover organic visibility after 2023 shutdown | Overstock 关停后重新上线，有机能见度未能恢复",
+        "why_it_matters": "关停高权重域名并试图在后期重新启用的代价是致命的。历史累积的信任和爬网预算一旦归零，即使重新上线原域名，也无法简单找回原有的排名。",
+        "evidence": "Domain visibility tracking by Glenn Gabe",
+        "evidence_detail": "Glenn Gabe tracked overstock.com's visibility trend following its 2023 shutdown and subsequent relaunch in 2024. The data shows a massive initial drop in organic visibility that has failed to recover, confirming that domain equity and crawl history cannot be easily paused and resumed.",
+        "who_it_affects": "ecommerce / publisher / SaaS / all",
+        "what_to_do": "避免完全关闭高权重域名；若必须转型，应使用持续的 301 重定向保留路由，而非彻底下线。",
+        "confidence": "Data-backed",
+        "impact": "P2",
+        "section": "SERP & Algorithm Signals",
+        "score": 80,
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2086083626072952906",
+            "excerpt": "Quote from an article after they initially shut down http://overstock.com in 2023 -> Shutting down Overstock was ‘a fatal mistake’ The initial fall in visibility was huge (and expected), but the lack of visibility once it relaunched is not good. Not good at all. Checking trending for http://overstock.com now, it's not pretty. Here's the article from 2024: https://www.retaildive.com/news/beyond-relaunch-overstock/708091/. Quote from an article after they initially shut down overstock.com in 2023 -&gt; Shutting down Overstock was ‘a fatal mistake’ The initial fall in visibility was huge (and expected), but the lack of visibility once it relaunched is not good. Not good at all. Checking…",
+            "author": "@glenngabe",
+            "published": "2026-08-08T13:34:28+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Study shows 91% of AI search citations appear on only one platform | 研究显示 91% 的 AI 搜索引用仅在单一平台出现",
+        "why_it_matters": "品牌在 Perplexity 获得引用并不意味着在 ChatGPT 或 Gemini 也会获得引用。GEO 策略必须针对不同引擎的独特索引和检索机制进行分发，单一平台的排名监控会导致策略盲区。",
+        "evidence": "Kevin Indig's AI Halftime Report via Search Engine Journal",
+        "evidence_detail": "Kevin Indig's AI Halftime Report analyzed AI search citations across major engines, revealing that 91% of citations are exclusive to a single platform. This highlights the extreme fragmentation of LLM-based retrieval sources compared to traditional Google SERPs.",
+        "who_it_affects": "ecommerce / publisher / SaaS / international / all",
+        "what_to_do": "停止依赖单一 AI 引擎的可见性报告，建立覆盖 ChatGPT、Gemini 和 Perplexity 的多引擎 GEO 监控。",
+        "confidence": "Data-backed",
+        "impact": "P1",
+        "section": "AI Search / GEO",
+        "score": 85,
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/ais-impact-is-outrunning-measurement-the-trust-and-attribution-gap-facing-brands/584141/",
+            "excerpt": "AI’s Impact Is Outrunning Measurement: The Trust And Attribution Gap Facing Brands via @sejournal, @gregjarboe. AI's impact outpaced our ability to measure it in H1 2026. Indig's citation data, agent share shifts, and the intelligence-versus-agency split explain what changes next. The post AI&#8217;s Impact Is Outrunning Measurement: The Trust And Attribution Gap Facing Brands appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-08-08T12:00:30+00:00",
+            "source_type": "trade_news"
+          }
+        ]
+      },
+      {
+        "what_happened": "KPMG report reveals 50% of executives delayed AI agent rollouts due to ROI | KPMG 报告显示近半数企业因 ROI 问题推迟 AI Agent 部署",
+        "why_it_matters": "企业端对 AI Agent 的降温意味着 B2B 流量生态中，由 Agent 自动执行的“无头流量”（headless traffic）增长速度可能慢于预期。",
+        "evidence": "KPMG Executive Survey via Polymarket",
+        "evidence_detail": "A KPMG survey of corporate executives revealed that nearly half have delayed or scaled back their AI-agent deployments. The primary driver for the pullback was that implementation and operational costs exceeded the measured benefits.",
+        "who_it_affects": "SaaS / ecommerce / all",
+        "what_to_do": "在规划 B2B 网站的 Agent 友好度（如 schema、API 暴露）时，保持理性预算，优先服务人类用户的传统搜索需求。",
+        "confidence": "Data-backed",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "score": 65,
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2086186668906938797",
+            "excerpt": "Rough. Rough Polymarket (@Polymarket) JUST IN: Nearly half of executives have delayed or scaled back AI-agent deployments after costs exceeded benefits. — KPMG — https://nitter.net/Polymarket/status/2085799477021979095#m",
+            "author": "@Kevin_Indig",
+            "published": "2026-08-08T20:23:55+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      }
+    ],
+    "Playbook: Worth Testing": [
+      {
+        "what_happened": "Retailers optimize sites for ChatGPT citations while driving direct checkout | 零售商优化 ChatGPT 引用并引导直接交易以留存数据",
+        "why_it_matters": "在 AI 搜索时代，品牌既需要获取 LLM 的推荐（Citations），又必须防止用户在 AI 平台内完成闭环交易导致品牌失去一手数据（First-party data）。",
+        "evidence": "Reuters report on retail consumer AI search tactics",
+        "evidence_detail": "Reuters reported on retailers optimizing their structured data and vendor listings specifically to appear in ChatGPT shopping results, while simultaneously designing user journeys that incentivize couples/users to book directly on their own sites to retain customer data.",
+        "who_it_affects": "ecommerce / local / SaaS",
+        "what_to_do": "优化 Schema 标记以获取 AI 引用，但在落地页提供独家优惠或会员权益，吸引 AI 带来的流量直接在站内转化。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 82,
+        "how_to_test": "1. 针对高意向产品页，部署完整的 Product 和 Offer Schema 确保被 LLM 索引。2. 在这些落地页上部署“AI 读者专属”或“直接预订”的独家优惠/增值服务。3. 监控来自 ChatGPT/Perplexity 推荐流量的站内转化率。",
+        "success_metric": "来自 AI 引擎引用的直接引流转化率（Direct Conversion Rate from AI Referrals）提升。",
+        "effort": "中等。需要调整 Schema 标记和落地页的转化漏斗设计。",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2086074416966881524",
+            "excerpt": "I think retailers that are \"optimizing their sites for AI chat\" should be very careful with their tactics... -> Retailers are updating their websites to rank highly in chatbot results, while making sure purchases are done on their own sites to collect customer data \"The company is optimizing its website so its vendors appear in ChatGPT results, but it is trying to convince couples to book their wedding venues and invitations directly through the company's website.\" https://www.reuters.com/business/retail-consumer/retailers-tap-ai-shopping-traffic-fight-keep-customer-data-2026-08-07/. I think retailers that are \"optimizing their sites for AI chat\" should be very careful with their tactics...…",
+            "author": "@glenngabe",
+            "published": "2026-08-08T12:57:53+00:00",
+            "source_type": "data_research"
+          }
+        ]
+      },
+      {
+        "what_happened": "Technical SEOs advocate replacing heavy JS with native HTML/CSS features | 技术 SEO 倡导使用原生浏览器特性替代重度 JS 以提升能见度",
+        "why_it_matters": "尽管 Google 能够渲染 JS，但重度依赖 JS 仍会消耗大量爬网预算并延迟索引。使用原生 HTML/CSS 特性替代 JS，可以显著提升页面加载速度和搜索引擎的抓取效率。",
+        "evidence": "Expert analysis by Jono Alderson and Sitebulb",
+        "evidence_detail": "Technical SEO consultant Jono Alderson highlighted that many sites lose visibility due to unnecessary JavaScript. Replacing JS-driven elements with native browser features (like CSS Grid, native lazy loading, and HTML details/summary) reduces rendering overhead for search bots.",
+        "who_it_affects": "ecommerce / publisher / SaaS / UGC / all",
+        "what_to_do": "审计网站上的 JS 依赖，将非交互性或简单的交互组件（如折叠菜单、延迟加载）替换为原生 HTML5 和 CSS3 特性。",
+        "confidence": "Observed",
+        "impact": "P2",
+        "section": "Playbook: Worth Testing",
+        "score": 80,
+        "how_to_test": "1. 选取 20 个重度依赖 JS 渲染核心内容（如折叠常见问题、图片懒加载）的页面作为测试组。2. 将这些页面的 JS 组件替换为原生 HTML <details>/<summary> 标签和原生 loading=\"lazy\"。3. 使用 Google Search Console 监控测试组页面的抓取到索引延迟时间（Crawl-to-Index latency）及 Core Web Vitals。",
+        "success_metric": "抓取到索引的延迟时间缩短，以及 INP (Interaction to Next Paint) 指标改善。",
+        "effort": "中等。需要前端开发配合修改模板，风险极低。",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2086071196420809168",
+            "excerpt": "📣 WEBINAR!👉https://sitebulb.com/resources/guides/webinar-why-javascript-is-costing-you-visibility-and-what-to-use-instead/ Delighted to welcome award-winning technical SEO consultant Jono Alderson to the Sitebulb webinars stage! Attend this one LIVE - Jono is one of our all time favourite speakers! And there will be Q&A. Get your questions ready.... 📣 WEBINAR!👉 sitebulb.com/resources/guide… Delighted to welcome award-winning technical SEO consultant Jono Alderson to the Sitebulb webinars stage! Attend this one LIVE - Jono is one of our all time favourite speakers! And there will be Q&amp;A. Get your questions ready... Link Webinar: Why JavaScript Is Costing You Visibility (And What To Use…",
+            "author": "@sitebulb",
+            "published": "2026-08-08T12:45:05+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ]
+      }
+    ],
+    "Today's Action Items": [
+      {
+        "what_to_do": "停止依赖单一 AI 引擎的可见性报告，建立覆盖 ChatGPT、Gemini 和 Perplexity 的多引擎 GEO 监控。",
+        "impact": "P1"
+      },
+      {
+        "what_to_do": "审计网站上的 JS 依赖，尝试将折叠菜单、图片懒加载等简单组件替换为原生 HTML/CSS 特性以提升抓取效率。",
+        "impact": "P2"
+      },
+      {
+        "what_to_do": "针对高意向产品落地页，优化 Schema 标记以获取 AI 引用，同时设计站内独家优惠以引导直接转化。",
+        "impact": "P2"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Study shows 91% of AI search citations appear on only one platform | 研究显示 91% 的 AI 搜索引用仅在单一平台出现",
+      "why_it_matters": "品牌在 Perplexity 获得引用并不意味着在 ChatGPT 或 Gemini 也会获得引用。GEO 策略必须针对不同引擎的独特索引和检索机制进行分发，单一平台的排名监控会导致策略盲区。",
+      "evidence": "Kevin Indig's AI Halftime Report via Search Engine Journal",
+      "evidence_detail": "Kevin Indig's AI Halftime Report analyzed AI search citations across major engines, revealing that 91% of citations are exclusive to a single platform. This highlights the extreme fragmentation of LLM-based retrieval sources compared to traditional Google SERPs.",
+      "who_it_affects": "ecommerce / publisher / SaaS / international / all",
+      "what_to_do": "停止依赖单一 AI 引擎的可见性报告，建立覆盖 ChatGPT、Gemini 和 Perplexity 的多引擎 GEO 监控。",
+      "confidence": "Data-backed",
+      "impact": "P1",
+      "section": "AI Search / GEO",
+      "score": 85,
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/ais-impact-is-outrunning-measurement-the-trust-and-attribution-gap-facing-brands/584141/",
+          "excerpt": "AI’s Impact Is Outrunning Measurement: The Trust And Attribution Gap Facing Brands via @sejournal, @gregjarboe. AI's impact outpaced our ability to measure it in H1 2026. Indig's citation data, agent share shifts, and the intelligence-versus-agency split explain what changes next. The post AI&#8217;s Impact Is Outrunning Measurement: The Trust And Attribution Gap Facing Brands appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-08-08T12:00:30+00:00",
+          "source_type": "trade_news"
+        }
+      ]
+    },
+    {
+      "what_happened": "Google's 'goto' redirect test analyzed as anti-scraping measure | Google 的 'goto' 重定向测试被指旨在打击爬虫",
+      "why_it_matters": "如果 Google 强制通过 JS 驱动的 'goto' 链接进行重定向，依赖住宅代理和简单 HTML 解析的第三方 SEO 工具及 AI 爬虫将无法准确记录点击，甚至可能被完全阻断。",
+      "evidence": "Expert analysis by Viktor Lofgren and Glenn Gabe",
+      "evidence_detail": "Viktor Lofgren (Marginalia Search) notes that Google's 'goto' redirects rely on JavaScript to detect clicks. If a scraper uses residential proxies without executing JS or simulating real user clicks, Google sees a search with zero clicks, potentially poisoning the scraper's data or blocking them.",
+      "who_it_affects": "SaaS / publisher / all",
+      "what_to_do": "监控爬虫与抓取工具的 JS 渲染配置，确保能正确处理 JS 重定向。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 75,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2086102806000263216",
+          "excerpt": "Good thread about why Google might be testing those 'goto' links in the SERPs (which I shared about the other day). The redirects have been tested over the past few weeks. Viktor explains why this could be a very bad sign for third-parties scraping Google (including tools and AI companies).. Good thread about why Google might be testing those 'goto' links in the SERPs (which I shared about the other day). The redirects have been tested over the past few weeks. Viktor explains why this could be a very bad sign for third-parties scraping Google (including tools and AI companies). Viktor Lofgren | Marginalia Search Guy (@MarginaliaNu) If a 3rd party scrapes google via a residential proxy,…",
+          "author": "@glenngabe",
+          "published": "2026-08-08T14:50:41+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Overstock.com relaunch fails to recover organic visibility after 2023 shutdown | Overstock 关停后重新上线，有机能见度未能恢复",
+      "why_it_matters": "关停高权重域名并试图在后期重新启用的代价是致命的。历史累积的信任和爬网预算一旦归零，即使重新上线原域名，也无法简单找回原有的排名。",
+      "evidence": "Domain visibility tracking by Glenn Gabe",
+      "evidence_detail": "Glenn Gabe tracked overstock.com's visibility trend following its 2023 shutdown and subsequent relaunch in 2024. The data shows a massive initial drop in organic visibility that has failed to recover, confirming that domain equity and crawl history cannot be easily paused and resumed.",
+      "who_it_affects": "ecommerce / publisher / SaaS / all",
+      "what_to_do": "避免完全关闭高权重域名；若必须转型，应使用持续的 301 重定向保留路由，而非彻底下线。",
+      "confidence": "Data-backed",
+      "impact": "P2",
+      "section": "SERP & Algorithm Signals",
+      "score": 80,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2086083626072952906",
+          "excerpt": "Quote from an article after they initially shut down http://overstock.com in 2023 -> Shutting down Overstock was ‘a fatal mistake’ The initial fall in visibility was huge (and expected), but the lack of visibility once it relaunched is not good. Not good at all. Checking trending for http://overstock.com now, it's not pretty. Here's the article from 2024: https://www.retaildive.com/news/beyond-relaunch-overstock/708091/. Quote from an article after they initially shut down overstock.com in 2023 -&gt; Shutting down Overstock was ‘a fatal mistake’ The initial fall in visibility was huge (and expected), but the lack of visibility once it relaunched is not good. Not good at all. Checking…",
+          "author": "@glenngabe",
+          "published": "2026-08-08T13:34:28+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "OpenAI expands safety testing for Astra model over potential cyber risks | OpenAI 因潜在网络安全风险延迟 Astra 模型发布",
+      "why_it_matters": "AI 搜索和 Agent 技术的演进正受到安全合规的严重制约。Astra 的延迟意味着高度自主的 AI Agent 时代（能代替用户在网页上执行复杂操作）普及时间将被推迟。",
+      "evidence": "Official statement from OpenAI via TestingCatalog",
+      "evidence_detail": "OpenAI announced it has expanded safety testing for its upcoming Astra model because it 'cannot rule out' critical cyber capabilities. This safety threshold evaluation is expected to delay the public launch of the agentic model.",
+      "who_it_affects": "all",
+      "what_to_do": "调整 2026 下半年的 Agentic SEO 规划，短期内仍应聚焦于基于检索的 AEO/GEO，而非全自动 Agent 交互。",
+      "confidence": "Confirmed",
+      "impact": "P3",
+      "section": "Confirmed Search Updates",
+      "score": 70,
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2086078439879045390",
+          "excerpt": "Again, this is now... imagine a year down the line or longer... I feel this is all headed down a very dangerous path -> OpenAI says Astra may have reached Critical cyber threshold \"OpenAI says it has expanded safety testing around its upcoming model Astra as it “cannot rule out” critical cyber capabilities, potentially delaying its launch\" https://www.testingcatalog.com/openai-says-astra-may-have-reached-critical-cyber-threshold/. Again, this is now... imagine a year down the line or longer... I feel this is all headed down a very dangerous path -&gt; OpenAI says Astra may have reached Critical cyber threshold \"OpenAI says it has expanded safety testing around its upcoming model Astra as it…",
+          "author": "@glenngabe",
+          "published": "2026-08-08T13:13:52+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "KPMG report reveals 50% of executives delayed AI agent rollouts due to ROI | KPMG 报告显示近半数企业因 ROI 问题推迟 AI Agent 部署",
+      "why_it_matters": "企业端对 AI Agent 的降温意味着 B2B 流量生态中，由 Agent 自动执行的“无头流量”（headless traffic）增长速度可能慢于预期。",
+      "evidence": "KPMG Executive Survey via Polymarket",
+      "evidence_detail": "A KPMG survey of corporate executives revealed that nearly half have delayed or scaled back their AI-agent deployments. The primary driver for the pullback was that implementation and operational costs exceeded the measured benefits.",
+      "who_it_affects": "SaaS / ecommerce / all",
+      "what_to_do": "在规划 B2B 网站的 Agent 友好度（如 schema、API 暴露）时，保持理性预算，优先服务人类用户的传统搜索需求。",
+      "confidence": "Data-backed",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "score": 65,
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2086186668906938797",
+          "excerpt": "Rough. Rough Polymarket (@Polymarket) JUST IN: Nearly half of executives have delayed or scaled back AI-agent deployments after costs exceeded benefits. — KPMG — https://nitter.net/Polymarket/status/2085799477021979095#m",
+          "author": "@Kevin_Indig",
+          "published": "2026-08-08T20:23:55+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Retailers optimize sites for ChatGPT citations while driving direct checkout | 零售商优化 ChatGPT 引用并引导直接交易以留存数据",
+      "why_it_matters": "在 AI 搜索时代，品牌既需要获取 LLM 的推荐（Citations），又必须防止用户在 AI 平台内完成闭环交易导致品牌失去一手数据（First-party data）。",
+      "evidence": "Reuters report on retail consumer AI search tactics",
+      "evidence_detail": "Reuters reported on retailers optimizing their structured data and vendor listings specifically to appear in ChatGPT shopping results, while simultaneously designing user journeys that incentivize couples/users to book directly on their own sites to retain customer data.",
+      "who_it_affects": "ecommerce / local / SaaS",
+      "what_to_do": "优化 Schema 标记以获取 AI 引用，但在落地页提供独家优惠或会员权益，吸引 AI 带来的流量直接在站内转化。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 82,
+      "how_to_test": "1. 针对高意向产品页，部署完整的 Product 和 Offer Schema 确保被 LLM 索引。2. 在这些落地页上部署“AI 读者专属”或“直接预订”的独家优惠/增值服务。3. 监控来自 ChatGPT/Perplexity 推荐流量的站内转化率。",
+      "success_metric": "来自 AI 引擎引用的直接引流转化率（Direct Conversion Rate from AI Referrals）提升。",
+      "effort": "中等。需要调整 Schema 标记和落地页的转化漏斗设计。",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2086074416966881524",
+          "excerpt": "I think retailers that are \"optimizing their sites for AI chat\" should be very careful with their tactics... -> Retailers are updating their websites to rank highly in chatbot results, while making sure purchases are done on their own sites to collect customer data \"The company is optimizing its website so its vendors appear in ChatGPT results, but it is trying to convince couples to book their wedding venues and invitations directly through the company's website.\" https://www.reuters.com/business/retail-consumer/retailers-tap-ai-shopping-traffic-fight-keep-customer-data-2026-08-07/. I think retailers that are \"optimizing their sites for AI chat\" should be very careful with their tactics...…",
+          "author": "@glenngabe",
+          "published": "2026-08-08T12:57:53+00:00",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "Technical SEOs advocate replacing heavy JS with native HTML/CSS features | 技术 SEO 倡导使用原生浏览器特性替代重度 JS 以提升能见度",
+      "why_it_matters": "尽管 Google 能够渲染 JS，但重度依赖 JS 仍会消耗大量爬网预算并延迟索引。使用原生 HTML/CSS 特性替代 JS，可以显著提升页面加载速度和搜索引擎的抓取效率。",
+      "evidence": "Expert analysis by Jono Alderson and Sitebulb",
+      "evidence_detail": "Technical SEO consultant Jono Alderson highlighted that many sites lose visibility due to unnecessary JavaScript. Replacing JS-driven elements with native browser features (like CSS Grid, native lazy loading, and HTML details/summary) reduces rendering overhead for search bots.",
+      "who_it_affects": "ecommerce / publisher / SaaS / UGC / all",
+      "what_to_do": "审计网站上的 JS 依赖，将非交互性或简单的交互组件（如折叠菜单、延迟加载）替换为原生 HTML5 和 CSS3 特性。",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Playbook: Worth Testing",
+      "score": 80,
+      "how_to_test": "1. 选取 20 个重度依赖 JS 渲染核心内容（如折叠常见问题、图片懒加载）的页面作为测试组。2. 将这些页面的 JS 组件替换为原生 HTML <details>/<summary> 标签和原生 loading=\"lazy\"。3. 使用 Google Search Console 监控测试组页面的抓取到索引延迟时间（Crawl-to-Index latency）及 Core Web Vitals。",
+      "success_metric": "抓取到索引的延迟时间缩短，以及 INP (Interaction to Next Paint) 指标改善。",
+      "effort": "中等。需要前端开发配合修改模板，风险极低。",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2086071196420809168",
+          "excerpt": "📣 WEBINAR!👉https://sitebulb.com/resources/guides/webinar-why-javascript-is-costing-you-visibility-and-what-to-use-instead/ Delighted to welcome award-winning technical SEO consultant Jono Alderson to the Sitebulb webinars stage! Attend this one LIVE - Jono is one of our all time favourite speakers! And there will be Q&A. Get your questions ready.... 📣 WEBINAR!👉 sitebulb.com/resources/guide… Delighted to welcome award-winning technical SEO consultant Jono Alderson to the Sitebulb webinars stage! Attend this one LIVE - Jono is one of our all time favourite speakers! And there will be Q&amp;A. Get your questions ready... Link Webinar: Why JavaScript Is Costing You Visibility (And What To Use…",
+          "author": "@sitebulb",
+          "published": "2026-08-08T12:45:05+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ]
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
+      "triggers_brief": true
+    }
+  ],
+  "run_meta": {
+    "ran_at": "2026-08-09T03:01:53.883118+00:00",
+    "sources": {
+      "x": {
+        "ok": 28,
+        "total": 29,
+        "failed_names": [
+          "JohnMu"
+        ],
+        "items": 41
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 1
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 42,
+    "candidates_fresh": 14,
+    "llm_provider": ""
+  }
+}

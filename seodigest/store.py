@@ -196,7 +196,7 @@ def archive_daily(cfg: dict, date_str: str, digest: dict,
     }
     # Provenance for hand-curated / back-dated records (scripts/ingest_curated.py).
     # `generated_at` already betrays a backfill; this makes it a field.
-    for k in ("curated_by", "backfilled"):
+    for k in ("curated_by", "backfilled", "llm_error"):
         if digest.get(k):
             record[k] = digest[k]
     with open(path, "w", encoding="utf-8") as f:

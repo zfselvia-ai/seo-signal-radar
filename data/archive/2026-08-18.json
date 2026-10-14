@@ -1,179 +1,163 @@
 {
   "date": "2026-08-18",
-  "generated_at": "2026-10-14T00:40:56.516431+00:00",
-  "headline": "Google releases the August 2026 spam update, its third spam update of the year | Google 发布 2026 年 8 月垃圾内容更新，今年第三次",
+  "generated_at": "2026-08-18T02:17:39.330287+00:00",
+  "headline": "YouTube view-count methodology changes Aug 1; no search signals confirmed today",
   "sections": {
-    "Confirmed Search Updates": [
+    "SERP & Algorithm Signals": [
       {
-        "what_happened": "August 2026 spam update released Aug 18 — the 3rd spam update of 2026, rollout under way | 8 月垃圾内容更新 8/18 发布，今年第三次，正在推出",
-        "why_it_matters": "垃圾内容更新针对的是违反 spam policies 的做法，不是广谱质量重排；更新期间掉的流量先对照 spam policies 排查，而不是急着改内容质量。",
-        "evidence": "official: Google Search Status incident + @googlesearchc announcement",
-        "evidence_detail": "Google Search Status logged the incident starting Aug 18, 2026, and Google Search Central announced the release on X the same day, saying it would update the ranking release history page once the rollout is complete. It is the third spam update of 2026, after March and June. Google publishes no scope or affected-site data for spam updates, so the usable diagnostic is GSC clicks per directory or template, compared before and after the rollout once it ends.",
-        "who_it_affects": "all",
-        "what_to_do": "更新期间冻结大改版；从 8/18 起按目录/模板每日记录 GSC 点击，等官方宣布推出完成后再与前两周对比。",
+        "what_happened": "YouTube to count view on video start (not 30s watch) from Aug 1 | YouTube将从8月1日起将视频开始播放即计为一次观看",
+        "why_it_matters": "跨平台视频策略需重新基准化：观看数将显著膨胀，CPM/ engagement rate 等KPI口径失真，需提前与stakeholder对齐计量定义",
+        "evidence": "YouTube official announcement via Search Engine Journal; Glenn Gabe independent verification",
+        "evidence_detail": "Search Engine Journal reported YouTube's official policy change: views on long-form and live content will register at play-start rather than after 30 seconds of watch time, effective August 1, 2025. Glenn Gabe separately confirmed the same mechanism on X. No A/B test data or impact estimates provided by source. This is a platform policy change, not an algorithmic ranking update.",
+        "who_it_affects": "publisher",
+        "what_to_do": "audit current YouTube reporting dashboards | update Q3/Q4 KPI baselines | brief stakeholders on inflated view metrics",
         "confidence": "Confirmed",
         "impact": "P1",
-        "section": "Confirmed Search Updates",
-        "score": 90,
+        "section": "SERP & Algorithm Signals",
+        "score": 72,
         "sources": [
           {
-            "name": "Google Search Status",
-            "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
-            "excerpt": "[Spam Update] August 2026 spam update.",
-            "author": "Google Search Status Dashboard",
-            "published": "2026-08-18T16:27:00+00:00",
-            "source_type": "practitioner_observation"
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/youtube-changes-how-it-counts-views-on-long-form-live/586166/",
+            "excerpt": "YouTube Changes How It Counts Views On Long-Form & Live via @sejournal, @MattGSouthern. YouTube is changing how it count",
+            "author": "Search Engine Journal",
+            "source_type": "trade_news"
           },
           {
-            "name": "@googlesearchc",
-            "url": "https://x.com/googlesearchc/status/2089752491499938186",
-            "excerpt": "Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE. Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc…",
-            "author": "@googlesearchc",
-            "published": "2026-08-18T16:33:14+00:00",
-            "source_type": "official_api"
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2089439168027910393",
+            "excerpt": "View counts might rise (significantly) -> YouTube will start counting a view as soon as a video starts to play, from Aug",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
       }
     ],
-    "Research & Retrieval": [
+    "Technical SEO Experiments": [
       {
-        "what_happened": "Study: ChatGPT names brands in its own search queries before fetching anything — 21 of 27 first queries included brands the user never typed | 研究：ChatGPT 在检索前就已决定候选品牌，27 次首轮查询中 21 次带入用户未提及的品牌",
-        "why_it_matters": "如果模型先从训练记忆里拉出品牌清单、再用 site: 探针去验证，那么只盯“被引用的 URL”做 GEO 是把结果当原因。品牌是否进入模型的先验，才是第一道门。",
-        "evidence": "observation: 57 conversations / 3,554 fetched pages from one ChatGPT Plus account (Suganthan Mohanadasan), shared by @randfish",
-        "evidence_detail": "Suganthan Mohanadasan read the search_queries field in ChatGPT's network responses on one logged-in account (Dubai, Jul 24–25, 2026). 21 of 27 first queries already named brands; brands that appeared in ChatGPT's own query reached the final answer 68.9% of the time (n=119) versus 2.1% for pages that were merely fetched (n=51). Only 110 of 3,554 retrieved pages (3.1%) were cited. The author calls every percentage directional: one account, personalised results, a software-heavy question mix; he also sells Keyword Insights. Rand Fishkin's framing: citation-analysis research may be misleading practitioners.",
-        "who_it_affects": "SaaS / ecommerce / all",
-        "what_to_do": "测试：针对你的品类问 ChatGPT 10 个“best X”类问题并抓取其 search_queries，记录你的品牌是否出现在模型自己生成的查询里；没出现就先做品牌提及（第三方评测、对比页），而不是优化被引用页面。",
+        "what_happened": "CSS `contrast-color()` reaches baseline support | CSS contrast-color()函数获主流浏览器支持",
+        "why_it_matters": "结构化数据与可访问性(A11Y)信号可能间接影响E-E-A-T评分；高对比度实现无需手动计算，减少CLS和渲染阻塞风险",
+        "evidence": "Jono Alderson RT of web standards announcement on X",
+        "evidence_detail": "Jono Alderson amplified announcement that CSS `contrast-color()` is now available, which automatically computes accessible contrast color from any input color. No browser version matrix or caniuse data cited in source. Alderson's track record on technical standards is strong, but this is a social amplification without original testing.",
+        "who_it_affects": "all",
+        "what_to_do": "audit color-contrast implementation | test `contrast-color()` on design system components | validate with Lighthouse A11Y scores",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "Research & Retrieval",
-        "score": 68,
+        "section": "Technical SEO Experiments",
+        "score": 55,
         "sources": [
           {
-            "name": "@randfish",
-            "url": "https://x.com/randfish/status/2087612290610970640",
-            "excerpt": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: https://suganthan.com/blog/chatgpt-decides-before-it-searches/. I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: suganthan.com/blog/chatgpt-d… Video",
-            "author": "@randfish",
-            "published": "2026-08-12T18:48:50+00:00",
+            "name": "jonoalderson",
+            "url": "https://x.com/jonoalderson/status/2089350534440395228",
+            "excerpt": "RT by @jonoalderson: #1. The web just got a little more intelligent. 🤟 Meet `contrast-color()`: You give it any color; i",
+            "author": "jonoalderson",
             "source_type": "expert_analysis"
           }
         ]
       }
     ],
-    "Playbook: Worth Testing": [
+    "Unconfirmed Watchlist": [
       {
-        "what_happened": "Playbook: isolate Google AI Mode traffic in Search Console by classifying conversational query fragments | 玩法：在 Search Console 里通过识别对话式查询片段拆出 AI Mode 流量",
-        "why_it_matters": "GSC 不单列 AI Mode，但 John Mueller 确认 AI Mode 的追问会以普通查询形式进入报表，所以长句、带代词、多轮式的查询片段可以当作 AI Mode 流量的代理指标。",
-        "evidence": "practitioner method (Suganthan Mohanadasan), four extraction approaches compared; shared by @screamingfrog",
-        "evidence_detail": "The write-up compares four ways to pull conversational fragments out of GSC — Glenn Gabe's API+Excel approach, a regex method, a browser extension, and the author's own classifier combining deterministic rules with a fine-tuned xlm-roberta-base model trained on his labelled queries plus synthetic rows in 8 languages — handling up to 100,000 unique queries per run. Hard limit stated by the author: on his property 57.7% of impressions sat in Google's anonymised query pool over 59 days, so every method undercounts; no precision/recall figures are published. The tool is free; large jobs route to his agency.",
+        "what_happened": "Glenn Gabe: Google logging issue confirmed, not algorithm update | Glenn Gabe确认Google仅为日志问题，非算法更新",
+        "why_it_matters": "近期流量波动可能被误判为排名惩罚或gain；专家应优先排查数据管道完整性，避免对site做不必要的反向优化",
+        "evidence": "Barry Schwartz reporting + Glenn Gabe confirmation on X",
+        "evidence_detail": "Barry Schwartz (rustybrick) identified a Google logging issue affecting data reporting; Glenn Gabe confirmed 'Like I thought, it's just a logging issue.' No details on which properties, date ranges, or metric types affected. No Google Search Status Dashboard entry cited. Treat as diagnostic reminder rather than incident requiring action.",
         "who_it_affects": "all",
-        "what_to_do": "导出近 90 天 GSC 查询（API/BigQuery），用正则或分类器标出对话式片段（≥6 词、含 I/my/should/which 等），按周看其展示与点击占比。",
-        "how_to_test": "导出 GSC 查询 → 规则/分类器打标 → 对话式片段占比按周跟踪，与 AI Mode 在你市场的上线日期对照。",
-        "success_metric": "对话式片段的展示/点击占比及其周环比；若上线后占比上升且 CTR 明显不同于普通查询，说明分割有效。",
-        "effort": "中：需要 API/BigQuery 导出与脚本；风险是匿名化查询（作者站点占展示的 57.7%）导致系统性低估。",
+        "what_to_do": "cross-check Search Console data with GA4/server logs before concluding algorithm impact",
         "confidence": "Observed",
         "impact": "P2",
-        "section": "Playbook: Worth Testing",
-        "score": 66,
+        "section": "Unconfirmed Watchlist",
+        "score": 58,
         "sources": [
           {
-            "name": "@screamingfrog (sharing Suganthan)",
-            "url": "https://x.com/screamingfrog/status/2089644764077416531",
-            "excerpt": "How to Track Google AI Mode Traffic in Search Console - https://suganthan.com/blog/how-to-track-ai-mode-traffic/ from @suganthan. How to Track Google AI Mode Traffic in Search Console - suganthan.com/blog/how-to-tr… from @suganthan Link How to Track Google AI Mode Traffic in Search Console — Suganthan Four ways to surface AI Mode and AI Overview queries hiding in Search Console, from a custom regex to a free classifier that labels 100,000 queries per run. suganthan.com",
-            "author": "@screamingfrog",
-            "published": "2026-08-18T09:25:10+00:00",
-            "source_type": "expert_vendor",
-            "commercial_interest": true
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2089439661252817096",
+            "excerpt": "Like I thought, it's just a logging issue.... Like I thought, it's just a logging issue... Barry Schwartz (@rustybrick)",
+            "author": "glenngabe",
+            "source_type": "data_research"
           }
         ]
       }
     ],
     "Today's Action Items": [
       {
-        "what_to_do": "垃圾更新进行中：冻结大改版，从 8/18 起按模板记录每日 GSC 点击基线",
+        "what_to_do": "YouTube: Update view KPI baselines before Aug 1 policy change takes effect",
         "impact": "P1"
       },
       {
-        "what_to_do": "用 GSC 查询导出拆出对话式片段，建立 AI Mode 流量基线",
+        "what_to_do": "Google: Verify any recent traffic anomalies against server logs before attributing to algorithm",
         "impact": "P2"
       }
     ]
   },
   "signals": [
     {
-      "what_happened": "August 2026 spam update released Aug 18 — the 3rd spam update of 2026, rollout under way | 8 月垃圾内容更新 8/18 发布，今年第三次，正在推出",
-      "why_it_matters": "垃圾内容更新针对的是违反 spam policies 的做法，不是广谱质量重排；更新期间掉的流量先对照 spam policies 排查，而不是急着改内容质量。",
-      "evidence": "official: Google Search Status incident + @googlesearchc announcement",
-      "evidence_detail": "Google Search Status logged the incident starting Aug 18, 2026, and Google Search Central announced the release on X the same day, saying it would update the ranking release history page once the rollout is complete. It is the third spam update of 2026, after March and June. Google publishes no scope or affected-site data for spam updates, so the usable diagnostic is GSC clicks per directory or template, compared before and after the rollout once it ends.",
-      "who_it_affects": "all",
-      "what_to_do": "更新期间冻结大改版；从 8/18 起按目录/模板每日记录 GSC 点击，等官方宣布推出完成后再与前两周对比。",
+      "what_happened": "YouTube to count view on video start (not 30s watch) from Aug 1 | YouTube将从8月1日起将视频开始播放即计为一次观看",
+      "why_it_matters": "跨平台视频策略需重新基准化：观看数将显著膨胀，CPM/ engagement rate 等KPI口径失真，需提前与stakeholder对齐计量定义",
+      "evidence": "YouTube official announcement via Search Engine Journal; Glenn Gabe independent verification",
+      "evidence_detail": "Search Engine Journal reported YouTube's official policy change: views on long-form and live content will register at play-start rather than after 30 seconds of watch time, effective August 1, 2025. Glenn Gabe separately confirmed the same mechanism on X. No A/B test data or impact estimates provided by source. This is a platform policy change, not an algorithmic ranking update.",
+      "who_it_affects": "publisher",
+      "what_to_do": "audit current YouTube reporting dashboards | update Q3/Q4 KPI baselines | brief stakeholders on inflated view metrics",
       "confidence": "Confirmed",
       "impact": "P1",
-      "section": "Confirmed Search Updates",
-      "score": 90,
+      "section": "SERP & Algorithm Signals",
+      "score": 72,
       "sources": [
         {
-          "name": "Google Search Status",
-          "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
-          "excerpt": "[Spam Update] August 2026 spam update.",
-          "author": "Google Search Status Dashboard",
-          "published": "2026-08-18T16:27:00+00:00",
-          "source_type": "practitioner_observation"
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/youtube-changes-how-it-counts-views-on-long-form-live/586166/",
+          "excerpt": "YouTube Changes How It Counts Views On Long-Form & Live via @sejournal, @MattGSouthern. YouTube is changing how it count",
+          "author": "Search Engine Journal",
+          "source_type": "trade_news"
         },
         {
-          "name": "@googlesearchc",
-          "url": "https://x.com/googlesearchc/status/2089752491499938186",
-          "excerpt": "Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE. Today we released the August 2026 spam update. We'll update our ranking release history page when the rollout is complete: status.search.google.com/inc…",
-          "author": "@googlesearchc",
-          "published": "2026-08-18T16:33:14+00:00",
-          "source_type": "official_api"
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2089439168027910393",
+          "excerpt": "View counts might rise (significantly) -> YouTube will start counting a view as soon as a video starts to play, from Aug",
+          "author": "glenngabe",
+          "source_type": "data_research"
         }
       ]
     },
     {
-      "what_happened": "Study: ChatGPT names brands in its own search queries before fetching anything — 21 of 27 first queries included brands the user never typed | 研究：ChatGPT 在检索前就已决定候选品牌，27 次首轮查询中 21 次带入用户未提及的品牌",
-      "why_it_matters": "如果模型先从训练记忆里拉出品牌清单、再用 site: 探针去验证，那么只盯“被引用的 URL”做 GEO 是把结果当原因。品牌是否进入模型的先验，才是第一道门。",
-      "evidence": "observation: 57 conversations / 3,554 fetched pages from one ChatGPT Plus account (Suganthan Mohanadasan), shared by @randfish",
-      "evidence_detail": "Suganthan Mohanadasan read the search_queries field in ChatGPT's network responses on one logged-in account (Dubai, Jul 24–25, 2026). 21 of 27 first queries already named brands; brands that appeared in ChatGPT's own query reached the final answer 68.9% of the time (n=119) versus 2.1% for pages that were merely fetched (n=51). Only 110 of 3,554 retrieved pages (3.1%) were cited. The author calls every percentage directional: one account, personalised results, a software-heavy question mix; he also sells Keyword Insights. Rand Fishkin's framing: citation-analysis research may be misleading practitioners.",
-      "who_it_affects": "SaaS / ecommerce / all",
-      "what_to_do": "测试：针对你的品类问 ChatGPT 10 个“best X”类问题并抓取其 search_queries，记录你的品牌是否出现在模型自己生成的查询里；没出现就先做品牌提及（第三方评测、对比页），而不是优化被引用页面。",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "Research & Retrieval",
-      "score": 68,
-      "sources": [
-        {
-          "name": "@randfish",
-          "url": "https://x.com/randfish/status/2087612290610970640",
-          "excerpt": "I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: https://suganthan.com/blog/chatgpt-decides-before-it-searches/. I'm worried that citation analysis research is misleading us... badly. AI tools often already know which brands they're going to search for and recommend, so looking at the sources or URLs ain't gonna help you much. Full report: suganthan.com/blog/chatgpt-d… Video",
-          "author": "@randfish",
-          "published": "2026-08-12T18:48:50+00:00",
-          "source_type": "expert_analysis"
-        }
-      ]
-    },
-    {
-      "what_happened": "Playbook: isolate Google AI Mode traffic in Search Console by classifying conversational query fragments | 玩法：在 Search Console 里通过识别对话式查询片段拆出 AI Mode 流量",
-      "why_it_matters": "GSC 不单列 AI Mode，但 John Mueller 确认 AI Mode 的追问会以普通查询形式进入报表，所以长句、带代词、多轮式的查询片段可以当作 AI Mode 流量的代理指标。",
-      "evidence": "practitioner method (Suganthan Mohanadasan), four extraction approaches compared; shared by @screamingfrog",
-      "evidence_detail": "The write-up compares four ways to pull conversational fragments out of GSC — Glenn Gabe's API+Excel approach, a regex method, a browser extension, and the author's own classifier combining deterministic rules with a fine-tuned xlm-roberta-base model trained on his labelled queries plus synthetic rows in 8 languages — handling up to 100,000 unique queries per run. Hard limit stated by the author: on his property 57.7% of impressions sat in Google's anonymised query pool over 59 days, so every method undercounts; no precision/recall figures are published. The tool is free; large jobs route to his agency.",
+      "what_happened": "Glenn Gabe: Google logging issue confirmed, not algorithm update | Glenn Gabe确认Google仅为日志问题，非算法更新",
+      "why_it_matters": "近期流量波动可能被误判为排名惩罚或gain；专家应优先排查数据管道完整性，避免对site做不必要的反向优化",
+      "evidence": "Barry Schwartz reporting + Glenn Gabe confirmation on X",
+      "evidence_detail": "Barry Schwartz (rustybrick) identified a Google logging issue affecting data reporting; Glenn Gabe confirmed 'Like I thought, it's just a logging issue.' No details on which properties, date ranges, or metric types affected. No Google Search Status Dashboard entry cited. Treat as diagnostic reminder rather than incident requiring action.",
       "who_it_affects": "all",
-      "what_to_do": "导出近 90 天 GSC 查询（API/BigQuery），用正则或分类器标出对话式片段（≥6 词、含 I/my/should/which 等），按周看其展示与点击占比。",
-      "how_to_test": "导出 GSC 查询 → 规则/分类器打标 → 对话式片段占比按周跟踪，与 AI Mode 在你市场的上线日期对照。",
-      "success_metric": "对话式片段的展示/点击占比及其周环比；若上线后占比上升且 CTR 明显不同于普通查询，说明分割有效。",
-      "effort": "中：需要 API/BigQuery 导出与脚本；风险是匿名化查询（作者站点占展示的 57.7%）导致系统性低估。",
+      "what_to_do": "cross-check Search Console data with GA4/server logs before concluding algorithm impact",
       "confidence": "Observed",
       "impact": "P2",
-      "section": "Playbook: Worth Testing",
-      "score": 66,
+      "section": "Unconfirmed Watchlist",
+      "score": 58,
       "sources": [
         {
-          "name": "@screamingfrog (sharing Suganthan)",
-          "url": "https://x.com/screamingfrog/status/2089644764077416531",
-          "excerpt": "How to Track Google AI Mode Traffic in Search Console - https://suganthan.com/blog/how-to-track-ai-mode-traffic/ from @suganthan. How to Track Google AI Mode Traffic in Search Console - suganthan.com/blog/how-to-tr… from @suganthan Link How to Track Google AI Mode Traffic in Search Console — Suganthan Four ways to surface AI Mode and AI Overview queries hiding in Search Console, from a custom regex to a free classifier that labels 100,000 queries per run. suganthan.com",
-          "author": "@screamingfrog",
-          "published": "2026-08-18T09:25:10+00:00",
-          "source_type": "expert_vendor",
-          "commercial_interest": true
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2089439661252817096",
+          "excerpt": "Like I thought, it's just a logging issue.... Like I thought, it's just a logging issue... Barry Schwartz (@rustybrick)",
+          "author": "glenngabe",
+          "source_type": "data_research"
+        }
+      ]
+    },
+    {
+      "what_happened": "CSS `contrast-color()` reaches baseline support | CSS contrast-color()函数获主流浏览器支持",
+      "why_it_matters": "结构化数据与可访问性(A11Y)信号可能间接影响E-E-A-T评分；高对比度实现无需手动计算，减少CLS和渲染阻塞风险",
+      "evidence": "Jono Alderson RT of web standards announcement on X",
+      "evidence_detail": "Jono Alderson amplified announcement that CSS `contrast-color()` is now available, which automatically computes accessible contrast color from any input color. No browser version matrix or caniuse data cited in source. Alderson's track record on technical standards is strong, but this is a social amplification without original testing.",
+      "who_it_affects": "all",
+      "what_to_do": "audit color-contrast implementation | test `contrast-color()` on design system components | validate with Lighthouse A11Y scores",
+      "confidence": "Observed",
+      "impact": "P2",
+      "section": "Technical SEO Experiments",
+      "score": 55,
+      "sources": [
+        {
+          "name": "jonoalderson",
+          "url": "https://x.com/jonoalderson/status/2089350534440395228",
+          "excerpt": "RT by @jonoalderson: #1. The web just got a little more intelligent. 🤟 Meet `contrast-color()`: You give it any color; i",
+          "author": "jonoalderson",
+          "source_type": "expert_analysis"
         }
       ]
     }
@@ -181,24 +165,153 @@
   "serp": {},
   "confirmed_updates": [
     {
-      "id": "LEubPCm2octf2uMqCFKE",
-      "title": "August 2026 spam update",
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
       "kind": "Spam Update",
       "families": [
         "ranking"
       ],
-      "start": "2026-08-18T16:27:00+00:00",
-      "end": null,
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
       "impact": "SERVICE_INFORMATION",
-      "ongoing": true,
-      "latest_update": "",
-      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    },
+    {
+      "id": "a7Aainy6E9rZsmfq82xt",
+      "title": "August 2025 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-08-26T16:00:00+00:00",
+      "end": "2025-09-22T07:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of September 22, 2025.",
+      "url": "https://status.search.google.com/incidents/a7Aainy6E9rZsmfq82xt",
       "triggers_brief": true
     }
   ],
-  "degraded": false,
-  "degraded_reason": "",
-  "quiet_day": false,
-  "curated_by": "Kiro (hand-curated, no LLM)",
-  "backfilled": true
+  "run_meta": {
+    "ran_at": "2026-08-18T02:15:51.222867+00:00",
+    "sources": {
+      "x": {
+        "ok": 25,
+        "total": 29,
+        "failed_names": [
+          "googlesearchc",
+          "JohnMu",
+          "methode",
+          "aleyda"
+        ],
+        "items": 56
+      },
+      "rss": {
+        "ok": 7,
+        "total": 11,
+        "failed_names": [
+          "Google Search Docs Updates",
+          "SearchPilot Resources",
+          "Search Engine Roundtable",
+          "Search Engine Land"
+        ],
+        "items": 9
+      },
+      "google_status": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 65,
+    "candidates_fresh": 57,
+    "llm_provider": "recurated"
+  },
+  "action_items": [
+    {
+      "text": "YouTube: Update view KPI baselines before Aug 1 policy change takes effect",
+      "impact": "P1"
+    },
+    {
+      "text": "Google: Verify any recent traffic anomalies against server logs before attributing to algorithm",
+      "impact": "P2"
+    }
+  ],
+  "dropped_count": 5
 }

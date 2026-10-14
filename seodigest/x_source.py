@@ -162,7 +162,10 @@ def _fetch_handle(feedparser, handle, group, per, instances, since, meta=None):
         try:
             # Hard timeout per instance so one slow/dead instance can't stall
             # the whole fetch for minutes.
-            r = httpx.get(url, headers=headers, timeout=8, follow_redirects=True)
+            # 15s: long enough for an instance whose cache for this handle went
+            # cold (a live re-fetch from X takes 10-20s), short enough that a
+            # hung instance can't stall a 21-handle run for long.
+            r = httpx.get(url, headers=headers, timeout=15, follow_redirects=True)
             if r.status_code >= 400:
                 # 429 is worth distinguishing when reading the log: it means the
                 # instance is alive and the handle probably fine, we're just
@@ -210,11 +213,14 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
                             "failed_names": []})
         return []
     import feedparser
+    import time
     from datetime import timedelta
 
     xcfg = cfg["x"]
     per = xcfg.get("tweets_per_handle", 15)
     instances = _resolve_instances(xcfg)
+    request_delay = float(xcfg.get("request_delay_seconds", 1.5))
+    retry_pause = float(xcfg.get("retry_pause_seconds", 10))
     weights = (cfg.get("scoring") or {}).get("source_weights", {})
     accounts = _resolve_accounts(xcfg)
     items: List[Item] = []
@@ -236,6 +242,16 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         group = (meta.get("tags") or ["general"])[0]
         cutoff = evergreen_since if meta.get("source_type") in evergreen_types else since
         tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
+        # One polite retry after a pause, but only when something was throttling
+        # (429) or slow; if every instance flatly refused, retrying just doubles
+        # the run time on a day Nitter is down.
+        if tweets is None and re.search(r":(429|ReadTimeout|ConnectTimeout)",
+                                        LAST_ERRORS.get(handle, "")):
+            time.sleep(retry_pause)
+            tweets = _fetch_handle(feedparser, handle, group, per, instances, since, meta)
+        # Pacing: back-to-back requests are what trips an instance's rate limit
+        # partway through the run.
+        time.sleep(request_delay)
         # Reachability, not productivity: an account that simply didn't post
         # today returned a valid feed. `_fetch_handle` returns None only when
         # every Nitter instance refused.

@@ -408,7 +408,10 @@ rangeBtns.forEach(btn => {
 function getRangeRecords(days) {
   const idx = DATES.indexOf(selectedDate);
   if (idx < 0) return [];
-  return DATES.slice(idx, idx + days).reverse(); // chronological
+  return DATES.slice(idx, idx + days)
+    .reverse() // chronological
+    .map(d => ARCHIVE[d])
+    .filter(Boolean);
 }
 
 /* Merge multiple days' records into one virtual record for display */
