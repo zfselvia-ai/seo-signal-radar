@@ -1,7 +1,7 @@
 {
   "date": "2026-08-05",
   "generated_at": "2026-08-05T07:41:09.362244+00:00",
-  "headline": "Cloudflare AI bot blocking reportedly hitting Googlebot/Bingbot indexing; 1M brands mapped in Gemini memory",
+  "headline": "Cloudflare AI bot blocking reportedly hitting Googlebot/Bingbot indexing",
   "sections": {
     "Technical SEO Experiments": [
       {
@@ -27,25 +27,6 @@
             "source_type": "data_research"
           }
         ]
-      }
-    ],
-    "AI Search / GEO": [
-      {
-        "what_happened": "1 million brands mapped in Gemini's parametric memory via structured data analysis | 百万品牌被映射进Gemini参数化记忆",
-        "why_it_matters": "揭示Gemini如何通过结构化数据/知识图谱存储品牌信息，为GEO优化提供可操作的实体优化方向",
-        "evidence": "Dejan SEO研究：分析1,000,000品牌在Gemini中的参数化记忆表现 | Dejan SEO blog post with dataset",
-        "evidence_detail": "Dejan SEO发布了对100万个品牌在Gemini参数化记忆中表现的研究，包含可下载数据集。作者cyberandy有商业利益（SEO agency），但研究基于可验证的数据抓取。主要局限：未公开完整方法论细节，'参数化记忆'的测量方式需要读者自行验证。作为vendor产出，需交叉验证结论。",
-        "who_it_affects": "ecommerce / publisher / SaaS",
-        "what_to_do": "检查品牌是否在Gemini参数化记忆中被正确识别，优化Knowledge Graph和结构化数据",
-        "confidence": "Speculative",
-        "impact": "P2",
-        "section": "AI Search / GEO",
-        "score": 62,
-        "how_to_test": "使用研究中的数据集或自行抓取Gemini API响应，检查品牌名称是否在相关查询中被参数化记忆引用；对比优化Schema.org Brand标记前后的Gemini引用率",
-        "success_metric": "品牌在Gemini响应中被正确引用的查询比例提升，Knowledge Graph面板出现率",
-        "effort": "中高（需技术抓取或API调用），风险：低",
-        "sources": [],
-        "unverified": true
       }
     ],
     "Tools, Papers & Open Source": [
@@ -75,10 +56,6 @@
       {
         "what_to_do": "检查Cloudflare AI Bot Blocking设置，验证Googlebot/Bingbot访问是否正常",
         "impact": "P1"
-      },
-      {
-        "what_to_do": "测试品牌在Gemini参数化记忆中的识别情况，优化Schema.org Brand标记",
-        "impact": "P2"
       }
     ]
   },
@@ -106,23 +83,6 @@
           "source_type": "data_research"
         }
       ]
-    },
-    {
-      "what_happened": "1 million brands mapped in Gemini's parametric memory via structured data analysis | 百万品牌被映射进Gemini参数化记忆",
-      "why_it_matters": "揭示Gemini如何通过结构化数据/知识图谱存储品牌信息，为GEO优化提供可操作的实体优化方向",
-      "evidence": "Dejan SEO研究：分析1,000,000品牌在Gemini中的参数化记忆表现 | Dejan SEO blog post with dataset",
-      "evidence_detail": "Dejan SEO发布了对100万个品牌在Gemini参数化记忆中表现的研究，包含可下载数据集。作者cyberandy有商业利益（SEO agency），但研究基于可验证的数据抓取。主要局限：未公开完整方法论细节，'参数化记忆'的测量方式需要读者自行验证。作为vendor产出，需交叉验证结论。",
-      "who_it_affects": "ecommerce / publisher / SaaS",
-      "what_to_do": "检查品牌是否在Gemini参数化记忆中被正确识别，优化Knowledge Graph和结构化数据",
-      "confidence": "Speculative",
-      "impact": "P2",
-      "section": "AI Search / GEO",
-      "score": 62,
-      "how_to_test": "使用研究中的数据集或自行抓取Gemini API响应，检查品牌名称是否在相关查询中被参数化记忆引用；对比优化Schema.org Brand标记前后的Gemini引用率",
-      "success_metric": "品牌在Gemini响应中被正确引用的查询比例提升，Knowledge Graph面板出现率",
-      "effort": "中高（需技术抓取或API调用），风险：低",
-      "sources": [],
-      "unverified": true
     },
     {
       "what_happened": "Cloudflare launches full agent stack: execution, dev lifecycle, and observability | Cloudflare发布完整Agent技术栈",
@@ -288,11 +248,10 @@
     {
       "text": "检查Cloudflare AI Bot Blocking设置，验证Googlebot/Bingbot访问是否正常",
       "impact": "P1"
-    },
-    {
-      "text": "测试品牌在Gemini参数化记忆中的识别情况，优化Schema.org Brand标记",
-      "impact": "P2"
     }
   ],
-  "dropped_count": 5
+  "dropped_count": 5,
+  "edits": [
+    "2026-10-14: removed 1 signal(s) that cited no source (unverifiable), and the action item derived from them; headline cut to its first clause, which the remaining signals support"
+  ]
 }

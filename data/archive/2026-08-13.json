@@ -112,25 +112,6 @@
         ]
       }
     ],
-    "Playbook: Worth Testing": [
-      {
-        "what_happened": "PLAYBOOK: Test C2PA/content credential markup for AI-generated content to assess indexing and GEO impact | 测试C2PA标记对AI内容索引和GEO的影响",
-        "why_it_matters": "提前建立内容溯源技术能力，应对可能的算法偏好变化",
-        "evidence": "Derived from watermarking discussion and knowledge graph accuracy concerns",
-        "evidence_detail": "Based on the convergence of AI watermarking discourse and knowledge graph vulnerability incidents, testing content provenance markup provides actionable data before any algorithmic preference is confirmed. No direct study links C2PA to ranking; this is a forward-positioning experiment.",
-        "who_it_affects": "publisher / all",
-        "what_to_do": "implement C2PA or schema.org ClaimReview on 20-50 AI-assisted content pages | monitor indexing rate and AI Overview inclusion",
-        "confidence": "Speculative",
-        "impact": "P2",
-        "section": "Playbook: Worth Testing",
-        "score": 48,
-        "how_to_test": "Select 20-50 pages with AI-generated content. Add C2PA manifest or contentCredential structured data. Maintain a control group. Track for 60 days: Google indexing speed, AI Overview citation rate, and any Knowledge Panel changes.",
-        "success_metric": "indexing rate delta vs control; AI Overview inclusion rate; featured snippet capture",
-        "effort": "Medium: 4-8 hours dev + structured data implementation; risk of no signal",
-        "sources": [],
-        "unverified": true
-      }
-    ],
     "Today's Action Items": [
       {
         "what_to_do": "Verify your brand Knowledge Panel for accuracy (P1)",
@@ -139,10 +120,6 @@
       {
         "what_to_do": "Audit ChatGPT ad placements in your priority SERPs (P1)",
         "impact": "P1"
-      },
-      {
-        "what_to_do": "Launch C2PA/content credential test on 20-50 pages (P2)",
-        "impact": "P2"
       }
     ]
   },
@@ -251,23 +228,6 @@
           "source_type": "data_research"
         }
       ]
-    },
-    {
-      "what_happened": "PLAYBOOK: Test C2PA/content credential markup for AI-generated content to assess indexing and GEO impact | 测试C2PA标记对AI内容索引和GEO的影响",
-      "why_it_matters": "提前建立内容溯源技术能力，应对可能的算法偏好变化",
-      "evidence": "Derived from watermarking discussion and knowledge graph accuracy concerns",
-      "evidence_detail": "Based on the convergence of AI watermarking discourse and knowledge graph vulnerability incidents, testing content provenance markup provides actionable data before any algorithmic preference is confirmed. No direct study links C2PA to ranking; this is a forward-positioning experiment.",
-      "who_it_affects": "publisher / all",
-      "what_to_do": "implement C2PA or schema.org ClaimReview on 20-50 AI-assisted content pages | monitor indexing rate and AI Overview inclusion",
-      "confidence": "Speculative",
-      "impact": "P2",
-      "section": "Playbook: Worth Testing",
-      "score": 48,
-      "how_to_test": "Select 20-50 pages with AI-generated content. Add C2PA manifest or contentCredential structured data. Maintain a control group. Track for 60 days: Google indexing speed, AI Overview citation rate, and any Knowledge Panel changes.",
-      "success_metric": "indexing rate delta vs control; AI Overview inclusion rate; featured snippet capture",
-      "effort": "Medium: 4-8 hours dev + structured data implementation; risk of no signal",
-      "sources": [],
-      "unverified": true
     }
   ],
   "serp": {},
@@ -416,11 +376,10 @@
     {
       "text": "Audit ChatGPT ad placements in your priority SERPs (P1)",
       "impact": "P1"
-    },
-    {
-      "text": "Launch C2PA/content credential test on 20-50 pages (P2)",
-      "impact": "P2"
     }
   ],
-  "dropped_count": 3
+  "dropped_count": 3,
+  "edits": [
+    "2026-10-14: removed 1 signal(s) that cited no source (unverifiable), and the action item derived from them"
+  ]
 }

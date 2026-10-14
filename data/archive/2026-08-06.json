@@ -26,25 +26,6 @@
         ]
       }
     ],
-    "Playbook: Worth Testing": [
-      {
-        "what_happened": "Bing product feeds guide for ecommerce AI SEO published | Bing商品Feed优化指南发布",
-        "why_it_matters": "Bing Shopping在AI搜索中的权重上升，product feed优化是ecommerce GEO的关键基础设施",
-        "evidence": "Brodie Clark expert analysis with full methodology guide",
-        "evidence_detail": "Brodie Clark published a comprehensive guide on brodieclark.com covering Bing product feed setup, optimization, and integration with AI search features. The guide includes specific feed specifications and ecommerce-focused tactics. No controlled experiment data; this is practitioner-tested methodology based on platform documentation and client work.",
-        "who_it_affects": "ecommerce",
-        "what_to_do": "audit Bing Merchant Center feed completeness | test product title optimization",
-        "confidence": "Observed",
-        "impact": "P2",
-        "section": "Playbook: Worth Testing",
-        "score": 68,
-        "how_to_test": "Set up Bing product feed with AI-optimized titles (feature-benefit structure, 150 chars), submit to Bing Merchant Center, compare CTR and impression share vs. standard titles over 4-6 weeks",
-        "success_metric": "Bing Shopping CTR, impression share, and conversion rate from product listing ads",
-        "effort": "Medium: feed setup 2-4 hours; risk of title changes affecting existing performance",
-        "sources": [],
-        "unverified": true
-      }
-    ],
     "Unconfirmed Watchlist": [
       {
         "what_happened": "Google Chief Scientist Jeff Dean steps away from core search/AI leadership role | Google搜索与AI核心架构师Jeff Dean转岗",
@@ -71,10 +52,6 @@
     "Today's Action Items": [
       {
         "what_to_do": "Monitor Reddit brand/community mentions for AI moderation impact on visibility",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review Bing Merchant Center product feed status if ecommerce",
         "impact": "P2"
       }
     ]
@@ -121,23 +98,6 @@
           "source_type": "trade_news"
         }
       ]
-    },
-    {
-      "what_happened": "Bing product feeds guide for ecommerce AI SEO published | Bing商品Feed优化指南发布",
-      "why_it_matters": "Bing Shopping在AI搜索中的权重上升，product feed优化是ecommerce GEO的关键基础设施",
-      "evidence": "Brodie Clark expert analysis with full methodology guide",
-      "evidence_detail": "Brodie Clark published a comprehensive guide on brodieclark.com covering Bing product feed setup, optimization, and integration with AI search features. The guide includes specific feed specifications and ecommerce-focused tactics. No controlled experiment data; this is practitioner-tested methodology based on platform documentation and client work.",
-      "who_it_affects": "ecommerce",
-      "what_to_do": "audit Bing Merchant Center feed completeness | test product title optimization",
-      "confidence": "Observed",
-      "impact": "P2",
-      "section": "Playbook: Worth Testing",
-      "score": 68,
-      "how_to_test": "Set up Bing product feed with AI-optimized titles (feature-benefit structure, 150 chars), submit to Bing Merchant Center, compare CTR and impression share vs. standard titles over 4-6 weeks",
-      "success_metric": "Bing Shopping CTR, impression share, and conversion rate from product listing ads",
-      "effort": "Medium: feed setup 2-4 hours; risk of title changes affecting existing performance",
-      "sources": [],
-      "unverified": true
     }
   ],
   "serp": {},
@@ -283,11 +243,10 @@
     {
       "text": "Monitor Reddit brand/community mentions for AI moderation impact on visibility",
       "impact": "P2"
-    },
-    {
-      "text": "Review Bing Merchant Center product feed status if ecommerce",
-      "impact": "P2"
     }
   ],
-  "dropped_count": 5
+  "dropped_count": 5,
+  "edits": [
+    "2026-10-14: removed 1 signal(s) that cited no source (unverifiable), and the action item derived from them"
+  ]
 }

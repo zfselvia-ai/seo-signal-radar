@@ -181,22 +181,6 @@
         ]
       }
     ],
-    "Tools, Papers & Open Source": [
-      {
-        "what_happened": "Google Trends adds explore maps and regional breakdown | Google Trends新增探索地图和区域细分功能",
-        "why_it_matters": "为国际SEO和本地SEO提供更精细的地理需求洞察，支持更精准的内容本地化决策。",
-        "evidence": "Search Engine Roundtable reports Google Trends added interactive explore maps and regional breakdown features for clearer data storytelling.",
-        "evidence_detail": "Google announced two new features: interactive 'explore maps' for visualizing trend data geographically, and 'regional breakdown' for comparing interest across sub-regions. Designed for clearer data storytelling. The feature appears to be rolling out globally. No impact on search rankings; this is a research tool enhancement.",
-        "who_it_affects": "international / local",
-        "what_to_do": "利用新功能识别区域需求差异，指导本地化内容策略",
-        "confidence": "Speculative",
-        "impact": "P3",
-        "section": "Tools, Papers & Open Source",
-        "score": 62,
-        "sources": [],
-        "unverified": true
-      }
-    ],
     "Today's Action Items": [
       {
         "what_to_do": "测试你的品牌在ChatGPT Search品类查询中的出现率，并验证site:yourdomain.com下的页面信息完整性",
@@ -204,10 +188,6 @@
       },
       {
         "what_to_do": "审计列表/对比格式内容在AI搜索中的表现，考虑增加深度单主题内容测试",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "利用Google Trends新地图功能识别国际市场的区域需求差异",
         "impact": "P2"
       }
     ]
@@ -336,20 +316,6 @@
           "source_type": "expert_analysis"
         }
       ]
-    },
-    {
-      "what_happened": "Google Trends adds explore maps and regional breakdown | Google Trends新增探索地图和区域细分功能",
-      "why_it_matters": "为国际SEO和本地SEO提供更精细的地理需求洞察，支持更精准的内容本地化决策。",
-      "evidence": "Search Engine Roundtable reports Google Trends added interactive explore maps and regional breakdown features for clearer data storytelling.",
-      "evidence_detail": "Google announced two new features: interactive 'explore maps' for visualizing trend data geographically, and 'regional breakdown' for comparing interest across sub-regions. Designed for clearer data storytelling. The feature appears to be rolling out globally. No impact on search rankings; this is a research tool enhancement.",
-      "who_it_affects": "international / local",
-      "what_to_do": "利用新功能识别区域需求差异，指导本地化内容策略",
-      "confidence": "Speculative",
-      "impact": "P3",
-      "section": "Tools, Papers & Open Source",
-      "score": 62,
-      "sources": [],
-      "unverified": true
     },
     {
       "what_happened": "Microsoft Advertising rolls out AI Max globally | Microsoft Advertising全球推出AI Max功能",
@@ -551,5 +517,8 @@
     "candidates_fetched": 69,
     "candidates_fresh": 46,
     "llm_provider": ""
-  }
+  },
+  "edits": [
+    "2026-10-14: removed 1 signal(s) that cited no source (unverifiable), and the action item derived from them"
+  ]
 }
