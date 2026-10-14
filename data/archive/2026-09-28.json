@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2104277378314764289"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "To catch Muse -> OpenAI to possibly announce \"o\" always-on agent during DevDay \"An always-on agent would fit OpenAI’s br",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2104245248603939156"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "How do you actually improve AI search visibility without guessing? @aleyda has just updated her AI Search Optimization F",
@@ -42,15 +44,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2104162400169849234"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @VeryWellVersed: Andrew Ng just dropped the best 2-hour course on Graph Engineering: from single agent to full aut",
@@ -58,15 +61,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2104300857928098075"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I’m struck by the similarity to something I’ve said a lot about jobs as AI gets more capable: “it’s our job to want thin",
@@ -74,15 +78,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2104097221667107056"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @dawnieando: 🎢 The Top Search Updates & News of the Week are Here [From #SEOFOMO - Sep 27, 2026] 👇 * ​Google Septe",
@@ -90,15 +95,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2104248821865648354"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Got the SaaS book by @robwalling at @MicroConf Europe earlier this week (he was kind to give away to anybody at the conf",
@@ -106,15 +112,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2104265606635635125"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google's 28th Birthday Doodle Takes You To Google AI Mode Quiz - Search Engine Roundtable. Google's 28th Birthday Doodle",
@@ -122,29 +129,16 @@
         "evidence": "Search Engine Roundtable",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Roundtable",
             "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hM2VQdURtY1BvTGYzZnlDRDFlSUdWZG5DQUNxVzA0ZXBqbWZSbUUwWENFdG84eU96YnJMZzkxZzUyMVpBa1RUelZqNjV5LWZPQU9NTlhjTjhuWGJkTW1YVXFvcWVLTllkbVJndVdzRzRzcTYwOWE4?oc=5"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: The Internet is changing more today than at any point since Cloudflare launched",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: To catch Muse -> OpenAI to possibly announce \"o\" always-on agent during DevDay \"",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review brodieseo: How do you actually improve AI search visibility without guessing? @aleyda has j",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2104277378314764289"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "To catch Muse -> OpenAI to possibly announce \"o\" always-on agent during DevDay \"An always-on agent would fit OpenAI’s br",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2104245248603939156"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "How do you actually improve AI search visibility without guessing? @aleyda has just updated her AI Search Optimization F",
@@ -187,15 +183,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2104162400169849234"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @VeryWellVersed: Andrew Ng just dropped the best 2-hour course on Graph Engineering: from single agent to full aut",
@@ -203,15 +200,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2104300857928098075"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I’m struck by the similarity to something I’ve said a lot about jobs as AI gets more capable: “it’s our job to want thin",
@@ -219,15 +217,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2104097221667107056"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @dawnieando: 🎢 The Top Search Updates & News of the Week are Here [From #SEOFOMO - Sep 27, 2026] 👇 * ​Google Septe",
@@ -235,15 +234,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2104248821865648354"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Got the SaaS book by @robwalling at @MicroConf Europe earlier this week (he was kind to give away to anybody at the conf",
@@ -251,15 +251,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2104265606635635125"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google's 28th Birthday Doodle Takes You To Google AI Mode Quiz - Search Engine Roundtable. Google's 28th Birthday Doodle",
@@ -267,15 +268,16 @@
       "evidence": "Search Engine Roundtable",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Roundtable",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hM2VQdURtY1BvTGYzZnlDRDFlSUdWZG5DQUNxVzA0ZXBqbWZSbUUwWENFdG84eU96YnJMZzkxZzUyMVpBa1RUelZqNjV5LWZPQU9NTlhjTjhuWGJkTW1YVXFvcWVLTllkbVJndVdzRzRzcTYwOWE4?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 358c57d1fcb34b03-20260928143139584)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '358c57d1fcb34b03-20260928143139584'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: The Internet is changing more today than at any point since Cloudflare launched",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: To catch Muse -> OpenAI to possibly announce \"o\" always-on agent during DevDay \"",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review brodieseo: How do you actually improve AI search visibility without guessing? @aleyda has j",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-09-28T06:31:36.262646+00:00",
     "sources": {
@@ -440,5 +429,6 @@
     "candidates_fetched": 49,
     "candidates_fresh": 24,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

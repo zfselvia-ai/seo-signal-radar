@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2106101130723840314"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Yep, like this. Oh, and how about that last screenshot. See the cards from third-party sites.. Yep, like this. Oh, and h",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2106073577728471112"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "If I was a clickstream data provider, I would train distilled models from prompt-response pairs and sell them to the AEO",
@@ -42,15 +44,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2106187019630035334"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @cyberandy: E-E-E-A-T? Effort is becoming a powerful heuristic for Google Quality Raters makes sense - if a lot of",
@@ -58,15 +61,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2106013678646493236"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Streaming pricing increases are out of control.. Streaming pricing increases are out of control.",
@@ -74,15 +78,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2106102078854599164"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @jasonmbarnard: See whether AI is confident or hedging when it talks about you; take the AI Audit for FREE >> https",
@@ -90,15 +95,16 @@
         "evidence": "jasonmbarnard",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jasonmbarnard",
             "url": "https://x.com/jasonmbarnard/status/2105966082762936619"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Updated guidance on using generative AI content. What : Updated the using generative AI content guide with information f",
@@ -106,15 +112,16 @@
         "evidence": "Google Search Docs Updates",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Google Search Docs Updates",
             "url": "https://developers.google.com/search/updates#october-2026"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Thoughts from the SearchPilot team | AI (3) - SearchPilot. Thoughts from the SearchPilot team | AI (3) &nbsp;&nbsp; Sear",
@@ -122,29 +129,16 @@
         "evidence": "SearchPilot Resources",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "SearchPilot Resources",
             "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0xUEN0dGNRdU9KX0E5aVJqVWxvanhKX216N3FKXzFLSmZxSTRmcDlNbEQ1X3UyaEV1RUdYZkg1MTdHTkFXY1h4WWpqUExYV3hXNHp3VFFGeVRnR3E0R3RwVGFzNFllajg?oc=5"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: Today, we’re releasing a new developer playground, Streamline, that demonstrates",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Yep, like this. Oh, and how about that last screenshot. See the cards from third",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review VeryWellVersed: If I was a clickstream data provider, I would train distilled models from prompt",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2106101130723840314"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Yep, like this. Oh, and how about that last screenshot. See the cards from third-party sites.. Yep, like this. Oh, and h",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2106073577728471112"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "If I was a clickstream data provider, I would train distilled models from prompt-response pairs and sell them to the AEO",
@@ -187,15 +183,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2106187019630035334"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @cyberandy: E-E-E-A-T? Effort is becoming a powerful heuristic for Google Quality Raters makes sense - if a lot of",
@@ -203,15 +200,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2106013678646493236"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Streaming pricing increases are out of control.. Streaming pricing increases are out of control.",
@@ -219,15 +217,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2106102078854599164"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @jasonmbarnard: See whether AI is confident or hedging when it talks about you; take the AI Audit for FREE >> https",
@@ -235,15 +234,16 @@
       "evidence": "jasonmbarnard",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jasonmbarnard",
           "url": "https://x.com/jasonmbarnard/status/2105966082762936619"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Updated guidance on using generative AI content. What : Updated the using generative AI content guide with information f",
@@ -251,15 +251,16 @@
       "evidence": "Google Search Docs Updates",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Google Search Docs Updates",
           "url": "https://developers.google.com/search/updates#october-2026"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Thoughts from the SearchPilot team | AI (3) - SearchPilot. Thoughts from the SearchPilot team | AI (3) &nbsp;&nbsp; Sear",
@@ -267,15 +268,16 @@
       "evidence": "SearchPilot Resources",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "SearchPilot Resources",
           "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0xUEN0dGNRdU9KX0E5aVJqVWxvanhKX216N3FKXzFLSmZxSTRmcDlNbEQ1X3UyaEV1RUdYZkg1MTdHTkFXY1h4WWpqUExYV3hXNHp3VFFGeVRnR3E0R3RwVGFzNFllajg?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 83dd1fc3e1ef4120-20261003140639568)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '83dd1fc3e1ef4120-20261003140639568'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: Today, we’re releasing a new developer playground, Streamline, that demonstrates",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Yep, like this. Oh, and how about that last screenshot. See the cards from third",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review VeryWellVersed: If I was a clickstream data provider, I would train distilled models from prompt",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-10-03T06:06:37.353343+00:00",
     "sources": {
@@ -440,5 +429,6 @@
     "candidates_fetched": 99,
     "candidates_fresh": 73,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

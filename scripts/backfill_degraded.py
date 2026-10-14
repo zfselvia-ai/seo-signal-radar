@@ -27,13 +27,50 @@ import sys
 SENTINEL = "LLM summary unavailable"
 
 
-def is_fallback(rec: dict) -> bool:
-    if rec.get("degraded"):
-        return False  # already marked; nothing to do
+def _has_sentinel(rec: dict) -> bool:
     if SENTINEL in (rec.get("headline") or ""):
         return True
     return any(SENTINEL in (s.get("why_it_matters") or "")
                for s in rec.get("signals", []))
+
+
+def _generated_actions(rec: dict) -> set:
+    """Action-item texts the CI fallback (origin 8957934) derived mechanically
+    from each raw item: "Review <evidence>: <first 80 chars>", carrying the
+    item's placeholder P2. Nobody decided these, so they are removed."""
+    out = set()
+    for s in rec.get("signals", []):
+        src = s.get("evidence") or "source"
+        cut = (s.get("what_happened") or "")[:80]
+        # The live fallback stripped the cut; the later backfill commits
+        # (origin 27a7047..2091f6b) did not, leaving a trailing space.
+        for topic in {cut.strip(), cut}:
+            out.add(f"Review {src}: {topic}" if topic.strip() else f"Review {src} signal")
+    return out
+
+
+def _action_text(a: dict) -> str:
+    return a.get("what_to_do") or a.get("text") or ""
+
+
+def _demoted(s: dict) -> bool:
+    return bool(s.get("degraded")) and s.get("confidence") == "Speculative" \
+        and s.get("impact") == "P3"
+
+
+def is_fallback(rec: dict) -> bool:
+    """A fallback day that is not yet fully marked. Records written by the CI
+    branch can carry degraded=True while their signals still say Observed/P2
+    and their action items still say "Review ...", so the flag alone is not
+    proof the record was fixed."""
+    if not _has_sentinel(rec):
+        return False
+    gen = _generated_actions(rec)
+    acts = ((rec.get("sections") or {}).get("Today's Action Items") or []) \
+        + (rec.get("action_items") or [])
+    return (not rec.get("degraded")
+            or not all(_demoted(s) for s in rec.get("signals", []))
+            or any(_action_text(a) in gen for a in acts))
 
 
 def fix(rec: dict) -> dict:
@@ -50,12 +87,21 @@ def fix(rec: dict) -> dict:
         s["impact"] = "P3"
         return s
 
+    gen = _generated_actions(rec)
     rec["signals"] = [demote(s) for s in rec.get("signals", [])]
-    for sec, arr in (rec.get("sections") or {}).items():
+    sections = rec.get("sections") or {}
+    for sec, arr in sections.items():
         if sec == "Today's Action Items":
             continue
         for s in arr:
             demote(s)
+    kept = [a for a in sections.get("Today's Action Items", []) if _action_text(a) not in gen]
+    if kept:
+        sections["Today's Action Items"] = kept
+    else:
+        sections.pop("Today's Action Items", None)
+    if "action_items" in rec:
+        rec["action_items"] = [a for a in rec["action_items"] if _action_text(a) not in gen]
     return rec
 
 

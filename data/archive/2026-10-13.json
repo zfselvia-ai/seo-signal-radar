@@ -10,15 +10,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2109728709846642709"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @jonoalderson: Say goodbye to \"Replay XHR\" in DevTools and hello to \"Resend\" 👋 Instantly refire web requests while",
@@ -26,15 +27,16 @@
         "evidence": "jonoalderson",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jonoalderson",
             "url": "https://x.com/jonoalderson/status/2109728310959755709"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I was very sorry to hear this. A universally-liked pillar of the industry. He will be missed.. I was very sorry to hear ",
@@ -42,15 +44,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2109766293591089287"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Some of the best times in my industry life have been spent in the company of @nickwilsdon. He was hilarious, supremely c",
@@ -58,15 +61,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2109721043816652808"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @jasonmbarnard: See whether the machines already trust and repeat the message you want them to; take the AI Audit f",
@@ -74,15 +78,16 @@
         "evidence": "jasonmbarnard",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jasonmbarnard",
             "url": "https://x.com/jasonmbarnard/status/2109627062684373112"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Cya in the morrow, Spotlight. Cya in the morrow, Spotlight",
@@ -90,15 +95,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2109693415743250622"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied). We wanted to see for ourselves how ChatGPT retrieves inform",
@@ -106,15 +112,16 @@
         "evidence": "Ahrefs Blog",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Ahrefs Blog",
             "url": "https://ahrefs.com/blog/query-fan-out-chatgpt/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Claude Got Guidelines, Now What?. On October 8, Anthropic published its 2026 Usage Policy update, and most of the covera",
@@ -122,29 +129,16 @@
         "evidence": "iPullRank Blog",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "iPullRank Blog",
             "url": "https://ipullrank.com/claude-geo-guidelines"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review glenngabe: No slowdown ahead -> Meta introduces Muse Wonder and Muse Wonder Full, saying th",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review jonoalderson: RT by @jonoalderson: Say goodbye to \"Replay XHR\" in DevTools and hello to \"Resen",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review willcritchlow: I was very sorry to hear this. A universally-liked pillar of the industry. He wi",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2109728709846642709"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @jonoalderson: Say goodbye to \"Replay XHR\" in DevTools and hello to \"Resend\" 👋 Instantly refire web requests while",
@@ -171,15 +166,16 @@
       "evidence": "jonoalderson",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jonoalderson",
           "url": "https://x.com/jonoalderson/status/2109728310959755709"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I was very sorry to hear this. A universally-liked pillar of the industry. He will be missed.. I was very sorry to hear ",
@@ -187,15 +183,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2109766293591089287"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Some of the best times in my industry life have been spent in the company of @nickwilsdon. He was hilarious, supremely c",
@@ -203,15 +200,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2109721043816652808"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @jasonmbarnard: See whether the machines already trust and repeat the message you want them to; take the AI Audit f",
@@ -219,15 +217,16 @@
       "evidence": "jasonmbarnard",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jasonmbarnard",
           "url": "https://x.com/jasonmbarnard/status/2109627062684373112"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Cya in the morrow, Spotlight. Cya in the morrow, Spotlight",
@@ -235,15 +234,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2109693415743250622"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied). We wanted to see for ourselves how ChatGPT retrieves inform",
@@ -251,15 +251,16 @@
       "evidence": "Ahrefs Blog",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Ahrefs Blog",
           "url": "https://ahrefs.com/blog/query-fan-out-chatgpt/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Claude Got Guidelines, Now What?. On October 8, Anthropic published its 2026 Usage Policy update, and most of the covera",
@@ -267,15 +268,16 @@
       "evidence": "iPullRank Blog",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "iPullRank Blog",
           "url": "https://ipullrank.com/claude-geo-guidelines"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 5d5051028e00f9e5-20261013153224891)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '5d5051028e00f9e5-20261013153224891'}",
-  "action_items": [
-    {
-      "what_to_do": "Review glenngabe: No slowdown ahead -> Meta introduces Muse Wonder and Muse Wonder Full, saying th",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review jonoalderson: RT by @jonoalderson: Say goodbye to \"Replay XHR\" in DevTools and hello to \"Resen",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review willcritchlow: I was very sorry to hear this. A universally-liked pillar of the industry. He wi",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-10-13T07:32:22.801234+00:00",
     "sources": {
@@ -448,5 +437,6 @@
     "candidates_fetched": 84,
     "candidates_fresh": 62,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

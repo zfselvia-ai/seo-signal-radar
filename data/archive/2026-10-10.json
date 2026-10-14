@@ -10,15 +10,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2108596946063466568"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "An uber driver told me the other day he had Dua Lipa in his car one time and he didn't know it was her. On the way out s",
@@ -26,15 +27,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2108745960490672176"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "When you start doing public speaking, recording videos etc, it's pretty universal to hate the sound of your own voice. I",
@@ -42,15 +44,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2108574466720604179"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I don’t know what’s worse: 1) that he was named like that 2) that he didn’t change his name 3) that people voted him des",
@@ -58,15 +61,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2108635891958743477"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Most people think GEO is about producing more content. It's not. The machines don't care how much you publish, they care",
@@ -74,15 +78,16 @@
         "evidence": "jasonmbarnard",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jasonmbarnard",
             "url": "https://x.com/jasonmbarnard/status/2108498264211308868"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Explains How To Use HTML Sitemaps For SEO via @sejournal, @martinibuster. Google explains why HTML sitemaps may s",
@@ -90,15 +95,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Incremental revenue from spur-of-the-moment additions will be cut (and maybe dramatically) -> AI agents like Muse can sh",
@@ -106,15 +112,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2108595139589411238"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @VeryWellVersed: Gemini by Google Gemini for Google by Google Cloud's Gemini.. Gemini by Google Gemini for Google ",
@@ -122,29 +129,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2108654306379301355"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review glenngabe: When discussing AI and Search, I've spoken to a number of people who tell me, \"I",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review VeryWellVersed: An uber driver told me the other day he had Dua Lipa in his car one time and he",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review willcritchlow: When you start doing public speaking, recording videos etc, it's pretty universa",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2108596946063466568"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "An uber driver told me the other day he had Dua Lipa in his car one time and he didn't know it was her. On the way out s",
@@ -171,15 +166,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2108745960490672176"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "When you start doing public speaking, recording videos etc, it's pretty universal to hate the sound of your own voice. I",
@@ -187,15 +183,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2108574466720604179"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I don’t know what’s worse: 1) that he was named like that 2) that he didn’t change his name 3) that people voted him des",
@@ -203,15 +200,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2108635891958743477"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Most people think GEO is about producing more content. It's not. The machines don't care how much you publish, they care",
@@ -219,15 +217,16 @@
       "evidence": "jasonmbarnard",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jasonmbarnard",
           "url": "https://x.com/jasonmbarnard/status/2108498264211308868"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Explains How To Use HTML Sitemaps For SEO via @sejournal, @martinibuster. Google explains why HTML sitemaps may s",
@@ -235,15 +234,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/google-explains-how-to-use-html-sitemaps-for-seo/592508/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Incremental revenue from spur-of-the-moment additions will be cut (and maybe dramatically) -> AI agents like Muse can sh",
@@ -251,15 +251,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2108595139589411238"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @VeryWellVersed: Gemini by Google Gemini for Google by Google Cloud's Gemini.. Gemini by Google Gemini for Google ",
@@ -267,15 +268,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2108654306379301355"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: a3df0d8b200c0675-20261010144938115)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'a3df0d8b200c0675-20261010144938115'}",
-  "action_items": [
-    {
-      "what_to_do": "Review glenngabe: When discussing AI and Search, I've spoken to a number of people who tell me, \"I",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review VeryWellVersed: An uber driver told me the other day he had Dua Lipa in his car one time and he",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review willcritchlow: When you start doing public speaking, recording videos etc, it's pretty universa",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-10-10T06:49:35.618555+00:00",
     "sources": {
@@ -445,5 +434,6 @@
     "candidates_fetched": 61,
     "candidates_fresh": 41,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

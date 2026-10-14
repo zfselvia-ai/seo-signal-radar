@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2108834019592847668"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "When sites drop for their core queries due to major algorithm updates, other queries can show up prominently in GSC sinc",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2108924035375485048"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Just shipped a big update to my Edge Images WordPress plugin! Automatically transform image URLs and HTML markup to be u",
@@ -42,15 +44,16 @@
         "evidence": "jonoalderson",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jonoalderson",
             "url": "https://x.com/jonoalderson/status/2108926707667243411"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I am quite suspicious of how often I have to change LED bulbs considering what I was told about their longevity. I am qu",
@@ -58,15 +61,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2109036622348005678"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Repeat with Harrison: “most orchestration steps don’t need a frontier model” 👇👇. Repeat with Harrison: “most orchestrati",
@@ -74,15 +78,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2108907617640984956"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "peec.ai/blog/publish-stats-g…. peec.ai/blog/publish-stats-g… Link Publish stats, get cited: The tactic that put my data ",
@@ -90,15 +95,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2108976482555244591"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Ends Spam Update, Shares Crawl Timing Ranges – SEO Pulse via @sejournal, @MattGSouthern. Google's spam update fin",
@@ -106,15 +112,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-crawl-timing-ranges/592469/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "\"We were conned...\" -> Editors at science publications are facing an influx of AI-written article pitches, sometimes fro",
@@ -122,29 +129,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2108915438507680255"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: Build the next GitHub. Build a new way for hundreds of thousands of agents to wo",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: When sites drop for their core queries due to major algorithm updates, other que",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review jonoalderson: Just shipped a big update to my Edge Images WordPress plugin! Automatically tran",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2108834019592847668"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "When sites drop for their core queries due to major algorithm updates, other queries can show up prominently in GSC sinc",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2108924035375485048"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Just shipped a big update to my Edge Images WordPress plugin! Automatically transform image URLs and HTML markup to be u",
@@ -187,15 +183,16 @@
       "evidence": "jonoalderson",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jonoalderson",
           "url": "https://x.com/jonoalderson/status/2108926707667243411"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I am quite suspicious of how often I have to change LED bulbs considering what I was told about their longevity. I am qu",
@@ -203,15 +200,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2109036622348005678"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Repeat with Harrison: “most orchestration steps don’t need a frontier model” 👇👇. Repeat with Harrison: “most orchestrati",
@@ -219,15 +217,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2108907617640984956"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "peec.ai/blog/publish-stats-g…. peec.ai/blog/publish-stats-g… Link Publish stats, get cited: The tactic that put my data ",
@@ -235,15 +234,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2108976482555244591"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Ends Spam Update, Shares Crawl Timing Ranges – SEO Pulse via @sejournal, @MattGSouthern. Google's spam update fin",
@@ -251,15 +251,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-crawl-timing-ranges/592469/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "\"We were conned...\" -> Editors at science publications are facing an influx of AI-written article pitches, sometimes fro",
@@ -267,15 +268,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2108915438507680255"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: ab45d039b5537355-20261011145637287)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'ab45d039b5537355-20261011145637287'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: Build the next GitHub. Build a new way for hundreds of thousands of agents to wo",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: When sites drop for their core queries due to major algorithm updates, other que",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review jonoalderson: Just shipped a big update to my Edge Images WordPress plugin! Automatically tran",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-10-11T06:56:35.396024+00:00",
     "sources": {
@@ -446,5 +435,6 @@
     "candidates_fetched": 33,
     "candidates_fresh": 13,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

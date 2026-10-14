@@ -10,15 +10,16 @@
         "evidence": "Search Engine Land",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Land",
             "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWm5YaVpqZU1nRm5WTHpxaFE2a0huRWlmUThGd0pNTmdNaGVJN251VURIX2ExdjZScWppSWlDOE5GUl84MEY5X2tvWWpRNWtrRnVsSEI2YllDUzFrV3hJczdfb0xPc2hzUDBrX09vRGNBZFFhTTViOThVb0dfZHZMcXliUEFyTWM?oc=5"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "5 AI Models, 4 Signals: What 120K Mentions Reveal About Multi-Location SEO. Explore how multi-location businesses can op",
@@ -26,15 +27,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/ai-signals-multi-location-uberall-spa/587988/"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -45,15 +47,16 @@
       "evidence": "Search Engine Land",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Land",
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWm5YaVpqZU1nRm5WTHpxaFE2a0huRWlmUThGd0pNTmdNaGVJN251VURIX2ExdjZScWppSWlDOE5GUl84MEY5X2tvWWpRNWtrRnVsSEI2YllDUzFrV3hJczdfb0xPc2hzUDBrX09vRGNBZFFhTTViOThVb0dfZHZMcXliUEFyTWM?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "5 AI Models, 4 Signals: What 120K Mentions Reveal About Multi-Location SEO. Explore how multi-location businesses can op",
@@ -61,15 +64,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/ai-signals-multi-location-uberall-spa/587988/"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -220,5 +224,6 @@
     "candidates_fetched": 94,
     "candidates_fresh": 2,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

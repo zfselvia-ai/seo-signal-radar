@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2104991623637578130"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Make sure to watch the video where you can see the guy baking a cake while his Dot does everything. It's pretty creepy I",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2104993971973820731"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @jonoalderson: \"Jev gate\" is such an instantly useful term to adopt. \"Jev gate\" is such an instantly useful term t",
@@ -42,15 +44,16 @@
         "evidence": "jonoalderson",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jonoalderson",
             "url": "https://x.com/jonoalderson/status/2104967231364878623"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I was always taken by Wigner’s comment about “the unreasonable effectiveness of mathematics”. Is there a similarly pithy",
@@ -58,15 +61,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2104850684952895537"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "No. No Harrison Chase (@hwchase17) No — http://nitter.jaydenha.uk/hwchase17/status/2104999562285035723#m",
@@ -74,15 +78,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2105009579235098852"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Holy cow, are chatgpt dots a hard rip off of grokbot?. Holy cow, are chatgpt dots a hard rip off of grokbot?",
@@ -90,15 +95,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2105014580535513119"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "In 2012, Google's answer for my name was \"the voice of a cartoon blue dog.\" Not making that up & it cost me a six-figure",
@@ -106,15 +112,16 @@
         "evidence": "jasonmbarnard",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jasonmbarnard",
             "url": "https://x.com/jasonmbarnard/status/2104849695692492880"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "ChatGPT shortlists: How to benchmark visibility and find room to compete - searchengineland.com. ChatGPT shortlists: How",
@@ -122,29 +129,16 @@
         "evidence": "Search Engine Land",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Land",
             "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSFpyWGJpbWJ3dnl3a3BiTThYTmRGWmFfTXlOVDRaMzFoeE5PSHhGTENzTTRoQVljMXJ1X2c0T3ZnX3IxNm9lUFhzMG5RWFIyNExDVGdtc0lKWjUxQjY2VXd4YV9Cc181c215Qno5M0xqcVRLUUdoUjAtR1FKNUpSY2g1U3NyYlJ5SjRn?oc=5"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: Thank you #CloudflareConnect Diamond sponsor @Oracle! 💎 Build secure, high-perfo",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Make sure to watch the video where you can see the guy baking a cake while his D",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review jonoalderson: RT by @jonoalderson: \"Jev gate\" is such an instantly useful term to adopt. \"Jev",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2104991623637578130"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Make sure to watch the video where you can see the guy baking a cake while his Dot does everything. It's pretty creepy I",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2104993971973820731"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @jonoalderson: \"Jev gate\" is such an instantly useful term to adopt. \"Jev gate\" is such an instantly useful term t",
@@ -187,15 +183,16 @@
       "evidence": "jonoalderson",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jonoalderson",
           "url": "https://x.com/jonoalderson/status/2104967231364878623"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I was always taken by Wigner’s comment about “the unreasonable effectiveness of mathematics”. Is there a similarly pithy",
@@ -203,15 +200,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2104850684952895537"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "No. No Harrison Chase (@hwchase17) No — http://nitter.jaydenha.uk/hwchase17/status/2104999562285035723#m",
@@ -219,15 +217,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2105009579235098852"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Holy cow, are chatgpt dots a hard rip off of grokbot?. Holy cow, are chatgpt dots a hard rip off of grokbot?",
@@ -235,15 +234,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2105014580535513119"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "In 2012, Google's answer for my name was \"the voice of a cartoon blue dog.\" Not making that up & it cost me a six-figure",
@@ -251,15 +251,16 @@
       "evidence": "jasonmbarnard",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jasonmbarnard",
           "url": "https://x.com/jasonmbarnard/status/2104849695692492880"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "ChatGPT shortlists: How to benchmark visibility and find room to compete - searchengineland.com. ChatGPT shortlists: How",
@@ -267,15 +268,16 @@
       "evidence": "Search Engine Land",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Land",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSFpyWGJpbWJ3dnl3a3BiTThYTmRGWmFfTXlOVDRaMzFoeE5PSHhGTENzTTRoQVljMXJ1X2c0T3ZnX3IxNm9lUFhzMG5RWFIyNExDVGdtc0lKWjUxQjY2VXd4YV9Cc181c215Qno5M0xqcVRLUUdoUjAtR1FKNUpSY2g1U3NyYlJ5SjRn?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: fcd73a38cb7ebb9f-20260930142120328)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'fcd73a38cb7ebb9f-20260930142120328'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: Thank you #CloudflareConnect Diamond sponsor @Oracle! 💎 Build secure, high-perfo",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Make sure to watch the video where you can see the guy baking a cake while his D",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review jonoalderson: RT by @jonoalderson: \"Jev gate\" is such an instantly useful term to adopt. \"Jev",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-09-30T06:21:08.968423+00:00",
     "sources": {
@@ -440,5 +429,6 @@
     "candidates_fetched": 103,
     "candidates_fresh": 86,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

@@ -10,15 +10,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2109340301936742788"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "This is incredible. Put this person in charge of the whole Matrix.. This is incredible. Put this person in charge of the",
@@ -26,15 +27,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2109402828816998725"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Sucker for a 2x2 and this is a doozy. Sucker for a 2x2 and this is a doozy Shivers (@thinkingshivers) I've been thinking",
@@ -42,15 +44,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2109233307380552020"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @aleyda: Using Claude to try to influence AI responses? This is a great catch by @HannsKronenberg and @MattGSouthe",
@@ -58,15 +61,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2109331556774953007"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Search Console Performance Report Extremely Delayed - Search Engine Roundtable. Google Search Console Performance",
@@ -74,15 +78,16 @@
         "evidence": "Search Engine Roundtable",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Roundtable",
             "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVkRGUVl5ZGlXdTQ2UHhHYWRoSExhbXZHU0FxTG1uSTg4bFFxdXpOblVKNzBpTFNPNTdoNUttVzRoUVhJVnBXUFliUlNYdUtFUHBWUkoyVkE4VEZMZUkzektmWnA3TmFwMmo0LXNQX0FMTllocjNaOUxDaTQ5SjBxUFhvcER1WnRvYUdCdGtlSGlidw?oc=5"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Focus on health/medical? \"Arborio\" and \"Iggy\" -> Anthropic tests Claude Health for web and mysterious \"iggy\" \"Arborio an",
@@ -90,15 +95,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2109274724865900892"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @VeryWellVersed: Dusting off this tweet from April because this gap in shared understanding of LLM capability is *",
@@ -106,15 +112,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2109361546505966046"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Anyone else find it weird that red light outside a recording studio means “live” but on my mic it means muted?. Anyone e",
@@ -122,29 +129,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2109232956640522338"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review glenngabe: Yep, like we've been saying for a long time, the AI platforms are NOT going to l",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review VeryWellVersed: This is incredible. Put this person in charge of the whole Matrix.. This is incr",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review willcritchlow: Sucker for a 2x2 and this is a doozy. Sucker for a 2x2 and this is a doozy Shive",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2109340301936742788"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "This is incredible. Put this person in charge of the whole Matrix.. This is incredible. Put this person in charge of the",
@@ -171,15 +166,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2109402828816998725"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Sucker for a 2x2 and this is a doozy. Sucker for a 2x2 and this is a doozy Shivers (@thinkingshivers) I've been thinking",
@@ -187,15 +183,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2109233307380552020"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @aleyda: Using Claude to try to influence AI responses? This is a great catch by @HannsKronenberg and @MattGSouthe",
@@ -203,15 +200,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2109331556774953007"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Search Console Performance Report Extremely Delayed - Search Engine Roundtable. Google Search Console Performance",
@@ -219,15 +217,16 @@
       "evidence": "Search Engine Roundtable",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Roundtable",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVkRGUVl5ZGlXdTQ2UHhHYWRoSExhbXZHU0FxTG1uSTg4bFFxdXpOblVKNzBpTFNPNTdoNUttVzRoUVhJVnBXUFliUlNYdUtFUHBWUkoyVkE4VEZMZUkzektmWnA3TmFwMmo0LXNQX0FMTllocjNaOUxDaTQ5SjBxUFhvcER1WnRvYUdCdGtlSGlidw?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Focus on health/medical? \"Arborio\" and \"Iggy\" -> Anthropic tests Claude Health for web and mysterious \"iggy\" \"Arborio an",
@@ -235,15 +234,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2109274724865900892"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @VeryWellVersed: Dusting off this tweet from April because this gap in shared understanding of LLM capability is *",
@@ -251,15 +251,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2109361546505966046"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Anyone else find it weird that red light outside a recording studio means “live” but on my mic it means muted?. Anyone e",
@@ -267,15 +268,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2109232956640522338"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: b8459ec2cfb15d1c-20261012150711177)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'b8459ec2cfb15d1c-20261012150711177'}",
-  "action_items": [
-    {
-      "what_to_do": "Review glenngabe: Yep, like we've been saying for a long time, the AI platforms are NOT going to l",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review VeryWellVersed: This is incredible. Put this person in charge of the whole Matrix.. This is incr",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review willcritchlow: Sucker for a 2x2 and this is a doozy. Sucker for a 2x2 and this is a doozy Shive",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-10-12T07:07:08.809239+00:00",
     "sources": {
@@ -445,5 +434,6 @@
     "candidates_fetched": 62,
     "candidates_fresh": 39,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

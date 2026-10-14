@@ -10,15 +10,16 @@
         "evidence": "lilyraynyc",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "lilyraynyc",
             "url": "https://x.com/lilyraynyc/status/2103851730853323205"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @patrickstox: The GOAT of technical SEO, ex-Ahrefs and IBM, @patrickstox agreed to run the AMA session in the /r/s",
@@ -26,15 +27,16 @@
         "evidence": "patrickstox",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "patrickstox",
             "url": "https://x.com/patrickstox/status/2103846530880819539"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @dawnieando: Great time joining @aleyda @dawnieando and @5le on Crawling Mondays to talk AI search optimizatio, di",
@@ -42,15 +44,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2103839257278271733"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "\"We have not been as fast as we would have liked\". \"We have not been as fast as we would have liked\" Sam Altman (@sama) ",
@@ -58,15 +61,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2103933261000978612"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Spam Update, Image Search Data In GSC – SEO Pulse via @sejournal, @MattGSouthern. Google's September spam update ",
@@ -74,15 +78,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-image-search-data/590882/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "The Claudification of SEO audits. The Claudification of SEO audits James Norquay (@connections8) Lately, I’ve been seein",
@@ -90,15 +95,16 @@
         "evidence": "lilyraynyc",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "lilyraynyc",
             "url": "https://x.com/lilyraynyc/status/2103846684492955985"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @jonoalderson: Lasagna is a monoid. Stack two lasagnas, you get one tall lasagna. This is in contrast to e.g. a pi",
@@ -106,15 +112,16 @@
         "evidence": "jonoalderson",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jonoalderson",
             "url": "https://x.com/jonoalderson/status/2103757598038077846"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "An important news on UCP if you are in the travel business 👇👇. An important news on UCP if you are in the travel busines",
@@ -122,29 +129,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2103928972333506972"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review lilyraynyc: More tying together of creative assets (video in this case) with the people / br",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review patrickstox: RT by @patrickstox: The GOAT of technical SEO, ex-Ahrefs and IBM, @patrickstox a",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review dawnieando: RT by @dawnieando: Great time joining @aleyda @dawnieando and @5le on Crawling M",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "lilyraynyc",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "lilyraynyc",
           "url": "https://x.com/lilyraynyc/status/2103851730853323205"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @patrickstox: The GOAT of technical SEO, ex-Ahrefs and IBM, @patrickstox agreed to run the AMA session in the /r/s",
@@ -171,15 +166,16 @@
       "evidence": "patrickstox",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "patrickstox",
           "url": "https://x.com/patrickstox/status/2103846530880819539"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @dawnieando: Great time joining @aleyda @dawnieando and @5le on Crawling Mondays to talk AI search optimizatio, di",
@@ -187,15 +183,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2103839257278271733"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "\"We have not been as fast as we would have liked\". \"We have not been as fast as we would have liked\" Sam Altman (@sama) ",
@@ -203,15 +200,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2103933261000978612"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Spam Update, Image Search Data In GSC – SEO Pulse via @sejournal, @MattGSouthern. Google's September spam update ",
@@ -219,15 +217,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/seo-pulse-google-spam-update-image-search-data/590882/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "The Claudification of SEO audits. The Claudification of SEO audits James Norquay (@connections8) Lately, I’ve been seein",
@@ -235,15 +234,16 @@
       "evidence": "lilyraynyc",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "lilyraynyc",
           "url": "https://x.com/lilyraynyc/status/2103846684492955985"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @jonoalderson: Lasagna is a monoid. Stack two lasagnas, you get one tall lasagna. This is in contrast to e.g. a pi",
@@ -251,15 +251,16 @@
       "evidence": "jonoalderson",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jonoalderson",
           "url": "https://x.com/jonoalderson/status/2103757598038077846"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "An important news on UCP if you are in the travel business 👇👇. An important news on UCP if you are in the travel busines",
@@ -267,15 +268,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2103928972333506972"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: ca09c966e9d78a45-20260927141834539)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'ca09c966e9d78a45-20260927141834539'}",
-  "action_items": [
-    {
-      "what_to_do": "Review lilyraynyc: More tying together of creative assets (video in this case) with the people / br",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review patrickstox: RT by @patrickstox: The GOAT of technical SEO, ex-Ahrefs and IBM, @patrickstox a",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review dawnieando: RT by @dawnieando: Great time joining @aleyda @dawnieando and @5le on Crawling M",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-09-27T06:18:30.672274+00:00",
     "sources": {
@@ -440,5 +429,6 @@
     "candidates_fetched": 44,
     "candidates_fresh": 15,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2102194692204957874"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Love seeing people take my tutorials and run with them. Hans read my latest post about checking PDF indexing via the Sea",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2102064320708223013"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Aight, so y'all are gonna make me really learn this Jev jawn, huh?. Aight, so y'all are gonna make me really learn this ",
@@ -42,15 +44,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2102203566287106473"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "🤖 Make commercial and transactional information machine-readable for AI search: Commercial and selection prompts depend ",
@@ -58,15 +61,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2102053395632705570"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "How to become the answer in AI search: The ASC framework - Search Engine Land. How to become the answer in AI search: Th",
@@ -74,15 +78,16 @@
         "evidence": "Search Engine Land",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Land",
             "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1pVTZLTUtaM0hHVjlpSEg5Q1g3T1hMZ3g5dTdMVFh2WV92MWhHRVcxSnJUWFREZWt4NXpfQkZXZUlLMVdhWW1fVWhVSDZsaXgtclFWb3Uwem4zcmdMYk4zSklJSW1aQk1JVndn?oc=5"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Join Matt Kane (@ascorbic) at #CloudflareConnect 2026 for a session on rebuilding wordpress in 60 days: how ai workflows",
@@ -90,15 +95,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2102189842620645869"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "You and your agents -> Sources: OpenAI is developing features to counter SpaceX's Grok Bot \"teammates\", and has discusse",
@@ -106,15 +112,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2102061681949958224"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "People think &num=100 died overnight, but there were many workarounds that got systematically shut down. Same thing is h",
@@ -122,29 +129,16 @@
         "evidence": "patrickstox",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "patrickstox",
             "url": "https://x.com/patrickstox/status/2102105374946103769"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: Join us on October 7th for an exclusive webinar on Cloudflare OS. We’re discussi",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Love seeing people take my tutorials and run with them. Hans read my latest post",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review VeryWellVersed: Aight, so y'all are gonna make me really learn this Jev jawn, huh?. Aight, so y'",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2102194692204957874"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Love seeing people take my tutorials and run with them. Hans read my latest post about checking PDF indexing via the Sea",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2102064320708223013"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Aight, so y'all are gonna make me really learn this Jev jawn, huh?. Aight, so y'all are gonna make me really learn this ",
@@ -187,15 +183,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2102203566287106473"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "🤖 Make commercial and transactional information machine-readable for AI search: Commercial and selection prompts depend ",
@@ -203,15 +200,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2102053395632705570"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "How to become the answer in AI search: The ASC framework - Search Engine Land. How to become the answer in AI search: Th",
@@ -219,15 +217,16 @@
       "evidence": "Search Engine Land",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Land",
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1pVTZLTUtaM0hHVjlpSEg5Q1g3T1hMZ3g5dTdMVFh2WV92MWhHRVcxSnJUWFREZWt4NXpfQkZXZUlLMVdhWW1fVWhVSDZsaXgtclFWb3Uwem4zcmdMYk4zSklJSW1aQk1JVndn?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Join Matt Kane (@ascorbic) at #CloudflareConnect 2026 for a session on rebuilding wordpress in 60 days: how ai workflows",
@@ -235,15 +234,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2102189842620645869"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "You and your agents -> Sources: OpenAI is developing features to counter SpaceX's Grok Bot \"teammates\", and has discusse",
@@ -251,15 +251,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2102061681949958224"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "People think &num=100 died overnight, but there were many workarounds that got systematically shut down. Same thing is h",
@@ -267,15 +268,16 @@
       "evidence": "patrickstox",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "patrickstox",
           "url": "https://x.com/patrickstox/status/2102105374946103769"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -427,18 +429,6 @@
     "candidates_fresh": 34,
     "llm_provider": ""
   },
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: Join us on October 7th for an exclusive webinar on Cloudflare OS. We’re discussi",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Love seeing people take my tutorials and run with them. Hans read my latest post",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review VeryWellVersed: Aight, so y'all are gonna make me really learn this Jev jawn, huh?. Aight, so y'",
-      "impact": "P2"
-    }
-  ]
+  "action_items": [],
+  "quiet_day": false
 }

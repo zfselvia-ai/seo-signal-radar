@@ -10,15 +10,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2098766984376660291"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google's Mueller Shares His Experience With Markdown For AI SEO - via @sejournal & @martinibuster #seo https://www.searc",
@@ -26,15 +27,16 @@
         "evidence": "sitebulb",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "sitebulb",
             "url": "https://x.com/sitebulb/status/2098817439639249216"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Man would I love to see the alternate reality in which we pace frontier models and Chinese models are suddenly paced as ",
@@ -42,15 +44,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2098844003282084320"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Search Redesign, Business Profile Post Views – SEO Pulse via @sejournal, @MattGSouthern. Google redesigned Search",
@@ -58,15 +61,16 @@
         "evidence": "Search Engine Journal",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Journal",
             "url": "https://www.searchenginejournal.com/google-search-redesign-business-profile-post-views-seo-pulse/589151/"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Customizable dashboards are live -> Google Analytics launches customizable Dashboards \"Building reports is now drag-and-",
@@ -74,15 +78,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2098758763503128715"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Search Redesign, Business Profile Post Views – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your ",
@@ -90,15 +95,16 @@
         "evidence": "sitebulb",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "sitebulb",
             "url": "https://x.com/sitebulb/status/2098798818040988072"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @Kevin_Indig: 🎙️ How to effectively measure AI search visibility and business impact? A new episode of #CrawlingMo",
@@ -106,15 +112,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2098823475318137233"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Shop the show and shop the scene -> Amazon adds a Shop tab to Prime Video's X-Ray feature for related products while wat",
@@ -122,15 +129,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2098758071518400607"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -141,15 +149,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2098766984376660291"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google's Mueller Shares His Experience With Markdown For AI SEO - via @sejournal & @martinibuster #seo https://www.searc",
@@ -157,15 +166,16 @@
       "evidence": "sitebulb",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "sitebulb",
           "url": "https://x.com/sitebulb/status/2098817439639249216"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Man would I love to see the alternate reality in which we pace frontier models and Chinese models are suddenly paced as ",
@@ -173,15 +183,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2098844003282084320"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Search Redesign, Business Profile Post Views – SEO Pulse via @sejournal, @MattGSouthern. Google redesigned Search",
@@ -189,15 +200,16 @@
       "evidence": "Search Engine Journal",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Journal",
           "url": "https://www.searchenginejournal.com/google-search-redesign-business-profile-post-views-seo-pulse/589151/"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Customizable dashboards are live -> Google Analytics launches customizable Dashboards \"Building reports is now drag-and-",
@@ -205,15 +217,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2098758763503128715"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Search Redesign, Business Profile Post Views – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your ",
@@ -221,15 +234,16 @@
       "evidence": "sitebulb",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "sitebulb",
           "url": "https://x.com/sitebulb/status/2098798818040988072"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @Kevin_Indig: 🎙️ How to effectively measure AI search visibility and business impact? A new episode of #CrawlingMo",
@@ -237,15 +251,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2098823475318137233"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Shop the show and shop the scene -> Amazon adds a Shop tab to Prime Video's X-Ray feature for related products while wat",
@@ -253,15 +268,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2098758071518400607"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -412,5 +428,6 @@
     "candidates_fetched": 46,
     "candidates_fresh": 16,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

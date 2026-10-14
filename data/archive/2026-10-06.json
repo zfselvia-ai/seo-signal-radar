@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2107119689209954373"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "If there is one post you read today, make it this one from Lily. Excellent article covering the latest doc updates Googl",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2107090464935378967"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Ecommerce SEO: This store is missing ~8 million product images in Google Merchant Center. Not on the site. In the feed. ",
@@ -42,15 +44,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2107078351945163086"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "The whole AI > SI thing reminds me of working in corporate. Everyone wanted to name things their own way so they have no",
@@ -58,15 +61,16 @@
         "evidence": "patrickstox",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "patrickstox",
             "url": "https://x.com/patrickstox/status/2107086326818316422"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "DeepSeek-style born in the 🇺🇸.. DeepSeek-style born in the 🇺🇸. clem 🤗 (@ClementDelangue) Let's go huggingface.co/reflect",
@@ -74,15 +78,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2107220445892374960"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "60% more YOY searches, 30% fewer organic search clicks? Welcome to the second SERP Squeeze Monday! 👇 Every Monday, I’m g",
@@ -90,15 +95,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2107112128356155792"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @jasonmbarnard: Watch the full episode to hear why organizing what you already have comes before any kind of push f",
@@ -106,15 +112,16 @@
         "evidence": "jasonmbarnard",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jasonmbarnard",
             "url": "https://x.com/jasonmbarnard/status/2107094678361526283"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Want lasting AI brand visibility? Stop looking for hacks - Search Engine Land. Want lasting AI brand visibility? Stop lo",
@@ -122,29 +129,16 @@
         "evidence": "Search Engine Land",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Land",
             "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OQU1jLThlU3hEaF93YWxGOEc3Q2hTenVHdTlUcVlsX2g2cWdZUHR3SGlGNnMzLUQ1SVJvQ1k2TmVQOFhlclF1MVdEU2FSenRVLWo5SmM2M2lqVnRFN2N2MzZYY25ZT2RCZV9SaHJHV2RkUmF2YTlvR0thM09sUQ?oc=5"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: There's a lot happening at Cloudflare, and some things are better seen in person",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: If there is one post you read today, make it this one from Lily. Excellent artic",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review brodieseo: Ecommerce SEO: This store is missing ~8 million product images in Google Merchan",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2107119689209954373"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "If there is one post you read today, make it this one from Lily. Excellent article covering the latest doc updates Googl",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2107090464935378967"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Ecommerce SEO: This store is missing ~8 million product images in Google Merchant Center. Not on the site. In the feed. ",
@@ -187,15 +183,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2107078351945163086"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "The whole AI > SI thing reminds me of working in corporate. Everyone wanted to name things their own way so they have no",
@@ -203,15 +200,16 @@
       "evidence": "patrickstox",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "patrickstox",
           "url": "https://x.com/patrickstox/status/2107086326818316422"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "DeepSeek-style born in the 🇺🇸.. DeepSeek-style born in the 🇺🇸. clem 🤗 (@ClementDelangue) Let's go huggingface.co/reflect",
@@ -219,15 +217,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2107220445892374960"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "60% more YOY searches, 30% fewer organic search clicks? Welcome to the second SERP Squeeze Monday! 👇 Every Monday, I’m g",
@@ -235,15 +234,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2107112128356155792"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @jasonmbarnard: Watch the full episode to hear why organizing what you already have comes before any kind of push f",
@@ -251,15 +251,16 @@
       "evidence": "jasonmbarnard",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jasonmbarnard",
           "url": "https://x.com/jasonmbarnard/status/2107094678361526283"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Want lasting AI brand visibility? Stop looking for hacks - Search Engine Land. Want lasting AI brand visibility? Stop lo",
@@ -267,15 +268,16 @@
       "evidence": "Search Engine Land",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Land",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OQU1jLThlU3hEaF93YWxGOEc3Q2hTenVHdTlUcVlsX2g2cWdZUHR3SGlGNnMzLUQ1SVJvQ1k2TmVQOFhlclF1MVdEU2FSenRVLWo5SmM2M2lqVnRFN2N2MzZYY25ZT2RCZV9SaHJHV2RkUmF2YTlvR0thM09sUQ?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 91849921327d0804-20261006151654578)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '91849921327d0804-20261006151654578'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: There's a lot happening at Cloudflare, and some things are better seen in person",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: If there is one post you read today, make it this one from Lily. Excellent artic",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review brodieseo: Ecommerce SEO: This store is missing ~8 million product images in Google Merchan",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-10-06T07:16:50.038690+00:00",
     "sources": {
@@ -442,5 +431,6 @@
     "candidates_fetched": 86,
     "candidates_fresh": 55,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

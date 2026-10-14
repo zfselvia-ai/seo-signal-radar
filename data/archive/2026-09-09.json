@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2097369475418931502"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I see this too. Wow, something is off with Google right now. I'll ping Google about this. Homepages of sites are showing",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2097397762476179561"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Ecommerce SEO News: the AI performance report in Google Merchant Center (Google's only AI report that shows queries) is ",
@@ -42,15 +44,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2097290165802979692"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Any of my NYC friends interested in playing basketball in a league with yours truly?. Any of my NYC friends interested i",
@@ -58,15 +61,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2097396620513915100"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Traumatic memories too. Traumatic memories too Alexander (@alexanderrX_) i used to do this exact commute 5 days a week a",
@@ -74,15 +78,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2097437643688579399"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @dawnieando: Google's @JohnMu said Google can lose faith in sites over programmatic SEO efforts, leading to a long",
@@ -90,15 +95,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2096941701759680973"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @cyberandy: \"To produce accurate results, agent factories need organizational context and memory. Top businesses a",
@@ -106,15 +112,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2097287506399998215"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Will is one of the few people who you can disagree with at a very respectable and highly intellectual level.. Will is on",
@@ -122,15 +129,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2097353231177228385"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -141,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2097369475418931502"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I see this too. Wow, something is off with Google right now. I'll ping Google about this. Homepages of sites are showing",
@@ -157,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2097397762476179561"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Ecommerce SEO News: the AI performance report in Google Merchant Center (Google's only AI report that shows queries) is ",
@@ -173,15 +183,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2097290165802979692"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Any of my NYC friends interested in playing basketball in a league with yours truly?. Any of my NYC friends interested i",
@@ -189,15 +200,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2097396620513915100"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Traumatic memories too. Traumatic memories too Alexander (@alexanderrX_) i used to do this exact commute 5 days a week a",
@@ -205,15 +217,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2097437643688579399"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @dawnieando: Google's @JohnMu said Google can lose faith in sites over programmatic SEO efforts, leading to a long",
@@ -221,15 +234,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2096941701759680973"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @cyberandy: \"To produce accurate results, agent factories need organizational context and memory. Top businesses a",
@@ -237,15 +251,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2097287506399998215"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Will is one of the few people who you can disagree with at a very respectable and highly intellectual level.. Will is on",
@@ -253,15 +268,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2097353231177228385"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -409,5 +425,8 @@
     "candidates_fetched": 92,
     "candidates_fresh": 0,
     "llm_provider": ""
-  }
+  },
+  "degraded": true,
+  "degraded_reason": "LLM step failed (backfilled — original reason not recorded)",
+  "quiet_day": false
 }

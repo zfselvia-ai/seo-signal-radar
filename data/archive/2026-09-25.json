@@ -10,15 +10,16 @@
         "evidence": "Google Search Status",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "Confirmed Search Updates",
         "sources": [
           {
             "name": "Google Search Status",
             "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu"
           }
-        ]
+        ],
+        "degraded": true
       }
     ],
     "SERP & Algorithm Signals": [
@@ -28,15 +29,16 @@
         "evidence": "googlesearchc",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "googlesearchc",
             "url": "https://x.com/googlesearchc/status/2103159043347128638"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Regarding the spam update, I just was just on the SEO for Paws panel all about AI visibility spam and covered \"inauthent",
@@ -44,15 +46,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2103209723730559291"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @brodieseo: More details: https://www.seroundtable.com/google-search-console-multimodal-search-type-filter-42156.ht",
@@ -60,15 +63,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2103098742182478249"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Had to jump on @Bar4BarTV and do #BlackMirror with a live band 👇🏾 https://youtu.be/z_2mT5Cyt1o?is=ZclIcqPV5g5baQ8J. Had ",
@@ -76,15 +80,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2103214678315090270"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @willcritchlow: Stuff is happening quite fast. When asked in September 2025, the best superforecasters put the cha",
@@ -92,15 +97,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2102926079791124760"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @dawnieando: 🎙️ The most Common AI Search Optimization Spam, Myths & Risky Tactics to Avoid - A new must episode o",
@@ -108,15 +114,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2103125653600022807"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google when enabling new GSC filters, once again 🤷🏻‍♀️🙈. Google when enabling new GSC filters, once again 🤷🏻‍♀️🙈",
@@ -124,29 +131,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2103227291388281012"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Google Search Status: [Spam Update] September 2026 spam update. Released the September 2026 spam updat",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review googlesearchc: Today we released the September 2026 spam update. We'll update our ranking relea",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Regarding the spam update, I just was just on the SEO for Paws panel all about A",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -157,15 +151,16 @@
       "evidence": "Google Search Status",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "Confirmed Search Updates",
       "sources": [
         {
           "name": "Google Search Status",
           "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Today we released the September 2026 spam update. We'll update our ranking release history page when the rollout is comp",
@@ -173,15 +168,16 @@
       "evidence": "googlesearchc",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "googlesearchc",
           "url": "https://x.com/googlesearchc/status/2103159043347128638"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Regarding the spam update, I just was just on the SEO for Paws panel all about AI visibility spam and covered \"inauthent",
@@ -189,15 +185,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2103209723730559291"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @brodieseo: More details: https://www.seroundtable.com/google-search-console-multimodal-search-type-filter-42156.ht",
@@ -205,15 +202,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2103098742182478249"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Had to jump on @Bar4BarTV and do #BlackMirror with a live band 👇🏾 https://youtu.be/z_2mT5Cyt1o?is=ZclIcqPV5g5baQ8J. Had ",
@@ -221,15 +219,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2103214678315090270"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @willcritchlow: Stuff is happening quite fast. When asked in September 2025, the best superforecasters put the cha",
@@ -237,15 +236,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2102926079791124760"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @dawnieando: 🎙️ The most Common AI Search Optimization Spam, Myths & Risky Tactics to Avoid - A new must episode o",
@@ -253,15 +253,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2103125653600022807"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google when enabling new GSC filters, once again 🤷🏻‍♀️🙈. Google when enabling new GSC filters, once again 🤷🏻‍♀️🙈",
@@ -269,15 +270,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2103227291388281012"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -406,20 +408,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 86c044486fb1e9ac-20260925135349672)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '86c044486fb1e9ac-20260925135349672'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Google Search Status: [Spam Update] September 2026 spam update. Released the September 2026 spam updat",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review googlesearchc: Today we released the September 2026 spam update. We'll update our ranking relea",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Regarding the spam update, I just was just on the SEO for Paws panel all about A",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-09-25T05:53:46.812615+00:00",
     "sources": {
@@ -442,5 +431,6 @@
     "candidates_fetched": 91,
     "candidates_fresh": 74,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

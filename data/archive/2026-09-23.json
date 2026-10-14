@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2102420209474621904"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Again, it makes sense to me that Google might supplement Navboost data with CrUX ad metrics like this since user behavio",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2102485652101120029"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "How do you structure a page to win in the AI era? @chris_nectiv has updated the classic \"Perfectly Optimized Page for SE",
@@ -42,15 +44,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2102372995029512626"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "At the end of the day, we're all just reselling tokens.. At the end of the day, we're all just reselling tokens. Cheaper",
@@ -58,15 +61,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2102543060705948106"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @willcritchlow: 🚨 Upcoming Webinar Alert 🚨 Winning AI Citations Isn't the Same as Winning in Search I've posted a ",
@@ -74,15 +78,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2102459541967528434"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "One of the best things about my professional life: whenever I get lost in the weeds around Noordwijk, Dennis somehow fin",
@@ -90,15 +95,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2102392363649782041"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "What an amazing first day at @microconf Europe presenting, sharing and learning with a wonderful community of SaaS found",
@@ -106,15 +112,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2102403574135161269"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @jasonmbarnard: See what your AI Résumé actually says about you right now. Take the AI Audit for FREE >> https://au",
@@ -122,29 +129,16 @@
         "evidence": "jasonmbarnard",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "jasonmbarnard",
             "url": "https://x.com/jasonmbarnard/status/2102343205887090859"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: We're excited to announce @Accenture as a Diamond sponsor for #CloudflareConnect",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Again, it makes sense to me that Google might supplement Navboost data with CrUX",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review brodieseo: How do you structure a page to win in the AI era? @chris_nectiv has updated the ",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2102420209474621904"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Again, it makes sense to me that Google might supplement Navboost data with CrUX ad metrics like this since user behavio",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2102485652101120029"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "How do you structure a page to win in the AI era? @chris_nectiv has updated the classic \"Perfectly Optimized Page for SE",
@@ -187,15 +183,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2102372995029512626"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "At the end of the day, we're all just reselling tokens.. At the end of the day, we're all just reselling tokens. Cheaper",
@@ -203,15 +200,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2102543060705948106"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @willcritchlow: 🚨 Upcoming Webinar Alert 🚨 Winning AI Citations Isn't the Same as Winning in Search I've posted a ",
@@ -219,15 +217,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2102459541967528434"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "One of the best things about my professional life: whenever I get lost in the weeds around Noordwijk, Dennis somehow fin",
@@ -235,15 +234,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2102392363649782041"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "What an amazing first day at @microconf Europe presenting, sharing and learning with a wonderful community of SaaS found",
@@ -251,15 +251,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2102403574135161269"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @jasonmbarnard: See what your AI Résumé actually says about you right now. Take the AI Audit for FREE >> https://au",
@@ -267,15 +268,16 @@
       "evidence": "jasonmbarnard",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "jasonmbarnard",
           "url": "https://x.com/jasonmbarnard/status/2102343205887090859"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -412,18 +414,6 @@
     "candidates_fresh": 73,
     "llm_provider": ""
   },
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: We're excited to announce @Accenture as a Diamond sponsor for #CloudflareConnect",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Again, it makes sense to me that Google might supplement Navboost data with CrUX",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review brodieseo: How do you structure a page to win in the AI era? @chris_nectiv has updated the ",
-      "impact": "P2"
-    }
-  ]
+  "action_items": [],
+  "quiet_day": false
 }

@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2103715607556640915"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Looks like it dates back to June 2026 (dated late May 2026), before the August spam update and now September spam update",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2103527648286683582"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @brodieseo: Chrome DevTools, rethought for technical SEO. Meet SEO DevTools: 🔍 Diff served HTML vs live DOM 🌐 Trac",
@@ -42,15 +44,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2103462275105566956"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I keep getting a lot of requests to sell our internal data for AI training. What a time to be alive.. I keep getting a l",
@@ -58,15 +61,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2103536620955643983"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Pulling out one of the threads of thought from my post this week, I’ve long thought we are heading quickly to a world wh",
@@ -74,15 +78,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2103502872696779162"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Let’s hope this takes down some of mountains of slop out there. AI Panda hopefully.. Let’s hope this takes down some of ",
@@ -90,15 +95,16 @@
         "evidence": "dawnieando",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "dawnieando",
             "url": "https://x.com/dawnieando/status/2103392424991359257"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @cyberandy: 🤯🤯🤯🙏🏽🙏🏽🙏🏽. 🤯🤯🤯🙏🏽🙏🏽🙏🏽 Marcus Tandler ✰ (@mediadonis) All hail the new SEO World Champion, @lilyraynyc !",
@@ -106,15 +112,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2103466338983547344"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "🤖 Useful Free resource by Findrix featuring which brands ChatGPT, Gemini, Google AI Mode and Perplexity recommend across",
@@ -122,29 +129,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2103473895072239718"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: We’re giving 5 startups 5 minutes each to pitch Cloudflare’s leadership live at",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Looks like it dates back to June 2026 (dated late May 2026), before the August s",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review brodieseo: RT by @brodieseo: Chrome DevTools, rethought for technical SEO. Meet SEO DevTool",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2103715607556640915"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Looks like it dates back to June 2026 (dated late May 2026), before the August spam update and now September spam update",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2103527648286683582"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @brodieseo: Chrome DevTools, rethought for technical SEO. Meet SEO DevTools: 🔍 Diff served HTML vs live DOM 🌐 Trac",
@@ -187,15 +183,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2103462275105566956"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I keep getting a lot of requests to sell our internal data for AI training. What a time to be alive.. I keep getting a l",
@@ -203,15 +200,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2103536620955643983"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Pulling out one of the threads of thought from my post this week, I’ve long thought we are heading quickly to a world wh",
@@ -219,15 +217,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2103502872696779162"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Let’s hope this takes down some of mountains of slop out there. AI Panda hopefully.. Let’s hope this takes down some of ",
@@ -235,15 +234,16 @@
       "evidence": "dawnieando",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "dawnieando",
           "url": "https://x.com/dawnieando/status/2103392424991359257"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @cyberandy: 🤯🤯🤯🙏🏽🙏🏽🙏🏽. 🤯🤯🤯🙏🏽🙏🏽🙏🏽 Marcus Tandler ✰ (@mediadonis) All hail the new SEO World Champion, @lilyraynyc !",
@@ -251,15 +251,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2103466338983547344"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "🤖 Useful Free resource by Findrix featuring which brands ChatGPT, Gemini, Google AI Mode and Perplexity recommend across",
@@ -267,15 +268,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2103473895072239718"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 0ed908802340a3d6-20260926135429260)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '0ed908802340a3d6-20260926135429260'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: We’re giving 5 startups 5 minutes each to pitch Cloudflare’s leadership live at",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Looks like it dates back to June 2026 (dated late May 2026), before the August s",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review brodieseo: RT by @brodieseo: Chrome DevTools, rethought for technical SEO. Meet SEO DevTool",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-09-26T05:54:16.923352+00:00",
     "sources": {
@@ -440,5 +429,6 @@
     "candidates_fetched": 68,
     "candidates_fresh": 47,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

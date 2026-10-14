@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2100584812994052396"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Business Agent for YouTube Ads beta -> I forgot that Google actually beat ChatGPT in releasing a business agent in the S",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2100644670670016965"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "I agree with this.. I agree with this. Scott Shapiro (@ScottShapiroUXD) The reporting UI should expose the sampling too:",
@@ -42,15 +44,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2100669832966316132"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @willcritchlow: OMG why doesn’t every menu do this?. OMG why doesn’t every menu do this?",
@@ -58,15 +61,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2100390847795916811"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Pinned: SEO is dead. Long live SEOntology. 🏆 @me__emi__ 👏👏 https://lnkd.in/p/daKm8ZAy. SEO is dead. Long live SEOntology",
@@ -74,15 +78,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2100675502377718037"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Boy, we did it again at G2. Boy, we did it again at G2 Lily Ray 😏 (@lilyraynyc) You can learn a lot about how ChatGPT ha",
@@ -90,15 +95,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2100681939401236896"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Added documentation on adding a Search profile badge to your website. What : Added a new guide on how to add a Search pr",
@@ -106,15 +112,16 @@
         "evidence": "Google Search Docs Updates",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Google Search Docs Updates",
             "url": "https://developers.google.com/search/updates#september-2026"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "There Is No “Accuracy” in AI Search Tracking – Only Precision. I get some version of the same question every week now. A",
@@ -122,29 +129,16 @@
         "evidence": "iPullRank Blog",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "iPullRank Blog",
             "url": "https://ipullrank.com/accuracy-vs-precision"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: Ready to build what's next? We're bringing the Cloudflare customer community tog",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review glenngabe: Business Agent for YouTube Ads beta -> I forgot that Google actually beat ChatGP",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review VeryWellVersed: I agree with this.. I agree with this. Scott Shapiro (@ScottShapiroUXD) The repo",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2100584812994052396"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Business Agent for YouTube Ads beta -> I forgot that Google actually beat ChatGPT in releasing a business agent in the S",
@@ -171,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2100644670670016965"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "I agree with this.. I agree with this. Scott Shapiro (@ScottShapiroUXD) The reporting UI should expose the sampling too:",
@@ -187,15 +183,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2100669832966316132"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @willcritchlow: OMG why doesn’t every menu do this?. OMG why doesn’t every menu do this?",
@@ -203,15 +200,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2100390847795916811"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Pinned: SEO is dead. Long live SEOntology. 🏆 @me__emi__ 👏👏 https://lnkd.in/p/daKm8ZAy. SEO is dead. Long live SEOntology",
@@ -219,15 +217,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2100675502377718037"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Boy, we did it again at G2. Boy, we did it again at G2 Lily Ray 😏 (@lilyraynyc) You can learn a lot about how ChatGPT ha",
@@ -235,15 +234,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2100681939401236896"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Added documentation on adding a Search profile badge to your website. What : Added a new guide on how to add a Search pr",
@@ -251,15 +251,16 @@
       "evidence": "Google Search Docs Updates",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Google Search Docs Updates",
           "url": "https://developers.google.com/search/updates#september-2026"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "There Is No “Accuracy” in AI Search Tracking – Only Precision. I get some version of the same question every week now. A",
@@ -267,15 +268,16 @@
       "evidence": "iPullRank Blog",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "iPullRank Blog",
           "url": "https://ipullrank.com/accuracy-vs-precision"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -427,18 +429,6 @@
     "candidates_fresh": 64,
     "llm_provider": ""
   },
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: Ready to build what's next? We're bringing the Cloudflare customer community tog",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review glenngabe: Business Agent for YouTube Ads beta -> I forgot that Google actually beat ChatGP",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review VeryWellVersed: I agree with this.. I agree with this. Scott Shapiro (@ScottShapiroUXD) The repo",
-      "impact": "P2"
-    }
-  ]
+  "action_items": [],
+  "quiet_day": false
 }

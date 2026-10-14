@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2098080848817930458"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Discover-like, but super-personalized. Scary actually :) -> Dreambeans: Daily stories, brewed just for you, now availabl",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2098128004601815180"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "SEO News: Google just changed a core part of our daily SEO workflows. /goto links are here and are likely to stay.\n\nA gr",
@@ -42,15 +44,16 @@
         "evidence": "brodieseo",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "brodieseo",
             "url": "https://x.com/brodieseo/status/2097957708532248644"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Oof.. Oof. Dave Winer (@davewiner) BlackRock’s latest SEC filing values its Automattic shares at $14.33 per share. They ",
@@ -58,15 +61,16 @@
         "evidence": "VeryWellVersed",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "VeryWellVersed",
             "url": "https://x.com/VeryWellVersed/status/2098146015693971582"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Cyrus doing important work:. Cyrus doing important work: Cyrus SEO (@CyrusShepard) New: 2026 Google Ranking Factors Expe",
@@ -74,15 +78,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2098043925176983656"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @cyberandy: Two big updates\n\n1. I published an @FT op-ed on the OpenAI/HF incident & follow-ups\n\n2. We’re starting",
@@ -90,15 +95,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2098080470235762702"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "First time seeing an AI Overview for local results.. First time seeing an AI Overview for local results.",
@@ -106,15 +112,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2098135517258752163"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Amazon pilots ChatGPT Ads through its DSP - Search Engine Land. Amazon pilots ChatGPT Ads through its DSP &nbsp;&nbsp; S",
@@ -122,15 +129,16 @@
         "evidence": "Search Engine Land",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Land",
             "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOdnE1QXpjeklteFF0c3pBbEZhYWdBOTJYRi1iRU5aclp4Nndzejg2cU9mM1NwQmd0QzMtVkp2ejlOdExLeEZtRUNhOHJiYWpEbFFpcHFkOUFwd25iZVdwa0V5cUJwTXZ5TFVnNnMxTWd0clNFTEJIVGZnM1ZlMDNiRHhNRQ?oc=5"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -141,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2098080848817930458"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Discover-like, but super-personalized. Scary actually :) -> Dreambeans: Daily stories, brewed just for you, now availabl",
@@ -157,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2098128004601815180"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "SEO News: Google just changed a core part of our daily SEO workflows. /goto links are here and are likely to stay.\n\nA gr",
@@ -173,15 +183,16 @@
       "evidence": "brodieseo",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "brodieseo",
           "url": "https://x.com/brodieseo/status/2097957708532248644"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Oof.. Oof. Dave Winer (@davewiner) BlackRock’s latest SEC filing values its Automattic shares at $14.33 per share. They ",
@@ -189,15 +200,16 @@
       "evidence": "VeryWellVersed",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "VeryWellVersed",
           "url": "https://x.com/VeryWellVersed/status/2098146015693971582"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Cyrus doing important work:. Cyrus doing important work: Cyrus SEO (@CyrusShepard) New: 2026 Google Ranking Factors Expe",
@@ -205,15 +217,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2098043925176983656"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @cyberandy: Two big updates\n\n1. I published an @FT op-ed on the OpenAI/HF incident & follow-ups\n\n2. We’re starting",
@@ -221,15 +234,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2098080470235762702"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "First time seeing an AI Overview for local results.. First time seeing an AI Overview for local results.",
@@ -237,15 +251,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2098135517258752163"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Amazon pilots ChatGPT Ads through its DSP - Search Engine Land. Amazon pilots ChatGPT Ads through its DSP &nbsp;&nbsp; S",
@@ -253,15 +268,16 @@
       "evidence": "Search Engine Land",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Land",
           "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOdnE1QXpjeklteFF0c3pBbEZhYWdBOTJYRi1iRU5aclp4Nndzejg2cU9mM1NwQmd0QzMtVkp2ejlOdExLeEZtRUNhOHJiYWpEbFFpcHFkOUFwd25iZVdwa0V5cUJwTXZ5TFVnNnMxTWd0clNFTEJIVGZnM1ZlMDNiRHhNRQ?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -412,5 +428,6 @@
     "candidates_fetched": 86,
     "candidates_fresh": 65,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

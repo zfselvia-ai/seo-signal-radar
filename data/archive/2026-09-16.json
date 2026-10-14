@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2100012587526103408"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "BTW, just thinking out loud, but Google already has powerful Navboost data for understanding the user experience across ",
@@ -26,15 +27,16 @@
         "evidence": "glenngabe",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "glenngabe",
             "url": "https://x.com/glenngabe/status/2099947208061915518"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Hey #brightonseo people. @samtorresatl, @marthavanberkel, and I are closing out day 1 in track #3 at 5pm. The bar isn't ",
@@ -42,15 +44,16 @@
         "evidence": "patrickstox",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "patrickstox",
             "url": "https://x.com/patrickstox/status/2099932367502922058"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Just me?. Just me?",
@@ -58,15 +61,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2099882584473731356"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @cyberandy: 6/ This is where SD comes back into the picture. With schema:hasMap, a publisher can explicitly connect",
@@ -74,15 +78,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2099776866122908116"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "👀 Are you an ecommerce seeing important YOY drops in organic search traffic from your top performing non-branded queries",
@@ -90,15 +95,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2099915188690633060"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Search Live Now Powered By Gemini 3.8 Live - Search Engine Roundtable. Google Search Live Now Powered By Gemini 3",
@@ -106,15 +112,16 @@
         "evidence": "Search Engine Roundtable",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Roundtable",
             "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE14ZGp3c0ZHV2lSZVVZalBxOGdqRldaM1RybXRvdnUteFdPVGZCTUJtbmtiNE5aSldUVVhfS25HN19vczRuQzZfT0M0N01iWGp0VlJsdVRJbGN0VW1IZkJBVms3a0NkNDh1SGVIVGljNERmaGNPMFpGdw?oc=5"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Scaling live video shouldn't come with an \"integration tax.\" See how Layercake revolutionized sports streaming with Clou",
@@ -122,15 +129,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2100011822208163984"
           }
-        ]
+        ],
+        "degraded": true
       }
     ]
   },
@@ -141,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2100012587526103408"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "BTW, just thinking out loud, but Google already has powerful Navboost data for understanding the user experience across ",
@@ -157,15 +166,16 @@
       "evidence": "glenngabe",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "glenngabe",
           "url": "https://x.com/glenngabe/status/2099947208061915518"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Hey #brightonseo people. @samtorresatl, @marthavanberkel, and I are closing out day 1 in track #3 at 5pm. The bar isn't ",
@@ -173,15 +183,16 @@
       "evidence": "patrickstox",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "patrickstox",
           "url": "https://x.com/patrickstox/status/2099932367502922058"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Just me?. Just me?",
@@ -189,15 +200,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2099882584473731356"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @cyberandy: 6/ This is where SD comes back into the picture. With schema:hasMap, a publisher can explicitly connect",
@@ -205,15 +217,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2099776866122908116"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "👀 Are you an ecommerce seeing important YOY drops in organic search traffic from your top performing non-branded queries",
@@ -221,15 +234,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2099915188690633060"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Search Live Now Powered By Gemini 3.8 Live - Search Engine Roundtable. Google Search Live Now Powered By Gemini 3",
@@ -237,15 +251,16 @@
       "evidence": "Search Engine Roundtable",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Roundtable",
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE14ZGp3c0ZHV2lSZVVZalBxOGdqRldaM1RybXRvdnUteFdPVGZCTUJtbmtiNE5aSldUVVhfS25HN19vczRuQzZfT0M0N01iWGp0VlJsdVRJbGN0VW1IZkJBVms3a0NkNDh1SGVIVGljNERmaGNPMFpGdw?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Scaling live video shouldn't come with an \"integration tax.\" See how Layercake revolutionized sports streaming with Clou",
@@ -253,15 +268,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2100011822208163984"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -412,5 +428,6 @@
     "candidates_fetched": 98,
     "candidates_fresh": 83,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

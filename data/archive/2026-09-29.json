@@ -10,15 +10,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2104716810373206406"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @lilyraynyc: @wilreynolds. @wilreynolds",
@@ -26,15 +27,16 @@
         "evidence": "lilyraynyc",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "lilyraynyc",
             "url": "https://x.com/lilyraynyc/status/2104664298186543381"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "This isn't widely supported by crawlers yet, but it's much better than LLMs.txt and markdown as separate files... This i",
@@ -42,15 +44,16 @@
         "evidence": "patrickstox",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "patrickstox",
             "url": "https://x.com/patrickstox/status/2104719740572717067"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "PSA claude can drive google docs in suggest mode to finally have an AI make suggestions and leave comments all over your",
@@ -58,15 +61,16 @@
         "evidence": "willcritchlow",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "willcritchlow",
             "url": "https://x.com/willcritchlow/status/2104592584899465710"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @cyberandy: I ran my first end to end test and wrote about it here 👉 https://wordlift.io/blog/en/ucp-lodging-and-th",
@@ -74,15 +78,16 @@
         "evidence": "cyberandy",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "cyberandy",
             "url": "https://x.com/cyberandy/status/2104541725330915731"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @Kevin_Indig: AI Search makes the limits of click-based attribution harder to ignore. A buyer can discover a brand ",
@@ -90,15 +95,16 @@
         "evidence": "Kevin_Indig",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Kevin_Indig",
             "url": "https://x.com/Kevin_Indig/status/2104508283717296556"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Globally Rolls Out Monitoring Capabilities In AI Mode - Search Engine Roundtable. Google Globally Rolls Out Monit",
@@ -106,15 +112,16 @@
         "evidence": "Search Engine Roundtable",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Search Engine Roundtable",
             "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQS1wWVcyeUc1eHJGM3FVOEp6UG4yQi1TYmt1cVRmMDhBQnBSR0tGZXRBeThvRkluQml5Z21UaDNKZEh5emhqUUxlYjA4MjdWZGJGeVp5azhXeGJRNThWWm5yNFdlMFUyb2pIRzBkdTU0bW0weVZBWVQ3RWs0R0plQXJ3SWs?oc=5"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Lots of exciting updates already for #BirthdayWeek! Review some highlights in Rita's post 😀 ⬇️. Lots of exciting updates",
@@ -122,29 +129,16 @@
         "evidence": "Cloudflare",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Cloudflare",
             "url": "https://x.com/Cloudflare/status/2104705772429127809"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Cloudflare: AI adoption is about more than just the technology; it’s about providing secure,",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review lilyraynyc: R to @lilyraynyc: @wilreynolds. @wilreynolds",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review patrickstox: This isn't widely supported by crawlers yet, but it's much better than LLMs.txt",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2104716810373206406"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @lilyraynyc: @wilreynolds. @wilreynolds",
@@ -171,15 +166,16 @@
       "evidence": "lilyraynyc",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "lilyraynyc",
           "url": "https://x.com/lilyraynyc/status/2104664298186543381"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "This isn't widely supported by crawlers yet, but it's much better than LLMs.txt and markdown as separate files... This i",
@@ -187,15 +183,16 @@
       "evidence": "patrickstox",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "patrickstox",
           "url": "https://x.com/patrickstox/status/2104719740572717067"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "PSA claude can drive google docs in suggest mode to finally have an AI make suggestions and leave comments all over your",
@@ -203,15 +200,16 @@
       "evidence": "willcritchlow",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "willcritchlow",
           "url": "https://x.com/willcritchlow/status/2104592584899465710"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @cyberandy: I ran my first end to end test and wrote about it here 👉 https://wordlift.io/blog/en/ucp-lodging-and-th",
@@ -219,15 +217,16 @@
       "evidence": "cyberandy",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "cyberandy",
           "url": "https://x.com/cyberandy/status/2104541725330915731"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @Kevin_Indig: AI Search makes the limits of click-based attribution harder to ignore. A buyer can discover a brand ",
@@ -235,15 +234,16 @@
       "evidence": "Kevin_Indig",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Kevin_Indig",
           "url": "https://x.com/Kevin_Indig/status/2104508283717296556"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Globally Rolls Out Monitoring Capabilities In AI Mode - Search Engine Roundtable. Google Globally Rolls Out Monit",
@@ -251,15 +251,16 @@
       "evidence": "Search Engine Roundtable",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Search Engine Roundtable",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQS1wWVcyeUc1eHJGM3FVOEp6UG4yQi1TYmt1cVRmMDhBQnBSR0tGZXRBeThvRkluQml5Z21UaDNKZEh5emhqUUxlYjA4MjdWZGJGeVp5azhXeGJRNThWWm5yNFdlMFUyb2pIRzBkdTU0bW0weVZBWVQ3RWs0R0plQXJ3SWs?oc=5"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Lots of exciting updates already for #BirthdayWeek! Review some highlights in Rita's post 😀 ⬇️. Lots of exciting updates",
@@ -267,15 +268,16 @@
       "evidence": "Cloudflare",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Cloudflare",
           "url": "https://x.com/Cloudflare/status/2104705772429127809"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -404,20 +406,7 @@
   "degraded": true,
   "degraded_reason": "LLM call failed; generated from raw source items.",
   "llm_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: d85cbdde97b49eac-20260929144740608)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'd85cbdde97b49eac-20260929144740608'}",
-  "action_items": [
-    {
-      "what_to_do": "Review Cloudflare: AI adoption is about more than just the technology; it’s about providing secure,",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review lilyraynyc: R to @lilyraynyc: @wilreynolds. @wilreynolds",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review patrickstox: This isn't widely supported by crawlers yet, but it's much better than LLMs.txt",
-      "impact": "P2"
-    }
-  ],
+  "action_items": [],
   "run_meta": {
     "ran_at": "2026-09-29T06:47:28.479106+00:00",
     "sources": {
@@ -442,5 +431,6 @@
     "candidates_fetched": 83,
     "candidates_fresh": 68,
     "llm_provider": ""
-  }
+  },
+  "quiet_day": false
 }

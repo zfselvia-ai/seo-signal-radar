@@ -10,15 +10,16 @@
         "evidence": "Marie_Haynes",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "Marie_Haynes",
             "url": "https://x.com/Marie_Haynes/status/2101645118105129308"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Google Says The Disavow Tool Does Have Effects - via @seroundtable & @rustybrick #seo https://www.seroundtable.com/googl",
@@ -26,15 +27,16 @@
         "evidence": "sitebulb",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "sitebulb",
             "url": "https://x.com/sitebulb/status/2101724846644236743"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "🔥 The Latest Search News of the Week You Can't Miss [From #SEOFOMO - Sep 20, 2026] 👇 * ​Google ‘AI contribution pilot’ t",
@@ -42,15 +44,16 @@
         "evidence": "aleyda",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "aleyda",
             "url": "https://x.com/aleyda/status/2101700066389942460"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "Don't think we ever had a Google Yom Kippur update but who knows, we are due an official update soon.... Don't think we ",
@@ -58,15 +61,16 @@
         "evidence": "rustybrick",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "rustybrick",
             "url": "https://x.com/rustybrick/status/2101740254252192096"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "SEO SNARK COMING SOON TO YOUR INBOX 👉https://sitebulb.com/while-you-were-offline. SEO SNARK COMING SOON TO YOUR INBOX 👉 ",
@@ -74,15 +78,16 @@
         "evidence": "sitebulb",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "sitebulb",
             "url": "https://x.com/sitebulb/status/2101632743553564863"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "RT by @rustybrick: I am offline on Monday, September 21st for Yom Kippur. I won't post anything on this site on Monday. ",
@@ -90,15 +95,16 @@
         "evidence": "rustybrick",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "rustybrick",
             "url": "https://x.com/rustybrick/status/2101673188950147564"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "The Semantic Data Layer: Building a Brand AI Can Understand | Martha van Berkel and Mark van Berkel - via @awebranking &",
@@ -106,15 +112,16 @@
         "evidence": "sitebulb",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "sitebulb",
             "url": "https://x.com/sitebulb/status/2101604050240204848"
           }
-        ]
+        ],
+        "degraded": true
       },
       {
         "what_happened": "R to @rustybrick: via @AndellDam and @glenngabe. via @AndellDam and @glenngabe",
@@ -122,29 +129,16 @@
         "evidence": "rustybrick",
         "who_it_affects": "all",
         "what_to_do": "monitor",
-        "confidence": "Observed",
-        "impact": "P2",
+        "confidence": "Speculative",
+        "impact": "P3",
         "section": "SERP & Algorithm Signals",
         "sources": [
           {
             "name": "rustybrick",
             "url": "https://x.com/rustybrick/status/2101666907971592352"
           }
-        ]
-      }
-    ],
-    "Today's Action Items": [
-      {
-        "what_to_do": "Review Marie_Haynes: 👀 Google is building an open source agentic orchestrator that can run billions o",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review sitebulb: Google Says The Disavow Tool Does Have Effects - via @seroundtable & @rustybrick",
-        "impact": "P2"
-      },
-      {
-        "what_to_do": "Review aleyda: 🔥 The Latest Search News of the Week You Can't Miss [From #SEOFOMO - Sep 20, 202",
-        "impact": "P2"
+        ],
+        "degraded": true
       }
     ]
   },
@@ -155,15 +149,16 @@
       "evidence": "Marie_Haynes",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "Marie_Haynes",
           "url": "https://x.com/Marie_Haynes/status/2101645118105129308"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Google Says The Disavow Tool Does Have Effects - via @seroundtable & @rustybrick #seo https://www.seroundtable.com/googl",
@@ -171,15 +166,16 @@
       "evidence": "sitebulb",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "sitebulb",
           "url": "https://x.com/sitebulb/status/2101724846644236743"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "🔥 The Latest Search News of the Week You Can't Miss [From #SEOFOMO - Sep 20, 2026] 👇 * ​Google ‘AI contribution pilot’ t",
@@ -187,15 +183,16 @@
       "evidence": "aleyda",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "aleyda",
           "url": "https://x.com/aleyda/status/2101700066389942460"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "Don't think we ever had a Google Yom Kippur update but who knows, we are due an official update soon.... Don't think we ",
@@ -203,15 +200,16 @@
       "evidence": "rustybrick",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "rustybrick",
           "url": "https://x.com/rustybrick/status/2101740254252192096"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "SEO SNARK COMING SOON TO YOUR INBOX 👉https://sitebulb.com/while-you-were-offline. SEO SNARK COMING SOON TO YOUR INBOX 👉 ",
@@ -219,15 +217,16 @@
       "evidence": "sitebulb",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "sitebulb",
           "url": "https://x.com/sitebulb/status/2101632743553564863"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "RT by @rustybrick: I am offline on Monday, September 21st for Yom Kippur. I won't post anything on this site on Monday. ",
@@ -235,15 +234,16 @@
       "evidence": "rustybrick",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "rustybrick",
           "url": "https://x.com/rustybrick/status/2101673188950147564"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "The Semantic Data Layer: Building a Brand AI Can Understand | Martha van Berkel and Mark van Berkel - via @awebranking &",
@@ -251,15 +251,16 @@
       "evidence": "sitebulb",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "sitebulb",
           "url": "https://x.com/sitebulb/status/2101604050240204848"
         }
-      ]
+      ],
+      "degraded": true
     },
     {
       "what_happened": "R to @rustybrick: via @AndellDam and @glenngabe. via @AndellDam and @glenngabe",
@@ -267,15 +268,16 @@
       "evidence": "rustybrick",
       "who_it_affects": "all",
       "what_to_do": "monitor",
-      "confidence": "Observed",
-      "impact": "P2",
+      "confidence": "Speculative",
+      "impact": "P3",
       "section": "SERP & Algorithm Signals",
       "sources": [
         {
           "name": "rustybrick",
           "url": "https://x.com/rustybrick/status/2101666907971592352"
         }
-      ]
+      ],
+      "degraded": true
     }
   ],
   "serp": {},
@@ -427,18 +429,6 @@
     "candidates_fresh": 13,
     "llm_provider": ""
   },
-  "action_items": [
-    {
-      "what_to_do": "Review Marie_Haynes: 👀 Google is building an open source agentic orchestrator that can run billions o",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review sitebulb: Google Says The Disavow Tool Does Have Effects - via @seroundtable & @rustybrick",
-      "impact": "P2"
-    },
-    {
-      "what_to_do": "Review aleyda: 🔥 The Latest Search News of the Week You Can't Miss [From #SEOFOMO - Sep 20, 202",
-      "impact": "P2"
-    }
-  ]
+  "action_items": [],
+  "quiet_day": false
 }
