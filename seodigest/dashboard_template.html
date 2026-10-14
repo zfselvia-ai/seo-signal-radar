@@ -501,6 +501,14 @@ function healthStrip(rec){
   else if(worst===1) note="Reduced source coverage — today may be thinner than reality.";
   const failed=[...(src.x?.failed_names||[]),...(src.rss?.failed_names||[])];
   if(worst&&!degraded&&failed.length) note+=` Unreachable: ${failed.slice(0,6).join(", ")}`;
+  // Model output thrown away by the grounding checks (no source, quote not in
+  // the source, a number the source never states). Shown so a day where the
+  // model kept inventing is visible, not just thinner.
+  const g=rm.grounding;
+  if(g&&g.proposed){
+    parts.push(`<span class="hitem">Model ${g.kept}/${g.proposed} kept</span>`);
+    if(g.rejected_total) note+=` ${g.rejected_total} model signal(s) rejected as unsupported by their sources.`;
+  }
   return `<div class="health ${cls}"><span class="hdot"></span>
     <span class="hitem">${degraded?"Degraded":"Sources"}</span>${parts.join("")}
     ${note?`<span class="hnote">${esc(note)}</span>`:""}</div>`;

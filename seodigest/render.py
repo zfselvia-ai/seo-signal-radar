@@ -140,8 +140,28 @@ def render_daily(digest: dict, cfg: dict, date_str: str, serp: dict | None = Non
         md.append("")
     if digest.get("dropped_count"):
         md += [f"*Filtered out {digest['dropped_count']} lower-value candidates.*", ""]
+    gnote = _grounding_note(digest)
+    if gnote:
+        md += [f"*{gnote}*", ""]
     md_text = "\n".join(md)
     return md_text, _daily_html(digest, cfg, date_str, serp, title, brief)
+
+
+_GROUNDING_REASONS = {"no_source": "no source", "quote_not_found": "quote not in source",
+                      "number_not_in_source": "number not in source"}
+
+
+def _grounding_note(digest) -> str:
+    """One line saying how much of the model's output was thrown away as
+    unsupported. Silent when the day had no LLM step."""
+    g = digest.get("grounding") or {}
+    if not g.get("proposed"):
+        return ""
+    note = f"Model proposed {g['proposed']} signals; {g.get('kept', 0)} passed the grounding checks"
+    if g.get("rejected_total"):
+        why = ", ".join(f"{_GROUNDING_REASONS.get(k, k)}: {v}" for k, v in (g.get("rejected") or {}).items())
+        note += f", {g['rejected_total']} rejected ({why})"
+    return note + "."
 
 
 def _daily_html(digest, cfg, date_str, serp, title, brief=None):
@@ -216,6 +236,9 @@ def _daily_html(digest, cfg, date_str, serp, title, brief=None):
                 parts.append(f"<div class='src'><a href='{_esc(src.get('url',''))}'>"
                              f"{_esc(src.get('name','source'))} ↗</a></div>")
             parts.append("</div>")
+    gnote = _grounding_note(digest)
+    if gnote:
+        parts.append(f"<div class='footer'>{_esc(gnote)}</div>")
     parts.append(_HTML_FOOT)
     return "\n".join(parts)
 

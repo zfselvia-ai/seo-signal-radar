@@ -76,9 +76,10 @@ daily:
   # be new; it needs to be true, specific, and worth someone's afternoon.
   playbook:
     section: "Playbook: Worth Testing"
-    # Unlike the news sections, this one should rarely be empty. If nothing
-    # published today qualifies, reach into the longer evergreen window.
-    min_items: 1
+    # May be EMPTY. It was min 1 ("should rarely be empty"), and on a day with
+    # nothing testable the model met the quota by inventing an item with no
+    # source (2026-08-13). An empty Playbook is better than an invented one.
+    min_items: 0
     max_items: 5    # 2026-10-10: raised from 3 — rank by evidence strength, don't cap
     # A playbook item is only worth printing if it answers all of these.
     requirements:
@@ -576,7 +577,9 @@ llm:
   anthropic_model: "claude-opus-4-8"
   openai_model: "gpt-4o"
   max_output_tokens: 8000
-  temperature: 0.3
+  # 0: this is extraction and judgement over given text, not writing. Every
+  # point above 0 is room to paraphrase a quote or round a number into a new one.
+  temperature: 0.0
 
 # --------------------------------------------------------------------------
 # OUTPUT & ARCHIVE

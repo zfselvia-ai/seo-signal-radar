@@ -160,6 +160,10 @@ def run_daily(cfg, dry_run=False):
 
     digest = summarize.summarize_daily(cfg, fresh)
     digest["confirmed_updates"] = confirmed
+    # What the model proposed vs what survived the grounding checks, kept with
+    # the run's health record so a rejection-heavy day is visible.
+    if digest.get("grounding"):
+        run_meta["grounding"] = digest["grounding"]
     kept = sum(len(v) for v in digest.get("sections", {}).values())
     print(f"[*] kept {kept} signals")
 

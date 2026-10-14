@@ -71,11 +71,11 @@ Missing any one of those -> downgrade to practitioner_observation.
 - Multiple independent trusted accounts reporting the SAME phenomenon is itself \
 evidence — merge them into one signal and raise confidence.
 
-STEP 2 - KEEP only the best {min_signals}-{max_signals}. You MUST keep at \
-least {min_signals} signals unless fewer than {min_signals} candidates exist. \
-Do NOT over-filter: if you have {min_signals} or more candidates, keeping only \
-2-3 is a failure. When in doubt between dropping and keeping, KEEP — the reader \
-is an expert who can judge for themselves. Curation rubric:
+STEP 2 - KEEP at most {max_signals}. Aim for {min_signals}-{max_signals} when \
+the candidates genuinely support that many, but there is NO minimum: returning \
+fewer, or none, is correct when that is all the candidates support. Never pad a \
+section, never write a signal from general knowledge, and never combine hints \
+from several candidates into a claim none of them makes. Curation rubric:
 KEEP:
 {keep}
 DROP:
@@ -108,6 +108,18 @@ weak items.
 
 {recent_block}
 
+GROUNDING — checked by code after you answer; anything that fails is discarded:
+- Cite candidates ONLY by their id, in `source_ids` (e.g. ["c3", "c17"]). Do not \
+write URLs.
+- `quote`: copy one passage of at least 8 words VERBATIM from the text of a cited \
+candidate, in its original language (not translated, not paraphrased), that \
+supports what_happened.
+- Every number you write in headline, what_happened, why_it_matters, evidence or \
+evidence_detail must appear in the text of a cited candidate (rounding is fine). \
+Do not compute, convert or estimate new numbers.
+- Each action item cites, in `source_ids`, the candidates of the signals it acts on.
+- A signal that no candidate supports does not exist. Leave it out.
+
 OUTPUT LANGUAGE: {lang}
 
 Return ONLY valid JSON (no markdown fences), schema:
@@ -133,26 +145,27 @@ entirely when the candidate is a one-line announcement with nothing to expand.",
       "how_to_test": "PLAYBOOK ITEMS ONLY: the concrete experiment or check to run",
       "success_metric": "PLAYBOOK ITEMS ONLY: which number moves if it worked",
       "effort": "PLAYBOOK ITEMS ONLY: rough cost + main risk",
-      "sources": [{{"name": "author or feed", "url": "..."}}]
+      "source_ids": ["c0"],
+      "quote": "a passage of >= 8 words copied verbatim from a cited candidate"
     }}
   ],
-  "action_items": [{{"text": "...", "impact": "P0|P1|P2"}}],
-  "dropped_count": <int>
+  "action_items": [{{"text": "...", "impact": "P0|P1|P2", "source_ids": ["c0"]}}]
 }}"""
 
 
-PLAYBOOK_BLOCK = """STEP 5 - THE PLAYBOOK SECTION ("{section}") — treat this as a \
-standing obligation, not an optional extra. Fill it with {min_items}-{max_items} \
-items the reader can go TEST, drawn from anywhere in the candidate pool \
-(experiments, data research, official docs, deep technical analysis). Unlike the \
-news sections, this one should almost never be empty: if nothing from today \
-qualifies, use the strongest evergreen candidate available.
-Every playbook item MUST supply: {requirements}. If a candidate cannot support all \
-of those, it is not a playbook item — put it in a news section or drop it.
-Playbook items are normally P2 ("worth testing"); use P1 only when there is a real \
-deadline or an active risk. Do NOT invent mechanisms, numbers or test procedures \
-that the source does not support — an honest "test this on 20 URLs and compare \
-impressions" beats a fabricated case study."""
+PLAYBOOK_BLOCK = """STEP 5 - THE PLAYBOOK SECTION ("{section}"): up to {max_items} \
+items the reader can go TEST, taken ONLY from candidates that themselves describe \
+the tactic — a controlled experiment, a data study, official documentation or a \
+documented case. It may be EMPTY: an empty Playbook is far better than an invented \
+one. Never derive a test idea from a discussion, an opinion, a news item or your \
+own knowledge.
+Every playbook item MUST supply: {requirements}. The tactic, its mechanism and any \
+result must be stated in the cited candidate; how_to_test, success_metric and \
+effort may be your practical suggestions for testing THAT tactic, but must not \
+claim results the source does not report. If the candidate cannot support all of \
+this, it is not a playbook item — put it in a news section or drop it.
+Playbook items are normally P2 ("worth testing"); use P1 only when the source shows \
+a real deadline or an active risk."""
 
 
 RECENT_BLOCK = """ALREADY PUBLISHED — do NOT report these again. The reader saw \
@@ -233,7 +246,10 @@ def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
         playbook_block=_playbook_block(daily),
         recent_block=_recent_block(cfg),
     )
+    # Candidates are cited by id, never by URL: the model is not shown URLs at
+    # all, so it cannot invent or mangle one. ground_signals() maps ids back.
     payload = [{
+        "id": f"c{i}",
         "group": it.group,
         "source": it.source,
         "author": it.author,
@@ -244,9 +260,8 @@ def build_prompt(cfg: dict, items: List[Item]) -> tuple[str, str]:
         "tags": it.tags,
         "commercial_interest": it.commercial_interest,
         "text": it.text,
-        "url": it.url,
         "likes": it.metrics.get("likes", 0),
-    } for it in items]
+    } for i, it in enumerate(items)]
     user = "CANDIDATES:\n" + json.dumps(payload, ensure_ascii=False)
     return system, user
 
@@ -542,9 +557,10 @@ def verify_sources(data: dict, candidates: List[Item]) -> dict:
     reader would make decisions on it. So: the candidate pool is the ONLY
     source of truth for URLs. Anything else is removed.
 
-    A signal that loses every source is kept but marked `unverified: true` and
-    capped at "Speculative" confidence — better a visible caveat than a silent
-    deletion, since the underlying observation may still be real.
+    A signal that loses every source is DROPPED. It used to be kept with an
+    `unverified` chip, and that is how a model-invented playbook item ("Derived
+    from watermarking discussion...", no source) was published at P2. A claim
+    the reader cannot check against its source is not published.
 
     Verified sources also gain an `excerpt` (plus author/published/source_type)
     taken from the matched candidate. This is the ONLY quotable detail in the
@@ -572,14 +588,137 @@ def verify_sources(data: dict, candidates: List[Item]) -> dict:
                 fabricated.append(src.get("url", "") or "(empty)")
                 stripped += 1
         sig["sources"] = kept
-        if not kept:
-            sig["unverified"] = True
-            # Never let an unsourced claim keep a high-trust label.
-            if sig.get("confidence") in ("Confirmed", "Data-backed"):
-                sig["confidence"] = "Speculative"
     if fabricated:
         print(f"[!] source check: removed {stripped} URL(s) not present in the "
               f"candidate pool (possible fabrication): {fabricated[:5]}")
+    unsourced = [s for s in data.get("signals", []) if not s.get("sources")]
+    if unsourced:
+        data["signals"] = [s for s in data["signals"] if s.get("sources")]
+        print(f"[!] source check: dropped {len(unsourced)} signal(s) left with no "
+              f"source: {[s.get('what_happened', '')[:60] for s in unsourced]}")
+    return data
+
+
+# ------------------------------ grounding ---------------------------------
+# The LLM path's guard. verify_sources only proves a link was fetched; these
+# checks prove the card is backed by what the cited candidate actually says.
+# Each failure reason is counted and archived in run_meta["grounding"].
+_QUOTE_MIN_WORDS = 8
+_MONTHS = r"(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\.?"
+_DATE_RE = re.compile(
+    rf"\b{_MONTHS}\s+\d{{1,2}}(?:\s*[–-]\s*\d{{1,2}})?(?:,?\s*\d{{4}})?"
+    rf"|\b\d{{1,2}}\s+{_MONTHS}(?:\s+\d{{4}})?"
+    r"|\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b", re.I)
+_NUM_RE = re.compile(r"(?<![\w.])(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d+))?"
+                     r"\s*(%|percent\b|k\b|m\b|b\b|thousand\b|million\b|billion\b)?", re.I)
+_SCALE = {"k": 1e3, "thousand": 1e3, "m": 1e6, "million": 1e6, "b": 1e9, "billion": 1e9}
+
+
+def _numbers(text: str) -> list:
+    """(value, decimals, is_percent, raw) for every figure in text, dates removed."""
+    out = []
+    for m in _NUM_RE.finditer(_DATE_RE.sub(" ", text or "")):
+        whole, frac, unit = m.group(1).replace(",", ""), m.group(2) or "", (m.group(3) or "").lower()
+        value = float(whole + ("." + frac if frac else "")) * _SCALE.get(unit, 1)
+        out.append((value, len(frac), unit in ("%", "percent"), m.group(0).strip()))
+    return out
+
+
+def _must_ground(n) -> bool:
+    """Years and small counts are exempt: "4 spam updates" is written "four"
+    as often as "4", and a mismatch there is noise, not fabrication."""
+    value, dec, pct, raw = n
+    if pct or dec or not raw.replace(",", "").isdigit():
+        return True
+    return not (value <= 12 or 1990 <= value <= 2100)
+
+
+def _ungrounded_numbers(text: str, source_texts: list) -> list:
+    have = [n for t in source_texts for n in _numbers(t)]
+    bad = []
+    for n in _numbers(text):
+        if not _must_ground(n):
+            continue
+        v, dec, pct, raw = n
+        # Rounding is allowed: the source's 82.91% may be written 83%.
+        if not any(sp == pct and round(sv, dec) == round(v, dec) for sv, _, sp, _ in have):
+            bad.append(raw)
+    return bad
+
+
+def _norm_quote(s: str) -> str:
+    s = (s or "").lower()
+    for a, b in (("\u2019", "'"), ("\u2018", "'"), ("\u201c", '"'), ("\u201d", '"'),
+                 ("\u2014", "-"), ("\u2013", "-"), ("&amp;", "&"), ("&#39;", "'"), ("&quot;", '"')):
+        s = s.replace(a, b)
+    return " ".join(s.split())
+
+
+def _quote_found(quote: str, source_texts: list) -> bool:
+    """Every part of the quote (split on an ellipsis) must appear verbatim."""
+    q = _norm_quote(quote).strip(" \"'")
+    parts = [p.strip(" \"'") for p in re.split(r"\.\.\.|…", q) if p.strip(" \"'.")]
+    if sum(len(p.split()) for p in parts) < _QUOTE_MIN_WORDS:
+        return False
+    hay = [_norm_quote(t) for t in source_texts]
+    return any(all(p in h for p in parts) for h in hay)
+
+
+def ground_signals(data: dict, candidates: List[Item]) -> dict:
+    """Keep only signals that are backed by the candidates they cite.
+
+    A signal survives only if (1) it cites at least one real candidate — by id,
+    or by a URL that is exactly a candidate's; (2) its `quote` appears verbatim
+    in a cited candidate; (3) every figure it states appears in a cited
+    candidate. Action items must cite a candidate behind a surviving signal.
+    The headline must pass the number check or is replaced. dropped_count is
+    recomputed rather than taken from the model.
+    """
+    by_id = {f"c{i}": it for i, it in enumerate(candidates)}
+    by_url = {_norm_url(it.url): f"c{i}" for i, it in enumerate(candidates) if it.url}
+    fields = ("what_happened", "why_it_matters", "evidence", "evidence_detail")
+    kept, rejected = [], []
+    for sig in data.get("signals", []) or []:
+        ids = [str(x).strip() for x in (sig.get("source_ids") or []) if str(x).strip() in by_id]
+        ids += [by_url[k] for k in (_norm_url(s.get("url", "")) for s in sig.get("sources") or [])
+                if k in by_url]
+        ids = list(dict.fromkeys(ids))
+        title = (sig.get("what_happened") or "")[:90]
+        if not ids:
+            rejected.append({"reason": "no_source", "what_happened": title})
+            continue
+        texts = [by_id[i].text for i in ids]
+        if not _quote_found(sig.get("quote", ""), texts):
+            rejected.append({"reason": "quote_not_found", "what_happened": title})
+            continue
+        bad = _ungrounded_numbers(" ".join(str(sig.get(f) or "") for f in fields), texts)
+        if bad:
+            rejected.append({"reason": "number_not_in_source", "what_happened": title,
+                             "numbers": bad[:5]})
+            continue
+        sig["source_ids"] = ids
+        sig["sources"] = [{"name": by_id[i].source_name, "url": by_id[i].url,
+                           **_source_detail(by_id[i])} for i in ids]
+        kept.append(sig)
+    cited = {i for s in kept for i in s["source_ids"]}
+    actions_in = data.get("action_items") or []
+    actions = [a for a in actions_in
+               if isinstance(a, dict) and set(map(str, a.get("source_ids") or [])) & cited]
+    reasons = {}
+    for r in rejected:
+        reasons[r["reason"]] = reasons.get(r["reason"], 0) + 1
+    proposed = len(data.get("signals") or [])
+    data["signals"] = kept
+    data["action_items"] = actions
+    data["dropped_count"] = max(0, len(candidates) - len(cited))
+    if kept and _ungrounded_numbers(data.get("headline", ""), [by_id[i].text for i in cited]):
+        data["headline"] = kept[0].get("what_happened", "")
+    data["grounding"] = {"proposed": proposed, "kept": len(kept), "rejected_total": len(rejected),
+                         "rejected": reasons, "examples": rejected[:5],
+                         "actions_dropped": len(actions_in) - len(actions)}
+    print(f"[*] grounding: model proposed {proposed}, kept {len(kept)}, rejected "
+          f"{len(rejected)} {reasons or ''}; action items dropped "
+          f"{len(actions_in) - len(actions)}")
     return data
 
 
@@ -719,11 +858,11 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         print(f"[!] LLM JSON parse failed: {e}; falling back to raw items.")
         return _raw_digest(cfg, items, f"LLM output was not valid JSON: {e}")
 
-    return finalize_digest(cfg, data, candidates, items)
+    return finalize_digest(cfg, data, candidates, items, grounded=True)
 
 
 def finalize_digest(cfg: dict, data: dict, candidates: List[Item],
-                    items: List[Item] | None = None) -> dict:
+                    items: List[Item] | None = None, grounded: bool = False) -> dict:
     """Everything that happens to a curated JSON after the LLM (or a human) wrote it.
 
     Shared by the LLM path and ingest_curated.py: a hand-written digest must go
@@ -733,8 +872,11 @@ def finalize_digest(cfg: dict, data: dict, candidates: List[Item],
     """
     items = items if items is not None else candidates
     # Verify every citation against what the model was actually shown, BEFORE
-    # the signals are grouped, archived and rendered.
-    data = verify_sources(data, candidates)
+    # the signals are grouped, archived and rendered. Model output gets the
+    # full grounding checks; a hand-written digest cites URLs and was checked
+    # against the full articles, so it gets the URL check (which also drops
+    # anything left without a source).
+    data = ground_signals(data, candidates) if grounded else verify_sources(data, candidates)
     llm_kept = len(data.get("signals") or [])
     data = dedupe_against_recent(cfg, data)
     # Did cross-day dedup, rather than the LLM, empty the digest? The two cases
@@ -766,10 +908,17 @@ def finalize_digest(cfg: dict, data: dict, candidates: List[Item],
     # allowed to render as quiet; that is the honest output and it's also the
     # signal the reader needs: nothing new happened.
     if not data.get("signals") and not emptied_by_dedup:
-        print(f"[!] LLM kept 0 signals (dropped {data.get('dropped_count', '?')}); "
+        g = data.get("grounding") or {}
+        print(f"[!] 0 signals left (dropped {data.get('dropped_count', '?')}); "
               f"falling back to raw items.")
-        return _raw_digest(
-            cfg, items, "curation rejected every candidate — showing the raw feed")
+        reason = (f"all {g['proposed']} signals the model proposed failed the grounding "
+                  f"checks {g.get('rejected')} — showing the raw feed"
+                  if g.get("proposed") else
+                  "curation rejected every candidate — showing the raw feed")
+        out = _raw_digest(cfg, items, reason)
+        if g:
+            out["grounding"] = g
+        return out
     if emptied_by_dedup:
         print("[*] every signal today was already reported in the last "
               "few days — publishing a quiet day rather than repeating them.")
