@@ -342,19 +342,24 @@ def _probe_feeds(cfg, timeout):
         t0 = time.time()
         text, status, err = rss_source.fetch_feed_text(url, timeout=timeout)
         ms = int((time.time() - t0) * 1000)
-        if err:
+        parsed = None if err else feedparser.parse(text)
+        if parsed is not None and not parsed.entries and not (parsed.feed or {}).get("title"):
+            err, parsed = "200 but unparseable", None
+        if parsed is None and f.get("fallback_url"):
+            # The pipeline would use the fallback; say so instead of calling
+            # the source broken.
+            ftext, _, ferr = rss_source.fetch_feed_text(f["fallback_url"], timeout=timeout)
+            fparsed = None if ferr else feedparser.parse(ftext)
+            if fparsed is not None and fparsed.entries:
+                print(f"  ok    {name:<32} {'via fallback (' + err[:14] + ')':<28} {ms:>5}ms"
+                      f" · {len(fparsed.entries)} entries")
+                continue
+        if parsed is None:
             print(f"  FAIL  {name:<32} {err:<28} {ms:>5}ms")
             print(f"        {url}")
             bad.append((name, url, err))
-            continue
-        parsed = feedparser.parse(text)
-        n = len(parsed.entries)
-        title = (parsed.feed or {}).get("title", "")
-        if not n and not title:
-            print(f"  FAIL  {name:<32} {'200 but unparseable':<28} {ms:>5}ms")
-            print(f"        {url}")
-            bad.append((name, url, "200 but unparseable"))
         else:
+            n = len(parsed.entries)
             newest = ""
             if n:
                 d = rss_source._entry_datetime(parsed.entries[0])

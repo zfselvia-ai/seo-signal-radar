@@ -123,21 +123,27 @@ def fetch(cfg: dict, since: datetime) -> List[Item]:
         try:
             # Fetch ourselves rather than letting feedparser do it — see
             # FETCH_HEADERS for why the User-Agent is load-bearing.
-            text, status, err = fetch_feed_text(url)
-            if err:
+            # `fallback_url` (e.g. a Google News mirror) is tried only when the
+            # primary fails: CI runs from datacenter IPs that some publishers
+            # block, but the primary carries the real summary and article URL.
+            parsed, err = None, None
+            for attempt in [url] + ([feed["fallback_url"]] if feed.get("fallback_url") else []):
+                text, status, err = fetch_feed_text(attempt)
+                if err:
+                    continue
+                parsed = feedparser.parse(text)
+                # A 200 that parses to nothing is still a failure: a renamed
+                # blog often serves an HTML error page with a 200. Without this
+                # check a permanently dead feed URL stays invisible forever.
+                if parsed.entries or (parsed.feed or {}).get("title"):
+                    if attempt != url:
+                        print(f"  [rss] feed '{name}': primary failed, using fallback_url")
+                    break
+                parsed, err = None, f"HTTP {status} but no parseable entries"
+            if parsed is None:
                 failed_feeds.append(name)
                 LAST_ERRORS[name] = err
                 print(f"  [rss] feed '{name}' failed: {err}")
-                continue
-            parsed = feedparser.parse(text)
-            # A 200 that parses to nothing is still a failure: a renamed blog
-            # often serves an HTML error page with a 200. Without this check a
-            # permanently dead feed URL stays invisible forever.
-            if not parsed.entries and not (parsed.feed or {}).get("title"):
-                failed_feeds.append(name)
-                LAST_ERRORS[name] = f"HTTP {status} but no parseable entries"
-                print(f"  [rss] feed '{name}' returned nothing parseable "
-                      f"(HTTP {status}) — check the URL")
                 continue
             ok_feeds.append(name)
             for entry in parsed.entries[:max_per]:

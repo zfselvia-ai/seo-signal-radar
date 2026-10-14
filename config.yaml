@@ -321,12 +321,19 @@ rss:
     # until Google publishes a docs-changelog feed again.
     # - {name: "Google Search Docs Updates", url: "https://developers.google.com/search/blog/release-notes.xml",
     #    category: official_documentation, weight: 1.0, always_include_if_material: true}
+    # 2026-10-14: the direct feed started looping 308 redirects (worked 10-13).
     - {name: "Bing Webmaster Blog", url: "https://blogs.bing.com/webmaster/feed",
+       fallback_url: "https://news.google.com/rss/search?q=site:blogs.bing.com/webmaster&hl=en-US&gl=US&ceid=US:en",
        category: official_documentation, weight: 0.95}
 
     # ---- Controlled experiments (the scarcest, most valuable input) ------
     # Keep negative and inconclusive tests — they are often worth more than wins.
+    # fallback_url (here and below): a Google News mirror, used only when the
+    # primary fails. CI fetches from datacenter IPs that some publishers block;
+    # the CI branch ran on these mirrors (11/11 feeds ok, Sep-Oct 2026). The
+    # primary stays first because it carries the real summary and article URL.
     - {name: "SearchPilot Resources", url: "https://www.searchpilot.com/resources/case-studies/rss.xml",
+       fallback_url: "https://news.google.com/rss/search?q=site:searchpilot.com&hl=en-US&gl=US&ceid=US:en",
        category: reproducible_experiment, weight: 0.95}
 
     # ---- Data research --------------------------------------------------
@@ -345,8 +352,11 @@ rss:
 
     # ---- Trade news: fast event radar, low weight ------------------------
     - {name: "Search Engine Roundtable", url: "https://www.seroundtable.com/index.xml",
+       fallback_url: "https://news.google.com/rss/search?q=site:seroundtable.com&hl=en-US&gl=US&ceid=US:en",
        category: trade_news, weight: 0.6}
+    # The direct feed 403s from every IP tried (2026-10); the mirror is what runs.
     - {name: "Search Engine Land", url: "https://searchengineland.com/feed",
+       fallback_url: "https://news.google.com/rss/search?q=site:searchengineland.com&hl=en-US&gl=US&ceid=US:en",
        category: trade_news, weight: 0.6}
     # Discovery tier only — rarely the reason a signal makes the digest.
     - {name: "Search Engine Journal", url: "https://www.searchenginejournal.com/feed/",
