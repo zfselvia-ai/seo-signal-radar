@@ -1,8 +1,8 @@
 """Fetch recent articles from RSS/Atom feeds. Reliable, no auth needed."""
 from __future__ import annotations
 
+from calendar import timegm
 from datetime import datetime, timezone
-from time import mktime
 from typing import List
 
 from .models import Item
@@ -63,10 +63,14 @@ def fetch_feed_text(url: str, timeout: int = FETCH_TIMEOUT):
 
 
 def _entry_datetime(entry):
+    # feedparser's *_parsed tuples are UTC. timegm, NOT time.mktime: mktime
+    # reads the tuple as LOCAL time, so on a UTC+8 machine every timestamp came
+    # out 8h early — wrong dates on cards, and the first 8h of each run's window
+    # silently fell outside it. It only looked right on CI because CI is UTC.
     for key in ("published_parsed", "updated_parsed"):
         val = getattr(entry, key, None) or entry.get(key)
         if val:
-            return datetime.fromtimestamp(mktime(val), tz=timezone.utc)
+            return datetime.fromtimestamp(timegm(val), tz=timezone.utc)
     return None
 
 

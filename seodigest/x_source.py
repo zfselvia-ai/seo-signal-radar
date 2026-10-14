@@ -15,8 +15,8 @@ differently from a keyword hit.
 from __future__ import annotations
 
 import re
+from calendar import timegm
 from datetime import datetime, timezone
-from time import mktime
 from typing import List
 
 from .models import Item
@@ -61,7 +61,9 @@ def _entry_datetime(entry):
         val = getattr(entry, key, None) or entry.get(key)
         if val:
             try:
-                return datetime.fromtimestamp(mktime(val), tz=timezone.utc)
+                # UTC tuple -> timegm (see rss_source._entry_datetime for why
+                # mktime was 8h wrong on this machine).
+                return datetime.fromtimestamp(timegm(val), tz=timezone.utc)
             except Exception:
                 continue
     return None
