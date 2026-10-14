@@ -1,0 +1,32 @@
+name: Publish dashboard
+# Rebuild the public dashboard whenever main changes outside the daily run
+# (hand-curated records, code, config), so Pages never lags main by a day.
+# The daily run publishes on its own; its push uses GITHUB_TOKEN, which does
+# not trigger workflows, so the two never loop.
+on:
+  push:
+    branches: [main]
+    paths: ["data/archive/**", "seodigest/**", "config.yaml", "main.py", "requirements.txt"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: pages-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Build dashboard from the archive on main
+        run: python main.py dashboard
+      - name: Publish dashboard to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dashboard
+          publish_branch: gh-pages

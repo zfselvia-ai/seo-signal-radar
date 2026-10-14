@@ -9,6 +9,11 @@ permissions:
   contents: write
   pages: write
 
+# Shared with pages.yml: one publish to gh-pages at a time.
+concurrency:
+  group: pages-publish
+  cancel-in-progress: false
+
 jobs:
   daily:
     runs-on: ubuntu-latest
@@ -44,7 +49,15 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git add data/archive reports/ || true
           git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          # Someone may have pushed while this ran (a hand-curated record, a
+          # fix). Rebase onto it instead of skipping the push and losing today's
+          # record. On a clash the already-pushed version wins: in a rebase,
+          # "-X ours" means the upstream side.
+          git pull --rebase -X ours origin main || { git rebase --abort; true; }
           git push || echo "push skipped"
+
+      - name: Rebuild dashboard from what is now on main
+        run: python main.py dashboard
 
       - name: Publish dashboard to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
