@@ -4,7 +4,9 @@ Not a news aggregator — a **signal radar** for advanced SEOs:
 
 > **X discovers anomalies → official data confirms → cases & data decide whether it's worth acting.**
 
-It pulls from 21 curated X accounts, 5 Bluesky accounts (the Google staff who left X),
+It pulls from 21 curated X accounts, 9 Bluesky accounts (John Mueller, Gary Illyes and
+Danny Sullivan, who left X; two practitioners; and Bluesky mirrors of four X accounts so
+they still arrive when Nitter is down),
 22 SEO/official feeds (RSS — including the newsletters and blogs of people who mostly
 post on LinkedIn), the **official Google Search Status API**, and a **manual inbox** for
 things you read somewhere without a feed. Then a curation step — an LLM when you have a
@@ -37,7 +39,7 @@ any one site's own data.
 ```
 Google Status API ─┐
 21 X accounts ─────┤
-5 Bluesky accounts ┼─► fetch ─► dedup ─► score+curate (LLM | rules + hand) ─► 10 sections ─► daily MD/HTML
+9 Bluesky accounts ┼─► fetch ─► dedup ─► score+curate (LLM | rules + hand) ─► 10 sections ─► daily MD/HTML
 22 RSS feeds ──────┤                                    │
 manual inbox ──────┘                                    │
 SERP volatility ───► percentile + 4-quadrant ───────────┘
@@ -306,7 +308,7 @@ seodigest/
   summarize.py           # daily scoring + curation + LLM step + source-URL verification
   reports.py             # weekly / monthly / special-brief synthesis
   render.py              # MD + HTML for all report kinds
-  store.py               # dedup, structured archive, run-health records, SERP history
+  store.py               # dedup (incl. X/Bluesky cross-posts), structured archive, run-health records, SERP history
   dashboard.py           # builds the single-file static dashboard from the archive
   dashboard_template.html# the dashboard shell (data injected at build time)
   notify.py              # compressed push + per-channel webhook formats
@@ -322,6 +324,8 @@ dashboard/index.html     # the product (gitignored build artifact — open it lo
 ## Notes & limits
 
 - **X is the fragile part** — Nitter instances go down and rate-limit constantly. `x_source.py` tries several in order and distinguishes "no tweets" from "every instance refused", recording *which* instance refused and how (a run where every handle reports `:429` is a throttling problem, not 29 dead accounts). The health strip on the dashboard turns amber below `dashboard.source_warn_ratio` and red at zero coverage. Run `doctor` when it does.
+- **Four X accounts have a Bluesky mirror, and one post is shown once.** Glenn Gabe, Aleyda Solis, Lily Ray and Barry Schwartz are also followed on Bluesky (`same_as` in `rss.feeds`), so they keep arriving when every Nitter instance is down. Most of their posts go to both platforms, under different ids, so `store.collapse_crossposts` keeps one copy (the X one when both are new). That holds across runs too, via short-lived fingerprints in `seen.json`. The thresholds were calibrated on real pairs: genuine cross-posts land within 1.3h of each other and share at least half the words of the shorter post, while different posts made within 3h shared at most 0.29. The raw ranker's two-per-source cap counts one person across both channels. The official X API (pay per use, $0.005 per post read) was evaluated in Oct 2026 and not adopted.
+- **Feed timestamps are UTC: parse them with `calendar.timegm`, never `time.mktime`.** Until 2026-10-13 both fetchers used `mktime`, which reads feedparser's UTC tuples as *local* time. On this UTC+8 machine every post was dated 8h early, so cards showed the wrong day, and the first 8h of each run's window silently fell outside it — a third of a 24h window. Records made by the old CI runner (UTC) were unaffected, and the hand-curated records were corrected and re-checked against tweet-ID timestamps.
 - **Fetching is done with a browser User-Agent, deliberately.** Cloudflare-fronted publishers 403 a library-shaped UA, and `feedparser` returns an empty feed instead of raising — which is why four feeds failed silently for nine days while looking exactly like "no new articles". A 200 that parses to nothing is also treated as a failure, since a renamed blog usually serves an HTML error page with a 200.
 - **Sources are verified, not trusted.** Every URL the LLM cites is checked against the candidate pool it was actually shown. Anything invented is stripped, the signal is marked `unverified`, and its confidence is capped at Speculative.
 - **Repeats are filtered across days, escalations are not.** Item-level dedup keys on ID, so one story discussed by five accounts over three days would otherwise occupy a slot all week. Story-level dedup (Jaccard overlap, CJK compared per character) runs in two layers — the prompt is told what already ran, *and* the output is post-filtered, because the model sometimes ignores the instruction. A rumour that becomes officially confirmed always survives: that escalation is the single most valuable thing this product delivers.
