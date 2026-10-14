@@ -51,6 +51,24 @@ def _load_pool(paths) -> tuple[list, list]:
     return items, confirmed
 
 
+def _as_of(update: dict, date_str: str):
+    """The update as the Status API described it on `date_str`.
+
+    The pool is fetched after the fact, so it holds each update's FINAL state.
+    For a back-dated record before the update ended, that state is the future:
+    it was still rolling out and had no completion note. Returns
+    (update, reconstructed?).
+    """
+    try:
+        day = datetime.strptime(date_str, "%Y-%m-%d").date()
+        end = datetime.fromisoformat(update["end"]).date() if update.get("end") else None
+    except (ValueError, TypeError):
+        return update, False
+    if end and end > day:
+        return {**update, "end": None, "ongoing": True, "latest_update": ""}, True
+    return update, False
+
+
 def _active_on(update: dict, date_str: str, grace_days: int = 1) -> bool:
     """Was this confirmed update running on `date_str` (± a day for completion news)?"""
     from datetime import timedelta
@@ -105,9 +123,20 @@ def main() -> int:
         cfg = dict(cfg)
         cfg["daily"] = {**cfg["daily"], "dedupe_lookback_days": 0}
     digest = summarize.finalize_digest(cfg, data, pool, pool)
-    # Only the updates that were live on this record's date. A back-dated record
-    # must not claim it saw an update that started weeks later.
-    digest["confirmed_updates"] = [c for c in confirmed if _active_on(c, date_str)]
+    # Only the updates that were live on this record's date, as they were then.
+    # A back-dated record must not claim it saw an update that started weeks
+    # later, nor that one still rolling out had already finished.
+    as_of = [_as_of(c, date_str) for c in confirmed if _active_on(c, date_str)]
+    digest["confirmed_updates"] = [u for u, _ in as_of]
+    rewound = {u["url"]: u for u, r in as_of if r and u.get("url")}
+    # A Status excerpt reads "[kind] title. <latest status line>"; the status
+    # line is the part that changes over time. Keep the verbatim head only.
+    for s in digest.get("signals", []):
+        for src in s.get("sources", []):
+            u = rewound.get(src.get("url"))
+            head = u and f"[{u.get('kind')}] {u.get('title')}."
+            if head and (src.get("excerpt") or "").startswith(head):
+                src["excerpt"] = head
     digest["curated_by"] = data.get("curated_by", "human")
     if args.backfilled or data.get("backfilled"):
         digest["backfilled"] = True

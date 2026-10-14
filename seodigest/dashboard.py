@@ -95,21 +95,21 @@ def _map_tracks(records: list) -> list:
     # start date. Every daily record stores the full incident history the API
     # returns (7-8 updates going back a year), so plotting them at the record
     # date put the same seven stale updates on every single day of the track.
-    seen_official = set()
-    for rec in records:
+    # The LATEST record's copy wins: the first record to see an update sees it
+    # rolling out, and keeping that copy would show it ongoing forever.
+    latest = {}
+    for rec in records:                      # ascending by date
         for c in rec.get("confirmed_updates", []):
-            key = c.get("id") or c.get("title")
-            if key in seen_official:
-                continue
-            seen_official.add(key)
-            start = (c.get("start") or "")[:10] or rec.get("date", "")
-            end = (c.get("end") or "")[:10]
-            events.append({
-                "date": start, "track": "official",
-                "label": c.get("title") or c.get("kind", "Confirmed update"),
-                "band": "Extreme" if c.get("ongoing") else "High",
-                "detail": (c.get("kind", "") + (f" · {start} → {end}" if end else " · ongoing")).strip(" ·"),
-            })
+            latest[c.get("id") or c.get("title")] = (c, rec.get("date", ""))
+    for c, rec_date in latest.values():
+        start = (c.get("start") or "")[:10] or rec_date
+        end = (c.get("end") or "")[:10]
+        events.append({
+            "date": start, "track": "official",
+            "label": c.get("title") or c.get("kind", "Confirmed update"),
+            "band": "Extreme" if c.get("ongoing") else "High",
+            "detail": (c.get("kind", "") + (f" · {start} → {end}" if end else " · ongoing")).strip(" ·"),
+        })
     for rec in records:
         date = rec.get("date", "")
         # external track — SERP heat for the day
