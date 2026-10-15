@@ -1,0 +1,591 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T05:38:00.047513+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2110470061571870906",
+            "excerpt": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks. https://cfl.re/3VQ5uTA. When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks. cfl.re/3VQ5uTA Link Yandex outage: data shows that instead of going dark, malicious bots went on the move When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to…",
+            "author": "@Cloudflare",
+            "published": "2026-10-14T20:37:27+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2110356704462307620",
+            "excerpt": "While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available. https://cfl.re/4B6pIIW. While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available. cfl.re/4B6pIIW Link Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. blog.cloudflare.com",
+            "author": "@Cloudflare",
+            "published": "2026-10-14T13:07:01+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Does adding landmarks or attraction in titles impact local SEO?. For travel sites, many searches include a place, and…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "SearchPilot Resources",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "SearchPilot Resources",
+            "url": "https://www.searchpilot.com/resources/case-studies/does-adding-near-landmark/attraction-to-titles-help-seo",
+            "excerpt": "Does adding landmarks or attraction in titles impact local SEO?. For travel sites, many searches include a place, and those places are often not just cities but specific landmarks and attractions, such as a theme park or a famous museum. This raises a question for any site with many individual location detail pages.&nbsp; If a location has a well-known attraction, does saying so in the title help?",
+            "author": "SearchPilot Resources",
+            "published": "2026-10-14T15:41:17+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "I enjoyed this challenge https://lab.specr.net/rigged-draw/. I enjoyed this challenge lab.specr.net/rigged-draw/ Link…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "willcritchlow",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2110274581873451025",
+            "excerpt": "I enjoyed this challenge https://lab.specr.net/rigged-draw/. I enjoyed this challenge lab.specr.net/rigged-draw/ Link How random are you? Say numbers out loud as randomly as you can. Before each one, a predictor in your browser seals its guess, and a split-flap board shows how far ahead of chance it gets. lab.specr.net",
+            "author": "@willcritchlow",
+            "published": "2026-10-14T07:40:41+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "The next phase in AI Mode migrating to default Search. I'm sure it's just another step in the roadmap towards AI Mode…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2110348256417083547",
+            "excerpt": "The next phase in AI Mode migrating to default Search. I'm sure it's just another step in the roadmap towards AI Mode as the default (or some form of it).. The next phase in AI Mode migrating to default Search. I'm sure it's just another step in the roadmap towards AI Mode as the default (or some form of it). Barry Schwartz (@rustybrick) Google is testing placing the AI Mode left sidebar on the main Google Search results page - via @AndellDam seroundtable.com/google-ai-m… Link Google Testing AI Mode Left Sidebar On Main Google Search Results Page Google is testing placing the left vertical sidebar you see in AI Mode results on the main Google web s",
+            "author": "@glenngabe",
+            "published": "2026-10-14T12:33:27+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google Search On URLs: Ranking Factor, Hyphens vs Underscores & Emojis. Google posted its first video in a series of…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/google-search-urls-42305.html",
+            "excerpt": "Google Search On URLs: Ranking Factor, Hyphens vs Underscores & Emojis. Google posted its first video in a series of what they are calling The Non-Canonical Cabinet. In this video, Cherry Prommawin and Gary Illyes discussed how Google Search deals with URLs. They discuss URLs as a ranking signal, hyphens versus underscores, emojis and much more.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-14T14:57:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Remember, we had a situation recently where PDFs were being deindexed heavily... -> Google Search On PDFs: Conversion…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2110344799635075570",
+            "excerpt": "Remember, we had a situation recently where PDFs were being deindexed heavily... -> Google Search On PDFs: Conversion, Links, HTML, Ranking, Limits, Crawling... \"Google's Martin Splitt and John Mueller just posted a Search Off the Record podcast on the topic of PDFs, it is named PDFs in Search: Indexing, AI & Pitfalls. It goes over how PDFs are converted for crawling and indexing, how Google processes links, images, what are the file limits and do they rank in search and AI search.\" https://www.seroundtable.com/google-search-on-pdfs-42291.html. Remember, we had a situation recently where PDFs were being deindexed heavily... -&gt; Google Search On PDFs: Conversion, Links, HTML, Ranking,…",
+            "author": "@glenngabe",
+            "published": "2026-10-14T12:19:43+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "I've spent a day and a half with Gemini 4 Argon. Paired with my OKF brain, it did a traffic drop assessment better than…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie_Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2110479760031891519",
+            "excerpt": "I've spent a day and a half with Gemini 4 Argon. Paired with my OKF brain, it did a traffic drop assessment better than I could alone. That's exciting and also scary for those of us who consult for a living. Tomorrow's newsletter covers what I saw, why I think a core update is close and a bunch of other interesting stories. If you're not already signed up: https://www.mariehaynes.com/marie-haynes-newsletter/?utm_source=twitter&utm_medium=social&utm_campaign=newsletter&utm_content=gemini4-teaser. I've spent a day and a half with Gemini 4 Argon. Paired with my OKF brain, it did a traffic drop assessment better than I could alone. That's exciting and also scary for those of us who consult for…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-14T21:16:00+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "INTERESTING! Bing Webmaster Tools is once again leading the charge: you can now see topics you're being cited for, how…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2110257382303650241",
+            "excerpt": "INTERESTING! Bing Webmaster Tools is once again leading the charge: you can now see topics you're being cited for, how often they're cited and related grounding queries. This is the closest we have to classic search data. Your turn, Google!. INTERESTING! Bing Webmaster Tools is once again leading the charge: you can now see topics you're being cited for, how often they're cited and related grounding queries. This is the closest we have to classic search data. Your turn, Google!",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-14T06:32:21+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Excellent coverage by @nozzleio sharing how Google is poisoning the SERPs that it serves to rank trackers since last…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2110398242676781226",
+            "excerpt": "Excellent coverage by @nozzleio sharing how Google is poisoning the SERPs that it serves to rank trackers since last month ... so if you have seen rankings \"off\" in the latest weeks: this is your confirmation: Google has been poisoning the SERPs it serves rank trackers: complete, normal looking pages whose results have been swapped out. Nothing on the page gives it away. Each keyword’s own history does. From 27.5M analyzed SERPs: 8.0% of SERPs came back poisoned, the page looks normal. The results don’t, No error, no captcha, the same template, but most of the keyword’s usual sites are gone, the organic results keep 20.7% of the previous SERP’s sites, against 88.5% before. * Social sites…",
+            "author": "@aleyda",
+            "published": "2026-10-14T15:52:05+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2110470061571870906",
+          "excerpt": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks. https://cfl.re/3VQ5uTA. When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks. cfl.re/3VQ5uTA Link Yandex outage: data shows that instead of going dark, malicious bots went on the move When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to…",
+          "author": "@Cloudflare",
+          "published": "2026-10-14T20:37:27+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Does adding landmarks or attraction in titles impact local SEO?. For travel sites, many searches include a place, and…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "SearchPilot Resources",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "SearchPilot Resources",
+          "url": "https://www.searchpilot.com/resources/case-studies/does-adding-near-landmark/attraction-to-titles-help-seo",
+          "excerpt": "Does adding landmarks or attraction in titles impact local SEO?. For travel sites, many searches include a place, and those places are often not just cities but specific landmarks and attractions, such as a theme park or a famous museum. This raises a question for any site with many individual location detail pages.&nbsp; If a location has a well-known attraction, does saying so in the title help?",
+          "author": "SearchPilot Resources",
+          "published": "2026-10-14T15:41:17+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "The next phase in AI Mode migrating to default Search. I'm sure it's just another step in the roadmap towards AI Mode…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2110348256417083547",
+          "excerpt": "The next phase in AI Mode migrating to default Search. I'm sure it's just another step in the roadmap towards AI Mode as the default (or some form of it).. The next phase in AI Mode migrating to default Search. I'm sure it's just another step in the roadmap towards AI Mode as the default (or some form of it). Barry Schwartz (@rustybrick) Google is testing placing the AI Mode left sidebar on the main Google Search results page - via @AndellDam seroundtable.com/google-ai-m… Link Google Testing AI Mode Left Sidebar On Main Google Search Results Page Google is testing placing the left vertical sidebar you see in AI Mode results on the main Google web s",
+          "author": "@glenngabe",
+          "published": "2026-10-14T12:33:27+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "INTERESTING! Bing Webmaster Tools is once again leading the charge: you can now see topics you're being cited for, how…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2110257382303650241",
+          "excerpt": "INTERESTING! Bing Webmaster Tools is once again leading the charge: you can now see topics you're being cited for, how often they're cited and related grounding queries. This is the closest we have to classic search data. Your turn, Google!. INTERESTING! Bing Webmaster Tools is once again leading the charge: you can now see topics you're being cited for, how often they're cited and related grounding queries. This is the closest we have to classic search data. Your turn, Google!",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-14T06:32:21+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "I enjoyed this challenge https://lab.specr.net/rigged-draw/. I enjoyed this challenge lab.specr.net/rigged-draw/ Link…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "willcritchlow",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2110274581873451025",
+          "excerpt": "I enjoyed this challenge https://lab.specr.net/rigged-draw/. I enjoyed this challenge lab.specr.net/rigged-draw/ Link How random are you? Say numbers out loud as randomly as you can. Before each one, a predictor in your browser seals its guess, and a split-flap board shows how far ahead of chance it gets. lab.specr.net",
+          "author": "@willcritchlow",
+          "published": "2026-10-14T07:40:41+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Search On URLs: Ranking Factor, Hyphens vs Underscores & Emojis. Google posted its first video in a series of…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/google-search-urls-42305.html",
+          "excerpt": "Google Search On URLs: Ranking Factor, Hyphens vs Underscores & Emojis. Google posted its first video in a series of what they are calling The Non-Canonical Cabinet. In this video, Cherry Prommawin and Gary Illyes discussed how Google Search deals with URLs. They discuss URLs as a ranking signal, hyphens versus underscores, emojis and much more.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-14T14:57:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2110356704462307620",
+          "excerpt": "While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available. https://cfl.re/4B6pIIW. While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available. cfl.re/4B6pIIW Link Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. blog.cloudflare.com",
+          "author": "@Cloudflare",
+          "published": "2026-10-14T13:07:01+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Remember, we had a situation recently where PDFs were being deindexed heavily... -> Google Search On PDFs: Conversion…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2110344799635075570",
+          "excerpt": "Remember, we had a situation recently where PDFs were being deindexed heavily... -> Google Search On PDFs: Conversion, Links, HTML, Ranking, Limits, Crawling... \"Google's Martin Splitt and John Mueller just posted a Search Off the Record podcast on the topic of PDFs, it is named PDFs in Search: Indexing, AI & Pitfalls. It goes over how PDFs are converted for crawling and indexing, how Google processes links, images, what are the file limits and do they rank in search and AI search.\" https://www.seroundtable.com/google-search-on-pdfs-42291.html. Remember, we had a situation recently where PDFs were being deindexed heavily... -&gt; Google Search On PDFs: Conversion, Links, HTML, Ranking,…",
+          "author": "@glenngabe",
+          "published": "2026-10-14T12:19:43+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Excellent coverage by @nozzleio sharing how Google is poisoning the SERPs that it serves to rank trackers since last…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2110398242676781226",
+          "excerpt": "Excellent coverage by @nozzleio sharing how Google is poisoning the SERPs that it serves to rank trackers since last month ... so if you have seen rankings \"off\" in the latest weeks: this is your confirmation: Google has been poisoning the SERPs it serves rank trackers: complete, normal looking pages whose results have been swapped out. Nothing on the page gives it away. Each keyword’s own history does. From 27.5M analyzed SERPs: 8.0% of SERPs came back poisoned, the page looks normal. The results don’t, No error, no captcha, the same template, but most of the keyword’s usual sites are gone, the organic results keep 20.7% of the previous SERP’s sites, against 88.5% before. * Social sites…",
+          "author": "@aleyda",
+          "published": "2026-10-14T15:52:05+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "I've spent a day and a half with Gemini 4 Argon. Paired with my OKF brain, it did a traffic drop assessment better than…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie_Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2110479760031891519",
+          "excerpt": "I've spent a day and a half with Gemini 4 Argon. Paired with my OKF brain, it did a traffic drop assessment better than I could alone. That's exciting and also scary for those of us who consult for a living. Tomorrow's newsletter covers what I saw, why I think a core update is close and a bunch of other interesting stories. If you're not already signed up: https://www.mariehaynes.com/marie-haynes-newsletter/?utm_source=twitter&utm_medium=social&utm_campaign=newsletter&utm_content=gemini4-teaser. I've spent a day and a half with Gemini 4 Argon. Paired with my OKF brain, it did a traffic drop assessment better than I could alone. That's exciting and also scary for those of us who consult for…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-14T21:16:00+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM disabled (llm.provider: none) — raw source items ranked by source trust + SEO keywords, not assessed",
+  "quiet_day": false,
+  "run_meta": {
+    "ran_at": "2026-10-15T05:38:00.039172+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 86
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 47
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 133,
+    "candidates_fresh": 83,
+    "llm_provider": ""
+  }
+}
