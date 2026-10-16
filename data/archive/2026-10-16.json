@@ -1,0 +1,591 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T05:32:28.859649+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2110782412783231001",
+            "excerpt": "Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform. https://cfl.re/4s3OkxO. Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform. cfl.re/4s3OkxO Link A fully programmable secure web gateway Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform. blog.cloudflare.com",
+            "author": "@Cloudflare",
+            "published": "2026-10-15T17:18:38+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Today, Cloudflare and @OpenAI released the first findings from their joint research pilot, demonstrating how real-time…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2110718590814916959",
+            "excerpt": "Today, Cloudflare and @OpenAI released the first findings from their joint research pilot, demonstrating how real-time network signals can make AI search drastically smarter, fresher, and safer without overloading website infrastructure. https://cfl.re/4zUxVPd. Today, Cloudflare and @OpenAI released the first findings from their joint research pilot, demonstrating how real-time network signals can make AI search drastically smarter, fresher, and safer without overloading website infrastructure. cfl.re/4zUxVPd Link Cloudflare and OpenAI: making AI discovery better for everyone How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer…",
+            "author": "@Cloudflare",
+            "published": "2026-10-15T13:05:01+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "How Do We Move Forward if the SERP Is Generative?. Google has been moving the results page away from fixed modules for…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "iPullRank Blog",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "iPullRank Blog",
+            "url": "https://ipullrank.com/generative-serps",
+            "excerpt": "How Do We Move Forward if the SERP Is Generative?. Google has been moving the results page away from fixed modules for a couple of years, and a Google Research paper, Generative UI: LLMs are Effective UI Generators, spells out where that road may end: a model writes the entire page, including the HTML, CSS and JavaScript, from scratch for each query. Google&#8217;s own announcement [&#8230;] The post How Do We Move Forward if the SERP Is Generative? appeared first on iPullRank .",
+            "author": "iPullRank Blog",
+            "published": "2026-10-15T18:52:03+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Some screenshots from Google: Related articles, links to Search profiles, and more.. Some screenshots from Google…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2110764994526662742",
+            "excerpt": "Some screenshots from Google: Related articles, links to Search profiles, and more.. Some screenshots from Google: Related articles, links to Search profiles, and more. Glenn Gabe (@glenngabe) Long live the link! Google is updating how it handles links in AIOs and AI Mode again. Barry has the details: *Google increased links in AI Mode and AI Overviews. *Google is placing some of those links higher up in the AI responses. *Google will show one or two links to the \"right web page\" for some queries that deserve it. *Google is expanding the timely article carousels to more regions",
+            "author": "@glenngabe",
+            "published": "2026-10-15T16:09:25+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Long live the link! Google is updating how it handles links in AIOs and AI Mode again. Barry has the details: *Google…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2110763976439013525",
+            "excerpt": "Long live the link! Google is updating how it handles links in AIOs and AI Mode again. Barry has the details: *Google increased links in AI Mode and AI Overviews. *Google is placing some of those links higher up in the AI responses. *Google will show one or two links to the \"right web page\" for some queries that deserve it. *Google is expanding the timely article carousels to more regions and languages globally. *Google has more prominent link designs for related articles. *Google is testing linking Search profiles from creator and publisher names on videos within AI Mode, but those links go to Google pages, the Search profile page, first.. Long live the link! Google is updating how it…",
+            "author": "@glenngabe",
+            "published": "2026-10-15T16:05:22+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google announced that AI Overviews and AI Mode are going to do more when it comes to linking out to websites. 1. More…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie_Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2110777307925201052",
+            "excerpt": "Google announced that AI Overviews and AI Mode are going to do more when it comes to linking out to websites. 1. More inline links in AI answers. Plus they will be shown higher up in responses more frequently. 2. Displaying official websites up high in AI answers if they are the place where people usually go to complete a specific tasks. 3. New prominent carousels for timely news articles that will appear within the AI answers. These will highlight your Preferred Sources. 4. More links to websites at the end of AI answers, along with image thumbnails and a more clickable design. 5. Clickable creator and publisher names on video results that take you to their Search Profile.…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-15T16:58:21+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Get ready folks, direct checkout is here!. Get ready folks, direct checkout is here! Vidhya Srinivasan…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2110762723508175030",
+            "excerpt": "Get ready folks, direct checkout is here!. Get ready folks, direct checkout is here! Vidhya Srinivasan (@VidsSrinivasan) Universal Cart 🛒 is rolling out in the U.S across Google Search and the Gemini app. It’s giving everyone an intelligent shopping cart and a new hub for shopping on Google. Shopping rarely happens in one sitting. Universal Cart puts you in control: it helps you save items you love from multiple retailers across the web, make sure you never miss a deal, and enjoy effortless checkout powered by UCP. — http://nitter.meowin",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-15T16:00:24+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Rank tracking is broken right now. “Poisoned SERPs” have hit almost every data provider. But there’s still a way to…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "brodieseo",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "brodieseo",
+            "url": "https://x.com/brodieseo/status/2110799125822275699",
+            "excerpt": "Rank tracking is broken right now. “Poisoned SERPs” have hit almost every data provider. But there’s still a way to build accurate and detailed ranking reports for clients, using a method Google hasn’t blocked (yet). The setup: 1. Connect the @serplens MCP to Claude Desktop 2. Create a destination for the data (I use Notion) 3. Ask Claude to run scheduled ranking checks It works because the SERP Lens browser strips /goto links by default, and Claude can switch the VPN location through the MCP. I’ve got it checking a client’s keywords from Sydney every morning, logging rank, URL and SERP features automatically. Comment “SERP” and I’ll send you the full setup guide. h/t @suganthan for…",
+            "author": "@brodieseo",
+            "published": "2026-10-15T18:25:03+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google doesn’t label AI Mode queries in Search Console, but they leave a trace: people reply to an AI, and the reply…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2110779231190065337",
+            "excerpt": "Google doesn’t label AI Mode queries in Search Console, but they leave a trace: people reply to an AI, and the reply gets logged as a search: @jwbobbink classified every query of 155 sites over 16 months to see how often that happens, and how fast it’s growing 👇 Here are key insights: * Replies typed at an AI are now normal. Bare replies such as “yes”, “ja” or “yes please” showed up as searches on 94 of the 155 sites. Per million impressions they grew from 5.6 to 116: 21 times as many in 16 months. * German speakers say please to an AI, Indonesian speakers don’t. Three in four German yes-replies come with “bitte” or “gerne” (“ja bitte” on 52 sites). Dutch speakers add “graag” two times in…",
+            "author": "@aleyda",
+            "published": "2026-10-15T17:05:59+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "To be fair, these are many of the things the SEO community has been asking for, for years. Now we just need people to…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2110837444840972617",
+            "excerpt": "To be fair, these are many of the things the SEO community has been asking for, for years. Now we just need people to actually click on these links. 😅 (Oh, and more precise AI tracking in GSC would also be helpful @thefox! We all already know that CTRs will be low 😅🙏🏽). To be fair, these are many of the things the SEO community has been asking for, for years. Now we just need people to actually click on these links. 😅 (Oh, and more precise AI tracking in GSC would also be helpful @thefox ! We all already know that CTRs will be low 😅🙏🏽) Nick Fox (@thefox) One of the areas we’ve been pushing on in Search is making it easy for you to find relevant sites, first-hand perspectives, and content…",
+            "author": "@lilyraynyc",
+            "published": "2026-10-15T20:57:18+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2110782412783231001",
+          "excerpt": "Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform. https://cfl.re/4s3OkxO. Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform. cfl.re/4s3OkxO Link A fully programmable secure web gateway Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform. blog.cloudflare.com",
+          "author": "@Cloudflare",
+          "published": "2026-10-15T17:18:38+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "How Do We Move Forward if the SERP Is Generative?. Google has been moving the results page away from fixed modules for…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "iPullRank Blog",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "iPullRank Blog",
+          "url": "https://ipullrank.com/generative-serps",
+          "excerpt": "How Do We Move Forward if the SERP Is Generative?. Google has been moving the results page away from fixed modules for a couple of years, and a Google Research paper, Generative UI: LLMs are Effective UI Generators, spells out where that road may end: a model writes the entire page, including the HTML, CSS and JavaScript, from scratch for each query. Google&#8217;s own announcement [&#8230;] The post How Do We Move Forward if the SERP Is Generative? appeared first on iPullRank .",
+          "author": "iPullRank Blog",
+          "published": "2026-10-15T18:52:03+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Some screenshots from Google: Related articles, links to Search profiles, and more.. Some screenshots from Google…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2110764994526662742",
+          "excerpt": "Some screenshots from Google: Related articles, links to Search profiles, and more.. Some screenshots from Google: Related articles, links to Search profiles, and more. Glenn Gabe (@glenngabe) Long live the link! Google is updating how it handles links in AIOs and AI Mode again. Barry has the details: *Google increased links in AI Mode and AI Overviews. *Google is placing some of those links higher up in the AI responses. *Google will show one or two links to the \"right web page\" for some queries that deserve it. *Google is expanding the timely article carousels to more regions",
+          "author": "@glenngabe",
+          "published": "2026-10-15T16:09:25+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Get ready folks, direct checkout is here!. Get ready folks, direct checkout is here! Vidhya Srinivasan…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2110762723508175030",
+          "excerpt": "Get ready folks, direct checkout is here!. Get ready folks, direct checkout is here! Vidhya Srinivasan (@VidsSrinivasan) Universal Cart 🛒 is rolling out in the U.S across Google Search and the Gemini app. It’s giving everyone an intelligent shopping cart and a new hub for shopping on Google. Shopping rarely happens in one sitting. Universal Cart puts you in control: it helps you save items you love from multiple retailers across the web, make sure you never miss a deal, and enjoy effortless checkout powered by UCP. — http://nitter.meowin",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-15T16:00:24+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Rank tracking is broken right now. “Poisoned SERPs” have hit almost every data provider. But there’s still a way to…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "brodieseo",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "brodieseo",
+          "url": "https://x.com/brodieseo/status/2110799125822275699",
+          "excerpt": "Rank tracking is broken right now. “Poisoned SERPs” have hit almost every data provider. But there’s still a way to build accurate and detailed ranking reports for clients, using a method Google hasn’t blocked (yet). The setup: 1. Connect the @serplens MCP to Claude Desktop 2. Create a destination for the data (I use Notion) 3. Ask Claude to run scheduled ranking checks It works because the SERP Lens browser strips /goto links by default, and Claude can switch the VPN location through the MCP. I’ve got it checking a client’s keywords from Sydney every morning, logging rank, URL and SERP features automatically. Comment “SERP” and I’ll send you the full setup guide. h/t @suganthan for…",
+          "author": "@brodieseo",
+          "published": "2026-10-15T18:25:03+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Today, Cloudflare and @OpenAI released the first findings from their joint research pilot, demonstrating how real-time…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2110718590814916959",
+          "excerpt": "Today, Cloudflare and @OpenAI released the first findings from their joint research pilot, demonstrating how real-time network signals can make AI search drastically smarter, fresher, and safer without overloading website infrastructure. https://cfl.re/4zUxVPd. Today, Cloudflare and @OpenAI released the first findings from their joint research pilot, demonstrating how real-time network signals can make AI search drastically smarter, fresher, and safer without overloading website infrastructure. cfl.re/4zUxVPd Link Cloudflare and OpenAI: making AI discovery better for everyone How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer…",
+          "author": "@Cloudflare",
+          "published": "2026-10-15T13:05:01+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Long live the link! Google is updating how it handles links in AIOs and AI Mode again. Barry has the details: *Google…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2110763976439013525",
+          "excerpt": "Long live the link! Google is updating how it handles links in AIOs and AI Mode again. Barry has the details: *Google increased links in AI Mode and AI Overviews. *Google is placing some of those links higher up in the AI responses. *Google will show one or two links to the \"right web page\" for some queries that deserve it. *Google is expanding the timely article carousels to more regions and languages globally. *Google has more prominent link designs for related articles. *Google is testing linking Search profiles from creator and publisher names on videos within AI Mode, but those links go to Google pages, the Search profile page, first.. Long live the link! Google is updating how it…",
+          "author": "@glenngabe",
+          "published": "2026-10-15T16:05:22+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google doesn’t label AI Mode queries in Search Console, but they leave a trace: people reply to an AI, and the reply…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2110779231190065337",
+          "excerpt": "Google doesn’t label AI Mode queries in Search Console, but they leave a trace: people reply to an AI, and the reply gets logged as a search: @jwbobbink classified every query of 155 sites over 16 months to see how often that happens, and how fast it’s growing 👇 Here are key insights: * Replies typed at an AI are now normal. Bare replies such as “yes”, “ja” or “yes please” showed up as searches on 94 of the 155 sites. Per million impressions they grew from 5.6 to 116: 21 times as many in 16 months. * German speakers say please to an AI, Indonesian speakers don’t. Three in four German yes-replies come with “bitte” or “gerne” (“ja bitte” on 52 sites). Dutch speakers add “graag” two times in…",
+          "author": "@aleyda",
+          "published": "2026-10-15T17:05:59+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "To be fair, these are many of the things the SEO community has been asking for, for years. Now we just need people to…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2110837444840972617",
+          "excerpt": "To be fair, these are many of the things the SEO community has been asking for, for years. Now we just need people to actually click on these links. 😅 (Oh, and more precise AI tracking in GSC would also be helpful @thefox! We all already know that CTRs will be low 😅🙏🏽). To be fair, these are many of the things the SEO community has been asking for, for years. Now we just need people to actually click on these links. 😅 (Oh, and more precise AI tracking in GSC would also be helpful @thefox ! We all already know that CTRs will be low 😅🙏🏽) Nick Fox (@thefox) One of the areas we’ve been pushing on in Search is making it easy for you to find relevant sites, first-hand perspectives, and content…",
+          "author": "@lilyraynyc",
+          "published": "2026-10-15T20:57:18+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google announced that AI Overviews and AI Mode are going to do more when it comes to linking out to websites. 1. More…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie_Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2110777307925201052",
+          "excerpt": "Google announced that AI Overviews and AI Mode are going to do more when it comes to linking out to websites. 1. More inline links in AI answers. Plus they will be shown higher up in responses more frequently. 2. Displaying official websites up high in AI answers if they are the place where people usually go to complete a specific tasks. 3. New prominent carousels for timely news articles that will appear within the AI answers. These will highlight your Preferred Sources. 4. More links to websites at the end of AI answers, along with image thumbnails and a more clickable design. 5. Clickable creator and publisher names on video results that take you to their Search Profile.…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-15T16:58:21+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: d7072ffe457e11c1-20261016133228696)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'd7072ffe",
+  "run_meta": {
+    "ran_at": "2026-10-16T05:32:26.525774+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 95
+      },
+      "rss": {
+        "ok": 29,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)",
+          "Brodie Clark"
+        ],
+        "items": 50
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 145,
+    "candidates_fresh": 94,
+    "llm_provider": ""
+  }
+}
