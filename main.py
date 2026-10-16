@@ -167,10 +167,18 @@ def run_daily(cfg, dry_run=False):
     kept = sum(len(v) for v in digest.get("sections", {}).values())
     print(f"[*] kept {kept} signals")
 
-    md, html = render.render_daily(digest, cfg, date_str, serp_snapshot)
-    paths = render.write_report(cfg, "daily", date_str, md, html)
-    store.archive_daily(cfg, date_str, digest, serp_snapshot)
-    store.archive_run_meta(cfg, date_str, run_meta)
+    keep_why = store.daily_record_guard(cfg, date_str, digest)
+    if keep_why:
+        # Keep today's record AND its run_meta: the health strip must describe
+        # the run that produced the content it sits on. Items are still marked
+        # seen, so they are not offered again tomorrow.
+        print(f"[*] keeping today's record: {keep_why}.")
+        paths = {}
+    else:
+        md, html = render.render_daily(digest, cfg, date_str, serp_snapshot)
+        paths = render.write_report(cfg, "daily", date_str, md, html)
+        store.archive_daily(cfg, date_str, digest, serp_snapshot)
+        store.archive_run_meta(cfg, date_str, run_meta)
     store.commit_seen(fresh + crossposts, mirrored)
     for fmt, p in paths.items():
         print(f"[*] wrote daily {fmt}: {p}")

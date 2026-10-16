@@ -204,6 +204,39 @@ def archive_daily(cfg: dict, date_str: str, digest: dict,
     return path
 
 
+def _record_rank(r: dict) -> int:
+    """Curated (by hand or by a model) outranks a raw/uncurated fallback day."""
+    return 0 if r.get("degraded") else 1
+
+
+def daily_record_guard(cfg: dict, date_str: str, digest: dict):
+    """Return why today's archived record must be kept instead, or None.
+
+    A second run on the same day sees only what the first run had not already
+    marked seen, so its record is thinner, and a raw run can replace a day that
+    was curated by hand or by a model. Today's existing record is therefore
+    replaced only by one at least as good: curated over raw; raw over raw only
+    with at least as many signals. Hand edits are never overwritten by a run.
+    """
+    path = os.path.join(cfg["output"]["archive_dir"], f"{date_str}.json")
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            old = json.load(f)
+    except Exception:
+        return None
+    if old.get("curated_by"):
+        return f"{date_str} was curated by hand ({old['curated_by']})"
+    new_rank, old_rank = _record_rank(digest), _record_rank(old)
+    if new_rank < old_rank:
+        return f"{date_str} already has a curated record, and this run has only the raw feed"
+    if new_rank == old_rank and len(digest.get("signals") or []) < len(old.get("signals") or []):
+        return (f"{date_str} already has {len(old['signals'])} signals of the same kind, "
+                f"this run only {len(digest.get('signals') or [])}")
+    return None
+
+
 def archive_run_meta(cfg: dict, date_str: str, run_meta: dict) -> str:
     """Attach/refresh run health on today's record, creating a stub if needed.
 
@@ -228,7 +261,13 @@ def archive_run_meta(cfg: dict, date_str: str, run_meta: dict) -> str:
     record.setdefault("signals", [])
     record.setdefault("serp", {})
     record.setdefault("confirmed_updates", [])
-    record["run_meta"] = run_meta
+    # A run that found nothing new must not overwrite the health record of the
+    # run that produced today's content: the strip on the page describes that
+    # run (sources reached, model grounding). Keep the latest attempt beside it.
+    if record.get("signals") and record.get("run_meta"):
+        record["run_meta"]["last_empty_run_at"] = run_meta.get("ran_at")
+    else:
+        record["run_meta"] = run_meta
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=2)
     return path

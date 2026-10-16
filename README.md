@@ -140,16 +140,19 @@ minutes. You can also run everything **locally** (below), e.g. to curate by hand
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env      # paste ONE LLM API key
+cp .env.example .env      # optional: paste an LLM API key
 ```
 
-Pick the LLM provider in `config.yaml` (`llm.provider: auto` detects whichever
-key you set). `scripts/setup_local.sh` does all of the above and runs one real
-digest so you can eyeball the output.
+`llm.provider: auto` (the default) tries every provider whose key is set, in
+the order SCNet, Moonshot, Anthropic, OpenAI, so a dead key falls through to a
+working one. With no key, or none working, the day is still fetched and
+published — as the uncurated raw feed (see *Running without an LLM*).
+`scripts/setup_local.sh` installs and runs one real digest so you can eyeball
+the output.
 
 **X needs no credentials at all.** `x_source.py` reads public Nitter RSS, so
 there is no account to log in, no cookie to refresh, and no password anywhere.
-The only secret the pipeline requires is one LLM API key.
+No secret is required: an LLM key only adds curation.
 
 ## Run
 
@@ -195,8 +198,10 @@ Danny Sullivan are followed now that their X accounts are dormant.
 
 ## Running without an LLM
 
-Set `llm.provider: "none"` in `config.yaml` (it is, as of 2026-10) and `daily`
-still fetches, dedups and publishes — but what it publishes is the **top 10 raw
+This is the state the system falls into on its own, and it keeps the site
+updated: with no API key set, no key working (out of credit, revoked), or
+`llm.provider: "none"`, `daily` still fetches, dedups and publishes every day —
+but what it publishes is the **top 10 raw
 items by a rule-based ranker** (trust weight + SEO keyword hits, minus promo;
 plain retweets, reply chatter and off-topic posts dropped; two per source;
 near-duplicates collapsed). Those cards are honest about what they are: marked
@@ -213,12 +218,26 @@ python scripts/ingest_curated.py --curated curated.json --pool /tmp/pool.json --
 ```
 
 `ingest_curated.py` runs the hand-written digest through exactly the post-LLM
-pipeline: **every cited URL must exist in the pool** (anything else is stripped
-and the signal marked `unverified`, same as a fabricated model citation),
+pipeline: **every cited URL must exist in the pool** (anything else is stripped,
+and a signal left without a source is dropped),
 cross-day story dedup, sectioning, archive, MD/HTML, dashboard rebuild. Records
 written this way carry `curated_by` and, if back-dated, `backfilled: true`, so a
-hand-filled gap is distinguishable from a day the pipeline actually ran. When a
-valid key is back, set `provider` to `auto` and the LLM path resumes unchanged.
+hand-filled gap is distinguishable from a day the pipeline actually ran.
+
+**Turning curation back on is one step: make a key work.** Add it as a repo
+secret (Settings → Secrets and variables → Actions: `SCNET_API_KEY`,
+`MOONSHOT_API_KEY`, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`) and to `.env`
+locally, or top up the account behind the key already there. No config change:
+the next run picks it up. (As of 2026-10-15 the only key, `SCNET_API_KEY`,
+answers *402 Insufficient Balance* — the SCNet account is out of credit.)
+Curated output is then held to the grounding checks described under *Notes &
+limits*.
+
+**A rerun on the same day never makes that day worse.** Items the first run
+published are already marked seen, so a second run (a manual *Run workflow*,
+or a local run on top of CI) sees fewer of them. Today's record is replaced
+only by one at least as good: model-curated beats raw, raw replaces raw only
+with at least as many signals, and a hand-curated day is never overwritten.
 
 CI already runs `daily` once a day. A local schedule would produce a second run
 of the same day, which thins that day's record (items the first run already

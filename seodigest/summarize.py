@@ -404,45 +404,100 @@ def _call_scnet(cfg, system, user) -> str:
             print(f"[scnet] attempt {attempt+1}: empty content, finish={resp.choices[0].finish_reason}")
         except Exception as e:
             print(f"[scnet] attempt {attempt+1} error: {e}")
-            if attempt == 2:
+            # Retrying cannot fix the account: no credit (402), bad key (401),
+            # no access (403). It only delays the fallback; fail at once.
+            if attempt == 2 or getattr(e, "status_code", None) in (401, 402, 403):
                 raise
     return ""
 
 
-def _detect_provider() -> str:
-    """Pick the provider from whichever API key is actually set."""
-    for env_key, provider in (("SCNET_API_KEY", "scnet"),
-                              ("MOONSHOT_API_KEY", "moonshot"),
-                              ("ANTHROPIC_API_KEY", "anthropic"),
-                              ("OPENAI_API_KEY", "openai")):
-        if os.getenv(env_key, "").strip():
-            return provider
-    raise RuntimeError(
-        "No LLM API key found. Set one of SCNET_API_KEY, MOONSHOT_API_KEY, "
-        "ANTHROPIC_API_KEY or OPENAI_API_KEY in your .env (or as a GitHub secret)."
-    )
+_KEY_ENV = (("scnet", "SCNET_API_KEY"), ("moonshot", "MOONSHOT_API_KEY"),
+            ("anthropic", "ANTHROPIC_API_KEY"), ("openai", "OPENAI_API_KEY"))
+_ALIASES = {"glm": "scnet", "kimi": "moonshot"}
+_CALLERS = {"scnet": lambda *a: _call_scnet(*a), "moonshot": lambda *a: _call_moonshot(*a),
+            "anthropic": lambda *a: _call_anthropic(*a), "openai": lambda *a: _call_openai(*a)}
+
+
+def _llm_failure_reason(e: Exception) -> str:
+    """Short, human reason for the record and the dashboard, e.g.
+    "scnet: out of credit (HTTP 402)". The full error stays in llm_error."""
+    labels = {401: "key rejected", 402: "out of credit", 403: "no access",
+              429: "rate-limited", 404: "model not found"}
+    parts = []
+    for chunk in str(e).split("every LLM provider failed -- ")[-1].split(" | "):
+        m = re.match(r"\s*(\w+): (\w+)(?: \(HTTP (\d{3})\))?", chunk)
+        if not m:
+            continue
+        name, etype, code = m.group(1), m.group(2), m.group(3)
+        what = labels.get(int(code), f"HTTP {code}") if code else (
+            "empty response" if "empty response" in chunk else etype)
+        parts.append(f"{name}: {what}" + (f" (HTTP {code})" if code and int(code) in labels else ""))
+    return "; ".join(parts) or type(e).__name__
+
+
+def _provider_setting(cfg: dict) -> str:
+    p = str((cfg.get("llm") or {}).get("provider", "auto")).strip().lower()
+    return _ALIASES.get(p, p)
+
+
+def available_providers(cfg: dict) -> list:
+    """Providers to try, in order. Empty means: no LLM this run.
+
+    "none" / "off" turns the LLM off even when keys are set. "auto" is every
+    provider whose key is set, in _KEY_ENV order, so a dead key (out of credit,
+    revoked) does not block a working one. A named provider is that one alone.
+    """
+    p = _provider_setting(cfg)
+    if p in ("none", "off", ""):
+        return []
+    have = [name for name, env in _KEY_ENV if os.getenv(env, "").strip()]
+    if p == "auto":
+        return have
+    return [p] if p in have else []
 
 
 def llm_disabled(cfg: dict) -> bool:
-    """True when config opts out of the LLM entirely (llm.provider: none)."""
-    return str((cfg.get("llm") or {}).get("provider", "auto")).lower() in ("none", "off", "")
+    """True when this run has no usable LLM: provider off, or no key set.
+
+    No key is the normal state until one is added, so it is not an error: the
+    daily run publishes the uncurated raw feed and CI keeps the site updated.
+    Adding a key is the whole switch back -- with provider "auto" the next run
+    picks it up.
+    """
+    return not available_providers(cfg)
 
 
 def call_llm(cfg: dict, system: str, user: str) -> str:
-    if llm_disabled(cfg):
-        raise RuntimeError(
-            "LLM is disabled (llm.provider: none in config.yaml). Weekly, monthly "
-            "and special briefs need an LLM; set a provider + valid key to run them.")
-    provider = cfg["llm"].get("provider", "auto")
-    if provider == "auto":
-        provider = _detect_provider()
-    if provider in ("scnet", "glm"):
-        return _call_scnet(cfg, system, user)
-    if provider in ("moonshot", "kimi"):
-        return _call_moonshot(cfg, system, user)
-    if provider == "openai":
-        return _call_openai(cfg, system, user)
-    return _call_anthropic(cfg, system, user)
+    providers = available_providers(cfg)
+    if not providers:
+        p = _provider_setting(cfg)
+        why = (f"llm.provider is {p!r}" if p in ("none", "off", "") else
+               f"no API key set for llm.provider {p!r}" if p != "auto" else
+               "no LLM API key set (SCNET_API_KEY, MOONSHOT_API_KEY, ANTHROPIC_API_KEY or "
+               "OPENAI_API_KEY in .env / repo secrets)")
+        raise RuntimeError(f"LLM unavailable: {why}. Weekly, monthly and special briefs "
+                           f"need an LLM.")
+    errors = []
+    for name in providers:
+        caller = _CALLERS.get(name)
+        if caller is None:
+            errors.append(f"{name}: unknown provider")
+            continue
+        try:
+            out = caller(cfg, system, user)
+        except Exception as e:
+            code = getattr(e, "status_code", None)
+            errors.append(f"{name}: {type(e).__name__}"
+                          + (f" (HTTP {code})" if code else "") + f": {str(e)[:200]}")
+            if len(providers) > 1:
+                print(f"[llm] {name} failed ({type(e).__name__}); trying the next key")
+            continue
+        if out:
+            if errors:
+                print(f"[llm] used {name} after: {'; '.join(errors)}")
+            return out
+        errors.append(f"{name}: empty response")
+    raise RuntimeError("every LLM provider failed -- " + " | ".join(errors))
 
 
 def _select_candidates(cfg: dict, items: List[Item]) -> List[Item]:
@@ -833,9 +888,11 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
     # Still flagged degraded/uncurated — nobody judged these, and the labels
     # must not imply otherwise.
     if llm_disabled(cfg):
-        print(f"[*] LLM disabled — publishing raw items by rule-based ranking (uncurated).")
-        return _raw_digest(cfg, items, "LLM disabled (llm.provider: none) — raw source "
-                                       "items ranked by source trust + SEO keywords, not assessed")
+        why = ("LLM off (llm.provider: none)"
+               if _provider_setting(cfg) in ("none", "off", "") else "no LLM API key set")
+        print(f"[*] {why} — publishing raw items by rule-based ranking (uncurated).")
+        return _raw_digest(cfg, items, f"{why} — raw source items ranked by source "
+                                       "trust + SEO keywords, not assessed")
     # Pick a diverse subset so one noisy handle can't crowd out every other
     # source — the LLM curation rubric needs cross-source signal to work.
     candidates = _select_candidates(cfg, items)
@@ -846,7 +903,7 @@ def summarize_daily(cfg: dict, items: List[Item]) -> dict:
         # An expired key or exhausted quota RAISES; without this the whole run
         # died and nothing was archived for the day (remote fix 924eae0).
         print(f"[!] LLM call failed ({type(e).__name__}: {e}); falling back to raw items.")
-        data = _raw_digest(cfg, items, f"LLM call failed ({type(e).__name__})")
+        data = _raw_digest(cfg, items, f"LLM call failed: {_llm_failure_reason(e)}")
         data["llm_error"] = str(e)[:500]
         return data
     if not raw:
