@@ -1,0 +1,592 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T05:23:11.531793+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2111080978860958057",
+            "excerpt": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, to remain accountable over time. https://cfl.re/4i6n6lK. Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, to remain accountable over time. cfl.re/4i6n6lK Link Continuous accountability for Verified bots Identity alone doesn&apos;t guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site…",
+            "author": "@Cloudflare",
+            "published": "2026-10-16T13:05:02+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Confirmed -> Google begins testing ads in AI Mode for users with Personal Intelligence enabled \"If expanded, it could…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2111166666281206004",
+            "excerpt": "Confirmed -> Google begins testing ads in AI Mode for users with Personal Intelligence enabled \"If expanded, it could create opportunities to reach consumers with ads informed by a broader understanding of their interests and needs, rather than relying solely on individual search queries.\" https://searchengineland.com/google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enabled-496990. Confirmed -&gt; Google begins testing ads in AI Mode for users with Personal Intelligence enabled \"If expanded, it could create opportunities to reach consumers with ads informed by a broader understanding of their interests and needs, rather than relying solely on individual search…",
+            "author": "@glenngabe",
+            "published": "2026-10-16T18:45:31+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Search News Buzz Video Recap: Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Google…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/video-09-16-2026-42313.html",
+            "excerpt": "Search News Buzz Video Recap: Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Google Ads, ChatGPT & SEO. Google seems to be poisoning the third-party tracking tools with fake data and paywalls; this is wreaking havoc on keyword tracking. Google launched Gemini 4 Argon and it is in AI Mode. Google made several...",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-16T12:01:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "There we go! I'm now finally seeing utm parameters for ALL links in ChatGPT (in the answer, the main sources, and…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2111073567391531182",
+            "excerpt": "There we go! I'm now finally seeing utm parameters for ALL links in ChatGPT (in the answer, the main sources, and \"More\" sources.) Phew.. There we go! I'm now finally seeing utm parameters for ALL links in ChatGPT (in the answer, the main sources, and \"More\" sources.) Phew. Glenn Gabe (@glenngabe) It's worse now -&gt; Quick update on the ChatGPT utm situation. Yesterday I was still seeing utm parameters for citations in the \"More\" section of the right sources panel, but not anywhere else (in the answer or core sources). But now it's worse... as of this morning, I'm not seeing utm parameters at all. If you check GA4, you will see a",
+            "author": "@glenngabe",
+            "published": "2026-10-16T12:35:34+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Research & Retrieval": [
+      {
+        "what_happened": "How to Automate Content Creation: A Follow-Along Guide. When people hear “automated content creation”, I imagine they…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Ahrefs Blog",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Research & Retrieval",
+        "sources": [
+          {
+            "name": "Ahrefs Blog",
+            "url": "https://ahrefs.com/blog/automated-content-creation/",
+            "excerpt": "How to Automate Content Creation: A Follow-Along Guide. When people hear “automated content creation”, I imagine they picture something like this: Enter a keyword, click a button, and poof! An article is made. From there, they’ll generate 500 articles before the day ends and publish all of them. &#8230; Read more &#8250;",
+            "author": "Ahrefs Blog",
+            "published": "2026-10-16T09:21:11+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "How common are self-promotional listicles in software questions, and what do they do? @minuttiax analyzed of 18,084…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2111227476881895474",
+            "excerpt": "How common are self-promotional listicles in software questions, and what do they do? @minuttiax analyzed of 18,084 questions across Google Search, AI Overviews, ChatGPT, Gemini, Claude and Perplexity to identify the answers of these and other self-promotional content performance in AI search for software related topics. A few findings: * 34% to 47% of cited listicles are self-promotional. 93% highlight the vendor’s product, 87% rank it first, and only 16% clearly disclose the vendor. * Where do vendors’ own lists dominate, and whose lists get cited most? Their share ranges from 12% to 76% by software category. The market remains fragmented, with the top 20 vendors receiving only 6% of…",
+            "author": "@aleyda",
+            "published": "2026-10-16T22:47:09+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Want to avoid poisoned search results in your rank tracker completely? Here is a creative way to still generate…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "brodieseo",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "brodieseo",
+            "url": "https://x.com/brodieseo/status/2111129720209461389",
+            "excerpt": "Want to avoid poisoned search results in your rank tracker completely? Here is a creative way to still generate detailed ranking reports for your clients with MCPs and Claude Desktop. -> Poisoned Google SERPs: How to Spot Them and Still Track Rankings https://brodieclark.com/poisoned-google-serps/. Want to avoid poisoned search results in your rank tracker completely? Here is a creative way to still generate detailed ranking reports for your clients with MCPs and Claude Desktop. -&gt; Poisoned Google SERPs: How to Spot Them and Still Track Rankings brodieclark.com/poisoned-goo… Link Poisoned Google SERPs: How to Spot Them and Still Track Rankings Google is serving poisoned SERPs to rank…",
+            "author": "@brodieseo",
+            "published": "2026-10-16T16:18:42+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "2027 SEO Planning Workbook. Walk into next year&#8217;s budget meeting with a confident plan",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Growth Memo (Kevin Indig)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Growth Memo (Kevin Indig)",
+            "url": "https://www.growth-memo.com/p/2027-seo-planning-workbook",
+            "excerpt": "2027 SEO Planning Workbook. Walk into next year&#8217;s budget meeting with a confident plan",
+            "author": "Growth Memo (Kevin Indig)",
+            "published": "2026-10-16T06:11:18+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "That’s the entire reason they won’t do it.. That’s the entire reason they won’t do it. Gagan Ghotra (@gaganghotra_)…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2111149869436158033",
+            "excerpt": "That’s the entire reason they won’t do it.. That’s the entire reason they won’t do it. Gagan Ghotra (@gaganghotra_) \"Adding utm_source-ai-mode or gemini or ai-overviews to citation URLs is probably the easiest change that Google can do and help the whole SEO land exactly understand how much actual traffic is coming to their pages from these Al Search surfaces.\" #SEO — https://nitter.kareem.one/gaganghotra_/status/2110957462300119248#m",
+            "author": "@lilyraynyc",
+            "published": "2026-10-16T17:38:46+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "“While Google has repeatedly said that users are happier with search results when they see an AI Overview, we found no…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2111116248662806880",
+            "excerpt": "“While Google has repeatedly said that users are happier with search results when they see an AI Overview, we found no real increase in satisfaction among our participants.” @ForbesAdvisor https://www.forbes.com/advisor/business/ai/google-ai-overview-study-results/. “While Google has repeatedly said that users are happier with search results when they see an AI Overview, we found no real increase in satisfaction among our participants.” @ForbesAdvisor forbes.com/advisor/business/… Link Google AI Overviews Take Clicks and Credit Without Making Searchers Happier, Study Finds Google’s AI Overviews are changing the game for search. No more scrolling, clicking or skimming through unrelated…",
+            "author": "@lilyraynyc",
+            "published": "2026-10-16T15:25:10+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2111080978860958057",
+          "excerpt": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, to remain accountable over time. https://cfl.re/4i6n6lK. Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, to remain accountable over time. cfl.re/4i6n6lK Link Continuous accountability for Verified bots Identity alone doesn&apos;t guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site…",
+          "author": "@Cloudflare",
+          "published": "2026-10-16T13:05:02+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Confirmed -> Google begins testing ads in AI Mode for users with Personal Intelligence enabled \"If expanded, it could…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2111166666281206004",
+          "excerpt": "Confirmed -> Google begins testing ads in AI Mode for users with Personal Intelligence enabled \"If expanded, it could create opportunities to reach consumers with ads informed by a broader understanding of their interests and needs, rather than relying solely on individual search queries.\" https://searchengineland.com/google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enabled-496990. Confirmed -&gt; Google begins testing ads in AI Mode for users with Personal Intelligence enabled \"If expanded, it could create opportunities to reach consumers with ads informed by a broader understanding of their interests and needs, rather than relying solely on individual search…",
+          "author": "@glenngabe",
+          "published": "2026-10-16T18:45:31+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "How to Automate Content Creation: A Follow-Along Guide. When people hear “automated content creation”, I imagine they…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Ahrefs Blog",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Research & Retrieval",
+      "sources": [
+        {
+          "name": "Ahrefs Blog",
+          "url": "https://ahrefs.com/blog/automated-content-creation/",
+          "excerpt": "How to Automate Content Creation: A Follow-Along Guide. When people hear “automated content creation”, I imagine they picture something like this: Enter a keyword, click a button, and poof! An article is made. From there, they’ll generate 500 articles before the day ends and publish all of them. &#8230; Read more &#8250;",
+          "author": "Ahrefs Blog",
+          "published": "2026-10-16T09:21:11+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "How common are self-promotional listicles in software questions, and what do they do? @minuttiax analyzed of 18,084…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2111227476881895474",
+          "excerpt": "How common are self-promotional listicles in software questions, and what do they do? @minuttiax analyzed of 18,084 questions across Google Search, AI Overviews, ChatGPT, Gemini, Claude and Perplexity to identify the answers of these and other self-promotional content performance in AI search for software related topics. A few findings: * 34% to 47% of cited listicles are self-promotional. 93% highlight the vendor’s product, 87% rank it first, and only 16% clearly disclose the vendor. * Where do vendors’ own lists dominate, and whose lists get cited most? Their share ranges from 12% to 76% by software category. The market remains fragmented, with the top 20 vendors receiving only 6% of…",
+          "author": "@aleyda",
+          "published": "2026-10-16T22:47:09+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Want to avoid poisoned search results in your rank tracker completely? Here is a creative way to still generate…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "brodieseo",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "brodieseo",
+          "url": "https://x.com/brodieseo/status/2111129720209461389",
+          "excerpt": "Want to avoid poisoned search results in your rank tracker completely? Here is a creative way to still generate detailed ranking reports for your clients with MCPs and Claude Desktop. -> Poisoned Google SERPs: How to Spot Them and Still Track Rankings https://brodieclark.com/poisoned-google-serps/. Want to avoid poisoned search results in your rank tracker completely? Here is a creative way to still generate detailed ranking reports for your clients with MCPs and Claude Desktop. -&gt; Poisoned Google SERPs: How to Spot Them and Still Track Rankings brodieclark.com/poisoned-goo… Link Poisoned Google SERPs: How to Spot Them and Still Track Rankings Google is serving poisoned SERPs to rank…",
+          "author": "@brodieseo",
+          "published": "2026-10-16T16:18:42+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Search News Buzz Video Recap: Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Google…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/video-09-16-2026-42313.html",
+          "excerpt": "Search News Buzz Video Recap: Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Google Ads, ChatGPT & SEO. Google seems to be poisoning the third-party tracking tools with fake data and paywalls; this is wreaking havoc on keyword tracking. Google launched Gemini 4 Argon and it is in AI Mode. Google made several...",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-16T12:01:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "There we go! I'm now finally seeing utm parameters for ALL links in ChatGPT (in the answer, the main sources, and…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2111073567391531182",
+          "excerpt": "There we go! I'm now finally seeing utm parameters for ALL links in ChatGPT (in the answer, the main sources, and \"More\" sources.) Phew.. There we go! I'm now finally seeing utm parameters for ALL links in ChatGPT (in the answer, the main sources, and \"More\" sources.) Phew. Glenn Gabe (@glenngabe) It's worse now -&gt; Quick update on the ChatGPT utm situation. Yesterday I was still seeing utm parameters for citations in the \"More\" section of the right sources panel, but not anywhere else (in the answer or core sources). But now it's worse... as of this morning, I'm not seeing utm parameters at all. If you check GA4, you will see a",
+          "author": "@glenngabe",
+          "published": "2026-10-16T12:35:34+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "2027 SEO Planning Workbook. Walk into next year&#8217;s budget meeting with a confident plan",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Growth Memo (Kevin Indig)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Growth Memo (Kevin Indig)",
+          "url": "https://www.growth-memo.com/p/2027-seo-planning-workbook",
+          "excerpt": "2027 SEO Planning Workbook. Walk into next year&#8217;s budget meeting with a confident plan",
+          "author": "Growth Memo (Kevin Indig)",
+          "published": "2026-10-16T06:11:18+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "That’s the entire reason they won’t do it.. That’s the entire reason they won’t do it. Gagan Ghotra (@gaganghotra_)…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2111149869436158033",
+          "excerpt": "That’s the entire reason they won’t do it.. That’s the entire reason they won’t do it. Gagan Ghotra (@gaganghotra_) \"Adding utm_source-ai-mode or gemini or ai-overviews to citation URLs is probably the easiest change that Google can do and help the whole SEO land exactly understand how much actual traffic is coming to their pages from these Al Search surfaces.\" #SEO — https://nitter.kareem.one/gaganghotra_/status/2110957462300119248#m",
+          "author": "@lilyraynyc",
+          "published": "2026-10-16T17:38:46+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "“While Google has repeatedly said that users are happier with search results when they see an AI Overview, we found no…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2111116248662806880",
+          "excerpt": "“While Google has repeatedly said that users are happier with search results when they see an AI Overview, we found no real increase in satisfaction among our participants.” @ForbesAdvisor https://www.forbes.com/advisor/business/ai/google-ai-overview-study-results/. “While Google has repeatedly said that users are happier with search results when they see an AI Overview, we found no real increase in satisfaction among our participants.” @ForbesAdvisor forbes.com/advisor/business/… Link Google AI Overviews Take Clicks and Credit Without Making Searchers Happier, Study Finds Google’s AI Overviews are changing the game for search. No more scrolling, clicking or skimming through unrelated…",
+          "author": "@lilyraynyc",
+          "published": "2026-10-16T15:25:10+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 0bd000c99c40a29e-20261017132311358)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '0bd000c9",
+  "run_meta": {
+    "ran_at": "2026-10-17T05:23:08.428634+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 92
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 46
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 138,
+    "candidates_fresh": 87,
+    "llm_provider": ""
+  }
+}
