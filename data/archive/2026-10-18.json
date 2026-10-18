@@ -1,0 +1,603 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T05:32:52.386992+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "I wonder if another search engine we know will start filtering out more of the AEO/GEO spam soon? :). I wonder if…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2111463481719353762",
+            "excerpt": "I wonder if another search engine we know will start filtering out more of the AEO/GEO spam soon? :). I wonder if another search engine we know will start filtering out more of the AEO/GEO spam soon? :) Lily Ray 😏 (@lilyraynyc) “It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_ — http://nitter.gravitywell.xyz/lilyraynyc/status/2111435531439702458#m",
+            "author": "@glenngabe",
+            "published": "2026-10-17T14:24:57+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "What if your SEO growth just measures how badly you treat customers? Confusing pricing, hidden support, painful…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "jonoalderson",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "jonoalderson",
+            "url": "https://x.com/jonoalderson/status/2111453259768406103",
+            "excerpt": "What if your SEO growth just measures how badly you treat customers? Confusing pricing, hidden support, painful cancellations... All generate search traffic. Your best-performing keywords might actually be bug reports. https://www.jonoalderson.com/conjecture/search-volume-bug-report/. What if your SEO growth just measures how badly you treat customers? Confusing pricing, hidden support, painful cancellations... All generate search traffic. Your best-performing keywords might actually be bug reports. jonoalderson.com/conjecture/… Link Sometimes search volume is a bug report What happens when fixing a customer problem makes organic traffic fall? Conventional SEO reporting can mistake genuine…",
+            "author": "@jonoalderson",
+            "published": "2026-10-17T13:44:20+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Sometimes search volume is a bug report. What happens when fixing a customer problem makes organic traffic fall?…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Jono Alderson",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Jono Alderson",
+            "url": "https://www.jonoalderson.com/conjecture/search-volume-bug-report/",
+            "excerpt": "Sometimes search volume is a bug report. What happens when fixing a customer problem makes organic traffic fall? Conventional SEO reporting can mistake genuine business improvements for failure. The post Sometimes search volume is a bug report appeared first on Jono Alderson .",
+            "author": "Jono Alderson",
+            "published": "2026-10-17T13:34:48+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern. A rank tracker logged…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Journal",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/",
+            "excerpt": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern. A rank tracker logged Google pages missing their usual sites, some ChatGPT links lost tracking tags, and Google and Bing changed AI search links. The post Rank Tracker Data, ChatGPT Tags &#038; AI Search Links – SEO Pulse appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-10-17T12:00:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google's Universal Cart finally showed up for me this morning. I started testing it out. Very interesting... So I…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2111435844972106176",
+            "excerpt": "Google's Universal Cart finally showed up for me this morning. I started testing it out. Very interesting... So I searched for a few products, clicked \"Add to cart\", then I had to select the various options and sizes, and then click \"Add to cart\" again to officially get the item into my cart. Pretty easy to use overall. It leverages Google Pay so it has my payment information already and provides points I can earn for the purchase (based on my credit card). And then a shopping cart icon shows up in Google near my account profile. Clicking that brings up my cart with the items that were added and a separate tab for \"My orders\". This has a ton of potential, but I'm eager to see how many…",
+            "author": "@glenngabe",
+            "published": "2026-10-17T12:35:08+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "I’m pleased to see more links in AI responses. Links are great. More links please.. I’m pleased to see more links in AI…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "willcritchlow",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2111433075532103737",
+            "excerpt": "I’m pleased to see more links in AI responses. Links are great. More links please.. I’m pleased to see more links in AI responses. Links are great. More links please. Nick Fox (@thefox) One of the areas we’ve been pushing on in Search is making it easy for you to find relevant sites, first-hand perspectives, and content from sources you love. And we’re seeing that this work is resonating - the number of people who’ve used Preferred Sources to select sites they want to hear has grown by 7x since the beginning of the year. Today we’re sharing some new and upcoming updates to AI O",
+            "author": "@willcritchlow",
+            "published": "2026-10-17T12:24:08+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "DeepSeek Search Engine. DeepSeek launched its own web search engine and API endpoints in October 2026, transitioning…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "DEJAN (Dan Petrovic)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "DEJAN (Dan Petrovic)",
+            "url": "https://dejan.ai/blog/deepseek-search-engine/",
+            "excerpt": "DeepSeek Search Engine. DeepSeek launched its own web search engine and API endpoints in October 2026, transitioning from third-party providers to an in-house crawling and indexing stack.",
+            "author": "DEJAN (Dan Petrovic)",
+            "published": "2026-10-18T04:22:59+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "“It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_. “It filters SEO spam and GEO manipulation” 👀 h/t…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2111435531439702458",
+            "excerpt": "“It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_. “It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_ cheaty (@cheatyyyy) DeepSeek has built their own search engine with a lot of filtering to avoid modern SEO/GEO spam, and powers their new search and fetch APIs with it! Each API costs $0.75 per 1,000 successful requests, free if you use DeepSeek in Claude Code, Codex or DeepSeek harness until Nov 1 — https://nitter.kareem.one/cheatyyyy/status/2111372051110125614#m",
+            "author": "@lilyraynyc",
+            "published": "2026-10-17T12:33:53+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Tools, Papers & Open Source": [
+      {
+        "what_happened": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2111482393580187968",
+            "excerpt": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/. Rank Tracker Data, ChatGPT Tags &amp; AI Search Links – SEO Pulse via @sejournal , @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 searchenginejournal.com/seo-… Link Rank Tracker Data, ChatGPT Tags &amp; AI Search Links – SEO Pulse A rank tracker logged Google pages missing their usual sites, some ChatGPT links lost tracking tags, and Google and Bing changed AI search links and data. searchenginejournal.com",
+            "author": "@sitebulb",
+            "published": "2026-10-17T15:40:06+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "GEO Citation Analysis: What LLMs Cite in Australia, and Why - via @mediaprosperity #seo…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2111361599088796103",
+            "excerpt": "GEO Citation Analysis: What LLMs Cite in Australia, and Why - via @mediaprosperity #seo https://prosperitymedia.com.au/geo-citation-analysis-what-llms-cite-in-australia-and-why/?%20News%20You%20cant%20Miss%20%5BSEOFOMO%20-%20Oct%204%2C%202026%5D%20-%2023580992=&ck_subscriber_id=2782829340. GEO Citation Analysis: What LLMs Cite in Australia, and Why - via @mediaprosperity #seo prosperitymedia.com.au/geo-c… Link GEO Citation Analysis: What LLMs Cite in Australia, and Why - Prosperity Media We analysed 122,787 AI citations from 467 prompts. See what LLMs cite in Australia and how generative engine optimisation (GEO) can win them. prosperitymedia.com.au",
+            "author": "@sitebulb",
+            "published": "2026-10-17T07:40:07+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "I wonder if another search engine we know will start filtering out more of the AEO/GEO spam soon? :). I wonder if…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2111463481719353762",
+          "excerpt": "I wonder if another search engine we know will start filtering out more of the AEO/GEO spam soon? :). I wonder if another search engine we know will start filtering out more of the AEO/GEO spam soon? :) Lily Ray 😏 (@lilyraynyc) “It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_ — http://nitter.gravitywell.xyz/lilyraynyc/status/2111435531439702458#m",
+          "author": "@glenngabe",
+          "published": "2026-10-17T14:24:57+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "I’m pleased to see more links in AI responses. Links are great. More links please.. I’m pleased to see more links in AI…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "willcritchlow",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2111433075532103737",
+          "excerpt": "I’m pleased to see more links in AI responses. Links are great. More links please.. I’m pleased to see more links in AI responses. Links are great. More links please. Nick Fox (@thefox) One of the areas we’ve been pushing on in Search is making it easy for you to find relevant sites, first-hand perspectives, and content from sources you love. And we’re seeing that this work is resonating - the number of people who’ve used Preferred Sources to select sites they want to hear has grown by 7x since the beginning of the year. Today we’re sharing some new and upcoming updates to AI O",
+          "author": "@willcritchlow",
+          "published": "2026-10-17T12:24:08+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "What if your SEO growth just measures how badly you treat customers? Confusing pricing, hidden support, painful…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "jonoalderson",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "jonoalderson",
+          "url": "https://x.com/jonoalderson/status/2111453259768406103",
+          "excerpt": "What if your SEO growth just measures how badly you treat customers? Confusing pricing, hidden support, painful cancellations... All generate search traffic. Your best-performing keywords might actually be bug reports. https://www.jonoalderson.com/conjecture/search-volume-bug-report/. What if your SEO growth just measures how badly you treat customers? Confusing pricing, hidden support, painful cancellations... All generate search traffic. Your best-performing keywords might actually be bug reports. jonoalderson.com/conjecture/… Link Sometimes search volume is a bug report What happens when fixing a customer problem makes organic traffic fall? Conventional SEO reporting can mistake genuine…",
+          "author": "@jonoalderson",
+          "published": "2026-10-17T13:44:20+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Sometimes search volume is a bug report. What happens when fixing a customer problem makes organic traffic fall?…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Jono Alderson",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Jono Alderson",
+          "url": "https://www.jonoalderson.com/conjecture/search-volume-bug-report/",
+          "excerpt": "Sometimes search volume is a bug report. What happens when fixing a customer problem makes organic traffic fall? Conventional SEO reporting can mistake genuine business improvements for failure. The post Sometimes search volume is a bug report appeared first on Jono Alderson .",
+          "author": "Jono Alderson",
+          "published": "2026-10-17T13:34:48+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "DeepSeek Search Engine. DeepSeek launched its own web search engine and API endpoints in October 2026, transitioning…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "DEJAN (Dan Petrovic)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "DEJAN (Dan Petrovic)",
+          "url": "https://dejan.ai/blog/deepseek-search-engine/",
+          "excerpt": "DeepSeek Search Engine. DeepSeek launched its own web search engine and API endpoints in October 2026, transitioning from third-party providers to an in-house crawling and indexing stack.",
+          "author": "DEJAN (Dan Petrovic)",
+          "published": "2026-10-18T04:22:59+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern. A rank tracker logged…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Journal",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/",
+          "excerpt": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern. A rank tracker logged Google pages missing their usual sites, some ChatGPT links lost tracking tags, and Google and Bing changed AI search links. The post Rank Tracker Data, ChatGPT Tags &#038; AI Search Links – SEO Pulse appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-10-17T12:00:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google's Universal Cart finally showed up for me this morning. I started testing it out. Very interesting... So I…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2111435844972106176",
+          "excerpt": "Google's Universal Cart finally showed up for me this morning. I started testing it out. Very interesting... So I searched for a few products, clicked \"Add to cart\", then I had to select the various options and sizes, and then click \"Add to cart\" again to officially get the item into my cart. Pretty easy to use overall. It leverages Google Pay so it has my payment information already and provides points I can earn for the purchase (based on my credit card). And then a shopping cart icon shows up in Google near my account profile. Clicking that brings up my cart with the items that were added and a separate tab for \"My orders\". This has a ton of potential, but I'm eager to see how many…",
+          "author": "@glenngabe",
+          "published": "2026-10-17T12:35:08+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2111482393580187968",
+          "excerpt": "Rank Tracker Data, ChatGPT Tags & AI Search Links – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/. Rank Tracker Data, ChatGPT Tags &amp; AI Search Links – SEO Pulse via @sejournal , @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 searchenginejournal.com/seo-… Link Rank Tracker Data, ChatGPT Tags &amp; AI Search Links – SEO Pulse A rank tracker logged Google pages missing their usual sites, some ChatGPT links lost tracking tags, and Google and Bing changed AI search links and data. searchenginejournal.com",
+          "author": "@sitebulb",
+          "published": "2026-10-17T15:40:06+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "“It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_. “It filters SEO spam and GEO manipulation” 👀 h/t…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2111435531439702458",
+          "excerpt": "“It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_. “It filters SEO spam and GEO manipulation” 👀 h/t @gaganghotra_ cheaty (@cheatyyyy) DeepSeek has built their own search engine with a lot of filtering to avoid modern SEO/GEO spam, and powers their new search and fetch APIs with it! Each API costs $0.75 per 1,000 successful requests, free if you use DeepSeek in Claude Code, Codex or DeepSeek harness until Nov 1 — https://nitter.kareem.one/cheatyyyy/status/2111372051110125614#m",
+          "author": "@lilyraynyc",
+          "published": "2026-10-17T12:33:53+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "GEO Citation Analysis: What LLMs Cite in Australia, and Why - via @mediaprosperity #seo…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2111361599088796103",
+          "excerpt": "GEO Citation Analysis: What LLMs Cite in Australia, and Why - via @mediaprosperity #seo https://prosperitymedia.com.au/geo-citation-analysis-what-llms-cite-in-australia-and-why/?%20News%20You%20cant%20Miss%20%5BSEOFOMO%20-%20Oct%204%2C%202026%5D%20-%2023580992=&ck_subscriber_id=2782829340. GEO Citation Analysis: What LLMs Cite in Australia, and Why - via @mediaprosperity #seo prosperitymedia.com.au/geo-c… Link GEO Citation Analysis: What LLMs Cite in Australia, and Why - Prosperity Media We analysed 122,787 AI citations from 467 prompts. See what LLMs cite in Australia and how generative engine optimisation (GEO) can win them. prosperitymedia.com.au",
+          "author": "@sitebulb",
+          "published": "2026-10-17T07:40:07+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: f3c57f7e2aa6ed51-20261018133252244)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'f3c57f7e",
+  "run_meta": {
+    "ran_at": "2026-10-18T05:32:49.454090+00:00",
+    "sources": {
+      "x": {
+        "ok": 17,
+        "total": 21,
+        "failed_names": [
+          "BingWMC",
+          "dawnieando",
+          "cyberandy",
+          "aleyda"
+        ],
+        "items": 47
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 23
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 70,
+    "candidates_fresh": 17,
+    "llm_provider": ""
+  }
+}
