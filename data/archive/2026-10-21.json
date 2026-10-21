@@ -1,0 +1,592 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T05:46:15.736976+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Definitely interesting as OpenAI continues to build its own search index (and core search and anti-spam systems) ->…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2112585554957107518",
+            "excerpt": "Definitely interesting as OpenAI continues to build its own search index (and core search and anti-spam systems) -> ChatGPT Search Can Draw On More Pages After A Cloudflare Pilot \"Cloudflare’s network signals are used by OpenAI to help its search crawler find web pages with value. The blog post gives several examples of these pages, such as the user guide of a particular washing machine, the most recent information regarding passport requirements and fees and a restaurant’s menu and hours. It states that these pages “can be valuable even if few other sites link to them.” \"The July 8 announcement stated some of the new signals that will be utilized, including how recently a page has been…",
+            "author": "@glenngabe",
+            "published": "2026-10-20T16:43:40+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Bing Tests Not Showing Sitelinks. Microsoft seems to be testing not showing sitelinks under the main Bing search result…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/bing-no-sitelinks-42327.html",
+            "excerpt": "Bing Tests Not Showing Sitelinks. Microsoft seems to be testing not showing sitelinks under the main Bing search result snippets. I am honestly not sure if this is new but I was able to replicate Bing showing sitelinks for the first search result snippet in one browser and for the same query, it not showing the sitelinks.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-20T11:21:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "AI Mode and Ads -> I'm still not seeing any ads in AI Mode when using Personal Intelligence... but I'm seeing plenty of…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2112520669254615178",
+            "excerpt": "AI Mode and Ads -> I'm still not seeing any ads in AI Mode when using Personal Intelligence... but I'm seeing plenty of ads in AI Mode incognito. Check out this search for windows laptops with an ad weaved into the product list... and then a larger ad module at the bottom. And check out the small disclaimer there in the weaved ad: \"AI can make mistakes... make sure to double check responses. Advertisers don't see your conversations or control AI responses.\" If AI Mode is going to become the default at some point, then Google will need to monetize that heavily (and in a smart way). I am NOT a fan of the weaving of ads into the organic response like that... but I'm sure we will see much more…",
+            "author": "@glenngabe",
+            "published": "2026-10-20T12:25:50+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "How To Create Links for SEO Google Can't Ignore. Links are critical to SEO, but Google actually ignores most of them…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Zyppy Signal (Cyrus Shepard)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Zyppy Signal (Cyrus Shepard)",
+            "url": "https://signal.zyppy.com/p/links-google-cant-ignore",
+            "excerpt": "How To Create Links for SEO Google Can't Ignore. Links are critical to SEO, but Google actually ignores most of them. Here's how to ensure your links count.",
+            "author": "Zyppy Signal (Cyrus Shepard)",
+            "published": "2026-10-20T13:07:32+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Probably a hot take: While it’s impressive how quickly LLMs can spin up websites, I think AI is accelerating a trend…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2112600257913643349",
+            "excerpt": "Probably a hot take: While it’s impressive how quickly LLMs can spin up websites, I think AI is accelerating a trend that’s been happening for years: the internet is starting to look increasingly self-similar. AI tools often generate websites using the same design patterns, layouts, fonts, and aesthetics. So many new vibe-coded apps, company websites, and landing pages are starting to look identical (not to mention the content). I’m not saying AI-generated websites look bad - they often look great. But when everything looks the same, differentiation becomes more valuable. I have a feeling that as AI-generated websites become the norm, websites and online experiences with a unique aesthetic,…",
+            "author": "@lilyraynyc",
+            "published": "2026-10-20T17:42:06+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Official Explanations": [
+      {
+        "what_happened": "That's a wrap on Day 2 of #CloudflareConnect. Agents are already browsing, buying, and building for us, and they…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2112746046006890777",
+            "excerpt": "That's a wrap on Day 2 of #CloudflareConnect. Agents are already browsing, buying, and building for us, and they definitely aren’t filling out CAPTCHAs. Today put that new kind of Internet user front and center. Thank you to everyone who joined us. See you tomorrow for Day 3!. That's a wrap on Day 2 of #CloudflareConnect . Agents are already browsing, buying, and building for us, and they definitely aren’t filling out CAPTCHAs. Today put that new kind of Internet user front and center. Thank you to everyone who joined us. See you tomorrow for Day 3!",
+            "author": "@Cloudflare",
+            "published": "2026-10-21T03:21:24+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Just to be clear, Googlebot is not going to be moved by a blog post that's too bad to have been written by AI. Make the…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "John Mueller (Bluesky)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "John Mueller (Bluesky)",
+            "url": "https://bsky.app/profile/johnmu.com/post/3mydgx5shws2y",
+            "excerpt": "Just to be clear, Googlebot is not going to be moved by a blog post that's too bad to have been written by AI. Make the web you want to find.",
+            "author": "@johnmu.com",
+            "published": "2026-10-20T20:10:00+00:00",
+            "source_type": "official_person"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2112672178713890995",
+            "excerpt": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next. https://cfl.re/487DNbG. Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next. cfl.re/487DNbG Link 8 eMudhra certificates are compromised. Here&apos;s what you need to know Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying…",
+            "author": "@Cloudflare",
+            "published": "2026-10-20T22:27:53+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Podcast listeners - we just released a new episode on the feed - this time with Christine Ullmann of John Lewis talking…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "willcritchlow",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2112479105564414167",
+            "excerpt": "Podcast listeners - we just released a new episode on the feed - this time with Christine Ullmann of John Lewis talking about how premium brands get found in AI search. Don't miss out - The Business Class Lounge wherever you get your podcasts.. Podcast listeners - we just released a new episode on the feed - this time with Christine Ullmann of John Lewis talking about how premium brands get found in AI search. Don't miss out - The Business Class Lounge wherever you get your podcasts.",
+            "author": "@willcritchlow",
+            "published": "2026-10-20T09:40:41+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Kelly Wortham very kindly invited me to speak to the Test & Learn Community about AI search and discovery. Her crew are…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "willcritchlow",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2112476487022485807",
+            "excerpt": "Kelly Wortham very kindly invited me to speak to the Test & Learn Community about AI search and discovery. Her crew are extremely experienced experimentation experts when it comes to other channels - and particularly around conversion rate optimisation, UX, and product testing. My job was to bring the perspective about how you can experiment with modern search and discovery. I thought others might be interested in what I put together - here are my slides and the recording is on their YouTube channel:. Kelly Wortham very kindly invited me to speak to the Test & Learn Community about AI search and discovery. Her crew are extremely experienced experimentation experts when it comes to other…",
+            "author": "@willcritchlow",
+            "published": "2026-10-20T09:30:17+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Definitely interesting as OpenAI continues to build its own search index (and core search and anti-spam systems) ->…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2112585554957107518",
+          "excerpt": "Definitely interesting as OpenAI continues to build its own search index (and core search and anti-spam systems) -> ChatGPT Search Can Draw On More Pages After A Cloudflare Pilot \"Cloudflare’s network signals are used by OpenAI to help its search crawler find web pages with value. The blog post gives several examples of these pages, such as the user guide of a particular washing machine, the most recent information regarding passport requirements and fees and a restaurant’s menu and hours. It states that these pages “can be valuable even if few other sites link to them.” \"The July 8 announcement stated some of the new signals that will be utilized, including how recently a page has been…",
+          "author": "@glenngabe",
+          "published": "2026-10-20T16:43:40+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "How To Create Links for SEO Google Can't Ignore. Links are critical to SEO, but Google actually ignores most of them…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Zyppy Signal (Cyrus Shepard)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Zyppy Signal (Cyrus Shepard)",
+          "url": "https://signal.zyppy.com/p/links-google-cant-ignore",
+          "excerpt": "How To Create Links for SEO Google Can't Ignore. Links are critical to SEO, but Google actually ignores most of them. Here's how to ensure your links count.",
+          "author": "Zyppy Signal (Cyrus Shepard)",
+          "published": "2026-10-20T13:07:32+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "That's a wrap on Day 2 of #CloudflareConnect. Agents are already browsing, buying, and building for us, and they…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2112746046006890777",
+          "excerpt": "That's a wrap on Day 2 of #CloudflareConnect. Agents are already browsing, buying, and building for us, and they definitely aren’t filling out CAPTCHAs. Today put that new kind of Internet user front and center. Thank you to everyone who joined us. See you tomorrow for Day 3!. That's a wrap on Day 2 of #CloudflareConnect . Agents are already browsing, buying, and building for us, and they definitely aren’t filling out CAPTCHAs. Today put that new kind of Internet user front and center. Thank you to everyone who joined us. See you tomorrow for Day 3!",
+          "author": "@Cloudflare",
+          "published": "2026-10-21T03:21:24+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Just to be clear, Googlebot is not going to be moved by a blog post that's too bad to have been written by AI. Make the…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "John Mueller (Bluesky)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "John Mueller (Bluesky)",
+          "url": "https://bsky.app/profile/johnmu.com/post/3mydgx5shws2y",
+          "excerpt": "Just to be clear, Googlebot is not going to be moved by a blog post that's too bad to have been written by AI. Make the web you want to find.",
+          "author": "@johnmu.com",
+          "published": "2026-10-20T20:10:00+00:00",
+          "source_type": "official_person"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Podcast listeners - we just released a new episode on the feed - this time with Christine Ullmann of John Lewis talking…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "willcritchlow",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2112479105564414167",
+          "excerpt": "Podcast listeners - we just released a new episode on the feed - this time with Christine Ullmann of John Lewis talking about how premium brands get found in AI search. Don't miss out - The Business Class Lounge wherever you get your podcasts.. Podcast listeners - we just released a new episode on the feed - this time with Christine Ullmann of John Lewis talking about how premium brands get found in AI search. Don't miss out - The Business Class Lounge wherever you get your podcasts.",
+          "author": "@willcritchlow",
+          "published": "2026-10-20T09:40:41+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Bing Tests Not Showing Sitelinks. Microsoft seems to be testing not showing sitelinks under the main Bing search result…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/bing-no-sitelinks-42327.html",
+          "excerpt": "Bing Tests Not Showing Sitelinks. Microsoft seems to be testing not showing sitelinks under the main Bing search result snippets. I am honestly not sure if this is new but I was able to replicate Bing showing sitelinks for the first search result snippet in one browser and for the same query, it not showing the sitelinks.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-20T11:21:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "AI Mode and Ads -> I'm still not seeing any ads in AI Mode when using Personal Intelligence... but I'm seeing plenty of…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2112520669254615178",
+          "excerpt": "AI Mode and Ads -> I'm still not seeing any ads in AI Mode when using Personal Intelligence... but I'm seeing plenty of ads in AI Mode incognito. Check out this search for windows laptops with an ad weaved into the product list... and then a larger ad module at the bottom. And check out the small disclaimer there in the weaved ad: \"AI can make mistakes... make sure to double check responses. Advertisers don't see your conversations or control AI responses.\" If AI Mode is going to become the default at some point, then Google will need to monetize that heavily (and in a smart way). I am NOT a fan of the weaving of ads into the organic response like that... but I'm sure we will see much more…",
+          "author": "@glenngabe",
+          "published": "2026-10-20T12:25:50+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2112672178713890995",
+          "excerpt": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next. https://cfl.re/487DNbG. Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next. cfl.re/487DNbG Link 8 eMudhra certificates are compromised. Here&apos;s what you need to know Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying…",
+          "author": "@Cloudflare",
+          "published": "2026-10-20T22:27:53+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Kelly Wortham very kindly invited me to speak to the Test & Learn Community about AI search and discovery. Her crew are…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "willcritchlow",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2112476487022485807",
+          "excerpt": "Kelly Wortham very kindly invited me to speak to the Test & Learn Community about AI search and discovery. Her crew are extremely experienced experimentation experts when it comes to other channels - and particularly around conversion rate optimisation, UX, and product testing. My job was to bring the perspective about how you can experiment with modern search and discovery. I thought others might be interested in what I put together - here are my slides and the recording is on their YouTube channel:. Kelly Wortham very kindly invited me to speak to the Test & Learn Community about AI search and discovery. Her crew are extremely experienced experimentation experts when it comes to other…",
+          "author": "@willcritchlow",
+          "published": "2026-10-20T09:30:17+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Probably a hot take: While it’s impressive how quickly LLMs can spin up websites, I think AI is accelerating a trend…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2112600257913643349",
+          "excerpt": "Probably a hot take: While it’s impressive how quickly LLMs can spin up websites, I think AI is accelerating a trend that’s been happening for years: the internet is starting to look increasingly self-similar. AI tools often generate websites using the same design patterns, layouts, fonts, and aesthetics. So many new vibe-coded apps, company websites, and landing pages are starting to look identical (not to mention the content). I’m not saying AI-generated websites look bad - they often look great. But when everything looks the same, differentiation becomes more valuable. I have a feeling that as AI-generated websites become the norm, websites and online experiences with a unique aesthetic,…",
+          "author": "@lilyraynyc",
+          "published": "2026-10-20T17:42:06+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 602eb92399b9a537-20261021134615596)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '602eb923",
+  "run_meta": {
+    "ran_at": "2026-10-21T05:46:13.090240+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 90
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 50
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 140,
+    "candidates_fresh": 101,
+    "llm_provider": ""
+  }
+}
