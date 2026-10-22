@@ -1,0 +1,592 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T05:48:14.443805+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "And if you're wondering what a security algorithm can do, check out my case study called \"SEO Flatliners\". That site…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2112888069590221203",
+            "excerpt": "And if you're wondering what a security algorithm can do, check out my case study called \"SEO Flatliners\". That site added a subdomain back and Google tanked the entire site for one month to the minute. Sure looked like a security algo that runs monthly to me... :) https://www.gsqi.com/marketing-blog/seo-flatliners-one-month-google-drop-case-study/. And if you're wondering what a security algorithm can do, check out my case study called \"SEO Flatliners\". That site added a subdomain back and Google tanked the entire site for one month to the minute. Sure looked like a security algo that runs monthly to me... :) gsqi.com/marketing-blog/seo-… Glenn Gabe (@glenngabe) Regarding the recent…",
+            "author": "@glenngabe",
+            "published": "2026-10-21T12:45:46+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "GEO is a distraction. AI is absolutely rewriting how the internet works, but optimizing for LLM visibility misses where…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie Haynes",
+            "url": "https://www.mariehaynes.com/geo-is-a-distraction/",
+            "excerpt": "GEO is a distraction. AI is absolutely rewriting how the internet works, but optimizing for LLM visibility misses where the actual ROI exists as the web morphs from a place to find information to the agentic web. Have you measured how many of your website's visitors come from LLM tools like ChatGPT? I looked at 12 months of GA4 [&#8230;] The post GEO is a distraction appeared first on Marie Haynes .",
+            "author": "Marie Haynes",
+            "published": "2026-10-21T15:25:24+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google On robots.txt Rules For AI Crawlers, Emojis, International URLs & More. Gary Illyes and Chery Prommawin released…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/google-video-robots-txt-rules-42355.html",
+            "excerpt": "Google On robots.txt Rules For AI Crawlers, Emojis, International URLs & More. Gary Illyes and Chery Prommawin released their second video in the Non-Canonical Cabinet series; this one is named What can you actually put in a robots.txt? Here they discuss what is, and is not, supported by robots.txt files. And while Google may support features or directives, other search engines or AI crawlers might not.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-21T17:25:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "New Video published this morning: If you are interested in how AI Search platforms like ChatGPT and Claude render…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2112883317771018270",
+            "excerpt": "New Video published this morning: If you are interested in how AI Search platforms like ChatGPT and Claude render JavaScript-based content, then you should check out my latest video. I walk through the cases I covered in my latest blog post where I tested ChatGPT, Claude, Perplexity, Gemini, and Copilot to see how they handled JS content 434 days after my initial testing. I was hoping the platforms had evolved... I was wrong. Beware. https://www.youtube.com/watch?v=HtFyE5C_A8c. New Video published this morning: If you are interested in how AI Search platforms like ChatGPT and Claude render JavaScript-based content, then you should check out my latest video. I walk through the cases I…",
+            "author": "@glenngabe",
+            "published": "2026-10-21T12:26:53+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "New blog post: GEO is a distraction. I looked at 12 months of GA4 data across 100 sites - more than 145 million…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie_Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2112930042187538541",
+            "excerpt": "New blog post: GEO is a distraction. I looked at 12 months of GA4 data across 100 sites - more than 145 million sessions. ChatGPT sent 0.62% of the traffic Google organic did. With all the other LLMs included, it's 0.73%. While ChatGPT visitors converted better at 13.8% vs 3.02% for Google organic, Google still drove 27x more conversions than all the other LLMs combined. And remember how we thought ChatGPT visitors would increase exponentially? Overall visits from ChatGPT have actually been declining since GPT-5 came out in August 2025. I think GEO is a distraction. Google is the surface that's likely sending the most visitors to your business. Yes, AI is changing how people use the web,…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-21T15:32:33+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Official Explanations": [
+      {
+        "what_happened": "If you're taking PHP sites down to schedule time to deal with \"unplanned updates\", use HTTP 503 instead of letting…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "John Mueller (Bluesky)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "John Mueller (Bluesky)",
+            "url": "https://bsky.app/profile/johnmu.com/post/3myfhjovzvk27",
+            "excerpt": "If you're taking PHP sites down to schedule time to deal with \"unplanned updates\", use HTTP 503 instead of letting responses time out / 404 / 500. You can do this outside of PHP / point DNS elsewhere / CDN. https://developers.google.com/search/blog/2011/01/how-to-deal-with-planned-site-downtime https://developers.google.com/search/docs/crawling-indexing/pause-online-business",
+            "author": "@johnmu.com",
+            "published": "2026-10-21T15:26:00+00:00",
+            "source_type": "official_person"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2112911446388400412",
+            "excerpt": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss. https://cfl.re/3WEz52A. Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss. cfl.re/3WEz52A Link Introducing full transaction detection for Cloudflare WAF Cloudflare&apos;s web application firewall can now correlate an HTTP request with its response. Full…",
+            "author": "@Cloudflare",
+            "published": "2026-10-21T14:18:39+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Almost 100,000 Commerce[.]com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2112892921842184515",
+            "excerpt": "Almost 100,000 Commerce[.]com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control. https://cfl.re/4k4Wx2L. Almost 100,000 Commerce[.]com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control. cfl.re/4k4Wx2L Link How Commerce.com and Cloudflare are getting storefronts ready for AI agents Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here&apos;s how we turned it on across every store at once, while…",
+            "author": "@Cloudflare",
+            "published": "2026-10-21T13:05:02+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Google Search Console has AI visibility data! We have been going through a very painstaking and manual process of…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "willcritchlow",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "willcritchlow",
+            "url": "https://x.com/willcritchlow/status/2112909269565665722",
+            "excerpt": "Google Search Console has AI visibility data! We have been going through a very painstaking and manual process of gathering and analysing that data for a number of our tests where there was a strong AI visibility hypothesis. Punchline: we're detecting AI visibility impacts with statistical confidence for the first time. Ever since we rolled out experiments that focused on AI clicks the top question we've been asked is \"what about visibility?\". Well... One problem with most AI visibility tracking is that there is no way to tell whether the numbers are changing because of things you did, or just because of <gestures wildly>. Look at the purple line in this chart - growing both before and…",
+            "author": "@willcritchlow",
+            "published": "2026-10-21T14:10:00+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Which top sites are gaining and losing organic search traffic… and how are their rankings, SERP features, AI Overviews…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2112973736425218090",
+            "excerpt": "Which top sites are gaining and losing organic search traffic… and how are their rankings, SERP features, AI Overviews, and AI search visibility changing with it? Introducing the #SEOFOMO Organic & AI Search Tracker Leaderboard: a new free resource to quick track these shifts in one place 👇 I created it with @letaidocom (and powered by @ahrefs data) after getting a demo during Ahrefs Evolve last week in San Diego… and putting it to work on something I wanted to share with the SEO community :) The leaderboard shows the top 10 gainers and decliners within a tracked set of top 300 sites with the ability to see it for the US and UK, to be refreshed weekly, featuring: * Estimated organic search…",
+            "author": "@aleyda",
+            "published": "2026-10-21T18:26:10+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "And if you're wondering what a security algorithm can do, check out my case study called \"SEO Flatliners\". That site…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2112888069590221203",
+          "excerpt": "And if you're wondering what a security algorithm can do, check out my case study called \"SEO Flatliners\". That site added a subdomain back and Google tanked the entire site for one month to the minute. Sure looked like a security algo that runs monthly to me... :) https://www.gsqi.com/marketing-blog/seo-flatliners-one-month-google-drop-case-study/. And if you're wondering what a security algorithm can do, check out my case study called \"SEO Flatliners\". That site added a subdomain back and Google tanked the entire site for one month to the minute. Sure looked like a security algo that runs monthly to me... :) gsqi.com/marketing-blog/seo-… Glenn Gabe (@glenngabe) Regarding the recent…",
+          "author": "@glenngabe",
+          "published": "2026-10-21T12:45:46+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "If you're taking PHP sites down to schedule time to deal with \"unplanned updates\", use HTTP 503 instead of letting…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "John Mueller (Bluesky)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "John Mueller (Bluesky)",
+          "url": "https://bsky.app/profile/johnmu.com/post/3myfhjovzvk27",
+          "excerpt": "If you're taking PHP sites down to schedule time to deal with \"unplanned updates\", use HTTP 503 instead of letting responses time out / 404 / 500. You can do this outside of PHP / point DNS elsewhere / CDN. https://developers.google.com/search/blog/2011/01/how-to-deal-with-planned-site-downtime https://developers.google.com/search/docs/crawling-indexing/pause-online-business",
+          "author": "@johnmu.com",
+          "published": "2026-10-21T15:26:00+00:00",
+          "source_type": "official_person"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Search Console has AI visibility data! We have been going through a very painstaking and manual process of…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "willcritchlow",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "willcritchlow",
+          "url": "https://x.com/willcritchlow/status/2112909269565665722",
+          "excerpt": "Google Search Console has AI visibility data! We have been going through a very painstaking and manual process of gathering and analysing that data for a number of our tests where there was a strong AI visibility hypothesis. Punchline: we're detecting AI visibility impacts with statistical confidence for the first time. Ever since we rolled out experiments that focused on AI clicks the top question we've been asked is \"what about visibility?\". Well... One problem with most AI visibility tracking is that there is no way to tell whether the numbers are changing because of things you did, or just because of <gestures wildly>. Look at the purple line in this chart - growing both before and…",
+          "author": "@willcritchlow",
+          "published": "2026-10-21T14:10:00+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2112911446388400412",
+          "excerpt": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss. https://cfl.re/3WEz52A. Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss. cfl.re/3WEz52A Link Introducing full transaction detection for Cloudflare WAF Cloudflare&apos;s web application firewall can now correlate an HTTP request with its response. Full…",
+          "author": "@Cloudflare",
+          "published": "2026-10-21T14:18:39+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "GEO is a distraction. AI is absolutely rewriting how the internet works, but optimizing for LLM visibility misses where…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie Haynes",
+          "url": "https://www.mariehaynes.com/geo-is-a-distraction/",
+          "excerpt": "GEO is a distraction. AI is absolutely rewriting how the internet works, but optimizing for LLM visibility misses where the actual ROI exists as the web morphs from a place to find information to the agentic web. Have you measured how many of your website's visitors come from LLM tools like ChatGPT? I looked at 12 months of GA4 [&#8230;] The post GEO is a distraction appeared first on Marie Haynes .",
+          "author": "Marie Haynes",
+          "published": "2026-10-21T15:25:24+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Which top sites are gaining and losing organic search traffic… and how are their rankings, SERP features, AI Overviews…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2112973736425218090",
+          "excerpt": "Which top sites are gaining and losing organic search traffic… and how are their rankings, SERP features, AI Overviews, and AI search visibility changing with it? Introducing the #SEOFOMO Organic & AI Search Tracker Leaderboard: a new free resource to quick track these shifts in one place 👇 I created it with @letaidocom (and powered by @ahrefs data) after getting a demo during Ahrefs Evolve last week in San Diego… and putting it to work on something I wanted to share with the SEO community :) The leaderboard shows the top 10 gainers and decliners within a tracked set of top 300 sites with the ability to see it for the US and UK, to be refreshed weekly, featuring: * Estimated organic search…",
+          "author": "@aleyda",
+          "published": "2026-10-21T18:26:10+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google On robots.txt Rules For AI Crawlers, Emojis, International URLs & More. Gary Illyes and Chery Prommawin released…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/google-video-robots-txt-rules-42355.html",
+          "excerpt": "Google On robots.txt Rules For AI Crawlers, Emojis, International URLs & More. Gary Illyes and Chery Prommawin released their second video in the Non-Canonical Cabinet series; this one is named What can you actually put in a robots.txt? Here they discuss what is, and is not, supported by robots.txt files. And while Google may support features or directives, other search engines or AI crawlers might not.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-21T17:25:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "New Video published this morning: If you are interested in how AI Search platforms like ChatGPT and Claude render…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2112883317771018270",
+          "excerpt": "New Video published this morning: If you are interested in how AI Search platforms like ChatGPT and Claude render JavaScript-based content, then you should check out my latest video. I walk through the cases I covered in my latest blog post where I tested ChatGPT, Claude, Perplexity, Gemini, and Copilot to see how they handled JS content 434 days after my initial testing. I was hoping the platforms had evolved... I was wrong. Beware. https://www.youtube.com/watch?v=HtFyE5C_A8c. New Video published this morning: If you are interested in how AI Search platforms like ChatGPT and Claude render JavaScript-based content, then you should check out my latest video. I walk through the cases I…",
+          "author": "@glenngabe",
+          "published": "2026-10-21T12:26:53+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Almost 100,000 Commerce[.]com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2112892921842184515",
+          "excerpt": "Almost 100,000 Commerce[.]com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control. https://cfl.re/4k4Wx2L. Almost 100,000 Commerce[.]com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control. cfl.re/4k4Wx2L Link How Commerce.com and Cloudflare are getting storefronts ready for AI agents Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here&apos;s how we turned it on across every store at once, while…",
+          "author": "@Cloudflare",
+          "published": "2026-10-21T13:05:02+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "New blog post: GEO is a distraction. I looked at 12 months of GA4 data across 100 sites - more than 145 million…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie_Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2112930042187538541",
+          "excerpt": "New blog post: GEO is a distraction. I looked at 12 months of GA4 data across 100 sites - more than 145 million sessions. ChatGPT sent 0.62% of the traffic Google organic did. With all the other LLMs included, it's 0.73%. While ChatGPT visitors converted better at 13.8% vs 3.02% for Google organic, Google still drove 27x more conversions than all the other LLMs combined. And remember how we thought ChatGPT visitors would increase exponentially? Overall visits from ChatGPT have actually been declining since GPT-5 came out in August 2025. I think GEO is a distraction. Google is the surface that's likely sending the most visitors to your business. Yes, AI is changing how people use the web,…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-21T15:32:33+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: c109a1ed14d5e6fd-20261022134814317)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'c109a1ed",
+  "run_meta": {
+    "ran_at": "2026-10-22T05:48:12.235434+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 87
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 49
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 136,
+    "candidates_fresh": 102,
+    "llm_provider": ""
+  }
+}
