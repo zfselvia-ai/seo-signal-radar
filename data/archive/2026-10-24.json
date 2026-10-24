@@ -1,0 +1,590 @@
+{
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T05:26:02.738351+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Interesting to see a number of .jxl files indexed in Google Images. Running a filetype query for jxl yields those…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2113607175818068044",
+            "excerpt": "Interesting to see a number of .jxl files indexed in Google Images. Running a filetype query for jxl yields those images, but also mixes in other formats. But you can see .jxl files indexed there. Hmm.... Interesting to see a number of .jxl files indexed in Google Images. Running a filetype query for jxl yields those images, but also mixes in other formats. But you can see .jxl files indexed there. Hmm... Barry Schwartz (@rustybrick) Google Images &amp; Google Discover do not support JPEG XL image format says @johnmu seroundtable.com/google-jpeg… Link Google Image Search &amp; Google Discover Do Not Support JPEG XL Image Format John Mueller at Google recently confirmed that Google Image…",
+            "author": "@glenngabe",
+            "published": "2026-10-23T12:23:14+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Search News Buzz Video Recap: Google Search Chatter, PHP Exploit, AI SEO Worthwhile, Google Local, Google Ads, ChatGPT…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/video-10-23-2026-42362.html",
+            "excerpt": "Search News Buzz Video Recap: Google Search Chatter, PHP Exploit, AI SEO Worthwhile, Google Local, Google Ads, ChatGPT Ads & More. This week, yes, we saw even more Google search ranking volatility chatter but still no official core update. Google shared how to handle Google Search if you need to take down your site for the PHP exploit fix. There are three new...",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-23T12:01:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Good catch by Brodie. And super interesting to see \"Identity\" there. BTW, I see those citations now... Will test more…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2113604946910159062",
+            "excerpt": "Good catch by Brodie. And super interesting to see \"Identity\" there. BTW, I see those citations now... Will test more. :). Good catch by Brodie. And super interesting to see \"Identity\" there. BTW, I see those citations now... Will test more. :) Barry Schwartz (@rustybrick) Google AI Overview citation cards with AI-generated summaries in the snippets - via @SERPalerts seroundtable.com/google-ai-o… Link Google AI Overview Citation Cards With AI Summary Descriptions Google seems to be testing or rolling out AI-generated summaries within AI Overviews citation cards. So the cards on the right (or bottom) of the AI Overvi",
+            "author": "@glenngabe",
+            "published": "2026-10-23T12:14:22+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google AI Overview Citation Cards With AI-Generated Summary Snippets. Google seems to be testing or rolling out…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/google-ai-overview-citation-ai-summaries-42361.html",
+            "excerpt": "Google AI Overview Citation Cards With AI-Generated Summary Snippets. Google seems to be testing or rolling out AI-generated summaries within AI Overviews citation cards. So the cards on the right (or bottom) of the AI Overviews within Google Search can now show AI summary snippets/descriptions.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-23T11:51:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "SEO Video Recap covering Google Search ranking chatter, the massive PHP exploit, AI Search SEO worth it, Google Local…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "rustybrick",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "rustybrick",
+            "url": "https://x.com/rustybrick/status/2113601563688067327",
+            "excerpt": "SEO Video Recap covering Google Search ranking chatter, the massive PHP exploit, AI Search SEO worth it, Google Local, Ads, ChatGPT Ads and more https://www.youtube.com/watch?v=oJmgl_x_Wfc Sponsored by @dudaplatform with industry mentions of @glenngabe @johnmu @methode @googleads @googlesearchc @SachuPatel53124 @TheSocialDude @TheMarketingAnu @jyllsaskingales @AnthonyHigman @OpenAI @adsliaison @SyedMAmirHassa1. SEO Video Recap covering Google Search ranking chatter, the massive PHP exploit, AI Search SEO worth it, Google Local, Ads, ChatGPT Ads and more inv.kareem.one/watch?v=oJmgl_x_… Sponsored by @dudaplatform with industry mentions of @glenngabe @johnmu @methode @googleads @googlesearchc…",
+            "author": "@rustybrick",
+            "published": "2026-10-23T12:00:56+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Official Explanations": [
+      {
+        "what_happened": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2113704520417005884",
+            "excerpt": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half. https://cfl.re/4z69e2d. Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half. cfl.re/4z69e2d Link Origin Range Requests: Serving large files without range-request tuning Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches…",
+            "author": "@Cloudflare",
+            "published": "2026-10-23T18:50:03+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2113696051722867052",
+            "excerpt": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world. https://cfl.re/4yA2Df5. Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world. cfl.re/4yA2Df5 Link Bringing post-quantum cryptography to geographically fenced key management Cloudflare&apos;s new post-quantum GeoKey Manager protects geographically fenced decryption keys…",
+            "author": "@Cloudflare",
+            "published": "2026-10-23T18:16:23+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Do increases in AI visibility show up in branded search or Direct traffic a few weeks later? Across 632 tests on four…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2113570123630117350",
+            "excerpt": "Do increases in AI visibility show up in branded search or Direct traffic a few weeks later? Across 632 tests on four brands, I couldn’t establish a reliable relationship. A few correlations looked promising at first, including a 0.72 between AI visibility and Direct traffic. A consistent relationship would give us another way to investigate AI’s influence when people see a recommendation and visit later, without clicking a trackable link. But the data didn't hold. I’d tested seven possible delays and kept the strongest correlation. To check whether it was unusual, I shifted the AI data against the traffic data, deliberately pairing different weeks. Three of the 19 mismatched versions…",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-23T09:56:00+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "What if the *real* typical user flow in AI search is discovery in LLMs ➡️ learning about a brand/product ➡️ going to…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2113623159983239487",
+            "excerpt": "What if the *real* typical user flow in AI search is discovery in LLMs ➡️ learning about a brand/product ➡️ going to Google to search for said brand/product ➡️ Google showing an AI Overview that links to a competitor/reseller/3rd party site? 🫠🫠🫠. What if the *real* typical user flow in AI search is discovery in LLMs ➡️ learning about a brand/product ➡️ going to Google to search for said brand/product ➡️ Google showing an AI Overview that links to a competitor/reseller/3rd party site? 🫠🫠🫠",
+            "author": "@lilyraynyc",
+            "published": "2026-10-23T13:26:45+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Oh good because it wasn’t enough AI already. Oh good because it wasn’t enough AI already Barry Schwartz (@rustybrick)…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2113618540721012758",
+            "excerpt": "Oh good because it wasn’t enough AI already. Oh good because it wasn’t enough AI already Barry Schwartz (@rustybrick) Google AI Overview citation cards with AI-generated summaries in the snippets - via @SERPalerts seroundtable.com/google-ai-o… Link Google AI Overview Citation Cards With AI Summary Descriptions Google seems to be testing or rolling out AI-generated summaries within AI Overviews citation cards. So the cards on the right (or bottom) of the AI Overviews within Google Search can now show AI... seroundtable.com — https://nitter.",
+            "author": "@lilyraynyc",
+            "published": "2026-10-23T13:08:23+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Interesting to see a number of .jxl files indexed in Google Images. Running a filetype query for jxl yields those…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2113607175818068044",
+          "excerpt": "Interesting to see a number of .jxl files indexed in Google Images. Running a filetype query for jxl yields those images, but also mixes in other formats. But you can see .jxl files indexed there. Hmm.... Interesting to see a number of .jxl files indexed in Google Images. Running a filetype query for jxl yields those images, but also mixes in other formats. But you can see .jxl files indexed there. Hmm... Barry Schwartz (@rustybrick) Google Images &amp; Google Discover do not support JPEG XL image format says @johnmu seroundtable.com/google-jpeg… Link Google Image Search &amp; Google Discover Do Not Support JPEG XL Image Format John Mueller at Google recently confirmed that Google Image…",
+          "author": "@glenngabe",
+          "published": "2026-10-23T12:23:14+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2113704520417005884",
+          "excerpt": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half. https://cfl.re/4z69e2d. Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half. cfl.re/4z69e2d Link Origin Range Requests: Serving large files without range-request tuning Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches…",
+          "author": "@Cloudflare",
+          "published": "2026-10-23T18:50:03+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Do increases in AI visibility show up in branded search or Direct traffic a few weeks later? Across 632 tests on four…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2113570123630117350",
+          "excerpt": "Do increases in AI visibility show up in branded search or Direct traffic a few weeks later? Across 632 tests on four brands, I couldn’t establish a reliable relationship. A few correlations looked promising at first, including a 0.72 between AI visibility and Direct traffic. A consistent relationship would give us another way to investigate AI’s influence when people see a recommendation and visit later, without clicking a trackable link. But the data didn't hold. I’d tested seven possible delays and kept the strongest correlation. To check whether it was unusual, I shifted the AI data against the traffic data, deliberately pairing different weeks. Three of the 19 mismatched versions…",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-23T09:56:00+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Search News Buzz Video Recap: Google Search Chatter, PHP Exploit, AI SEO Worthwhile, Google Local, Google Ads, ChatGPT…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/video-10-23-2026-42362.html",
+          "excerpt": "Search News Buzz Video Recap: Google Search Chatter, PHP Exploit, AI SEO Worthwhile, Google Local, Google Ads, ChatGPT Ads & More. This week, yes, we saw even more Google search ranking volatility chatter but still no official core update. Google shared how to handle Google Search if you need to take down your site for the PHP exploit fix. There are three new...",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-23T12:01:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Good catch by Brodie. And super interesting to see \"Identity\" there. BTW, I see those citations now... Will test more…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2113604946910159062",
+          "excerpt": "Good catch by Brodie. And super interesting to see \"Identity\" there. BTW, I see those citations now... Will test more. :). Good catch by Brodie. And super interesting to see \"Identity\" there. BTW, I see those citations now... Will test more. :) Barry Schwartz (@rustybrick) Google AI Overview citation cards with AI-generated summaries in the snippets - via @SERPalerts seroundtable.com/google-ai-o… Link Google AI Overview Citation Cards With AI Summary Descriptions Google seems to be testing or rolling out AI-generated summaries within AI Overviews citation cards. So the cards on the right (or bottom) of the AI Overvi",
+          "author": "@glenngabe",
+          "published": "2026-10-23T12:14:22+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2113696051722867052",
+          "excerpt": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world. https://cfl.re/4yA2Df5. Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world. cfl.re/4yA2Df5 Link Bringing post-quantum cryptography to geographically fenced key management Cloudflare&apos;s new post-quantum GeoKey Manager protects geographically fenced decryption keys…",
+          "author": "@Cloudflare",
+          "published": "2026-10-23T18:16:23+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google AI Overview Citation Cards With AI-Generated Summary Snippets. Google seems to be testing or rolling out…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/google-ai-overview-citation-ai-summaries-42361.html",
+          "excerpt": "Google AI Overview Citation Cards With AI-Generated Summary Snippets. Google seems to be testing or rolling out AI-generated summaries within AI Overviews citation cards. So the cards on the right (or bottom) of the AI Overviews within Google Search can now show AI summary snippets/descriptions.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-23T11:51:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "What if the *real* typical user flow in AI search is discovery in LLMs ➡️ learning about a brand/product ➡️ going to…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2113623159983239487",
+          "excerpt": "What if the *real* typical user flow in AI search is discovery in LLMs ➡️ learning about a brand/product ➡️ going to Google to search for said brand/product ➡️ Google showing an AI Overview that links to a competitor/reseller/3rd party site? 🫠🫠🫠. What if the *real* typical user flow in AI search is discovery in LLMs ➡️ learning about a brand/product ➡️ going to Google to search for said brand/product ➡️ Google showing an AI Overview that links to a competitor/reseller/3rd party site? 🫠🫠🫠",
+          "author": "@lilyraynyc",
+          "published": "2026-10-23T13:26:45+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Oh good because it wasn’t enough AI already. Oh good because it wasn’t enough AI already Barry Schwartz (@rustybrick)…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2113618540721012758",
+          "excerpt": "Oh good because it wasn’t enough AI already. Oh good because it wasn’t enough AI already Barry Schwartz (@rustybrick) Google AI Overview citation cards with AI-generated summaries in the snippets - via @SERPalerts seroundtable.com/google-ai-o… Link Google AI Overview Citation Cards With AI Summary Descriptions Google seems to be testing or rolling out AI-generated summaries within AI Overviews citation cards. So the cards on the right (or bottom) of the AI Overviews within Google Search can now show AI... seroundtable.com — https://nitter.",
+          "author": "@lilyraynyc",
+          "published": "2026-10-23T13:08:23+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "SEO Video Recap covering Google Search ranking chatter, the massive PHP exploit, AI Search SEO worth it, Google Local…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "rustybrick",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "rustybrick",
+          "url": "https://x.com/rustybrick/status/2113601563688067327",
+          "excerpt": "SEO Video Recap covering Google Search ranking chatter, the massive PHP exploit, AI Search SEO worth it, Google Local, Ads, ChatGPT Ads and more https://www.youtube.com/watch?v=oJmgl_x_Wfc Sponsored by @dudaplatform with industry mentions of @glenngabe @johnmu @methode @googleads @googlesearchc @SachuPatel53124 @TheSocialDude @TheMarketingAnu @jyllsaskingales @AnthonyHigman @OpenAI @adsliaison @SyedMAmirHassa1. SEO Video Recap covering Google Search ranking chatter, the massive PHP exploit, AI Search SEO worth it, Google Local, Ads, ChatGPT Ads and more inv.kareem.one/watch?v=oJmgl_x_… Sponsored by @dudaplatform with industry mentions of @glenngabe @johnmu @methode @googleads @googlesearchc…",
+          "author": "@rustybrick",
+          "published": "2026-10-23T12:00:56+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: b9c87b3168f3d515-20261024132602581)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'b9c87b31",
+  "run_meta": {
+    "ran_at": "2026-10-24T05:25:56.937645+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 77
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 44
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 121,
+    "candidates_fresh": 69,
+    "llm_provider": ""
+  }
+}
