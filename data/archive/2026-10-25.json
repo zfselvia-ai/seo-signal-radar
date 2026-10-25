@@ -1,0 +1,594 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T05:48:58.437989+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "AI Search / GEO": [
+      {
+        "what_happened": "I’d be careful about using ChatGPT as a proxy for all AI Search. Look at Gemini and Claude in this chart. ChatGPT is…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2113905150091800786",
+            "excerpt": "I’d be careful about using ChatGPT as a proxy for all AI Search. Look at Gemini and Claude in this chart. ChatGPT is still ahead, but Gemini gained adoption through most of the period. Claude started climbing much faster in early 2026. This is a good reason to check what happens to the same question across different tools. Take a question that came up on a sales call. Ask it in ChatGPT, Gemini and Claude. See who gets recommended and read the sources behind those recommendations. You might find that a competitor barely shows up in ChatGPT but gets recommended regularly in Gemini. I’d want to understand that before telling the team our AI visibility looks good. You’ll need more than one run…",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-24T08:07:16+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "👀 AI Overviews Appear on 82.5% of US Brand Searches - Here's what to do and what it means for your SEO & AI Search…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2113940054057869650",
+            "excerpt": "👀 AI Overviews Appear on 82.5% of US Brand Searches - Here's what to do and what it means for your SEO & AI Search Strategy by Yulia Deda / @SERanking 👇 * The most searched brands trigger AI Overviews less consistently. * AI Overviews rely on the homepage half as much as organic results do. * After the homepage, AI Overviews most often cite product-related and company information pages. * About 3 in 5 brand pages cited in AI Overviews don’t rank in the top 10 for that search. * 61% of AI Overview citations come from platforms brands manage or take part in. Read more: https://visible.seranking.com/blog/ai-overviews-branded-searches/. 👀 AI Overviews Appear on 82.5% of US Brand Searches -…",
+            "author": "@aleyda",
+            "published": "2026-10-24T10:25:58+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "A fantastic, must-read piece from @gfiorelli1 going through recent debates about the value of AI search ... beyond…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2113923585077035436",
+            "excerpt": "A fantastic, must-read piece from @gfiorelli1 going through recent debates about the value of AI search ... beyond referral traffic and conversions, it's about marketing 👇 \"...we risk confusing the final economic purpose of marketing with the different mechanisms through which marketing creates value... A marketing activity can contribute to future commercial results without being the channel through which the final transaction occurs. This is neither a radical proposition nor an attempt to justify spending money on an emerging technology. It is one of the basic principles of marketing.\" A few key topics addressed: * If conversions are the only metric, should we cancel the podcasts too? *…",
+            "author": "@aleyda",
+            "published": "2026-10-24T09:20:32+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Does anyone really trust Meta? -> Meta delays new commercial terms that critics say let it scrape publisher content to…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2113986833235206335",
+            "excerpt": "Does anyone really trust Meta? -> Meta delays new commercial terms that critics say let it scrape publisher content to November 20, a day after the News/Media Alliance demanded their withdrawal \"Following outrage from news publishers, the tech giant pushed back an update for business accounts by three weeks. It still plans to move forward with it.\" \"Earlier this month, Meta Platforms announced controversial new commercial terms of use for business accounts that critics said would give the social media giant broad authority to crawl and scrape web content associated with those accounts.\" \"The new commercial terms—met by strong outrage from news publishers that produce online content and rely…",
+            "author": "@glenngabe",
+            "published": "2026-10-24T13:31:51+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern. Google reminds sites…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Journal",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Journal",
+            "url": "https://www.searchenginejournal.com/seo-pulse-google-explains-503s-robots-txt-limits-bracket-urls/594085/",
+            "excerpt": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern. Google reminds sites to use 503s during PHP patch downtime. Other updates cover robots.txt controls, bracket URLs, and JPEG XL in Google Images and Discover. The post Google Explains 503s, Robots.txt Limits &#038; Bracket URLs – SEO Pulse appeared first on Search Engine Journal .",
+            "author": "Search Engine Journal",
+            "published": "2026-10-24T12:00:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Scary they have to do this... -> OpenAI says it will no longer train its AI models on the live internet, citing…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2113980356252615000",
+            "excerpt": "Scary they have to do this... -> OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”. \"OpenAI says it built an “offline world” from cached web content to train isolated frontier models to browse, search for information, and use web apps...\" \"On Friday, OpenAI said that it will train its models using cached copies and simulated versions of the internet instead of the live web because the models are too unpredictable to be trusted with live internet access.\" “Based on the current state of alignment research, monitoring systems, and the security of internet infrastructure, we believe the responsible approach is to conduct frontier model training…",
+            "author": "@glenngabe",
+            "published": "2026-10-24T13:06:07+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "No more Deep Think in the Gemini App soon. It's being replaced by Argon.. No more Deep Think in the Gemini App soon…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie_Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2113986383316500643",
+            "excerpt": "No more Deep Think in the Gemini App soon. It's being replaced by Argon.. No more Deep Think in the Gemini App soon. It's being replaced by Argon.",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-24T13:30:04+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "The Google Search Console links report updated today - I track the updates in this story for some reason…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "rustybrick",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "rustybrick",
+            "url": "https://x.com/rustybrick/status/2114143391969849650",
+            "excerpt": "The Google Search Console links report updated today - I track the updates in this story for some reason https://www.seroundtable.com/google-search-console-links-report-fewer-links-40698.html. The Google Search Console links report updated today - I track the updates in this story for some reason seroundtable.com/google-sear…",
+            "author": "@rustybrick",
+            "published": "2026-10-24T23:53:58+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Tools, Papers & Open Source": [
+      {
+        "what_happened": "Publish stats, get cited: The tactic that put my data all over the web - via @peec_ai & @metehan777 #seo…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2114037730879381680",
+            "excerpt": "Publish stats, get cited: The tactic that put my data all over the web - via @peec_ai & @metehan777 #seo https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web. Publish stats, get cited: The tactic that put my data all over the web - via @peec_ai &amp; @metehan777 #seo peec.ai/blog/publish-stats-g… Link Publish stats, get cited: The tactic that put my data all over the web - Peec AI How 50,000 fake stats kept getting cited by ChatGPT Read more on the Peec AI blog. peec.ai",
+            "author": "@sitebulb",
+            "published": "2026-10-24T16:54:06+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern - brought to you by…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2114019115274752160",
+            "excerpt": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 https://www.searchenginejournal.com/seo-pulse-google-explains-503s-robots-txt-limits-bracket-urls/594085/. Google Explains 503s, Robots.txt Limits &amp; Bracket URLs – SEO Pulse via @sejournal , @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 searchenginejournal.com/seo-… Link Google Explains 503s, Robots.txt Limits &amp; Bracket URLs – SEO Pulse Google reminds sites to use 503s during PHP patch downtime. Other updates cover robots.txt controls, bracket URLs, and JPEG XL in Google Images and Discover.…",
+            "author": "@sitebulb",
+            "published": "2026-10-24T15:40:08+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "I’d be careful about using ChatGPT as a proxy for all AI Search. Look at Gemini and Claude in this chart. ChatGPT is…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2113905150091800786",
+          "excerpt": "I’d be careful about using ChatGPT as a proxy for all AI Search. Look at Gemini and Claude in this chart. ChatGPT is still ahead, but Gemini gained adoption through most of the period. Claude started climbing much faster in early 2026. This is a good reason to check what happens to the same question across different tools. Take a question that came up on a sales call. Ask it in ChatGPT, Gemini and Claude. See who gets recommended and read the sources behind those recommendations. You might find that a competitor barely shows up in ChatGPT but gets recommended regularly in Gemini. I’d want to understand that before telling the team our AI visibility looks good. You’ll need more than one run…",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-24T08:07:16+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Does anyone really trust Meta? -> Meta delays new commercial terms that critics say let it scrape publisher content to…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2113986833235206335",
+          "excerpt": "Does anyone really trust Meta? -> Meta delays new commercial terms that critics say let it scrape publisher content to November 20, a day after the News/Media Alliance demanded their withdrawal \"Following outrage from news publishers, the tech giant pushed back an update for business accounts by three weeks. It still plans to move forward with it.\" \"Earlier this month, Meta Platforms announced controversial new commercial terms of use for business accounts that critics said would give the social media giant broad authority to crawl and scrape web content associated with those accounts.\" \"The new commercial terms—met by strong outrage from news publishers that produce online content and rely…",
+          "author": "@glenngabe",
+          "published": "2026-10-24T13:31:51+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Publish stats, get cited: The tactic that put my data all over the web - via @peec_ai & @metehan777 #seo…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2114037730879381680",
+          "excerpt": "Publish stats, get cited: The tactic that put my data all over the web - via @peec_ai & @metehan777 #seo https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web. Publish stats, get cited: The tactic that put my data all over the web - via @peec_ai &amp; @metehan777 #seo peec.ai/blog/publish-stats-g… Link Publish stats, get cited: The tactic that put my data all over the web - Peec AI How 50,000 fake stats kept getting cited by ChatGPT Read more on the Peec AI blog. peec.ai",
+          "author": "@sitebulb",
+          "published": "2026-10-24T16:54:06+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern. Google reminds sites…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Journal",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Journal",
+          "url": "https://www.searchenginejournal.com/seo-pulse-google-explains-503s-robots-txt-limits-bracket-urls/594085/",
+          "excerpt": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern. Google reminds sites to use 503s during PHP patch downtime. Other updates cover robots.txt controls, bracket URLs, and JPEG XL in Google Images and Discover. The post Google Explains 503s, Robots.txt Limits &#038; Bracket URLs – SEO Pulse appeared first on Search Engine Journal .",
+          "author": "Search Engine Journal",
+          "published": "2026-10-24T12:00:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "👀 AI Overviews Appear on 82.5% of US Brand Searches - Here's what to do and what it means for your SEO & AI Search…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2113940054057869650",
+          "excerpt": "👀 AI Overviews Appear on 82.5% of US Brand Searches - Here's what to do and what it means for your SEO & AI Search Strategy by Yulia Deda / @SERanking 👇 * The most searched brands trigger AI Overviews less consistently. * AI Overviews rely on the homepage half as much as organic results do. * After the homepage, AI Overviews most often cite product-related and company information pages. * About 3 in 5 brand pages cited in AI Overviews don’t rank in the top 10 for that search. * 61% of AI Overview citations come from platforms brands manage or take part in. Read more: https://visible.seranking.com/blog/ai-overviews-branded-searches/. 👀 AI Overviews Appear on 82.5% of US Brand Searches -…",
+          "author": "@aleyda",
+          "published": "2026-10-24T10:25:58+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Scary they have to do this... -> OpenAI says it will no longer train its AI models on the live internet, citing…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2113980356252615000",
+          "excerpt": "Scary they have to do this... -> OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”. \"OpenAI says it built an “offline world” from cached web content to train isolated frontier models to browse, search for information, and use web apps...\" \"On Friday, OpenAI said that it will train its models using cached copies and simulated versions of the internet instead of the live web because the models are too unpredictable to be trusted with live internet access.\" “Based on the current state of alignment research, monitoring systems, and the security of internet infrastructure, we believe the responsible approach is to conduct frontier model training…",
+          "author": "@glenngabe",
+          "published": "2026-10-24T13:06:07+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern - brought to you by…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2114019115274752160",
+          "excerpt": "Google Explains 503s, Robots.txt Limits & Bracket URLs – SEO Pulse via @sejournal, @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 https://www.searchenginejournal.com/seo-pulse-google-explains-503s-robots-txt-limits-bracket-urls/594085/. Google Explains 503s, Robots.txt Limits &amp; Bracket URLs – SEO Pulse via @sejournal , @MattGSouthern - brought to you by your handy #seo helpers @Sitebulb 😊 searchenginejournal.com/seo-… Link Google Explains 503s, Robots.txt Limits &amp; Bracket URLs – SEO Pulse Google reminds sites to use 503s during PHP patch downtime. Other updates cover robots.txt controls, bracket URLs, and JPEG XL in Google Images and Discover.…",
+          "author": "@sitebulb",
+          "published": "2026-10-24T15:40:08+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "A fantastic, must-read piece from @gfiorelli1 going through recent debates about the value of AI search ... beyond…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2113923585077035436",
+          "excerpt": "A fantastic, must-read piece from @gfiorelli1 going through recent debates about the value of AI search ... beyond referral traffic and conversions, it's about marketing 👇 \"...we risk confusing the final economic purpose of marketing with the different mechanisms through which marketing creates value... A marketing activity can contribute to future commercial results without being the channel through which the final transaction occurs. This is neither a radical proposition nor an attempt to justify spending money on an emerging technology. It is one of the basic principles of marketing.\" A few key topics addressed: * If conversions are the only metric, should we cancel the podcasts too? *…",
+          "author": "@aleyda",
+          "published": "2026-10-24T09:20:32+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "No more Deep Think in the Gemini App soon. It's being replaced by Argon.. No more Deep Think in the Gemini App soon…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie_Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2113986383316500643",
+          "excerpt": "No more Deep Think in the Gemini App soon. It's being replaced by Argon.. No more Deep Think in the Gemini App soon. It's being replaced by Argon.",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-24T13:30:04+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "The Google Search Console links report updated today - I track the updates in this story for some reason…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "rustybrick",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "rustybrick",
+          "url": "https://x.com/rustybrick/status/2114143391969849650",
+          "excerpt": "The Google Search Console links report updated today - I track the updates in this story for some reason https://www.seroundtable.com/google-search-console-links-report-fewer-links-40698.html. The Google Search Console links report updated today - I track the updates in this story for some reason seroundtable.com/google-sear…",
+          "author": "@rustybrick",
+          "published": "2026-10-24T23:53:58+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: b26fb61acf1d378f-20261025134858264)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': 'b26fb61a",
+  "run_meta": {
+    "ran_at": "2026-10-25T05:48:54.829953+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 45
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 25
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 70,
+    "candidates_fresh": 15,
+    "llm_provider": ""
+  }
+}
