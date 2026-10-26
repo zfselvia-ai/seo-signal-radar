@@ -1,0 +1,552 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T05:52:08.277810+00:00",
+  "headline": "9 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "Wait, an AI-Assisted Academic Paper citing articles that don't exist? Shocking... :) -> AI-Assisted Paper About…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2114346365522260157",
+            "excerpt": "Wait, an AI-Assisted Academic Paper citing articles that don't exist? Shocking... :) -> AI-Assisted Paper About Z-Library Cites a TorrentFreak Article That Doesn’t Exist \"The problem is that this particular legal action is new to us. The reference section lists the article as “Publishers continue crackdown on shadow libraries” and links to the TorrentFreak homepage. However, we have never published an article with that title.\" \"Looking more closely, we see more claims that don’t seem to fit. The paper’s account of the Z-Library criminal case, for example, states that the U.S. Department of Justice “arrested individuals” in 2022.\" \"We also ran the paper’s abstract and conclusion through the…",
+            "author": "@glenngabe",
+            "published": "2026-10-25T13:20:30+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google Search Ranking Volatility Gets Heated October 24th. This past Saturday, October 24th, we saw some significant…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/google-search-ranking-volatility-heated-42373.html",
+            "excerpt": "Google Search Ranking Volatility Gets Heated October 24th. This past Saturday, October 24th, we saw some significant ranking volatility captured by many of the third-party Google tracking tools. There was also some heavy chatter within the SEO industry about ranking movement and Google traffic changes over the past couple of days. The two together make me believe that there was some Google Search ranking adjustment released Friday and into Saturday.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-25T14:07:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "More research from Derek and his team about Google poisoning the SERPs for scrapers and trackers. They found Google was…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2114332567121821875",
+            "excerpt": "More research from Derek and his team about Google poisoning the SERPs for scrapers and trackers. They found Google was providing results based on just *one word* in the query, which would obviously throw off the entire SERP. Note, sounds like Google started this in early 2026 but seems to have ratcheted this up in September 2026. Check the post for the details, screenshots of the SERPs, and more.. More research from Derek and his team about Google poisoning the SERPs for scrapers and trackers. They found Google was providing results based on just *one word* in the query, which would obviously throw off the entire SERP. Note, sounds like Google started this in early 2026 but seems to have…",
+            "author": "@glenngabe",
+            "published": "2026-10-25T12:25:41+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google Search ranking volatility is heated 🔥 on Saturday, October 24th https://www.seroundtable.com/google-search-rankin…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Barry Schwartz (Bluesky)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Barry Schwartz (Bluesky)",
+            "url": "https://bsky.app/profile/rustybrick.com/post/3mypf2uxwor2w",
+            "excerpt": "Google Search ranking volatility is heated 🔥 on Saturday, October 24th https://www.seroundtable.com/google-search-ranking-volatility-heated-42373.html",
+            "author": "@rustybrick.com",
+            "published": "2026-10-25T14:09:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "OpenAl built an offline version of the internet to train their agents so they can learn to interact without touching…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie_Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2114326149958377480",
+            "excerpt": "OpenAl built an offline version of the internet to train their agents so they can learn to interact without touching the real web. How do we know we're not in someone's simulated training world?🤔 https://openai.com/index/securing-our-frontier-model-training-environment/. OpenAl built an offline version of the internet to train their agents so they can learn to interact without touching the real web. How do we know we're not in someone's simulated training world?🤔 openai.com/index/securing-ou…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-25T12:00:11+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "🚨 Your SEO & AI Search News and Updates [From #SEOFOMO - Oct 25, 2026] 👇 * Google CEO Sundar Pichai Views Search…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2114442633653440914",
+            "excerpt": "🚨 Your SEO & AI Search News and Updates [From #SEOFOMO - Oct 25, 2026] 👇 * Google CEO Sundar Pichai Views Search Absorbed Into Agentic Layer * New Google Business Profiles Home * ​Why AI search is still worth investing in, even without traffic or ... Dear SEOs, we must talk about marketing * How To Create Links for SEO Google Can't Ignore * ​SEO Beyond Traffic: Influence, Trust, and Business Results * ​The New Rules Of Journalist Outreach, Based On Millions Of Emails * ​How to Scale AI Search Optimization with AI Workflows Without Losing Quality * ​GEO Guide 2027: How to Improve Visibility in ChatGPT, AI Mode, and AI Search According to 200+ Top Experts and Resources * ​AI Overviews Appear…",
+            "author": "@aleyda",
+            "published": "2026-10-25T19:43:02+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "🎥 How to Scale AI Search Optimization with AI Workflows Without Losing Quality? We go through it in the latest edition…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2114350933102518339",
+            "excerpt": "🎥 How to Scale AI Search Optimization with AI Workflows Without Losing Quality? We go through it in the latest edition of Crawling Mondays AI Search Optimization roadmap with @samtorresatl @lazarinastoy @ghostmou, covering: * Typical errors when automating optimization with AI * The steps & criteria for successful AI automation for optimization workflows * Tips, resources and tools for effective AI automation in the search optimization context * More! Watch it now: https://www.youtube.com/watch?v=h2vwC2kvlSs. 🎥 How to Scale AI Search Optimization with AI Workflows Without Losing Quality? We go through it in the latest edition of Crawling Mondays AI Search Optimization roadmap with…",
+            "author": "@aleyda",
+            "published": "2026-10-25T13:38:39+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Tools, Papers & Open Source": [
+      {
+        "what_happened": "UGC Fresh Data Program - via @googlesearchc #seo https://developers.google.com/search/docs/appearance/ugc-fresh-data-pro…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2114423531085709539",
+            "excerpt": "UGC Fresh Data Program - via @googlesearchc #seo https://developers.google.com/search/docs/appearance/ugc-fresh-data-program?utm_source=convertkit&utm_medium=email&utm_campaign=%F0%9F%93%8A%20Core%20Updates%3A%20GSC%20combines%20country%20filters%20and%20Google%20launches%20UGC%20Fresh%20Data%20program%20%5B12%20October%5D%20-%2023687806. UGC Fresh Data Program - via @googlesearchc #seo developers.google.com/search… Link About the UGC Fresh Data Program | Google Search Central | Documentation | Google for Developers Learn about the UGC Fresh Data Program and how to participate. developers.google.com",
+            "author": "@sitebulb",
+            "published": "2026-10-25T18:27:08+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Google Search Data On Crawling, Indexing & Serving Timelines - via @seroundtable & @rustybrick #seo…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "sitebulb",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Tools, Papers & Open Source",
+        "sources": [
+          {
+            "name": "sitebulb",
+            "url": "https://x.com/sitebulb/status/2114302729057186025",
+            "excerpt": "Google Search Data On Crawling, Indexing & Serving Timelines - via @seroundtable & @rustybrick #seo https://www.seroundtable.com/google-crawling-indexing-serving-data-42225.html. Google Search Data On Crawling, Indexing &amp; Serving Timelines - via @seroundtable &amp; @rustybrick #seo seroundtable.com/google-craw… Link Google: How Long It Takes Google Search For Crawling, Indexing &amp; Serving Gary Illyes from Google reportedly presented new data from Google Search on how long Google for crawling, indexing and serving on average. This is broken down by process, withing crawling, indexing... seroundtable.com",
+            "author": "@sitebulb",
+            "published": "2026-10-25T10:27:07+00:00",
+            "source_type": "expert_vendor",
+            "commercial_interest": true
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Wait, an AI-Assisted Academic Paper citing articles that don't exist? Shocking... :) -> AI-Assisted Paper About…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2114346365522260157",
+          "excerpt": "Wait, an AI-Assisted Academic Paper citing articles that don't exist? Shocking... :) -> AI-Assisted Paper About Z-Library Cites a TorrentFreak Article That Doesn’t Exist \"The problem is that this particular legal action is new to us. The reference section lists the article as “Publishers continue crackdown on shadow libraries” and links to the TorrentFreak homepage. However, we have never published an article with that title.\" \"Looking more closely, we see more claims that don’t seem to fit. The paper’s account of the Z-Library criminal case, for example, states that the U.S. Department of Justice “arrested individuals” in 2022.\" \"We also ran the paper’s abstract and conclusion through the…",
+          "author": "@glenngabe",
+          "published": "2026-10-25T13:20:30+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "🚨 Your SEO & AI Search News and Updates [From #SEOFOMO - Oct 25, 2026] 👇 * Google CEO Sundar Pichai Views Search…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2114442633653440914",
+          "excerpt": "🚨 Your SEO & AI Search News and Updates [From #SEOFOMO - Oct 25, 2026] 👇 * Google CEO Sundar Pichai Views Search Absorbed Into Agentic Layer * New Google Business Profiles Home * ​Why AI search is still worth investing in, even without traffic or ... Dear SEOs, we must talk about marketing * How To Create Links for SEO Google Can't Ignore * ​SEO Beyond Traffic: Influence, Trust, and Business Results * ​The New Rules Of Journalist Outreach, Based On Millions Of Emails * ​How to Scale AI Search Optimization with AI Workflows Without Losing Quality * ​GEO Guide 2027: How to Improve Visibility in ChatGPT, AI Mode, and AI Search According to 200+ Top Experts and Resources * ​AI Overviews Appear…",
+          "author": "@aleyda",
+          "published": "2026-10-25T19:43:02+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Search Ranking Volatility Gets Heated October 24th. This past Saturday, October 24th, we saw some significant…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/google-search-ranking-volatility-heated-42373.html",
+          "excerpt": "Google Search Ranking Volatility Gets Heated October 24th. This past Saturday, October 24th, we saw some significant ranking volatility captured by many of the third-party Google tracking tools. There was also some heavy chatter within the SEO industry about ranking movement and Google traffic changes over the past couple of days. The two together make me believe that there was some Google Search ranking adjustment released Friday and into Saturday.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-25T14:07:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "UGC Fresh Data Program - via @googlesearchc #seo https://developers.google.com/search/docs/appearance/ugc-fresh-data-pro…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2114423531085709539",
+          "excerpt": "UGC Fresh Data Program - via @googlesearchc #seo https://developers.google.com/search/docs/appearance/ugc-fresh-data-program?utm_source=convertkit&utm_medium=email&utm_campaign=%F0%9F%93%8A%20Core%20Updates%3A%20GSC%20combines%20country%20filters%20and%20Google%20launches%20UGC%20Fresh%20Data%20program%20%5B12%20October%5D%20-%2023687806. UGC Fresh Data Program - via @googlesearchc #seo developers.google.com/search… Link About the UGC Fresh Data Program | Google Search Central | Documentation | Google for Developers Learn about the UGC Fresh Data Program and how to participate. developers.google.com",
+          "author": "@sitebulb",
+          "published": "2026-10-25T18:27:08+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "More research from Derek and his team about Google poisoning the SERPs for scrapers and trackers. They found Google was…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2114332567121821875",
+          "excerpt": "More research from Derek and his team about Google poisoning the SERPs for scrapers and trackers. They found Google was providing results based on just *one word* in the query, which would obviously throw off the entire SERP. Note, sounds like Google started this in early 2026 but seems to have ratcheted this up in September 2026. Check the post for the details, screenshots of the SERPs, and more.. More research from Derek and his team about Google poisoning the SERPs for scrapers and trackers. They found Google was providing results based on just *one word* in the query, which would obviously throw off the entire SERP. Note, sounds like Google started this in early 2026 but seems to have…",
+          "author": "@glenngabe",
+          "published": "2026-10-25T12:25:41+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "🎥 How to Scale AI Search Optimization with AI Workflows Without Losing Quality? We go through it in the latest edition…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2114350933102518339",
+          "excerpt": "🎥 How to Scale AI Search Optimization with AI Workflows Without Losing Quality? We go through it in the latest edition of Crawling Mondays AI Search Optimization roadmap with @samtorresatl @lazarinastoy @ghostmou, covering: * Typical errors when automating optimization with AI * The steps & criteria for successful AI automation for optimization workflows * Tips, resources and tools for effective AI automation in the search optimization context * More! Watch it now: https://www.youtube.com/watch?v=h2vwC2kvlSs. 🎥 How to Scale AI Search Optimization with AI Workflows Without Losing Quality? We go through it in the latest edition of Crawling Mondays AI Search Optimization roadmap with…",
+          "author": "@aleyda",
+          "published": "2026-10-25T13:38:39+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Search ranking volatility is heated 🔥 on Saturday, October 24th https://www.seroundtable.com/google-search-rankin…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Barry Schwartz (Bluesky)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Barry Schwartz (Bluesky)",
+          "url": "https://bsky.app/profile/rustybrick.com/post/3mypf2uxwor2w",
+          "excerpt": "Google Search ranking volatility is heated 🔥 on Saturday, October 24th https://www.seroundtable.com/google-search-ranking-volatility-heated-42373.html",
+          "author": "@rustybrick.com",
+          "published": "2026-10-25T14:09:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Google Search Data On Crawling, Indexing & Serving Timelines - via @seroundtable & @rustybrick #seo…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "sitebulb",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Tools, Papers & Open Source",
+      "sources": [
+        {
+          "name": "sitebulb",
+          "url": "https://x.com/sitebulb/status/2114302729057186025",
+          "excerpt": "Google Search Data On Crawling, Indexing & Serving Timelines - via @seroundtable & @rustybrick #seo https://www.seroundtable.com/google-crawling-indexing-serving-data-42225.html. Google Search Data On Crawling, Indexing &amp; Serving Timelines - via @seroundtable &amp; @rustybrick #seo seroundtable.com/google-craw… Link Google: How Long It Takes Google Search For Crawling, Indexing &amp; Serving Gary Illyes from Google reportedly presented new data from Google Search on how long Google for crawling, indexing and serving on average. This is broken down by process, withing crawling, indexing... seroundtable.com",
+          "author": "@sitebulb",
+          "published": "2026-10-25T10:27:07+00:00",
+          "source_type": "expert_vendor",
+          "commercial_interest": true
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "OpenAl built an offline version of the internet to train their agents so they can learn to interact without touching…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie_Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2114326149958377480",
+          "excerpt": "OpenAl built an offline version of the internet to train their agents so they can learn to interact without touching the real web. How do we know we're not in someone's simulated training world?🤔 https://openai.com/index/securing-our-frontier-model-training-environment/. OpenAl built an offline version of the internet to train their agents so they can learn to interact without touching the real web. How do we know we're not in someone's simulated training world?🤔 openai.com/index/securing-ou…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-25T12:00:11+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 9a4b32eaf7e7d8e4-20261026135208118)', 'type': 'invalid_request_error', 'param': None, 'code': '402'}, 'request_id': '9a4b32ea",
+  "run_meta": {
+    "ran_at": "2026-10-26T05:52:06.459263+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 46
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 25
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 71,
+    "candidates_fresh": 16,
+    "llm_provider": ""
+  }
+}
