@@ -1,0 +1,590 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T06:05:00.574060+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "AI Search / GEO": [
+      {
+        "what_happened": "AI is killing SEO traffic is not completely wrong, but definitely not completely right. I a new analysis of Similarweb…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2114726775641043360",
+            "excerpt": "AI is killing SEO traffic is not completely wrong, but definitely not completely right. I a new analysis of Similarweb data (10k domains, US + France, 3 years), I found Organic Search fell -13.2% in the US and 24.4% in France over the last 2 years. HOWEVER, not all of that is due to AI (Overviews). Paid Search has grown strongly over the same time horizon, probably due to more real estate in the SERPs and harder differentiation from organic results. Also, organic traffic losses are more concentrated in industries like publishing, which lost lost 41.5% in the US and 42.5% in France over the last 2 years. Lastly, Google's updates are aggressive and often reduce rank performance that can be,…",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-26T14:32:07+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Organic traffic is down, but it’s not all AI. Three years of US and France data show uneven organic losses, growing…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Growth Memo (Kevin Indig)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Growth Memo (Kevin Indig)",
+            "url": "https://www.growth-memo.com/p/organic-traffic-is-down-but-its-not",
+            "excerpt": "Organic traffic is down, but it’s not all AI. Three years of US and France data show uneven organic losses, growing paid search, and AI referrals that remain a small share of visits.",
+            "author": "Growth Memo (Kevin Indig)",
+            "published": "2026-10-26T12:48:37+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Fascinating example of how Google can “play dumb” with rank trackers – as a companion to poisoned search results…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "brodieseo",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "brodieseo",
+            "url": "https://x.com/brodieseo/status/2114678432030421088",
+            "excerpt": "Fascinating example of how Google can “play dumb” with rank trackers – as a companion to poisoned search results. Search “easy strawberry jam”, and the standard organic results can focus on Easy, the TV series, even while Google’s AI overview gives you a jam recipe. New research from @nozzleio found this pattern spiked sharply: in the week of Sept. 28, it appeared on 25% of the study’s page 1 or page 2 SERPs, peaking at 39.9% on a single day. It’s a different issue from the poisoned SERPs issue, but another reason to check the actual results before treating a sudden rank-tracker drop as a Google update. Google is certainly trying to make it as difficult as possible for rank trackers and…",
+            "author": "@brodieseo",
+            "published": "2026-10-26T11:20:01+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "👀 @semrush has updated its AI Visibility Index which now shows insights across 9 markets across 22 industries for…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2114828106934387019",
+            "excerpt": "👀 @semrush has updated its AI Visibility Index which now shows insights across 9 markets across 22 industries for ChatGPT, AI Mode, Gemini and AI Overviews, clearly showing that despite sharing the same language (English) there are clear differences in sources used and brands showcased across them which are clearly localized ... so if you're still thinking that \"what works in the US will work across other English speaking languages because most of the citations come from the US\" ... think twice. Check it out: ai-visibility-index(.)semrush(.)com /HT @NicoleCPonce. 👀 @semrush has updated its AI Visibility Index which now shows insights across 9 markets across 22 industries for ChatGPT, AI…",
+            "author": "@aleyda",
+            "published": "2026-10-26T21:14:46+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "📊 38% more YoY Google searches, 8% fewer organic search clicks… and 41% fewer paid search clicks?! Welcome to the…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "aleyda",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "aleyda",
+            "url": "https://x.com/aleyda/status/2114763531493007764",
+            "excerpt": "📊 38% more YoY Google searches, 8% fewer organic search clicks… and 41% fewer paid search clicks?! Welcome to the fourth SERP Squeeze Monday! 👇 This week’s query: “coffee tumbler”, comparing September 2026 vs. 2025 in Google US. What does the @Similarweb data show? More searches, but fewer clicks for both organic and paid results: * Search volume: 23.6K to 32.5K (+38%) * Organic search clicks: 3.6K to 3.3K (-8%) * Paid search clicks: 3.9K to 2.3K (-41%) Comparing @ahrefs' September 2026 vs 2025 Top 10 SERP snapshots show that: * In 2025: The SERP showed 10 traditional organic search results. * In 2026: The SERP shows only 5 traditional search organic results, with an AI Overview, Shopping…",
+            "author": "@aleyda",
+            "published": "2026-10-26T16:58:10+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "If AI Overviews are going to show on 80% of queries (h/t @seoClarity), it means that position tracking in GSC is about…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "lilyraynyc",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "lilyraynyc",
+            "url": "https://x.com/lilyraynyc/status/2114750772743217428",
+            "excerpt": "If AI Overviews are going to show on 80% of queries (h/t @seoClarity), it means that position tracking in GSC is about to get VERY confusing since Google doesn’t label or filter AIO/AI Mode in there. (Dear Google: please do this already. We already know that traffic and CTR for AI results will be low. It’s not a secret.) So now you can rank #1 due to an AIO citation and prob see near-0 CTRs, mixed in with all the rest of your query data representing traditional organic results.. If AI Overviews are going to show on 80% of queries (h/t @seoClarity ), it means that position tracking in GSC is about to get VERY confusing since Google doesn’t label or filter AIO/AI Mode in there. (Dear Google:…",
+            "author": "@lilyraynyc",
+            "published": "2026-10-26T16:07:29+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "AIOs definitely expanded to some ultra-YMYL categories this fall. Saw that explode in GSC in Sep while clients picked…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2114697167050867012",
+            "excerpt": "AIOs definitely expanded to some ultra-YMYL categories this fall. Saw that explode in GSC in Sep while clients picked it up almost immediately. But... I'm also seeing that drop back down (and AIOs are missing for those queries now). Maybe Google is testing for those sensitive categories... Stay tuned.. AIOs definitely expanded to some ultra-YMYL categories this fall. Saw that explode in GSC in Sep while clients picked it up almost immediately. But... I'm also seeing that drop back down (and AIOs are missing for those queries now). Maybe Google is testing for those sensitive categories... Stay tuned. Barry Schwartz (@rustybrick) Google AI Overviews now show for 80%+ of search queries, data…",
+            "author": "@glenngabe",
+            "published": "2026-10-26T12:34:28+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Over 80% Of Google Searches Have AI Overviews & Growing. AI Overviews now show up for over 80% of Google Searches, that…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Search Engine Roundtable",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Search Engine Roundtable",
+            "url": "https://www.seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html",
+            "excerpt": "Over 80% Of Google Searches Have AI Overviews & Growing. AI Overviews now show up for over 80% of Google Searches, that is up from 50% in June of last year and about 15% from the year before that. This is from recent data from Semrush, SE Ranking, and seoClarity.",
+            "author": "Search Engine Roundtable",
+            "published": "2026-10-26T11:51:00+00:00",
+            "source_type": "trade_news"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "This has to be a bug. If Google is disabling finding those articles, with the ability to visit downstream, all hell…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2114691757824987183",
+            "excerpt": "This has to be a bug. If Google is disabling finding those articles, with the ability to visit downstream, all hell will break loose. :). This has to be a bug. If Google is disabling finding those articles, with the ability to visit downstream, all hell will break loose. :) Barry Schwartz (@rustybrick) Google Discover testing disabling clicks on the source button - via @AndellDam seroundtable.com/google-disc… Link Google Discover Testing Disabling Clicks In Sources Section Google is reportedly testing disabling the ability to click on the sources button in the Google Discover card of articles. Normally, when you click on the sourc",
+            "author": "@glenngabe",
+            "published": "2026-10-26T12:12:58+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Official Explanations": [
+      {
+        "what_happened": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2114848043853873286",
+            "excerpt": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue. https://cfl.re/4srMk2v. A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue. cfl.re/4srMk2v Link Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue. blog.cloudflare.com",
+            "author": "@Cloudflare",
+            "published": "2026-10-26T22:34:00+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "AI is killing SEO traffic is not completely wrong, but definitely not completely right. I a new analysis of Similarweb…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2114726775641043360",
+          "excerpt": "AI is killing SEO traffic is not completely wrong, but definitely not completely right. I a new analysis of Similarweb data (10k domains, US + France, 3 years), I found Organic Search fell -13.2% in the US and 24.4% in France over the last 2 years. HOWEVER, not all of that is due to AI (Overviews). Paid Search has grown strongly over the same time horizon, probably due to more real estate in the SERPs and harder differentiation from organic results. Also, organic traffic losses are more concentrated in industries like publishing, which lost lost 41.5% in the US and 42.5% in France over the last 2 years. Lastly, Google's updates are aggressive and often reduce rank performance that can be,…",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-26T14:32:07+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "AIOs definitely expanded to some ultra-YMYL categories this fall. Saw that explode in GSC in Sep while clients picked…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2114697167050867012",
+          "excerpt": "AIOs definitely expanded to some ultra-YMYL categories this fall. Saw that explode in GSC in Sep while clients picked it up almost immediately. But... I'm also seeing that drop back down (and AIOs are missing for those queries now). Maybe Google is testing for those sensitive categories... Stay tuned.. AIOs definitely expanded to some ultra-YMYL categories this fall. Saw that explode in GSC in Sep while clients picked it up almost immediately. But... I'm also seeing that drop back down (and AIOs are missing for those queries now). Maybe Google is testing for those sensitive categories... Stay tuned. Barry Schwartz (@rustybrick) Google AI Overviews now show for 80%+ of search queries, data…",
+          "author": "@glenngabe",
+          "published": "2026-10-26T12:34:28+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2114848043853873286",
+          "excerpt": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue. https://cfl.re/4srMk2v. A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue. cfl.re/4srMk2v Link Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue. blog.cloudflare.com",
+          "author": "@Cloudflare",
+          "published": "2026-10-26T22:34:00+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Organic traffic is down, but it’s not all AI. Three years of US and France data show uneven organic losses, growing…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Growth Memo (Kevin Indig)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Growth Memo (Kevin Indig)",
+          "url": "https://www.growth-memo.com/p/organic-traffic-is-down-but-its-not",
+          "excerpt": "Organic traffic is down, but it’s not all AI. Three years of US and France data show uneven organic losses, growing paid search, and AI referrals that remain a small share of visits.",
+          "author": "Growth Memo (Kevin Indig)",
+          "published": "2026-10-26T12:48:37+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Over 80% Of Google Searches Have AI Overviews & Growing. AI Overviews now show up for over 80% of Google Searches, that…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Search Engine Roundtable",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Search Engine Roundtable",
+          "url": "https://www.seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html",
+          "excerpt": "Over 80% Of Google Searches Have AI Overviews & Growing. AI Overviews now show up for over 80% of Google Searches, that is up from 50% in June of last year and about 15% from the year before that. This is from recent data from Semrush, SE Ranking, and seoClarity.",
+          "author": "Search Engine Roundtable",
+          "published": "2026-10-26T11:51:00+00:00",
+          "source_type": "trade_news"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Fascinating example of how Google can “play dumb” with rank trackers – as a companion to poisoned search results…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "brodieseo",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "brodieseo",
+          "url": "https://x.com/brodieseo/status/2114678432030421088",
+          "excerpt": "Fascinating example of how Google can “play dumb” with rank trackers – as a companion to poisoned search results. Search “easy strawberry jam”, and the standard organic results can focus on Easy, the TV series, even while Google’s AI overview gives you a jam recipe. New research from @nozzleio found this pattern spiked sharply: in the week of Sept. 28, it appeared on 25% of the study’s page 1 or page 2 SERPs, peaking at 39.9% on a single day. It’s a different issue from the poisoned SERPs issue, but another reason to check the actual results before treating a sudden rank-tracker drop as a Google update. Google is certainly trying to make it as difficult as possible for rank trackers and…",
+          "author": "@brodieseo",
+          "published": "2026-10-26T11:20:01+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "👀 @semrush has updated its AI Visibility Index which now shows insights across 9 markets across 22 industries for…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2114828106934387019",
+          "excerpt": "👀 @semrush has updated its AI Visibility Index which now shows insights across 9 markets across 22 industries for ChatGPT, AI Mode, Gemini and AI Overviews, clearly showing that despite sharing the same language (English) there are clear differences in sources used and brands showcased across them which are clearly localized ... so if you're still thinking that \"what works in the US will work across other English speaking languages because most of the citations come from the US\" ... think twice. Check it out: ai-visibility-index(.)semrush(.)com /HT @NicoleCPonce. 👀 @semrush has updated its AI Visibility Index which now shows insights across 9 markets across 22 industries for ChatGPT, AI…",
+          "author": "@aleyda",
+          "published": "2026-10-26T21:14:46+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "This has to be a bug. If Google is disabling finding those articles, with the ability to visit downstream, all hell…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2114691757824987183",
+          "excerpt": "This has to be a bug. If Google is disabling finding those articles, with the ability to visit downstream, all hell will break loose. :). This has to be a bug. If Google is disabling finding those articles, with the ability to visit downstream, all hell will break loose. :) Barry Schwartz (@rustybrick) Google Discover testing disabling clicks on the source button - via @AndellDam seroundtable.com/google-disc… Link Google Discover Testing Disabling Clicks In Sources Section Google is reportedly testing disabling the ability to click on the sources button in the Google Discover card of articles. Normally, when you click on the sourc",
+          "author": "@glenngabe",
+          "published": "2026-10-26T12:12:58+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "📊 38% more YoY Google searches, 8% fewer organic search clicks… and 41% fewer paid search clicks?! Welcome to the…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "aleyda",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "aleyda",
+          "url": "https://x.com/aleyda/status/2114763531493007764",
+          "excerpt": "📊 38% more YoY Google searches, 8% fewer organic search clicks… and 41% fewer paid search clicks?! Welcome to the fourth SERP Squeeze Monday! 👇 This week’s query: “coffee tumbler”, comparing September 2026 vs. 2025 in Google US. What does the @Similarweb data show? More searches, but fewer clicks for both organic and paid results: * Search volume: 23.6K to 32.5K (+38%) * Organic search clicks: 3.6K to 3.3K (-8%) * Paid search clicks: 3.9K to 2.3K (-41%) Comparing @ahrefs' September 2026 vs 2025 Top 10 SERP snapshots show that: * In 2025: The SERP showed 10 traditional organic search results. * In 2026: The SERP shows only 5 traditional search organic results, with an AI Overview, Shopping…",
+          "author": "@aleyda",
+          "published": "2026-10-26T16:58:10+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "If AI Overviews are going to show on 80% of queries (h/t @seoClarity), it means that position tracking in GSC is about…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "lilyraynyc",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "lilyraynyc",
+          "url": "https://x.com/lilyraynyc/status/2114750772743217428",
+          "excerpt": "If AI Overviews are going to show on 80% of queries (h/t @seoClarity), it means that position tracking in GSC is about to get VERY confusing since Google doesn’t label or filter AIO/AI Mode in there. (Dear Google: please do this already. We already know that traffic and CTR for AI results will be low. It’s not a secret.) So now you can rank #1 due to an AIO citation and prob see near-0 CTRs, mixed in with all the rest of your query data representing traditional organic results.. If AI Overviews are going to show on 80% of queries (h/t @seoClarity ), it means that position tracking in GSC is about to get VERY confusing since Google doesn’t label or filter AIO/AI Mode in there. (Dear Google:…",
+          "author": "@lilyraynyc",
+          "published": "2026-10-26T16:07:29+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - Insufficient Balance (request_id: 83fca83586c96aad-20261027140500447)",
+  "run_meta": {
+    "ran_at": "2026-10-27T06:04:58.835842+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 82
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 54
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 136,
+    "candidates_fresh": 89,
+    "llm_provider": ""
+  }
+}
