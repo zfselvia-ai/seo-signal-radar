@@ -1,0 +1,592 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T06:45:35.837758+00:00",
+  "headline": "10 raw items — curation unavailable, nothing here is assessed.",
+  "sections": {
+    "Official Explanations": [
+      {
+        "what_happened": "Four. Just four. That’s the key to any unpatched connection using eMudhra certificates. Here’s how we patched our…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2116274009813692578",
+            "excerpt": "Four. Just four. That’s the key to any unpatched connection using eMudhra certificates. Here’s how we patched our network, what exploitation attempts we’ve seen, and how much of the Internet is still exposed. Read more: https://cfl.re/4ByBP1w. Four. Just four. That’s the key to any unpatched connection using eMudhra certificates. Here’s how we patched our network, what exploitation attempts we’ve seen, and how much of the Internet is still exposed. Read more: cfl.re/4ByBP1w Link 4 real? Tracking exploitation and patching of eMudhra’s weak keys Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly…",
+            "author": "@Cloudflare",
+            "published": "2026-10-30T21:00:17+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Supporting a shared AI training control for websites. Today, we're announcing our plans to support a shared AI training…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Google Search Central Blog",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Google Search Central Blog",
+            "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+            "excerpt": "Supporting a shared AI training control for websites. Today, we're announcing our plans to support a shared AI training control in robots.txt. This will help websites express their AI training preferences across multiple AI providers in a single step and is based on work from the AIPREF working group at the Internet Engineering Task Force (IETF). This builds on our long history of providing website owners with clear controls, including through Google-Extended, the AI training control we've offered since 2023.",
+            "author": "Google Search Central Blog",
+            "published": "2026-10-30T00:00:00+00:00",
+            "source_type": "official_documentation"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Microsoft is joining industry peers in announcing a shared AI training preference in robots.txt - and going further…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "BingWMC",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "BingWMC",
+            "url": "https://x.com/BingWMC/status/2116199072373916031",
+            "excerpt": "Microsoft is joining industry peers in announcing a shared AI training preference in robots.txt - and going further with granular page-level training preferences and a separate grounding preference for publishers and site owners. See: https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/. Microsoft is joining industry peers in announcing a shared AI training preference in robots.txt - and going further with granular page-level training preferences and a separate grounding preference for publishers and site owners. See: blogs.bing.com/search/2026/1… Link Your content, your choice: clearer preferences for training and grounding…",
+            "author": "@BingWMC",
+            "published": "2026-10-30T16:02:30+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Cloudflare",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Official Explanations",
+        "sources": [
+          {
+            "name": "Cloudflare",
+            "url": "https://x.com/Cloudflare/status/2116179364614189067",
+            "excerpt": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity. Read more: https://cfl.re/4ySqkj1. Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity. Read more: cfl.re/4ySqkj1 Link Cloudflare services for private origins is now generally available Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity. blog.cloudflare.com",
+            "author": "@Cloudflare",
+            "published": "2026-10-30T14:44:11+00:00",
+            "source_type": "official_api"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "SERP & Algorithm Signals": [
+      {
+        "what_happened": "I published a three-part series on Reddit's AI translations documenting the rise and fall of that content. Those…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2116146715904344418",
+            "excerpt": "I published a three-part series on Reddit's AI translations documenting the rise and fall of that content. Those translations (tens of millions of urls across many countries) took a big hit with the May 2026 core update and June spam update. Now Reddit is explaining more about that drop. So DO NOT just translate any content via AI. Make sure it's high quality. If not, you can get hammered. Reddit: \"Our machine-translated content (AI-translated content) is being ranked lower, which affects our international traffic. So we're seeing a drop based on AIOs and AI Mode AND the drop of AI-translations.\" https://www.youtube.com/watch?v=fO4Qkgst-c4&t=1992s. I published a three-part series on…",
+            "author": "@glenngabe",
+            "published": "2026-10-30T12:34:27+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "This is for Bing, but I'm still waiting to see \"sponsored parts of an answer\" in AIOs or AI Mode, which Google…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "glenngabe",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "glenngabe",
+            "url": "https://x.com/glenngabe/status/2116144586309439706",
+            "excerpt": "This is for Bing, but I'm still waiting to see \"sponsored parts of an answer\" in AIOs or AI Mode, which Google explained a while ago they wanted to test. Based on Google's Q3 earnings, I think we will see all types of ad testing going on (to increase monetization of AI Mode in particular). And of course Bing will be doing this too. Stay tuned.. This is for Bing, but I'm still waiting to see \"sponsored parts of an answer\" in AIOs or AI Mode, which Google explained a while ago they wanted to test. Based on Google's Q3 earnings, I think we will see all types of ad testing going on (to increase monetization of AI Mode in particular). And of course Bing will be doing this too. Stay tuned. Barry…",
+            "author": "@glenngabe",
+            "published": "2026-10-30T12:26:00+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "Put together my thoughts on Google's Q3 earnings call. A few things of note: ▪Google sees AI Mode, AI overviews and…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Marie_Haynes",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "SERP & Algorithm Signals",
+        "sources": [
+          {
+            "name": "Marie_Haynes",
+            "url": "https://x.com/Marie_Haynes/status/2116256323172200770",
+            "excerpt": "Put together my thoughts on Google's Q3 earnings call. A few things of note: ▪Google sees AI Mode, AI overviews and traditional Search as one unified product. ▪Expect rapid acceleration because of RSI (Recursive Self Improvement.) ▪Selling TPU Systems (not just chips) is key to Google's growth ▪\"We are in the early stages of agentic experiences across our surfaces.\" Blog post: https://www.mariehaynes.com/googles-q3-2026-earnings-call-search-ai-are-merging-into-one-unified-product/. Put together my thoughts on Google's Q3 earnings call. A few things of note: ▪Google sees AI Mode, AI overviews and traditional Search as one unified product. ▪Expect rapid acceleration because of RSI (Recursive…",
+            "author": "@Marie_Haynes",
+            "published": "2026-10-30T19:50:00+00:00",
+            "source_type": "expert_analysis"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "Technical SEO Experiments": [
+      {
+        "what_happened": "Lost in translation: why your title tag wins could hurt you in other markets. The result: adding affordability wording…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "SearchPilot Resources",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "Technical SEO Experiments",
+        "sources": [
+          {
+            "name": "SearchPilot Resources",
+            "url": "https://www.searchpilot.com/resources/case-studies/lost-in-translation-why-your-title-tag-wins-could-hurt-you-in-other-markets",
+            "excerpt": "Lost in translation: why your title tag wins could hurt you in other markets. The result: adding affordability wording to title tags cut organic traffic by 4.6% on a Spanish-language travel site, despite repeatedly driving uplifts for travel customers in the UK.",
+            "author": "SearchPilot Resources",
+            "published": "2026-10-30T15:51:20+00:00",
+            "source_type": "reproducible_experiment"
+          }
+        ],
+        "degraded": true
+      }
+    ],
+    "AI Search / GEO": [
+      {
+        "what_happened": "Why should Reddit open itself up to AI Mode / AI Overviews?. Why should Reddit open itself up to AI Mode / AI…",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Kevin_Indig",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Kevin_Indig",
+            "url": "https://x.com/Kevin_Indig/status/2116194861497847863",
+            "excerpt": "Why should Reddit open itself up to AI Mode / AI Overviews?. Why should Reddit open itself up to AI Mode / AI Overviews? The Kobeissi Letter (@KobeissiLetter) Reddit's earnings call has exposed the new reality for thousands of companies. \"AI mode does not drive traffic. Not for us and not to anybody as far as I know. It used to be a traffic driver. Now it's not.\" - Reddit CEO. The reality is that AI is fundamentally changing the way that humans access the internet. Just 24 hours prior to this statement, Google's stock erased -$480 billion on the same issu",
+            "author": "@Kevin_Indig",
+            "published": "2026-10-30T15:45:46+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      },
+      {
+        "what_happened": "New asset: AI Search Visibility Pitch Deck. Make the budget case for AI visibility before attribution catches up",
+        "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+        "evidence": "Growth Memo (Kevin Indig)",
+        "who_it_affects": "all",
+        "what_to_do": "monitor",
+        "confidence": "Speculative",
+        "impact": "P3",
+        "section": "AI Search / GEO",
+        "sources": [
+          {
+            "name": "Growth Memo (Kevin Indig)",
+            "url": "https://www.growth-memo.com/p/new-asset-ai-search-visibility-pitch",
+            "excerpt": "New asset: AI Search Visibility Pitch Deck. Make the budget case for AI visibility before attribution catches up",
+            "author": "Growth Memo (Kevin Indig)",
+            "published": "2026-10-30T17:09:58+00:00",
+            "source_type": "data_research"
+          }
+        ],
+        "degraded": true
+      }
+    ]
+  },
+  "signals": [
+    {
+      "what_happened": "Four. Just four. That’s the key to any unpatched connection using eMudhra certificates. Here’s how we patched our…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2116274009813692578",
+          "excerpt": "Four. Just four. That’s the key to any unpatched connection using eMudhra certificates. Here’s how we patched our network, what exploitation attempts we’ve seen, and how much of the Internet is still exposed. Read more: https://cfl.re/4ByBP1w. Four. Just four. That’s the key to any unpatched connection using eMudhra certificates. Here’s how we patched our network, what exploitation attempts we’ve seen, and how much of the Internet is still exposed. Read more: cfl.re/4ByBP1w Link 4 real? Tracking exploitation and patching of eMudhra’s weak keys Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly…",
+          "author": "@Cloudflare",
+          "published": "2026-10-30T21:00:17+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Supporting a shared AI training control for websites. Today, we're announcing our plans to support a shared AI training…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Google Search Central Blog",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Google Search Central Blog",
+          "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+          "excerpt": "Supporting a shared AI training control for websites. Today, we're announcing our plans to support a shared AI training control in robots.txt. This will help websites express their AI training preferences across multiple AI providers in a single step and is based on work from the AIPREF working group at the Internet Engineering Task Force (IETF). This builds on our long history of providing website owners with clear controls, including through Google-Extended, the AI training control we've offered since 2023.",
+          "author": "Google Search Central Blog",
+          "published": "2026-10-30T00:00:00+00:00",
+          "source_type": "official_documentation"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "I published a three-part series on Reddit's AI translations documenting the rise and fall of that content. Those…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2116146715904344418",
+          "excerpt": "I published a three-part series on Reddit's AI translations documenting the rise and fall of that content. Those translations (tens of millions of urls across many countries) took a big hit with the May 2026 core update and June spam update. Now Reddit is explaining more about that drop. So DO NOT just translate any content via AI. Make sure it's high quality. If not, you can get hammered. Reddit: \"Our machine-translated content (AI-translated content) is being ranked lower, which affects our international traffic. So we're seeing a drop based on AIOs and AI Mode AND the drop of AI-translations.\" https://www.youtube.com/watch?v=fO4Qkgst-c4&t=1992s. I published a three-part series on…",
+          "author": "@glenngabe",
+          "published": "2026-10-30T12:34:27+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Lost in translation: why your title tag wins could hurt you in other markets. The result: adding affordability wording…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "SearchPilot Resources",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Technical SEO Experiments",
+      "sources": [
+        {
+          "name": "SearchPilot Resources",
+          "url": "https://www.searchpilot.com/resources/case-studies/lost-in-translation-why-your-title-tag-wins-could-hurt-you-in-other-markets",
+          "excerpt": "Lost in translation: why your title tag wins could hurt you in other markets. The result: adding affordability wording to title tags cut organic traffic by 4.6% on a Spanish-language travel site, despite repeatedly driving uplifts for travel customers in the UK.",
+          "author": "SearchPilot Resources",
+          "published": "2026-10-30T15:51:20+00:00",
+          "source_type": "reproducible_experiment"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Why should Reddit open itself up to AI Mode / AI Overviews?. Why should Reddit open itself up to AI Mode / AI…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Kevin_Indig",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Kevin_Indig",
+          "url": "https://x.com/Kevin_Indig/status/2116194861497847863",
+          "excerpt": "Why should Reddit open itself up to AI Mode / AI Overviews?. Why should Reddit open itself up to AI Mode / AI Overviews? The Kobeissi Letter (@KobeissiLetter) Reddit's earnings call has exposed the new reality for thousands of companies. \"AI mode does not drive traffic. Not for us and not to anybody as far as I know. It used to be a traffic driver. Now it's not.\" - Reddit CEO. The reality is that AI is fundamentally changing the way that humans access the internet. Just 24 hours prior to this statement, Google's stock erased -$480 billion on the same issu",
+          "author": "@Kevin_Indig",
+          "published": "2026-10-30T15:45:46+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "New asset: AI Search Visibility Pitch Deck. Make the budget case for AI visibility before attribution catches up",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Growth Memo (Kevin Indig)",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "AI Search / GEO",
+      "sources": [
+        {
+          "name": "Growth Memo (Kevin Indig)",
+          "url": "https://www.growth-memo.com/p/new-asset-ai-search-visibility-pitch",
+          "excerpt": "New asset: AI Search Visibility Pitch Deck. Make the budget case for AI visibility before attribution catches up",
+          "author": "Growth Memo (Kevin Indig)",
+          "published": "2026-10-30T17:09:58+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Microsoft is joining industry peers in announcing a shared AI training preference in robots.txt - and going further…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "BingWMC",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "BingWMC",
+          "url": "https://x.com/BingWMC/status/2116199072373916031",
+          "excerpt": "Microsoft is joining industry peers in announcing a shared AI training preference in robots.txt - and going further with granular page-level training preferences and a separate grounding preference for publishers and site owners. See: https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/. Microsoft is joining industry peers in announcing a shared AI training preference in robots.txt - and going further with granular page-level training preferences and a separate grounding preference for publishers and site owners. See: blogs.bing.com/search/2026/1… Link Your content, your choice: clearer preferences for training and grounding…",
+          "author": "@BingWMC",
+          "published": "2026-10-30T16:02:30+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "This is for Bing, but I'm still waiting to see \"sponsored parts of an answer\" in AIOs or AI Mode, which Google…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "glenngabe",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "glenngabe",
+          "url": "https://x.com/glenngabe/status/2116144586309439706",
+          "excerpt": "This is for Bing, but I'm still waiting to see \"sponsored parts of an answer\" in AIOs or AI Mode, which Google explained a while ago they wanted to test. Based on Google's Q3 earnings, I think we will see all types of ad testing going on (to increase monetization of AI Mode in particular). And of course Bing will be doing this too. Stay tuned.. This is for Bing, but I'm still waiting to see \"sponsored parts of an answer\" in AIOs or AI Mode, which Google explained a while ago they wanted to test. Based on Google's Q3 earnings, I think we will see all types of ad testing going on (to increase monetization of AI Mode in particular). And of course Bing will be doing this too. Stay tuned. Barry…",
+          "author": "@glenngabe",
+          "published": "2026-10-30T12:26:00+00:00",
+          "source_type": "data_research"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Cloudflare",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "Official Explanations",
+      "sources": [
+        {
+          "name": "Cloudflare",
+          "url": "https://x.com/Cloudflare/status/2116179364614189067",
+          "excerpt": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity. Read more: https://cfl.re/4ySqkj1. Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity. Read more: cfl.re/4ySqkj1 Link Cloudflare services for private origins is now generally available Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity. blog.cloudflare.com",
+          "author": "@Cloudflare",
+          "published": "2026-10-30T14:44:11+00:00",
+          "source_type": "official_api"
+        }
+      ],
+      "degraded": true
+    },
+    {
+      "what_happened": "Put together my thoughts on Google's Q3 earnings call. A few things of note: ▪Google sees AI Mode, AI overviews and…",
+      "why_it_matters": "Auto-extracted from source (LLM summary unavailable).",
+      "evidence": "Marie_Haynes",
+      "who_it_affects": "all",
+      "what_to_do": "monitor",
+      "confidence": "Speculative",
+      "impact": "P3",
+      "section": "SERP & Algorithm Signals",
+      "sources": [
+        {
+          "name": "Marie_Haynes",
+          "url": "https://x.com/Marie_Haynes/status/2116256323172200770",
+          "excerpt": "Put together my thoughts on Google's Q3 earnings call. A few things of note: ▪Google sees AI Mode, AI overviews and traditional Search as one unified product. ▪Expect rapid acceleration because of RSI (Recursive Self Improvement.) ▪Selling TPU Systems (not just chips) is key to Google's growth ▪\"We are in the early stages of agentic experiences across our surfaces.\" Blog post: https://www.mariehaynes.com/googles-q3-2026-earnings-call-search-ai-are-merging-into-one-unified-product/. Put together my thoughts on Google's Q3 earnings call. A few things of note: ▪Google sees AI Mode, AI overviews and traditional Search as one unified product. ▪Expect rapid acceleration because of RSI (Recursive…",
+          "author": "@Marie_Haynes",
+          "published": "2026-10-30T19:50:00+00:00",
+          "source_type": "expert_analysis"
+        }
+      ],
+      "degraded": true
+    }
+  ],
+  "serp": {},
+  "confirmed_updates": [
+    {
+      "id": "XhUDXP7A67iHCD2kmbVu",
+      "title": "September 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-09-24T16:15:00+00:00",
+      "end": "2026-10-08T08:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of October 8, 2026.",
+      "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+      "triggers_brief": true
+    },
+    {
+      "id": "LEubPCm2octf2uMqCFKE",
+      "title": "August 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-08-18T16:27:00+00:00",
+      "end": "2026-08-21T08:49:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of August 21, 2026.",
+      "url": "https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE",
+      "triggers_brief": true
+    },
+    {
+      "id": "YUX1peHev5a4fkxLDiUQ",
+      "title": "June 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-06-24T16:00:00+00:00",
+      "end": "2026-06-26T17:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 26, 2026.",
+      "url": "https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ",
+      "triggers_brief": true
+    },
+    {
+      "id": "wdAXJk6LRRihEjpzEeWE",
+      "title": "May 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-05-21T15:40:00+00:00",
+      "end": "2026-06-02T12:40:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of June 2, 2026.",
+      "url": "https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE",
+      "triggers_brief": true
+    },
+    {
+      "id": "7eTbAa2jWdToLkraZj5y",
+      "title": "March 2026 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-27T09:00:00+00:00",
+      "end": "2026-04-08T13:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of April 8, 2026.",
+      "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+      "triggers_brief": true
+    },
+    {
+      "id": "VbnSXAH4SmEcxPtx4YSD",
+      "title": "March 2026 spam update",
+      "kind": "Spam Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-03-24T19:00:00+00:00",
+      "end": "2026-03-25T14:30:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of March 25, 2026.",
+      "url": "https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD",
+      "triggers_brief": true
+    },
+    {
+      "id": "mYbNTqV1ytDc2fA8hUz4",
+      "title": "February 2026 Discover update",
+      "kind": "Discover Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2026-02-05T17:00:00+00:00",
+      "end": "2026-02-27T10:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of February 27, 2026.",
+      "url": "https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4",
+      "triggers_brief": true
+    },
+    {
+      "id": "DsirqJ1gpPRgVQeccPRv",
+      "title": "December 2025 core update",
+      "kind": "Core Update",
+      "families": [
+        "ranking"
+      ],
+      "start": "2025-12-11T17:25:00+00:00",
+      "end": "2025-12-29T19:00:00+00:00",
+      "impact": "SERVICE_INFORMATION",
+      "ongoing": false,
+      "latest_update": "The rollout was complete as of December 29, 2025.",
+      "url": "https://status.search.google.com/incidents/DsirqJ1gpPRgVQeccPRv",
+      "triggers_brief": true
+    }
+  ],
+  "degraded": true,
+  "degraded_reason": "LLM call failed: scnet: out of credit (HTTP 402)",
+  "quiet_day": false,
+  "llm_error": "every LLM provider failed -- scnet: APIStatusError (HTTP 402): Error code: 402 - Insufficient Balance (request_id: ca6fea6162cdfc2e-20261031144535526)",
+  "run_meta": {
+    "ran_at": "2026-10-31T06:45:33.848107+00:00",
+    "sources": {
+      "x": {
+        "ok": 21,
+        "total": 21,
+        "failed_names": [],
+        "items": 93
+      },
+      "rss": {
+        "ok": 30,
+        "total": 31,
+        "failed_names": [
+          "Lily Ray (Substack)"
+        ],
+        "items": 55
+      },
+      "google_status": {
+        "items": 0
+      },
+      "manual": {
+        "items": 0
+      }
+    },
+    "candidates_fetched": 148,
+    "candidates_fresh": 111,
+    "llm_provider": ""
+  }
+}
